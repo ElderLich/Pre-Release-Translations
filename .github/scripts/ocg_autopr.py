@@ -310,19 +310,19 @@ def require_file(path: Path, label: str) -> Path:
 
 
 def request(url: str) -> urllib.request.Request:
-    return urllib.request.Request(url, headers={"User-Agent": f"TransSuperpre-{CONFIG.folder}-AutoPR/1.0"})
+    return urllib.request.Request(url, headers={"User-Agent": f"PreReleaseTranslations-{CONFIG.folder}-AutoPR/1.0"})
 
 
 def download_file(url: str, target: Path) -> None:
     try:
-        download_verified_file(url, target, user_agent=f"TransSuperpre-{CONFIG.folder}-AutoPR/1.0", log_fn=log)
+        download_verified_file(url, target, user_agent=f"PreReleaseTranslations-{CONFIG.folder}-AutoPR/1.0", log_fn=log)
     except DownloadError as exc:
         fail(str(exc))
 
 
 def fetch_json(url: str) -> list[dict]:
     try:
-        return fetch_release_json(url, user_agent=f"TransSuperpre-{CONFIG.folder}-AutoPR/1.0", log_fn=log)
+        return fetch_release_json(url, user_agent=f"PreReleaseTranslations-{CONFIG.folder}-AutoPR/1.0", log_fn=log)
     except DownloadError as exc:
         fail(str(exc))
 

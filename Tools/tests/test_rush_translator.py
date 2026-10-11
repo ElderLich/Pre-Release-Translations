@@ -125,7 +125,7 @@ class RushTranslatorTests(unittest.TestCase):
     def test_wrong_branch_is_not_pulled(self):
         outputs = [subprocess.CompletedProcess([], 0, stdout=''), subprocess.CompletedProcess([], 0, stdout='translation-work\n')]
         with patch.object(subprocess, 'run', side_effect=outputs), patch.object(helper, 'run') as run:
-            with self.assertRaisesRegex(SystemExit, 'Switch TransSuperpre to main'):
+            with self.assertRaisesRegex(SystemExit, 'Switch Pre-Release Translations to main'):
                 helper.pull_clean_translator_repo(self.repo)
             run.assert_not_called()
 
@@ -174,7 +174,7 @@ class RushTranslatorTests(unittest.TestCase):
                                                 'rush-upload', '--lang', 'fr', '--push'])
         branch = subprocess.CompletedProcess([], 0, stdout='feature-work\n')
         with patch.object(subprocess, 'run', return_value=branch), patch.object(helper, 'commit_and_push') as push:
-            with self.assertRaisesRegex(SystemExit, 'Switch TransSuperpre to main'):
+            with self.assertRaisesRegex(SystemExit, 'Switch Pre-Release Translations to main'):
                 helper.command_rush_upload(args)
             push.assert_not_called()
         self.assertEqual(self.published.read_bytes(), before)

@@ -1,4 +1,4 @@
-# TransSuperpre Translator Workflow
+# Pre-Release Translations Translator Workflow
 
 This project uses local translation workspaces plus GitHub Actions. Translators
 edit the card files locally, then upload their workspace files to the GitHub
@@ -12,7 +12,7 @@ building the `.ypk`, updating `test-release.json`, and writing dump files.
 2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
    translation and copy/upload workflow.
 3. **Rush** operates on your selected language. Fetch/pull downloads the latest
-   published TransSuperpre workspace and merges it into your local
+   published Pre-Release Translations workspace and merges it into your local
    `<LANG>/Rush/raw2/rush-pre-release.cdb`. Missing English, French and Japanese
    text is then fetched using the source identity snapshot bundled in this repo.
    Select **Open Database in DataEditorX** to edit that CDB.
@@ -22,7 +22,7 @@ building the `.ypk`, updating `test-release.json`, and writing dump files.
    source-fetch/build controls are for maintainers with the source repositories;
    ordinary translators do not need them.
 
-The translator Rush workflow needs only Python, Git, a TransSuperpre checkout
+The translator Rush workflow needs only Python, Git, a Pre-Release Translations checkout
 and your local language folder. You do not need `ygopro-rush-duel`, MDPro3_Data,
 the maintainer's Windows paths, or local artwork sources. GitHub Actions obtains
 those dependencies and builds all Rush packages after a workspace upload.
@@ -33,7 +33,7 @@ arguments remain compatible.
 
 ### Safe Rush updates
 
-- TransSuperpre must be on `main` and have no uncommitted changes before a
+- Pre-Release Translations must be on `main` and have no uncommitted changes before a
   fetch/pull. The tool never stashes, resets or discards work automatically.
 - Your edits live in `<LANG>/Rush/raw2/rush-pre-release.cdb`. The downloaded
   baseline in `Rush/Base Files` is bookkeeping; do not translate it.
@@ -126,7 +126,7 @@ Install these first:
 - Python 3
 - Git
 - GitHub Desktop or Git command line
-- Access to the TransSuperpre GitHub repo
+- Access to the Pre-Release Translations GitHub repo
 - A CDB editor such as DataEditorX or DB Browser for SQLite
 
 Each translator can keep their files anywhere. The paths do not need to match
@@ -147,27 +147,43 @@ Super-Pre Translations/
 Use the matching language folder name: `DE`, `EN`, `ES`, `FR`, `IT`, `JP`,
 `KR`, `PT`, or `TH`.
 
-Copy `Tools/AutoPR_local.py` from the TransSuperpre repo into your local
+Copy `Tools/AutoPR_local.py` from the Pre-Release Translations repo into your local
 language folder and rename it to `AutoPR.py`.
 
 Example:
 
 ```text
-TransSuperpre/Tools/AutoPR_local.py
+Pre-Release-Translations/Tools/AutoPR_local.py
   -> Super-Pre Translations/ES/AutoPR.py
 ```
 
-The helper detects the language from the folder name. If the TransSuperpre repo
+The helper detects the language from the folder name. If the Pre-Release Translations repo
 is not in a common location, the helper asks for the repo path the first time
 and saves it in `.transsuperpre_local.json` beside the language folders.
 
 You can also set one of these environment variables:
 
 ```text
-TRANSSUPERPRE_REPO=C:\path\to\TransSuperpre
-TRANSSUPERPRE_ROOT=C:\path\to\TransSuperpre
+TRANSSUPERPRE_REPO=C:\path\to\Pre-Release-Translations
+TRANSSUPERPRE_ROOT=C:\path\to\Pre-Release-Translations
 SUPER_PRE_LOCAL_ROOT=C:\path\to\Super-Pre Translations
 ```
+
+Existing checkouts named `TransSuperpre` continue to work. The helper keeps
+the `.transsuperpre_local.json` preference file and `TRANSSUPERPRE_*`
+environment variables for compatibility; renaming a local folder is optional.
+Before fetching or publishing, the helper migrates the former official GitHub
+`origin` URL to `ElderLich/Pre-Release-Translations`. Custom fork remotes are
+kept. The former remote URL is retired; use the new repository URL for downloads.
+
+If your checkout still has the older helper, obtain the update once with:
+
+```sh
+git remote set-url origin https://github.com/ElderLich/Pre-Release-Translations.git
+git pull --ff-only origin main
+```
+
+SSH users can set `git@github.com:ElderLich/Pre-Release-Translations.git` instead.
 
 ## Interface, editor and progress settings
 
@@ -203,12 +219,12 @@ uses the clickable window; the Standard tab provides the same operations.
 2. Edit your local `raw2/test-release.cdb`.
 3. Edit your local `raw2/test-strings.conf` when prompt strings or archetype
    strings need changes.
-4. Edit `Shared/Mappings.csv` in the TransSuperpre repo when a repeated
+4. Edit `Shared/Mappings.csv` in the Pre-Release Translations repo when a repeated
    `{CARD}` placeholder should be replaced automatically for every language.
 5. Run `AutoPR.py`.
 6. Choose option `2` to upload and push.
 
-The refresh option first fast-forwards the TransSuperpre repo to the latest
+The refresh option first fast-forwards the Pre-Release Translations repo to the latest
 `main`, then downloads the latest upstream `.ypk`, extracts fresh
 `test-release.cdb` and `test-strings.conf`, merges new cards into local `raw2`,
 removes stale CDB rows that no longer exist upstream, removes local

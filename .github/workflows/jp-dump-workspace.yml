@@ -90,7 +90,7 @@ jobs:
           rm -f JP/.gitattributes JP/.nojekyll
 
           cat > README.md <<'EOF'
-          # TransSuperpre CDB Dumps
+          # Pre-Release Translations CDB Dumps
 
           Generated database dumps for reviewing translation CDB changes as text diffs.
 

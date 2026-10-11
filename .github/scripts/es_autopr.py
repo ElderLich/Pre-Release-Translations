@@ -90,14 +90,14 @@ def require_file(path: Path, label: str) -> Path:
 
 def download_file(url: str, target: Path) -> None:
     try:
-        download_verified_file(url, target, user_agent="TransSuperpre-ES-AutoPR/1.0", log_fn=log)
+        download_verified_file(url, target, user_agent="PreReleaseTranslations-ES-AutoPR/1.0", log_fn=log)
     except DownloadError as exc:
         fail(str(exc))
 
 
 def fetch_json(url: str) -> list[dict]:
     try:
-        return fetch_release_json(url, user_agent="TransSuperpre-ES-AutoPR/1.0", log_fn=log)
+        return fetch_release_json(url, user_agent="PreReleaseTranslations-ES-AutoPR/1.0", log_fn=log)
     except DownloadError as exc:
         fail(str(exc))
 

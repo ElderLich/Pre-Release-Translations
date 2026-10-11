@@ -50,7 +50,7 @@ def latest_release(version_path: str) -> int | None:
 def upstream_modified(url: str) -> float | None:
     for candidate in download_urls(url):
         try:
-            request = urllib.request.Request(candidate, method="HEAD", headers={"User-Agent": "TransSuperpre-ScheduleGuard/1"})
+            request = urllib.request.Request(candidate, method="HEAD", headers={"User-Agent": "PreReleaseTranslations-ScheduleGuard/1"})
             with urllib.request.urlopen(request, timeout=10) as response:
                 value = response.headers.get("Last-Modified")
             if value:
@@ -68,7 +68,7 @@ def github_api(path: str, payload: dict | None = None) -> dict:
         f"{api}/repos/{repository}/{path}",
         data=json.dumps(payload).encode("utf-8") if payload is not None else None,
         headers={"Accept": "application/vnd.github+json", "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
-                 "Content-Type": "application/json", "User-Agent": "TransSuperpre-ScheduleGuard/1"},
+                 "Content-Type": "application/json", "User-Agent": "PreReleaseTranslations-ScheduleGuard/1"},
     )
     with urllib.request.urlopen(request, timeout=15) as response:
         body = response.read()

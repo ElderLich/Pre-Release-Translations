@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Universal local wrapper for TransSuperpre GitHub Actions.
+"""Universal local wrapper for Pre-Release Translations GitHub Actions.
 
 Copy this file into a local language folder and rename it to AutoPR.py, for
 example:
@@ -11,7 +11,7 @@ example:
 Opening this file launches the shared Standard/Rush window from the repository.
 Use --menu for the legacy numbered menu; existing command arguments still work.
 The standard build runs in GitHub Actions. This wrapper can refresh the local raw2
-workspace from the latest upstream package, then copy it into the TransSuperpre
+workspace from the latest upstream package, then copy it into the Pre-Release Translations
 repository and push it to GitHub.
 """
 
@@ -41,6 +41,10 @@ CONFIG_PATH = LOCAL_ROOT / ".transsuperpre_local.json"
 REPO_ENV_NAMES = ("TRANSSUPERPRE_REPO", "TRANSSUPERPRE_ROOT")
 LANG_ENV_NAME = "TRANSSUPERPRE_LANG"
 COMMON_REPO_PATHS = (
+    # Recognize new clones while retaining existing checkout paths and preferences.
+    Path(r"D:\Programs\GitHub\Pre-Release-Translations"),
+    Path.home() / "Documents" / "GitHub" / "Pre-Release-Translations",
+    Path.home() / "GitHub" / "Pre-Release-Translations",
     Path(r"D:\Programs\GitHub\TransSuperpre"),
     Path.home() / "Documents" / "GitHub" / "TransSuperpre",
     Path.home() / "GitHub" / "TransSuperpre",
@@ -90,7 +94,7 @@ def detect_lang(*, gui: bool = False) -> str:
         root.withdraw()
         try:
             while True:
-                value = simpledialog.askstring("TransSuperpre", "Card language: " + ", ".join(SUPPORTED_LANGS.values()), parent=root)
+                value = simpledialog.askstring("Pre-Release Translations", "Card language: " + ", ".join(SUPPORTED_LANGS.values()), parent=root)
                 if value is None:
                     raise SystemExit(0)
                 lang = normalize_lang(value)
@@ -139,20 +143,20 @@ def prompt_repo_root(*, gui: bool = False) -> Path:
         root.withdraw()
         try:
             while True:
-                value = filedialog.askdirectory(parent=root, title="Select TransSuperpre repository")
+                value = filedialog.askdirectory(parent=root, title="Select Pre-Release Translations repository")
                 if not value:
                     raise SystemExit(0)
                 repo_root = Path(value)
                 if is_valid_repo(repo_root):
                     save_config(repo_root)
                     return repo_root
-                messagebox.showerror("TransSuperpre", "This folder does not contain Tools/local_workspace.py.", parent=root)
+                messagebox.showerror("Pre-Release Translations", "This folder does not contain Tools/local_workspace.py.", parent=root)
         finally:
             root.destroy()
-    print("TransSuperpre repo path was not found.")
+    print("Pre-Release Translations repo path was not found.")
     print("Paste the folder that contains Tools\\local_workspace.py.")
     while True:
-        raw = input("TransSuperpre repo path: ").strip().strip('"')
+        raw = input("Pre-Release Translations repo path: ").strip().strip('"')
         if not raw:
             print("Path is required.")
             continue
@@ -189,7 +193,7 @@ def run_tool(*args: str) -> int:
 
 
 def menu(lang: str) -> str:
-    print("TransSuperpre local workspace helper")
+    print("Pre-Release Translations local workspace helper")
     print(f"Language  : {lang.upper()}")
     print(f"Local root: {LOCAL_ROOT}")
     repo_root = resolve_repo_root()
@@ -200,7 +204,7 @@ def menu(lang: str) -> str:
     print("3 = Copy raw2 workspace into repo only")
     print(f"4 = Pull latest {lang.upper()} workspace from GitHub")
     print("5 = Show repo and Actions status")
-    print("6 = Change TransSuperpre repo path")
+    print("6 = Change Pre-Release Translations repo path")
     print("7 = Exit")
     print(f"8 = Refresh {lang.upper()} Rush from published workspace")
     print(f"9 = Open {lang.upper()} Rush translation folder")
@@ -323,7 +327,7 @@ if __name__ == "__main__":
         from tkinter import messagebox
         root = tk.Tk()
         root.withdraw()
-        messagebox.showerror("TransSuperpre", str(error), parent=root)
+        messagebox.showerror("Pre-Release Translations", str(error), parent=root)
         root.destroy()
     finally:
         pause_if_menu()

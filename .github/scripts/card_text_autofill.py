@@ -24,7 +24,7 @@ LogFn = Callable[[str], None]
 
 YUGIPEDIA_API = "https://yugipedia.com/api.php"
 OCG_LIST_URL = "https://ocg-card.com/list/{slug}/"
-USER_AGENT = "TransSuperpre-CardTextAutofill/1.0"
+USER_AGENT = "PreReleaseTranslations-CardTextAutofill/1.0"
 
 EN_PEND_SEP = "----------------------------------------"
 JP_PEND_SCALE_RE = re.compile(r"^\s*(\d+)\s*$")

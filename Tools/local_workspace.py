@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Local helper for uploading translator workspace files to TransSuperpre.
+"""Local helper for uploading translator workspace files to Pre-Release Translations.
 
 The GitHub Actions workflows own the standard build. This helper copies the
 local translator files into the repo Workspace folder, refreshes local raw2 files
@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -21,7 +22,15 @@ from dataclasses import dataclass
 from pathlib import Path
 
 DEFAULT_REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_GH_REPO = os.environ.get("TRANSSUPERPRE_GH_REPO", "ElderLich/TransSuperpre")
+CANONICAL_GH_REPO = "ElderLich/Pre-Release-Translations"
+
+
+def canonical_github_repo(value: str) -> str:
+    """Migrate only the former official target, preserving custom fork overrides."""
+    return CANONICAL_GH_REPO if value.casefold() == "elderlich/transsuperpre" else value
+
+
+DEFAULT_GH_REPO = canonical_github_repo(os.environ.get("TRANSSUPERPRE_GH_REPO", CANONICAL_GH_REPO))
 
 
 @dataclass(frozen=True)
@@ -61,6 +70,25 @@ def fail(message: str) -> None:
     raise SystemExit(f"ERROR: {message}")
 
 
+def migrate_official_origin(repo_root: Path) -> None:
+    """Keep existing translator checkouts usable after the old URL is retired."""
+    legacy = re.compile(r"^(https://github\.com/|git@github\.com:|ssh://git@github\.com/)ElderLich/TransSuperpre(\.git)?/?$", re.IGNORECASE)
+    for key in ("remote.origin.url", "remote.origin.pushurl"):
+        result = subprocess.run(["git", "config", "--get-all", key], cwd=repo_root,
+                                capture_output=True, text=True, creationflags=child_creationflags())
+        if result.returncode == 1:
+            continue
+        result.check_returncode()
+        for old in dict.fromkeys(result.stdout.splitlines()):
+            match = legacy.fullmatch(old)
+            if match is None:
+                continue
+            new = match.group(1) + CANONICAL_GH_REPO + (match.group(2) or "")
+            subprocess.run(["git", "config", "--fixed-value", "--replace-all", key, new, old],
+                           cwd=repo_root, check=True, creationflags=child_creationflags())
+            log(f"Updated official origin URL to {new}")
+
+
 def run(
     cmd: list[str],
     cwd: Path,
@@ -68,6 +96,8 @@ def run(
     check: bool = True,
     env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess:
+    if len(cmd) > 2 and cmd[0] == "git" and cmd[1] in {"pull", "push", "fetch"} and "origin" in cmd[2:]:
+        migrate_official_origin(cwd)
     log("$ " + " ".join(cmd))
     result = subprocess.run(cmd, cwd=str(cwd), env=env, creationflags=child_creationflags())
     if check and result.returncode != 0:
@@ -127,7 +157,7 @@ def local_paths(
     if source_required and not source_dir.exists():
         fail(f"source folder not found: {source_dir}")
     if not repo_root.exists():
-        fail(f"TransSuperpre repo not found: {repo_root}")
+        fail(f"Pre-Release Translations repo not found: {repo_root}")
     return local_dir, source_dir, workspace_dir
 
 
@@ -198,7 +228,7 @@ def ensure_main_branch(repo_root: Path) -> None:
     branch = subprocess.run(["git", "branch", "--show-current"], cwd=repo_root,
                             capture_output=True, text=True, check=True, creationflags=child_creationflags()).stdout.strip()
     if branch != "main":
-        fail(f"Switch TransSuperpre to main before publishing or refreshing (current branch: {branch or 'detached HEAD'}).")
+        fail(f"Switch Pre-Release Translations to main before publishing or refreshing (current branch: {branch or 'detached HEAD'}).")
 
 
 def commit_and_push(args: argparse.Namespace, paths: list[Path]) -> None:
@@ -301,7 +331,7 @@ def command_status(args: argparse.Namespace) -> None:
 def command_actions(args: argparse.Namespace) -> None:
     gh = shutil.which("gh")
     if not gh:
-        log("GitHub CLI not found; open https://github.com/ElderLich/TransSuperpre/actions")
+        log(f"GitHub CLI not found; open https://github.com/{args.gh_repo}/actions")
         return
     cmd = [
         gh,
@@ -359,7 +389,7 @@ def pull_clean_translator_repo(repo_root: Path) -> None:
     status = subprocess.run(["git", "status", "--porcelain"], cwd=repo_root,
                             capture_output=True, text=True, check=True, creationflags=child_creationflags())
     if status.stdout.strip():
-        fail("TransSuperpre has uncommitted changes. Commit or review them first; Rush refresh does not stash, reset or discard work. "
+        fail("Pre-Release Translations has uncommitted changes. Commit or review them first; Rush refresh does not stash, reset or discard work. "
              "Use --no-pull-first only when intentionally working with the current local repository.")
     ensure_main_branch(repo_root)
     run(["git", "pull", "--ff-only", "origin", "main"], repo_root)
@@ -415,12 +445,12 @@ def command_rush_open(args: argparse.Namespace) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--repo-root", default=str(DEFAULT_REPO_ROOT), help="Path to the TransSuperpre repo")
+    parser.add_argument("--repo-root", default=str(DEFAULT_REPO_ROOT), help="Path to the Pre-Release Translations repo")
     parser.add_argument(
         "--local-root",
         help="Path to the local translation workspace root. Defaults to SUPER_PRE_LOCAL_ROOT or auto-discovery from the current folder.",
     )
-    parser.add_argument("--gh-repo", default=DEFAULT_GH_REPO, help="GitHub repo for gh run list")
+    parser.add_argument("--gh-repo", type=canonical_github_repo, default=DEFAULT_GH_REPO, help="GitHub repo for gh run list")
 
     subparsers = parser.add_subparsers(dest="command", required=True)
 
@@ -431,9 +461,9 @@ def build_parser() -> argparse.ArgumentParser:
     rush.add_argument("--offline", action="store_true", help="Skip web text sources when rebuilding")
     rush.set_defaults(func=command_rush)
 
-    rush_refresh = subparsers.add_parser("rush-refresh", help="Refresh one locale from the published TransSuperpre Rush workspace")
+    rush_refresh = subparsers.add_parser("rush-refresh", help="Refresh one locale from the published Pre-Release Translations Rush workspace")
     rush_refresh.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
-    rush_refresh.add_argument("--no-pull-first", action="store_false", dest="pull_first", help="Use the current local TransSuperpre checkout without fetching")
+    rush_refresh.add_argument("--no-pull-first", action="store_false", dest="pull_first", help="Use the current local Pre-Release Translations checkout without fetching")
     rush_refresh.add_argument("--keep-local", action="store_true", help="After reviewing sync.json, explicitly retain local text when both sides changed")
     rush_refresh.add_argument("--offline", action="store_true", help="Refresh the published workspace without querying card text websites")
     rush_refresh.set_defaults(func=command_rush_refresh, pull_first=True)
@@ -441,7 +471,7 @@ def build_parser() -> argparse.ArgumentParser:
     rush_upload = subparsers.add_parser("rush-upload", help="Copy one locale's Rush translations into the repository")
     rush_upload.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
     rush_upload.add_argument("--push", action="store_true", help="Commit and push only this locale's Rush workspace; GitHub builds the packages")
-    rush_upload.add_argument("--pull-first", action="store_true", help="Fast-forward a clean TransSuperpre checkout before merging")
+    rush_upload.add_argument("--pull-first", action="store_true", help="Fast-forward a clean Pre-Release Translations checkout before merging")
     rush_upload.add_argument("--message")
     rush_upload.add_argument("--dry-run", action="store_true")
     rush_upload.set_defaults(func=command_rush_upload)
@@ -476,7 +506,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     refresh.set_defaults(func=command_refresh, pull_first=True)
 
-    pull = subparsers.add_parser("pull", help="Fast-forward local TransSuperpre main, then optionally copy <lang>/Workspace to local raw2")
+    pull = subparsers.add_parser("pull", help="Fast-forward local Pre-Release Translations main, then optionally copy <lang>/Workspace to local raw2")
     pull.add_argument("--lang", choices=sorted(LANGS), help="Language Workspace to copy back into the local folder")
     pull.add_argument("--source-dir", default="raw2", help="Local target folder inside the locale folder")
     pull.add_argument("--no-mappings", action="store_true", help="Accepted for compatibility; mappings are shared in Shared/Mappings.csv")

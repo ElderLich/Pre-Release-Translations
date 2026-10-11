@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/readme-banner.svg" alt="TransSuperpre — New cards. Your language. Standard and Rush Duel pre-release translations for MDPro3." width="100%">
+  <img src="docs/assets/readme-banner.png" alt="Pre-Release Translations — New cards. Your language. Standard and Rush Duel pre-release translations for MDPro3." width="100%">
 </p>
 
 <p align="center">
@@ -9,7 +9,7 @@
   &nbsp; · &nbsp;
   <a href="docs/AUTOMATION_SCHEDULE.md"><strong>Daily updates</strong></a>
   &nbsp; · &nbsp;
-  <a href="https://github.com/ElderLich/TransSuperpre/actions"><strong>Build status</strong></a>
+  <a href="https://github.com/ElderLich/Pre-Release-Translations/actions"><strong>Build status</strong></a>
 </p>
 
 <p align="center">
@@ -41,7 +41,7 @@ Create a separate local language folder, then copy these two launchers into it:
 | [Tools/AutoPR_local.py](Tools/AutoPR_local.py) | `AutoPR.py` |
 | [Tools/AutoPR_local.pyw](Tools/AutoPR_local.pyw) | `AutoPR.pyw` |
 
-Use `DE`, `EN`, `ES`, `FR`, `IT`, `JP`, `KR`, `PT`, or `TH` as the folder name. Open **AutoPR.pyw** on Windows for a launch without a console window, and select your TransSuperpre checkout when prompted. Your folders can live wherever you prefer.
+Use `DE`, `EN`, `ES`, `FR`, `IT`, `JP`, `KR`, `PT`, or `TH` as the folder name. Open **AutoPR.pyw** on Windows for a launch without a console window, and select your Pre-Release Translations checkout when prompted. Your folders can live wherever you prefer.
 
 ### 02 · Fetch and translate
 
@@ -60,6 +60,9 @@ Use **Copy workspace into repository** to review locally, or **Upload workspace 
 
 > [!TIP]
 > Rush translators need Python, Git, this repository, and their language folder. The cloud build obtains the Rush source and locale databases; a separate `ygopro-rush-duel` or MDPro3_Data checkout is only needed for maintainer builds.
+
+> [!NOTE]
+> This repository was renamed from TransSuperpre. Its old download URLs are retired. Existing translator checkouts can keep their folder names; follow the [remote migration instructions](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translators) to update an older checkout.
 
 The [full translator guide](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translators) covers setup, conflict resolution, reports, and the legacy `AutoPR.py --menu` interface.
 
@@ -91,13 +94,13 @@ Standard also supports automatic English and French source text. Existing transl
 - **Daily updates.** One dispatcher checks what needs updating. Standard locales released within 24 hours skip scheduled imports unless the upstream package is newer. Rush checks source revisions and local inputs.
 - **Game packages.** Successful builds produce `.ypk` packages, JSON card data, and version files. Standard CDB text dumps are published to the `dump` branch for review.
 
-[Read the schedule rules →](docs/AUTOMATION_SCHEDULE.md) &nbsp; [Inspect workflow runs →](https://github.com/ElderLich/TransSuperpre/actions)
+[Read the schedule rules →](docs/AUTOMATION_SCHEDULE.md) &nbsp; [Inspect workflow runs →](https://github.com/ElderLich/Pre-Release-Translations/actions)
 
 <details>
 <summary><strong>Repository map & package names</strong></summary>
 
 ```text
-TransSuperpre/
+Pre-Release-Translations/
 ├── Tools/                       Desktop tool, launchers and builders
 ├── Shared/
 │   ├── Mappings.csv             Shared card-name and prompt bindings

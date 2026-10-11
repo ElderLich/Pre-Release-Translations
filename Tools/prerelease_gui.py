@@ -213,7 +213,7 @@ class PrereleaseWindow:
         self.report_cache = {}
         self.scale = max(1.0, float(root.tk.call("tk", "scaling")) / (96 / 72))
         self._configure_styles()
-        root.title(self.tr("TransSuperpre · Translation Workspace"))
+        root.title(self.tr("Pre-Release Translations · Translation Workspace"))
         root.configure(background=COLORS["background"])
         available_w = root.winfo_screenwidth() - self.px(60)
         available_h = root.winfo_screenheight() - self.px(90)
@@ -228,13 +228,16 @@ class PrereleaseWindow:
         header = ttk.Frame(outer, style="App.TFrame")
         header.grid(row=0, column=0, sticky="ew", pady=(0, self.px(18)))
         header.columnconfigure(0, weight=1)
-        self.label(header, "TRANS SUPERPRE", "Brand").grid(row=0, column=0, sticky="w")
+        self.label(header, "PRE-RELEASE TRANSLATIONS", "Brand").grid(row=0, column=0, sticky="w")
         self.label(header, "Translation workspace", "Title").grid(row=1, column=0, sticky="w", pady=(self.px(3), self.px(3)))
         self.label(header, "Prepare card updates. Review translations. Publish when ready.", "Muted").grid(row=2, column=0, sticky="w")
         repository = ttk.Frame(header, style="App.TFrame")
         repository.grid(row=0, column=1, rowspan=3, sticky="e", padx=(self.px(18), 0))
         self.label(repository, "CONNECTED REPOSITORY", "Caption").pack(anchor="e")
-        self.label(repository, self.repo.name, "Body").pack(anchor="e", pady=(self.px(4), self.px(4)))
+        repository_name = self.repo.name
+        if repository_name.casefold() in {"transsuperpre", "pre-release-translations"}:
+            repository_name = "Pre-Release Translations"
+        self.label(repository, repository_name, "Body").pack(anchor="e", pady=(self.px(4), self.px(4)))
         self.button(repository, "Open folder  ↗", lambda: self.open_path(self.repo), style="Link").pack(anchor="e")
 
         self.button(repository, "Settings", self.open_settings, style="Link").pack(anchor="e")
@@ -287,7 +290,7 @@ class PrereleaseWindow:
         tab = self.notebook.index(self.notebook.select())
         automatic = self.rush_language.get() if tab == 1 else self.language.get() if tab == 0 else self.display_language
         self.display_language = self.ui_language if self.ui_language in LANGUAGE_NAMES else automatic
-        self.root.title(self.tr("TransSuperpre · Translation Workspace"))
+        self.root.title(self.tr("Pre-Release Translations · Translation Workspace"))
         for widget, (key, values) in list(self.localized_widgets.items()):
             if widget.winfo_exists():
                 widget.configure(text=self.tr(key, **values))
@@ -570,7 +573,7 @@ class PrereleaseWindow:
         self.controls.append((selector, "readonly"))
         self.rush_fetch_button = self.button(update, "Fetch Rush updates", lambda: self.start_rush_workspace("refresh"), style="Primary")
         self.rush_fetch_button.grid(row=2, column=0, sticky="w")
-        self.label(update, "Uses TransSuperpre. No extra source repositories.", "Caption", panel=True).grid(row=2, column=1, sticky="e", padx=(self.px(15), 0))
+        self.label(update, "No extra source repositories needed.", "Caption", panel=True).grid(row=2, column=1, sticky="e", padx=(self.px(15), 0))
         self.label(update, kind="Status", panel=True, textvariable=self.rush_workspace_status).grid(row=3, column=0, columnspan=2, sticky="w", pady=(self.px(16), self.px(4)))
         self.label(update, kind="Caption", panel=True, textvariable=self.rush_workspace_note, wraplength=self.px(740)).grid(row=4, column=0, columnspan=2, sticky="w")
         self.thai_switch_button = self.button(update, "Switch to English", lambda: self.rush_language.set("EN"))

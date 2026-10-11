@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Per-locale Rush workspaces backed only by the published TransSuperpre repo."""
+"""Per-locale Rush workspaces backed only by the published Pre-Release Translations repo."""
 from __future__ import annotations
 
 from pathlib import Path

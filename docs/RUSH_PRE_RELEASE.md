@@ -3,10 +3,10 @@
 ## Translator workflow
 
 Open your usual locale `AutoPR.pyw` (or `AutoPR.py`) and select the **Rush** tab. Fetch/pull uses
-the TransSuperpre repository and prepares
+the Pre-Release Translations repository and prepares
 `<LANG>/Rush/raw2/rush-pre-release.cdb` in your local translation folder. Missing
 EN/FR/JP fields are also fetched from the web using source snapshots inside
-TransSuperpre. Use **Open Database in DataEditorX** to edit that file, then copy or explicitly upload/push your locale's workspace. The
+Pre-Release Translations. Use **Open Database in DataEditorX** to edit that file, then copy or explicitly upload/push your locale's workspace. The
 existing GitHub workflow obtains Rush sources, translations and shared artwork
 and builds all packages. Translators do not need local upstream repositories or
 the maintainer's paths.
@@ -63,7 +63,7 @@ instead of building packages from an old cached patch.
 
 ## Run locally from a terminal
 
-From the TransSuperpre repository:
+From the Pre-Release Translations repository:
 
 ```powershell
 python Tools/rush_prerelease.py sync --source-root "D:\Programs\GitHub\ygopro-rush-duel" --translations-root "D:\Programs\GitHub\MDPro3_Data\Data\locales"
@@ -244,8 +244,8 @@ Rush build. An unchanged run has identical CDB, ZIP, JSON, and version bytes.
 The game consumes these stable paths on the repository's `main` branch:
 
 ```text
-https://raw.githubusercontent.com/ElderLich/TransSuperpre/main/<LANG>/rush-pre-release.ypk
-https://raw.githubusercontent.com/ElderLich/TransSuperpre/main/<LANG>/rush-version.txt
+https://raw.githubusercontent.com/ElderLich/Pre-Release-Translations/main/<LANG>/rush-pre-release.ypk
+https://raw.githubusercontent.com/ElderLich/Pre-Release-Translations/main/<LANG>/rush-version.txt
 ```
 
 Folders: `EN`, `DE`, `ES`, `FR`, `IT`, `JP`, `KR`, `PT`, `TH`, `ZH-CN`, `ZH-TW`.
