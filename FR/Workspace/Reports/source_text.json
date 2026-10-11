@@ -13,5 +13,107 @@
     101307061,
     101307079
   ],
-  "matches": {}
+  "matches": {},
+  "unresolved": [
+    {
+      "id": 100200298,
+      "name": "反击魔法「攻击无力化」",
+      "set_code": "VJMP-JP298",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Counter_Spell_%22Negate_Attack%22",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307021,
+      "name": "灾祸的根绝者",
+      "set_code": "IMPH-JP021",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Heretic_Eradicator",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307035,
+      "name": "终天狱神Ω比托利姆",
+      "set_code": "IMPH-JP035",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Omega_Vidolium_the_Power_Patron_of_Heaven%27s_End",
+      "missing_fields": [
+        "fr_name",
+        "fr_pendulum_effect",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307045,
+      "name": "无垢牵绊 神艺学徒",
+      "set_code": "IMPH-JP045",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_Artmage",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307046,
+      "name": "无垢血盟 终刻龙卫",
+      "set_code": "IMPH-JP046",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_DoomZ",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307047,
+      "name": "无垢协奏 耀圣诗团",
+      "set_code": "IMPH-JP047",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_Elfnote",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307060,
+      "name": "狱神封门-共灭之剑-",
+      "set_code": "IMPH-JP060",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Power_Patron_Portal_Plugging_-Sword_of_Mutual_Destruction-",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307061,
+      "name": "神幻学都 无垢大艺术学园",
+      "set_code": "IMPH-JP061",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_Academic_Arcane_Apparition_Acropolis",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 101307079,
+      "name": "向无预幻世托付的约定",
+      "set_code": "IMPH-JP079",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Theorealize_Ephemeral_Lull",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    }
+  ]
 }

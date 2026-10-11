@@ -349,7 +349,8 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         mappings = load_mappings(root / "Shared/Mappings.csv", lang)
         candidates = {key: backfill_seed(old_texts.get(key, seeds.get(key, texts[key])), texts[key], seeds.get(key))
                       for key in sorted(ids)}
-        if fetch_source_text:
+        # Refresh the explicit manual-only report even for offline Korean builds.
+        if fetch_source_text or lang == "kr":
             from rush_source_text import fetch_rows
             candidates, fetch_report = fetch_rows(root, source, texts, candidates, lang, system_ids)
             fetch_path = locale_root / "source_text.json"

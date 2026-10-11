@@ -165,10 +165,10 @@ class RushPrereleaseTests(unittest.TestCase):
         self.set_cards([100, 101, 102])
         # Other locales still arrive via their normal reviewed translated seeds.
         for lang, (_, locale) in rush.LANGS.items():
-            if lang not in ("en", "fr", "jp", "kr", "th", "zh-cn"):
+            if lang not in ("en", "fr", "jp", "th", "zh-cn"):
                 self.seed(locale, [100, 101, 102])
         def web_fill(root, source, original, rows, lang, system_ids):
-            if lang in ("en", "fr", "jp", "kr"):
+            if lang in ("en", "fr", "jp"):
                 rows = dict(rows)
                 rows[102] = (102, "Web translated name", "Web translated effect", *([""] * 16))
             return rows, {}
@@ -317,6 +317,33 @@ class RushPrereleaseTests(unittest.TestCase):
         rows = load_locale_mappings_csv(path)
         self.assertEqual(set(rows), {120309048, 101000001})
         self.assertEqual(rows[120309048]["str1"], "self")
+
+
+
+    def test_korean_manual_translation_survives_gameplay_update_and_retirement(self):
+        self.seed("ko-KR", [100, 101])
+        self.sync(["kr"])
+        self.edit_text(self.workspace("KR"), 100, "번역자가 수정한 효과.")
+        self.set_cards([100, 102])
+        row = list(self.datas[100]); row[5] = 1900; self.datas[100] = tuple(row); self.write_source()
+        with patch("card_text_autofill.request_url", side_effect=AssertionError("Korean web fetch")) as request:
+            with self.assertRaisesRegex(ValueError, "KR: 1 cards"):
+                rush.synchronize(self.root, self.source, self.translations, ["kr"], fetch_source_text=True)
+            request.assert_not_called()
+        datas, texts = rush.read_cdb(self.workspace("KR"))
+        self.assertEqual(set(datas), {100, 102})
+        self.assertEqual(datas[100][5], 1900)
+        self.assertEqual(texts[100][2], "번역자가 수정한 효과.")
+        self.assertEqual(texts[102], self.texts[102])
+        report = rush.read_json(self.root / "KR/Rush/source_text.json")
+        self.assertEqual(report["mode"], "manual")
+        with zipfile.ZipFile(self.package("KR")) as archive:
+            self.assertNotIn("script/c101.lua", archive.namelist())
+            self.assertNotIn("script/c102.lua", archive.namelist())
+        # The translator can later supply a reviewed Korean seed, with no web fetch.
+        self.seed("ko-KR", [100, 102])
+        rush.synchronize(self.root, self.source, self.translations, ["kr"], fetch_source_text=True)
+        self.assertEqual(rush.read_cdb(self.workspace("KR"))[1][100][2], "번역자가 수정한 효과.")
 
 
 if __name__ == "__main__":

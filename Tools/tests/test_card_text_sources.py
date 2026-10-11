@@ -174,5 +174,98 @@ class SourceTextTests(unittest.TestCase):
             self.assertIn("No upstream", report["unresolved"][0]["reason"])
 
 
+
+    def test_korean_fetch_entry_points_never_query_the_web(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            row = (120309001, "번역자가 수정한 이름", "번역자가 수정한 효과", *([""] * 16))
+            rows = {row[0]: row}
+            with patch.object(source, "request_url", side_effect=AssertionError("Korean web fetch")) as request:
+                self.assertEqual(source.fetch_yugipedia_cards(["RD/AA01-JP001"], lambda _: None, lang="kr", rush=True), {})
+                self.assertEqual(source.fetch_yugipedia_cards(["AA01-JP001"], lambda _: None, lang="kr"), {})
+                with patch.object(rush_source, "fetch_yugipedia_cards") as wiki, patch.object(rush_source, "fetch_ocg_cards") as ocg:
+                    result, report = rush_source.fetch_rows(root, root, rows, rows, "kr", set(), lambda _: None)
+                wiki.assert_not_called()
+                ocg.assert_not_called()
+                self.assertIs(result, rows)
+                self.assertEqual(report["mode"], "manual")
+                self.assertFalse(report["automatic_fetch"])
+                # No input CDB/YPK is required: the manual mode exits before reading or changing card text.
+                self.assertEqual(source.autofill_cdb_from_pack_sources(root / "cards.cdb", root / "upstream.ypk", "kr", lambda _: None), 0)
+                self.assertFalse((root / "cards.cdb").exists())
+                self.assertEqual(json.loads((root / "Reports/source_text.json").read_text())["mode"], "manual")
+                request.assert_not_called()
+
+    def test_standard_korean_reports_manual_mode_and_preserves_translator_text(self):
+        import ocg_autopr
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = root / "cards.cdb"
+            with closing(sqlite3.connect(path)) as db:
+                db.execute("CREATE TABLE texts(id integer, name text, desc text)")
+                db.execute("INSERT INTO texts VALUES(1, ?, ?)", ("번역된 이름", "번역자가 수정한 효과"))
+                db.commit()
+            before = path.read_bytes()
+            with patch.object(ocg_autopr, "CONFIG", ocg_autopr.LANG_CONFIGS["kr"], create=True), patch.object(source, "request_url") as request:
+                ocg_autopr.autofill_source_text(path, root / "upstream.ypk")
+            request.assert_not_called()
+            self.assertEqual(path.read_bytes(), before)
+            self.assertEqual(json.loads((root / "Reports/source_text.json").read_text())["mode"], "manual")
+
+    def test_french_report_distinguishes_missing_fields_from_network_failure(self):
+        data = {"query": {"pages": [{"title": "AA01-JP001", "revisions": [{"content":
+            "{{CardTable2\n| text = Draw.\n| jp_sets = AA01-JP001; Set; Rare\n}}"}]}]}}
+        diagnostics = {}
+        with patch.object(source, "request_url", return_value=json.dumps(data)):
+            self.assertEqual(source.fetch_yugipedia_cards(["AA01-JP001"], lambda _: None, lang="fr", diagnostics=diagnostics), {})
+        self.assertEqual(diagnostics["AA01-JP001"]["reason"], "Localized fields are missing")
+        self.assertEqual(diagnostics["AA01-JP001"]["missing_fields"], ["fr_name", "fr_text"])
+        with patch.object(source, "request_url", side_effect=OSError("offline")):
+            source.fetch_yugipedia_cards(["AA01-JP001"], lambda _: None, lang="fr", diagnostics=diagnostics)
+        self.assertEqual(diagnostics["AA01-JP001"]["reason"], "Source request failed")
+
+    def test_normal_french_report_includes_unmapped_card_ids(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = root / "cards.cdb"
+            with closing(sqlite3.connect(path)) as db:
+                db.execute("CREATE TABLE texts(id integer, name text, desc text)")
+                db.executemany("INSERT INTO texts VALUES(?, ?, ?)", [(1, "原名", "原文"), (2, "原名二", "原文二")])
+                db.commit()
+            data = {"query": {"pages": [{"title": "AA01-JP001", "revisions": [{"content":
+                "{{CardTable2\n| text = Draw.\n| jp_sets = AA01-JP001; Set; Rare\n}}"}]}]}}
+            with patch.object(source, "load_pack_entries_from_ypk", return_value={1: source.PackEntry(1, "AA01", "AA01.ydk")}), patch.object(source, "original_texts_from_ypk", return_value={}), patch.object(source, "request_url", return_value=json.dumps(data)):
+                source.autofill_cdb_from_pack_sources(path, root / "unused.ypk", "fr", lambda _: None)
+            report = json.loads((root / "Reports/source_text.json").read_text(encoding="utf-8"))
+            self.assertEqual(report["candidates"], 1)
+            self.assertEqual(report["matched"], 0)
+            self.assertEqual(report["unmatched_ids"], [1, 2])
+            self.assertEqual(report["unresolved"][0]["missing_fields"], ["fr_name", "fr_text"])
+            self.assertEqual(report["unresolved"][1]["reason"], "No printed set code mapping")
+
+
+
+    def test_title_fallback_keeps_verified_missing_translation_diagnostics(self):
+        verified = {"reason": "Localized fields are missing", "missing_fields": ["fr_text"],
+                    "source": "https://yugipedia.com/wiki/Verified_Card"}
+        diagnostics = {"AA01-JP001": verified}
+        missing = {"query": {"pages": [{"title": "Nom humain", "missing": True}]}}
+        with patch.object(source, "request_url", return_value=json.dumps(missing)):
+            source.fetch_yugipedia_by_existing_titles({1: "Nom humain"}, [1], "fr", lambda _: None,
+                                                      {1: "AA01-JP001"}, diagnostics)
+        self.assertEqual(diagnostics, {"AA01-JP001": verified})
+        with patch.object(source, "request_url", side_effect=OSError("offline")):
+            source.fetch_yugipedia_by_existing_titles({1: "Nom humain"}, [1], "fr", lambda _: None,
+                                                      {1: "AA01-JP001"}, diagnostics)
+        self.assertEqual(diagnostics, {"AA01-JP001": verified})
+        found = {"query": {"pages": [{"title": "Nom humain", "revisions": [{"content":
+            "{{CardTable2\n| fr_name = Nom humain\n| fr_text = Piochez.\n| jp_sets = AA01-JP001; Set; Rare\n}}"}]}]}}
+        with patch.object(source, "request_url", return_value=json.dumps(found)):
+            cards = source.fetch_yugipedia_by_existing_titles({1: "Nom humain"}, [1], "fr", lambda _: None,
+                                                             {1: "AA01-JP001"}, diagnostics)
+        self.assertIn(1, cards)
+        self.assertEqual(diagnostics, {})
+
+
 if __name__ == "__main__":
     unittest.main()

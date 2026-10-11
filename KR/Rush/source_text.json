@@ -1,6 +1,7 @@
 {
+  "automatic_fetch": false,
   "language": "kr",
   "matches": {},
-  "requested_ids": [],
-  "unresolved": []
+  "mode": "manual",
+  "reason": "Korean card text is translator-managed; no web sources are queried."
 }

@@ -33,12 +33,10 @@ TITLE_DISAMBIGUATOR_RE = re.compile(r"\s+\((?:card|Rush Duel|anime|manga|video g
 YUGIPEDIA_LANG_FIELDS = {
     "en": ("", "text", "pendulum_effect"),
     "fr": ("fr_name", "fr_text", "fr_pendulum_effect"),
-    "kr": ("ko_name", "ko_text", "ko_pendulum_effect"),
 }
 YUGIPEDIA_PEND_LABELS = {
     "en": ("Pendulum Scale", "Pendulum Effect", "Monster Effect"),
     "fr": ("Échelle Pendule", "Effet Pendule", "Effet de Monstre"),
-    "kr": ("펜듈럼 스케일", "펜듈럼 효과", "몬스터 효과"),
 }
 
 EXTRA_SET_CODES_BY_ID = {
@@ -157,7 +155,7 @@ def set_code_for_entry(entry: PackEntry, lang: str) -> str | None:
     number = entry.card_id % 1000
     if number <= 0:
         return None
-    if lang in {"en", "fr", "kr"}:
+    if lang in {"en", "fr"}:
         prefix = entry.pack_code if sep else f"{base}-JP"
     elif lang == "jp":
         prefix = f"{base}-JP"
@@ -232,16 +230,17 @@ def parse_card_table_params(wikitext: str) -> dict[str, str]:
 
 
 def format_yugipedia_card(title: str, params: dict[str, str], lang: str, rush: bool = False) -> CardText | None:
+    if lang not in YUGIPEDIA_LANG_FIELDS:
+        return None
     name_key, text_key, pendulum_key = YUGIPEDIA_LANG_FIELDS[lang]
     name = (clean_wiki_text(params.get("name", "")) or clean_yugipedia_title(title)) if lang == "en" else clean_wiki_text(params.get(name_key, ""))
     if not name:
         return None
     text = clean_wiki_text(params.get(text_key, ""))
     if rush:
-        prefix = {"en": "", "fr": "fr_", "kr": "ko_"}[lang]
+        prefix = {"en": "", "fr": "fr_"}[lang]
         labels = {"en": ("REQUIREMENT", "EFFECT", "CONTINUOUS EFFECT", "MULTI-CHOICE EFFECT"),
-                  "fr": ("CONDITION", "EFFET", "EFFET CONTINU", "EFFET MULTI-CHOIX"),
-                  "kr": ("조건", "효과", "지속 효과", "선택 효과")}[lang]
+                  "fr": ("CONDITION", "EFFET", "EFFET CONTINU", "EFFET MULTI-CHOIX")}[lang]
         output = []
         maximum = clean_wiki_text(params.get("maximum_atk", ""))
         if maximum:
@@ -326,11 +325,17 @@ def encode_rush_description(value: str, lang: str = "en") -> str:
 
 
 def fetch_yugipedia_cards(set_codes: list[str], log: LogFn, lang: str = "en", rush: bool = False,
-                          expected_codes: dict[str, str] | None = None) -> dict[str, CardText]:
+                          expected_codes: dict[str, str] | None = None,
+                          diagnostics: dict[str, dict] | None = None) -> dict[str, CardText]:
     """Resolve every alias, then verify printed set numbers on the target card page."""
     cards: dict[str, CardText] = {}
     if lang not in YUGIPEDIA_LANG_FIELDS:
         return cards
+    def issue(requested: str, reason: str, **details) -> None:
+        if diagnostics is not None:
+            key = (expected_codes or {}).get(requested, requested)
+            diagnostics[key] = {"reason": reason, **details}
+
     unique_codes = sorted({code for code in set_codes if code})
     for batch in chunked(unique_codes, 40):
         query = {"action": "query", "titles": "|".join(batch), "redirects": "1",
@@ -341,6 +346,8 @@ def fetch_yugipedia_cards(set_codes: list[str], log: LogFn, lang: str = "en", ru
                 raise ValueError(data["error"].get("info", str(data["error"])))
         except Exception as exc:
             log(f"[SourceText] Yugipedia batch failed ({batch[0]}..): {exc}")
+            for requested in batch:
+                issue(requested, "Source request failed", detail=str(exc))
             continue
         result = data.get("query", {})
         aliases = {item["from"]: item["to"] for field in ("normalized", "redirects")
@@ -354,18 +361,35 @@ def fetch_yugipedia_cards(set_codes: list[str], log: LogFn, lang: str = "en", ru
             page = pages.get(title, {})
             revisions = page.get("revisions") or []
             if page.get("missing") or not revisions:
+                issue(requested, "No source card page found")
                 continue
             params = parse_card_table_params(revisions[0].get("content", ""))
             printed_codes = {line.split(";", 1)[0].strip().upper()
                              for key, value in params.items() if key.endswith("_sets")
                              for line in value.splitlines()}
             expected = (expected_codes or {}).get(requested, requested)
+            source_url = "https://yugipedia.com/wiki/" + urllib.parse.quote(title.replace(" ", "_"))
             if expected.upper() not in printed_codes:
                 log(f"[SourceText] Unverified set code {requested} on {title}; skipped")
+                issue(requested, "Printed set code does not match source page", source=source_url)
                 continue
             card = format_yugipedia_card(title, params, lang, rush=rush)
             if card:
-                cards[requested] = CardText(card.name, card.desc, f"https://yugipedia.com/wiki/{urllib.parse.quote(title.replace(' ', '_'))}")
+                cards[requested] = CardText(card.name, card.desc, source_url)
+                if diagnostics is not None:
+                    diagnostics.pop(expected, None)
+            else:
+                name_key, text_key, pendulum_key = YUGIPEDIA_LANG_FIELDS[lang]
+                required = [text_key] + ([name_key] if name_key else [])
+                if rush:
+                    prefix = "fr_" if lang == "fr" else ""
+                    required.extend(prefix + field for field in ("materials", "condition", "requirement")
+                                    if params.get(field, "").strip())
+                elif params.get("pendulum_effect", "").strip():
+                    required.append(pendulum_key)
+                missing = sorted({field for field in required if not clean_wiki_text(params.get(field, ""))})
+                issue(requested, "Localized fields are missing" if missing else "Localized text is incomplete or unsupported",
+                      source=source_url, missing_fields=missing)
     return cards
 
 
@@ -506,7 +530,8 @@ def current_cdb_names(cdb_path: Path) -> dict[int, str]:
 
 
 def fetch_yugipedia_by_existing_titles(names_by_id: dict[int, str], missing_ids: list[int], lang: str,
-                                       log: LogFn, id_to_code: dict[int, str]) -> dict[int, CardText]:
+                                       log: LogFn, id_to_code: dict[int, str],
+                                       diagnostics: dict[str, dict] | None = None) -> dict[int, CardText]:
     # A page may list its printed code before a redirect for that code exists.
     # Keep the old title fallback, but verify the exact code and reject duplicate
     # name candidates instead of silently selecting whichever row was last.
@@ -519,7 +544,18 @@ def fetch_yugipedia_by_existing_titles(names_by_id: dict[int, str], missing_ids:
     if not title_to_id:
         return {}
     expected = {title: id_to_code[card_id] for title, card_id in title_to_id.items()}
-    cards = fetch_yugipedia_cards(sorted(title_to_id), log, lang=lang, expected_codes=expected)
+    fallback_diagnostics = {}
+    cards = fetch_yugipedia_cards(sorted(title_to_id), log, lang=lang, expected_codes=expected,
+                                  diagnostics=fallback_diagnostics)
+    if diagnostics is not None:
+        verified_reasons = {"Localized fields are missing", "Localized text is incomplete or unsupported"}
+        for code, issue in fallback_diagnostics.items():
+            # A translated human name can fail to resolve even though the printed
+            # set-code lookup already found and verified the correct card page.
+            if diagnostics.get(code, {}).get("reason") not in verified_reasons:
+                diagnostics[code] = issue
+        for title in cards:
+            diagnostics.pop(expected[title], None)
     return {card_id: cards[title] for title, card_id in title_to_id.items() if title in cards}
 
 
@@ -581,8 +617,24 @@ def build_id_to_set_code(entries: dict[int, PackEntry], ids: set[int], lang: str
     return id_to_code
 
 
+def manual_source_report(lang: str) -> dict:
+    return {"language": lang, "mode": "manual", "automatic_fetch": False,
+            "reason": "Korean card text is translator-managed; no web sources are queried.",
+            "matches": {}}
+
+
+def write_source_report(path: Path, report: dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+
+
 def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, log_fn: LogFn | None = None) -> int:
     log = log_fn or log_default
+    if lang in {"kr", "ko"}:
+        report = manual_source_report(lang)
+        log(f"[SourceText] {report['reason']}")
+        write_source_report(cdb_path.parent / "Reports/source_text.json", report)
+        return 0
     if lang not in {"en", "fr", "jp"}:
         return 0
     entries = load_pack_entries_from_ypk(ypk_path)
@@ -598,17 +650,17 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
     id_to_code = build_id_to_set_code(entries, ids, lang)
     if not id_to_code:
         log("[SourceText] No set-code candidates matched the CDB")
-        return 0
 
     cards_by_id: dict[int, CardText] = {}
+    diagnostics: dict[str, dict] = {}
     if lang in YUGIPEDIA_LANG_FIELDS:
-        cards_by_code = fetch_yugipedia_cards(list(id_to_code.values()), log, lang=lang)
+        cards_by_code = fetch_yugipedia_cards(list(id_to_code.values()), log, lang=lang, diagnostics=diagnostics)
         for card_id, set_code in id_to_code.items():
             card = cards_by_code.get(set_code)
             if card:
                 cards_by_id[card_id] = card
         missing_ids = [card_id for card_id in id_to_code if card_id not in cards_by_id]
-        cards_by_id.update(fetch_yugipedia_by_existing_titles(names_by_id, missing_ids, lang, log, id_to_code))
+        cards_by_id.update(fetch_yugipedia_by_existing_titles(names_by_id, missing_ids, lang, log, id_to_code, diagnostics))
     else:
         slugs = []
         for card_id in ids:
@@ -628,9 +680,11 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
     log(f"[SourceText] candidates={len(id_to_code)}, matched={len(cards_by_id)}, missing={missing}")
     report = {"language": lang, "candidates": len(id_to_code), "matched": len(cards_by_id),
               "unmatched_ids": sorted(ids - cards_by_id.keys()),
+              "unresolved": [{"id": key, "name": names_by_id.get(key, ""), "set_code": id_to_code.get(key),
+                              **diagnostics.get(id_to_code.get(key), {"reason": "No verified source match" if key in id_to_code else "No printed set code mapping"})}
+                             for key in sorted(ids - cards_by_id.keys())],
               "matches": {str(key): {"set_code": id_to_code[key], "source": card.source}
                           for key, card in sorted(cards_by_id.items())}}
     report_path = cdb_path.parent / "Reports/source_text.json"
-    report_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    write_source_report(report_path, report)
     return update_cdb_texts(cdb_path, cards_by_id, log, original, lang)

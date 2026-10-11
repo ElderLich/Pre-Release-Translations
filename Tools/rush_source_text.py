@@ -10,9 +10,9 @@ from pathlib import Path
 SCRIPTS = Path(__file__).resolve().parents[1] / ".github/scripts"
 if str(SCRIPTS) not in sys.path:
     sys.path.insert(0, str(SCRIPTS))
-from card_text_autofill import fetch_ocg_cards, fetch_yugipedia_cards, needs_source_text
+from card_text_autofill import fetch_ocg_cards, fetch_yugipedia_cards, manual_source_report, needs_source_text
 
-SUPPORTED = {"en", "fr", "jp", "kr"}
+SUPPORTED = {"en", "fr", "jp"}
 SET_LINE = re.compile(r"\((RD/[A-Z0-9]+-JP[A-Z]?)\).*?`(\d+X+)`", re.I)
 SET_CODE = re.compile(r"RD/[A-Z0-9]+-JP[A-Z]?\d{2,3}")
 
@@ -49,6 +49,10 @@ def identity_map(sets_text: str, ids: set[int], overrides: dict) -> tuple[dict[i
 def fetch_rows(root: Path, source: Path, original: dict, rows: dict, lang: str,
                system_ids: set[int], log=print) -> tuple[dict, dict]:
     """Fill only blank/source-identical untranslated fields; existing edits win."""
+    if lang in {"kr", "ko"}:
+        report = manual_source_report(lang)
+        log(f"[SourceText] {report['reason']}")
+        return rows, report
     if lang not in SUPPORTED:
         return rows, {}
     ids = {card_id for card_id, row in rows.items() if card_id not in system_ids
@@ -64,6 +68,7 @@ def fetch_rows(root: Path, source: Path, original: dict, rows: dict, lang: str,
     sets_text = sets_path.read_text(encoding="utf-8-sig") if sets_path.is_file() else ""
     identities, issues = identity_map(sets_text, ids, mappings.get("cards", {}))
     cards = {}
+    diagnostics = {}
     if lang == "jp":
         slug_overrides = mappings.get("ocg_slugs", {})
         slugs = {slug_overrides.get(code.split("/", 1)[1].split("-", 1)[0],
@@ -71,12 +76,12 @@ def fetch_rows(root: Path, source: Path, original: dict, rows: dict, lang: str,
                  for code in identities.values()}
         cards = fetch_ocg_cards(sorted(slugs), log, rush=True)
     else:
-        cards = fetch_yugipedia_cards(list(identities.values()), log, lang=lang, rush=True)
+        cards = fetch_yugipedia_cards(list(identities.values()), log, lang=lang, rush=True, diagnostics=diagnostics)
     result, matches = dict(rows), {}
     for card_id, code in identities.items():
         card = cards.get(code)
         if not card:
-            issues[card_id] = "No complete localized card text at the verified set code (or source unavailable)"
+            issues[card_id] = diagnostics.get(code, {}).get("reason", "No complete localized card text at the verified set code (or source unavailable)")
             continue
         row = list(rows[card_id])
         changed = []
@@ -88,6 +93,7 @@ def fetch_rows(root: Path, source: Path, original: dict, rows: dict, lang: str,
         result[card_id] = tuple(row)
         matches[str(card_id)] = {"set_code": code, "source": card.source, "fields": changed}
     report = {"language": lang, "requested_ids": sorted(ids), "matches": matches,
-              "unresolved": [{"id": card_id, "reason": reason, "set_code": identities.get(card_id)}
+              "unresolved": [{"id": card_id, "set_code": identities.get(card_id),
+                              **diagnostics.get(identities.get(card_id), {}), "reason": reason}
                              for card_id, reason in sorted(issues.items())]}
     return result, report
