@@ -1,45 +1,8 @@
 {
   "language": "fr",
-  "candidates": 9,
-  "matched": 9,
+  "candidates": 0,
+  "matched": 0,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {
-    "100200298": {
-      "set_code": "VJMP-JP298",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17770&languages=fr"
-    },
-    "101307021": {
-      "set_code": "IMPH-JP021",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17771&languages=fr"
-    },
-    "101307035": {
-      "set_code": "IMPH-JP035",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17772&languages=fr"
-    },
-    "101307045": {
-      "set_code": "IMPH-JP045",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17775&languages=fr"
-    },
-    "101307046": {
-      "set_code": "IMPH-JP046",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17776&languages=fr"
-    },
-    "101307047": {
-      "set_code": "IMPH-JP047",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17777&languages=fr"
-    },
-    "101307060": {
-      "set_code": "IMPH-JP060",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17773&languages=fr"
-    },
-    "101307061": {
-      "set_code": "IMPH-JP061",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17778&languages=fr"
-    },
-    "101307079": {
-      "set_code": "IMPH-JP079",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17774&languages=fr"
-    }
-  }
+  "matches": {}
 }
