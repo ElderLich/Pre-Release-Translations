@@ -109,9 +109,9 @@
     120307059,
     120307060
   ],
-  "local_inputs_sha256": "fe3210b0efe325b91eff1322e9ad5d912a18df83afcb888f0fc867138c12c092",
+  "local_inputs_sha256": "a9e399db90212cef18ae99e3aef63453e73e56efc2dfca5b0a928655afb3630c",
   "patch_sha256": "a5730467623d4f8fc6017164a817f1045198f2ea8bbb76cc4058163d71666916",
-  "source_fingerprint": "58c22a77ed60588a82820f87b9faddcd25843498dad2fde90b01ef208a44b3da",
+  "source_fingerprint": "59363e3587075895feb28c5f85bf6605db764ccdaf0670ef3e24a11e83925f00",
   "source_revision": "6916047c1d6a1bc850e779fb15f4ea0d94b1e6ee",
   "text_sha256": {
     "120000011": "c0ce22b5b50c90fc1de351f78187c251c821ac36083e95e812c5849435e8d425",
@@ -206,6 +206,6 @@
     "120309061": "ab010af17cc640774521543d620c5dd2b78461f2bb901a6da4dd1a2272a29e4c",
     "120309085": "1bdfd31d6cfa23246006352764c1ecaa178c7f75dd44d54db0347abec205a147"
   },
-  "translations_revision": "bb16c78eddc6043d8eaa50180963ce41dd829a26",
+  "translations_revision": "d4c27df40e0e6cfed4d222bb484f85cf8ec98f12",
   "version": 1
 }
