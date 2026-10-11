@@ -1,4 +1,3 @@
-import hashlib
 import importlib.util
 import json
 import os
@@ -118,15 +117,6 @@ class ScheduleGuardTests(unittest.TestCase):
         with patch.object(guard, "latest_release", return_value=100_000), patch.object(guard.time, "time", return_value=136_000), patch.object(guard, "upstream_modified", return_value=None), patch.object(guard, "rush_needs_update", return_value=(True, "new Rush cards")), patch.object(guard, "dispatch_workflow", return_value=True) as dispatch:
             guard.dispatch_daily(False, 24)
         dispatch.assert_called_once_with("rush-prerelease.yml", "main")
-
-    def test_dump_checks_content_not_unrelated_git_sha(self):
-        with tempfile.TemporaryDirectory() as directory:
-            path = Path(directory) / "test.cdb"
-            path.write_bytes(b"same database")
-            manifest = {"cdb_sha256": hashlib.sha256(path.read_bytes()).hexdigest(), "source_commit": "unrelated"}
-            self.assertFalse(guard.dump_decision(path, manifest)[0])
-            path.write_bytes(b"changed database")
-            self.assertTrue(guard.dump_decision(path, manifest)[0])
 
 
 if __name__ == "__main__":

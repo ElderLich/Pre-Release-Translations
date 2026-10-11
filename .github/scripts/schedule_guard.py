@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-"""One daily dispatcher and content checks for unchanged text dumps."""
+"""Dispatch daily translation updates only when their sources need checking."""
 from __future__ import annotations
 
 import argparse
-import hashlib
 import json
 import os
 import subprocess
@@ -134,51 +133,14 @@ def dispatch_daily(force: bool, cooldown_hours: float) -> None:
             handle.write("### Daily dispatcher\n\nStarted locales: " + (", ".join(dispatched) or "none; already fresh") + ".\n")
 
 
-def dump_decision(cdb: Path, manifest: dict | None) -> tuple[bool, str]:
-    current = hashlib.sha256(cdb.read_bytes()).hexdigest()
-    if manifest and manifest.get("cdb_sha256") == current:
-        return False, "Published text dump already matches this CDB."
-    return True, "CDB differs from the published text dump."
-
-
-def publish(should_run: bool, reason: str) -> None:
-    print(reason)
-    print(f"should_run={str(should_run).lower()}")
-    if output := os.environ.get("GITHUB_OUTPUT"):
-        with open(output, "a", encoding="utf-8") as handle:
-            handle.write(f"should_run={str(should_run).lower()}\n")
-    if summary := os.environ.get("GITHUB_STEP_SUMMARY"):
-        with open(summary, "a", encoding="utf-8") as handle:
-            handle.write(f"### Automation preflight\n\n{reason}\n")
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("mode", choices=["dump", "dispatch"])
-    parser.add_argument("--locale", choices=LOCALES)
-    parser.add_argument("--event", default=os.environ.get("GITHUB_EVENT_NAME", "workflow_dispatch"))
     parser.add_argument("--cooldown-hours", type=float, default=24)
     parser.add_argument("--force", action="store_true")
     args = parser.parse_args()
     if args.cooldown_hours <= 0:
         parser.error("--cooldown-hours must be positive")
-    if args.mode == "dispatch":
-        dispatch_daily(args.force, args.cooldown_hours)
-        return
-    if not args.locale:
-        parser.error("--locale is required for dump")
-    if args.event == "workflow_dispatch":
-        decision = True, "Manual dump refresh bypasses the unchanged-CDB check."
-    else:
-        folder = "Base Files" if args.locale == "ZH-TW" else "Workspace"
-        manifest = None
-        try:
-            git("fetch", "--no-tags", "origin", "dump:refs/remotes/origin/dump")
-            manifest = json.loads(git("show", f"origin/dump:{args.locale}/manifest.json"))
-        except (subprocess.CalledProcessError, ValueError):
-            pass
-        decision = dump_decision(Path(args.locale) / folder / "test-release.cdb", manifest)
-    publish(*decision)
+    dispatch_daily(args.force, args.cooldown_hours)
 
 
 if __name__ == "__main__":

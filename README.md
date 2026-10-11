@@ -94,7 +94,7 @@ Standard also supports automatic English and French source text. Existing transl
 - **Translation review.** Rush preserves local text edits and reports conflicting changes. Pending translations are recorded for completion before a full release.
 - **Shared artwork.** Files in [Shared/Rush Artworks](Shared/Rush%20Artworks) are included in every locale's Rush package. Missing artwork appears in the reports.
 - **Daily updates.** One dispatcher checks what needs updating. Standard locales released within 24 hours skip scheduled imports unless the upstream package is newer. Rush checks source revisions and local inputs.
-- **Game packages.** Successful builds produce `.ypk` packages, JSON card data, and version files. Standard CDB text dumps are published to the `dump` branch for review.
+- **Game packages.** Successful builds produce `.ypk` packages, JSON card data, and version files.
 
 [Read the schedule rules →](docs/AUTOMATION_SCHEDULE.md) &nbsp; [Inspect workflow runs →](https://github.com/ElderLich/Pre-Release-Translations/actions)
 

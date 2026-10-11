@@ -34,4 +34,4 @@ jobs:
         run: |
           args=()
           if [ "$FORCE" = "true" ]; then args+=(--force); fi
-          python3 .github/scripts/schedule_guard.py dispatch "${args[@]}"
+          python3 .github/scripts/schedule_guard.py "${args[@]}"

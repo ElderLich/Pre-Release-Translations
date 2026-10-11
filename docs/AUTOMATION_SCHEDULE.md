@@ -10,16 +10,15 @@ It does not download or rebuild the card packages itself.
   package is available. If that date is unavailable, the cooldown remains bounded
   to 24 hours; a manual workflow run always checks immediately.
 - Each locale is checked independently, so an English-only update cannot hide
-  pending work in other languages. If all locales are fresh, none of their sync,
-  release, or dump workflows is launched.
+  pending work in other languages. If all locales are fresh, none of their sync
+  or release workflows is launched.
 - Rush checks its recorded upstream and translation repository revisions and
   local inputs. New, removed or edited source cards trigger an all-locale rebuild.
 - Already queued/running workflows are not dispatched again.
 
-The one dispatcher job still uses a small amount of Actions time. Removing the
-twenty separate sync/dump schedules avoids paying for twenty idle startup jobs.
-The normal import/release jobs run only when needed. Dumps follow successful
-workspace imports and skip generation/publishing when their CDB hash is unchanged.
+The one dispatcher job still uses a small amount of Actions time. Checking all
+locales in that job avoids starting an idle scheduled job for every language.
+The normal import/release jobs run only when needed.
 
 ## Manual updates
 

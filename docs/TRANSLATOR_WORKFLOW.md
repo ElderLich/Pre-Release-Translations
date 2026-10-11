@@ -3,7 +3,7 @@
 This project uses local translation workspaces plus GitHub Actions. Translators
 edit the card files locally, then upload their workspace files to the GitHub
 repo. GitHub does the heavy work: importing new cards, applying mapping fixes,
-building the `.ypk`, updating `test-release.json`, and writing dump files.
+building the `.ypk`, and updating `test-release.json` and version files.
 
 ## Short version
 
@@ -98,10 +98,6 @@ outputs. Do not edit them by hand.
 
 `Reports/remaining_cn.json` is a helper report from `PromptPatcher.py`. It is
 useful for checking untranslated Chinese text or mapping gaps.
-
-The `dump` branch is read-only output for humans. It shows text dumps of CDB
-changes so reviewers can see what changed without opening SQLite. Do not edit
-the `dump` branch.
 
 ## Supported languages
 
