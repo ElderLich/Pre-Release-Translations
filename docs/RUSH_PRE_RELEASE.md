@@ -1,12 +1,30 @@
 # Rush pre-release cards
 
-Rush has its own packages and workspaces. The existing standard Super-Pre files
-and translator helpers are unchanged.
+## Translator workflow
 
-## Update from the prerelease window
+Open your usual locale `AutoPR.py` and select the **Rush** tab. Fetch/pull uses
+only the TransSuperpre repository and prepares
+`<LANG>/Rush/raw2/rush-pre-release.cdb` in your local translation folder. Edit
+that file, then copy or explicitly upload/push your locale's workspace. The
+existing GitHub workflow obtains Rush sources, translations and shared artwork
+and builds all packages. Translators do not need local upstream repositories or
+the maintainer's paths.
 
-Open any locale's `AutoPR.py` in `Super-Pre Translations`, then select **Rush ·
-All Locales**. The same window also keeps the standard MyCard, copy, upload/push
+Local edits survive refreshes; upstream additions/removals/gameplay are merged
+from the published workspace. Conflicting text changes stop for review in
+`Rush/Reports/sync.json`. Thai text follows EN, and ZH-CN is upstream-managed;
+those two workspaces are reference-only. Korean text remains translator-owned.
+See [Translator Workflow](TRANSLATOR_WORKFLOW.md) for the full update/merge flow.
+
+The source paths and all-locale commands below belong to the maintainer workflow
+available under **All locales**. They are not translator prerequisites.
+
+
+Rush has its own packages and workspaces. The standard Super-Pre package flow remains available alongside the locale Rush tools.
+
+## Maintainer all-locale builds
+
+Open any locale's `AutoPR.py` in `Super-Pre Translations`, then select **All locales**. The same window also keeps the standard MyCard, copy, upload/push
 and workspace pull actions on its **Standard** tab.
 
 - **Fetch Updates & Build All Locales** fast-forwards the configured
@@ -102,15 +120,19 @@ gaps leave all previous release bytes untouched.
 ## Automatic names and card effects
 
 The normal `sync` command now fetches missing names/effects automatically for
-English, French, Japanese and Korean before applying the existing PromptPatcher
+English, French and Japanese before applying the existing PromptPatcher
 and mappings. Pass `--offline` to use only the local workspaces and translated
 seed databases. Existing translator edits take precedence; fetching never
 adds card IDs beyond `RD Patch.cdb` or rewrites gameplay columns.
 
 - English and French use [Yugipedia's MediaWiki API](https://yugipedia.com/api.php).
   French reads `fr_name`, `fr_text`, `fr_requirement`, `fr_materials` and
-  `fr_condition`, not English fallbacks. Korean can similarly use published
-  `ko_*` fields where available.
+  `fr_condition`, not English fallbacks.
+- Korean is translator-managed. No Korean web text is fetched; existing Korean
+  workspace translations and reviewed Korean locale seeds are preserved. New
+  untranslated cards stay pending until the translator supplies them. Upstream
+  inventory/gameplay updates, removals and translator-owned PromptPatcher entries
+  still apply. `KR/Rush/source_text.json` explicitly reports manual mode.
 - Japanese uses [ocg-card.com's Rush lists](https://ocg-card.com/list_r/).
   Examples are [Limited Pack Remastered Edition](https://ocg-card.com/list_r/lp01/)
   and [Cross Art Collection](https://ocg-card.com/list_r/ca01/). This is a
@@ -128,13 +150,15 @@ adds card IDs beyond `RD Patch.cdb` or rewrites gameplay columns.
   No identity is inferred from a similar card name or artwork.
 
 `<LANG>/Rush/source_text.json` records fetched field sources and unresolved
-matches. `report.json` remains the publication gate. Required missing French or
+matches, including missing localized fields, unverified identities and request
+failures. `report.json` remains the publication gate. Required missing French or
 Korean text blocks publication until a real translation is supplied. The daily
 dispatcher retries pending reports even if the Rush upstream revision has not
 changed; completed unchanged packages still skip their build.
 
 A live check on 2026-10-11 found complete source text for all 90 playable patch
-cards in English and Japanese, only 5 in French and 12 in Korean. The current
+cards in English and Japanese, but only 5 in French. Korean automatic fetching
+is disabled regardless of what external sites contain. The current
 translated seed databases already fill all 91 rows, including the simulator
 helper, so this source limitation does not remove current translations. It
 matters for future new cards: an API cannot supply a translation that its site

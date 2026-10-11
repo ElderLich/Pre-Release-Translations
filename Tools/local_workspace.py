@@ -5,7 +5,8 @@
 The GitHub Actions workflows own the standard build. This helper copies the
 local translator files into the repo Workspace folder, refreshes local raw2 files
 from the latest upstream package, and optionally commits and pushes Workspace
-changes. Rush can fetch its source and build all locales locally. Placeholder
+changes. Rush translators use published per-locale workspaces; maintainers can
+fetch source dependencies and build all locales locally. Placeholder
 mappings are shared in repo-level Shared/Mappings.csv.
 """
 
@@ -41,6 +42,8 @@ LANGS = {
     "th": LangConfig("th", "TH"),
 }
 
+RUSH_LANGS = {**LANGS, "zh-cn": LangConfig("zh-cn", "ZH-CN"), "zh-tw": LangConfig("zh-tw", "ZH-TW")}
+
 REQUIRED_WORKSPACE_FILES = ("test-release.cdb", "test-strings.conf")
 LOCAL_ROOT_ENV = "SUPER_PRE_LOCAL_ROOT"
 LOCAL_MAPPINGS_FILE = "Mappings.csv"
@@ -73,7 +76,7 @@ def repo_relative(repo_root: Path, path: Path) -> str:
 
 
 def looks_like_local_root(path: Path) -> bool:
-    return any((path / config.folder / "raw2").is_dir() for config in LANGS.values())
+    return any((path / config.folder / "raw2").is_dir() for config in RUSH_LANGS.values())
 
 
 def discover_local_root(lang: str | None = None) -> Path | None:
@@ -83,7 +86,7 @@ def discover_local_root(lang: str | None = None) -> Path | None:
 
     cwd = Path.cwd().resolve()
     candidates = [cwd, *cwd.parents]
-    folder = LANGS[lang].folder if lang in LANGS else None
+    folder = RUSH_LANGS[lang].folder if lang in RUSH_LANGS else None
     for candidate in candidates:
         if folder and candidate.name.lower() == folder.lower() and (candidate / "raw2").is_dir():
             return candidate.parent
@@ -187,16 +190,27 @@ def ensure_no_staged_changes(repo_root: Path) -> None:
         fail("repo already has staged changes; commit or unstage them before using --push")
 
 
+def ensure_main_branch(repo_root: Path) -> None:
+    branch = subprocess.run(["git", "branch", "--show-current"], cwd=repo_root,
+                            capture_output=True, text=True, check=True).stdout.strip()
+    if branch != "main":
+        fail(f"Switch TransSuperpre to main before publishing or refreshing (current branch: {branch or 'detached HEAD'}).")
+
+
 def commit_and_push(args: argparse.Namespace, paths: list[Path]) -> None:
     repo_root = Path(args.repo_root).expanduser()
+    ensure_main_branch(repo_root)
     ensure_no_staged_changes(repo_root)
     rel_paths = [repo_relative(repo_root, path) for path in paths]
     run(["git", "add", "-A", "--", *rel_paths], repo_root)
 
     diff_result = subprocess.run(["git", "diff", "--cached", "--quiet", "--", *rel_paths], cwd=str(repo_root))
     if diff_result.returncode == 0:
-        log("no workspace changes to commit")
+        log("no new workspace changes to commit; retrying publication of main")
+        run(["git", "push", "origin", "main"], repo_root)
         return
+    if diff_result.returncode != 1:
+        fail("Could not inspect staged workspace changes; nothing was committed or pushed.")
 
     message = args.message or f"Update {LANGS[args.lang].folder} workspace"
     run(["git", "commit", "-m", message], repo_root)
@@ -205,6 +219,8 @@ def commit_and_push(args: argparse.Namespace, paths: list[Path]) -> None:
 
 def command_upload(args: argparse.Namespace) -> None:
     repo_root = Path(args.repo_root).expanduser()
+    if args.push:
+        ensure_main_branch(repo_root)
     if args.pull_first:
         run(["git", "pull", "--ff-only", "origin", "main"], repo_root)
     changed_paths = copy_workspace(args)
@@ -334,6 +350,65 @@ def command_rush(args: argparse.Namespace) -> None:
     log("Rush packages built locally. Review and push with GitHub Desktop when ready.")
 
 
+
+def pull_clean_translator_repo(repo_root: Path) -> None:
+    status = subprocess.run(["git", "status", "--porcelain"], cwd=repo_root,
+                            capture_output=True, text=True, check=True)
+    if status.stdout.strip():
+        fail("TransSuperpre has uncommitted changes. Commit or review them first; Rush refresh does not stash, reset or discard work. "
+             "Use --no-pull-first only when intentionally working with the current local repository.")
+    ensure_main_branch(repo_root)
+    run(["git", "pull", "--ff-only", "origin", "main"], repo_root)
+
+
+def command_rush_refresh(args: argparse.Namespace) -> None:
+    from rush_translator import refresh_locale
+    repo_root = Path(args.repo_root).expanduser().resolve()
+    local_root = resolve_local_root(args.local_root, args.lang).resolve()
+    if args.pull_first:
+        pull_clean_translator_repo(repo_root)
+    try:
+        refresh_locale(repo_root, local_root, RUSH_LANGS[args.lang].folder,
+                       keep_local=args.keep_local, log=log)
+    except (ValueError, OSError) as error:
+        fail(str(error))
+
+
+def command_rush_upload(args: argparse.Namespace) -> None:
+    from rush_translator import copy_locale
+    repo_root = Path(args.repo_root).expanduser().resolve()
+    local_root = resolve_local_root(args.local_root, args.lang).resolve()
+    if args.push and args.dry_run:
+        fail("Use either --push or --dry-run, not both.")
+    if args.push:
+        # Check before copying so a failed publish cannot mutate a feature branch.
+        ensure_main_branch(repo_root)
+    if args.pull_first and not args.dry_run:
+        pull_clean_translator_repo(repo_root)
+    if args.push:
+        ensure_no_staged_changes(repo_root)
+    try:
+        changed = copy_locale(repo_root, local_root, RUSH_LANGS[args.lang].folder, dry_run=args.dry_run, log=log)
+    except (ValueError, OSError) as error:
+        fail(str(error))
+    if args.push:
+        args.message = args.message or f"Update {RUSH_LANGS[args.lang].folder} Rush translations"
+        commit_and_push(args, changed)
+    elif not args.dry_run:
+        log("Rush translations copied locally. Upload & push to trigger the GitHub build; no source/artwork repositories are required here.")
+
+
+def command_rush_open(args: argparse.Namespace) -> None:
+    local_root = resolve_local_root(args.local_root, args.lang)
+    folder = local_root / RUSH_LANGS[args.lang].folder / "Rush" / ("Reports" if args.command == "rush-reports" else "raw2")
+    if not folder.is_dir():
+        fail(f"Rush folder does not exist yet: {folder}. Refresh Rush first.")
+    if os.name == "nt":
+        os.startfile(folder)
+    else:
+        subprocess.Popen(["open" if sys.platform == "darwin" else "xdg-open", str(folder)])
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo-root", default=str(DEFAULT_REPO_ROOT), help="Path to the TransSuperpre repo")
@@ -351,6 +426,25 @@ def build_parser() -> argparse.ArgumentParser:
     rush.add_argument("--fetch", action="store_true", help="Fast-forward the clean Rush source checkout first")
     rush.add_argument("--offline", action="store_true", help="Skip web text sources when rebuilding")
     rush.set_defaults(func=command_rush)
+
+    rush_refresh = subparsers.add_parser("rush-refresh", help="Refresh one locale from the published TransSuperpre Rush workspace")
+    rush_refresh.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
+    rush_refresh.add_argument("--no-pull-first", action="store_false", dest="pull_first", help="Use the current local TransSuperpre checkout without fetching")
+    rush_refresh.add_argument("--keep-local", action="store_true", help="After reviewing sync.json, explicitly retain local text when both sides changed")
+    rush_refresh.set_defaults(func=command_rush_refresh, pull_first=True)
+
+    rush_upload = subparsers.add_parser("rush-upload", help="Copy one locale's Rush translations into the repository")
+    rush_upload.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
+    rush_upload.add_argument("--push", action="store_true", help="Commit and push only this locale's Rush workspace; GitHub builds the packages")
+    rush_upload.add_argument("--pull-first", action="store_true", help="Fast-forward a clean TransSuperpre checkout before merging")
+    rush_upload.add_argument("--message")
+    rush_upload.add_argument("--dry-run", action="store_true")
+    rush_upload.set_defaults(func=command_rush_upload)
+
+    for action in ("rush-open", "rush-reports"):
+        rush_open = subparsers.add_parser(action, help="Open the selected locale's local Rush folder")
+        rush_open.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
+        rush_open.set_defaults(func=command_rush_open)
 
     upload = subparsers.add_parser("upload", help="Copy local files into <lang>/Workspace")
     upload.add_argument("--lang", choices=sorted(LANGS), required=True)
@@ -385,7 +479,7 @@ def build_parser() -> argparse.ArgumentParser:
     pull.set_defaults(func=command_pull)
 
     status = subparsers.add_parser("status", help="Show git status and recent GitHub Actions")
-    status.add_argument("--lang", choices=sorted(LANGS), help="Accepted for wrapper compatibility")
+    status.add_argument("--lang", choices=sorted(RUSH_LANGS), help="Accepted for wrapper compatibility")
     status.add_argument("--limit", type=int, default=8)
     status.set_defaults(func=command_status)
 

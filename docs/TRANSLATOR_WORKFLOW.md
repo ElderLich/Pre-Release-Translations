@@ -7,19 +7,57 @@ building the `.ypk`, updating `test-release.json`, and writing dump files.
 
 ## Short version
 
-1. Open your local `AutoPR.py` helper; it launches the Standard/Rush window.
-2. On **Standard**, select your language and click **Fetch Standard Updates (MyCard)**.
-3. Translate cards in your local `<LANG>/raw2` folder.
-4. Click **Upload Workspace & Push to GitHub**, or **Copy Workspace into Repository** to review locally first.
-5. GitHub Actions updates the repo and builds the package.
-6. Check the language folder on `main` for the generated `.ypk`, JSON, and
-   version file.
+1. Open your local `AutoPR.py` helper. It opens the shared three-tab window:
+   **Standard**, **Rush** and **All locales**.
+2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
+   translation and copy/upload workflow.
+3. **Rush** operates on your selected language. Fetch/pull downloads the latest
+   published TransSuperpre workspace and merges it into your local
+   `<LANG>/Rush/raw2/rush-pre-release.cdb`. Edit that CDB in your usual editor.
+4. Copy Rush translations into the repo to review locally, or explicitly use
+   **Upload & Push** to commit that locale's workspace and start its cloud build.
+5. **All locales** shows published versions and translation/artwork gaps. Its
+   source-fetch/build controls are for maintainers with the source repositories;
+   ordinary translators do not need them.
 
-For Rush, use the **Rush · All Locales** tab and **Fetch Updates & Build All
-Locales**. After editing translations, use **Build All Locales**. These actions
-build locally, preserve existing translations, and show pending translations
-and artwork gaps per locale. See [Rush pre-release cards](RUSH_PRE_RELEASE.md)
-for source paths, reports and publication details.
+The translator Rush workflow needs only Python, Git, a TransSuperpre checkout
+and your local language folder. You do not need `ygopro-rush-duel`, MDPro3_Data,
+the maintainer's Windows paths, or local artwork sources. GitHub Actions obtains
+those dependencies and builds all Rush packages after a workspace upload.
+
+`AutoPR.py --menu` retains the familiar numbered Standard actions (1–7) and
+adds Rush actions for the wrapper's language (8–13). Existing Standard command
+arguments remain compatible.
+
+### Safe Rush updates
+
+- TransSuperpre must be on `main` and have no uncommitted changes before a
+  fetch/pull. The tool never stashes, resets or discards work automatically.
+- Your edits live in `<LANG>/Rush/raw2/rush-pre-release.cdb`. The downloaded
+  baseline in `Rush/Base Files` is bookkeeping; do not translate it.
+- Current IDs and gameplay follow the published repository workspace. New
+  cards appear and retired cards leave the local database automatically.
+- Text you edited locally is retained. Unedited fields can receive newer
+  published translations. A first import adopts an existing local CDB's text.
+- If the same field changed on both sides, the update stops before overwriting
+  either CDB. `Rush/Reports/sync.json` contains both versions for review. Accept
+  published values in your local file and refresh, or use menu option 13 to
+  explicitly keep local conflict values. The equivalent advanced command is
+  `AutoPR.py rush-refresh --no-pull-first --keep-local`.
+- Upload changes only `<LANG>/Rush/Workspace/rush-pre-release.cdb` in the repo.
+  Reports and packages are built by GitHub. Copy-only never commits or pushes.
+- Thai Rush follows English: submit corrections through EN. Simplified Chinese
+  Rush follows upstream `RD Patch.cdb`: its local workspace is reference-only.
+  Both can be refreshed/viewed but cannot upload text that the builder would
+  discard. Traditional Chinese (ZH-TW) is editable.
+
+Local `Rush/Reports/report.json` lists pending card fields/artwork gaps;
+`source_text.json` explains automatic source results (or Korean manual mode).
+`sync.json` records additions, removals and merge conflicts. These reports
+reflect the last published/locally fetched workspace, not an independent live
+check of the upstream card repository.
+
+See [Rush pre-release cards](RUSH_PRE_RELEASE.md) for maintainer build details.
 
 ## What each folder means
 
@@ -242,5 +280,22 @@ source-identical or still-Chinese fields are filled. Prompts remain owned by
 are recorded in `Workspace/Reports/source_text.json` (or `raw2/Reports` for a
 local refresh). Matching never adds cards outside the upstream CDB.
 
-Rush uses a separate command and exact upstream `sets.md` ID mappings; see
+`candidates` counts pending cards with a printed set-code mapping; `matched`
+counts complete localized source records accepted for those cards. `unmatched_ids`
+lists cards still needing source text, including any with no mapping. A zero
+match count is not a build failure. The `unresolved` entries explain whether
+fields are missing, a printed identity did not match, or a source request failed.
+For example, the nine French entries reported on 2026-10-11 all resolved to
+verified Yugipedia pages, but none had `fr_name` or `fr_text` published. They
+therefore remain available for manual translation and are retried on refresh.
+
+Korean names/effects are translator-managed for both Standard and Rush. No
+Korean web autofill is attempted. Standard still refreshes upstream inventory,
+gameplay data and the existing prompt/mapping workflow; it preserves the
+translator's card names/effects. Rush may reuse reviewed Korean locale seed
+translations, but does not substitute English or fetch Korean website text.
+Korean source reports explicitly display `mode: manual`.
+
+The cloud Rush build uses exact upstream `sets.md` ID mappings; the translator
+uses the Rush tab rather than invoking the builder. See
 [Rush pre-release cards](RUSH_PRE_RELEASE.md).

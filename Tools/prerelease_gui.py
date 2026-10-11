@@ -1,20 +1,31 @@
-"""Shared Standard/Rush window launched by each locale's AutoPR.py wrapper."""
+"""Shared translation workspace with Standard, Rush, and all-locale overview tabs."""
 from __future__ import annotations
 
+from contextlib import closing
+from datetime import datetime, timezone
+import hashlib
 import json
 import os
 from pathlib import Path
 import queue
+import sqlite3
 import subprocess
 import threading
 import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
-from tkinter.scrolledtext import ScrolledText
 
 from rush_local import python_console
 
 STANDARD_LANGS = ("DE", "EN", "ES", "FR", "IT", "JP", "KR", "PT", "TH")
 RUSH_LANGS = (*STANDARD_LANGS, "ZH-CN", "ZH-TW")
+
+COLORS = {
+    "background": "#101720", "panel": "#182330", "field": "#111b27",
+    "border": "#2b3b4d", "text": "#edf3fa", "muted": "#9caec3",
+    "accent": "#70dec6", "accent_hover": "#91edd9", "accent_text": "#092820",
+    "hover": "#26394a", "disabled": "#63758b", "log": "#0c131c",
+    "warning": "#edc080", "error": "#ff9f9f", "blue": "#9ac5ff",
+}
 
 
 def workspace_command(repo: Path, local: Path, command: str, lang: str) -> list[str]:
@@ -37,21 +48,106 @@ def rush_command(repo: Path, source: Path, translations: Path, *, fetch: bool, o
     return args
 
 
+def rush_workspace_command(repo: Path, local: Path, command: str, lang: str) -> list[str]:
+    action = {"refresh": "rush-refresh", "pull": "rush-refresh", "upload": "rush-upload",
+              "push": "rush-upload", "status": "status", "resolve": "rush-refresh"}[command]
+    args = [python_console(), "-u", str(repo / "Tools/local_workspace.py"),
+            "--repo-root", str(repo), "--local-root", str(local), action, "--lang", lang.lower()]
+    if command == "push":
+        args.append("--push")
+    elif command == "resolve":
+        args += ["--no-pull-first", "--keep-local"]
+    return args
+
+
+def read_json_object(path: Path) -> dict:
+    if not path.is_file():
+        return {}
+    value = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(value, dict):
+        raise ValueError(f"Expected a report object: {path.name}")
+    return value
+
+
+def workspace_rows(path: Path) -> dict:
+    if not path.is_file():
+        return {}
+    with closing(sqlite3.connect(path.resolve().as_uri() + "?mode=ro", uri=True)) as database:
+        return {str(row[0]): tuple(row) for row in database.execute("SELECT * FROM texts")}
+
+
+def row_hash(row: tuple) -> str:
+    serialized = json.dumps(list(row), ensure_ascii=False, indent=2, sort_keys=True) + "\n"
+    return hashlib.sha256(serialized.encode("utf-8")).hexdigest()
+
+
+def locale_snapshot(repo: Path, lang: str) -> dict:
+    """Only describe this checkout; inspecting a tab never performs network work."""
+    folder = repo / lang
+    snapshot = {"lang": lang, "status": "Not built", "cards": "—", "pending": [], "missing": [],
+                "version": "Not built", "built": "Not built", "names": {}, "changed": [], "error": None}
+    try:
+        report = read_json_object(folder / "Rush/report.json")
+        snapshot["cards"] = report.get("active_cards", "—")
+        snapshot["pending"] = report.get("pending_translations", [])
+        snapshot["missing"] = report.get("missing_artwork", [])
+        if not isinstance(snapshot["pending"], list) or not isinstance(snapshot["missing"], list):
+            raise ValueError("Invalid pending translation or missing artwork list")
+        version = folder / "rush-version.txt"
+        if version.is_file():
+            snapshot["version"] = version.read_text(encoding="utf-8").strip()
+            try:
+                snapshot["built"] = datetime.fromtimestamp(int(snapshot["version"]), timezone.utc).strftime("%d %b %Y · %H:%M UTC")
+            except (ValueError, OverflowError, OSError):
+                snapshot["built"] = snapshot["version"]
+        rows = workspace_rows(folder / "Rush/Workspace/rush-pre-release.cdb")
+        snapshot["names"] = {key: row[1] for key, row in rows.items()}
+        hashes = report.get("published_text_sha256", {})
+        if not isinstance(hashes, dict):
+            raise ValueError("Invalid published text fingerprints")
+        if hashes:
+            snapshot["changed"] = sorted(key for key in rows.keys() | hashes.keys() if key not in rows or row_hash(rows[key]) != hashes.get(key))
+        built = version.is_file() and (folder / "rush-pre-release.ypk").is_file()
+        if snapshot["pending"]:
+            snapshot["status"] = "Translation pending"
+        elif snapshot["changed"]:
+            snapshot["status"] = "Workspace changed"
+        elif built:
+            snapshot["status"] = "Built · art missing" if snapshot["missing"] else "Built"
+        if not report:
+            snapshot["status"] = "No build report"
+    except (OSError, ValueError, TypeError, sqlite3.Error) as error:
+        snapshot["status"], snapshot["error"] = "Read error", str(error)
+        snapshot["pending"] = snapshot["pending"] if isinstance(snapshot["pending"], list) else []
+        snapshot["missing"] = snapshot["missing"] if isinstance(snapshot["missing"], list) else []
+    return snapshot
+
+
+def snapshot_details(snapshot: dict) -> str:
+    lines = [f"{snapshot['lang']} · {snapshot['status']} · Package {snapshot['version']}"]
+    if snapshot["error"]:
+        return "\n".join(lines + [snapshot["error"]])
+    names = snapshot["names"]
+    for issue in snapshot["pending"]:
+        if isinstance(issue, dict):
+            card_id = str(issue.get("id", "?"))
+            name = issue.get("name") or names.get(card_id) or "Name unavailable"
+            fields = ", ".join(issue.get("fields", [])) or "translation review"
+            lines.append(f"Translation · {card_id} · {name} · {fields}")
+        else:
+            lines.append(f"Translation · {issue} · {names.get(str(issue), 'Name unavailable')}")
+    for card_id in snapshot["missing"]:
+        lines.append(f"Artwork missing · {card_id} · {names.get(str(card_id), 'Name unavailable')}")
+    for card_id in snapshot["changed"]:
+        lines.append(f"Workspace changed · {card_id} · {names.get(str(card_id), 'Removed from workspace')}")
+    if len(lines) == 1:
+        lines.append("No missing translations or artwork are listed in the latest local build report.")
+    return "\n".join(lines)
+
+
 def read_reports(repo: Path) -> list[tuple]:
-    rows = []
-    for lang in RUSH_LANGS:
-        try:
-            path = repo / lang / "Rush/report.json"
-            report = json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
-            pending = report.get("pending_translations", [])
-            version = repo / lang / "rush-version.txt"
-            rows.append((lang, report.get("active_cards", "—"),
-                         len(pending) if isinstance(pending, list) else pending,
-                         len(report.get("missing_artwork", [])),
-                         version.read_text().strip() if version.is_file() else "Not built"))
-        except (OSError, ValueError, TypeError):
-            rows.append((lang, "Read error", "—", "—", "Check report.json"))
-    return rows
+    snapshots = (locale_snapshot(repo, lang) for lang in RUSH_LANGS)
+    return [(item["lang"], item["cards"], len(item["pending"]), len(item["missing"]), item["version"]) for item in snapshots]
 
 
 def stream_job(command: list[str], cwd: Path, events: queue.Queue) -> None:
@@ -90,92 +186,434 @@ class PrereleaseWindow:
         except (ValueError, OSError) as error:
             self.config_error = str(error)
             self.config = {}
-        self.language = tk.StringVar(value=lang.upper())
+        self.language = tk.StringVar(value=lang.upper() if lang.upper() in STANDARD_LANGS else "EN")
+        self.rush_language = tk.StringVar(value=lang.upper() if lang.upper() in RUSH_LANGS else "EN")
         self.source = tk.StringVar(value=self.config.get("rush_source_root", str(repo.parent / "ygopro-rush-duel")))
         self.translations = tk.StringVar(value=self.config.get("rush_translations_root", str(repo.parent / "MDPro3_Data/Data/locales")))
         self.offline = tk.BooleanVar(value=False)
-        self.status = tk.StringVar(value="Ready")
-        root.title("TransSuperpre · Pre-Release Cards")
-        root.geometry("980x780")
-        root.minsize(820, 700)
+        self.status = tk.StringVar(value="No operation running.")
+        self.log_visible = tk.BooleanVar(value=True)
+        self.status_kind = tk.StringVar(value="READY")
+        self.report_summary = tk.StringVar(value="")
+        self.rush_workspace_status = tk.StringVar(value="")
+        self.rush_workspace_note = tk.StringVar(value="")
+        self.rush_publish_controls = []
+        self.build_tools_visible = tk.BooleanVar(value=False)
+        self.report_cache = {}
+        self.scale = max(1.0, float(root.tk.call("tk", "scaling")) / (96 / 72))
+        self._configure_styles()
+        root.title("TransSuperpre · Translation Workspace")
+        root.configure(background=COLORS["background"])
+        available_w = root.winfo_screenwidth() - self.px(60)
+        available_h = root.winfo_screenheight() - self.px(90)
+        root.geometry(f"{min(self.px(1120), available_w)}x{min(self.px(940), available_h)}")
+        root.minsize(min(self.px(900), available_w), min(self.px(660), available_h))
         root.protocol("WM_DELETE_WINDOW", self.close)
-        outer = ttk.Frame(root, padding=16)
+
+        outer = ttk.Frame(root, style="App.TFrame", padding=self.px(22))
         outer.pack(fill="both", expand=True)
-        ttk.Label(outer, text="Pre-Release Cards", font=("Segoe UI", 19, "bold")).pack(anchor="w")
-        ttk.Label(outer, text=str(self.repo)).pack(anchor="w", pady=(2, 12))
-        notebook = ttk.Notebook(outer)
-        notebook.pack(fill="x")
-        standard = ttk.Frame(notebook, padding=14)
-        rush = ttk.Frame(notebook, padding=14)
-        notebook.add(standard, text=" Standard ")
-        notebook.add(rush, text=" Rush · All Locales ")
-        self.notebook = notebook
-        ttk.Label(standard, text="Refresh your local translations, then copy or upload them for the standard GitHub build.").pack(anchor="w")
-        language_row = ttk.Frame(standard)
-        language_row.pack(fill="x", pady=14)
-        ttk.Label(language_row, text="Language").pack(side="left", padx=(0, 10))
-        selector = ttk.Combobox(language_row, textvariable=self.language, values=STANDARD_LANGS, state="readonly", width=10)
-        selector.pack(side="left")
-        self.controls.append((selector, "readonly"))
-        for label, command in (("Fetch Standard Updates (MyCard)", "refresh"),
-                               ("Copy Workspace into Repository", "upload"),
-                               ("Upload Workspace & Push to GitHub", "push"),
-                               ("Pull Published Workspace", "pull"), ("Repository & Actions Status", "status")):
-            self.button(standard, label, lambda command=command: self.start_standard(command)).pack(fill="x", pady=4)
-        self.button(standard, "Open Local Translation Folder", lambda: self.open_path(self.local / self.language.get() / "raw2")).pack(fill="x", pady=4)
-        ttk.Label(rush, text="Fetch the latest Rush patch and build EN, DE, ES, FR, IT, JP, KR, PT, TH, ZH-CN and ZH-TW.").pack(anchor="w")
-        paths = ttk.Frame(rush)
-        paths.pack(fill="x", pady=10)
-        paths.columnconfigure(1, weight=1)
-        for row, (title, variable) in enumerate((("Rush source", self.source), ("Locale databases", self.translations))):
-            ttk.Label(paths, text=title).grid(row=row, column=0, sticky="w", padx=(0, 10), pady=3)
-            entry = ttk.Entry(paths, textvariable=variable)
-            entry.grid(row=row, column=1, sticky="ew", pady=3)
-            self.controls.append((entry, "normal"))
-            self.button(paths, "Browse…", lambda variable=variable: self.browse(variable)).grid(row=row, column=2, padx=(8, 0), pady=3)
-        actions = ttk.Frame(rush)
-        actions.pack(fill="x")
-        self.fetch_button = self.button(actions, "Fetch Updates & Build All Locales", lambda: self.start_rush(True))
-        self.fetch_button.pack(side="left", fill="x", expand=True, padx=(0, 6))
-        self.build_button = self.button(actions, "Build All Locales", lambda: self.start_rush(False))
-        self.build_button.pack(side="left", fill="x", expand=True)
-        offline = ttk.Checkbutton(rush, text="Use local translations only (skip web text sources)", variable=self.offline)
-        offline.pack(anchor="w", pady=(8, 2))
-        self.controls.append((offline, "normal"))
-        ttk.Label(rush, text="Builds save locally. Thai uses English. Missing translations appear in the reports below.").pack(anchor="w", pady=(0, 6))
-        table_frame = ttk.Frame(rush)
-        table_frame.pack(fill="x")
-        columns = ("Locale", "Cards", "Pending translations", "Missing artwork", "Package version")
-        self.table = ttk.Treeview(table_frame, columns=columns, show="headings", height=6, selectmode="browse")
-        for column, width in zip(columns, (70, 70, 170, 130, 175)):
-            self.table.heading(column, text=column)
-            self.table.column(column, width=width, minwidth=60, anchor="center")
-        self.table.pack(side="left", fill="x", expand=True)
-        scrollbar = ttk.Scrollbar(table_frame, orient="vertical", command=self.table.yview)
-        scrollbar.pack(side="right", fill="y")
-        self.table.configure(yscrollcommand=scrollbar.set)
+        outer.columnconfigure(0, weight=1)
+        outer.rowconfigure(2, weight=1)
+        header = ttk.Frame(outer, style="App.TFrame")
+        header.grid(row=0, column=0, sticky="ew", pady=(0, self.px(18)))
+        header.columnconfigure(0, weight=1)
+        self.label(header, "TRANS SUPERPRE", "Brand").grid(row=0, column=0, sticky="w")
+        self.label(header, "Translation workspace", "Title").grid(row=1, column=0, sticky="w", pady=(self.px(3), self.px(3)))
+        self.label(header, "Prepare card updates. Review translations. Publish when ready.", "Muted").grid(row=2, column=0, sticky="w")
+        repository = ttk.Frame(header, style="App.TFrame")
+        repository.grid(row=0, column=1, rowspan=3, sticky="e", padx=(self.px(18), 0))
+        self.label(repository, "CONNECTED REPOSITORY", "Caption").pack(anchor="e")
+        self.label(repository, self.repo.name, "Body").pack(anchor="e", pady=(self.px(4), self.px(4)))
+        self.button(repository, "Open folder  ↗", lambda: self.open_path(self.repo), style="Link").pack(anchor="e")
+
+        navigation = ttk.Frame(outer, style="App.TFrame")
+        navigation.grid(row=1, column=0, sticky="w")
+        self.nav_buttons = []
+        self.notebook = ttk.Notebook(outer, style="Workspace.TNotebook")
+        self.notebook.grid(row=2, column=0, sticky="nsew")
+        for index, title in enumerate(("Standard", "Rush", "All locales")):
+            button = ttk.Button(navigation, text=title, style="Navigation.TButton", command=lambda index=index: self.notebook.select(index))
+            button.pack(side="left", padx=(0, self.px(7)))
+            self.nav_buttons.append(button)
+        self.page_scrolls = []
+        self.standard_page = self._scrollable_page("Standard")
+        self.rush_page = self._scrollable_page("Rush")
+        self.overview_page = self._scrollable_page("All locales")
+        self.notebook.bind("<<NotebookTabChanged>>", self._sync_navigation)
+        self.notebook.enable_traversal()
+        self._sync_navigation()
+        self._build_standard(self.standard_page)
+        self._build_rush_workspace(self.rush_page)
+        self._build_overview(self.overview_page)
+        self._build_activity(outer)
+        root.bind("<MouseWheel>", self._scroll_page, add="+")
         self.refresh_reports()
+        self.rush_language.trace_add("write", lambda *_: self.refresh_rush_status())
+        self.refresh_rush_status()
         if lang.upper() in RUSH_LANGS:
             self.table.selection_set(lang.upper())
-        links = ttk.Frame(rush)
-        links.pack(fill="x", pady=(8, 0))
-        self.button(links, "Open Selected Workspace", lambda: self.open_rush("Workspace")).pack(side="left", padx=(0, 6))
-        self.button(links, "Open Selected Report", lambda: self.open_rush("report.json")).pack(side="left", padx=(0, 6))
-        self.button(links, "Shared Artworks", lambda: self.open_path(self.repo / "Shared/Rush Artworks")).pack(side="left")
-        progress_row = ttk.Frame(outer)
-        progress_row.pack(fill="x", pady=(12, 6))
-        ttk.Label(progress_row, textvariable=self.status).pack(side="left")
-        self.progress = ttk.Progressbar(progress_row, mode="indeterminate", length=150)
-        self.progress.pack(side="right")
-        self.log = ScrolledText(outer, height=10, wrap="word", font=("Consolas", 10), state="disabled")
-        self.log.pack(fill="both", expand=True)
-        self.append_log("Select a tab to update Standard or Rush cards. Rush operations build every locale.\n")
+        self.append_log("Ready. Choose Standard or Rush, then fetch the latest card updates.\n")
+        root.update_idletasks()
+        if min(self.px(940), available_h) < root.winfo_reqheight() - self.px(40):
+            self.toggle_log()
         self.poll_id = root.after(100, self.poll)
 
-    def button(self, parent, title, action):
-        button = ttk.Button(parent, text=title, command=action)
+    def px(self, value):
+        return round(value * self.scale)
+
+    def _configure_styles(self):
+        c, style = COLORS, ttk.Style(self.root)
+        # A native Windows theme ignores several dark colors; clam is bundled with Tk.
+        style.theme_use("clam")
+        style.configure(".", font=("Segoe UI", 10), background=c["background"], foreground=c["text"])
+        style.configure("App.TFrame", background=c["background"])
+        style.configure("Panel.TFrame", background=c["panel"], bordercolor=c["border"], relief="solid", borderwidth=1)
+        style.configure("Inner.TFrame", background=c["panel"])
+        fonts = {"Title": ("Segoe UI", 23, "bold"), "Heading": ("Segoe UI", 15, "bold"),
+                 "CardTitle": ("Segoe UI", 12, "bold"), "Body": ("Segoe UI", 10),
+                 "Muted": ("Segoe UI", 10), "Caption": ("Segoe UI", 9),
+                 "Brand": ("Segoe UI", 9, "bold"), "Status": ("Segoe UI", 9, "bold")}
+        for name, font in fonts.items():
+            color = c["accent"] if name in ("Brand", "Status") else c["muted"] if name in ("Muted", "Caption") else c["text"]
+            for surface, background in (("", c["background"]), ("Panel", c["panel"])):
+                style.configure(f"{surface}{name}.TLabel", font=font, background=background, foreground=color)
+        for name, background, foreground in (("Secondary", c["field"], c["text"]),
+                                              ("Primary", c["accent"], c["accent_text"]),
+                                              ("Link", c["background"], c["blue"])):
+            style.configure(f"{name}.TButton", font=("Segoe UI", 10, "bold" if name == "Primary" else "normal"),
+                            background=background, foreground=foreground, bordercolor=c["border"],
+                            lightcolor=background, darkcolor=background, relief="flat",
+                            padding=(self.px(14), self.px(10 if name != "Link" else 4)), borderwidth=0 if name == "Link" else 1,
+                            focusthickness=1, focuscolor=c["accent_text"] if name == "Primary" else c["accent"])
+            active = c["accent_hover"] if name == "Primary" else c["hover"]
+            style.map(f"{name}.TButton", background=[("disabled", c["panel"]), ("pressed", active), ("active", active)],
+                      foreground=[("disabled", c["disabled"])], bordercolor=[("focus", c["accent"]), ("active", c["accent"])])
+        style.configure("Workspace.TNotebook", background=c["background"], bordercolor=c["background"],
+                        lightcolor=c["background"], darkcolor=c["background"], borderwidth=0, tabmargins=0)
+        style.layout("Workspace.TNotebook.Tab", [])
+        for name, background, foreground in (("Navigation", c["panel"], c["muted"]), ("Selected.Navigation", c["hover"], c["accent"])):
+            style.configure(f"{name}.TButton", background=background, foreground=foreground, borderwidth=0,
+                            bordercolor=background, lightcolor=background, darkcolor=background, relief="flat",
+                            font=("Segoe UI", 11, "bold"), padding=(self.px(22), self.px(11)), focuscolor=c["accent"])
+            style.map(f"{name}.TButton", background=[("active", c["hover"])], foreground=[("active", c["accent"])])
+        style.configure("Dark.TEntry", foreground=c["text"], fieldbackground=c["field"], insertcolor=c["text"],
+                        bordercolor=c["border"], lightcolor=c["border"], darkcolor=c["border"], padding=self.px(7))
+        style.map("Dark.TEntry", bordercolor=[("focus", c["accent"])], foreground=[("disabled", c["disabled"])])
+        style.configure("Dark.TCombobox", foreground=c["text"], fieldbackground=c["field"], background=c["field"],
+                        arrowcolor=c["accent"], bordercolor=c["border"], lightcolor=c["border"], darkcolor=c["border"], padding=self.px(6))
+        style.map("Dark.TCombobox", fieldbackground=[("readonly", c["field"])], foreground=[("disabled", c["disabled"]), ("readonly", c["text"])],
+                  selectbackground=[("readonly", c["field"])], selectforeground=[("readonly", c["text"])])
+        self.root.option_add("*TCombobox*Listbox.background", c["field"])
+        self.root.option_add("*TCombobox*Listbox.foreground", c["text"])
+        self.root.option_add("*TCombobox*Listbox.selectBackground", c["hover"])
+        self.root.option_add("*TCombobox*Listbox.selectForeground", c["accent"])
+        style.configure("Dark.TCheckbutton", background=c["panel"], foreground=c["muted"], padding=0,
+                        indicatorbackground=c["field"], indicatorforeground=c["accent"], indicatorcolor=c["field"], bordercolor=c["border"])
+        style.map("Dark.TCheckbutton", background=[("active", c["panel"])], foreground=[("disabled", c["disabled"]), ("active", c["text"])],
+                  indicatorbackground=[("selected", c["accent"])])
+        style.configure("Reports.Treeview", background=c["panel"], fieldbackground=c["panel"], foreground=c["text"],
+                        borderwidth=0, bordercolor=c["panel"], lightcolor=c["panel"], darkcolor=c["panel"], rowheight=self.px(29), font=("Segoe UI", 10))
+        style.map("Reports.Treeview", background=[("selected", c["hover"])], foreground=[("selected", c["accent"])])
+        style.configure("Reports.Treeview.Heading", background=c["field"], foreground=c["muted"], font=("Segoe UI", 9, "bold"),
+                        borderwidth=0, relief="flat", padding=(self.px(10), self.px(7)))
+        style.map("Reports.Treeview.Heading", background=[("active", c["field"])])
+        style.configure("Dark.Vertical.TScrollbar", background=c["border"], troughcolor=c["panel"], arrowcolor=c["muted"],
+                        lightcolor=c["border"], darkcolor=c["border"], bordercolor=c["panel"], arrowsize=self.px(13), borderwidth=0)
+        style.map("Dark.Vertical.TScrollbar", background=[("active", c["disabled"])])
+        style.configure("Activity.Horizontal.TProgressbar", background=c["accent"], troughcolor=c["panel"],
+                        bordercolor=c["panel"], lightcolor=c["accent"], darkcolor=c["accent"], thickness=self.px(3))
+
+    def label(self, parent, text=None, kind="Body", *, panel=False, **kwargs):
+        return ttk.Label(parent, text=text, style=f"{'Panel' if panel else ''}{kind}.TLabel", **kwargs)
+
+    def card(self, parent, padding=18):
+        return ttk.Frame(parent, style="Panel.TFrame", padding=self.px(padding))
+
+    def button(self, parent, title, action, *, style="Secondary"):
+        button = ttk.Button(parent, text=title, command=action, style=f"{style}.TButton")
         self.controls.append((button, "normal"))
         return button
+
+    def _sync_navigation(self, _event=None):
+        selected = self.notebook.index(self.notebook.select())
+        for index, button in enumerate(self.nav_buttons):
+            button.configure(style="Selected.Navigation.TButton" if index == selected else "Navigation.TButton")
+
+    def _scrollable_page(self, title):
+        """Keep every action reachable on short displays and at Windows text scaling."""
+        page = ttk.Frame(self.notebook, style="App.TFrame")
+        self.notebook.add(page, text=title)
+        page.columnconfigure(0, weight=1)
+        page.rowconfigure(0, weight=1)
+        canvas = tk.Canvas(page, background=COLORS["background"], highlightthickness=0, borderwidth=0,
+                           yscrollincrement=self.px(24))
+        canvas.grid(row=0, column=0, sticky="nsew")
+        scrollbar = ttk.Scrollbar(page, orient="vertical", command=canvas.yview, style="Dark.Vertical.TScrollbar")
+        scrollbar.grid(row=0, column=1, sticky="ns")
+        canvas.configure(yscrollcommand=scrollbar.set)
+        content = ttk.Frame(canvas, style="App.TFrame", padding=(0, self.px(18), 0, self.px(10)))
+        item = canvas.create_window(0, 0, window=content, anchor="nw")
+
+        def resize(_event=None):
+            height = max(canvas.winfo_height(), content.winfo_reqheight())
+            canvas.itemconfigure(item, width=canvas.winfo_width(), height=height)
+            canvas.configure(scrollregion=(0, 0, canvas.winfo_width(), height))
+            if height > canvas.winfo_height() + 1:
+                scrollbar.grid()
+            else:
+                scrollbar.grid_remove()
+                canvas.yview_moveto(0)
+
+        canvas.bind("<Configure>", resize)
+        content.bind("<Configure>", resize)
+        self.page_scrolls.append((canvas, content, scrollbar))
+        return content
+
+    def _scroll_page(self, event):
+        # Give the locale table, log, and selectors their own normal wheel behavior.
+        if event.widget.winfo_class() in ("Treeview", "Text", "TCombobox", "TScrollbar") or not event.delta:
+            return
+        for canvas, content, scrollbar in self.page_scrolls:
+            widget = event.widget
+            while widget is not None:
+                if widget in (canvas, content):
+                    if scrollbar.winfo_ismapped():
+                        steps = int(event.delta / 120) or (1 if event.delta > 0 else -1)
+                        canvas.yview_scroll(-steps, "units")
+                        return "break"
+                    return
+                widget = getattr(widget, "master", None)
+
+    def _build_standard(self, parent):
+        parent.columnconfigure(0, weight=1)
+        self.label(parent, "Standard prerelease", "Heading").grid(row=0, column=0, sticky="w")
+        self.label(parent, "01  Fetch updates     /     02  Review translations     /     03  Publish", "Muted").grid(row=1, column=0, sticky="w", pady=(self.px(5), self.px(16)))
+
+        update = self.card(parent)
+        update.grid(row=2, column=0, sticky="ew")
+        update.columnconfigure(0, weight=1)
+        self.label(update, "Start with the latest cards", "CardTitle", panel=True).grid(row=0, column=0, sticky="w")
+        self.label(update, "Refresh your local workspace from MyCard.", "Muted", panel=True).grid(row=1, column=0, sticky="w", pady=(self.px(5), self.px(14)))
+        language = ttk.Frame(update, style="Inner.TFrame")
+        language.grid(row=0, column=1, rowspan=2, sticky="ne", padx=(self.px(14), 0))
+        self.label(language, "TRANSLATION LANGUAGE", "Caption", panel=True).pack(anchor="w", pady=(0, self.px(5)))
+        selector = ttk.Combobox(language, textvariable=self.language, values=STANDARD_LANGS, state="readonly", width=18, style="Dark.TCombobox")
+        selector.pack(fill="x")
+        self.controls.append((selector, "readonly"))
+        self.standard_fetch_button = self.button(update, "Fetch updates from MyCard", lambda: self.start_standard("refresh"), style="Primary")
+        self.standard_fetch_button.grid(row=2, column=0, sticky="w")
+        self.label(update, "Your existing translations are preserved.", "Caption", panel=True).grid(row=2, column=1, sticky="e", padx=(self.px(18), 0))
+
+        cards = ttk.Frame(parent, style="App.TFrame")
+        cards.grid(row=3, column=0, sticky="ew", pady=self.px(14))
+        cards.columnconfigure((0, 1), weight=1, uniform="standard")
+        workspace = self.card(cards)
+        workspace.grid(row=0, column=0, sticky="nsew", padx=(0, self.px(7)))
+        self.label(workspace, "Local workspace", "CardTitle", panel=True).pack(anchor="w")
+        self.label(workspace, "Edit and prepare the selected language.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
+        self.button(workspace, "Open translation folder  ↗", lambda: self.open_path(self.local / self.language.get() / "raw2")).pack(fill="x", pady=(0, self.px(8)))
+        self.button(workspace, "Copy workspace into repository", lambda: self.start_standard("upload")).pack(fill="x")
+        publish = self.card(cards)
+        publish.grid(row=0, column=1, sticky="nsew", padx=(self.px(7), 0))
+        self.label(publish, "GitHub & publishing", "CardTitle", panel=True).pack(anchor="w")
+        self.label(publish, "Upload when your translations are ready.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
+        self.button(publish, "Upload workspace & push to GitHub", lambda: self.start_standard("push")).pack(fill="x", pady=(0, self.px(8)))
+        secondary = ttk.Frame(publish, style="Inner.TFrame")
+        secondary.pack(fill="x")
+        secondary.columnconfigure((0, 1), weight=1, uniform="publish")
+        self.button(secondary, "Pull published", lambda: self.start_standard("pull")).grid(row=0, column=0, sticky="ew", padx=(0, self.px(4)))
+        self.button(secondary, "Actions & status", lambda: self.start_standard("status")).grid(row=0, column=1, sticky="ew", padx=(self.px(4), 0))
+
+    def _build_rush_workspace(self, parent):
+        parent.columnconfigure(0, weight=1)
+        self.label(parent, "Rush prerelease", "Heading").grid(row=0, column=0, sticky="w")
+        self.label(parent, "01  Fetch your locale     /     02  Review translations     /     03  Publish", "Muted").grid(row=1, column=0, sticky="w", pady=(self.px(5), self.px(16)))
+        update = self.card(parent)
+        update.grid(row=2, column=0, sticky="ew")
+        update.columnconfigure(0, weight=1)
+        self.label(update, "Update your Rush workspace", "CardTitle", panel=True).grid(row=0, column=0, sticky="w")
+        self.label(update, "Fetch the published cards for your language.", "Muted", panel=True).grid(row=1, column=0, sticky="w", pady=(self.px(5), self.px(14)))
+        language = ttk.Frame(update, style="Inner.TFrame")
+        language.grid(row=0, column=1, rowspan=2, sticky="ne", padx=(self.px(14), 0))
+        self.label(language, "TRANSLATION LANGUAGE", "Caption", panel=True).pack(anchor="w", pady=(0, self.px(5)))
+        selector = ttk.Combobox(language, textvariable=self.rush_language, values=RUSH_LANGS, state="readonly", width=18, style="Dark.TCombobox")
+        selector.pack(fill="x")
+        self.controls.append((selector, "readonly"))
+        self.rush_fetch_button = self.button(update, "Fetch Rush updates", lambda: self.start_rush_workspace("refresh"), style="Primary")
+        self.rush_fetch_button.grid(row=2, column=0, sticky="w")
+        self.label(update, "Uses TransSuperpre. No extra source repositories.", "Caption", panel=True).grid(row=2, column=1, sticky="e", padx=(self.px(15), 0))
+        self.label(update, kind="Status", panel=True, textvariable=self.rush_workspace_status).grid(row=3, column=0, columnspan=2, sticky="w", pady=(self.px(16), self.px(4)))
+        self.label(update, kind="Caption", panel=True, textvariable=self.rush_workspace_note, wraplength=self.px(740)).grid(row=4, column=0, columnspan=2, sticky="w")
+        self.thai_switch_button = self.button(update, "Switch to English", lambda: self.rush_language.set("EN"))
+        self.thai_switch_button.grid(row=5, column=0, sticky="w", pady=(self.px(10), 0))
+        self.thai_switch_button.grid_remove()
+
+        cards = ttk.Frame(parent, style="App.TFrame")
+        cards.grid(row=3, column=0, sticky="ew", pady=self.px(14))
+        cards.columnconfigure((0, 1), weight=1, uniform="rush_workspace")
+        workspace = self.card(cards)
+        workspace.grid(row=0, column=0, sticky="nsew", padx=(0, self.px(7)))
+        self.label(workspace, "Local workspace", "CardTitle", panel=True).pack(anchor="w")
+        self.label(workspace, "Edit and prepare this locale's Rush cards.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
+        edit = self.button(workspace, "Open translation folder  ↗", lambda: self.open_path(self.local / self.rush_language.get() / "Rush/raw2"))
+        edit.pack(fill="x", pady=(0, self.px(8)))
+        copy = self.button(workspace, "Copy workspace into repository", lambda: self.start_rush_workspace("upload"))
+        copy.pack(fill="x")
+        publish = self.card(cards)
+        publish.grid(row=0, column=1, sticky="nsew", padx=(self.px(7), 0))
+        self.label(publish, "GitHub & publishing", "CardTitle", panel=True).pack(anchor="w")
+        self.label(publish, "Upload only the selected Rush locale.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
+        push = self.button(publish, "Upload workspace & push to GitHub", lambda: self.start_rush_workspace("push"))
+        push.pack(fill="x", pady=(0, self.px(8)))
+        self.rush_publish_controls = [edit, copy, push]
+        secondary = ttk.Frame(publish, style="Inner.TFrame")
+        secondary.pack(fill="x")
+        secondary.columnconfigure((0, 1), weight=1, uniform="rush_publish")
+        self.button(secondary, "Pull published", lambda: self.start_rush_workspace("pull")).grid(row=0, column=0, sticky="ew", padx=(0, self.px(4)))
+        self.button(secondary, "Actions & status", lambda: self.start_rush_workspace("status")).grid(row=0, column=1, sticky="ew", padx=(self.px(4), 0))
+        links = ttk.Frame(parent, style="App.TFrame")
+        links.grid(row=4, column=0, sticky="ew")
+        self.button(links, "Open local reports  ↗", lambda: self.open_path(self.local / self.rush_language.get() / "Rush/Reports"), style="Link").pack(side="left", padx=(0, self.px(10)))
+        self.button(links, "View locale details", self.show_rush_overview, style="Link").pack(side="left")
+        self.resolve_button = self.button(parent, "Keep my reviewed translations", lambda: self.start_rush_workspace("resolve"))
+        self.resolve_button.grid(row=5, column=0, sticky="w", pady=(self.px(10), 0))
+        self.resolve_button.grid_remove()
+
+    def _build_overview(self, parent):
+        parent.columnconfigure(0, weight=1)
+        parent.rowconfigure(2, weight=1)
+        heading = ttk.Frame(parent, style="App.TFrame")
+        heading.grid(row=0, column=0, sticky="ew")
+        self.label(heading, "All Rush locales", "Heading").pack(side="left")
+        self.label(heading, kind="Caption", textvariable=self.report_summary).pack(side="right")
+        self.label(parent, "Local package and workspace status. Fetch updates to check GitHub.", "Muted").grid(row=1, column=0, sticky="w", pady=(self.px(5), self.px(14)))
+        table_frame = self.card(parent, 0)
+        table_frame.grid(row=2, column=0, sticky="nsew")
+        columns = ("Locale", "Status", "Cards", "Translations", "Artwork", "Package built")
+        self.table = ttk.Treeview(table_frame, columns=columns, show="headings", height=5, selectmode="browse", style="Reports.Treeview")
+        for column, width in zip(columns, (65, 170, 60, 105, 85, 225)):
+            self.table.heading(column, text=column)
+            self.table.column(column, width=self.px(width), minwidth=self.px(50), anchor="w" if column in ("Status", "Package built") else "center")
+        self.table.pack(side="left", fill="both", expand=True)
+        scrollbar = ttk.Scrollbar(table_frame, orient="vertical", command=self.table.yview, style="Dark.Vertical.TScrollbar")
+        scrollbar.pack(side="right", fill="y")
+        self.table.configure(yscrollcommand=scrollbar.set)
+        self.table.tag_configure("alternate", background="#1c2938")
+        self.table.bind("<<TreeviewSelect>>", self.show_locale_details)
+        self.details_heading = self.label(parent, "Selected locale details", "CardTitle")
+        self.details_heading.grid(row=3, column=0, sticky="w", pady=(self.px(15), self.px(8)))
+        details = self.card(parent, 0)
+        details.grid(row=4, column=0, sticky="ew")
+        self.details_text = tk.Text(details, height=4, wrap="word", state="disabled", font=("Segoe UI", 10),
+                                    background=COLORS["panel"], foreground=COLORS["muted"], borderwidth=0,
+                                    highlightthickness=0, padx=self.px(12), pady=self.px(9),
+                                    selectbackground=COLORS["hover"], selectforeground=COLORS["text"])
+        self.details_text.pack(side="left", fill="both", expand=True)
+        details_scroll = ttk.Scrollbar(details, orient="vertical", command=self.details_text.yview, style="Dark.Vertical.TScrollbar")
+        details_scroll.pack(side="right", fill="y")
+        self.details_text.configure(yscrollcommand=details_scroll.set)
+        links = ttk.Frame(parent, style="App.TFrame")
+        links.grid(row=5, column=0, sticky="ew", pady=(self.px(8), self.px(10)))
+        self.button(links, "View build report  ↗", lambda: self.open_rush("report.json"), style="Link").pack(side="left", padx=(0, self.px(8)))
+        self.button(links, "Shared artwork  ↗", lambda: self.open_path(self.repo / "Shared/Rush Artworks"), style="Link").pack(side="left")
+        self.button(links, "Refresh overview", self.refresh_reports, style="Link").pack(side="right")
+        self.build_toggle = ttk.Button(parent, text="Show all-locale build tools", style="Secondary.TButton", command=self.toggle_build_tools)
+        self.build_toggle.grid(row=6, column=0, sticky="w", pady=(self.px(5), 0))
+        self.build_tools = self.card(parent, 14)
+        self.build_tools.grid(row=7, column=0, sticky="ew", pady=(self.px(10), 0))
+        self._build_all_locale_controls(self.build_tools)
+        self.build_tools.grid_remove()
+
+    def _build_all_locale_controls(self, sources):
+        sources.columnconfigure(1, weight=1)
+        self.label(sources, "All-locale package builder", "CardTitle", panel=True).grid(row=0, column=0, columnspan=3, sticky="w")
+        self.label(sources, "For maintainers with the Rush source and full locale databases installed.", "Muted", panel=True).grid(row=1, column=0, columnspan=3, sticky="w", pady=(self.px(5), self.px(12)))
+        for row, (title, variable) in enumerate((("Rush source", self.source), ("Locale databases", self.translations)), start=2):
+            self.label(sources, title, "Body", panel=True).grid(row=row, column=0, sticky="w", padx=(0, self.px(14)), pady=self.px(3))
+            entry = ttk.Entry(sources, textvariable=variable, style="Dark.TEntry")
+            entry.grid(row=row, column=1, sticky="ew", pady=self.px(3))
+            self.controls.append((entry, "normal"))
+            self.button(sources, "Browse…", lambda variable=variable: self.browse(variable)).grid(row=row, column=2, padx=(self.px(8), 0), pady=self.px(3))
+        actions = ttk.Frame(sources, style="Inner.TFrame")
+        actions.grid(row=4, column=0, columnspan=3, sticky="ew", pady=(self.px(12), self.px(9)))
+        self.fetch_button = self.button(actions, "Fetch updates & build all locales", lambda: self.start_rush(True), style="Primary")
+        self.fetch_button.pack(side="left", padx=(0, self.px(10)))
+        self.build_button = self.button(actions, "Build all locales", lambda: self.start_rush(False))
+        self.build_button.pack(side="left")
+        offline = ttk.Checkbutton(sources, text="Use local translations only · skip web text sources", variable=self.offline, style="Dark.TCheckbutton")
+        offline.grid(row=5, column=0, columnspan=3, sticky="w", pady=(self.px(2), 0))
+        self.controls.append((offline, "normal"))
+
+    def toggle_build_tools(self):
+        visible = not self.build_tools_visible.get()
+        self.build_tools_visible.set(visible)
+        if visible:
+            self.build_tools.grid()
+        else:
+            self.build_tools.grid_remove()
+        self.build_toggle.configure(text="Hide all-locale build tools" if visible else "Show all-locale build tools")
+
+    def show_rush_overview(self):
+        lang = self.rush_language.get()
+        self.notebook.select(2)
+        self.table.selection_set(lang)
+        self.table.see(lang)
+        self.show_locale_details()
+
+    def show_locale_details(self, _event=None):
+        selected = self.table.selection()
+        lang = selected[0] if selected else self.rush_language.get()
+        snapshot = self.report_cache.get(lang)
+        if snapshot is None:
+            return
+        self.details_heading.configure(text=f"{lang} · Card details")
+        self.details_text.configure(state="normal")
+        self.details_text.delete("1.0", "end")
+        self.details_text.insert("end", snapshot_details(snapshot))
+        self.details_text.configure(state="disabled")
+
+    def _build_activity(self, parent):
+        activity = self.card(parent, 0)
+        activity.grid(row=3, column=0, sticky="ew", pady=(self.px(12), 0))
+        activity.columnconfigure(0, weight=1)
+        bar = ttk.Frame(activity, style="Inner.TFrame", padding=(self.px(14), self.px(9)))
+        bar.grid(row=0, column=0, sticky="ew")
+        bar.columnconfigure(1, weight=1)
+        self.status_badge = self.label(bar, kind="Status", panel=True, textvariable=self.status_kind)
+        self.status_badge.grid(row=0, column=0, sticky="w", padx=(0, self.px(14)))
+        self.label(bar, kind="Caption", panel=True, textvariable=self.status).grid(row=0, column=1, sticky="w")
+        self.log_toggle = ttk.Button(bar, text="Hide log", command=self.toggle_log, style="Secondary.TButton", padding=(self.px(9), self.px(3)))
+        self.log_toggle.grid(row=0, column=2, sticky="e", padx=(self.px(10), 0))
+        progress_host = ttk.Frame(activity, style="Inner.TFrame", height=self.px(3))
+        progress_host.grid(row=1, column=0, sticky="ew")
+        progress_host.pack_propagate(False)
+        self.progress = ttk.Progressbar(progress_host, mode="indeterminate", style="Activity.Horizontal.TProgressbar")
+        self.log_frame = ttk.Frame(activity, style="Inner.TFrame", padding=(self.px(2), self.px(2), self.px(2), self.px(2)))
+        self.log_frame.grid(row=2, column=0, sticky="ew")
+        self.log = tk.Text(self.log_frame, height=6, wrap="word", font=("Cascadia Mono", 9), state="disabled",
+                           background=COLORS["log"], foreground=COLORS["muted"], borderwidth=0,
+                           highlightthickness=0, padx=self.px(13), pady=self.px(10),
+                           selectbackground=COLORS["hover"], selectforeground=COLORS["text"], insertbackground=COLORS["text"])
+        self.log.pack(side="left", fill="both", expand=True)
+        scroll = ttk.Scrollbar(self.log_frame, orient="vertical", command=self.log.yview, style="Dark.Vertical.TScrollbar")
+        scroll.pack(side="right", fill="y")
+        self.log.configure(yscrollcommand=scroll.set)
+        self.log.tag_configure("error", foreground=COLORS["error"])
+        self.log.tag_configure("warning", foreground=COLORS["warning"])
+        self.log.tag_configure("complete", foreground=COLORS["accent"])
+
+    def toggle_log(self):
+        visible = not self.log_visible.get()
+        self.log_visible.set(visible)
+        if visible:
+            self.log_frame.grid()
+        else:
+            self.log_frame.grid_remove()
+        self.log_toggle.configure(text="Hide log" if visible else "Show log")
+
+    def set_status_kind(self, title, color):
+        self.status_kind.set(title)
+        self.status_badge.configure(foreground=COLORS[color])
 
     def browse(self, variable):
         path = filedialog.askdirectory(parent=self.root, initialdir=variable.get(), title="Select folder")
@@ -210,6 +648,72 @@ class PrereleaseWindow:
     def start_standard(self, command: str):
         self.start(workspace_command(self.repo, self.local, command, self.language.get()), "Standard")
 
+    def start_rush_workspace(self, command: str):
+        if self.busy:
+            return
+        lang = self.rush_language.get()
+        if lang in ("TH", "ZH-CN") and command in ("upload", "push", "resolve"):
+            messagebox.showinfo("Managed locale", "Thai uses English translations; Simplified Chinese follows upstream. Update the owning source instead.", parent=self.root)
+            return
+        if command == "resolve":
+            try:
+                conflicts = read_json_object(self.local / lang / "Rush/Reports/sync.json").get("conflicts", [])
+            except (OSError, ValueError) as error:
+                messagebox.showerror("Could not read conflicts", str(error), parent=self.root)
+                return
+            if not conflicts:
+                self.refresh_rush_status()
+                return
+            fields = "\n".join(f"{item.get('id', '?')} · {item.get('field', '?')}" for item in conflicts[:12])
+            message = f"Keep your local text for {len(conflicts)} conflicting fields?\n\n{fields}\n\nReview Rush/Reports/sync.json first. Non-conflicting source updates will still be applied."
+            if not messagebox.askyesno("Keep reviewed translations", message, parent=self.root, default="no"):
+                return
+        self.start(rush_workspace_command(self.repo, self.local, command, lang), "Rush locale")
+
+    def refresh_rush_status(self):
+        lang = self.rush_language.get()
+        managed = lang in ("TH", "ZH-CN")
+        for control in self.rush_publish_controls:
+            control.configure(state="disabled" if self.busy or managed else "normal")
+        self.resolve_button.grid_remove()
+        self.thai_switch_button.grid_remove()
+        note = "Local repository snapshot. Fetch updates to check the latest published workspace."
+        title = "Not fetched yet"
+        try:
+            local_root = self.local / lang / "Rush"
+            local_file = local_root / "raw2/rush-pre-release.cdb"
+            sync = read_json_object(local_root / "Reports/sync.json")
+            conflicts = sync.get("conflicts", [])
+            if conflicts:
+                title = f"Review {len(conflicts)} merge conflicts"
+                note = "Open local reports and review sync.json. Your database has been preserved."
+                if not managed:
+                    self.resolve_button.grid()
+            elif local_file.is_file():
+                current = workspace_rows(local_file)
+                published = workspace_rows(self.repo / lang / "Rush/Workspace/rush-pre-release.cdb")
+                if current == published:
+                    title = "Matches repository workspace"
+                else:
+                    title = "Local translations differ · review before publishing"
+            else:
+                note = "Fetch Rush updates to create this locale's translation folder."
+            snapshot = self.report_cache.get(lang, {})
+            pending = snapshot.get("pending", [])
+            if pending:
+                note += f" Latest build report: {len(pending)} cards need translation review."
+        except (OSError, ValueError, TypeError, sqlite3.Error) as error:
+            title, note = "Could not read local status", str(error)
+        if lang == "TH":
+            title = "English-managed locale"
+            note = "Thai packages use English text. Fetch and view Thai here; make translation changes in English."
+            self.thai_switch_button.grid()
+        elif lang == "ZH-CN":
+            title = "Upstream-managed locale"
+            note = "Simplified Chinese follows the upstream source. Fetch and view its reports here; text is managed upstream."
+        self.rush_workspace_status.set(title)
+        self.rush_workspace_note.set(note)
+
     def start_rush(self, fetch: bool):
         if self.busy:
             return
@@ -233,6 +737,8 @@ class PrereleaseWindow:
             return
         self.busy, self.job_kind = True, kind
         self.status.set(f"{kind} update running…")
+        self.set_status_kind("WORKING", "blue")
+        self.progress.pack(fill="both", expand=True)
         self.progress.start(12)
         for control, _ in self.controls:
             control.configure(state="disabled")
@@ -241,7 +747,9 @@ class PrereleaseWindow:
 
     def append_log(self, text: str):
         self.log.configure(state="normal")
-        self.log.insert("end", text)
+        lower = text.lower()
+        tag = "error" if any(word in lower for word in ("error:", "failed", "traceback", "could not")) else "warning" if "warning" in lower else "complete" if "exit code 0" in lower else ""
+        self.log.insert("end", text, tag)
         lines = int(self.log.index("end-1c").split(".")[0])
         if lines > 2000:
             self.log.delete("1.0", f"{lines - 2000}.0")
@@ -249,11 +757,17 @@ class PrereleaseWindow:
         self.log.configure(state="disabled")
 
     def refresh_reports(self):
-        for row in read_reports(self.repo):
-            if self.table.exists(row[0]):
-                self.table.item(row[0], values=row)
+        self.report_cache = {lang: locale_snapshot(self.repo, lang) for lang in RUSH_LANGS}
+        pending = sum(len(item["pending"]) for item in self.report_cache.values())
+        self.report_summary.set(f"{len(self.report_cache)} locales · {pending} translation issues")
+        for index, (lang, item) in enumerate(self.report_cache.items()):
+            row = (lang, item["status"], item["cards"], len(item["pending"]), len(item["missing"]), item["built"])
+            if self.table.exists(lang):
+                self.table.item(lang, values=row)
             else:
-                self.table.insert("", "end", iid=row[0], values=row)
+                self.table.insert("", "end", iid=lang, values=row, tags=("alternate",) if index % 2 else ())
+        self.show_locale_details()
+        self.refresh_rush_status()
 
     def poll(self):
         for _ in range(150):
@@ -266,13 +780,18 @@ class PrereleaseWindow:
             else:
                 self.busy = False
                 self.progress.stop()
+                self.progress.pack_forget()
                 for control, state in self.controls:
                     control.configure(state=state)
                 self.refresh_reports()
                 if value == 0:
-                    self.status.set("Rush packages built locally — review the locale reports." if self.job_kind == "Rush" else "Standard operation completed.")
+                    self.set_status_kind("COMPLETE", "accent")
+                    self.status.set("Rush packages built locally — review the locale reports." if self.job_kind == "Rush" else f"{self.job_kind} operation completed.")
                 else:
+                    self.set_status_kind("NEEDS ATTENTION", "warning")
                     self.status.set("Update stopped — review the log and translation reports.")
+                    if not self.log_visible.get():
+                        self.toggle_log()
                 self.append_log(f"\nProcess finished with exit code {value}.\n")
         self.poll_id = self.root.after(100, self.poll)
 

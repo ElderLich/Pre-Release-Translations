@@ -170,6 +170,12 @@ def menu(lang: str) -> str:
     print("5 = Show repo and Actions status")
     print("6 = Change TransSuperpre repo path")
     print("7 = Exit")
+    print(f"8 = Refresh {lang.upper()} Rush from published workspace")
+    print(f"9 = Open {lang.upper()} Rush translation folder")
+    print(f"10 = Upload {lang.upper()} Rush translations and push to GitHub")
+    print(f"11 = Copy {lang.upper()} Rush translations into repo only")
+    print(f"12 = Open {lang.upper()} Rush reports")
+    print("13 = Resolve reviewed Rush conflicts by keeping local text")
     return input("Option: ").strip()
 
 
@@ -183,6 +189,14 @@ def main() -> int:
         return 0
     if sys.argv[1] != "--menu":
         command = sys.argv[1].lower()
+        if command in {"rush-refresh", "rush-update", "rush-pull"}:
+            return run_tool("rush-refresh", "--lang", lang, *sys.argv[2:])
+        if command in {"rush-upload", "rush-push"}:
+            return run_tool("rush-upload", "--lang", lang, "--push", *sys.argv[2:])
+        if command in {"rush-copy", "rush-sync"}:
+            return run_tool("rush-upload", "--lang", lang, *sys.argv[2:])
+        if command in {"rush-open", "rush-reports"}:
+            return run_tool(command, "--lang", lang, *sys.argv[2:])
         if command in {"refresh", "update"}:
             return run_tool("refresh", "--lang", lang, *sys.argv[2:])
         if command in {"upload", "push"}:
@@ -214,6 +228,20 @@ def main() -> int:
         resolve_repo_root(force_prompt=True)
         return 0
     if choice == "7":
+        return 0
+    if choice == "8":
+        return run_tool("rush-refresh", "--lang", lang)
+    if choice == "9":
+        return run_tool("rush-open", "--lang", lang)
+    if choice == "10":
+        return run_tool("rush-upload", "--lang", lang, "--push")
+    if choice == "11":
+        return run_tool("rush-upload", "--lang", lang)
+    if choice == "12":
+        return run_tool("rush-reports", "--lang", lang)
+    if choice == "13":
+        if input("Keep your local text for every conflict listed in Rush/Reports/sync.json? [y/N]: ").strip().lower() == "y":
+            return run_tool("rush-refresh", "--lang", lang, "--no-pull-first", "--keep-local")
         return 0
     print("Invalid option.")
     return 2
