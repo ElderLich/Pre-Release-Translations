@@ -49477,3 +49477,350 @@ RUSH_PROMPT_SKIPS = {
     "黑魔术师": "skip_card_name",
 }
 # END RUSH PROMPT CATALOG 2026-10-09
+
+# Current RD Patch prompts absent from the 2026-10-09 catalog.
+# Keep these in the common catalog so standard and Rush tooling share one owner.
+RUSH_PROMPT_TRANSLATIONS.update({
+    "这个回合，战斗破坏的怪兽不去墓地而回到持有者卡组下面": {
+        "en": "This turn, monsters destroyed by battle return to the bottom of their owner's Deck instead of going to the GY.",
+        "de": "In diesem Spielzug werden im Kampf zerstörte Monster unter das Deck ihres Besitzers gelegt, statt auf den Friedhof.",
+        "es": "Este turno, los monstruos destruidos en batalla vuelven al fondo del Deck de su dueño en vez de ir al Cementerio.",
+        "fr": "Ce tour, les monstres détruits au combat retournent au-dessous du Deck de leur propriétaire au lieu d'aller au Cimetière.",
+        "it": "In questo turno, i mostri distrutti in battaglia tornano in fondo al Deck del proprietario invece di andare al Cimitero.",
+        "pt": "Neste turno, monstros destruídos em batalha voltam para o fundo do Deck do dono em vez de irem para o Cemitério.",
+        "ja": "このターン、戦闘で破壊したモンスターは墓地へ行かず、持ち主のデッキの一番下に戻る。",
+        "kr": "이 턴에 전투로 파괴한 몬스터는 묘지로 가지 않고 주인의 덱 맨 아래로 되돌아갑니다."
+    },
+    "自己卡组最上面的卡送去墓地。那之后，这张卡是表侧表示的期间，这张卡的攻击力上升300": {
+        "en": "Send the top card of your Deck to the GY, then this face-up card gains 300 ATK.",
+        "de": "Lege die oberste Karte deines Decks auf den Friedhof. Danach erhält diese offene Karte 300 ATK.",
+        "es": "Manda al Cementerio la carta de la parte superior de tu Deck. Después, esta carta boca arriba gana 300 ATK.",
+        "fr": "Envoyez la carte du dessus de votre Deck au Cimetière, puis cette carte face recto gagne 300 ATK.",
+        "it": "Manda al Cimitero la prima carta del tuo Deck, poi questa carta scoperta guadagna 300 ATK.",
+        "pt": "Envie a carta do topo do seu Deck para o Cemitério. Depois, este card com a face para cima ganha 300 ATK.",
+        "ja": "自分のデッキの一番上のカードを墓地へ送る。その後、このカードの攻撃力は表側表示でいる限り３００アップする。",
+        "kr": "자신의 덱 맨 위의 카드를 묘지로 보냅니다. 그 후, 이 카드의 공격력은 앞면 표시로 있는 동안 300 올립니다."
+    },
+    "选自己或者对方场上的1张魔法·陷阱卡破坏": {
+        "en": "Destroy 1 Spell/Trap on either field.",
+        "de": "Zerstöre 1 Zauber/Falle auf einer beliebigen Spielfeldseite.",
+        "es": "Destruye 1 Mágica/Trampa en cualquier Campo.",
+        "fr": "Détruisez 1 Magie/Piège sur l'un des Terrains.",
+        "it": "Distruggi 1 Magia/Trappola su uno dei Terreni.",
+        "pt": "Destrua 1 Magia/Armadilha em qualquer campo.",
+        "ja": "自分または相手フィールドの魔法・罠カード１枚を破壊する。",
+        "kr": "자신 또는 상대 필드의 마법 / 함정 카드 1장을 파괴합니다."
+    },
+    "双方从那之中选1只怪兽(4星)特殊召唤?": {
+        "en": "Special Summon 1 Level 4 monster from the excavated cards?",
+        "de": "1 Monster der Stufe 4 von den ausgegrabenen Karten als Spezialbeschwörung beschwören?",
+        "es": "¿Invocar de Modo Especial 1 monstruo de Nivel 4 de las cartas excavadas?",
+        "fr": "Invoquer Spécialement 1 monstre de Niveau 4 parmi les cartes excavées ?",
+        "it": "Evocare Specialmente 1 mostro di Livello 4 tra le carte dissotterrate?",
+        "pt": "Invocar por Invocação-Especial 1 monstro de Nível 4 dentre os cards escavados?",
+        "ja": "めくったカードの中からレベル４のモンスター１体を特殊召喚しますか？",
+        "kr": "넘긴 카드 중에서 레벨 4의 몬스터 1장을 특수 소환하시겠습니까?"
+    },
+    "是否从那之中或者自己墓地选1只怪兽(1星)特殊召唤?": {
+        "en": "Special Summon 1 Level 1 monster from the excavated cards or your GY?",
+        "de": "1 Monster der Stufe 1 von den ausgegrabenen Karten oder deinem Friedhof als Spezialbeschwörung beschwören?",
+        "es": "¿Invocar de Modo Especial 1 monstruo de Nivel 1 de las cartas excavadas o de tu Cementerio?",
+        "fr": "Invoquer Spécialement 1 monstre de Niveau 1 parmi les cartes excavées ou depuis votre Cimetière ?",
+        "it": "Evocare Specialmente 1 mostro di Livello 1 tra le carte dissotterrate o dal tuo Cimitero?",
+        "pt": "Invocar por Invocação-Especial 1 monstro de Nível 1 dentre os cards escavados ou do seu Cemitério?",
+        "ja": "めくったカードの中から、または自分の墓地からレベル１のモンスター１体を特殊召喚しますか？",
+        "kr": "넘긴 카드 중에서 또는 자신의 묘지에서 레벨 1의 몬스터 1장을 특수 소환하시겠습니까?"
+    },
+    "这个回合战斗不会让自己受到战斗伤害": {
+        "en": "You take no battle damage this turn.",
+        "de": "Du erhältst in diesem Spielzug keinen Kampfschaden.",
+        "es": "No recibes daño de batalla este turno.",
+        "fr": "Vous ne recevez aucun dommage de combat ce tour.",
+        "it": "Non subisci danno da combattimento in questo turno.",
+        "pt": "Você não sofre dano de batalha neste turno.",
+        "ja": "このターン、自分は戦闘ダメージを受けない。",
+        "kr": "이 턴에 자신은 전투 데미지를 받지 않습니다."
+    },
+    "是否选自己墓地1只效果怪兽(4星/龙族/攻击力1500)表侧守备表示特殊召唤?": {
+        "en": "Special Summon 1 Level 4 Dragon Effect Monster with 1500 ATK from your GY in face-up Defense Position?",
+        "de": "1 Drache-Effektmonster der Stufe 4 mit 1500 ATK von deinem Friedhof in die offene Verteidigungsposition spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial 1 Monstruo de Efecto Dragón de Nivel 4 con 1500 ATK de tu Cementerio en Defensa boca arriba?",
+        "fr": "Invoquer Spécialement 1 Monstre à Effet Dragon de Niveau 4 avec 1500 ATK depuis votre Cimetière en Défense face recto ?",
+        "it": "Evocare Specialmente 1 Mostro con Effetto Drago di Livello 4 con 1500 ATK dal tuo Cimitero in Difesa scoperta?",
+        "pt": "Invocar por Invocação-Especial 1 Monstro de Efeito Dragão de Nível 4 com 1500 ATK do seu Cemitério em Defesa com a face para cima?",
+        "ja": "自分の墓地のレベル４・ドラゴン族・攻撃力１５００の効果モンスター１体を表側守備表示で特殊召喚しますか？",
+        "kr": "자신의 묘지의 레벨 4 / 드래곤족 / 공격력 1500의 효과 몬스터 1장을 앞면 수비 표시로 특수 소환하시겠습니까?"
+    },
+    "这个回合，不能用怪兽(暗属性以外)攻击": {
+        "en": "Only DARK monsters can attack this turn.",
+        "de": "In diesem Spielzug können nur FINSTERNIS-Monster angreifen.",
+        "es": "Solo los monstruos de OSCURIDAD pueden atacar este turno.",
+        "fr": "Seuls les monstres TÉNÈBRES peuvent attaquer ce tour.",
+        "it": "Solo i mostri OSCURITÀ possono attaccare in questo turno.",
+        "pt": "Apenas monstros de TREVAS podem atacar neste turno.",
+        "ja": "このターン、闇属性モンスターでしか攻撃できない。",
+        "kr": "이 턴에는 어둠 속성 몬스터로밖에 공격할 수 없습니다."
+    },
+    "是否选自己手卡·墓地1只{CARD}特殊召唤?": {
+        "en": "Special Summon 1 {CARD} from your hand or GY?",
+        "de": "1 „{CARD}“ von deiner Hand oder deinem Friedhof spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial 1 {CARD} de tu mano o Cementerio?",
+        "fr": "Invoquer Spécialement 1 {CARD} depuis votre main ou Cimetière ?",
+        "it": "Evocare Specialmente 1 {CARD} dalla tua mano o Cimitero?",
+        "pt": "Invocar por Invocação-Especial 1 {CARD} da sua mão ou do Cemitério?",
+        "ja": "手札・墓地の{CARD}１体を特殊召喚しますか？",
+        "kr": "자신의 패 / 묘지의 {CARD} 1장을 특수 소환하시겠습니까?"
+    },
+    "这个回合，不能用怪兽(电子界族以外)攻击": {
+        "en": "Only Cyberse monsters can attack this turn.",
+        "de": "In diesem Spielzug können nur Cyberse-Monster angreifen.",
+        "es": "Solo los monstruos Ciberso pueden atacar este turno.",
+        "fr": "Seuls les monstres Cyberse peuvent attaquer ce tour.",
+        "it": "Solo i mostri Cyberso possono attaccare in questo turno.",
+        "pt": "Apenas monstros Ciberso podem atacar neste turno.",
+        "ja": "このターン、サイバース族モンスターでしか攻撃できない。",
+        "kr": "이 턴에는 사이버스족 몬스터로밖에 공격할 수 없습니다."
+    },
+    "是否选自己墓地1只怪兽(8星/光属性/电子界族)加入手卡?": {
+        "en": "Add 1 Level 8 LIGHT Cyberse monster from your GY to your hand?",
+        "de": "1 LICHT-Cyberse-Monster der Stufe 8 von deinem Friedhof deiner Hand hinzufügen?",
+        "es": "¿Añadir a tu mano 1 monstruo Ciberso de LUZ de Nivel 8 de tu Cementerio?",
+        "fr": "Ajouter 1 monstre Cyberse LUMIÈRE de Niveau 8 depuis votre Cimetière à votre main ?",
+        "it": "Aggiungere alla tua mano 1 mostro Cyberso LUCE di Livello 8 dal tuo Cimitero?",
+        "pt": "Adicionar à sua mão 1 monstro Ciberso de LUZ de Nível 8 do seu Cemitério?",
+        "ja": "自分の墓地のレベル８・光属性・サイバース族モンスター１体を手札に加えますか？",
+        "kr": "자신의 묘지의 레벨 8 / 빛 속성 / 사이버스족 몬스터 1장을 패에 넣으시겠습니까?"
+    },
+    "这个回合，不用怪兽(8星以上/电子界族)不能攻击": {
+        "en": "Only Level 8 or higher Cyberse monsters can attack this turn.",
+        "de": "In diesem Spielzug können nur Cyberse-Monster der Stufe 8 oder höher angreifen.",
+        "es": "Solo los monstruos Ciberso de Nivel 8 o mayor pueden atacar este turno.",
+        "fr": "Seuls les monstres Cyberse de Niveau 8 ou plus peuvent attaquer ce tour.",
+        "it": "Solo i mostri Cyberso di Livello 8 o superiore possono attaccare in questo turno.",
+        "pt": "Apenas monstros Ciberso de Nível 8 ou mais podem atacar neste turno.",
+        "ja": "このターン、レベル８以上のサイバース族モンスターでしか攻撃できない。",
+        "kr": "이 턴에는 레벨 8 이상의 사이버스족 몬스터로밖에 공격할 수 없습니다."
+    },
+    "是否选自己墓地1只{CARD}表侧守备表示特殊召唤?": {
+        "en": "Special Summon 1 {CARD} from your GY in face-up Defense Position?",
+        "de": "1 „{CARD}“ von deinem Friedhof in die offene Verteidigungsposition spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial 1 {CARD} de tu Cementerio en Defensa boca arriba?",
+        "fr": "Invoquer Spécialement 1 {CARD} depuis votre Cimetière en Défense face recto ?",
+        "it": "Evocare Specialmente 1 {CARD} dal tuo Cimitero in Difesa scoperta?",
+        "pt": "Invocar por Invocação-Especial 1 {CARD} do seu Cemitério em Defesa com a face para cima?",
+        "ja": "自分の墓地の{CARD}１体を表側守備表示で特殊召喚しますか？",
+        "kr": "자신의 묘지의 {CARD} 1장을 앞면 수비 표시로 특수 소환하시겠습니까?"
+    },
+    "是否选自己墓地1只{CARD}表侧攻击表示特殊召唤?": {
+        "en": "Special Summon 1 {CARD} from your GY in face-up Attack Position?",
+        "de": "1 „{CARD}“ von deinem Friedhof in die offene Angriffsposition spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial 1 {CARD} de tu Cementerio en Ataque boca arriba?",
+        "fr": "Invoquer Spécialement 1 {CARD} depuis votre Cimetière en Attaque face recto ?",
+        "it": "Evocare Specialmente 1 {CARD} dal tuo Cimitero in Attacco scoperto?",
+        "pt": "Invocar por Invocação-Especial 1 {CARD} do seu Cemitério em Ataque com a face para cima?",
+        "ja": "自分の墓地の{CARD}１体を表側攻撃表示で特殊召喚しますか？",
+        "kr": "자신의 묘지의 {CARD} 1장을 앞면 공격 표시로 특수 소환하시겠습니까?"
+    },
+    "是否从那之中选1只怪兽加入手卡?": {
+        "en": "Add 1 monster from the excavated cards to your hand?",
+        "de": "1 Monster von den ausgegrabenen Karten deiner Hand hinzufügen?",
+        "es": "¿Añadir a tu mano 1 monstruo de las cartas excavadas?",
+        "fr": "Ajouter 1 monstre parmi les cartes excavées à votre main ?",
+        "it": "Aggiungere alla tua mano 1 mostro tra le carte dissotterrate?",
+        "pt": "Adicionar à sua mão 1 monstro dentre os cards escavados?",
+        "ja": "めくったカードの中からモンスター１体を手札に加えますか？",
+        "kr": "넘긴 카드 중에서 몬스터 1장을 패에 넣으시겠습니까?"
+    },
+    "这个回合可以向怪兽作4次攻击": {
+        "en": "Can attack monsters 4 times this turn.",
+        "de": "Kann in diesem Spielzug Monster 4-mal angreifen.",
+        "es": "Puede atacar monstruos 4 veces este turno.",
+        "fr": "Peut attaquer des monstres 4 fois ce tour.",
+        "it": "Può attaccare mostri 4 volte in questo turno.",
+        "pt": "Pode atacar monstros 4 vezes neste turno.",
+        "ja": "このターン、モンスターに4回攻撃できる。",
+        "kr": "이 턴에 몬스터에 4회 공격할 수 있습니다."
+    },
+    "这个回合可以向怪兽作5次攻击": {
+        "en": "Can attack monsters 5 times this turn.",
+        "de": "Kann in diesem Spielzug Monster 5-mal angreifen.",
+        "es": "Puede atacar monstruos 5 veces este turno.",
+        "fr": "Peut attaquer des monstres 5 fois ce tour.",
+        "it": "Può attaccare mostri 5 volte in questo turno.",
+        "pt": "Pode atacar monstros 5 vezes neste turno.",
+        "ja": "このターン、モンスターに5回攻撃できる。",
+        "kr": "이 턴에 몬스터에 5회 공격할 수 있습니다."
+    },
+    "这个回合可以向怪兽作6次攻击": {
+        "en": "Can attack monsters 6 times this turn.",
+        "de": "Kann in diesem Spielzug Monster 6-mal angreifen.",
+        "es": "Puede atacar monstruos 6 veces este turno.",
+        "fr": "Peut attaquer des monstres 6 fois ce tour.",
+        "it": "Può attaccare mostri 6 volte in questo turno.",
+        "pt": "Pode atacar monstros 6 vezes neste turno.",
+        "ja": "このターン、モンスターに6回攻撃できる。",
+        "kr": "이 턴에 몬스터에 6회 공격할 수 있습니다."
+    },
+    "是否选自己墓地的同盟怪兽(风属性/海龙族)装备?": {
+        "en": "Equip 1 WIND Sea Serpent Union monster from your GY?",
+        "de": "1 WIND-Seeschlange-Union-Monster von deinem Friedhof ausrüsten?",
+        "es": "¿Equipar 1 monstruo de Unión Serpiente Marina de VIENTO de tu Cementerio?",
+        "fr": "Équiper 1 monstre Union Serpent de Mer VENT depuis votre Cimetière ?",
+        "it": "Equipaggiare 1 mostro Unione Serpente Marino VENTO dal tuo Cimitero?",
+        "pt": "Equipar 1 monstro Union Serpente Marinha de VENTO do seu Cemitério?",
+        "ja": "自分の墓地の風属性・海竜族のユニオンモンスター１体を装備しますか？",
+        "kr": "자신의 묘지의 바람 속성 / 해룡족 유니온 몬스터 1장을 장착하시겠습니까?"
+    },
+    "是否选自己墓地1只怪兽(5星以上/风属性/海龙族)加入手卡?": {
+        "en": "Add 1 Level 5 or higher WIND Sea Serpent monster from your GY to your hand?",
+        "de": "1 WIND-Seeschlange-Monster der Stufe 5 oder höher von deinem Friedhof deiner Hand hinzufügen?",
+        "es": "¿Añadir a tu mano 1 monstruo Serpiente Marina de VIENTO de Nivel 5 o mayor de tu Cementerio?",
+        "fr": "Ajouter 1 monstre Serpent de Mer VENT de Niveau 5 ou plus depuis votre Cimetière à votre main ?",
+        "it": "Aggiungere alla tua mano 1 mostro Serpente Marino VENTO di Livello 5 o superiore dal tuo Cimitero?",
+        "pt": "Adicionar à sua mão 1 monstro Serpente Marinha de VENTO de Nível 5 ou mais do seu Cemitério?",
+        "ja": "自分の墓地のレベル５以上・風属性・海竜族モンスター１体を手札に加えますか？",
+        "kr": "자신의 묘지의 레벨 5 이상 / 바람 속성 / 해룡족 몬스터 1장을 패에 넣으시겠습니까?"
+    },
+    "是否选手卡1只怪兽(风属性/海龙族)特殊召唤?": {
+        "en": "Special Summon 1 WIND Sea Serpent monster from your hand?",
+        "de": "1 WIND-Seeschlange-Monster von deiner Hand spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial 1 monstruo Serpiente Marina de VIENTO de tu mano?",
+        "fr": "Invoquer Spécialement 1 monstre Serpent de Mer VENT depuis votre main ?",
+        "it": "Evocare Specialmente 1 mostro Serpente Marino VENTO dalla tua mano?",
+        "pt": "Invocar por Invocação-Especial 1 monstro Serpente Marinha de VENTO da sua mão?",
+        "ja": "手札の風属性・海竜族モンスター１体を特殊召喚しますか？",
+        "kr": "자신의 패의 바람 속성 / 해룡족 몬스터 1장을 특수 소환하시겠습니까?"
+    },
+    "这个回合，不用怪兽(风属性/海龙族)不能攻击": {
+        "en": "Only WIND Sea Serpent monsters can attack this turn.",
+        "de": "In diesem Spielzug können nur WIND-Seeschlange-Monster angreifen.",
+        "es": "Solo los monstruos Serpiente Marina de VIENTO pueden atacar este turno.",
+        "fr": "Seuls les monstres Serpent de Mer VENT peuvent attaquer ce tour.",
+        "it": "Solo i mostri Serpente Marino VENTO possono attaccare in questo turno.",
+        "pt": "Apenas monstros Serpente Marinha de VENTO podem atacar neste turno.",
+        "ja": "このターン、風属性・海竜族モンスターでしか攻撃できない。",
+        "kr": "이 턴에는 바람 속성 / 해룡족 몬스터로밖에 공격할 수 없습니다."
+    },
+    "是否从那之中选最多2只怪兽(风属性/海龙族)加入手卡?": {
+        "en": "Add up to 2 WIND Sea Serpent monsters from the excavated cards to your hand?",
+        "de": "Bis zu 2 WIND-Seeschlange-Monster von den ausgegrabenen Karten deiner Hand hinzufügen?",
+        "es": "¿Añadir a tu mano hasta 2 monstruos Serpiente Marina de VIENTO de las cartas excavadas?",
+        "fr": "Ajouter max. 2 monstres Serpent de Mer VENT parmi les cartes excavées à votre main ?",
+        "it": "Aggiungere alla tua mano fino a 2 mostri Serpente Marino VENTO tra le carte dissotterrate?",
+        "pt": "Adicionar à sua mão até 2 monstros Serpente Marinha de VENTO dentre os cards escavados?",
+        "ja": "めくったカードの中から風属性・海竜族モンスターを２体まで手札に加えますか？",
+        "kr": "넘긴 카드 중에서 바람 속성 / 해룡족 몬스터를 2장까지 패에 넣으시겠습니까?"
+    },
+    "是否选对方场上最多2只表侧表示的效果怪兽变成里侧守备表示?": {
+        "en": "Change up to 2 face-up Effect Monsters on your opponent's field to face-down Defense Position?",
+        "de": "Bis zu 2 offene Effektmonster auf der gegnerischen Spielfeldseite in die verdeckte Verteidigungsposition ändern?",
+        "es": "¿Cambiar a Defensa boca abajo hasta 2 Monstruos de Efecto boca arriba en el Campo de tu adversario?",
+        "fr": "Changer max. 2 Monstres à Effet face recto sur le Terrain adverse en Défense face verso ?",
+        "it": "Mettere in Difesa coperta fino a 2 Mostri con Effetto scoperti sul Terreno avversario?",
+        "pt": "Colocar até 2 Monstros de Efeito com a face para cima no campo do oponente em Defesa com a face para baixo?",
+        "ja": "相手フィールドの表側表示の効果モンスターを２体まで裏側守備表示にしますか？",
+        "kr": "상대 필드의 앞면 표시 효과 몬스터를 2장까지 뒷면 수비 표시로 하시겠습니까?"
+    },
+    "是否选自己或者对方的魔法与陷阱区域的表侧表示的1张怪兽卡在自己场上表侧守备表示特殊召唤?": {
+        "en": "Special Summon 1 face-up Monster Card from either Spell & Trap Zone to your field in face-up Defense Position?",
+        "de": "1 offene Monsterkarte aus einer beliebigen Zauber- & Fallenzone in die offene Verteidigungsposition auf deine Spielfeldseite spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial a tu Campo, en Defensa boca arriba, 1 Carta de Monstruo boca arriba de cualquier Zona de Magia y Trampas?",
+        "fr": "Invoquer Spécialement sur votre Terrain en Défense face recto 1 Carte Monstre face recto depuis l'une des Zones Magie & Piège ?",
+        "it": "Evocare Specialmente sul tuo Terreno in Difesa scoperta 1 Carta Mostro scoperta da una delle Zone Magie & Trappole?",
+        "pt": "Invocar por Invocação-Especial para o seu campo em Defesa com a face para cima 1 Card de Monstro com a face para cima de qualquer Zona de Magias & Armadilhas?",
+        "ja": "自分または相手の魔法＆罠ゾーンの表側表示のモンスターカード１枚を、自分フィールドに表側守備表示で特殊召喚しますか？",
+        "kr": "자신 또는 상대의 마법 & 함정 존의 앞면 표시 몬스터 카드 1장을 자신 필드에 앞면 수비 표시로 특수 소환하시겠습니까?"
+    },
+    "这个回合不能表侧表示的特殊召唤{CARD}": {
+        "en": "You cannot Special Summon {CARD} face-up again this turn.",
+        "de": "Du kannst „{CARD}“ in diesem Spielzug nicht erneut offen spezialbeschwören.",
+        "es": "No puedes Invocar de Modo Especial {CARD} boca arriba otra vez este turno.",
+        "fr": "Vous ne pouvez plus Invoquer Spécialement {CARD} face recto ce tour.",
+        "it": "Non puoi più Evocare Specialmente {CARD} scoperto in questo turno.",
+        "pt": "Você não pode Invocar {CARD} por Invocação-Especial com a face para cima novamente neste turno.",
+        "ja": "このターン、これ以上{CARD}を表側表示で特殊召喚できない。",
+        "kr": "이 턴에 {CARD}을 다시 앞면 표시로 특수 소환할 수 없습니다."
+    },
+    "是否选对方场上最多3只表侧表示怪兽(攻击力100以上)攻击下降": {
+        "en": "Reduce the ATK of up to 3 face-up monsters with 100 or more ATK on your opponent's field?",
+        "de": "Die ATK von bis zu 3 offenen Monstern mit mindestens 100 ATK auf der gegnerischen Spielfeldseite verringern?",
+        "es": "¿Reducir el ATK de hasta 3 monstruos boca arriba con 100 ATK o más en el Campo de tu adversario?",
+        "fr": "Réduire l'ATK de max. 3 monstres face recto avec min. 100 ATK sur le Terrain adverse ?",
+        "it": "Ridurre l'ATK di fino a 3 mostri scoperti con almeno 100 ATK sul Terreno avversario?",
+        "pt": "Reduzir o ATK de até 3 monstros com a face para cima com 100 ou mais ATK no campo do oponente?",
+        "ja": "相手フィールドの攻撃力１００以上の表側表示モンスターを３体まで選び、攻撃力をダウンしますか？",
+        "kr": "상대 필드의 공격력 100 이상의 앞면 표시 몬스터를 3장까지 골라 공격력을 내리시겠습니까?"
+    },
+    "是否选手卡1只怪兽特殊召唤?": {
+        "en": "Special Summon 1 monster from your hand?",
+        "de": "1 Monster von deiner Hand spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial 1 monstruo de tu mano?",
+        "fr": "Invoquer Spécialement 1 monstre depuis votre main ?",
+        "it": "Evocare Specialmente 1 mostro dalla tua mano?",
+        "pt": "Invocar por Invocação-Especial 1 monstro da sua mão?",
+        "ja": "手札のモンスター１体を特殊召喚しますか？",
+        "kr": "자신의 패의 몬스터 1장을 특수 소환하시겠습니까?"
+    },
+    "是否自己墓地1只{CARD}回到卡组上面?": {
+        "en": "Return 1 {CARD} from your GY to the top of your Deck?",
+        "de": "1 „{CARD}“ von deinem Friedhof auf dein Deck legen?",
+        "es": "¿Devolver 1 {CARD} de tu Cementerio a la parte superior de tu Deck?",
+        "fr": "Remettre 1 {CARD} depuis votre Cimetière au-dessus de votre Deck ?",
+        "it": "Rimettere 1 {CARD} dal tuo Cimitero in cima al tuo Deck?",
+        "pt": "Devolver 1 {CARD} do seu Cemitério para o topo do seu Deck?",
+        "ja": "自分の墓地の{CARD}１体をデッキの一番上に戻しますか？",
+        "kr": "자신의 묘지의 {CARD} 1장을 덱 맨 위로 되돌리시겠습니까?"
+    },
+    "是否选对方的魔法与陷阱区域的1张里侧表示的卡破坏?": {
+        "en": "Destroy 1 face-down card in your opponent's Spell & Trap Zone?",
+        "de": "1 verdeckte Karte in der gegnerischen Zauber- & Fallenzone zerstören?",
+        "es": "¿Destruir 1 carta boca abajo en la Zona de Magia y Trampas de tu adversario?",
+        "fr": "Détruire 1 carte face verso dans la Zone Magie & Piège adverse ?",
+        "it": "Distruggere 1 carta coperta nella Zona Magie & Trappole avversaria?",
+        "pt": "Destruir 1 card com a face para baixo na Zona de Magias & Armadilhas do oponente?",
+        "ja": "相手の魔法＆罠ゾーンの裏側表示のカード１枚を破壊しますか？",
+        "kr": "상대의 마법 & 함정 존의 뒷면 표시 카드 1장을 파괴하시겠습니까?"
+    },
+    "是否选对方墓地1只怪兽(4星)在自己场上表侧表示特殊召唤?": {
+        "en": "Special Summon 1 Level 4 monster from your opponent's GY to your field face-up?",
+        "de": "1 Monster der Stufe 4 vom gegnerischen Friedhof offen auf deine Spielfeldseite spezialbeschwören?",
+        "es": "¿Invocar de Modo Especial a tu Campo boca arriba 1 monstruo de Nivel 4 del Cementerio de tu adversario?",
+        "fr": "Invoquer Spécialement face recto sur votre Terrain 1 monstre de Niveau 4 depuis le Cimetière adverse ?",
+        "it": "Evocare Specialmente scoperto sul tuo Terreno 1 mostro di Livello 4 dal Cimitero avversario?",
+        "pt": "Invocar por Invocação-Especial para o seu campo com a face para cima 1 monstro de Nível 4 do Cemitério do oponente?",
+        "ja": "相手の墓地のレベル４のモンスター１体を自分フィールドに表側表示で特殊召喚しますか？",
+        "kr": "상대 묘지의 레벨 4 몬스터 1장을 자신 필드에 앞면 표시로 특수 소환하시겠습니까?"
+    },
+    "这个回合不会因效果回到手卡": {
+        "en": "Cannot return to the hand by effects this turn.",
+        "de": "Kann in diesem Spielzug nicht durch Effekte auf die Hand zurückgegeben werden.",
+        "es": "No puede volver a la mano por efectos este turno.",
+        "fr": "Ne peut pas être renvoyé à la main par des effets ce tour.",
+        "it": "Non può tornare in mano tramite effetti in questo turno.",
+        "pt": "Não pode voltar para a mão por efeitos neste turno.",
+        "ja": "このターン、効果では手札に戻らない。",
+        "kr": "이 턴에 효과로는 패로 되돌아가지 않습니다."
+    },
+    "这个回合不会因效果回到卡组·额外卡组": {
+        "en": "Cannot return to the Deck or Extra Deck by effects this turn.",
+        "de": "Kann in diesem Spielzug nicht durch Effekte ins Deck oder Extra Deck zurückgelegt werden.",
+        "es": "No puede volver al Deck o Deck Extra por efectos este turno.",
+        "fr": "Ne peut pas être renvoyé au Deck ou à l'Extra Deck par des effets ce tour.",
+        "it": "Non può tornare nel Deck o Extra Deck tramite effetti in questo turno.",
+        "pt": "Não pode voltar para o Deck ou Deck Adicional por efeitos neste turno.",
+        "ja": "このターン、効果ではデッキ・エクストラデッキに戻らない。",
+        "kr": "이 턴에 효과로는 덱 / 엑스트라 덱으로 되돌아가지 않습니다."
+    },
+    "是否选对方场上1只怪兽(8星以下)回到持有者手卡?": {
+        "en": "Return 1 Level 8 or lower monster on your opponent's field to its owner's hand?",
+        "de": "1 Monster der Stufe 8 oder niedriger auf der gegnerischen Spielfeldseite auf die Hand seines Besitzers zurückgeben?",
+        "es": "¿Devolver a la mano de su dueño 1 monstruo de Nivel 8 o menor en el Campo de tu adversario?",
+        "fr": "Renvoyer 1 monstre de Niveau 8 ou moins sur le Terrain adverse à la main de son propriétaire ?",
+        "it": "Far tornare nella mano del proprietario 1 mostro di Livello 8 o inferiore sul Terreno avversario?",
+        "pt": "Devolver 1 monstro de Nível 8 ou menos no campo do oponente para a mão do dono?",
+        "ja": "相手フィールドのレベル８以下のモンスター１体を持ち主の手札に戻しますか？",
+        "kr": "상대 필드의 레벨 8 이하의 몬스터 1장을 주인의 패로 되돌리시겠습니까?"
+    }
+})
+RUSH_PROMPT_PROVENANCE.update({key: {lang: "reviewed_rush_patch" for lang in values}
+    for key, values in RUSH_PROMPT_TRANSLATIONS.items() if key in ('这个回合，战斗破坏的怪兽不去墓地而回到持有者卡组下面', '自己卡组最上面的卡送去墓地。那之后，这张卡是表侧表示的期间，这张卡的攻击力上升300', '选自己或者对方场上的1张魔法·陷阱卡破坏', '双方从那之中选1只怪兽(4星)特殊召唤?', '是否从那之中或者自己墓地选1只怪兽(1星)特殊召唤?', '这个回合战斗不会让自己受到战斗伤害', '是否选自己墓地1只效果怪兽(4星/龙族/攻击力1500)表侧守备表示特殊召唤?', '这个回合，不能用怪兽(暗属性以外)攻击', '是否选自己手卡·墓地1只{CARD}特殊召唤?', '这个回合，不能用怪兽(电子界族以外)攻击', '是否选自己墓地1只怪兽(8星/光属性/电子界族)加入手卡?', '这个回合，不用怪兽(8星以上/电子界族)不能攻击', '是否选自己墓地1只{CARD}表侧守备表示特殊召唤?', '是否选自己墓地1只{CARD}表侧攻击表示特殊召唤?', '是否从那之中选1只怪兽加入手卡?', '这个回合可以向怪兽作4次攻击', '这个回合可以向怪兽作5次攻击', '这个回合可以向怪兽作6次攻击', '是否选自己墓地的同盟怪兽(风属性/海龙族)装备?', '是否选自己墓地1只怪兽(5星以上/风属性/海龙族)加入手卡?', '是否选手卡1只怪兽(风属性/海龙族)特殊召唤?', '这个回合，不用怪兽(风属性/海龙族)不能攻击', '是否从那之中选最多2只怪兽(风属性/海龙族)加入手卡?', '是否选对方场上最多2只表侧表示的效果怪兽变成里侧守备表示?', '是否选自己或者对方的魔法与陷阱区域的表侧表示的1张怪兽卡在自己场上表侧守备表示特殊召唤?', '这个回合不能表侧表示的特殊召唤{CARD}', '是否选对方场上最多3只表侧表示怪兽(攻击力100以上)攻击下降', '是否选手卡1只怪兽特殊召唤?', '是否自己墓地1只{CARD}回到卡组上面?', '是否选对方的魔法与陷阱区域的1张里侧表示的卡破坏?', '是否选对方墓地1只怪兽(4星)在自己场上表侧表示特殊召唤?', '这个回合不会因效果回到手卡', '这个回合不会因效果回到卡组·额外卡组', '是否选对方场上1只怪兽(8星以下)回到持有者手卡?')})

@@ -2,6 +2,8 @@
 
 For the current GitHub Actions workflow and the scripts to give translators, see [docs/TRANSLATOR_WORKFLOW.md](docs/TRANSLATOR_WORKFLOW.md).
 
+For Rush Duel pre-release cards, shared artwork, and source-driven removal, see [docs/RUSH_PRE_RELEASE.md](docs/RUSH_PRE_RELEASE.md).
+
 # 🃏 Pre-Release Cards Tutorial by Senator John
 
 Want to translate your favorite or the latest announced cards for MDPro3 Super-Pre? No worries — Senator John has you covered with this short tutorial and toolset!

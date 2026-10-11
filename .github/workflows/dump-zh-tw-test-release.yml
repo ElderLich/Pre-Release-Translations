@@ -2,12 +2,15 @@ name: Dump ZH-TW test-release.cdb
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 6 * * *"
+  workflow_run:
+    workflows:
+      - "AutoPR ZH-TW"
+    types: [completed]
   push:
     branches:
       - main
     paths:
+      - ".github/scripts/schedule_guard.py"
       - "ZH-TW/Base Files/test-release.cdb"
       - ".github/scripts/dump_zh_tw_cdb.py"
       - ".github/workflows/dump-zh-tw-test-release.yml"
@@ -22,6 +25,7 @@ concurrency:
 jobs:
   dump:
     name: Publish ZH-TW dump folder
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -31,12 +35,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check whether the dump changed
+        id: freshness
+        run: python3 .github/scripts/schedule_guard.py dump --locale ZH-TW
+
       - name: Set up Python
+        if: steps.freshness.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
       - name: Generate dump files
+        if: steps.freshness.outputs.should_run == 'true'
         run: |
           python .github/scripts/dump_zh_tw_cdb.py \
             --cdb "ZH-TW/Base Files/test-release.cdb" \
@@ -44,6 +54,7 @@ jobs:
             --source-sha "$GITHUB_SHA"
 
       - name: Publish dump branch
+        if: steps.freshness.outputs.should_run == 'true'
         env:
           DUMP_DIR: ${{ runner.temp }}/zh-tw-test-release-dump
         run: |

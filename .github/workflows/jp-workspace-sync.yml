@@ -2,8 +2,6 @@ name: Sync JP Workspace
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "10 7 * * *"
   push:
     branches:
       - main

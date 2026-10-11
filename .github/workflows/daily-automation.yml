@@ -1,0 +1,37 @@
+name: Daily translation updates
+
+on:
+  schedule:
+    - cron: "10 8 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Run every locale even if recently updated
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  actions: write
+
+concurrency:
+  group: daily-translation-dispatch
+  cancel-in-progress: false
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Dispatch only needed updates
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FORCE: ${{ inputs.force || false }}
+        run: |
+          args=()
+          if [ "$FORCE" = "true" ]; then args+=(--force); fi
+          python3 .github/scripts/schedule_guard.py dispatch "${args[@]}"

@@ -1,0 +1,76 @@
+name: Update Rush pre-release cards
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "Tools/rush_prerelease.py"
+      - "Tools/PromptPatcher.py"
+      - "Shared/Mappings.csv"
+      - ".github/scripts/shared_mappings.py"
+      - ".github/scripts/tcg_autopr.py"
+      - "Shared/Rush Artworks/**"
+      - "Shared/Rush/config.json"
+      - "*/Rush/Workspace/**"
+      - ".github/workflows/rush-prerelease.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: rush-prerelease
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Get current Rush sources and translated databases
+        run: |
+          set -euo pipefail
+          git clone --depth 1 --branch master https://git.moenext.com/mycard/ygopro-rush-duel.git "$RUNNER_TEMP/rush-source"
+          git clone --depth 1 --branch main --filter=blob:none --sparse https://github.com/ElderLich/MDPro3_Data.git "$RUNNER_TEMP/rush-translations"
+          git -C "$RUNNER_TEMP/rush-translations" sparse-checkout set Data/locales
+
+      - name: Reconcile, package and commit all Rush locales
+        run: |
+          set -euo pipefail
+          git config user.name "ElderLich"
+          git config user.email "35314175+ElderLich@users.noreply.github.com"
+          branch="${GITHUB_REF_NAME:-main}"
+          for attempt in 1 2 3 4 5; do
+            git fetch origin "$branch"
+            git checkout -B "$branch" "origin/$branch"
+            build_status=0
+            python Tools/rush_prerelease.py sync \
+              --source-root "$RUNNER_TEMP/rush-source" \
+              --translations-root "$RUNNER_TEMP/rush-translations/Data/locales" || build_status=$?
+            # Preserve pending translator work even when incomplete locales block publication.
+            for path in Shared/Rush/source.json */Rush */rush-pre-release.ypk */rush-pre-release.json */rush-version.txt; do
+              if [ -e "$path" ]; then git add -A -- "$path"; fi
+            done
+            if git diff --cached --quiet; then
+              echo "No generated Rush changes to commit (build status: $build_status)."
+              exit "$build_status"
+            fi
+            git commit -m "Update Rush pre-release cards in all locales"
+            if git push origin "HEAD:$branch"; then
+              if [ "$build_status" -ne 0 ]; then echo "Translator workspaces/reports saved; Rush packages remain at the last complete release."; fi
+              exit "$build_status"
+            fi
+            echo "Branch changed while building; retrying from its latest contents ($attempt/5)."
+            sleep $((attempt * 5))
+          done
+          echo "Could not publish Rush packages after five attempts."
+          exit 1

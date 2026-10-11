@@ -2,8 +2,6 @@ name: Sync KR Workspace
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "20 7 * * *"
   push:
     branches:
       - main

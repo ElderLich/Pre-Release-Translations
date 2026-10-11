@@ -687,7 +687,11 @@ def load_mappings_csv(path: Path) -> dict[int, dict[str, str]]:
 
 def save_mappings_csv(path: Path, rows: dict[int, dict[str, str]]) -> None:
     if CONFIG.lang == "en":
-        save_locale_mappings_csv(path, rows)
+        # The standard workspace does not own Rush IDs in the shared mappings.
+        # Its stale-card cleanup must not erase the Rush translator bindings.
+        rush_rows = {card_id: row for card_id, row in load_locale_mappings_csv(path).items()
+                     if 120000000 <= card_id < 130000000}
+        save_locale_mappings_csv(path, {**rush_rows, **rows})
 
 
 def scan_cdb_placeholders(cdb_path: Path) -> tuple[dict[int, dict], set[int]]:

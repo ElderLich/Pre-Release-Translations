@@ -2,8 +2,6 @@ name: Sync PT Workspace
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "25 8 * * *"
   push:
     branches:
       - main

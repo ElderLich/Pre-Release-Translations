@@ -2,8 +2,6 @@ name: Sync ES Workspace
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "0 7 * * *"
   push:
     branches:
       - main

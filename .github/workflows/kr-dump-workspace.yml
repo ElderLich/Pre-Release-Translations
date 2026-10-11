@@ -2,12 +2,15 @@ name: Dump KR Workspace
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "50 7 * * *"
+  workflow_run:
+    workflows:
+      - "Sync KR Workspace"
+    types: [completed]
   push:
     branches:
       - main
     paths:
+      - ".github/scripts/schedule_guard.py"
       - "KR/Workspace/test-release.cdb"
       - ".github/scripts/dump_cdb.py"
       - ".github/workflows/kr-dump-workspace.yml"
@@ -22,6 +25,7 @@ concurrency:
 jobs:
   dump:
     name: Publish KR dump folder
+    if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-latest
     timeout-minutes: 15
 
@@ -31,12 +35,18 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Check whether the dump changed
+        id: freshness
+        run: python3 .github/scripts/schedule_guard.py dump --locale KR
+
       - name: Set up Python
+        if: steps.freshness.outputs.should_run == 'true'
         uses: actions/setup-python@v5
         with:
           python-version: "3.x"
 
       - name: Generate dump files
+        if: steps.freshness.outputs.should_run == 'true'
         run: |
           python .github/scripts/dump_cdb.py \
             --cdb "KR/Workspace/test-release.cdb" \
@@ -46,6 +56,7 @@ jobs:
             --title "KR Workspace test-release.cdb Dump"
 
       - name: Publish dump branch
+        if: steps.freshness.outputs.should_run == 'true'
         env:
           DUMP_DIR: ${{ runner.temp }}/kr-workspace-dump
         run: |
