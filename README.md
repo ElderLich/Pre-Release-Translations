@@ -1,108 +1,129 @@
-# Current Automation Guide
+<p align="center">
+  <img src="docs/assets/readme-banner.svg" alt="TransSuperpre — New cards. Your language. Standard and Rush Duel pre-release translations for MDPro3." width="100%">
+</p>
 
-For the current GitHub Actions workflow and the scripts to give translators, see [docs/TRANSLATOR_WORKFLOW.md](docs/TRANSLATOR_WORKFLOW.md).
+<p align="center">
+  <a href="docs/TRANSLATOR_WORKFLOW.md"><strong>Translator guide</strong></a>
+  &nbsp; · &nbsp;
+  <a href="docs/RUSH_PRE_RELEASE.md"><strong>Rush Duel guide</strong></a>
+  &nbsp; · &nbsp;
+  <a href="docs/AUTOMATION_SCHEDULE.md"><strong>Daily updates</strong></a>
+  &nbsp; · &nbsp;
+  <a href="https://github.com/ElderLich/TransSuperpre/actions"><strong>Build status</strong></a>
+</p>
 
-For Rush Duel pre-release cards, shared artwork, and source-driven removal, see [docs/RUSH_PRE_RELEASE.md](docs/RUSH_PRE_RELEASE.md).
-
-# 🃏 Pre-Release Cards Tutorial by Senator John
-
-Want to translate your favorite or the latest announced cards for MDPro3 Super-Pre? No worries — Senator John has you covered with this short tutorial and toolset!
-
-## 🛠️ Tools Needed
-
-Make sure to install the following before starting:
-
-- [Python](https://www.python.org/downloads/)
-- This translation [Tool](https://pixeldrain.com/u/nJAY2xYA) (credits to @Reinen of The Wire Forest)
-- [DataEditorX](https://github.com/Lyris12/DataEditorX/releases/download/omega/win64.zip)
-- [SQLite (alternative solid editor)](https://sqlitebrowser.org/dl/)
-- [GitHub](https://github.com/) Account
-- [GitHub Desktop](https://desktop.github.com/)
-
-## 🌐 Translation Resources
-
-- **Primary Source (Chinese):** [SuperPre](https://mycard.world/ygopro/arena/index.html#/superpre)
-- **Primary Source (English):** [YGOrganization](https://ygorganization.com/)
-- **French Sources:** [Yugipedia](https://yugipedia.com/) and [CodexYGO API](https://codexygo.fr/api/card/v1/docs/?lang=en)
-  
-> ⚠️ Note: When translating into other languages, **do not reuse the OCG card numbering from the English version** — it causes issues during merge with the main `.cdb` file.
+<p align="center">
+  Translate upcoming cards, review your language, and ship ready-to-play packages for MDPro3.<br>
+  One desktop tool for <strong>Standard</strong>, <strong>Rush Duel</strong>, and an overview of every Rush locale.
+</p>
 
 ---
 
-## 🚀 Getting Started
+## Your workspace, at a glance
 
-### 1. Download the Latest Files
-When new cards are announced, the `super-pre.ypk` file will be updated. You need to download it from the provided link.
+| Standard | Rush Duel | All locales |
+| :--- | :--- | :--- |
+| Fetch the latest MyCard cards and translate your selected language. | Refresh your language's Rush database, review the text, and upload your changes. | Review published versions, changed cards, missing translations, and artwork gaps. |
+| [Standard workflow →](docs/TRANSLATOR_WORKFLOW.md) | [Rush workflow →](docs/RUSH_PRE_RELEASE.md) | [Maintainer builds →](docs/RUSH_PRE_RELEASE.md#maintainer-all-locale-builds) |
 
-### 2. Unpack the Files
-Use WinZip or WinRAR to extract `ygopro-super-pre.ypk`. Set up your folders:
-- Folder A: Your working language (e.g. `FR`)
-- Folder B: Extracted raw files from `super-pre.ypk` (e.g. `CN`)
+The interface follows your selected language by default. **Settings** lets you choose a different interface language and locate DataEditorX. The activity panel switches between a compact animated bar and the full log.
 
-### 3. Files to Focus On
-Once unpacked, you’ll find three important files:
+## Start translating
 
-- `test-update.cdb` – contains older cards updated to new archetypes
-- `test-strings.conf` – names of new archetypes
-- `test-release.cdb` – latest cards added to the pool
+### 01 · Set up once
 
----
+Install [Python 3](https://www.python.org/downloads/), [Git](https://git-scm.com/downloads), and a database editor such as [DataEditorX](https://github.com/Lyris12/DataEditorX) or [DB Browser for SQLite](https://sqlitebrowser.org/dl/). Clone this repository with Git or [GitHub Desktop](https://desktop.github.com/).
 
-## 📝 Translation Workflow
+Create a separate local language folder, then copy these two launchers into it:
 
-1. Open `test-release.cdb` in **DataEditorX**
-2. Translate:
-   - Card Names
-   - Card Effects
-   - Card Strings (effect prompts shown in-game)
-3. Click `Modify` to save your changes.
+| From this repository | Into your local folder, for example `FR/` |
+| :--- | :--- |
+| [Tools/AutoPR_local.py](Tools/AutoPR_local.py) | `AutoPR.py` |
+| [Tools/AutoPR_local.pyw](Tools/AutoPR_local.pyw) | `AutoPR.pyw` |
 
-💡 *You can also compare two `.cdb` files to check for missing cards. Zero results means both databases are synced.*
+Use `DE`, `EN`, `ES`, `FR`, `IT`, `JP`, `KR`, `PT`, or `TH` as the folder name. Open **AutoPR.pyw** on Windows for a launch without a console window, and select your TransSuperpre checkout when prompted. Your folders can live wherever you prefer.
 
----
+### 02 · Fetch and translate
 
-## 📦 Preparing for Repackaging
+Choose **Standard** or **Rush**, select your language, and fetch updates. Then use **Open Database in DataEditorX** to edit card names, effects, and in-game prompts. Save your edits in the editor.
 
-Once your translations are done:
+| Selected tab | Your local working database |
+| :--- | :--- |
+| Standard | `<LANG>/raw2/test-release.cdb` |
+| Rush | `<LANG>/Rush/raw2/rush-pre-release.cdb` |
 
-1. Replace the edited files in the original `ygopro-super-pre.ypk`.
-2. Download the translation packaging tool (Python script).
-3. Place the script in the same folder as `test-release.cdb`.
+For Standard archetype and prompt strings, also edit `raw2/test-strings.conf` when needed. Keep card IDs and gameplay values unchanged.
 
-### Setup Python Environment
+### 03 · Review and publish
 
-```bash
-pip install requests
+Use **Copy workspace into repository** to review locally, or **Upload workspace & push to GitHub** when your translations are ready. You need repository write access to push. GitHub Actions builds the packages and metadata from your workspace.
+
+> [!TIP]
+> Rush translators need Python, Git, this repository, and their language folder. The cloud build obtains the Rush source and locale databases; a separate `ygopro-rush-duel` or MDPro3_Data checkout is only needed for maintainer builds.
+
+The [full translator guide](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translators) covers setup, conflict resolution, reports, and the legacy `AutoPR.py --menu` interface.
+
+## Languages & card text
+
+**Standard packages:** [DE](DE) · [EN](EN) · [ES](ES) · [FR](FR) · [IT](IT) · [JP](JP) · [KR](KR) · [PT](PT) · [TH](TH) · [ZH-TW](ZH-TW)
+
+**Rush packages:** all of the above, plus [ZH-CN](ZH-CN) — **11 locales**.
+
+| Language / source | How Rush text is maintained |
+| :--- | :--- |
+| English | Missing names and effects are fetched from Yugipedia. |
+| French | Yugipedia first, with verified CodexYGO matches when French text is incomplete. |
+| Japanese | Missing text is matched against the Rush lists on ocg-card.com. |
+| Korean | Translator-maintained text; no Korean web fetching. |
+| Thai | Follows English. Submit Rush text corrections through EN. |
+| Simplified Chinese | Follows upstream `RD Patch.cdb`; the workspace is reference-only. |
+| Other Rush locales | Existing workspace translations and locale seed databases, completed by translators. |
+
+Standard also supports automatic English and French source text. Existing translator edits take precedence; incomplete source text remains pending for review. See [automatic card text](docs/TRANSLATOR_WORKFLOW.md#automatic-english-and-french-card-text) for matching rules and reports.
+
+**Traditional Chinese:** Standard uses its [dedicated workflow](.github/workflows/autopr-zh-tw.yml) and `ZH-TW/Base Files`. Rush uses the editable `ZH-TW/Rush/Workspace` database. See the guides before editing either.
+
+## What the automation handles
+
+- **Fresh inventory.** New upstream cards enter the workspaces; retired cards leave them. Rush inventory follows `RD Patch.cdb` and the reviewed exclusions.
+- **Translation review.** Rush preserves local text edits and reports conflicting changes. Pending translations are recorded for completion before a full release.
+- **Shared artwork.** Files in [Shared/Rush Artworks](Shared/Rush%20Artworks) are included in every locale's Rush package. Missing artwork appears in the reports.
+- **Daily updates.** One dispatcher checks what needs updating. Standard locales released within 24 hours skip scheduled imports unless the upstream package is newer. Rush checks source revisions and local inputs.
+- **Game packages.** Successful builds produce `.ypk` packages, JSON card data, and version files. Standard CDB text dumps are published to the `dump` branch for review.
+
+[Read the schedule rules →](docs/AUTOMATION_SCHEDULE.md) &nbsp; [Inspect workflow runs →](https://github.com/ElderLich/TransSuperpre/actions)
+
+<details>
+<summary><strong>Repository map & package names</strong></summary>
+
+```text
+TransSuperpre/
+├── Tools/                       Desktop tool, launchers and builders
+├── Shared/
+│   ├── Mappings.csv             Shared card-name and prompt bindings
+│   ├── Rush/                    Rush configuration and source snapshots
+│   └── Rush Artworks/           Artwork shared by every Rush locale
+├── <LANG>/
+│   ├── Workspace/              Standard translation inputs
+│   ├── Base Files/             Standard build inputs (see ZH-TW exception)
+│   ├── Rush/Workspace/         Rush translation inputs
+│   ├── ygopro-super-pre.ypk    Standard package
+│   └── rush-pre-release.ypk    Rush package
+└── docs/                        Setup, translation and automation guides
 ```
 
-Run the script by double-clicking or using the command line.
+Standard metadata uses `test-release.json` and `version.txt`. Rush uses `rush-pre-release.json` and `rush-version.txt`. Package availability follows the language lists above.
 
-> 📝 If translating to a language other than English, update the language files **inside the script** accordingly.
+Edit your working database and upload its workspace. Packages, metadata, source snapshots, and text dumps are generated by the tools.
 
-### Output Files
+</details>
 
-- `test-release.json` – Required for YGOmobile
-- `version.txt` – Contains UNIX timestamp to signal a new version to the game
+## Credits & sources
 
----
+Project led and documented by **Senator John**. Original translation tool by **@Reinen** of *The Wire Forest*.
 
-## ☁️ Uploading to GitHub
-
-1. Clone Senator John’s repo using [GitHub Desktop](https://desktop.github.com/) or Git CLI.
-2. Navigate to the appropriate language folder (e.g. `FR/` for French).
-3. Paste your updated files.
-4. Use **GitHub Desktop** to commit and push your changes.
-
-> 📤 Each language should have its own folder. For example, French goes in `FR/`.
-
+Card data and translation references: [MyCard Super-Pre](https://mycard.world/ygopro/arena/index.html#/superpre), [Rush Duel upstream](https://code.moenext.com/mycard/ygopro-rush-duel), [Yugipedia](https://yugipedia.com/), [YGOrganization](https://ygorganization.com/), [CodexYGO](https://codexygo.fr/api/card/v1/docs/?lang=en), and [ocg-card.com](https://ocg-card.com/list_r/).
 
 ---
 
-## 🙌 Credits
-
-- Tool by **@Reinen** of *The Wire Forest*
-- Project led and documented by **Senator John**
-
----
-
-Happy translating! 🇺🇳
+<p align="center"><sub>Fetch the latest cards. Make the text feel at home. Share it with your players.</sub></p>
