@@ -26,12 +26,12 @@ jobs:
   dump:
     name: Publish IT dump folder
     if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
 
@@ -41,7 +41,7 @@ jobs:
 
       - name: Set up Python
         if: steps.freshness.outputs.should_run == 'true'
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: "3.x"
 

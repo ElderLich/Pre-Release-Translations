@@ -13,11 +13,12 @@ import urllib.request
 from email.utils import parsedate_to_datetime
 from pathlib import Path
 
-UPSTREAM_YPK = "https://cdntx2.moecube.com/ygopro-super-pre/archive/ygopro-super-pre.ypk"
+from shared_downloads import YPK_URL_DEFAULT, download_urls
+from fetch_rush_sources import RUSH_SOURCE, RUSH_TRANSLATIONS
+
+UPSTREAM_YPK = YPK_URL_DEFAULT
 LOCALES = ("DE", "EN", "ES", "FR", "IT", "JP", "KR", "PT", "TH", "ZH-TW")
 RUSH_LOCALES = frozenset((*LOCALES, "ZH-CN"))
-RUSH_SOURCE = "https://git.moenext.com/mycard/ygopro-rush-duel.git"
-RUSH_TRANSLATIONS = "https://github.com/ElderLich/MDPro3_Data.git"
 
 
 def git(*args: str) -> str:
@@ -47,14 +48,17 @@ def latest_release(version_path: str) -> int | None:
 
 
 def upstream_modified(url: str) -> float | None:
-    try:
-        request = urllib.request.Request(url, method="HEAD", headers={"User-Agent": "TransSuperpre-ScheduleGuard/1"})
-        with urllib.request.urlopen(request, timeout=10) as response:
-            value = response.headers.get("Last-Modified")
-        return parsedate_to_datetime(value).timestamp() if value else None
-    except (OSError, ValueError, TypeError, OverflowError) as exc:
-        print(f"Upstream date unavailable; keeping the bounded cooldown: {type(exc).__name__}")
-        return None
+    for candidate in download_urls(url):
+        try:
+            request = urllib.request.Request(candidate, method="HEAD", headers={"User-Agent": "TransSuperpre-ScheduleGuard/1"})
+            with urllib.request.urlopen(request, timeout=10) as response:
+                value = response.headers.get("Last-Modified")
+            if value:
+                return parsedate_to_datetime(value).timestamp()
+        except (OSError, ValueError, TypeError, OverflowError) as exc:
+            print(f"Upstream date unavailable from {candidate}: {type(exc).__name__}")
+    print("No upstream date available; keeping the bounded cooldown.")
+    return None
 
 
 def github_api(path: str, payload: dict | None = None) -> dict:

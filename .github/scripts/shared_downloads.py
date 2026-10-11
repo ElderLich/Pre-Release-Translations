@@ -4,17 +4,22 @@
 from __future__ import annotations
 
 import http.client
+import json
 import tempfile
 import time
 import urllib.error
 import urllib.request
+from urllib.parse import urlsplit
 import zipfile
 import zlib
 from collections.abc import Callable
 from pathlib import Path
 
-YPK_URL_DEFAULT = "https://cdntx2.moecube.com/ygopro-super-pre/archive/ygopro-super-pre.ypk"
-JSON_URL_DEFAULT = "https://cdntx2.moecube.com/ygopro-super-pre/data/test-release.json"
+# Both endpoints publish the same MyCard distribution. Keep TLS verification on.
+UPSTREAM_BASES = ("https://cdn02.moecube.com:444/ygopro-super-pre/",
+                  "https://cdntx2.moecube.com/ygopro-super-pre/")
+YPK_URL_DEFAULT = UPSTREAM_BASES[0] + "archive/ygopro-super-pre.ypk"
+JSON_URL_DEFAULT = UPSTREAM_BASES[0] + "data/test-release.json"
 DOWNLOAD_ATTEMPTS = 3
 DOWNLOAD_TIMEOUT = 60
 YPK_MEMBERS = ("test-release.cdb", "test-strings.conf", "test-update.cdb")
@@ -22,6 +27,15 @@ YPK_MEMBERS = ("test-release.cdb", "test-strings.conf", "test-update.cdb")
 
 class DownloadError(RuntimeError):
     """The upstream response could not be downloaded or validated."""
+
+
+def download_urls(url: str) -> tuple[str, ...]:
+    """Only use known upstream alternatives; explicit custom URLs stay isolated."""
+    for base in UPSTREAM_BASES:
+        if url.startswith(base):
+            suffix = url[len(base):]
+            return (url, *(other + suffix for other in UPSTREAM_BASES if other != base))
+    return (url,)
 
 
 def validate_ypk(path: Path) -> None:
@@ -43,18 +57,21 @@ def download_file(
     *,
     user_agent: str,
     log_fn: Callable[[str], None],
+    validator: Callable[[Path], None] | None = None,
 ) -> None:
     """Retry incomplete transfers; publish the target only after validation."""
     target.parent.mkdir(parents=True, exist_ok=True)
+    candidates = download_urls(url)
     for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
-        log_fn(f"Downloading {url} (attempt {attempt}/{DOWNLOAD_ATTEMPTS})")
+        candidate = candidates[(attempt - 1) % len(candidates)]
+        log_fn(f"Downloading {candidate} (attempt {attempt}/{DOWNLOAD_ATTEMPTS})")
         partial: Path | None = None
-        final_url = url
+        final_url = candidate
         try:
-            request = urllib.request.Request(url, headers={"User-Agent": user_agent})
+            request = urllib.request.Request(candidate, headers={"User-Agent": user_agent})
             with urllib.request.urlopen(request, timeout=DOWNLOAD_TIMEOUT) as response:
                 final_url = response.geturl()
-                if final_url != url:
+                if final_url != candidate:
                     log_fn(f"Download redirected to {final_url}")
                 if response.status not in (None, 200):
                     raise DownloadError(f"Expected a complete response, got HTTP {response.status}")
@@ -79,8 +96,10 @@ def download_file(
                     )
                 if received == 0:
                     raise DownloadError("Downloaded file is empty")
-            if target.suffix.lower() == ".ypk":
+            if target.suffix.lower() == ".ypk" or urlsplit(url).path.lower().endswith(".ypk"):
                 validate_ypk(partial)
+            if validator is not None:
+                validator(partial)
             partial.replace(target)
             log_fn(f"Downloaded {target} ({received:,} bytes, validated)")
             return
@@ -101,3 +120,19 @@ def download_file(
             if partial is not None:
                 partial.unlink(missing_ok=True)
         time.sleep(attempt)
+
+
+def fetch_release_json(url: str, *, user_agent: str, log_fn: Callable[[str], None]) -> list[dict]:
+    """Metadata uses the same verified endpoints/retries as the package."""
+    def validate(path: Path) -> None:
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+        except (ValueError, UnicodeError) as error:
+            raise DownloadError(f"Invalid release JSON: {error}") from error
+        if not isinstance(data, list) or any(not isinstance(row, dict) for row in data):
+            raise DownloadError("Release JSON must be a list of card objects")
+
+    with tempfile.TemporaryDirectory(prefix="superpre-metadata-") as directory:
+        target = Path(directory) / "test-release.json"
+        download_file(url, target, user_agent=user_agent, log_fn=log_fn, validator=validate)
+        return json.loads(target.read_text(encoding="utf-8"))

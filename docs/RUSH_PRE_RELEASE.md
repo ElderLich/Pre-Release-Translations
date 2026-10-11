@@ -49,6 +49,18 @@ The GUI lives in `Tools/prerelease_gui.py`; installed `AutoPR.py` wrappers load
 it from the configured repository, so future GUI updates need no wrapper copy.
 `AutoPR.py --menu` retains the old numbered interface.
 
+## GitHub source downloads
+
+The workflow and daily freshness check use the project's advertised HTTPS URL,
+`https://code.moenext.com/mycard/ygopro-rush-duel.git`. `git.moenext.com` is its
+SSH hostname; it does not serve the HTTPS clone used by GitHub runners.
+`.github/scripts/fetch_rush_sources.py` fetches fresh shallow checkouts of Rush
+and only the `Data/locales/*/rush_cards.cdb` seed databases, with three attempts.
+Clones have a 90-second limit; the larger database transfer has five minutes.
+Timeouts terminate Git workers before partial attempts are discarded. Required
+source files are checked, and existing checkouts are never overwritten. A source outage stops publication
+instead of building packages from an old cached patch.
+
 ## Run locally from a terminal
 
 From the TransSuperpre repository:

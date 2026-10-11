@@ -17,7 +17,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, download_file as download_verified_file
+from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, fetch_release_json, download_file as download_verified_file
 from shared_mappings import load_locale_mappings_csv
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -96,14 +96,10 @@ def download_file(url: str, target: Path) -> None:
 
 
 def fetch_json(url: str) -> list[dict]:
-    log(f"Fetching {url}")
-    request = urllib.request.Request(url, headers={"User-Agent": "TransSuperpre-ES-AutoPR/1.0"})
-    with urllib.request.urlopen(request, timeout=300) as response:
-        data = json.loads(response.read().decode("utf-8"))
-    if not isinstance(data, list):
-        fail(f"Release JSON is not a list: {url}")
-    return data
-
+    try:
+        return fetch_release_json(url, user_agent="TransSuperpre-ES-AutoPR/1.0", log_fn=log)
+    except DownloadError as exc:
+        fail(str(exc))
 
 
 def extract_member(zip_path: Path, member: str, target: Path) -> None:

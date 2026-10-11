@@ -6,6 +6,7 @@ on:
     branches: [main]
     paths:
       - "Tools/rush_prerelease.py"
+      - ".github/scripts/fetch_rush_sources.py"
       - "Tools/rush_source_text.py"
       - ".github/scripts/card_text_autofill.py"
       - ".github/scripts/codexygo_source.py"
@@ -28,24 +29,24 @@ concurrency:
 
 jobs:
   release:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7.0.1
         with:
           fetch-depth: 0
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v7.0.0
         with:
           python-version: "3.x"
 
       - name: Get current Rush sources and translated databases
         run: |
           set -euo pipefail
-          git clone --depth 1 --branch master https://git.moenext.com/mycard/ygopro-rush-duel.git "$RUNNER_TEMP/rush-source"
-          git clone --depth 1 --branch main --filter=blob:none --sparse https://github.com/ElderLich/MDPro3_Data.git "$RUNNER_TEMP/rush-translations"
-          git -C "$RUNNER_TEMP/rush-translations" sparse-checkout set Data/locales
+          python .github/scripts/fetch_rush_sources.py \
+            --source-root "$RUNNER_TEMP/rush-source" \
+            --translations-root "$RUNNER_TEMP/rush-translations"
 
       - name: Reconcile, package and commit all Rush locales
         run: |

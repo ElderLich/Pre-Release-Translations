@@ -23,7 +23,7 @@ import urllib.request
 import zipfile
 from pathlib import Path
 
-from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, download_file as download_verified_file
+from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, fetch_release_json, download_file as download_verified_file
 
 ROOT = Path(__file__).resolve().parents[2]
 OUTPUT_DIR = Path(os.environ.get("TW_AUTOPR_OUTPUT_DIR", ROOT / "ZH-TW")).resolve()
@@ -159,13 +159,11 @@ def download_file(url: str, target: Path) -> None:
 
 
 def fetch_json(url: str) -> list[dict]:
-    log(f"Fetching {url}")
-    request = urllib.request.Request(url, headers={"User-Agent": "TransSuperpre-AutoPR/1.0"})
-    with urllib.request.urlopen(request, timeout=300) as response:
-        data = json.loads(response.read().decode("utf-8"))
-    if not isinstance(data, list):
-        fail(f"Release JSON is not a list: {url}")
-    return data
+    try:
+        return fetch_release_json(url, user_agent="TransSuperpre-AutoPR/1.0", log_fn=log)
+    except DownloadError as exc:
+        fail(str(exc))
+
 
 def resolve_cards_cdb(work_dir: Path) -> Path:
     env_path = os.environ.get("TW_AUTOPR_CARDS_CDB")
