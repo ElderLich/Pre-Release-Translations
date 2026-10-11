@@ -7,13 +7,19 @@ building the `.ypk`, updating `test-release.json`, and writing dump files.
 
 ## Short version
 
-1. Run your local `AutoPR.py` helper.
-2. Choose `Refresh local raw2 from latest .ypk`.
+1. Open your local `AutoPR.py` helper; it launches the Standard/Rush window.
+2. On **Standard**, select your language and click **Fetch Standard Updates (MyCard)**.
 3. Translate cards in your local `<LANG>/raw2` folder.
-4. Choose `Upload raw2 workspace and push to GitHub`.
+4. Click **Upload Workspace & Push to GitHub**, or **Copy Workspace into Repository** to review locally first.
 5. GitHub Actions updates the repo and builds the package.
 6. Check the language folder on `main` for the generated `.ypk`, JSON, and
    version file.
+
+For Rush, use the **Rush · All Locales** tab and **Fetch Updates & Build All
+Locales**. After editing translations, use **Build All Locales**. These actions
+build locally, preserve existing translations, and show pending translations
+and artwork gaps per locale. See [Rush pre-release cards](RUSH_PRE_RELEASE.md)
+for source paths, reports and publication details.
 
 ## What each folder means
 
@@ -123,7 +129,10 @@ TRANSSUPERPRE_ROOT=C:\path\to\TransSuperpre
 SUPER_PRE_LOCAL_ROOT=C:\path\to\Super-Pre Translations
 ```
 
-## Daily translation process
+## Legacy numbered menu
+
+The steps below describe `AutoPR.py --menu`. Opening `AutoPR.py` without arguments
+uses the clickable window; the Standard tab provides the same operations.
 
 1. Run `AutoPR.py` and choose option `1`. It first pulls the latest `main`
    branch, then refreshes your local `raw2` files and local `Mappings.csv`.

@@ -3,7 +3,34 @@
 Rush has its own packages and workspaces. The existing standard Super-Pre files
 and translator helpers are unchanged.
 
-## Run locally
+## Update from the prerelease window
+
+Open any locale's `AutoPR.py` in `Super-Pre Translations`, then select **Rush ·
+All Locales**. The same window also keeps the standard MyCard, copy, upload/push
+and workspace pull actions on its **Standard** tab.
+
+- **Fetch Updates & Build All Locales** fast-forwards the configured
+  `ygopro-rush-duel` checkout from `origin/master`, then runs the existing Rush
+  sync for all eleven locales. A dirty checkout, another branch, or local-only
+  commits stop the fetch without stashing, resetting or discarding anything.
+- **Build All Locales** rebuilds using the current local source files after
+  translation, prompt or artwork edits. It can optionally skip web text sources.
+- Select a locale in the report table to open its workspace or `report.json`.
+  The **Shared Artworks** button opens the common artwork folder.
+
+Source and locale database paths are remembered in `.transsuperpre_local.json`
+beside the local language folders. Defaults are the sibling `ygopro-rush-duel`
+and `MDPro3_Data/Data/locales` folders. The window shows a live log and stays
+responsive; duplicate Rush builds are blocked across locale windows.
+Rush builds save locally and never commit or push. Review the generated outputs
+in GitHub Desktop and publish when ready. Existing translation gates, removals,
+Thai/English equality and exact inventory exclusions apply to both buttons.
+
+The GUI lives in `Tools/prerelease_gui.py`; installed `AutoPR.py` wrappers load
+it from the configured repository, so future GUI updates need no wrapper copy.
+`AutoPR.py --menu` retains the old numbered interface.
+
+## Run locally from a terminal
 
 From the TransSuperpre repository:
 

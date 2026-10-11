@@ -8,7 +8,9 @@ example:
     Super-Pre Translations/ES/AutoPR.py
     Super-Pre Translations/JP/AutoPR.py
 
-The heavy build runs in GitHub Actions. This wrapper can refresh the local raw2
+Opening this file launches the shared Standard/Rush window from the repository.
+Use --menu for the legacy numbered menu; existing command arguments still work.
+The standard build runs in GitHub Actions. This wrapper can refresh the local raw2
 workspace from the latest upstream package, then copy it into the TransSuperpre
 repository and push it to GitHub.
 """
@@ -173,7 +175,13 @@ def menu(lang: str) -> str:
 
 def main() -> int:
     lang = detect_lang()
-    if len(sys.argv) > 1:
+    if len(sys.argv) == 1 or sys.argv[1].lower() == "gui":
+        repo_root = resolve_repo_root()
+        sys.path.insert(0, str(repo_root / "Tools"))
+        from prerelease_gui import launch
+        launch(repo_root, LOCAL_ROOT, lang)
+        return 0
+    if sys.argv[1] != "--menu":
         command = sys.argv[1].lower()
         if command in {"refresh", "update"}:
             return run_tool("refresh", "--lang", lang, *sys.argv[2:])
@@ -212,7 +220,7 @@ def main() -> int:
 
 
 def pause_if_menu() -> None:
-    if len(sys.argv) == 1:
+    if len(sys.argv) > 1 and sys.argv[1] == "--menu":
         try:
             input("\nPress Enter to close...")
         except EOFError:

@@ -2,10 +2,11 @@
 # -*- coding: utf-8 -*-
 """Local helper for uploading translator workspace files to TransSuperpre.
 
-The GitHub Actions workflows own the real build now. This helper only copies the
+The GitHub Actions workflows own the standard build. This helper copies the
 local translator files into the repo Workspace folder, refreshes local raw2 files
 from the latest upstream package, and optionally commits and pushes Workspace
-changes. Placeholder mappings are shared in repo-level Shared/Mappings.csv.
+changes. Rush can fetch its source and build all locales locally. Placeholder
+mappings are shared in repo-level Shared/Mappings.csv.
 """
 
 from __future__ import annotations
@@ -305,6 +306,34 @@ def command_actions(args: argparse.Namespace) -> None:
             print(result.stderr.strip())
 
 
+def command_rush(args: argparse.Namespace) -> None:
+    from rush_local import build_lock, fetch_source, python_console
+
+    repo_root = Path(args.repo_root).expanduser().resolve()
+    source = args.source_root.expanduser().resolve()
+    translations = args.translations_root.expanduser().resolve()
+    if not (repo_root / "Tools/rush_prerelease.py").is_file():
+        fail(f"Rush builder not found in {repo_root}")
+    if not (source / "RD Patch.cdb").is_file():
+        fail(f"RD Patch.cdb not found in {source}")
+    if not (translations / "en-US/rush_cards.cdb").is_file():
+        fail(f"Expected the locale folder containing en-US/rush_cards.cdb: {translations}")
+    cmd = [python_console(), str(repo_root / "Tools/rush_prerelease.py"), "sync",
+           "--repo-root", str(repo_root), "--source-root", str(source),
+           "--translations-root", str(translations), "--lang", "all"]
+    if args.offline:
+        cmd.append("--offline")
+    try:
+        with build_lock(repo_root):
+            if args.fetch:
+                fetch_source(source, log)
+            log("Building all 11 Rush locales; existing translations and reviewed inventory exclusions are retained.")
+            run(cmd, repo_root)
+    except (RuntimeError, OSError, subprocess.TimeoutExpired) as error:
+        fail(str(error))
+    log("Rush packages built locally. Review and push with GitHub Desktop when ready.")
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--repo-root", default=str(DEFAULT_REPO_ROOT), help="Path to the TransSuperpre repo")
@@ -315,6 +344,13 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--gh-repo", default=DEFAULT_GH_REPO, help="GitHub repo for gh run list")
 
     subparsers = parser.add_subparsers(dest="command", required=True)
+
+    rush = subparsers.add_parser("rush", help="Build all Rush locales, optionally fetching upstream first")
+    rush.add_argument("--source-root", type=Path, required=True)
+    rush.add_argument("--translations-root", type=Path, required=True)
+    rush.add_argument("--fetch", action="store_true", help="Fast-forward the clean Rush source checkout first")
+    rush.add_argument("--offline", action="store_true", help="Skip web text sources when rebuilding")
+    rush.set_defaults(func=command_rush)
 
     upload = subparsers.add_parser("upload", help="Copy local files into <lang>/Workspace")
     upload.add_argument("--lang", choices=sorted(LANGS), required=True)
