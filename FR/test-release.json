@@ -1,55 +1,55 @@
 [
   {
-    "name": "无垢牵绊 神艺学徒",
-    "desc": "包含「无垢大艺术」、「神艺」怪兽之内任意种的怪兽2只以上\r\n这个卡名的②的效果1回合只能使用1次。\r\n①：对方不能把自己场上的连接状态的怪兽作为效果的对象。\r\n②：自己主要阶段才能发动。从卡组选1只「无垢大艺术」、「神艺」、「终刻」、「耀圣」怪兽，加入手卡或特殊召唤。那之后，自己场上的怪兽的种族是3种类以上的场合，可以把自己墓地·除外状态的1只怪兽特殊召唤。",
+    "name": "Ars Magna Artmage",
+    "desc": "2+ monstres (un monstre \"Ars Magna\" ou \"Artmage\" inclus)\nVotre adversaire ne peut pas cibler vos monstres liés avec des effets de carte. Durant votre Main Phase : vous pouvez ajouter à votre main ou Invoquer Spécialement 1 monstre \"Ars Magna\", \"Artmage\", \"DoomZ\" ou \"Notes Elfiques\" depuis votre Deck, puis si vous avez min. 3 Types de Monstre différents sur votre Terrain, vous pouvez Invoquer Spécialement 1 monstre depuis votre Cimetière ou bannissement. Vous ne pouvez utiliser cet effet de \"Ars Magna Artmage\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Lien] Elfe/Lumiére  [LINK-4] 2500/-  [↑][←][→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307045.jpg?version=19.7"
   },
   {
-    "name": "无垢血盟 终刻龙卫",
-    "desc": "包含「无垢大艺术」、「终刻」怪兽之内任意种的怪兽2只\r\n这个卡名的②③的效果1回合各能使用1次。\r\n①：连接状态的自己怪兽战斗破坏的怪兽不去墓地而除外。\r\n②：自己主要阶段才能发动。选自己场上1张卡，破坏或除外。那之后，可以让自己·对方墓地的卡合计最多2张回到卡组。\r\n③：把墓地的这张卡除外才能发动。从手卡把1只「终刻」怪兽特殊召唤。",
+    "name": "Ars Magna DoomZ",
+    "desc": "2 monstres (un monstre \"Ars Magna\" ou \"DoomZ\" inclus)\nLes monstres détruits au combat avec votre monstre lié sont bannis. Vous ne pouvez utiliser chacun des effets suivants de \"Ars Magna DoomZ\" qu'une fois par tour. Durant votre Main Phase : vous pouvez détruire ou bannir 1 carte que vous contrôlez, puis vous pouvez mélanger max. 2 cartes depuis les Cimetières dans le Deck. Vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 monstre \"DoomZ\" depuis votre main.",
     "overallString": "[Monstre|Effet|Lien] Dragon/Lumiére  [LINK-2] 1500/-  [←][↙]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307046.jpg?version=19.7"
   },
   {
-    "name": "无垢协奏 耀圣诗团",
-    "desc": "包含「无垢大艺术」、「耀圣」怪兽之内任意种的怪兽2只\r\n这个卡名的②③的效果1回合各能使用1次。\r\n①：自己场上的连接状态的怪兽的攻击力，上升场上的怪兽的种族种类×300。\r\n②：自己主要阶段才能发动。选自己场上1张卡，送去墓地或除外。那之后，可以让场上1只怪兽回到手卡。\r\n③：把墓地的这张卡除外才能发动。从手卡把1只「耀圣」怪兽特殊召唤。",
+    "name": "Ars Magna Notes Elfiques",
+    "desc": "2 monstres (un monstre \"Ars Magna\" ou \"Notes Elfiques\" inclus)\nVos monstres liés gagnent 300 ATK pour chaque Type de Monstre différent sur le Terrain. Vous ne pouvez utiliser chacun des effets suivants de \"Ars Magna Notes Elfiques\" qu'une fois par tour. Durant votre Main Phase : vous pouvez envoyer au Cimetière ou bannir 1 carte que vous contrôlez, puis vous pouvez renvoyer 1 monstre sur le Terrain à la main. Vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 monstre \"Notes Elfiques\" depuis votre main.",
     "overallString": "[Monstre|Effet|Lien] Magicien/Lumiére  [LINK-2] 1500/-  [→][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307047.jpg?version=19.7"
   },
   {
-    "name": "神幻学都 无垢大艺术学园",
-    "desc": "这个卡名在规则上也当作「神艺」卡使用。\r\n①：自己发动的「米底乌斯」怪兽的效果不会被无效化。\r\n②：自己墓地有「狱神」怪兽存在的场合，从自己墓地把1只融合·同调·超量·怪兽除外，宣言1个「无垢大艺术」连接怪兽的卡名才能发动（这个回合，不能为让这个卡名的这个效果的发动而宣言相同卡名）。宣言的1只怪兽从额外卡组特殊召唤。这个效果特殊召唤的怪兽不能作为连接素材。",
+    "name": "Acropole Académique des Apparitions Ésotériques Ars Magna",
+    "desc": "(Cette carte est toujours traitée comme carte \"Artmage\".)\nLes effets de vos monstres \"Medius\" activés ne peuvent pas être annulés. Si vous avez un monstre \"Mécène du Pouvoir\" dans votre Cimetière : vous pouvez bannir 1 Monstre Fusion, Synchro ou Xyz depuis votre Cimetière, et déclarez 1 nom de Carte Monstre Lien \"Ars Magna\" qui n'a pas été déclaré pour \"Acropole Académique des Apparitions Ésotériques Ars Magna\" ce tour ; Invoquez Spécialement 1 monstre déclaré depuis votre Extra Deck, mais il ne peut pas être utilisé comme Matériel Lien.",
     "overallString": "[Magie|Terrain]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307061.jpg?version=19.7"
   },
   {
-    "name": "终天狱神Ω比托利姆",
-    "desc": "Échelle Pendule = 11\n[ Effet Pendule ]\n①：从额外卡组有怪兽特殊召唤的场合才能发动。这张卡回到额外卡组。那之后，可以把包含自己场上的「狱神」怪兽的，自己·对方场上的怪兽作为融合素材，把1只融合怪兽融合召唤。\n----------------------------------------\n[ Effet de Monstre ]\n从额外卡组特殊召唤的攻击力3000以上的怪兽×3\n这张卡用融合召唤才能从额外卡组特殊召唤。\n①：这张卡只要在怪兽区域存在，不受「狱神」卡以外的卡的效果影响。\n②：对方把怪兽的效果发动时，若和那只怪兽相同种族的怪兽在对方场上有2只以上存在，从卡组上面把3张卡以里侧除外才能发动。那个发动无效并以里侧除外。\n③：自己准备阶段发动。这张卡在自己的灵摆区域放置。",
+    "name": "Vidolium Oméga le Mécène du Pouvoir de la Fin du Paradis",
+    "desc": "Échelle Pendule = 11\n[ Effet Pendule ]\nSi un ou plusieurs monstres sont Invoqués Spécialement depuis l'Extra Deck : vous pouvez renvoyer cette carte à l'Extra Deck, puis vous pouvez Invoquer par Fusion 1 Monstre Fusion depuis votre Extra Deck, en utilisant des monstres depuis au moins l'un des Terrains (un monstre \"Mécène du Pouvoir\" que vous contrôlez inclus).\n----------------------------------------\n[ Effet de Monstre ]\n3 monstres Invoqués Spécialement depuis l'Extra Deck avec min. 3000 ATK\nDoit d'abord être Invoquée par Fusion. Non affectée par des effets de carte (cartes \"Mécène du Pouvoir\" exclues). Lorsque votre adversaire active un effet de monstre tant qu'il contrôle min. 2 monstres du même Type que le monstre (Effet Rapide) : vous pouvez bannir (face verso) les 3 cartes du dessus de votre Deck ; annulez l'activation, et si vous le faites, bannissez face verso le monstre. Une fois par tour, durant votre Standby Phase : placez cette carte dans votre Zone Pendule.",
     "overallString": "[Monstre|Effet|Fusion|Pendule] Dragon/Ténébres  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
   {
-    "name": "狱神封门-共灭之剑-",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：从手卡丢弃1张「狱神」卡才能发动。从额外卡组把1只「狱神」灵摆怪兽在自己的灵摆区域放置。这个效果把融合怪兽放置的场合，可以再从卡组把1只「狱神」灵摆怪兽在自己的灵摆区域放置。\r\n②：自己场上有「狱神」怪兽存在的场合，把墓地的这张卡除外，以场上1只表侧表示怪兽为对象才能发动。那只怪兽的攻击力上升1500，这个回合不能攻击。",
+    "name": "Obturation du Portail du Mécène du Pouvoir -Épée de Destruction Mutuelle-",
+    "desc": "Défaussez 1 carte \"Mécène du Pouvoir\" ; placez 1 Monstre Pendule \"Mécène du Pouvoir\" depuis votre Extra Deck dans votre Zone Pendule, puis si c'est un Monstre Fusion, vous pouvez placer 1 Monstre Pendule \"Mécène du Pouvoir\" depuis votre Deck dans votre Zone Pendule. Si vous contrôlez un monstre \"Mécène du Pouvoir\" : vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 1 monstre face recto sur le Terrain ; il gagne 1500 ATK, et aussi, il ne peut pas attaquer ce tour. Vous ne pouvez utiliser chaque effet de \"Obturation du Portail du Mécène du Pouvoir -Épée de Destruction Mutuelle-\" qu'une fois par tour.",
     "overallString": "[Magie]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307060.jpg?version=19.7"
   },
   {
-    "name": "向无预幻世托付的约定",
-    "desc": "这个卡名在规则上也当作「狱神」卡使用。这个卡名的①②的效果1回合各能使用1次。\r\n①：从自己的手卡·场上（表侧表示）把1只「米底乌斯」怪兽除外才能发动。从额外卡组特殊召唤的场上的怪兽全部除外。那之后，可以从自己墓地把1只「神艺」怪兽特殊召唤。\r\n②：自己场上的怪兽的种族是3种类以上的场合，把墓地的这张卡除外才能发动。自己除外状态的1只「米底乌斯」怪兽特殊召唤。",
+    "name": "Théoréalisation de l'Accalmie Éphémère",
+    "desc": "(Cette carte est toujours traitée comme carte \"Mécène du Pouvoir\".)\nBannissez 1 monstre \"Medius\" depuis votre main ou Terrain face recto ; bannissez autant de monstres sur le Terrain que possible qui ont été Invoqués Spécialement depuis l'Extra Deck, puis vous pouvez Invoquer Spécialement 1 monstre \"Artmage\" depuis votre Cimetière. Si vous avez min. 3 Types de Monstre différents sur votre Terrain : vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 de vos monstres \"Medius\" bannis. Vous ne pouvez utiliser chaque effet de \"Théoréalisation de l'Accalmie Éphémère\" qu'une fois par tour.",
     "overallString": "[Piège]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307079.jpg?version=19.7"
   },
   {
-    "name": "灾祸的根绝者",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡在手卡存在，不能通常召唤的怪兽在对方场上（表侧表示）·墓地·除外状态有4只以上存在的场合，对方只把怪兽1只特殊召唤之际才能发动（自己场上没有怪兽存在的场合，这个发动和这个效果不会被无效化）。那次特殊召唤无效，那只怪兽破坏，这张卡特殊召唤。\r\n②：把场上的这张卡送去墓地才能发动。场上1只怪兽的攻击力变成一半。",
+    "name": "Éradicateur Hérétique",
+    "desc": "Lorsque votre adversaire va Invoquer Spécialement exactement 1 monstre, tant que cette carte est dans votre main et que votre adversaire a min. 4 monstres qui ne peuvent être ni Invoqués Normalement ni Posés Normalement dans son Terrain face recto, Cimetière et/ou bannissement (Effet Rapide) : vous pouvez annuler l'Invocation, et si vous le faites, détruisez le monstre, et si vous faites ça, Invoquez Spécialement cette carte (tant que vous ne contrôlez aucun monstre, cet effet et son activation ne peuvent pas être annulés). Vous pouvez envoyer cette carte depuis votre Terrain au Cimetière ; divisez par deux l'ATK d'1 monstre sur le Terrain. Vous ne pouvez utiliser chaque effet de \"Éradicateur Hérétique\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet] Guerrier/Terre  [★7] 2700/400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307021.jpg?version=19.7"
   },
   {
-    "name": "反击魔法「攻击无力化」",
-    "desc": "①：自己·对方的战斗阶段，可以从以下效果选择1个发动。\r\n●对方场上的怪兽的数量比自己场上多的场合，对方怪兽的攻击宣言时才能发动。那次攻击无效。那之后，战斗阶段结束。\r\n●对方把怪兽的效果发动时才能发动。那个发动无效并破坏。\r\n②：自己抽卡阶段通常抽卡时，把墓地的这张卡除外才能发动。从手卡把1只怪兽特殊召唤。",
+    "name": "Contre-Magie \"Annulation d'Attaque\"",
+    "desc": "Durant la Battle Phase : activez 1 de ces effets ;\n● Lorsqu'un monstre de l'adversaire déclare une attaque tant qu'il contrôle plus de monstres que vous : annulez l'attaque, puis terminez la Battle Phase.\n● Lorsque votre adversaire active un effet de monstre : annulez l'effet, et si vous le faites, détruisez le monstre.\nLorsque vous piochez pour votre pioche normale durant votre Draw Phase : vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 monstre depuis votre main.",
     "overallString": "[Magie|Jeu-Rapide]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200298.jpg?version=19.7"
   },
