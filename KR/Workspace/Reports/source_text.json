@@ -1,0 +1,7 @@
+{
+  "language": "kr",
+  "mode": "manual",
+  "automatic_fetch": false,
+  "reason": "Korean card text is translator-managed; no web sources are queried.",
+  "matches": {}
+}
