@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - ".github/scripts/shared_mappings.py"
+      - ".github/scripts/card_text_autofill.py"
       - ".github/scripts/shared_downloads.py"
       - ".github/scripts/tcg_autopr.py"
       - ".github/workflows/fr-workspace-sync.yml"

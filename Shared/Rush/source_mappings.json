@@ -1,0 +1,6 @@
+{
+  "version": 1,
+  "cards": {},
+  "ocg_slugs": {"SJMP": "sj", "WJMP": "wj"},
+  "notes": "Card identities come from upstream sets.md. Add only reviewed card ID overrides with set_code and evidence. Missing or conflicting identities stay pending; never guess from card names."
+}

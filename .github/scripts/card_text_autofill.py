@@ -8,6 +8,9 @@ import html
 import json
 import re
 import sqlite3
+from contextlib import closing
+import tempfile
+import unicodedata
 import urllib.parse
 import urllib.request
 import zipfile
@@ -26,12 +29,16 @@ USER_AGENT = "TransSuperpre-CardTextAutofill/1.0"
 EN_PEND_SEP = "----------------------------------------"
 JP_PEND_SCALE_RE = re.compile(r"^\s*(\d+)\s*$")
 CJK_RE = re.compile(r"[\u3040-\u30ff\u3400-\u9fff\uff00-\uffef]")
-TITLE_DISAMBIGUATOR_RE = re.compile(r"\s+\((?:card|anime|manga|video game|character|archetype|series)\)$", re.IGNORECASE)
+TITLE_DISAMBIGUATOR_RE = re.compile(r"\s+\((?:card|Rush Duel|anime|manga|video game|character|archetype|series)\)$", re.IGNORECASE)
 YUGIPEDIA_LANG_FIELDS = {
     "en": ("", "text", "pendulum_effect"),
+    "fr": ("fr_name", "fr_text", "fr_pendulum_effect"),
+    "kr": ("ko_name", "ko_text", "ko_pendulum_effect"),
 }
 YUGIPEDIA_PEND_LABELS = {
     "en": ("Pendulum Scale", "Pendulum Effect", "Monster Effect"),
+    "fr": ("Échelle Pendule", "Effet Pendule", "Effet de Monstre"),
+    "kr": ("펜듈럼 스케일", "펜듈럼 효과", "몬스터 효과"),
 }
 
 EXTRA_SET_CODES_BY_ID = {
@@ -85,10 +92,17 @@ def log_default(message: str) -> None:
     print(message, flush=True)
 
 
+REQUEST_CACHE: dict[str, str] = {}
+
+
 def request_url(url: str) -> str:
+    if url in REQUEST_CACHE:
+        return REQUEST_CACHE[url]
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
-    with urllib.request.urlopen(request, timeout=120) as response:
-        return response.read().decode("utf-8", errors="replace")
+    with urllib.request.urlopen(request, timeout=30) as response:
+        text = response.read().decode("utf-8", errors="replace")
+        REQUEST_CACHE[url] = text
+        return text
 
 
 def chunked(values: list[str], size: int) -> list[list[str]]:
@@ -143,7 +157,7 @@ def set_code_for_entry(entry: PackEntry, lang: str) -> str | None:
     number = entry.card_id % 1000
     if number <= 0:
         return None
-    if lang == "en":
+    if lang in {"en", "fr", "kr"}:
         prefix = entry.pack_code if sep else f"{base}-JP"
     elif lang == "jp":
         prefix = f"{base}-JP"
@@ -187,8 +201,9 @@ def clean_wiki_text(value: str) -> str:
     text = re.sub(r"\[\[([^\]]+)\]\]", r"\1", text)
     text = re.sub(r"<ref[^>]*>.*?</ref>", "", text, flags=re.IGNORECASE | re.DOTALL)
     text = re.sub(r"<[^>]+>", "", text)
-    text = re.sub(r"\{\{([^{}|]+)\|([^{}]+)\}\}", lambda match: match.group(2).split("|")[-1], text)
-    text = re.sub(r"\{\{[^{}]+\}\}", "", text)
+    # Unknown templates may contain effect text; leave them visible so the import
+    # can reject the incomplete record instead of silently dropping mechanics.
+    text = re.sub(r"\x27{2,5}", "", text)
     text = html.unescape(text)
     return normalize_lines(text)
 
@@ -216,13 +231,45 @@ def parse_card_table_params(wikitext: str) -> dict[str, str]:
     return params
 
 
-def format_yugipedia_card(title: str, params: dict[str, str], lang: str) -> CardText | None:
+def format_yugipedia_card(title: str, params: dict[str, str], lang: str, rush: bool = False) -> CardText | None:
     name_key, text_key, pendulum_key = YUGIPEDIA_LANG_FIELDS[lang]
-    name = clean_yugipedia_title(title) if lang == "en" else clean_wiki_text(params.get(name_key, ""))
+    name = (clean_wiki_text(params.get("name", "")) or clean_yugipedia_title(title)) if lang == "en" else clean_wiki_text(params.get(name_key, ""))
     if not name:
         return None
     text = clean_wiki_text(params.get(text_key, ""))
+    if rush:
+        prefix = {"en": "", "fr": "fr_", "kr": "ko_"}[lang]
+        labels = {"en": ("REQUIREMENT", "EFFECT", "CONTINUOUS EFFECT", "MULTI-CHOICE EFFECT"),
+                  "fr": ("CONDITION", "EFFET", "EFFET CONTINU", "EFFET MULTI-CHOIX"),
+                  "kr": ("조건", "효과", "지속 효과", "선택 효과")}[lang]
+        output = []
+        maximum = clean_wiki_text(params.get("maximum_atk", ""))
+        if maximum:
+            output.append("Maximum ATK " + maximum)
+        for field in ("materials", "condition"):
+            # Never combine a translated effect with English-only summoning costs.
+            if params.get(field, "").strip() and not params.get(prefix + field, "").strip():
+                return None
+            value = clean_wiki_text(params.get(prefix + field, ""))
+            if value:
+                output.append(value)
+        requirement = clean_wiki_text(params.get(prefix + "requirement", ""))
+        if params.get("requirement", "").strip() and not requirement:
+            return None
+        kind = params.get("effect_types", "").lower()
+        if requirement:
+            output.extend(("【" + labels[0] + "】", requirement))
+        if requirement or "continuous" in kind or "multi-choice" in kind:
+            label = labels[2] if "continuous" in kind else labels[3] if "multi-choice" in kind else labels[1]
+            output.append("【" + label + "】")
+        output.append(text)
+        desc = normalize_rush_layout("\n".join(output), lang)
+        if not text or any(token in desc + name for token in ("{{", "}}")):
+            return None
+        return CardText(name=name, desc=desc, source=f"Yugipedia:{title}")
     pendulum = clean_wiki_text(params.get(pendulum_key, ""))
+    if params.get("pendulum_effect", "").strip() and not pendulum:
+        return None
     scale = clean_wiki_text(params.get("pendulum_scale", ""))
     if pendulum:
         scale_label, pendulum_label, monster_label = YUGIPEDIA_PEND_LABELS[lang]
@@ -238,47 +285,87 @@ def format_yugipedia_card(title: str, params: dict[str, str], lang: str) -> Card
         desc = normalize_lines("\n".join(output))
     else:
         desc = text
-    if not desc:
+    if not desc or any(token in desc + name for token in ("{{", "}}")):
         return None
     return CardText(name=name, desc=desc, source=f"Yugipedia:{title}")
 
 
-def fetch_yugipedia_cards(set_codes: list[str], log: LogFn, lang: str = "en") -> dict[str, CardText]:
+RUSH_HEADER_LABELS = {
+    "REQUIREMENT", "EFFECT", "CONTINUOUS EFFECT", "MULTI-CHOICE EFFECT", "CONTINUOUS",
+    "CONDITION", "EFFET", "EFFET CONTINU", "EFFET MULTI-CHOIX", "EFFET À CHOIX MULTIPLES",
+    "BEDINGUNG", "EFFEKT", "DAUEREFFEKT", "PERMANENTER EFFEKT", "MEHRFACHAUSWAHL-EFFEKT",
+    "REQUISITO", "EFFETTO", "EFFETTO CONTINUO", "EFFETTO A SCELTA", "EFFETTO SCELTA MULTIPLA",
+    "EFEITO", "EFEITO CONTÍNUO", "EFEITO DE MÚLTIPLA ESCOLHA",
+    "EFECTO", "EFECTO CONTINUO", "EFECTO DE OPCIÓN MÚLTIPLE", "EFECTO DE ELECCIÓN MÚLTIPLE",
+    "条件", "効果", "永続効果", "選択効果", "조건", "효과", "지속 효과", "선택 효과",
+    "效果", "永续效果", "选择效果", "條件", "永續效果", "選擇效果",
+}
+RUSH_HEADER_KEYS = {" ".join(unicodedata.normalize("NFKC", label).split()).casefold()
+                    for label in RUSH_HEADER_LABELS}
+BRACKET_MARKER = r"(?:\[[^\]\n]{1,40}\]|【[^】\n]{1,40}】|［[^］\n]{1,40}］)"
+
+
+
+def normalize_rush_layout(value: str, lang: str = "en") -> str:
+    """Match the source CDB builder: recognized headers/options get hard rows."""
+    value = (value or "").replace("\r\n", "\n").replace("\r", "\n")
+    def section(match):
+        label = " ".join(match.group(0)[1:-1].split())
+        key = " ".join(unicodedata.normalize("NFKC", label).split()).casefold()
+        if key not in RUSH_HEADER_KEYS:
+            return match.group(0)
+        heading = "【" + label + "】" if lang in {"jp", "ja", "kr", "ko", "zh-cn", "zh-tw"} else "[" + label + "]"
+        return "\n" + heading + "\n"
+    value = re.sub(BRACKET_MARKER, section, value)
+    value = re.sub(r"[ \t\u3000]*([●•◆▪►])", r"\n\1", value)
+    return "\n".join(line.strip() for line in value.split("\n") if line.strip())
+
+
+def encode_rush_description(value: str, lang: str = "en") -> str:
+    return normalize_rush_layout(value, lang).replace("\n", "\t\n")
+
+
+def fetch_yugipedia_cards(set_codes: list[str], log: LogFn, lang: str = "en", rush: bool = False,
+                          expected_codes: dict[str, str] | None = None) -> dict[str, CardText]:
+    """Resolve every alias, then verify printed set numbers on the target card page."""
     cards: dict[str, CardText] = {}
     if lang not in YUGIPEDIA_LANG_FIELDS:
         return cards
     unique_codes = sorted({code for code in set_codes if code})
     for batch in chunked(unique_codes, 40):
-        query = {
-            "action": "query",
-            "titles": "|".join(batch),
-            "redirects": "1",
-            "prop": "revisions",
-            "rvprop": "content",
-            "format": "json",
-            "formatversion": "2",
-        }
-        url = YUGIPEDIA_API + "?" + urllib.parse.urlencode(query)
+        query = {"action": "query", "titles": "|".join(batch), "redirects": "1",
+                 "prop": "revisions", "rvprop": "content", "format": "json", "formatversion": "2"}
         try:
-            data = json.loads(request_url(url))
+            data = json.loads(request_url(YUGIPEDIA_API + "?" + urllib.parse.urlencode(query)))
+            if "error" in data:
+                raise ValueError(data["error"].get("info", str(data["error"])))
         except Exception as exc:
             log(f"[SourceText] Yugipedia batch failed ({batch[0]}..): {exc}")
             continue
-
-        redirects = {item.get("to"): item.get("from") for item in data.get("query", {}).get("redirects", [])}
-        for page in data.get("query", {}).get("pages", []):
-            if page.get("missing"):
-                continue
-            title = page.get("title", "")
+        result = data.get("query", {})
+        aliases = {item["from"]: item["to"] for field in ("normalized", "redirects")
+                   for item in result.get(field, [])}
+        pages = {page.get("title"): page for page in result.get("pages", [])}
+        for requested in batch:
+            title, visited = requested, set()
+            while title in aliases and title not in visited:
+                visited.add(title)
+                title = aliases[title]
+            page = pages.get(title, {})
             revisions = page.get("revisions") or []
-            if not title or not revisions:
+            if page.get("missing") or not revisions:
                 continue
             params = parse_card_table_params(revisions[0].get("content", ""))
-            card = format_yugipedia_card(title, params, lang)
-            if not card:
+            printed_codes = {line.split(";", 1)[0].strip().upper()
+                             for key, value in params.items() if key.endswith("_sets")
+                             for line in value.splitlines()}
+            expected = (expected_codes or {}).get(requested, requested)
+            if expected.upper() not in printed_codes:
+                log(f"[SourceText] Unverified set code {requested} on {title}; skipped")
                 continue
-            source_code = redirects.get(title)
-            cards[source_code or title] = CardText(name=card.name, desc=card.desc, source=f"Yugipedia:{source_code or title}")
+            card = format_yugipedia_card(title, params, lang, rush=rush)
+            if card:
+                cards[requested] = CardText(card.name, card.desc, f"https://yugipedia.com/wiki/{urllib.parse.quote(title.replace(' ', '_'))}")
     return cards
 
 
@@ -297,6 +384,8 @@ class OcgCardListParser(HTMLParser):
         self.pending_scale: str | None = None
         self.current_scale: str | None = None
         self.current_pendulum: str | None = None
+        self.current_maximum: str | None = None
+        self.expect_maximum = False
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         attrs_dict = {key: value or "" for key, value in attrs}
@@ -311,10 +400,12 @@ class OcgCardListParser(HTMLParser):
                 self.current_name = ""
             elif "card-text" in self.td_class or "card-p-scale" in self.td_class:
                 pass
-        elif self.in_td and self.is_name_class(self.td_class) and tag == "div" and attrs_dict.get("class") == "card-ruby":
+        elif self.in_td and self.is_name_class(self.td_class) and attrs_dict.get("class") in {"card-ruby", "limit-icon", "new-icon"}:
             self.skip_depth += 1
-        elif self.skip_depth:
+        elif self.skip_depth and tag not in {"br", "img", "hr", "input"}:
             self.skip_depth += 1
+        elif self.in_td and tag == "br":
+            self.capture_text.append("\n")
 
     def handle_endtag(self, tag: str) -> None:
         if self.skip_depth:
@@ -331,12 +422,19 @@ class OcgCardListParser(HTMLParser):
             self.current_pendulum = None
             self.pending_scale = None
             self.current_scale = None
+            self.current_maximum = None
+            self.expect_maximum = False
+        elif "list-head" in self.td_class:
+            self.expect_maximum = text == "MAXIMUM ATK"
         elif self.is_name_class(self.td_class):
-            self.current_name = re.sub(r"(?:NEW|UP)\s*$", "", text).strip()
+            self.current_name = re.sub(r"(?:NEW|UP|（(?:イラスト[０-９0-9]+種|新イラスト)）)\s*$", "", text).strip()
         elif "card-p-scale" in self.td_class:
             self.pending_scale = text
         elif "card-text" in self.td_class and self.current_code and self.current_name:
-            if self.pending_scale or self.current_pendulum or self.td_colspan == "9":
+            if self.expect_maximum and self.td_colspan == "8":
+                self.current_maximum = text
+                self.expect_maximum = False
+            elif self.pending_scale or self.current_pendulum or self.td_colspan == "9":
                 self.finish_text_cell(text)
 
         self.in_td = False
@@ -374,13 +472,15 @@ class OcgCardListParser(HTMLParser):
             self.current_pendulum = None
             self.pending_scale = None
             self.current_scale = None
+        if self.current_maximum:
+            desc = "Maximum ATK " + self.current_maximum + "\n" + desc
         self.cards[self.current_code] = CardText(name=self.current_name, desc=normalize_lines(desc), source=f"ocg-card:{self.current_code}")
 
 
-def fetch_ocg_cards(slugs: list[str], log: LogFn) -> dict[str, CardText]:
+def fetch_ocg_cards(slugs: list[str], log: LogFn, rush: bool = False) -> dict[str, CardText]:
     cards: dict[str, CardText] = {}
     for slug in sorted({item for item in slugs if item}):
-        url = OCG_LIST_URL.format(slug=urllib.parse.quote(slug.lower()))
+        url = ("https://ocg-card.com/list_r/{slug}/" if rush else OCG_LIST_URL).format(slug=urllib.parse.quote(slug.lower(), safe=""))
         try:
             page = request_url(url)
         except Exception as exc:
@@ -389,7 +489,8 @@ def fetch_ocg_cards(slugs: list[str], log: LogFn) -> dict[str, CardText]:
         parser = OcgCardListParser()
         parser.feed(page)
         if parser.cards:
-            cards.update(parser.cards)
+            for code, card in parser.cards.items():
+                cards[code] = CardText(card.name, normalize_rush_layout(card.desc, "jp") if rush else card.desc, url)
             log(f"[SourceText] OCG {slug}: loaded={len(parser.cards)}")
         else:
             log(f"[SourceText] OCG {slug}: no card rows found")
@@ -404,47 +505,65 @@ def current_cdb_names(cdb_path: Path) -> dict[int, str]:
         conn.close()
 
 
-def fetch_yugipedia_by_existing_titles(names_by_id: dict[int, str], missing_ids: list[int], lang: str, log: LogFn) -> dict[int, CardText]:
-    title_to_id = {
-        name: card_id
-        for card_id in missing_ids
-        for name in [names_by_id.get(card_id, "").strip()]
-        if name and not CJK_RE.search(name)
-    }
+def fetch_yugipedia_by_existing_titles(names_by_id: dict[int, str], missing_ids: list[int], lang: str,
+                                       log: LogFn, id_to_code: dict[int, str]) -> dict[int, CardText]:
+    # A page may list its printed code before a redirect for that code exists.
+    # Keep the old title fallback, but verify the exact code and reject duplicate
+    # name candidates instead of silently selecting whichever row was last.
+    grouped = {}
+    for card_id in missing_ids:
+        name = names_by_id.get(card_id, "").strip()
+        if name and not CJK_RE.search(name):
+            grouped.setdefault(name, []).append(card_id)
+    title_to_id = {name: ids[0] for name, ids in grouped.items() if len(ids) == 1}
     if not title_to_id:
         return {}
-    cards = fetch_yugipedia_cards(sorted(title_to_id), log, lang=lang)
-    output: dict[int, CardText] = {}
-    for title, card_id in title_to_id.items():
-        card = cards.get(title)
-        if card:
-            output[card_id] = card
-    return output
+    expected = {title: id_to_code[card_id] for title, card_id in title_to_id.items()}
+    cards = fetch_yugipedia_cards(sorted(title_to_id), log, lang=lang, expected_codes=expected)
+    return {card_id: cards[title] for title, card_id in title_to_id.items() if title in cards}
 
 
-def update_cdb_texts(cdb_path: Path, cards_by_id: dict[int, CardText], log: LogFn) -> int:
+def needs_source_text(current: str, original: str, lang: str) -> bool:
+    if not current.strip() or current == original:
+        return True
+    # Japanese legitimately contains Han characters. Only source-identical JP
+    # fields are unreviewed; a custom Japanese translation must survive imports.
+    return lang != "jp" and bool(re.search(r"[\u3400-\u9fff]", current))
+
+
+def update_cdb_texts(cdb_path: Path, cards_by_id: dict[int, CardText], log: LogFn,
+                     original: dict[int, tuple[str, str]] | None = None, lang: str = "en") -> int:
     if not cards_by_id:
         return 0
     conn = sqlite3.connect(str(cdb_path))
     changed = 0
     try:
         for card_id, card in cards_by_id.items():
-            if not card.name or not card.desc:
-                continue
             row = conn.execute("SELECT name, desc FROM texts WHERE id=?", (card_id,)).fetchone()
             if not row:
                 continue
-            if row[0] == card.name and row[1] == card.desc:
-                continue
-            conn.execute("UPDATE texts SET name=?, desc=? WHERE id=?", (card.name, card.desc, card_id))
-            changed += 1
+            raw = (original or {}).get(card_id, ("", ""))
+            result = tuple(new if new and needs_source_text(old or "", raw[i] or "", lang) else old
+                           for i, (old, new) in enumerate(zip(row, (card.name, card.desc))))
+            if tuple(row) != result:
+                conn.execute("UPDATE texts SET name=?, desc=? WHERE id=?", (*result, card_id))
+                changed += 1
         conn.commit()
-        if changed:
-            conn.execute("VACUUM")
     finally:
         conn.close()
-    log(f"[SourceText] Updated CDB rows={changed}")
+    log(f"[SourceText] Updated CDB rows={changed}; translator edits preserved")
     return changed
+
+
+def original_texts_from_ypk(ypk_path: Path) -> dict[int, tuple[str, str]]:
+    with zipfile.ZipFile(ypk_path) as archive, tempfile.TemporaryDirectory() as directory:
+        names = [name for name in archive.namelist() if Path(name).name == "test-release.cdb"]
+        if len(names) != 1:
+            raise ValueError("Expected exactly one test-release.cdb in upstream package")
+        path = Path(directory) / "cards.cdb"
+        path.write_bytes(archive.read(names[0]))
+        with closing(sqlite3.connect(path)) as conn:
+            return {int(row[0]): tuple(row[1:]) for row in conn.execute("SELECT id,name,desc FROM texts")}
 
 
 def build_id_to_set_code(entries: dict[int, PackEntry], ids: set[int], lang: str) -> dict[int, str]:
@@ -464,14 +583,18 @@ def build_id_to_set_code(entries: dict[int, PackEntry], ids: set[int], lang: str
 
 def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, log_fn: LogFn | None = None) -> int:
     log = log_fn or log_default
-    if lang not in {"en", "jp"}:
+    if lang not in {"en", "fr", "jp"}:
         return 0
     entries = load_pack_entries_from_ypk(ypk_path)
     if not entries:
         log(f"[SourceText] No pack/*.ydk entries found in {ypk_path}")
         return 0
     names_by_id = current_cdb_names(cdb_path)
-    ids = set(names_by_id)
+    original = original_texts_from_ypk(ypk_path)
+    with closing(sqlite3.connect(cdb_path)) as conn:
+        ids = {int(card_id) for card_id, name, desc in conn.execute("SELECT id,name,desc FROM texts")
+               if any(needs_source_text(value or "", raw or "", lang)
+                      for value, raw in zip((name, desc), original.get(int(card_id), ("", ""))))}
     id_to_code = build_id_to_set_code(entries, ids, lang)
     if not id_to_code:
         log("[SourceText] No set-code candidates matched the CDB")
@@ -485,7 +608,7 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
             if card:
                 cards_by_id[card_id] = card
         missing_ids = [card_id for card_id in id_to_code if card_id not in cards_by_id]
-        cards_by_id.update(fetch_yugipedia_by_existing_titles(names_by_id, missing_ids, lang, log))
+        cards_by_id.update(fetch_yugipedia_by_existing_titles(names_by_id, missing_ids, lang, log, id_to_code))
     else:
         slugs = []
         for card_id in ids:
@@ -503,4 +626,11 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
 
     missing = len(id_to_code) - len(cards_by_id)
     log(f"[SourceText] candidates={len(id_to_code)}, matched={len(cards_by_id)}, missing={missing}")
-    return update_cdb_texts(cdb_path, cards_by_id, log)
+    report = {"language": lang, "candidates": len(id_to_code), "matched": len(cards_by_id),
+              "unmatched_ids": sorted(ids - cards_by_id.keys()),
+              "matches": {str(key): {"set_code": id_to_code[key], "source": card.source}
+                          for key, card in sorted(cards_by_id.items())}}
+    report_path = cdb_path.parent / "Reports/source_text.json"
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return update_cdb_texts(cdb_path, cards_by_id, log, original, lang)

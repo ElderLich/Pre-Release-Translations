@@ -8,6 +8,7 @@ on:
     paths:
       - ".github/scripts/card_text_autofill.py"
       - ".github/scripts/shared_mappings.py"
+      - ".github/scripts/card_text_autofill.py"
       - ".github/scripts/shared_downloads.py"
       - ".github/scripts/ocg_autopr.py"
       - ".github/workflows/jp-workspace-sync.yml"

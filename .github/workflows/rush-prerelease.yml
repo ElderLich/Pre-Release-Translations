@@ -6,6 +6,9 @@ on:
     branches: [main]
     paths:
       - "Tools/rush_prerelease.py"
+      - "Tools/rush_source_text.py"
+      - ".github/scripts/card_text_autofill.py"
+      - "Shared/Rush/source_mappings.json"
       - "Tools/PromptPatcher.py"
       - "Shared/Mappings.csv"
       - ".github/scripts/shared_mappings.py"
@@ -66,7 +69,7 @@ jobs:
             fi
             git commit -m "Update Rush pre-release cards in all locales"
             if git push origin "HEAD:$branch"; then
-              if [ "$build_status" -ne 0 ]; then echo "Translator workspaces/reports saved; Rush packages remain at the last complete release."; fi
+              if [ "$build_status" -ne 0 ]; then echo "Translator workspaces/reports saved; Untranslated additions remain pending; retired cards are removed from last-good packages."; fi
               exit "$build_status"
             fi
             echo "Branch changed while building; retrying from its latest contents ($attempt/5)."

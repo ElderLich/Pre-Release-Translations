@@ -62,10 +62,66 @@ New untranslated cards stay in every workspace and appear in `report.json`.
 Changed source descriptions/prompts require review when the corresponding
 translated fields have not changed since the last successful publication.
 Completing one locale review remains recorded while other locales are pending;
-an unrelated prompt change does not approve a changed effect description. The entire selected release batch fails before changing any YPK,
-JSON, or version file until all required translations are ready. The GitHub
+an unrelated prompt change does not approve a changed effect description. New or
+changed card translations are held back across the selected release batch until
+all required locales are ready. If upstream also retired cards, those IDs are
+immediately pruned from every last-good package/JSON and the versions advance;
+retained cards keep their previously published text and scripts. Untranslated
+new rows never enter those retirement-only packages. The GitHub
 workflow still saves the workspaces/reports from that failed run so translators
-can fix them. No untranslated placeholder package is published.
+can fix them. No untranslated placeholder package is published. Pure additions with translation
+gaps leave all previous release bytes untouched.
+
+## Automatic names and card effects
+
+The normal `sync` command now fetches missing names/effects automatically for
+English, French, Japanese and Korean before applying the existing PromptPatcher
+and mappings. Pass `--offline` to use only the local workspaces and translated
+seed databases. Existing translator edits take precedence; fetching never
+adds card IDs beyond `RD Patch.cdb` or rewrites gameplay columns.
+
+- English and French use [Yugipedia's MediaWiki API](https://yugipedia.com/api.php).
+  French reads `fr_name`, `fr_text`, `fr_requirement`, `fr_materials` and
+  `fr_condition`, not English fallbacks. Korean can similarly use published
+  `ko_*` fields where available.
+- Japanese uses [ocg-card.com's Rush lists](https://ocg-card.com/list_r/).
+  Examples are [Limited Pack Remastered Edition](https://ocg-card.com/list_r/lp01/)
+  and [Cross Art Collection](https://ocg-card.com/list_r/ca01/). This is a
+  community card-list site, not a Konami service. The fetcher preserves
+  fusion materials, Maximum ATK, conditions and continuous/choice effects.
+- Simulator IDs are matched using the explicit ID ranges in upstream `sets.md`.
+  For example `120309XXX` maps to `RD/CA01-JPxxx`. Yugipedia redirects must land
+  on a page that lists that exact printed set code; Japanese rows must carry
+  the same code. Ambiguous and missing identities stay pending.
+- For exceptions, add an entry to `Shared/Rush/source_mappings.json`:
+  `"120309029": {"set_code": "RD/CA01-JP029", "evidence": "verified source URL"}`
+  inside `cards`. A direct API lookup uses `action=query`, `titles=RD/CA01-JP029`,
+  `redirects=1`, `prop=revisions`, `rvprop=content`, `format=json` and
+  `formatversion=2` at the linked Yugipedia endpoint. `ocg_slugs` maps unusual set prefixes to site page paths.
+  No identity is inferred from a similar card name or artwork.
+
+`<LANG>/Rush/source_text.json` records fetched field sources and unresolved
+matches. `report.json` remains the publication gate. Required missing French or
+Korean text blocks publication until a real translation is supplied. The daily
+dispatcher retries pending reports even if the Rush upstream revision has not
+changed; completed unchanged packages still skip their build.
+
+A live check on 2026-10-11 found complete source text for all 90 playable patch
+cards in English and Japanese, only 5 in French and 12 in Korean. The current
+translated seed databases already fill all 91 rows, including the simulator
+helper, so this source limitation does not remove current translations. It
+matters for future new cards: an API cannot supply a translation that its site
+has not published. Your manual translations and the published locale seed
+CDBs remain valid inputs.
+
+All Rush output descriptions, including preserved workspace translations, use separate `[REQUIREMENT]` / `[EFFECT]` lines for Latin languages, localized
+equivalents and one line per bullet option. Japanese, Korean and Chinese retain
+native `【】` headings. Compact Latin brackets avoid the full-width glyph padding. Summoning requirements,
+Maximum ATK, quoted `[L]`/`[R]` names and effect calculations remain intact.
+Formatting changes preserve wording and are committed to workspaces only once
+source-review checks pass; formatting alone cannot approve a changed effect.
+Unknown wiki templates are reported as unavailable rather than silently losing
+part of an effect.
 
 ## Shared artwork
 
@@ -93,7 +149,7 @@ reviewed exclusions are in `Shared/Rush/config.json`. New exclusions must be
 deliberate; the tool never removes a card just because its name, alias, or
 artwork matches another card.
 
-When a card leaves `RD Patch.cdb`, the next successful run removes it from every
+When a card leaves `RD Patch.cdb`, the next reconciliation removes it from every
 workspace, generated CDB/JSON, and YPK. Packages are rebuilt from scratch, so
 unused card scripts and artwork cannot linger inside old archives. A script
 still needed by another active card remains as a dependency. An empty valid
@@ -109,7 +165,7 @@ client and is not overridden. Missing required effect scripts stop the build.
 The dedicated Rush workflow builds all locales and commits outputs locally on
 the Actions runner before its existing authorized workflow push. The daily
 dispatcher checks the last successful source and translations revisions plus
-the shared artwork, config, prompt patcher, mappings, tool, and workspace fingerprint before starting a
+the shared artwork, config, prompt patcher, mappings, tool, source importer/mappings, and workspace fingerprint before starting a
 Rush build. An unchanged run has identical CDB, ZIP, JSON, and version bytes.
 
 The game consumes these stable paths on the repository's `main` branch:
@@ -126,7 +182,8 @@ does not make unpushed files available online.
 ## Checks
 
 ```powershell
-python -m unittest discover -s Tools/tests -p test_rush_prerelease.py -v
+python -m unittest discover -s Tools/tests -v
+python -m unittest discover -s .github/scripts -p "test_*.py" -v
 ```
 
 Tests cover source removals across locales, empty patches, exact exclusions,

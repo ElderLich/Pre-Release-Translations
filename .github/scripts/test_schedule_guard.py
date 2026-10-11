@@ -59,6 +59,20 @@ class ScheduleGuardTests(unittest.TestCase):
             self.assertIn("every locale", reason)
             remote.assert_not_called()
 
+    def test_pending_rush_translation_retries_even_with_unchanged_receipt(self):
+        with tempfile.TemporaryDirectory() as directory, in_directory(directory):
+            receipt = Path("Shared/Rush/source.json")
+            receipt.parent.mkdir(parents=True)
+            receipt.write_text(json.dumps({"built_locales": sorted(guard.RUSH_LOCALES)}), encoding="utf-8")
+            report = Path("FR/Rush/report.json")
+            report.parent.mkdir(parents=True)
+            report.write_text(json.dumps({"pending_translations": [{"id": 123, "fields": ["desc"]}]}), encoding="utf-8")
+            with patch.object(guard.subprocess, "check_output") as remote:
+                needed, reason = guard.rush_needs_update()
+            self.assertTrue(needed)
+            self.assertIn("retrying daily sources", reason)
+            remote.assert_not_called()
+
     def test_ten_hour_old_release_skips_schedule(self):
         self.assertFalse(guard.cooldown_decision("schedule", 100_000, 136_000)[0])
 

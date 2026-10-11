@@ -89,6 +89,10 @@ def rush_needs_update() -> tuple[bool, str]:
         state = json.loads(receipt.read_text(encoding="utf-8"))
         if set(state.get("built_locales", [])) != RUSH_LOCALES:
             return True, "Rush receipt does not cover every locale."
+        for locale in RUSH_LOCALES:
+            report_path = Path(locale) / "Rush/report.json"
+            if report_path.is_file() and json.loads(report_path.read_text(encoding="utf-8")).get("pending_translations"):
+                return True, f"Rush {locale} still has pending translations; retrying daily sources."
         for remote, ref, field in ((RUSH_SOURCE, "master", "source_revision"),
                                    (RUSH_TRANSLATIONS, "main", "translations_revision")):
             output = subprocess.check_output(["git", "ls-remote", remote, f"refs/heads/{ref}"],

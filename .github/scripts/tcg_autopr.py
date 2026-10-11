@@ -932,12 +932,12 @@ def run_prompt_patcher(cdb_path: Path, cards_cdb: Path) -> None:
 
 
 def autofill_source_text(cdb_path: Path, ypk_path: Path) -> None:
-    if CONFIG.patch_lang != "en":
+    if CONFIG.patch_lang not in {"en", "fr"}:
         return
     try:
         from card_text_autofill import autofill_cdb_from_pack_sources
 
-        autofill_cdb_from_pack_sources(cdb_path, ypk_path, "en", log_fn=log)
+        autofill_cdb_from_pack_sources(cdb_path, ypk_path, CONFIG.patch_lang, log_fn=log)
         patch_en_desc(cdb_path)
     except Exception as exc:
         log(f"[SourceText] skipped after error: {exc}")

@@ -206,3 +206,32 @@ It does this:
 
 1. Copies translated workspace files into `Base Files`.
 2. Applies mappings again before packaging.
+
+## Automatic English and French card text
+
+The existing local **Refresh from MyCard** action (`py AutoPR.py refresh`) now
+fetches missing French names/effects as well as English after importing the
+latest MyCard package. The equivalent repository command is:
+
+```powershell
+python .github/scripts/tcg_autopr.py --lang fr workspace-sync
+```
+
+The authoritative card inventory still comes from the upstream package. Its
+pack entries resolve to exact printed set numbers; the
+[Yugipedia MediaWiki API](https://yugipedia.com/api.php) resolves those to card
+pages and the importer verifies the set number is actually listed there.
+French uses `fr_name`, `fr_text` and `fr_pendulum_effect`. There is no global
+"latest French prerelease" API: a newly announced card often has English fan
+text before French text exists. Missing localized fields remain untranslated
+for manual completion; English is never substituted as French. The importer
+also rejects incomplete French Pendulum text.
+
+Human-edited names and effects are preserved field by field. Only blank,
+source-identical or still-Chinese fields are filled. Prompts remain owned by
+`Tools/PromptPatcher.py` and `Shared/Mappings.csv` as before. Matches and gaps
+are recorded in `Workspace/Reports/source_text.json` (or `raw2/Reports` for a
+local refresh). Matching never adds cards outside the upstream CDB.
+
+Rush uses a separate command and exact upstream `sets.md` ID mappings; see
+[Rush pre-release cards](RUSH_PRE_RELEASE.md).

@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 import zipfile
 
 spec = importlib.util.spec_from_file_location("rush_prerelease", Path(__file__).resolve().parents[1] / "rush_prerelease.py")
@@ -154,6 +155,88 @@ class RushPrereleaseTests(unittest.TestCase):
             self.sync()
         report = rush.read_json(self.root / "EN/Rush/report.json")
         self.assertIn("source_changed", report["pending_translations"][0]["fields"])
+
+    def test_automatic_sources_fill_new_cards_then_remove_them_in_all_locales(self):
+        languages = list(rush.LANGS)
+        for lang, (_, locale) in rush.LANGS.items():
+            if lang not in ("zh-cn", "th"):
+                self.seed(locale, [100, 101])
+        self.sync(languages)
+        self.set_cards([100, 101, 102])
+        # Other locales still arrive via their normal reviewed translated seeds.
+        for lang, (_, locale) in rush.LANGS.items():
+            if lang not in ("en", "fr", "jp", "kr", "th", "zh-cn"):
+                self.seed(locale, [100, 101, 102])
+        def web_fill(root, source, original, rows, lang, system_ids):
+            if lang in ("en", "fr", "jp", "kr"):
+                rows = dict(rows)
+                rows[102] = (102, "Web translated name", "Web translated effect", *([""] * 16))
+            return rows, {}
+        with patch("rush_source_text.fetch_rows", side_effect=web_fill):
+            rush.synchronize(self.root, self.source, self.translations, languages, fetch_source_text=True)
+        for folder, _ in rush.LANGS.values():
+            self.assertEqual(set(rush.read_cdb(self.workspace(folder))[0]), {100, 101, 102})
+        self.set_cards([100])
+        rush.synchronize(self.root, self.source, self.translations, languages, fetch_source_text=True)
+        for folder, _ in rush.LANGS.values():
+            self.assertEqual(set(rush.read_cdb(self.workspace(folder))[0]), {100})
+            with zipfile.ZipFile(self.package(folder)) as archive:
+                self.assertNotIn("script/c102.lua", archive.namelist())
+        self.assertEqual(self.package("TH").read_bytes(), self.package("EN").read_bytes())
+
+    def test_formatting_does_not_approve_changed_source_after_failed_batch(self):
+        self.sync()
+        # Emulate a last-good package produced by the old inline formatter.
+        inline = "【REQUIREMENT】 None. 【EFFECT】 Draw."
+        self.edit_text(self.workspace(), 100, inline)
+        report_path = self.root / "EN/Rush/report.json"
+        report = rush.read_json(report_path)
+        report["published_text_fields"]["100"]["desc"] = rush.digest(inline.encode("utf-8"))
+        rush.write_changed(report_path, rush.json_bytes(report))
+        row = list(self.texts[100]); row[2] += "（修改）"; self.texts[100] = tuple(row); self.write_source()
+        for _ in range(2):
+            with self.assertRaisesRegex(ValueError, "need translation/review"):
+                self.sync()
+            self.assertEqual(rush.read_cdb(self.workspace())[1][100][2], inline)
+            self.assertIn("source_changed", rush.read_json(report_path)["pending_translations"][0]["fields"])
+
+    def test_mixed_pending_addition_still_retires_removed_rows_from_all_packages(self):
+        languages = list(rush.LANGS)
+        for lang, (_, locale) in rush.LANGS.items():
+            if lang not in ("zh-cn", "th"):
+                self.seed(locale, [100, 101])
+        self.sync(languages)
+        self.set_cards([100, 102])
+        for lang, (_, locale) in rush.LANGS.items():
+            if lang not in ("fr", "zh-cn", "th"):
+                self.seed(locale, [100, 102])
+        with self.assertRaisesRegex(ValueError, "Retired cards removed.*FR: 1 cards"):
+            self.sync(languages)
+        for folder, _ in rush.LANGS.values():
+            self.assertEqual(set(rush.read_cdb(self.workspace(folder))[0]), {100, 102})
+            with zipfile.ZipFile(self.package(folder)) as archive:
+                self.assertNotIn("script/c101.lua", archive.namelist())
+                self.assertNotIn("script/c102.lua", archive.namelist())
+                self.assertNotIn("Picture/Rush_Arts/101.jpg", archive.namelist())
+            data = rush.read_json(self.root / folder / "rush-pre-release.json")
+            self.assertEqual(set(data), {"100"})
+        before = {p: p.read_bytes() for p in self.root.glob("*/rush-*")}
+        with self.assertRaisesRegex(ValueError, "FR: 1 cards"):
+            self.sync(languages)
+        self.assertEqual(before, {p: p.read_bytes() for p in before})
+        self.assertEqual(self.package("TH").read_bytes(), self.package("EN").read_bytes())
+
+    def test_retirement_keeps_old_script_dependency_for_retained_card(self):
+        (self.source / "script/c100.lua").write_text('Duel.LoadScript("c101.lua")', encoding="utf-8")
+        self.sync()
+        self.set_cards([100, 102])
+        with self.assertRaisesRegex(ValueError, "Retired cards removed"):
+            self.sync()
+        with zipfile.ZipFile(self.package()) as archive:
+            self.assertEqual(archive.read("script/c100.lua"), b'Duel.LoadScript("c101.lua")')
+            self.assertIn("script/c101.lua", archive.namelist())
+            self.assertNotIn("script/c102.lua", archive.namelist())
+        self.assertEqual(set(rush.read_json(self.root / "EN/rush-pre-release.json")), {"100"})
 
     def test_empty_patch_clears_the_old_package(self):
         self.sync()
