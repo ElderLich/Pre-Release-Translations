@@ -1,11 +1,11 @@
 {
   "meta": {
-    "db": "/home/runner/work/TransSuperpre/TransSuperpre/FR/Workspace/test-release.cdb",
+    "db": "/home/runner/work/Pre-Release-Translations/Pre-Release-Translations/FR/Workspace/test-release.cdb",
     "cn_db": "",
     "lang": "fr",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261011_183354",
+    "timestamp": "20261011_201823",
     "rows_in_report": 0,
     "unique_cn_strings": 0,
     "total_cn_cells": 0
