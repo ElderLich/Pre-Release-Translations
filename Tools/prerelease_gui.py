@@ -15,6 +15,9 @@ import tkinter as tk
 from tkinter import filedialog, messagebox, ttk
 
 from rush_local import python_console
+from prerelease_i18n import LANGUAGE_NAMES, LocalizedVar, translate
+from prerelease_preferences import find_editor, database_path, launch_editor
+from prerelease_activity import ActivityBar, activity_phase, activity_result
 
 STANDARD_LANGS = ("DE", "EN", "ES", "FR", "IT", "JP", "KR", "PT", "TH")
 RUSH_LANGS = (*STANDARD_LANGS, "ZH-CN", "ZH-TW")
@@ -123,8 +126,8 @@ def locale_snapshot(repo: Path, lang: str) -> dict:
     return snapshot
 
 
-def snapshot_details(snapshot: dict) -> str:
-    lines = [f"{snapshot['lang']} · {snapshot['status']} · Package {snapshot['version']}"]
+def snapshot_details(snapshot: dict, tr=lambda value, **kw: value.format(**kw)) -> str:
+    lines = [f"{snapshot['lang']} · {tr(snapshot['status'])} · {snapshot['version']}"]
     if snapshot["error"]:
         return "\n".join(lines + [snapshot["error"]])
     names = snapshot["names"]
@@ -133,15 +136,15 @@ def snapshot_details(snapshot: dict) -> str:
             card_id = str(issue.get("id", "?"))
             name = issue.get("name") or names.get(card_id) or "Name unavailable"
             fields = ", ".join(issue.get("fields", [])) or "translation review"
-            lines.append(f"Translation · {card_id} · {name} · {fields}")
+            lines.append(f"{tr('Translations')} · {card_id} · {name} · {fields}")
         else:
-            lines.append(f"Translation · {issue} · {names.get(str(issue), 'Name unavailable')}")
+            lines.append(f"{tr('Translations')} · {issue} · {names.get(str(issue), 'Name unavailable')}")
     for card_id in snapshot["missing"]:
-        lines.append(f"Artwork missing · {card_id} · {names.get(str(card_id), 'Name unavailable')}")
+        lines.append(f"{tr('Artwork missing')} · {card_id} · {names.get(str(card_id), 'Name unavailable')}")
     for card_id in snapshot["changed"]:
-        lines.append(f"Workspace changed · {card_id} · {names.get(str(card_id), 'Removed from workspace')}")
+        lines.append(f"{tr('Workspace changed')} · {card_id} · {names.get(str(card_id), 'Removed from workspace')}")
     if len(lines) == 1:
-        lines.append("No missing translations or artwork are listed in the latest local build report.")
+        lines.append(tr("No missing translations or artwork are listed in the latest local build report."))
     return "\n".join(lines)
 
 
@@ -153,7 +156,7 @@ def read_reports(repo: Path) -> list[tuple]:
 def stream_job(command: list[str], cwd: Path, events: queue.Queue) -> None:
     """Worker never touches Tk; all UI changes happen in the main-thread poll."""
     env = os.environ.copy()
-    env.update(PYTHONUTF8="1", PYTHONUNBUFFERED="1", GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never")
+    env.update(PYTHONUTF8="1", PYTHONUNBUFFERED="1", GIT_TERMINAL_PROMPT="0", GCM_INTERACTIVE="never", TRANSSUPERPRE_GUI="1")
     try:
         with subprocess.Popen(command, cwd=cwd, env=env, stdout=subprocess.PIPE,
                               stderr=subprocess.STDOUT, text=True, encoding="utf-8", errors="replace",
@@ -186,23 +189,31 @@ class PrereleaseWindow:
         except (ValueError, OSError) as error:
             self.config_error = str(error)
             self.config = {}
+        self.localized_widgets = {}
+        self.localized_vars = []
+        self.ui_language = self.config.get("interface_language", "AUTO")
+        self.display_language = lang.upper() if lang.upper() in LANGUAGE_NAMES else "EN"
+        if self.ui_language in LANGUAGE_NAMES:
+            self.display_language = self.ui_language
+        self.editor_path = self.config.get("dataeditorx_path", "")
         self.language = tk.StringVar(value=lang.upper() if lang.upper() in STANDARD_LANGS else "EN")
         self.rush_language = tk.StringVar(value=lang.upper() if lang.upper() in RUSH_LANGS else "EN")
         self.source = tk.StringVar(value=self.config.get("rush_source_root", str(repo.parent / "ygopro-rush-duel")))
         self.translations = tk.StringVar(value=self.config.get("rush_translations_root", str(repo.parent / "MDPro3_Data/Data/locales")))
         self.offline = tk.BooleanVar(value=False)
-        self.status = tk.StringVar(value="No operation running.")
-        self.log_visible = tk.BooleanVar(value=True)
-        self.status_kind = tk.StringVar(value="READY")
-        self.report_summary = tk.StringVar(value="")
-        self.rush_workspace_status = tk.StringVar(value="")
-        self.rush_workspace_note = tk.StringVar(value="")
+        self.status = LocalizedVar(self, value="No operation running.")
+        self.log_visible = tk.BooleanVar(value=self.config.get("show_log", True))
+        self.activity_detail = LocalizedVar(self)
+        self.status_kind = LocalizedVar(self, value="READY")
+        self.report_summary = LocalizedVar(self, value="")
+        self.rush_workspace_status = LocalizedVar(self, value="")
+        self.rush_workspace_note = LocalizedVar(self, value="")
         self.rush_publish_controls = []
         self.build_tools_visible = tk.BooleanVar(value=False)
         self.report_cache = {}
         self.scale = max(1.0, float(root.tk.call("tk", "scaling")) / (96 / 72))
         self._configure_styles()
-        root.title("TransSuperpre · Translation Workspace")
+        root.title(self.tr("TransSuperpre · Translation Workspace"))
         root.configure(background=COLORS["background"])
         available_w = root.winfo_screenwidth() - self.px(60)
         available_h = root.winfo_screenheight() - self.px(90)
@@ -226,6 +237,8 @@ class PrereleaseWindow:
         self.label(repository, self.repo.name, "Body").pack(anchor="e", pady=(self.px(4), self.px(4)))
         self.button(repository, "Open folder  ↗", lambda: self.open_path(self.repo), style="Link").pack(anchor="e")
 
+        self.button(repository, "Settings", self.open_settings, style="Link").pack(anchor="e")
+
         navigation = ttk.Frame(outer, style="App.TFrame")
         navigation.grid(row=1, column=0, sticky="w")
         self.nav_buttons = []
@@ -234,6 +247,7 @@ class PrereleaseWindow:
         for index, title in enumerate(("Standard", "Rush", "All locales")):
             button = ttk.Button(navigation, text=title, style="Navigation.TButton", command=lambda index=index: self.notebook.select(index))
             button.pack(side="left", padx=(0, self.px(7)))
+            self.set_text(button, title)
             self.nav_buttons.append(button)
         self.page_scrolls = []
         self.standard_page = self._scrollable_page("Standard")
@@ -248,15 +262,119 @@ class PrereleaseWindow:
         self._build_activity(outer)
         root.bind("<MouseWheel>", self._scroll_page, add="+")
         self.refresh_reports()
-        self.rush_language.trace_add("write", lambda *_: self.refresh_rush_status())
+        self.language.trace_add("write", lambda *_: self.apply_language())
+        self.rush_language.trace_add("write", lambda *_: self.apply_language())
         self.refresh_rush_status()
         if lang.upper() in RUSH_LANGS:
             self.table.selection_set(lang.upper())
-        self.append_log("Ready. Choose Standard or Rush, then fetch the latest card updates.\n")
+        self.append_log(self.tr("No operation running.") + "\n")
+        self.apply_language()
+        self._show_log()
         root.update_idletasks()
         if min(self.px(940), available_h) < root.winfo_reqheight() - self.px(40):
-            self.toggle_log()
+            if self.log_visible.get():
+                self.toggle_log(persist=False)
         self.poll_id = root.after(100, self.poll)
+
+    def tr(self, key, **values):
+        return translate(key, self.display_language, **values)
+
+    def set_text(self, widget, key, **values):
+        self.localized_widgets[widget] = (key, values)
+        widget.configure(text=self.tr(key, **values))
+
+    def apply_language(self):
+        tab = self.notebook.index(self.notebook.select())
+        automatic = self.rush_language.get() if tab == 1 else self.language.get() if tab == 0 else self.display_language
+        self.display_language = self.ui_language if self.ui_language in LANGUAGE_NAMES else automatic
+        self.root.title(self.tr("TransSuperpre · Translation Workspace"))
+        for widget, (key, values) in list(self.localized_widgets.items()):
+            if widget.winfo_exists():
+                widget.configure(text=self.tr(key, **values))
+        for variable in self.localized_vars:
+            variable.render()
+        for tab, key in zip(self.notebook.tabs(), ("Standard", "Rush", "All locales")):
+            self.notebook.tab(tab, text=self.tr(key))
+        for column in self.table['columns']:
+            self.table.heading(column, text=self.tr(column))
+        self.refresh_reports()
+
+    def open_settings(self):
+        if self.busy:
+            return
+        dialog = tk.Toplevel(self.root)
+        dialog.title(self.tr("Settings"))
+        dialog.configure(background=COLORS["background"])
+        dialog.transient(self.root)
+        dialog.resizable(False, False)
+        body = ttk.Frame(dialog, style="App.TFrame", padding=self.px(22))
+        body.pack(fill="both", expand=True)
+        def title(key):
+            ttk.Label(body, text=self.tr(key), style="Heading.TLabel").pack(anchor="w", pady=(self.px(8), self.px(8)))
+        title("Interface language")
+        options = {self.tr("Follow card language"): "AUTO", **{name: key for key, name in LANGUAGE_NAMES.items()}}
+        selected = tk.StringVar(value=next((label for label, key in options.items() if key == self.ui_language), next(iter(options))))
+        ttk.Combobox(body, values=list(options), textvariable=selected, state="readonly", style="Dark.TCombobox", width=43).pack(fill="x")
+        title("Database editor")
+        detected = find_editor(self.editor_path)
+        editor = tk.StringVar(value=self.editor_path or (str(detected) if detected else ""))
+        ttk.Entry(body, textvariable=editor, style="Dark.TEntry", width=60).pack(fill="x")
+        actions = ttk.Frame(body, style="App.TFrame")
+        actions.pack(fill="x", pady=self.px(10))
+        def browse_editor():
+            path = filedialog.askopenfilename(parent=dialog, title=self.tr("Select DataEditorX.exe"),
+                                              filetypes=[("DataEditorX", "*.exe")], initialdir=str(Path(editor.get()).parent) if editor.get() else None)
+            if path:
+                editor.set(path)
+        def detect_editor():
+            path = find_editor()
+            if path:
+                editor.set(str(path))
+            else:
+                messagebox.showinfo(self.tr("Database editor"), self.tr("DataEditorX was not found. Browse to its executable."), parent=dialog)
+        ttk.Button(actions, text=self.tr("Browse…"), command=browse_editor, style="Secondary.TButton").pack(side="left")
+        ttk.Button(actions, text=self.tr("Detect automatically"), command=detect_editor, style="Secondary.TButton").pack(side="left", padx=self.px(8))
+        def save():
+            path = editor.get().strip()
+            if path and not Path(path).is_file():
+                messagebox.showerror(self.tr("Database editor"), self.tr("Choose an existing DataEditorX executable."), parent=dialog)
+                return
+            old_language, old_path = self.ui_language, self.editor_path
+            self.ui_language, self.editor_path = options[selected.get()], path
+            try:
+                self.save_paths()
+            except (OSError, ValueError) as error:
+                self.ui_language, self.editor_path = old_language, old_path
+                messagebox.showerror(self.tr("Settings could not be saved"), str(error), parent=dialog)
+                return
+            dialog.destroy()
+            self.apply_language()
+        footer = ttk.Frame(body, style="App.TFrame")
+        footer.pack(fill="x", pady=(self.px(14), 0))
+        ttk.Button(footer, text=self.tr("Save settings"), command=save, style="Primary.TButton").pack(side="right")
+        ttk.Button(footer, text=self.tr("Cancel"), command=dialog.destroy, style="Secondary.TButton").pack(side="right", padx=self.px(8))
+        dialog.grab_set()
+
+    def open_database(self, rush):
+        if self.busy:
+            return
+        lang = self.rush_language.get() if rush else self.language.get()
+        if rush and lang in ("TH", "ZH-CN"):
+            return
+        path = database_path(self.local, lang, rush)
+        if not path.is_file():
+            messagebox.showinfo(self.tr("Not available yet"), self.tr("Fetch updates first to create the database.") + "\n\n" + str(path), parent=self.root)
+            return
+        editor = find_editor(self.editor_path)
+        if editor is None:
+            self.open_settings()
+            return
+        try:
+            launch_editor(editor, path)
+            self.status.set("Opened database in DataEditorX.")
+        except OSError as error:
+            messagebox.showerror(self.tr("Could not open"), str(error), parent=self.root)
+
 
     def px(self, value):
         return round(value * self.scale)
@@ -324,13 +442,19 @@ class PrereleaseWindow:
                         bordercolor=c["panel"], lightcolor=c["accent"], darkcolor=c["accent"], thickness=self.px(3))
 
     def label(self, parent, text=None, kind="Body", *, panel=False, **kwargs):
-        return ttk.Label(parent, text=text, style=f"{'Panel' if panel else ''}{kind}.TLabel", **kwargs)
+        label = ttk.Label(parent, style=f"{'Panel' if panel else ''}{kind}.TLabel", **kwargs)
+        if text is not None:
+            self.set_text(label, text)
+        if kind in ("Muted", "Caption") and "wraplength" not in kwargs:
+            label.bind("<Configure>", lambda event: label.configure(wraplength=max(self.px(100), event.width)))
+        return label
 
     def card(self, parent, padding=18):
         return ttk.Frame(parent, style="Panel.TFrame", padding=self.px(padding))
 
     def button(self, parent, title, action, *, style="Secondary"):
         button = ttk.Button(parent, text=title, command=action, style=f"{style}.TButton")
+        self.set_text(button, title)
         self.controls.append((button, "normal"))
         return button
 
@@ -338,6 +462,9 @@ class PrereleaseWindow:
         selected = self.notebook.index(self.notebook.select())
         for index, button in enumerate(self.nav_buttons):
             button.configure(style="Selected.Navigation.TButton" if index == selected else "Navigation.TButton")
+
+        if hasattr(self, "table"):
+            self.apply_language()
 
     def _scrollable_page(self, title):
         """Keep every action reachable on short displays and at Windows text scaling."""
@@ -411,6 +538,8 @@ class PrereleaseWindow:
         workspace.grid(row=0, column=0, sticky="nsew", padx=(0, self.px(7)))
         self.label(workspace, "Local workspace", "CardTitle", panel=True).pack(anchor="w")
         self.label(workspace, "Edit and prepare the selected language.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
+        self.standard_editor_button = self.button(workspace, "Open Database in DataEditorX", lambda: self.open_database(False))
+        self.standard_editor_button.pack(fill="x", pady=(0, self.px(8)))
         self.button(workspace, "Open translation folder  ↗", lambda: self.open_path(self.local / self.language.get() / "raw2")).pack(fill="x", pady=(0, self.px(8)))
         self.button(workspace, "Copy workspace into repository", lambda: self.start_standard("upload")).pack(fill="x")
         publish = self.card(cards)
@@ -455,6 +584,8 @@ class PrereleaseWindow:
         workspace.grid(row=0, column=0, sticky="nsew", padx=(0, self.px(7)))
         self.label(workspace, "Local workspace", "CardTitle", panel=True).pack(anchor="w")
         self.label(workspace, "Edit and prepare this locale's Rush cards.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
+        self.rush_editor_button = self.button(workspace, "Open Database in DataEditorX", lambda: self.open_database(True))
+        self.rush_editor_button.pack(fill="x", pady=(0, self.px(8)))
         edit = self.button(workspace, "Open translation folder  ↗", lambda: self.open_path(self.local / self.rush_language.get() / "Rush/raw2"))
         edit.pack(fill="x", pady=(0, self.px(8)))
         copy = self.button(workspace, "Copy workspace into repository", lambda: self.start_rush_workspace("upload"))
@@ -465,7 +596,7 @@ class PrereleaseWindow:
         self.label(publish, "Upload only the selected Rush locale.", "Muted", panel=True).pack(anchor="w", pady=(self.px(5), self.px(15)))
         push = self.button(publish, "Upload workspace & push to GitHub", lambda: self.start_rush_workspace("push"))
         push.pack(fill="x", pady=(0, self.px(8)))
-        self.rush_publish_controls = [edit, copy, push]
+        self.rush_publish_controls = [self.rush_editor_button, copy, push]
         secondary = ttk.Frame(publish, style="Inner.TFrame")
         secondary.pack(fill="x")
         secondary.columnconfigure((0, 1), weight=1, uniform="rush_publish")
@@ -518,6 +649,7 @@ class PrereleaseWindow:
         self.button(links, "Shared artwork  ↗", lambda: self.open_path(self.repo / "Shared/Rush Artworks"), style="Link").pack(side="left")
         self.button(links, "Refresh overview", self.refresh_reports, style="Link").pack(side="right")
         self.build_toggle = ttk.Button(parent, text="Show all-locale build tools", style="Secondary.TButton", command=self.toggle_build_tools)
+        self.set_text(self.build_toggle, "Show all-locale build tools")
         self.build_toggle.grid(row=6, column=0, sticky="w", pady=(self.px(5), 0))
         self.build_tools = self.card(parent, 14)
         self.build_tools.grid(row=7, column=0, sticky="ew", pady=(self.px(10), 0))
@@ -541,6 +673,7 @@ class PrereleaseWindow:
         self.build_button = self.button(actions, "Build all locales", lambda: self.start_rush(False))
         self.build_button.pack(side="left")
         offline = ttk.Checkbutton(sources, text="Use local translations only · skip web text sources", variable=self.offline, style="Dark.TCheckbutton")
+        self.set_text(offline, "Use local translations only · skip web text sources")
         offline.grid(row=5, column=0, columnspan=3, sticky="w", pady=(self.px(2), 0))
         self.controls.append((offline, "normal"))
 
@@ -551,7 +684,7 @@ class PrereleaseWindow:
             self.build_tools.grid()
         else:
             self.build_tools.grid_remove()
-        self.build_toggle.configure(text="Hide all-locale build tools" if visible else "Show all-locale build tools")
+        self.set_text(self.build_toggle, "Hide all-locale build tools" if visible else "Show all-locale build tools")
 
     def show_rush_overview(self):
         lang = self.rush_language.get()
@@ -566,10 +699,10 @@ class PrereleaseWindow:
         snapshot = self.report_cache.get(lang)
         if snapshot is None:
             return
-        self.details_heading.configure(text=f"{lang} · Card details")
+        self.set_text(self.details_heading, "{lang} · Card details", lang=lang)
         self.details_text.configure(state="normal")
         self.details_text.delete("1.0", "end")
-        self.details_text.insert("end", snapshot_details(snapshot))
+        self.details_text.insert("end", snapshot_details(snapshot, self.tr))
         self.details_text.configure(state="disabled")
 
     def _build_activity(self, parent):
@@ -581,13 +714,17 @@ class PrereleaseWindow:
         bar.columnconfigure(1, weight=1)
         self.status_badge = self.label(bar, kind="Status", panel=True, textvariable=self.status_kind)
         self.status_badge.grid(row=0, column=0, sticky="w", padx=(0, self.px(14)))
-        self.label(bar, kind="Caption", panel=True, textvariable=self.status).grid(row=0, column=1, sticky="w")
+        self.label(bar, kind="Caption", panel=True, textvariable=self.status, wraplength=self.px(580)).grid(row=0, column=1, sticky="w")
         self.log_toggle = ttk.Button(bar, text="Hide log", command=self.toggle_log, style="Secondary.TButton", padding=(self.px(9), self.px(3)))
+        self.set_text(self.log_toggle, "Hide log")
         self.log_toggle.grid(row=0, column=2, sticky="e", padx=(self.px(10), 0))
-        progress_host = ttk.Frame(activity, style="Inner.TFrame", height=self.px(3))
+        self.activity_detail_label = self.label(bar, kind="Caption", panel=True, textvariable=self.activity_detail, wraplength=self.px(690))
+        self.activity_detail_label.grid(row=1, column=0, columnspan=3, sticky="w", pady=(self.px(5), 0))
+        self.activity_detail_label.grid_remove()
+        progress_host = ttk.Frame(activity, style="Inner.TFrame", height=self.px(7))
         progress_host.grid(row=1, column=0, sticky="ew")
         progress_host.pack_propagate(False)
-        self.progress = ttk.Progressbar(progress_host, mode="indeterminate", style="Activity.Horizontal.TProgressbar")
+        self.progress = ActivityBar(progress_host)
         self.log_frame = ttk.Frame(activity, style="Inner.TFrame", padding=(self.px(2), self.px(2), self.px(2), self.px(2)))
         self.log_frame.grid(row=2, column=0, sticky="ew")
         self.log = tk.Text(self.log_frame, height=6, wrap="word", font=("Cascadia Mono", 9), state="disabled",
@@ -602,27 +739,35 @@ class PrereleaseWindow:
         self.log.tag_configure("warning", foreground=COLORS["warning"])
         self.log.tag_configure("complete", foreground=COLORS["accent"])
 
-    def toggle_log(self):
-        visible = not self.log_visible.get()
-        self.log_visible.set(visible)
+    def toggle_log(self, persist=True):
+        self.log_visible.set(not self.log_visible.get())
+        self._show_log()
+        if persist:
+            try:
+                self.save_paths()
+            except (OSError, ValueError) as error:
+                self.append_log(f"Settings: {error}\n")
+
+    def _show_log(self):
+        visible = self.log_visible.get()
         if visible:
             self.log_frame.grid()
         else:
             self.log_frame.grid_remove()
-        self.log_toggle.configure(text="Hide log" if visible else "Show log")
+        self.set_text(self.log_toggle, "Hide log" if visible else "Show log")
 
     def set_status_kind(self, title, color):
         self.status_kind.set(title)
         self.status_badge.configure(foreground=COLORS[color])
 
     def browse(self, variable):
-        path = filedialog.askdirectory(parent=self.root, initialdir=variable.get(), title="Select folder")
+        path = filedialog.askdirectory(parent=self.root, initialdir=variable.get(), title=self.tr("Select folder"))
         if path:
             variable.set(path)
 
     def open_path(self, path: Path):
         if not path.exists():
-            messagebox.showinfo("Not available yet", f"Build or refresh first to create:\n{path}", parent=self.root)
+            messagebox.showinfo(self.tr("Not available yet"), self.tr("Build or refresh first to create:") + "\n" + str(path), parent=self.root)
             return
         try:
             if os.name == "nt":
@@ -630,7 +775,7 @@ class PrereleaseWindow:
             else:
                 subprocess.Popen(["open" if os.sys.platform == "darwin" else "xdg-open", str(path)])
         except OSError as error:
-            messagebox.showerror("Could not open", str(error), parent=self.root)
+            messagebox.showerror(self.tr("Could not open"), str(error), parent=self.root)
 
     def open_rush(self, name: str):
         selected = self.table.selection()
@@ -640,7 +785,8 @@ class PrereleaseWindow:
         if self.config_error:
             raise ValueError(f"Could not read {self.config_path}: {self.config_error}. Repair that settings file before saving paths.")
         self.config.update(repo_root=str(self.repo), rush_source_root=self.source.get().strip(),
-                           rush_translations_root=self.translations.get().strip())
+                           rush_translations_root=self.translations.get().strip(), interface_language=self.ui_language,
+                           dataeditorx_path=self.editor_path, show_log=self.log_visible.get())
         temporary = self.config_path.with_suffix(".json.tmp")
         temporary.write_text(json.dumps(self.config, indent=2) + "\n", encoding="utf-8")
         temporary.replace(self.config_path)
@@ -653,20 +799,20 @@ class PrereleaseWindow:
             return
         lang = self.rush_language.get()
         if lang in ("TH", "ZH-CN") and command in ("upload", "push", "resolve"):
-            messagebox.showinfo("Managed locale", "Thai uses English translations; Simplified Chinese follows upstream. Update the owning source instead.", parent=self.root)
+            messagebox.showinfo(self.tr("Managed locale"), self.tr("Thai uses English translations; Simplified Chinese follows upstream. Update the owning source instead."), parent=self.root)
             return
         if command == "resolve":
             try:
                 conflicts = read_json_object(self.local / lang / "Rush/Reports/sync.json").get("conflicts", [])
             except (OSError, ValueError) as error:
-                messagebox.showerror("Could not read conflicts", str(error), parent=self.root)
+                messagebox.showerror(self.tr("Could not read conflicts"), str(error), parent=self.root)
                 return
             if not conflicts:
                 self.refresh_rush_status()
                 return
             fields = "\n".join(f"{item.get('id', '?')} · {item.get('field', '?')}" for item in conflicts[:12])
-            message = f"Keep your local text for {len(conflicts)} conflicting fields?\n\n{fields}\n\nReview Rush/Reports/sync.json first. Non-conflicting source updates will still be applied."
-            if not messagebox.askyesno("Keep reviewed translations", message, parent=self.root, default="no"):
+            message = self.tr("Keep your local text for {count} conflicting fields?", count=len(conflicts)) + "\n\n" + fields + "\n\n" + self.tr("Review Rush/Reports/sync.json first. Non-conflicting source updates will still be applied.")
+            if not messagebox.askyesno(self.tr("Keep reviewed translations"), message, parent=self.root, default="no"):
                 return
         self.start(rush_workspace_command(self.repo, self.local, command, lang), "Rush locale")
 
@@ -685,7 +831,7 @@ class PrereleaseWindow:
             sync = read_json_object(local_root / "Reports/sync.json")
             conflicts = sync.get("conflicts", [])
             if conflicts:
-                title = f"Review {len(conflicts)} merge conflicts"
+                title = self.tr("Review {count} merge conflicts", count=len(conflicts))
                 note = "Open local reports and review sync.json. Your database has been preserved."
                 if not managed:
                     self.resolve_button.grid()
@@ -701,7 +847,7 @@ class PrereleaseWindow:
             snapshot = self.report_cache.get(lang, {})
             pending = snapshot.get("pending", [])
             if pending:
-                note += f" Latest build report: {len(pending)} cards need translation review."
+                note = self.tr(note) + " " + self.tr("Latest build report: {count} cards need translation review.", count=len(pending))
         except (OSError, ValueError, TypeError, sqlite3.Error) as error:
             title, note = "Could not read local status", str(error)
         if lang == "TH":
@@ -719,16 +865,16 @@ class PrereleaseWindow:
             return
         try:
             if not self.source.get().strip() or not self.translations.get().strip():
-                raise ValueError("Choose the Rush source and locale database folders.")
+                raise ValueError(self.tr("Choose the Rush source and locale database folders."))
             source = Path(self.source.get().strip()).expanduser().resolve()
             translations = Path(self.translations.get().strip()).expanduser().resolve()
             if not (source / "RD Patch.cdb").is_file():
-                raise ValueError("Rush source must contain RD Patch.cdb.")
+                raise ValueError(self.tr("Rush source must contain RD Patch.cdb."))
             if not (translations / "en-US/rush_cards.cdb").is_file():
-                raise ValueError("Locale databases must contain en-US/rush_cards.cdb.")
+                raise ValueError(self.tr("Locale databases must contain en-US/rush_cards.cdb."))
             self.save_paths()
         except (OSError, ValueError) as error:
-            messagebox.showerror("Check Rush paths", str(error), parent=self.root)
+            messagebox.showerror(self.tr("Check Rush paths"), str(error), parent=self.root)
             return
         self.start(rush_command(self.repo, source, translations, fetch=fetch, offline=self.offline.get()), "Rush")
 
@@ -736,7 +882,9 @@ class PrereleaseWindow:
         if self.busy:
             return
         self.busy, self.job_kind = True, kind
-        self.status.set(f"{kind} update running…")
+        self.activity_detail.set("")
+        self.activity_detail_label.grid_remove()
+        self.status.set_template("{kind} update running…", kind=self.tr(kind))
         self.set_status_kind("WORKING", "blue")
         self.progress.pack(fill="both", expand=True)
         self.progress.start(12)
@@ -759,9 +907,9 @@ class PrereleaseWindow:
     def refresh_reports(self):
         self.report_cache = {lang: locale_snapshot(self.repo, lang) for lang in RUSH_LANGS}
         pending = sum(len(item["pending"]) for item in self.report_cache.values())
-        self.report_summary.set(f"{len(self.report_cache)} locales · {pending} translation issues")
+        self.report_summary.set_template("{count} locales · {pending} translation issues", count=len(self.report_cache), pending=pending)
         for index, (lang, item) in enumerate(self.report_cache.items()):
-            row = (lang, item["status"], item["cards"], len(item["pending"]), len(item["missing"]), item["built"])
+            row = (lang, self.tr(item["status"]), item["cards"], len(item["pending"]), len(item["missing"]), self.tr(item["built"]))
             if self.table.exists(lang):
                 self.table.item(lang, values=row)
             else:
@@ -777,16 +925,25 @@ class PrereleaseWindow:
                 break
             if event == "log":
                 self.append_log(value)
+                result = activity_result(value)
+                if result:
+                    self.activity_detail.set_template(result[0], **result[1])
+                    self.activity_detail_label.grid()
+                phase = activity_phase(value)
+                if phase:
+                    self.status.set(phase)
             else:
                 self.busy = False
-                self.progress.stop()
-                self.progress.pack_forget()
+                self.progress.finish(value == 0)
                 for control, state in self.controls:
                     control.configure(state=state)
                 self.refresh_reports()
                 if value == 0:
                     self.set_status_kind("COMPLETE", "accent")
-                    self.status.set("Rush packages built locally — review the locale reports." if self.job_kind == "Rush" else f"{self.job_kind} operation completed.")
+                    if self.job_kind == "Rush":
+                        self.status.set("Rush packages built locally — review the locale reports.")
+                    else:
+                        self.status.set_template("{kind} operation completed.", kind=self.tr(self.job_kind))
                 else:
                     self.set_status_kind("NEEDS ATTENTION", "warning")
                     self.status.set("Update stopped — review the log and translation reports.")
@@ -797,8 +954,9 @@ class PrereleaseWindow:
 
     def close(self):
         if self.busy:
-            messagebox.showinfo("Update in progress", "Please wait for the current operation to finish before closing.", parent=self.root)
+            messagebox.showinfo(self.tr("Update in progress"), self.tr("Please wait for the current operation to finish before closing."), parent=self.root)
             return
+        self.progress.stop()
         self.root.after_cancel(self.poll_id)
         self.root.destroy()
 

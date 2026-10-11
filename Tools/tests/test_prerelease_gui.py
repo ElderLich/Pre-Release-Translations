@@ -117,7 +117,7 @@ class RushButtonContractTests(unittest.TestCase):
     @unittest.skipIf(gui is None, "Tkinter unavailable")
     def test_wrapper_opens_shared_gui_and_keeps_refresh_command(self):
         import AutoPR_local as wrapper
-        with patch.object(wrapper, "detect_lang", return_value="en"), patch.object(wrapper, "resolve_repo_root", return_value=self.root):
+        with patch.object(wrapper, "relaunch_windowless", return_value=False), patch.object(wrapper, "detect_lang", return_value="en"), patch.object(wrapper, "resolve_repo_root", return_value=self.root):
             with patch.object(sys, "argv", ["AutoPR.py"]), patch.object(gui, "launch") as launch:
                 self.assertEqual(wrapper.main(), 0)
                 launch.assert_called_once_with(self.root, wrapper.LOCAL_ROOT, "en")

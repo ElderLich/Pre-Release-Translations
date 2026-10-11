@@ -23,7 +23,7 @@ Make sure to install the following before starting:
 
 - **Primary Source (Chinese):** [SuperPre](https://mycard.world/ygopro/arena/index.html#/superpre)
 - **Primary Source (English):** [YGOrganization](https://ygorganization.com/)
-- **French Source:** [YugiNews](https://yuginews.fr/)
+- **French Sources:** [Yugipedia](https://yugipedia.com/) and [CodexYGO API](https://codexygo.fr/api/card/v1/docs/?lang=en)
   
 > ⚠️ Note: When translating into other languages, **do not reuse the OCG card numbering from the English version** — it causes issues during merge with the main `.cdb` file.
 

@@ -374,6 +374,11 @@ def fetch_yugipedia_cards(set_codes: list[str], log: LogFn, lang: str = "en", ru
                 issue(requested, "Printed set code does not match source page", source=source_url)
                 continue
             card = format_yugipedia_card(title, params, lang, rush=rush)
+            if card is None and lang == "fr":
+                from codexygo_source import fetch_french
+                card = fetch_french(title, params, rush, request_url, log)
+                if card is not None:
+                    source_url = card.source
             if card:
                 cards[requested] = CardText(card.name, card.desc, source_url)
                 if diagnostics is not None:

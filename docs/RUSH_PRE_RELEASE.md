@@ -2,10 +2,11 @@
 
 ## Translator workflow
 
-Open your usual locale `AutoPR.py` and select the **Rush** tab. Fetch/pull uses
-only the TransSuperpre repository and prepares
-`<LANG>/Rush/raw2/rush-pre-release.cdb` in your local translation folder. Edit
-that file, then copy or explicitly upload/push your locale's workspace. The
+Open your usual locale `AutoPR.pyw` (or `AutoPR.py`) and select the **Rush** tab. Fetch/pull uses
+the TransSuperpre repository and prepares
+`<LANG>/Rush/raw2/rush-pre-release.cdb` in your local translation folder. Missing
+EN/FR/JP fields are also fetched from the web using source snapshots inside
+TransSuperpre. Use **Open Database in DataEditorX** to edit that file, then copy or explicitly upload/push your locale's workspace. The
 existing GitHub workflow obtains Rush sources, translations and shared artwork
 and builds all packages. Translators do not need local upstream repositories or
 the maintainer's paths.
@@ -69,6 +70,7 @@ Shared/
   Rush/config.json
   Mappings.csv                            shared card-name bindings
   Rush/source.json                         generated source receipt
+  Rush/sets.md                             generated upstream identity ranges
 
 <LANG>/
   Rush/
@@ -127,7 +129,11 @@ adds card IDs beyond `RD Patch.cdb` or rewrites gameplay columns.
 
 - English and French use [Yugipedia's MediaWiki API](https://yugipedia.com/api.php).
   French reads `fr_name`, `fr_text`, `fr_requirement`, `fr_materials` and
-  `fr_condition`, not English fallbacks.
+  `fr_condition`, not English fallbacks. If French fields are incomplete, the
+  importer uses [CodexYGO's public API](https://codexygo.fr/api/card/v1/docs/?lang=en)
+  with `format=rush`. Both the verified Yugipedia identity and Rush flag must
+  match. French requirements, materials, continuous effects, choices and Maximum
+  ATK are preserved; partial translations stay pending.
 - Korean is translator-managed. No Korean web text is fetched; existing Korean
   workspace translations and reviewed Korean locale seeds are preserved. New
   untranslated cards stay pending until the translator supplies them. Upstream
@@ -156,14 +162,18 @@ Korean text blocks publication until a real translation is supplied. The daily
 dispatcher retries pending reports even if the Rush upstream revision has not
 changed; completed unchanged packages still skip their build.
 
-A live check on 2026-10-11 found complete source text for all 90 playable patch
-cards in English and Japanese, but only 5 in French. Korean automatic fetching
-is disabled regardless of what external sites contain. The current
-translated seed databases already fill all 91 rows, including the simulator
-helper, so this source limitation does not remove current translations. It
-matters for future new cards: an API cannot supply a translation that its site
-has not published. Your manual translations and the published locale seed
-CDBs remain valid inputs.
+A live check on 2026-10-11 found complete French source text for all 90 playable
+patch cards: five from Yugipedia and 85 through the CodexYGO fallback. English
+and Japanese had also matched all 90. These checks do not overwrite existing
+translations. Korean automatic fetching is disabled. Future cards remain pending
+if their sites have not published complete text; manual translations and locale
+seed CDBs remain valid inputs.
+
+The per-language Rush refresh performs the same missing-field lookup using
+`Shared/Rush/sets.md` and `<LANG>/Rush/Base Files/rush-pre-release.cdb`. It needs
+no source checkout or artwork folder. Its local `Rush/Reports/source_text.json`
+records the latest source lookup; the package build report remains the last
+published build state. Use `rush-refresh --offline` to skip web lookups.
 
 All Rush output descriptions, including preserved workspace translations, use separate `[REQUIREMENT]` / `[EFFECT]` lines for Latin languages, localized
 equivalents and one line per bullet option. Japanese, Korean and Chinese retain

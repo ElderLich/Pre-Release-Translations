@@ -8,6 +8,7 @@ on:
       - "Tools/rush_prerelease.py"
       - "Tools/rush_source_text.py"
       - ".github/scripts/card_text_autofill.py"
+      - ".github/scripts/codexygo_source.py"
       - "Shared/Rush/source_mappings.json"
       - "Tools/PromptPatcher.py"
       - "Shared/Mappings.csv"
@@ -60,7 +61,7 @@ jobs:
               --source-root "$RUNNER_TEMP/rush-source" \
               --translations-root "$RUNNER_TEMP/rush-translations/Data/locales" || build_status=$?
             # Preserve pending translator work even when incomplete locales block publication.
-            for path in Shared/Rush/source.json */Rush */rush-pre-release.ypk */rush-pre-release.json */rush-version.txt; do
+            for path in Shared/Rush/source.json Shared/Rush/sets.md */Rush */rush-pre-release.ypk */rush-pre-release.json */rush-version.txt; do
               if [ -e "$path" ]; then git add -A -- "$path"; fi
             done
             if git diff --cached --quiet; then

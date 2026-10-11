@@ -7,13 +7,15 @@ building the `.ypk`, updating `test-release.json`, and writing dump files.
 
 ## Short version
 
-1. Open your local `AutoPR.py` helper. It opens the shared three-tab window:
+1. Open your local `AutoPR.pyw` helper (or `AutoPR.py`). It opens the shared three-tab window:
    **Standard**, **Rush** and **All locales**.
 2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
    translation and copy/upload workflow.
 3. **Rush** operates on your selected language. Fetch/pull downloads the latest
    published TransSuperpre workspace and merges it into your local
-   `<LANG>/Rush/raw2/rush-pre-release.cdb`. Edit that CDB in your usual editor.
+   `<LANG>/Rush/raw2/rush-pre-release.cdb`. Missing English, French and Japanese
+   text is then fetched using the source identity snapshot bundled in this repo.
+   Select **Open Database in DataEditorX** to edit that CDB.
 4. Copy Rush translations into the repo to review locally, or explicitly use
    **Upload & Push** to commit that locale's workspace and start its cloud build.
 5. **All locales** shows published versions and translation/artwork gaps. Its
@@ -167,6 +169,30 @@ TRANSSUPERPRE_ROOT=C:\path\to\TransSuperpre
 SUPER_PRE_LOCAL_ROOT=C:\path\to\Super-Pre Translations
 ```
 
+## Interface, editor and progress settings
+
+The interface follows the selected card language by default, including French
+and Italian. **Settings → Interface language** can pin any of the eleven UI
+languages independently of the card language. Card text is never translated by
+changing the interface language. Raw source logs retain their original text.
+
+**Open Database in DataEditorX** opens the selected Standard `raw2/test-release.cdb`
+or Rush `Rush/raw2/rush-pre-release.cdb`. Fetch first if that file does not exist.
+The tool detects DataEditorX from `DATAEDITORX_PATH`, PATH and common install
+locations. **Settings → Database editor** supports automatic detection and
+browsing to an executable anywhere on the translator's machine.
+
+The activity panel shows an animated indeterminate bar, the current action and
+available card counts. **Show log / Hide log** switches between full output and
+compact activity without interrupting the job. Language, editor and log settings
+are saved in `.transsuperpre_local.json` beside the language folders.
+
+Install `Tools/AutoPR_local.pyw` alongside the `.py` wrapper, renaming it to
+`AutoPR.pyw`. Double-click the `.pyw` file for a launch without a console. The
+`.py` GUI entry also relaunches under `pythonw.exe` on Windows; explicit commands
+and `--menu` retain their console. GUI workers and their command-line children
+are hidden, while their output remains available in the activity log.
+
 ## Legacy numbered menu
 
 The steps below describe `AutoPR.py --menu`. Opening `AutoPR.py` without arguments
@@ -268,11 +294,14 @@ The authoritative card inventory still comes from the upstream package. Its
 pack entries resolve to exact printed set numbers; the
 [Yugipedia MediaWiki API](https://yugipedia.com/api.php) resolves those to card
 pages and the importer verifies the set number is actually listed there.
-French uses `fr_name`, `fr_text` and `fr_pendulum_effect`. There is no global
-"latest French prerelease" API: a newly announced card often has English fan
-text before French text exists. Missing localized fields remain untranslated
-for manual completion; English is never substituted as French. The importer
-also rejects incomplete French Pendulum text.
+French first uses `fr_name`, `fr_text` and `fr_pendulum_effect` from Yugipedia.
+When those are incomplete it queries the [CodexYGO public API](https://codexygo.fr/api/card/v1/docs/?lang=en).
+The search uses the verified English page title, `format=master` (or `rush`),
+and `languages=en,fr`. A result must have an exact `yugipediaSlug` identity and
+the correct game format. Similar names, ambiguous matches and partial Pendulum
+translations are rejected. The source inventory still comes from the upstream
+CDB; the API does not add arbitrary new cards. English is never substituted as
+French, and missing translations remain available for manual completion.
 
 Human-edited names and effects are preserved field by field. Only blank,
 source-identical or still-Chinese fields are filled. Prompts remain owned by
@@ -285,9 +314,11 @@ counts complete localized source records accepted for those cards. `unmatched_id
 lists cards still needing source text, including any with no mapping. A zero
 match count is not a build failure. The `unresolved` entries explain whether
 fields are missing, a printed identity did not match, or a source request failed.
-For example, the nine French entries reported on 2026-10-11 all resolved to
-verified Yugipedia pages, but none had `fr_name` or `fr_text` published. They
-therefore remain available for manual translation and are retried on refresh.
+The nine French entries reported on 2026-10-11 resolved to verified Yugipedia
+pages but had no French fields there. CodexYGO supplied all nine complete French
+records; the local and repository workspaces were updated. Their report now
+records `candidates: 9`, `matched: 9`, and the exact CodexYGO source links.
+Later refreshes may report zero candidates when no untranslated fields remain.
 
 Korean names/effects are translator-managed for both Standard and Rush. No
 Korean web autofill is attempted. Standard still refreshes upstream inventory,
@@ -296,6 +327,9 @@ translator's card names/effects. Rush may reuse reviewed Korean locale seed
 translations, but does not substitute English or fetch Korean website text.
 Korean source reports explicitly display `mode: manual`.
 
-The cloud Rush build uses exact upstream `sets.md` ID mappings; the translator
-uses the Rush tab rather than invoking the builder. See
+The cloud Rush build publishes upstream `sets.md` as `Shared/Rush/sets.md`.
+The per-language Rush tab uses that mapping plus the published original CDB to
+fetch missing EN/FR/JP fields, without a separate Rush source checkout. Existing
+translations are preserved. `AutoPR.py rush-refresh --offline` skips web text
+queries (repository pulling is separately controlled by `--no-pull-first`). See
 [Rush pre-release cards](RUSH_PRE_RELEASE.md).

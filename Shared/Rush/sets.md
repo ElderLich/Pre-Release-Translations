@@ -1,0 +1,187 @@
+# Upcoming
+https://yugipedia.com/wiki/Category:Rush_Duel_cards
+
+- **December 20, 2024**: Elemental HERO Duel Set (RD/JF25-JP): `120281XXX`
+- **December 21, 2024**: Rush Duel Promotion Pack 2025 (RD/25PR-JP): `120276XXX`
+- **January 1, 2025**: Special Victory Pack (RD/S244-JP): `120282XXX`
+- **January 11, 2025**: Triple Build Pack: Evolution Impact (RD/TB02-JP): `120274XXX`
+- **February 8, 2025**: Galactica of Eternity (RD/KP20-JP): `120277XXX`
+- **March 8, 2025**: Structure Deck: Chimeratech Cyber (RD/SD0C-JP): `120278XXX`
+- **March 8, 2025**: Structure Deck: Harpie Lady Sisters (RD/SD0D-JP): `120279XXX`
+- **April 26, 2025**: Structure Deck: Black Magic Ritual (RD/SD0E-JP): `120280XXX`
+- **April 12, 2025**: 5th ANNIVERSARY PACK (RD/5TH1-JP): `120283XXX`
+- **April 1, 2025**: GALAXY CUP 2025 Pack (RD/GC25-JP): `120284XXX`
+- **May 31, 2025**: Accel Road of the Attack (RD/KP21-JP): `120285XXX`
+- **May 31, 2025**: 5th SPECIAL PACK (RD/5THS-JPA): `120286XXX`
+- **July 12, 2025**: Advance Pack Devils ??? (RD/AP01-JP): `120287XXX`
+- **April 1, 2025**: Special Victory Pack (RD/S251-JP): `120288XXX`
+- **July 1, 2025**: Special Victory Pack (RD/S252-JP): `120289XXX`
+- **August 9, 2025**: ??? (RD/KP22-JP): `120290XXX`
+- **August 7, 2025**: ??? 7-Eleven Collaboration Campaign (RD/711E-JP): `120292XXX`
+- **September 20, 2025**: Structure Deck: ??? (RD/SD0F-JP): `120291XXX`
+- **October 18, 2025**: Over Rush Pack 3 (RD/ORP3-JP): `120293XXX`
+- **November 29, 2025**: Gias Charge of the Nova (RD/KP23-JP): `120294XXX`
+- **October 1, 2025**: Special Victory Pack (RD/S253-JP): `120295XXX`
+- **???, 2026**: ??? (RD/26PR-JP): `120296XXX`
+- **November 29, 2025**: 5th SPECIAL PACK Vol.2 (RD/5THS-JPB): `120297XXX`
+- **January 10, 2026**: Advance Pack Revenge Hearts (RD/AP02-JP): `120298XXX`
+- **December 20, 2026**: Duel Links (RD/DL01-JP): `120299XXX`
+- **February 14, 2026**: Overforce of the Abyss (RD/KP24-JP): `120300XXX`
+- **April 11, 2026**: Over Rush Pack 4 (RD/ORP4-JP): `120301XXX`
+- **January 25, 2026**: Fans Meeting (RD/FM01-JP): `1203020XX`
+- **April 1, 2024**: Special Victory Pack (RD/S241-JP): `1203021XX`
+- **July 1, 2024**: Special Victory Pack (RD/S242-JP): `1203022XX`
+- **January 1, 2026**: Special Victory Pack (RD/S254-JP): `1203023XX`
+- **January 1, 2026**: Battle Pack 2025 Vol.4 (RD/B254-JP): `1203024XX`
+- **May 2, 2026**: Galaxy Cup 2026 Area Representative Match participation card (RD/GC26-JP): `120303XXX`
+- **May 23, 2026**: Rising of the Aurora (RD/KP25-JP): `120304XXX`
+- **July 11, 2026**: Advance Pack: Union Base (RD/AP03-JP): `120305XXX`
+- **August 22, 2026**: Headliner of Reigning (RD/KP26-JP): `120306XXX`
+- **October 10, 2026**: Limited Pack Remastered Edition (RD/LP01-JP): `120307XXX`
+- **July 11, 2026**: RUSH DUEL Special Pack 2026 Vol.1 (RD/26S1-JP): `120308XXX`
+- **October 10, 2026**: CROSS ART COLLECTION (RD/CA01-JP): `120309XXX`
+
+# Archived
+- **April 3, 2020** : Saikyō Jump May 2020 promotional card (RD/SJMP-JP) : `120100XXX`
+- **April 4, 2020** : Starter Deck Rook - Explosive Supremacy! Dragears!! (RD/ST02-JP): `120110XXX`
+- **April 4, 2020** : Starter Deck Set - Yuga vs. Rook (RD/VS01-JP) : `120115XXX`
+- **April 4, 2020** : Starter Deck Yuga - Cut Through! Sevens Road!! (RD/ST01-JP): `120105XXX`
+- **April 11, 2020** : Deck Mod Pack: Hyperspeed Rush Road!! (RD/KP01-JP) : `120120XXX`
+- **April 27, 2020** : Weekly Shōnen Jump 2020, Issue 21–22 promotional card (RD/WJMP-JP): `120106XXX`
+- **June 4, 2020**: Saikyō Jump July 2020 promotional card (RD/SJMP-JP): `120135XXX`
+- **July 30, 2020** : Victory Pack Legendary Red-Eyes (RD/VJMP-JP): `120125XXX`
+- **August 1, 2020**: Deck Mod Pack: Shocking Lightning Attack!! (RD/KP02-JP): `120130XXX`
+- **September 18, 2020**: Rush Road Guide promotional cards (RD/JB01-JP): `120108XXX`
+- **September 19, 2020**: Character Pack - Gavin/Roa/Romin (RD/CP01-JP): `120140XXX`
+- **October 1, 2020**: Saikyō Jump November 2020 promotional card (RD/SJMP-JP): `120109XXX`
+- **October 28, 2020**: Yu-Gi-Oh! SEVENS Duel-1 Blu-ray & DVD promotional card (RD/BD01-JP): `120107XXX`
+- **November 14, 2020**: Deck Mod Pack: Illusion Strike Mirage Impact!! (RD/KP03-JP): `120145XXX`
+- **December 12, 2020**: Maximum Ultra Enhancement Pack (RD/MAX1-JP): `120150XXX`
+- **December 28, 2020**: Yu-Gi-Oh! SEVENS Duel-2 Blu-ray & DVD promotional card (RD/BD02-JP): `120111XXX`
+- **January 16, 2021**: "Amabie-San" Present Campaign (RD/21CC-JP): `120165001`
+- **February 4, 2021**: Saikyō Jump March 2021 promotional card (RD/SJMP-JP): `120109XXX`
+- **February 13, 2021**: Deck Mod Pack: Destined Power Destruction!! (RD/KP04-JP): `120155XXX`
+- **March 20, 2021**: Rush Duel Starter Deck Enhancement Pack (RD/P003-JP): `120175XXX`
+- **March 22, 2021**: Battle Pack Vol.1 (RD/B001-JP): `120160XXX`
+- **April 24, 2021**: Deck Mod Pack: Dynamic Eternal Live!! (RD/KP05-JP): `120170XXX`
+- **April 30, 2021**: Yu-Gi-Oh! SEVENS Luke! Explosive Supremacy Legend!! Volume 1 promotional card (RD/CL01-JP): `120180XXX`
+- **May 1, 2021**: Yu-Gi-Oh! SEVENS x Akagi Nyugyo Collaboration Campaign (RD/AKG1-JP): `120121XXX`
+- **May 1, 2021**: Yu-Gi-Oh! SEVENS x Akagi Nyugyo Collaboration Campaign (RD/AKG2-JP): `120122XXX`
+- **May 26, 2021**: Yu-Gi-Oh! SEVENS Duel-3 Blu-ray & DVD promotional card (RD/BD03-JP): `120116XXX`
+- **June 1, 2021**: Battle Pack Vol.2 (RD/B002-JP): `120184XXX`
+- **June 5, 2021**: Maximum Ultra Evolution Pack (RD/MAX2-JP): `120151XXX`
+- **July 22, 2021**: 7-Eleven Campaign (RD/711A-JP): `120197XXX`
+- **July 24, 2021**: Deck Mod Pack: Fierce Thunder Storm!! (RD/KP06-JP): `120183XXX`
+- **August 4, 2021**: Saikyo Battle Pack (RD/SBP1-JP): `120193XXX`
+- **August 12, 2021**: Jump Victory Carnival Treasure Box (RD/VC21-JP): `120185XXX`
+- **August 12, 2021**: Yu-Gi-Oh! RUSH DUEL: Saikyo Battle Royale!! promotional cards (RD/G001-JP): `120181XXX`
+- **August 21, 2021**: Strongest Battle Deck +1 Bonus Card (RD/SBD0-JP): `120194XXX`
+- **August 21, 2021**: Strongest Battle Deck Asana - Pride of the Heavy Mequestrian Style (RD/SBD7-JP): `120192XXX`
+- **August 21, 2021**: Strongest Battle Deck Gakuto - Fiendish Commander Three Legions (RD/SBD3-JP): `120188XXX`
+- **August 21, 2021**: Strongest Battle Deck Luke - Dragon's Dragons (RD/SBD2-JP): `120187XXX`
+- **August 21, 2021**: Strongest Battle Deck Nail - Maximum Haven (RD/SBD6-JP): `120191XXX`
+- **August 21, 2021**: Strongest Battle Deck Roa - Demon's Rock (RD/SBD5-JP): `120190XXX`
+- **August 21, 2021**: Strongest Battle Deck Romin - Psychic Beat (RD/SBD4-JP): `120189XXX`
+- **August 21, 2021**: Strongest Battle Deck Yuga - Hyper Machine Road (RD/SBD1-JP): `120186XXX`
+- **August 25, 2021**: Yu-Gi-Oh! SEVENS Duel-4 Blu-ray & DVD promotional card (RD/BD04-JP): `120126XXX`
+- **September 18, 2021**: Extra Transcend Enhancement Pack (RD/EXT1-JP): `120196XXX`
+- **October 1, 2021**: Battle Pack Vol.3 (RD/B003-JP): `120201XXX`
+- **October 16, 2021**: Yu-Gi-Oh! SEVENS x Don Quijote Collaboration Campaign (RD/DON1-JP): `120200XXX`
+- **October 30, 2021**: Deck Mod Pack: Chaotic Omega Rising!! (RD/KP07-JP): `120199XXX`
+- **November 1, 2021**: Yu-Gi-Oh! SEVENS x Akagi Nyugyo Collaboration Campaign 2 (RD/AKG3-JP): `120123XXX`
+- **November 1, 2021**: Yu-Gi-Oh! SEVENS x Akagi Nyugyo Collaboration Campaign 2 (RD/AKG4-JP): `120124XXX`
+- **November 4, 2021**: Yu-Gi-Oh! SEVENS Luke! Explosive Supremacy Legend!! Volume 2 promotional card (RD/CL02-JP): `120202XXX`
+- **November 24, 2021**: Yu-Gi-Oh! SEVENS Duel-5 Blu-ray & DVD promotional card (RD/BD05-JP): `120195XXX`
+- **December 3, 2021**: Saikyō Jump January 2022 promotional card (RD/SJMP-JP): `120109XXX`
+- **December 11, 2021**: Gold Rush Pack (RD/GRP1-JP): `120203XXX`
+- **December 18, 2021**: Yu-Gi-Oh! Rush Duel Duel Disk (RD/DD01-JP): `120198XXX`
+- **December 28, 2021**: Victory Pack Maximal Multistrike Dragon (RD/VP02-JP): `120210XXX`
+- **January 1, 2022**: Battle Pack Vol.4 (RD/B004-JP): `120206XXX`
+- **January 29, 2022** : Deck Mod Pack: Genesis Master Road!! (RD/KP08-JP): `120205XXX`
+- **January 29, 2022**: Gold Rush Challenge Pack (RD/GRC1-JP): `120207XXX`
+- **April 1, 2022**: Battle Pack 2022 Vol.1 (RD/B221-JP): `120215XXX`
+- **April 1, 2022**: Secret Ace Pack 2022 Vol. 1 (RD/S221-JP): `120215XXX`
+- **April 4, 2022**: Saikyo Starter Deck (RD/SST1-JP): `120209XXX`
+- **April 9, 2022**: Deck Mod Pack: Galaxy of Fate!! (RD/KP09-JP): `120208XXX`
+- **April 27, 2022**: Yu-Gi-Oh! SEVENS Duel-6 Blu-ray & DVD promotional card (RD/BD06-JP): `120218001`
+- **April 29, 2022**: Go Rush Deck - Galactica Arrive (RD/GRD1-JP): `120216XXX`
+- **April 29, 2022**: Go Rush Deck - Jointech Attack (RD/GRD2-JP): `120213XXX`
+- **April 29, 2022**: Go Rush Deck Bonus Cards (RD/GRD0-JP): `120214XXX`
+- **May 2, 2022**: Yu-Gi-Oh! SEVENS Luke! Explosive Supremacy Legend!! Volume 3 promotional card (RD/CL03-JP): `120211XXX`
+- **May 2, 2022**: Yu-Gi-Oh! SEVENS My Road Academy Volume 1 promotional card (RD/BRG1-JP): `120212XXX`
+- **June 3, 2022**: Yu-Gi-Oh! Rush Duel LP Volume 1 promotional card (RD/RLP1-JP): `120219XXX`
+- **June 4, 2022**: Megaroad Pack (RD/MRP1-JP): `120217XXX`
+- **July 1, 2022**: Battle Pack 2022 Vol.2 (RD/B222-JP): `120220XXX`
+- **July 9, 2022**: Deck Mod Pack: Requiem of Destruction!! (RD/KP10-JP): `120222XXX`
+- **August 4, 2022**: Yu-Gi-Oh! GO RUSH!! x 7-Eleven Collaboration Campaign (RD/711B-JP): `1202225XX`
+- **July 17, 2022**: Jump Victory Carnival 2022 promotional card (RD/VC22-JP): `120221XXX`
+- **July 27, 2022**: Yu-Gi-Oh! SEVENS Duel-7 Blu-ray & DVD promotional card (RD/BD07-JP): `120103XXX`
+- **August 6, 2022**: Strongest Battle Deck 2022 +1 Bonus Card (RD/SD01-JPB): `1202231XX`
+- **August 6, 2022**: Strongest Battle Deck Manabu - Chemist-Meow Draw of Flames! (RD/SD04-JP): `120226XXX`
+- **August 6, 2022**: Strongest Battle Deck Yuamu - Come Forth! High Tech Dragon! (RD/SD03-JP): `120225XXX`
+- **August 6, 2022**: Strongest Battle Deck Yudias - Shining Velgariva (RD/SD01-JP): `120223XXX`
+- **August 6, 2022**: Strongest Battle Deck Yuhi - Join and Explode! Join and Intensify! (RD/SD02-JP): `120224XXX`
+- **August 6, 2022**: Strongest Battle Deck Zuwijo - Voidvelgr of the Empty Sky (RD/SD05-JP): `120227XXX`
+- **August 26, 2022**: Strongest Battle Deck Tournament 2022 prize card	(RD/SD01-JPP): `120195005`
+- **September 2022**: Yu-Gi-Oh! SEVENS Complete Challenge 3 (RD/D001-JP): `120251XXX`
+- **September 1, 2022**: Saikyō Jump September 2022 promotional card (RD/SJMP-JP): `120109XXX`
+- **October 1, 2022**: Battle Pack 2022 Vol.3 (RD/B223-JP): `120230XXX`
+- **August 3, 2023**: Yu-Gi-Oh! Card Game x 7-Eleven Collaboration Campaign (RD/711C-JP): `1202305XX`
+- **October 8, 2022**: Deck Mod Pack: Fortissimo of the Whirlwinds!! (RD/KP11-JP): `120228XXX`
+- **November 26, 2022**: Over Rush Pack (RD/ORP1-JP): `120231XXX`
+- **December 1, 2022**: Yu-Gi-Oh! RUSH DUEL: Saikyo Battle Royale!! Let's Go! Go Rush!! Galactica Victories promotional card (RD/G002-JPB): `120236XXX`
+- **December 1, 2022**: Yu-Gi-Oh! RUSH DUEL: Saikyo Battle Royale!! Let's Go! Go Rush!! Special Edition promotional cards (RD/G002-JP): `120229XXX`
+- **December 2, 2022**: Yu-Gi-Oh! GO RUSH!! Volume 1 promotional card (RD/CGR1-JP): `120233XXX`
+- **December 17, 2022**: Rush Duel Promotion Pack 2023 (RD/23PR-JP): `120234XXX`
+- **December 17, 2022**: Yu-Gi-Oh! Rush Duel Duel Disk Yudias Version (RD/DD02-JP): `120232XXX`
+- **January 1, 2023**: Battle Pack 2022 Vol.4 (RD/B224-JP): `120237XXX`
+- **January 1, 2023**: Battle Pack 2023 Vol.1 (RD/B221-JP): `120241XXX`
+- **January 4, 2023**: Yu-Gi-Oh! Rush Duel LP Volume 2 promotional card (RD/RLP2-JP): `120101XXX`
+- **January 21, 2023**: Deck Mod Pack: Double Star of the Assault!! (RD/KP12-JP): `120235XXX`
+- **January 25, 2023**: Yu-Gi-Oh! GO RUSH!! Duel-2 Blu-ray & DVD promotional card (RD/BDG2-JP): `120218004`
+- **March 4, 2023**: Legend Awakening Pack (RD/LGP1-JP): `120238XXX`
+- **April 3, 2023** The Dinosaur Expo 2023 Promotion Pack (RD/DEC1-JP): `120243XXX`
+- **April 8, 2023**: Versus Pack Maximum Force (RD/VSP1-JP): `120239XXX`
+- **April 20, 2023**: Excutie Duel Set (RD/JF23-JP): `120242XXX`
+- **May 13, 2023**: Oblivion of the Flash (RD/KP13-JP): `120244XXX`
+- **April 1, 2023**: Battle Pack 2023 Vol.1 (RD/B231-JP): `120241XXX`
+- **June 2, 2023**: Yu-Gi-Oh! GO RUSH!! Volume 2 promotional card (RD/CGR2-JP): `120245001`
+- **June 6, 2023**: Coco's x Yu-Gi-Oh! Card Game Anniversary Campaign 2 (RD/CCC1-JP): `1202465XX`
+- **June 24, 2023**: Triple Build Pack: Godbreath Wing (RD/TB01-JP): `120247XXX`
+- **July 1, 2023**: Battle Pack 2023 Vol.2 (RD/B232-JP): `120250XXX`
+- **July 27, 2023**: Jump Victory Carnival 2023 promotional card (RD/VC23-JP): `120248XXX`
+- **August 11, 2023**: Phoenix of the Roaring Flame (RD/KP14-JP): `120249XXX`
+- **September 30, 2023**: Structure Deck: Ultimate Blue-Eyes Legend (RD/SD0A-JP): `120252XXX`
+- **October 1, 2023**: Rush Duel Card Game Gum (RD/ECG1-JP): `120102XXX`
+- **October 1, 2023**: Battle Pack 2023 Vol.3 (RD/B233-JP): `120104XXX`
+- **October 14, 2023**: Megaroad Pack 2 (RD/MRP2-JP): `120246XXX`
+- **November 1, 2023**: Tournament Battle November 2023 prize card (RD/S23P-JP): `120113XXX`
+- **November 11, 2023**: Red Reboot of Darkness (RD/KP15-JP): `120253XXX`
+- **December 4, 2023** Yu-Gi-Oh! GO RUSH!! Volume 3 promotional card (RD/CGR3-JP): `120245002`
+- **December 16, 2023**: High-Grade Collection (RD/HC01-JP): `120254XXX`
+- **December 16, 2023**: Rush Duel Promotion Pack 2024 (RD/24PR-JP): `120256XXX`
+- **January 1, 2024**: Battle Pack 2023 Vol.4 (RD/B234-JP): `120258XXX`
+- **February 2, 2024**: Saikyō Jump March 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **February 3, 2024**:The Legend of Duelist PROMOTION PACK (RD/TDPR-JP): `120259XXX`
+- **February 10, 2024**: Transam of Transcendence (RD/KP16-JP): `120257XXX`
+- **April 1, 2024**: "Duelist Kingdom: Earn Star Chips!" Limited Pack (RD/DK01-JP): `120255XXX`
+- **April 1, 2024**: Saikyō Jump April 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **April 6, 2024**: Over Rush Pack 2 (RD/ORP2-JP): `120260XXX`
+- **May 2, 2024**: Saikyō Jump June 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **May 11, 2024**: Burst Rex of Awakening (RD/KP17-JP): `120261XXX`
+- **May 18, 2024**: Galaxy Cup 2024 Area Representative Match participation card (RD/GC24-JP): `120262XXX`
+- **June 4, 2024**: Saikyō Jump July 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **June 4, 2024**: Yu-Gi-Oh! GO RUSH!! Volume 4 promotional card (RD/CGR4-JP): `120245003`
+- **July 4, 2024**: Saikyō Jump August 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **July 13, 2024**: Structure Deck: Birth of Hero (RD/SD0B-JP) `120263XXX`
+- **July 21, 2024**: Jump Victory Carnival 2024 promotional card (RD/VC24) `120267XXX`
+- **August 2, 2024**: Saikyō Jump September 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **August 10, 2024**: Dark Matter of Phantoms (RD/KP18-JP): `120264XXX`
+- **September 4, 2024**: Saikyō Jump October 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **October 1, 2024**: Special Victory Pack (RD/S243-JP): `120273XXX`
+- **October 4, 2024**: Saikyō Jump November 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **October 12, 2024**: Neo Legend Awakening Pack (RD/LGP2-JP): `120271XXX`
+- **November 1, 2024**: Saikyō Jump December 2024 promotional card (RD/SJMP-JP): `120109XXX`
+- **November 16, 2024**: Salamandeus of Scorching (RD/KP19-JP): `120272XXX`
+- **December 3, 2024**: Coco's x Yu-Gi-Oh! Card Game Anniversary Campaign 2024 Part 2 (RD/CCC2-JP): `120275XXX`
+- **December 4, 2024**: Saikyō Jump January 2025 promotional card (RD/SJMP-JP): `120109XXX`

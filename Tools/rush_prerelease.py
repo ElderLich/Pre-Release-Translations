@@ -110,7 +110,7 @@ def local_inputs_sha256(repo_root: Path | str) -> str:
     root = Path(repo_root)
     paths = [root / "Tools/rush_prerelease.py", root / "Shared/Rush/config.json",
              root / "Tools/rush_source_text.py", root / "Shared/Rush/source_mappings.json",
-             root / ".github/scripts/card_text_autofill.py",
+             root / ".github/scripts/card_text_autofill.py", root / ".github/scripts/codexygo_source.py",
              root / "Tools/PromptPatcher.py", root / "Shared/Mappings.csv",
              root / ".github/scripts/shared_mappings.py", root / ".github/scripts/tcg_autopr.py"]
     paths += list((root / "Shared/Rush Artworks").glob("*"))
@@ -307,6 +307,9 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
                 languages: list[str], fetch_source_text: bool = False) -> dict:
     config = read_json(root / "Shared/Rush/config.json", {})
     excluded = {int(card_id): int(target) for card_id, target in config.get("retired_redirects", {}).items()}
+    # Publish just the identity ranges so translators need no upstream checkout.
+    if (source / "sets.md").is_file():
+        write_changed(root / "Shared/Rush/sets.md", (source / "sets.md").read_bytes())
     source_datas, source_texts = read_cdb(source / "RD Patch.cdb")
     datas = {key: row for key, row in source_datas.items() if key not in excluded}
     texts = {key: source_texts[key] for key in datas}

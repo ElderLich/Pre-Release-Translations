@@ -49,6 +49,10 @@ LOCAL_ROOT_ENV = "SUPER_PRE_LOCAL_ROOT"
 LOCAL_MAPPINGS_FILE = "Mappings.csv"
 
 
+def child_creationflags() -> int:
+    return getattr(subprocess, "CREATE_NO_WINDOW", 0) if os.environ.get("TRANSSUPERPRE_GUI") == "1" else 0
+
+
 def log(message: str) -> None:
     print(f"[local-workspace] {message}")
 
@@ -65,7 +69,7 @@ def run(
     env: dict[str, str] | None = None,
 ) -> subprocess.CompletedProcess:
     log("$ " + " ".join(cmd))
-    result = subprocess.run(cmd, cwd=str(cwd), env=env)
+    result = subprocess.run(cmd, cwd=str(cwd), env=env, creationflags=child_creationflags())
     if check and result.returncode != 0:
         raise SystemExit(result.returncode)
     return result
@@ -185,14 +189,14 @@ def pull_workspace_to_local(args: argparse.Namespace) -> list[Path]:
 
 
 def ensure_no_staged_changes(repo_root: Path) -> None:
-    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=str(repo_root))
+    result = subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=str(repo_root), creationflags=child_creationflags())
     if result.returncode != 0:
         fail("repo already has staged changes; commit or unstage them before using --push")
 
 
 def ensure_main_branch(repo_root: Path) -> None:
     branch = subprocess.run(["git", "branch", "--show-current"], cwd=repo_root,
-                            capture_output=True, text=True, check=True).stdout.strip()
+                            capture_output=True, text=True, check=True, creationflags=child_creationflags()).stdout.strip()
     if branch != "main":
         fail(f"Switch TransSuperpre to main before publishing or refreshing (current branch: {branch or 'detached HEAD'}).")
 
@@ -204,7 +208,7 @@ def commit_and_push(args: argparse.Namespace, paths: list[Path]) -> None:
     rel_paths = [repo_relative(repo_root, path) for path in paths]
     run(["git", "add", "-A", "--", *rel_paths], repo_root)
 
-    diff_result = subprocess.run(["git", "diff", "--cached", "--quiet", "--", *rel_paths], cwd=str(repo_root))
+    diff_result = subprocess.run(["git", "diff", "--cached", "--quiet", "--", *rel_paths], cwd=str(repo_root), creationflags=child_creationflags())
     if diff_result.returncode == 0:
         log("no new workspace changes to commit; retrying publication of main")
         run(["git", "push", "origin", "main"], repo_root)
@@ -313,7 +317,7 @@ def command_actions(args: argparse.Namespace) -> None:
         '.[] | [.databaseId,.name,.event,.status,(.conclusion//""),.headSha[0:7],.createdAt] | @tsv',
     ]
     log("$ " + " ".join(cmd))
-    result = subprocess.run(cmd, cwd=str(Path(args.repo_root).expanduser()), text=True, capture_output=True)
+    result = subprocess.run(cmd, cwd=str(Path(args.repo_root).expanduser()), text=True, capture_output=True, creationflags=child_creationflags())
     if result.stdout:
         print(result.stdout, end="")
     if result.returncode != 0:
@@ -353,7 +357,7 @@ def command_rush(args: argparse.Namespace) -> None:
 
 def pull_clean_translator_repo(repo_root: Path) -> None:
     status = subprocess.run(["git", "status", "--porcelain"], cwd=repo_root,
-                            capture_output=True, text=True, check=True)
+                            capture_output=True, text=True, check=True, creationflags=child_creationflags())
     if status.stdout.strip():
         fail("TransSuperpre has uncommitted changes. Commit or review them first; Rush refresh does not stash, reset or discard work. "
              "Use --no-pull-first only when intentionally working with the current local repository.")
@@ -369,7 +373,7 @@ def command_rush_refresh(args: argparse.Namespace) -> None:
         pull_clean_translator_repo(repo_root)
     try:
         refresh_locale(repo_root, local_root, RUSH_LANGS[args.lang].folder,
-                       keep_local=args.keep_local, log=log)
+                       keep_local=args.keep_local, fetch_text=not args.offline, log=log)
     except (ValueError, OSError) as error:
         fail(str(error))
 
@@ -431,6 +435,7 @@ def build_parser() -> argparse.ArgumentParser:
     rush_refresh.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
     rush_refresh.add_argument("--no-pull-first", action="store_false", dest="pull_first", help="Use the current local TransSuperpre checkout without fetching")
     rush_refresh.add_argument("--keep-local", action="store_true", help="After reviewing sync.json, explicitly retain local text when both sides changed")
+    rush_refresh.add_argument("--offline", action="store_true", help="Refresh the published workspace without querying card text websites")
     rush_refresh.set_defaults(func=command_rush_refresh, pull_first=True)
 
     rush_upload = subparsers.add_parser("rush-upload", help="Copy one locale's Rush translations into the repository")

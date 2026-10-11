@@ -74,7 +74,7 @@ def normalize_lang(value: str | None) -> str | None:
     return None
 
 
-def detect_lang() -> str:
+def detect_lang(*, gui: bool = False) -> str:
     env_lang = normalize_lang(os.environ.get(LANG_ENV_NAME))
     if env_lang:
         return env_lang
@@ -83,6 +83,21 @@ def detect_lang() -> str:
     if folder_lang:
         return folder_lang
 
+    if gui:
+        import tkinter as tk
+        from tkinter import simpledialog
+        root = tk.Tk()
+        root.withdraw()
+        try:
+            while True:
+                value = simpledialog.askstring("TransSuperpre", "Card language: " + ", ".join(SUPPORTED_LANGS.values()), parent=root)
+                if value is None:
+                    raise SystemExit(0)
+                lang = normalize_lang(value)
+                if lang:
+                    return lang
+        finally:
+            root.destroy()
     print("Could not detect the language from the folder name.")
     print("Put this file inside a folder named one of:")
     print("  " + ", ".join(sorted(SUPPORTED_LANGS.values())))
@@ -116,7 +131,24 @@ def repo_from_config() -> Path | None:
     return Path(value).expanduser() if value else None
 
 
-def prompt_repo_root() -> Path:
+def prompt_repo_root(*, gui: bool = False) -> Path:
+    if gui:
+        import tkinter as tk
+        from tkinter import filedialog, messagebox
+        root = tk.Tk()
+        root.withdraw()
+        try:
+            while True:
+                value = filedialog.askdirectory(parent=root, title="Select TransSuperpre repository")
+                if not value:
+                    raise SystemExit(0)
+                repo_root = Path(value)
+                if is_valid_repo(repo_root):
+                    save_config(repo_root)
+                    return repo_root
+                messagebox.showerror("TransSuperpre", "This folder does not contain Tools/local_workspace.py.", parent=root)
+        finally:
+            root.destroy()
     print("TransSuperpre repo path was not found.")
     print("Paste the folder that contains Tools\\local_workspace.py.")
     while True:
@@ -131,13 +163,13 @@ def prompt_repo_root() -> Path:
         print(f"Could not find Tools\\local_workspace.py under: {repo_root}")
 
 
-def resolve_repo_root(*, force_prompt: bool = False) -> Path:
+def resolve_repo_root(*, force_prompt: bool = False, gui: bool = False) -> Path:
     if force_prompt:
-        return prompt_repo_root()
+        return prompt_repo_root(gui=gui)
     for candidate in (repo_from_env(), repo_from_config(), *COMMON_REPO_PATHS):
         if candidate and is_valid_repo(candidate):
             return candidate
-    return prompt_repo_root()
+    return prompt_repo_root(gui=gui)
 
 
 def run_tool(*args: str) -> int:
@@ -179,10 +211,31 @@ def menu(lang: str) -> str:
     return input("Option: ").strip()
 
 
+def gui_requested(argv=None) -> bool:
+    argv = sys.argv if argv is None else argv
+    return len(argv) == 1 or argv[1].lower() == "gui"
+
+
+def relaunch_windowless() -> bool:
+    """Only relaunch our GUI process; CLI commands keep their normal console."""
+    if os.name != "nt" or not gui_requested() or Path(sys.executable).stem.lower().startswith("pythonw"):
+        return False
+    executable = Path(sys.executable).with_name("pythonw.exe")
+    if not executable.is_file():
+        return False
+    subprocess.Popen([str(executable), str(Path(__file__).resolve()), *sys.argv[1:]],
+                     cwd=SCRIPT_DIR, creationflags=subprocess.CREATE_NO_WINDOW,
+                     stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    return True
+
+
 def main() -> int:
-    lang = detect_lang()
-    if len(sys.argv) == 1 or sys.argv[1].lower() == "gui":
-        repo_root = resolve_repo_root()
+    if relaunch_windowless():
+        return 0
+    gui = gui_requested()
+    lang = detect_lang(gui=gui)
+    if gui:
+        repo_root = resolve_repo_root(gui=True)
         sys.path.insert(0, str(repo_root / "Tools"))
         from prerelease_gui import launch
         launch(repo_root, LOCAL_ROOT, lang)
@@ -263,6 +316,15 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         print("\nCancelled.")
         exit_code = 130
+    except Exception as error:
+        if not gui_requested():
+            raise
+        import tkinter as tk
+        from tkinter import messagebox
+        root = tk.Tk()
+        root.withdraw()
+        messagebox.showerror("TransSuperpre", str(error), parent=root)
+        root.destroy()
     finally:
         pause_if_menu()
     raise SystemExit(exit_code)
