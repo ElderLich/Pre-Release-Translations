@@ -1,6 +1,122 @@
 {
   "language": "fr",
   "matches": {},
-  "requested_ids": [],
-  "unresolved": []
+  "requested_ids": [
+    120310004,
+    120310005,
+    120310006,
+    120310007,
+    120310013,
+    120310014,
+    120310015,
+    120310016,
+    120310017,
+    120310018,
+    120310019,
+    120310037,
+    120310038,
+    120310045,
+    120310048,
+    120310052,
+    120310061,
+    120310062,
+    120310063
+  ],
+  "unresolved": [
+    {
+      "id": 120310004,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP004"
+    },
+    {
+      "id": 120310005,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP005"
+    },
+    {
+      "id": 120310006,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP006"
+    },
+    {
+      "id": 120310007,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP007"
+    },
+    {
+      "id": 120310013,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP013"
+    },
+    {
+      "id": 120310014,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP014"
+    },
+    {
+      "id": 120310015,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP015"
+    },
+    {
+      "id": 120310016,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP016"
+    },
+    {
+      "id": 120310017,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP017"
+    },
+    {
+      "id": 120310018,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP018"
+    },
+    {
+      "id": 120310019,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP019"
+    },
+    {
+      "id": 120310037,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP037"
+    },
+    {
+      "id": 120310038,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP038"
+    },
+    {
+      "id": 120310045,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP045"
+    },
+    {
+      "id": 120310048,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP048"
+    },
+    {
+      "id": 120310052,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP052"
+    },
+    {
+      "id": 120310061,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP061"
+    },
+    {
+      "id": 120310062,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP062"
+    },
+    {
+      "id": 120310063,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP063"
+    }
+  ]
 }

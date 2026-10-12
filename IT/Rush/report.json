@@ -1,14 +1,216 @@
 {
-  "active_cards": 91,
-  "artwork_files": 89,
+  "active_cards": 55,
+  "artwork_files": 36,
   "excluded_ids": [
     120307059,
     120307060
   ],
   "missing_artwork": [
-    120309029
+    120310004,
+    120310005,
+    120310006,
+    120310007,
+    120310013,
+    120310014,
+    120310015,
+    120310016,
+    120310017,
+    120310018,
+    120310019,
+    120310037,
+    120310038,
+    120310045,
+    120310048,
+    120310052,
+    120310061,
+    120310062,
+    120310063
   ],
-  "pending_translations": [],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310004,
+      "name": "接合科技P打孔机"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310005,
+      "name": "接合科技B赛车"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310006,
+      "name": "接合科技王牌备品"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310007,
+      "name": "接合科技守护者"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str4",
+        "str5"
+      ],
+      "id": 120310013,
+      "name": "疯狂犯罪者·兔女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str11",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str8",
+        "str9"
+      ],
+      "id": 120310014,
+      "name": "疯狂犯罪者·松鼠女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str11",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str8",
+        "str9"
+      ],
+      "id": 120310015,
+      "name": "疯狂犯罪者·羊驼女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str4"
+      ],
+      "id": 120310016,
+      "name": "疯狂犯罪者·净洁女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str4"
+      ],
+      "id": 120310017,
+      "name": "疯狂犯罪者·鱼女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str4"
+      ],
+      "id": 120310018,
+      "name": "疯狂犯罪者·猴女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310019,
+      "name": "疯狂犯罪者·华丽女士"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310037,
+      "name": "接合科技无双英雄"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310038,
+      "name": "接合科技究极战士"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310045,
+      "name": "凭依装着-奥丝"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310048,
+      "name": "接合科技再接合"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str4"
+      ],
+      "id": 120310052,
+      "name": "超自然保护机关 疯狂犯罪"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310061,
+      "name": "接合科技弹射装置"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3"
+      ],
+      "id": 120310062,
+      "name": "疯狂犯罪者干扰"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310063,
+      "name": "疯狂犯罪者骇入"
+    }
+  ],
   "published_source_fields": {
     "120000011": {
       "name": "f7e1ed0dab23368b3037a42420ea34bd7537d016bdde6bad933364a4a50f002f"
@@ -1187,12 +1389,9 @@
     "120309061": "b02cf197226131e18649dc0e7fb670e02ad4c71c49a37cd967154fad17dc3798",
     "120309085": "6bc464523e05ce3a7d465ccdc13d38432dfc4c1528f8dfa8d689f97bab4f741a"
   },
-  "script_files": 106,
-  "source_cards": 93,
+  "script_files": 70,
+  "source_cards": 57,
   "text_sha256": {
-    "120000011": "d99868dd54d766b581d7430b365aff348cd1395d2d8aa2e5a77f76a76d7403ac",
-    "120109067": "f97a0e21c450d89a786cc2c3199887e6563707888bba2b5b77d845a30f9647fd",
-    "120109068": "f1ede6bfce933d45a75827b791d5f6968b57ddc404063291d38146fd6e4dfc80",
     "120307001": "c376e6acef724feffb22fa72c2b14fa7242b6be77d1b8a7efe8ad6df9aaf2184",
     "120307002": "636825ec6a83156200fa69af3e1e53baefc7f66292e271677cb80cc8dc452047",
     "120307003": "8ff1713f54643492b770842ab6a007ace71de01e6a523a8216e91d6af473a502",
@@ -1229,57 +1428,24 @@
     "120307034": "d74034c940e81231467545a34f43a99e86913c58075732e0642876b4e022a37c",
     "120307035": "5f6084e1d2792ebcddc686535a7b137ac399cb2771f2e02612a97856133d3ec4",
     "120307057": "7f0ffcdde5b3302f2e8286b94714a3175a78d34af59e00565369846dab35e1be",
-    "120309001": "13d80780f8470c3144f1d0980764dae540885be1555e18d634d850f15c3d8313",
-    "120309002": "afbbe8d91a7de300cdd2e105c6ecaf6f04fb6090bdef36783a34eca43a71e1f6",
-    "120309006": "34252591905eb6d3a02efea5852ca72a040d8b17e9c37f61ac9183f9b4747f63",
-    "120309008": "9261197e684c8e5456f690cada2aa092415a2230f15ccd5a38f201c538399524",
-    "120309011": "72a9b043b611d51109029b4defb161b98ed6c57f97e558cd5fc6cfda1c083e38",
-    "120309012": "96e704ba46a03d195b77801e890df82134ad169e2151067fa7c97515bd584031",
-    "120309013": "87b604867502784443db7f6904ab168f4f9dc791d9a1d78275bbc29416a63b01",
-    "120309015": "7814e03e94ee13a7bfa6a4251ccb8d0f226fec052549a25018acc75ac46d7958",
-    "120309016": "92af511f2c312f681c3662a8c716800edf18f5b8316e1753343032caad27a283",
-    "120309017": "8fff08c88d92b8134753d69373774ec613f40dd4ddaf62b5238e2a77a8b202bf",
-    "120309019": "fd05f64df8f462ef6346c23b2e227f2ec938055c51e163b9f145e4fc0fbcafc2",
-    "120309021": "3790625e813d07cf88904ce9bc62c52231965a539abdf0bd0156b06a71aa0385",
-    "120309022": "48f3a386bd8952c539d934e53900ac2f256f5e3c31f9011313489a0d1c50fbfe",
-    "120309024": "ec7be0fa48203cf0eec18b7a577852beed94bef7091d1564b4899227a62667c2",
-    "120309025": "6b7e1609a39f4b02a8bcea388a126a4d00d1612a672a5e4c092bee71cd0f73b8",
-    "120309026": "c0366d48d9a40de3b18cae5dae4d092e03123dbaf1fafd1666d9e487e292f3c5",
-    "120309027": "8bea1bc0e8bebc19cf49ac890f87c2eb3a91b6039c0f3ba20501fd0c2428d7e5",
-    "120309028": "735263dbbb4a6f8be56ca21ad8eca93463f231a86b97e4791583ea30bef11edb",
-    "120309029": "ac34b809e340ef46993699ad738935daeb5c2a2b8395270ae15955585fe69c8f",
-    "120309030": "3760612659e6f2fab26651b56517039957c71b769a413e5f02917cb8674668a4",
-    "120309031": "faf9e5b968914cdaab63f9364693904c7f0234e3a4d063d5915b882b96cde54c",
-    "120309032": "cb3eaa5e66380c6da83418b5659d269fee9f9212e0ba9e62b464ccccc6a42b89",
-    "120309033": "d81df96c21db5942df0630eeeeca01281a55c32dbcbd519e4bde78593a510ddd",
-    "120309034": "1d41418b89ef3bfc5a2b0e94f3c4a43d857bb994102e2641cbc7bca6df00e6ee",
-    "120309035": "592e22b179e0a399c52a979429362de6cb5afbd1664e08a2b8f8c673244e6c4a",
-    "120309036": "9092007bda8cf56d6e694d3ec4a3085bc9df68ea045785db6009bb933348cdc4",
-    "120309037": "ac48299da9758f4ed53ff8894a698e4378a0d98681f3579127d9e00637d0382c",
-    "120309038": "ac87e45301042ce2166ab9b8109252d057697ebfd45efe99594b03fd58d88d91",
-    "120309039": "7e8e3a153f16093c6f3c6de62c10c6497eab5d00a68f51068786a5e5e302d667",
-    "120309040": "87cb658e9da7bc4f76fb5f3d8a76774d1c8b4d55ce39513622bfc30370dedfea",
-    "120309041": "9c5ad2ec11bdee871c5f6cfeda4c9c4860b524577940bbcce4aa1da24e76114c",
-    "120309042": "a3b946c629e36bacf5facb44732e1d5269a184cdf1359e274ea483ccbd1f05af",
-    "120309043": "ef20d3633d1fda9b6cbadb554c08796efe947f632e7bd0beb996e8ed23796d1f",
-    "120309044": "7d8aebe7476f11a84810fa9de3a365b067fd6a401a4a5e8e5a7799a7c42b3985",
-    "120309045": "45a6b6af06908bd9140f5d6e037d6e983c3df51bfdf2f2ecd319836b50f19b1a",
-    "120309046": "be4e39be7f817413208fcc0d10f7521fffbb241ca895311431ad2bf414b2995c",
-    "120309047": "b0b94530ef9ec547b84b4afad085f412918ad020125538feda574d849084a5de",
-    "120309048": "6836c44061862f27e727642d4d8505b11d1c575736c7708a929006ef1bc6ddad",
-    "120309049": "e49b6830acc023c17472b0f3c123d12209ad10f6affd98c4ae94a4f1ada9826b",
-    "120309050": "5c29f73b630574050f00ef7f2f8f796ccc436702434769bade01a86d70e952bc",
-    "120309051": "bbc690ab5decf1d59dcddc66783a1d7c58205d9802141484c8ec5dde86fa2cf7",
-    "120309052": "1d735d055f88b9965a786c15f2f1ccced1af0b882ee07ab9a334dd36cb6cc4f1",
-    "120309053": "7f9d05c5c05bfdd2a58f3f5f32f14e7403a37dff6660626b69c84f41d0d80f83",
-    "120309054": "687025905cf1c82d89364b1bd8ffe4adfcf047f3ef7747e2e3ca58e1de5b9815",
-    "120309055": "d165e81fd3b6b20035285051d37efc4c73e823d87b0674b0745faef947b1643d",
-    "120309056": "33abe68ea1dceba360c3af5462b2a6d24934ca17116fccb4d2525dfe2e11ed8f",
-    "120309057": "bf0d1411c72a9f1ca9d93d1f0c697173a6f4a28f2b6a87710c61479465b4c5af",
-    "120309058": "3573131866ca27efa470747f5b1cda9dbd03f2ce3dc0bc7387abf1b164494c68",
-    "120309059": "6daed20602ae26729898e3291eb9022f851809d4942344a3ff28c657ed1e34f1",
-    "120309060": "8d3c536b0836bd8c871cba9e423288afc12932da111069fdd6888a5123815137",
-    "120309061": "b02cf197226131e18649dc0e7fb670e02ad4c71c49a37cd967154fad17dc3798",
-    "120309085": "6bc464523e05ce3a7d465ccdc13d38432dfc4c1528f8dfa8d689f97bab4f741a"
+    "120310004": "135952e51ab2d70350070e57f054d13ea73a3f616f74f14509bdb8b2c14931c8",
+    "120310005": "82fb907ee45096b43cc2ef2cc4551543ea32b70e3f259e4915abae2ed3220235",
+    "120310006": "71e92eeffe267beda25b1f1ac8e397add52e1beaf4b059e249d78eb78a7a73f0",
+    "120310007": "d584dc781b26b6f3a93d6e778ea9a8cec225d107c61d4903c33e120709e98c0c",
+    "120310013": "fbcd6fb83835052ae1eb7d3cbe6771b110b70ab6bad944c276ae59bfa2ebaa45",
+    "120310014": "5456bba12b14ff21596104dad535b53399ca320e34bb0348b51d48aaa5e189e2",
+    "120310015": "c48470b690a7ddcbded56bfef8322f70199e7ca33cc5295880ff068da13439ff",
+    "120310016": "aeb23067475906d4dfbca4802f0a54f8a708fff762a0a61c58eee204255bed79",
+    "120310017": "29204c6c24b68e9e2c97e696b13d159382416641e00e1b03a45fd0c7ed42826e",
+    "120310018": "324360f0c160c038635ed8dcbcbdc33c24b517680bab47a6c65bd0674987aa43",
+    "120310019": "78caf94b4fefaf0ae117913dddf15d1d0ac902eed3f5f621264bf96133eabe42",
+    "120310037": "3c32e45ec07ecb7cb222f35bc70911a1adfd3b11b4297962de4a6bb426b733bc",
+    "120310038": "0e0956e82c4362f1612a4689763545c8cc678ee9e4f98e477f601174bd38f10b",
+    "120310045": "bfc4e92f27b7757cbec42ac49cb2bc78326eb3dc514fb8199a6d3ab3435f1e56",
+    "120310048": "a72465afd63ab4f7051fa8fcd4c71091c25b9e8aead57c30f8c8fa9c9b013035",
+    "120310052": "ae679f5569e6adddae4e7ff6190a0c1bf97af6be32e648f54e20842dd4611a43",
+    "120310061": "49e04c54fb4f3c4f2a135b4d40736c5823284fddd8814922bade064b0509588a",
+    "120310062": "1a458cf37ece19fa828f7a0481d8dd78ad1c96af567c005906a42a83e2ec2c1f",
+    "120310063": "976c46f8caa9f4071b24a2571e70776ce2605ca464a28ffe02763ef6e327f7c9"
   }
 }
