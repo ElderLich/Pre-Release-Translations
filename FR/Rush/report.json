@@ -29,37 +29,17 @@
   "pending_translations": [
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310004,
-      "name": "接合科技P打孔机"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310005,
-      "name": "接合科技B赛车"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310006,
-      "name": "接合科技王牌备品"
+      "name": "As de Rechange de la Jointech"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310007,
-      "name": "接合科技守护者"
+      "name": "Gardien de la Jointech"
     },
     {
       "fields": [
@@ -144,52 +124,12 @@
     {
       "fields": [
         "desc",
-        "name"
-      ],
-      "id": 120310037,
-      "name": "接合科技无双英雄"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310038,
-      "name": "接合科技究极战士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310045,
-      "name": "凭依装着-奥丝"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310048,
-      "name": "接合科技再接合"
-    },
-    {
-      "fields": [
-        "desc",
         "name",
         "str2",
         "str4"
       ],
       "id": 120310052,
       "name": "超自然保护机关 疯狂犯罪"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310061,
-      "name": "接合科技弹射装置"
     },
     {
       "fields": [
@@ -1428,10 +1368,10 @@
     "120307034": "cd299bbee8a9897b58f09f8275ebb9e1cbfcc20d3f7cc493aca0a0a0dec55347",
     "120307035": "7ae83b7705c4daaf1a96c0d7c82f7eaba5faf36cc20a9d25a3c988e83d73c5a2",
     "120307057": "d41521ddc31d3cdc5a3f884d6116e4c3dd69e971526c55600a7d8a4147d8d2fd",
-    "120310004": "016e34417501b25c5045549eaca0756513e09147a26563f1191d04b2880736b8",
-    "120310005": "8213cf84a70d15518611cd4ee84d7ecae7784b54f7d9a1cced3654fa3f91ee36",
-    "120310006": "44318ee57bb8ae114b0f422feed2a3951f3aafd25917741e6a892892eb6df9b5",
-    "120310007": "515fa221e763de4018ef1f111231a94d20d2495bd9f3fa6d05bf770c3c7f8f1d",
+    "120310004": "4bba99c4bf0fb2b45e61a47a8e9c99384b94912b352416f65be70447c8a8d081",
+    "120310005": "4ad20bfc70f881ffa80b45081a3df87e127670c3c8c087e090b36ee059e78d95",
+    "120310006": "301aa8bd527a596e755849dcf472bcb3e2306b4ec287c0d8d91cd9876fc86482",
+    "120310007": "8d9d383ba22a0ab939ec547d391066b8c5add6f8919b828f5f102af782a90a49",
     "120310013": "16846c2c720b04a59035dfb7990e91f909db3bdaaa3b9ce52097dca2b7e32b8e",
     "120310014": "714dff092928ac6a281a96df7982ec516336fa99ffaa4119f59f19d19fbb9f6e",
     "120310015": "f82af0ebf2fcf959735e44f85090f2adfb9d595191c3960bcc419f164262d0eb",
@@ -1439,12 +1379,12 @@
     "120310017": "199fbf4b411555cdd5f7b77341bbd2637dfa42c624ac5c9c06f23f17edabdd9b",
     "120310018": "f6d5e32be293e18ff05605e913e7d4c84edeb0fc0b4a93935d9c41c71a11f49a",
     "120310019": "78caf94b4fefaf0ae117913dddf15d1d0ac902eed3f5f621264bf96133eabe42",
-    "120310037": "4258ed3cd701057c83a8d95736eb08f6249392cd828a06d957ed7e676ea7587a",
-    "120310038": "0e0956e82c4362f1612a4689763545c8cc678ee9e4f98e477f601174bd38f10b",
-    "120310045": "9d8831c5440b837de53684470c5c1da76742d39d5bdc85124d0b40a6b303629d",
-    "120310048": "e4a9e7735474c37ab85f0ced2981b22df6356315974821601cd20ce5cc45a267",
+    "120310037": "7b00a02ff913b490090644531f7f1bf282a43c25b26e9ae72431689c07dbe647",
+    "120310038": "6b535ec79081f3ec296b9b91945c9ee96dffd9df44b50f9b77a8373e882e122f",
+    "120310045": "5313ed5c3315172b7a5e1de676dcc28688869e53587821feb89bf50d9148d28c",
+    "120310048": "79fd6c8aa2c19105df597b5198f3f70d7a3626968e216a1db7f09d5dba328059",
     "120310052": "9402bac31cdaf13496a888271fa981210ec3fefb83d85334ee37484f675037a8",
-    "120310061": "890d941d5d3740d65da44266e75f202dc733cabfccfea62ad121436189d3ee28",
+    "120310061": "8c330dc39b679abe96ab085f577ed9c0972c19c7b9d28d4ee0027ae1d632feb1",
     "120310062": "1a458cf37ece19fa828f7a0481d8dd78ad1c96af567c005906a42a83e2ec2c1f",
     "120310063": "976c46f8caa9f4071b24a2571e70776ce2605ca464a28ffe02763ef6e327f7c9"
   }

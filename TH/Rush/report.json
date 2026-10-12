@@ -29,52 +29,28 @@
   "pending_translations": [
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310004,
-      "name": "接合科技P打孔机"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310005,
-      "name": "接合科技B赛车"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310006,
-      "name": "接合科技王牌备品"
+      "name": "Jointech Ace Spare"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310007,
-      "name": "接合科技守护者"
+      "name": "Jointech Guardian"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str4",
         "str5"
       ],
       "id": 120310013,
-      "name": "疯狂犯罪者·兔女"
+      "name": "Mad Rare Rappid"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str1",
         "str11",
         "str2",
@@ -85,12 +61,10 @@
         "str9"
       ],
       "id": 120310014,
-      "name": "疯狂犯罪者·松鼠女"
+      "name": "Mad Rare Amy"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str1",
         "str11",
         "str2",
@@ -101,114 +75,54 @@
         "str9"
       ],
       "id": 120310015,
-      "name": "疯狂犯罪者·羊驼女"
+      "name": "Mad Rare Beeko"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str4"
       ],
       "id": 120310016,
-      "name": "疯狂犯罪者·净洁女"
+      "name": "Mad Rare Chreia"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str4"
       ],
       "id": 120310017,
-      "name": "疯狂犯罪者·鱼女"
+      "name": "Mad Rare Fitz"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str4"
       ],
       "id": 120310018,
-      "name": "疯狂犯罪者·猴女"
+      "name": "Mad Rare Maqui"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310019,
-      "name": "疯狂犯罪者·华丽女士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310037,
-      "name": "接合科技无双英雄"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310038,
-      "name": "接合科技究极战士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310045,
-      "name": "凭依装着-奥丝"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310048,
-      "name": "接合科技再接合"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2",
         "str4"
       ],
       "id": 120310052,
-      "name": "超自然保护机关 疯狂犯罪"
+      "name": "Occult Preservation Agency Mad Rare"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310061,
-      "name": "接合科技弹射装置"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2",
         "str3"
       ],
       "id": 120310062,
-      "name": "疯狂犯罪者干扰"
+      "name": "Mad Rare Disturb"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310063,
-      "name": "疯狂犯罪者骇入"
+      "name": "Mad Rare Hack"
     }
   ],
   "published_source_fields": {
@@ -1428,24 +1342,24 @@
     "120307034": "391cbd46b7b7c8e1a0ec74915b5218209a73b89dd8da01b093d0d391f55eb30b",
     "120307035": "abd82655d2df6e3740c91afa71453e8d1ebd41d374b60c6780cbcd3794713616",
     "120307057": "0410663135ea0f72667afac61a8232a82d8add2f65effa658db2fe96cd8c5f8e",
-    "120310004": "c3c6e12c1bc06495f8083f047fd2dd86055ef3bbb97901dc1a17ab0304f0773f",
-    "120310005": "7dfaf777f2e36082b8b4b34f502717308390d492383f6ccf4ea9ef68c3a3c19c",
-    "120310006": "790a9a50eb2b6b92c131bc9c40c0104f2d1e7bf103554d58621fa47718898ad0",
-    "120310007": "1e59daa1cc08155f3a7328eab45d9eb4ea4cc2b3a92c9289f559930777df066d",
-    "120310013": "30390e2d648a3e0ca60c7ecbf67d6328a081354899525b753aed2c9fd758eb74",
-    "120310014": "d154c00c6e906cc7d2fa09903367c2a4dfe743a9ac07b01a8546a8be31760732",
-    "120310015": "30d765162d79a78d18249bbdc7e63ce1cd6a2b1f727e69d6ee06fae35d801799",
-    "120310016": "7cb098e19b5863b011691341f8265f59c037517bcd5b2dbbb256156f4e3ff8df",
-    "120310017": "d78261ea85bdc69002bf8cd57c7f049aa3c811618e50023ab50ee4978608d7cb",
-    "120310018": "a33992eb9488399d2131656693b889c0392716154ba2e1af4574a45e19065947",
-    "120310019": "78caf94b4fefaf0ae117913dddf15d1d0ac902eed3f5f621264bf96133eabe42",
-    "120310037": "b636bbc6adaf9dde003430987c58ee6c1b7a832c33782145e98e10e3a32e1099",
-    "120310038": "0e0956e82c4362f1612a4689763545c8cc678ee9e4f98e477f601174bd38f10b",
-    "120310045": "d4b62c2c2832b316904abc4f123ccf4cfad7f1e7d754f4935dc99109d0c6be84",
-    "120310048": "74a6deff10e9f4e9a2a8eb79a7710172f354a7a3cc3385a7dbf117636e712adc",
-    "120310052": "62a687351034d4510d9b8df0eac7d342d0388c4b8121b95aad8cfdc439b10d2c",
-    "120310061": "9b1212a7c44cbb7675c46161c38c81d9ca94d3cf715efda67fe29b495f8a46b2",
-    "120310062": "1a458cf37ece19fa828f7a0481d8dd78ad1c96af567c005906a42a83e2ec2c1f",
-    "120310063": "976c46f8caa9f4071b24a2571e70776ce2605ca464a28ffe02763ef6e327f7c9"
+    "120310004": "d22be62b7d0e2f8c2eed1bc41186cf9f05422e7de4a9970ec425f21fc6f58e58",
+    "120310005": "8f580ba7d17b8f7997e93ec886d3f6a0323f1bd1bd9dc6b142c2f47a08df5a5b",
+    "120310006": "336b88474aa568a687016c4beb3f6e888481b92dd83e748a398565894baab6b6",
+    "120310007": "a6849da6c98e5531adb914c56d668c4938412e21fff44443e739240d63faa466",
+    "120310013": "476cfe0d23ee2afe0e37a0a5492a85e6843f796d49e1522e143b5743d44a1c19",
+    "120310014": "e0d317b85a68fc146acb0c3e9351db0fff04f2b280e39b2c69464ad3b2668baa",
+    "120310015": "563435b48a153bb2fdc34ce27c3c65bd842dbe33ba2835788f62657780e570a4",
+    "120310016": "fb80b1def969f4e75d3c8335a70e9d404b332404a4138ba06615bb8975457ffb",
+    "120310017": "c057e12346dcccc50e3740e8a65666ac3d61820841341aab0c6ca3fe92af7deb",
+    "120310018": "59dea6f87210789ab454641382da75c833603b03f089166d0e25d74d72432b83",
+    "120310019": "f73773e998bd2a8bd843d884e19bce0a7c80ba64f0749b8e69526a1f53e8230f",
+    "120310037": "2390dfe5d8182fdc6a45d8af09e83124259e893a5961ee4eccf729aa2e3acf98",
+    "120310038": "bae14427ade83883bfe08035fd5fba155ed32ee2b546b6ada98e00ad8071e0da",
+    "120310045": "ecf03d407d8dd9093eb4ab6f74fbbdca6d8e530befcb320c78760836e4f76e8a",
+    "120310048": "9a81471e60d3c866182424a5e33e46c624ffbf78507f6b5ab1f00cbe009592a2",
+    "120310052": "5af5e836cadd053a7c7e609d17193f0493e9c16fd7aa57ba8b27bd1bcb8e6ee8",
+    "120310061": "086657f0e3f74d1931e60a56ff33e9908748395f31a82d4470a08b7d007cd203",
+    "120310062": "ab5fcaa2953010beba00c5624351d713c01cd3135a234aa6feb2b87c5d4168eb",
+    "120310063": "ec05dda1bbb1fecd864a9f49f0f0d1c7805b013d62c67e3ac29bebe809118fbd"
   }
 }

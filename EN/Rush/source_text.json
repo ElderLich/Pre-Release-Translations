@@ -1,6 +1,159 @@
 {
   "language": "en",
-  "matches": {},
+  "matches": {
+    "120310004": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP004",
+      "source": "https://yugipedia.com/wiki/Jointech_Passion_Puncher"
+    },
+    "120310005": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP005",
+      "source": "https://yugipedia.com/wiki/Jointech_Brave_Racer"
+    },
+    "120310006": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP006",
+      "source": "https://yugipedia.com/wiki/Jointech_Ace_Spare"
+    },
+    "120310007": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP007",
+      "source": "https://yugipedia.com/wiki/Jointech_Guardian"
+    },
+    "120310013": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP013",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Rappid"
+    },
+    "120310014": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP014",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Amy"
+    },
+    "120310015": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP015",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Beeko"
+    },
+    "120310016": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP016",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Chreia"
+    },
+    "120310017": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP017",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Fitz"
+    },
+    "120310018": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP018",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Maqui"
+    },
+    "120310019": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP019",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Gramma"
+    },
+    "120310037": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP037",
+      "source": "https://yugipedia.com/wiki/Jointech_Matchless_Hero"
+    },
+    "120310038": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP038",
+      "source": "https://yugipedia.com/wiki/Jointech_Ultimate_Warrior"
+    },
+    "120310045": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP045",
+      "source": "https://yugipedia.com/wiki/Familiar-Possessed_-_Aussa_%28Rush_Duel%29"
+    },
+    "120310048": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP048",
+      "source": "https://yugipedia.com/wiki/Jointech_Rejoin"
+    },
+    "120310052": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP052",
+      "source": "https://yugipedia.com/wiki/Occult_Preservation_Agency_Mad_Rare"
+    },
+    "120310061": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP061",
+      "source": "https://yugipedia.com/wiki/Jointech_Catapult"
+    },
+    "120310062": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP062",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Disturb"
+    },
+    "120310063": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP063",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Hack"
+    }
+  },
   "requested_ids": [
     120310004,
     120310005,
@@ -22,101 +175,5 @@
     120310062,
     120310063
   ],
-  "unresolved": [
-    {
-      "id": 120310004,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP004"
-    },
-    {
-      "id": 120310005,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP005"
-    },
-    {
-      "id": 120310006,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP006"
-    },
-    {
-      "id": 120310007,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP007"
-    },
-    {
-      "id": 120310013,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP013"
-    },
-    {
-      "id": 120310014,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP014"
-    },
-    {
-      "id": 120310015,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP015"
-    },
-    {
-      "id": 120310016,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP016"
-    },
-    {
-      "id": 120310017,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP017"
-    },
-    {
-      "id": 120310018,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP018"
-    },
-    {
-      "id": 120310019,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP019"
-    },
-    {
-      "id": 120310037,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP037"
-    },
-    {
-      "id": 120310038,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP038"
-    },
-    {
-      "id": 120310045,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP045"
-    },
-    {
-      "id": 120310048,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP048"
-    },
-    {
-      "id": 120310052,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP052"
-    },
-    {
-      "id": 120310061,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP061"
-    },
-    {
-      "id": 120310062,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP062"
-    },
-    {
-      "id": 120310063,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP063"
-    }
-  ]
+  "unresolved": []
 }
