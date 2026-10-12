@@ -1,8 +1,29 @@
 {
   "language": "fr",
-  "candidates": 0,
-  "matched": 0,
+  "candidates": 5,
+  "matched": 5,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {}
+  "matches": {
+    "100272026": {
+      "set_code": "RV02-JP026",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17798&languages=fr"
+    },
+    "100272027": {
+      "set_code": "RV02-JP027",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17799&languages=fr"
+    },
+    "100272028": {
+      "set_code": "RV02-JP028",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17800&languages=fr"
+    },
+    "100272030": {
+      "set_code": "RV02-JP030",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17801&languages=fr"
+    },
+    "100272031": {
+      "set_code": "RV02-JP031",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17802&languages=fr"
+    }
+  }
 }
