@@ -1,5 +1,35 @@
 [
   {
+    "name": "Marincesa Azury",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo Ciberso de AGUA con 1000 ATK o menos desde tu Deck, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de AGUA.\n \r\nSi Invocas por Enlace un Monstruo de Enlace \"Marincesa\" mientras esta carta está en tu Cementerio: puedes desterrar esta carta; equipa 1 monstruo \"Marincesa\" de tu Cementerio a ese Monstruo de Enlace como una Mágica de Equipo que le da 600 ATK. \r\nSólo puedes usar los efectos de \"Marincesa Azury\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Marincesa Ulpis",
+    "desc": "Si esta carta está en tu mano: puedes descartar otra carta \"Marincesa\" o un monstruo de AGUA; Invoca esta carta de Modo Especial.\n \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa \"Marincesa\" desde tu Deck.\n \r\nPuedes mandar al Cementerio 1 Carta de Monstruo de Enlace \"Marincesa\" que controles; roba 1 carta. \r\nSólo puedes usar los efectos de \"Marincesa Ulpis\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Aqua Leviatán @Marincesa",
+    "desc": "Puedes Invocar esta carta por Ritual con una carta \"Marincesa\".\n \r\nLos monstruos que controle tu adversario pierden 1000 ATK. \r\nSólo puedes usar los siguientes efectos de \"Aqua Leviatán @Marincesa\" una vez por turno cada uno. \t\nPuedes revelar esta carta en tu mano; añade a tu mano 1 carta \"Marincesa\" desde tu Deck, excepto un Monstruo de Ritual, y después descarta 1 carta.\n \r\nSi esta carta es Invocada por Ritual: puedes devolver a la mano cartas que controle tu adversario hasta el número de Cartas de Monstruo \"Marincesa\" que controles.\n",
+    "overallString": "[Monstruo|Efecto|Ritual] Ciberso/AGUA  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Corazón Verdadero Marincesa",
+    "desc": "2+ monstruos \"Marincesa\"\t\r\nSi esta carta es Invocada por Enlace usando un Monstruo de Enlace con 0 ATK original: puedes Invocar de Modo Especial 1 monstruo \"Marincesa\" Link-3 o menor desde tu Deck Extra.\n \r\nSólo puedes usar este efecto de \"Corazón Verdadero Marincesa\" una vez por turno.\n \r\nPuedes desterrar 1 Monstruo de Enlace de tu Campo o Cementerio; destruye 1 carta que controle tu adversario, y además por el resto de este turno, no puedes desterrar monstruos con el mismo Rating de Enlace para activar este efecto de \"Corazón Verdadero Marincesa\".",
+    "overallString": "[Monstruo|Efecto|Enlace] Ciberso/AGUA  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Laguna de Arrecife Marincesa",
+    "desc": "Cuando esta carta se resuelve, puedes añadir a tu mano 1 monstruo Ciberso de AGUA desde tu Deck.\n \r\nUna vez por turno, durante la End Phase de tu adversario: puedes barajar al Deck hasta 3 monstruos de AGUA desde tu Cementerio y/o destierro.\n \r\nPuedes mandar esta carta boca arriba al Cementerio; Invoca por Ritual 1 Monstruo de Ritual Ciberso de AGUA desde tu mano, desterrando monstruos de AGUA de tu Cementerio cuyos Niveles totales sean iguales o superen el Nivel del Monstruo de Ritual. \r\nSólo puedes activar 1 \"Laguna de Arrecife Marincesa\" por turno.",
+    "overallString": "[Mágica|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
     "name": "Ars Magna Artmagia",
     "desc": "2+ monstruos, incluyendo un monstruo \"Ars Magna\" o \"Artmagia\"\t\nTu adversario no puede seleccionar tus monstruos enlazados con efectos de cartas. \nDurante tu Main Phase: puedes añadir a tu mano, o Invocar de Modo Especial, 1 monstruo \"Ars Magna\", \"Artmagia\", \"DoomZ\" o \"Elfnota\" desde tu Deck, y después si tienes 3 o más Tipos de Monstruo diferentes en tu Campo, puedes Invocar de Modo Especial 1 monstruo desde tu Cementerio o destierro. \nSólo puedes usar este efecto de \"Ars Magna Artmagia\" una vez por turno",
     "overallString": "[Monstruo|Efecto|Enlace] Hada/LUZ  [LINK-4] 2500/-  [↑][←][→][↓]",
