@@ -1,84 +1,7 @@
 {
   "language": "fr",
-  "matches": {
-    "120310004": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP004",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17779&languages=fr"
-    },
-    "120310005": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP005",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17780&languages=fr"
-    },
-    "120310006": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP006",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17781&languages=fr"
-    },
-    "120310007": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP007",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17782&languages=fr"
-    },
-    "120310037": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP037",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17783&languages=fr"
-    },
-    "120310038": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP038",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17784&languages=fr"
-    },
-    "120310045": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP045",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17797&languages=fr"
-    },
-    "120310048": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP048",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17785&languages=fr"
-    },
-    "120310061": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP061",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17786&languages=fr"
-    }
-  },
+  "matches": {},
   "requested_ids": [
-    120310004,
-    120310005,
-    120310006,
-    120310007,
     120310013,
     120310014,
     120310015,
@@ -86,12 +9,7 @@
     120310017,
     120310018,
     120310019,
-    120310037,
-    120310038,
-    120310045,
-    120310048,
     120310052,
-    120310061,
     120310062,
     120310063
   ],
