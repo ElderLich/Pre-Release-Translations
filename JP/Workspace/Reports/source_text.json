@@ -1,7 +1,7 @@
 {
   "language": "jp",
-  "candidates": 16,
-  "matched": 1,
+  "candidates": 21,
+  "matched": 6,
   "unmatched_ids": [
     100270002,
     101306082,
@@ -119,6 +119,26 @@
     }
   ],
   "matches": {
+    "100272026": {
+      "set_code": "RV02-JP026",
+      "source": "https://ocg-card.com/list/rv02/"
+    },
+    "100272027": {
+      "set_code": "RV02-JP027",
+      "source": "https://ocg-card.com/list/rv02/"
+    },
+    "100272028": {
+      "set_code": "RV02-JP028",
+      "source": "https://ocg-card.com/list/rv02/"
+    },
+    "100272030": {
+      "set_code": "RV02-JP030",
+      "source": "https://ocg-card.com/list/rv02/"
+    },
+    "100272031": {
+      "set_code": "RV02-JP031",
+      "source": "https://ocg-card.com/list/rv02/"
+    },
     "101307071": {
       "set_code": "IMPH-JP071",
       "source": "https://ocg-card.com/list/imph/"
