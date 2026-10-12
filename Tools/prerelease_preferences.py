@@ -6,6 +6,19 @@ import shutil
 import subprocess
 
 
+def translations_root(repo: Path, configured: str = "") -> str:
+    """Repair the renamed sibling checkout without replacing custom sources."""
+    current = repo.resolve().parent / "MDPro4_Data/Data/locales"
+    if not configured:
+        return str(current)
+    selected = Path(configured).expanduser()
+    previous = repo.resolve().parent / "MDPro3_Data/Data/locales"
+    if (selected.is_absolute() and selected.resolve() == previous
+            and not selected.exists() and current.is_dir()):
+        return str(current)
+    return configured
+
+
 def find_editor(configured: str = "") -> Path | None:
     # An explicit preference wins; never silently replace an invalid chosen path.
     if configured:

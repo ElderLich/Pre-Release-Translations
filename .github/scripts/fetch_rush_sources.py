@@ -12,7 +12,7 @@ import time
 
 # GitLab advertises git.moenext.com for SSH, code.moenext.com for HTTPS.
 RUSH_SOURCE = "https://code.moenext.com/mycard/ygopro-rush-duel.git"
-RUSH_TRANSLATIONS = "https://github.com/ElderLich/MDPro3_Data.git"
+RUSH_TRANSLATIONS = "https://github.com/ElderLich/MDPro4_Data.git"
 RUSH_DATABASES = "/Data/locales/*/rush_cards.cdb"
 ATTEMPTS = 3
 GIT_TIMEOUT = 90

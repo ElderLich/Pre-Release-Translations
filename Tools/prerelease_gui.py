@@ -16,7 +16,7 @@ from tkinter import filedialog, messagebox, ttk
 
 from rush_local import python_console
 from prerelease_i18n import LANGUAGE_NAMES, LocalizedVar, translate
-from prerelease_preferences import find_editor, database_path, launch_editor
+from prerelease_preferences import find_editor, database_path, launch_editor, translations_root
 from prerelease_activity import ActivityBar, activity_phase, activity_result
 
 STANDARD_LANGS = ("DE", "EN", "ES", "FR", "IT", "JP", "KR", "PT", "TH")
@@ -199,7 +199,7 @@ class PrereleaseWindow:
         self.language = tk.StringVar(value=lang.upper() if lang.upper() in STANDARD_LANGS else "EN")
         self.rush_language = tk.StringVar(value=lang.upper() if lang.upper() in RUSH_LANGS else "EN")
         self.source = tk.StringVar(value=self.config.get("rush_source_root", str(repo.parent / "ygopro-rush-duel")))
-        self.translations = tk.StringVar(value=self.config.get("rush_translations_root", str(repo.parent / "MDPro3_Data/Data/locales")))
+        self.translations = tk.StringVar(value=translations_root(self.repo, self.config.get("rush_translations_root", "")))
         self.offline = tk.BooleanVar(value=False)
         self.status = LocalizedVar(self, value="No operation running.")
         self.log_visible = tk.BooleanVar(value=self.config.get("show_log", True))

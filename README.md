@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/readme-banner.png" alt="Pre-Release Translations — New cards. Your language. Standard and Rush Duel pre-release translations for MDPro3." width="100%">
+  <img src="docs/assets/readme-banner.png" alt="Pre-Release Translations — New cards. Your language. Standard and Rush Duel pre-release translations for MDPro4." width="100%">
 </p>
 
 <p align="center">
@@ -7,7 +7,7 @@
   &nbsp; · &nbsp;
   <a href="docs/RUSH_PRE_RELEASE.md"><strong>Rush Duel guide</strong></a>
   &nbsp; · &nbsp;
-  <a href="https://elderlich.github.io/MDPro3_Sacred_Book/"><strong>Card scripting</strong></a>
+  <a href="https://elderlich.github.io/MDPro4_Sacred_Book/"><strong>Card scripting</strong></a>
   &nbsp; · &nbsp;
   <a href="docs/AUTOMATION_SCHEDULE.md"><strong>Daily updates</strong></a>
   &nbsp; · &nbsp;
@@ -15,7 +15,7 @@
 </p>
 
 <p align="center">
-  Translate upcoming cards, review your language, and ship ready-to-play packages for MDPro3.<br>
+  Translate upcoming cards, review your language, and ship ready-to-play packages for MDPro4.<br>
   One desktop tool for <strong>Standard</strong>, <strong>Rush Duel</strong>, and an overview of every Rush locale.
 </p>
 
@@ -61,7 +61,7 @@ For Standard archetype and prompt strings, also edit `raw2/test-strings.conf` wh
 Use **Copy workspace into repository** to review locally, or **Upload workspace & push to GitHub** when your translations are ready. You need repository write access to push. GitHub Actions builds the packages and metadata from your workspace.
 
 > [!TIP]
-> Rush translators need Python, Git, this repository, and their language folder. The cloud build obtains the Rush source and locale databases; a separate `ygopro-rush-duel` or MDPro3_Data checkout is only needed for maintainer builds.
+> Rush translators need Python, Git, this repository, and their language folder. The cloud build obtains the Rush source and locale databases; a separate `ygopro-rush-duel` or MDPro4_Data checkout is only needed for maintainer builds.
 
 > [!NOTE]
 > This repository was renamed from TransSuperpre. Its old download URLs are retired. Existing translator checkouts can keep their folder names; follow the [remote migration instructions](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translators) to update an older checkout.
@@ -125,7 +125,7 @@ Edit your working database and upload its workspace. Packages, metadata, source 
 
 ## Learn card scripting
 
-Visit [MDPro3 Sacred Book](https://elderlich.github.io/MDPro3_Sacred_Book/) to learn card scripting for MDPro3. Keep it open alongside [DataEditorX](https://github.com/ElderLich/DataEditorX) while writing and editing Lua card effects.
+Visit [MDPro4 Sacred Book](https://elderlich.github.io/MDPro4_Sacred_Book/) to learn card scripting for MDPro4. Keep it open alongside [DataEditorX](https://github.com/ElderLich/DataEditorX) while writing and editing Lua card effects.
 
 ## Credits & sources
 

@@ -28,7 +28,7 @@ Run `Update Rush pre-release cards` to refresh every Rush locale immediately.
 The daily dispatcher also has an optional **force** switch to request all locales.
 
 The Rush workflow clones the current `master` of the Rush source repository and
-the current `main` of MDPro3_Data (only Data/locales), reconciles each workspace,
+the current `main` of MDPro4_Data (only Data/locales), reconciles each workspace,
 then commits the deterministic packages and reports. It rebuilds on top of the
 latest branch after a push conflict so concurrent translator edits are preserved.
 

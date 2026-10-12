@@ -11,7 +11,7 @@ def lang_from_cards_cdb(cards_cdb_path: str) -> str:
     folder = (p.parent.name or "").strip()
     low = folder.lower()
 
-    # Common "xx-YY" or "xx_YY" locales (and variants like en-US_mdpro3)
+    # Common "xx-YY" or "xx_YY" locales (and variants like en-US_mdpro4)
     m = re.match(r"^([a-z]{2})[-_]", low)
     if m:
         return m.group(1)

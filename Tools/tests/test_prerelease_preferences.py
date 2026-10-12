@@ -13,6 +13,22 @@ import AutoPR_local as wrapper
 
 
 class PreferenceTests(unittest.TestCase):
+    def test_renamed_data_checkout_repairs_only_the_missing_official_sibling(self):
+        with tempfile.TemporaryDirectory() as directory:
+            repo=Path(directory).resolve()/'Pre-Release-Translations'
+            current=repo.parent/'MDPro4_Data/Data/locales'
+            previous=repo.parent/'MDPro3_Data/Data/locales'
+            self.assertEqual(prefs.translations_root(repo),str(current))
+            self.assertEqual(prefs.translations_root(repo,str(previous)),str(previous))
+            current.mkdir(parents=True)
+            self.assertEqual(prefs.translations_root(repo,str(previous)),str(current))
+            self.assertEqual(prefs.translations_root(repo,str(current)),str(current))
+            previous.mkdir(parents=True)
+            self.assertEqual(prefs.translations_root(repo,str(previous)),str(previous))
+            custom=repo.parent/'translator-fork/MDPro3_Data/Data/locales'
+            self.assertEqual(prefs.translations_root(repo,str(custom)),str(custom))
+            self.assertEqual(prefs.translations_root(repo,'custom/locales'),'custom/locales')
+
     def test_catalogs_preserve_placeholders_and_cover_the_same_controls(self):
         keys=set(i18n.CATALOGS['FR'])
         fields=lambda s:{field for _,field,_,_ in Formatter().parse(s) if field is not None}
@@ -74,6 +90,23 @@ class LocalizedWindowTests(unittest.TestCase):
         window=gui.PrereleaseWindow(root,path,path,lang)
         self.addCleanup(window.close)
         return root,window
+
+    def test_renamed_translation_checkout_reaches_gui_and_saved_preferences(self):
+        with tempfile.TemporaryDirectory() as directory:
+            parent=Path(directory).resolve()
+            repo=parent/'Pre-Release-Translations'; repo.mkdir()
+            local=parent/'local'; local.mkdir()
+            current=parent/'MDPro4_Data/Data/locales'; current.mkdir(parents=True)
+            config=local/'.transsuperpre_local.json'
+            config.write_text(json.dumps({'rush_translations_root':str(parent/'MDPro3_Data/Data/locales')}),encoding='utf-8')
+            root=gui.tk.Tk(); root.withdraw()
+            window=gui.PrereleaseWindow(root,repo,local,'EN')
+            try:
+                self.assertEqual(window.translations.get(),str(current))
+                window.save_paths()
+                self.assertEqual(json.loads(config.read_text())['rush_translations_root'],str(current))
+            finally:
+                window.close()
 
     def test_default_follows_locale_and_override_persists_without_changing_card_language(self):
         root,window=self.window()

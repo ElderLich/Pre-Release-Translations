@@ -23,7 +23,7 @@ building the `.ypk`, and updating `test-release.json` and version files.
    ordinary translators do not need them.
 
 The translator Rush workflow needs only Python, Git, a Pre-Release Translations checkout
-and your local language folder. You do not need `ygopro-rush-duel`, MDPro3_Data,
+and your local language folder. You do not need `ygopro-rush-duel`, MDPro4_Data,
 the maintainer's Windows paths, or local artwork sources. GitHub Actions obtains
 those dependencies and builds all Rush packages after a workspace upload.
 

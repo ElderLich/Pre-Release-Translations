@@ -39,7 +39,9 @@ and workspace pull actions on its **Standard** tab.
 
 Source and locale database paths are remembered in `.transsuperpre_local.json`
 beside the local language folders. Defaults are the sibling `ygopro-rush-duel`
-and `MDPro3_Data/Data/locales` folders. The window shows a live log and stays
+and `MDPro4_Data/Data/locales` folders. A saved path to a missing sibling
+`MDPro3_Data/Data/locales` is repaired when the renamed folder exists; existing
+checkouts and custom paths are preserved. The window shows a live log and stays
 responsive; duplicate Rush builds are blocked across locale windows.
 Rush builds save locally and never commit or push. Review the generated outputs
 in GitHub Desktop and publish when ready. Existing translation gates, removals,
@@ -66,7 +68,7 @@ instead of building packages from an old cached patch.
 From the Pre-Release Translations repository:
 
 ```powershell
-python Tools/rush_prerelease.py sync --source-root "D:\Programs\GitHub\ygopro-rush-duel" --translations-root "D:\Programs\GitHub\MDPro3_Data\Data\locales"
+python Tools/rush_prerelease.py sync --source-root "D:\Programs\GitHub\ygopro-rush-duel" --translations-root "D:\Programs\GitHub\MDPro4_Data\Data\locales"
 ```
 
 The source checkout's `RD Patch.cdb` determines the active card IDs, gameplay
@@ -203,7 +205,7 @@ the **game card ID**, such as `120307001.jpg`. Use one PNG or JPEG per ID. These
 are artwork crops, not full card scans or Neuron CID filenames.
 
 Every locale package contains the same images at
-`Picture/Rush_Arts/<card ID>.jpg` (or `.png`). MDPro3's existing Rush artwork
+`Picture/Rush_Arts/<card ID>.jpg` (or `.png`). MDPro4's existing Rush artwork
 loader checks game IDs before CIDs, so a new patch card works before the next
 CID mapping update. Only images for the active patch are included. Removed
 cards' shared source images remain available for reuse, but disappear from every
@@ -264,7 +266,7 @@ preserved translator edits, Thai/English equality, missing-translation publicati
 blocking, script closure, duplicate artwork, source-text review, deterministic
 no-op runs, and the daily dispatcher's input fingerprint.
 
-## MDPro3 update settings
+## MDPro4 update settings
 
 The normal Simplified Chinese prerelease source still uses the upstream
 `PrereleasePackUrl` and `PrereleasePackVersionUrl` settings. The other ten
