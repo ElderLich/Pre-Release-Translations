@@ -1,5 +1,23 @@
 [
   {
+    "name": "伟大的三贤者",
+    "desc": "魔法师族怪兽2只以上\r\n这个卡名的①②③的效果1回合，只能有1次使用其中任意1个。\r\n①：这张卡从额外卡组特殊召唤的场合才能发动。从额外卡组把1只「大贤者」怪兽或魔法师族怪兽当作装备魔法卡使用给这张卡装备。\r\n②：丢弃1张手卡才能发动。对方场上·墓地的融合·同调·超量·连接怪兽全部回到额外卡组。\r\n③：对方主要阶段才能发动。自己墓地·除外状态的1张「大贤者」卡加入手卡。",
+    "overallString": "[Monstruo|Efecto|Enlace] Lanzador de Conjuros/LUZ  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "召唤兽 大贤者智天使",
+    "desc": "「大贤者」怪兽＋魔法师族怪兽\n这个卡名的①②的效果1回合各能使用1次。\n①：这张卡从额外卡组特殊召唤的场合，以对方场上1张卡为对象才能发动。那张卡破坏。\n②：对方把怪兽的效果发动时，或者对方怪兽的攻击宣言时，把不是在这个回合特殊召唤的这张卡除外才能发动。从额外卡组把「召唤兽 大贤者智天使」以外的1只「大贤者」怪兽或「召唤兽」怪兽特殊召唤。",
+    "overallString": "[Monstruo|Efecto|Fusión] Lanzador de Conjuros/LUZ  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "结晶之魔女神 阿鲁鲁",
+    "desc": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡在手卡存在，场上有「大贤者」怪兽存在的场合才能发动。这张卡特殊召唤。\r\n②：以对方场上1只表侧表示怪兽为对象才能发动。那只怪兽的效果直到回合结束时无效。\r\n③：这张卡被送去墓地的场合，把这张卡除外，以自己墓地的1只「大贤者」怪兽或「魔女术」怪兽为对象才能发动。那只怪兽特殊召唤。",
+    "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/LUZ  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
     "name": "Marincesa Azury",
     "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo Ciberso de AGUA con 1000 ATK o menos desde tu Deck, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de AGUA.\n \r\nSi Invocas por Enlace un Monstruo de Enlace \"Marincesa\" mientras esta carta está en tu Cementerio: puedes desterrar esta carta; equipa 1 monstruo \"Marincesa\" de tu Cementerio a ese Monstruo de Enlace como una Mágica de Equipo que le da 600 ATK. \r\nSólo puedes usar los efectos de \"Marincesa Azury\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★3] 1600/1000",
