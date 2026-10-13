@@ -1,5 +1,23 @@
 [
   {
+    "name": "Trinitas Magistus",
+    "desc": "2+ monstros Magos\r\nSe este card é Invocado por Invocação-Especial do seu Deck Adicional: você pode equipar 1 monstro \"Magistus\" ou Mago do seu Deck Adicional nele.\r\nVocê pode descartar 1 card; embaralhe todos os Monstros Fusão, Sinchro, Xyz e Link do campo do seu oponente e Cemitério no Deck Adicional.\r\nDurante a Fase Principal do seu oponente (Efeito Rápido): você pode adicionar 1 card \"Magistus\" do seu Cemitério ou banimento à sua mão.\r\nVocê só pode ativar 1 dos efeitos de \"Trinitas Magistus\" e somente uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Link] Mago/Luz  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "Invokado Magistus Heruvim",
+    "desc": "1 monstro \"Magistus\" + 1 monstro Mago\r\nSe este card é Invocado por Invocação-Especial do Deck Adicional: você pode escolher 1 card que seu oponente controla; destrua-o.\r\nQuando seu oponente ativa um efeito de monstro, ou o monstro dele declara um ataque, exceto durante o turno que este card foi Invocado por Invocação-Especial (Efeito Rápido): você pode banir este card; Invoque por Invocação-Especial 1 monstro \"Magistus\" ou \"Invokado(a)\" do seu Deck Adicional, exceto \"Invokado Magistus Heruvim\".\r\nVocê só pode usar cada um dos efeitos de \"Invokado Magistus Heruvim\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Fusão] Mago/Luz  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus Fazticeira Aruru",
+    "desc": "Se este card está na sua mão e um monstro \"Magistus\" está no campo: você pode Invocar este card por Invocação-Especial.\r\nVocê pode escolher 1 monstro com a face para cima que seu oponente controla; negue seus efeitos até o final deste turno.\r\nSe este card é enviado ao Cemitério: você pode bani-lo, então escolha 1 monstro \"Magistus\" ou \"Fazticeira\" no seu Cemitério; Invoque-o por Invocação-Especial.\r\nVocê só pode usar cada um dos efeitos de \"Magistus Fazticeira Aruru\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Mago/Luz  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
     "name": "Marincesa Azuri",
     "desc": "Se este card é Invocado por Invocação-Normal ou Especial: você pode Invocar por Invocação-Especial 1 monstro Ciberso ÁGUA com 1000 ou menos de ATK do seu Deck, você também não pode Invocar por Invocação-Especial pelo resto deste turno, exceto monstros ÁGUA.\r\nSe você Invocar por Invocação-Link um ou mais Monstros Link \"Marincesa\", enquanto este card está no seu Cemitério: você pode banir este card; equipe 1 monstro \"Marincesa\" do seu Cemitério a 1 daqueles Monstros Link como uma Magia de Equipamento que da 600 de ATK.\r\nVocê só pode usar cada um dos efeitos de \"Marincesa Azuri\" uma vez por turno.",
     "overallString": "[Monstro|Efeito] Ciberso/Água  [★3] 1600/1000",
