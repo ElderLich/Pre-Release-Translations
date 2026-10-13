@@ -201,136 +201,20 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311004,
-      "name": "惑精 石斛金星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311006,
-      "name": "惑精 福禄考火星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311007,
-      "name": "惑精 木樨木星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311008,
-      "name": "惑精 母菊土星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311010,
-      "name": "惑精 银莲冥王星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str1",
         "str2",
         "str3"
       ],
       "id": 120311011,
-      "name": "辉极精 秋英宇宙星"
+      "name": "Étoilecosmo le Polelfe Lumineux"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311012,
-      "name": "黑极精 秋英宇宙星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2",
         "str3"
       ],
       "id": 120311013,
-      "name": "澄极精 秋英宇宙星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311018,
-      "name": "宇宙姬的更衣"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311020,
-      "name": "宇宙姬的就寝"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311022,
-      "name": "邪心英雄 业火翼魔"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311023,
-      "name": "邪心英雄 闪电巨魔"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311026,
-      "name": "暗黑融合"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311027,
-      "name": "元素英雄 黏土侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311029,
-      "name": "元素英雄 水泡侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311030,
-      "name": "元素英雄 荒野侠"
+      "name": "Étoilecosmo le Polelfe de l'Hypernova"
     },
     {
       "fields": [
@@ -1767,22 +1651,22 @@
     "120310063": "976c46f8caa9f4071b24a2571e70776ce2605ca464a28ffe02763ef6e327f7c9",
     "120311001": "97ccdd0739591dfb9cf06dc413e4ac5368efab4c2caa9831e6f36969e1403319",
     "120311002": "e3b01a1ac5ede221c1daee870ebbe81256490a21fdb795931c759ccc82091d5c",
-    "120311004": "0b947a5e04fe6dcbd10b4f95a382c0d5982a5172d958c8e7d1cc3495c3635e1e",
-    "120311006": "1f253ca9f51b3a9c622960d543234d641470f6e0560e1a1e8234d25e3d1587ef",
-    "120311007": "aac4c0b6e7f3e3eb295d4a216916289487028dc161d943b1f73aaff7be8d6964",
-    "120311008": "d8d5cfa425e36589c9eb4524a57950e40ee7272b11c9e8fa6b0d1b0e72997b17",
-    "120311010": "b03e279e26588cd83f67dc8c47fd47f6e58da3c6ec2520d276a42be1e2fc252b",
-    "120311011": "ef59a4e1e1e6da223862b66ab443465a9307d0fd99434fe2decd6235e7a7e1b2",
-    "120311012": "ec448b7b167cdce73fa385668cc95ebad55ae9337777aa52262c26acb5286803",
-    "120311013": "84fcbde4f885b6c955a7a07582f78abde8d0954109ee78f4eeb7fe54ac34378b",
-    "120311018": "3e6c8261836be239f0ec555bda7234dc5b3170d82d01178fd98f57682bf6c8ab",
-    "120311020": "c9cd802b407098be65a68a039a452da8b786cc25a4c83c4f4fb5af007f25baa3",
-    "120311022": "c6233491ae477a42bcae95384c5ee00a0c31ccf7482ce47cebc86dfe0af99333",
-    "120311023": "1f82fc1d025fe6a24bfdb206ae2dbb5640389b7bbad7d1cbab503f1d2808ebae",
-    "120311026": "ed751d0f4f76aec5e9f700eb8d2db41f48f50a3a0b6c1660ca0703b768ee8499",
-    "120311027": "a1f8a41e9a010c48733233aa14c61c794a8a7ba49bafcef514fa53ccd2fc40bf",
-    "120311029": "9b021226e0ec0e1b92d69a72936b779b15ce0a1474760649330848887d9341b3",
-    "120311030": "55cbc3236b2db42cc4ddf429ddc760cd108080af0c0685a9565ec2809efd024f",
+    "120311004": "0bb688d4452be6e44ce489ff6863e0428fb396ef682c60ab69eb75c86f86babb",
+    "120311006": "8174ed8accc60b92a38cea7cf6c535ed5a6f78d8c6b13974fec17e7f267e8983",
+    "120311007": "40d81945c94e7083fcd7d223cde239b59ad70d151102dcb90604c82cfdc4eba9",
+    "120311008": "586990455b51863d095cb76971a2cdb8c182e5dd3077c28719f8f9d858a64666",
+    "120311010": "fc72b89444bd63c002d08d0556bcc6b62963814fbd90d00e11d86ee56684e86b",
+    "120311011": "0772f5b8c878e9e7db4ccbdd0c8c76e576ae8b181dc4844d277898d781328006",
+    "120311012": "930b7feab500abf336f4f5bfe527fc8b51ed2864b1bdf2cf8928048407ff75b1",
+    "120311013": "691c17181a4ea300e10080b7c14ae900b9439c2a1dc54b051a3f2dafe136a0d1",
+    "120311018": "38b20a859fb9f61f321bd9e77d6df8438f136c1a314c2d87a70b181793a0c0d5",
+    "120311020": "0528cc8fd40555fec5e718c1bfc6a8630563705124a649ce528d6222a338da64",
+    "120311022": "54addc01b79432626ccdf0ffd72fbdf428901893d6c4e6b20914b062ee5cafbc",
+    "120311023": "70aff460a8a78b96c360f700c5d95451d9077668f8b4c5e712d4a7d5198eb6f8",
+    "120311026": "41ce035d82bb3a89be71d32ce47db7c2d2d990a4f3ea6f83e914640fcab622c0",
+    "120311027": "4f8e7283bed3a472aac91e0064fef57a9917cb6c53ed713ae38268b1e914cdfd",
+    "120311029": "8fe1bd1a4566fc7b850026bc7ba66c775ed5e8695d6b38685d0e206d80ddbd37",
+    "120311030": "e1fa4a2de66a1ec78a088e026e85a1d45a0381754d2fd8a099c7bf7484e15561",
     "120311031": "b26b9aff9ab4913ffa9fd11ee6f53e20fe9d1b007854065ba030f0f73b12273e",
     "120311032": "c081623fc751be73e9af1843f02c8c5f5bc47513aa5d39f473f0c1c557726d88",
     "120311033": "ba200044cf715563c00e86a0484680d6faaaeb66177638539fabe5c0c93d7247",

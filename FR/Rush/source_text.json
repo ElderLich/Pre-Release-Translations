@@ -1,21 +1,133 @@
 {
   "language": "fr",
   "matches": {
-    "120311001": {
+    "120311004": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP001",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16508&languages=fr"
+      "set_code": "RD/LP02-JP004",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16514&languages=fr"
     },
-    "120311002": {
+    "120311006": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP002",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17803&languages=fr"
+      "set_code": "RD/LP02-JP006",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16512&languages=fr"
+    },
+    "120311007": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP007",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16511&languages=fr"
+    },
+    "120311008": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP008",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16510&languages=fr"
+    },
+    "120311010": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP010",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17807&languages=fr"
+    },
+    "120311011": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP011",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17808&languages=fr"
+    },
+    "120311012": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP012",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16506&languages=fr"
+    },
+    "120311013": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP013",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17809&languages=fr"
+    },
+    "120311018": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP018",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17810&languages=fr"
+    },
+    "120311020": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP020",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16517&languages=fr"
+    },
+    "120311022": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP022",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17804&languages=fr"
+    },
+    "120311023": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP023",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17805&languages=fr"
+    },
+    "120311026": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP026",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17806&languages=fr"
+    },
+    "120311027": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP027",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=13469&languages=fr"
+    },
+    "120311029": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP029",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=12972&languages=fr"
+    },
+    "120311030": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP030",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17811&languages=fr"
     }
   },
   "requested_ids": [
@@ -29,8 +141,6 @@
     120310052,
     120310062,
     120310063,
-    120311001,
-    120311002,
     120311004,
     120311006,
     120311007,
@@ -183,86 +293,6 @@
       "reason": "Localized fields are missing",
       "set_code": "RD/KP27-JP063",
       "source": "https://yugipedia.com/wiki/Mad_Rare_Hack"
-    },
-    {
-      "id": 120311004,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP004"
-    },
-    {
-      "id": 120311006,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP006"
-    },
-    {
-      "id": 120311007,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP007"
-    },
-    {
-      "id": 120311008,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP008"
-    },
-    {
-      "id": 120311010,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP010"
-    },
-    {
-      "id": 120311011,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP011"
-    },
-    {
-      "id": 120311012,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP012"
-    },
-    {
-      "id": 120311013,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP013"
-    },
-    {
-      "id": 120311018,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP018"
-    },
-    {
-      "id": 120311020,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP020"
-    },
-    {
-      "id": 120311022,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP022"
-    },
-    {
-      "id": 120311023,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP023"
-    },
-    {
-      "id": 120311026,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP026"
-    },
-    {
-      "id": 120311027,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP027"
-    },
-    {
-      "id": 120311029,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP029"
-    },
-    {
-      "id": 120311030,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP030"
     },
     {
       "id": 120311031,

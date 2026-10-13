@@ -175,136 +175,20 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311004,
-      "name": "惑精 石斛金星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311006,
-      "name": "惑精 福禄考火星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311007,
-      "name": "惑精 木樨木星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311008,
-      "name": "惑精 母菊土星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311010,
-      "name": "惑精 银莲冥王星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str1",
         "str2",
         "str3"
       ],
       "id": 120311011,
-      "name": "辉极精 秋英宇宙星"
+      "name": "Cosmostar the Luminous Polairy"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311012,
-      "name": "黑极精 秋英宇宙星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2",
         "str3"
       ],
       "id": 120311013,
-      "name": "澄极精 秋英宇宙星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311018,
-      "name": "宇宙姬的更衣"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311020,
-      "name": "宇宙姬的就寝"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311022,
-      "name": "邪心英雄 业火翼魔"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311023,
-      "name": "邪心英雄 闪电巨魔"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311026,
-      "name": "暗黑融合"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311027,
-      "name": "元素英雄 黏土侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311029,
-      "name": "元素英雄 水泡侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311030,
-      "name": "元素英雄 荒野侠"
+      "name": "Cosmostar the Hypernova Polairy"
     },
     {
       "fields": [
@@ -1741,22 +1625,22 @@
     "120310063": "ec05dda1bbb1fecd864a9f49f0f0d1c7805b013d62c67e3ac29bebe809118fbd",
     "120311001": "f6cc7627a0d69650b9c240032ef107aec3c5c4b55b7b828ee2b129a652b86ea5",
     "120311002": "648a2953a7bf5e5573a9d8486b7d710591535d7ff20fed585e579d3767d4e32f",
-    "120311004": "78fd29c45c9bc9a03f38d04c11739c5c873eb4877ff4c7be47865724aeab5780",
-    "120311006": "5ebc67d06375b8c05c10e621be44461dc4148202f8af7c7704d37c6bcd7e6189",
-    "120311007": "31b4c1b72a3eb0fe3ca8cf35de715e26fe8bce6678df3eabe9f71d77b5f6bf58",
-    "120311008": "8a2557fb47289a0aa27354443df3542486fb988a9a90847cec92aef100764348",
-    "120311010": "4c57f83b22ab5cf361e6132d151bcaed3ab77d8372deba6b1f439248561c442e",
-    "120311011": "37f82218bfb6d20203861dcb3dea213080d4301fe6f2db9d2bf04964105aff99",
-    "120311012": "ec448b7b167cdce73fa385668cc95ebad55ae9337777aa52262c26acb5286803",
-    "120311013": "c9868a25dbcfae27656507fab62a16dd5b172a99ff65b7fedda715c945c19bd3",
-    "120311018": "29925d67ce2a93d76c3f8a9db78efa6321b65786b3e347e53f0432462a9f0982",
-    "120311020": "fbd44920b4314594ef6ff022799c5dd6c0f9a8267e83b9862d82b6a16d922fba",
-    "120311022": "c6233491ae477a42bcae95384c5ee00a0c31ccf7482ce47cebc86dfe0af99333",
-    "120311023": "71e27afd21ee7dd68e15797dd9a2e22d453cf899a3509d86c2109998243a4787",
-    "120311026": "996bdaa3d58b0f1eb4fa0251b57af6dbd3d56129bc659723cb4a7e9dd7aa5385",
-    "120311027": "a1f8a41e9a010c48733233aa14c61c794a8a7ba49bafcef514fa53ccd2fc40bf",
-    "120311029": "43a2475d4690ceb3e28a44e52826afb635db7d15d26863b610348c9fd951f59f",
-    "120311030": "6442cca16ac210143a038b308e82c0bbc2b2c4c8df870f0e1ece035024cdfb57",
+    "120311004": "a6f041fbaab4f4e32f8d3d8be356acebe2689dccdc9fb004f98d9e4a35874ae6",
+    "120311006": "6ac3b316e1ca7e49620561d174c377874f10fe5a46cb6189bfa8653317fd8fe5",
+    "120311007": "710678b7816a6e18e586fde59e204a41f60d9c15cd35294e53619937cf4e5cf0",
+    "120311008": "742ed2a83d368e16c7bed662ede2d6ed4f60db8bc5f64671439cf8b320a08e9f",
+    "120311010": "38eca48c458c0268d1a738420534d01008f4ab3113b2125e43c214cb4009da2e",
+    "120311011": "1beb0185951d42acbcaa20d8d09f6c1baafec22bd94bfe2eaaa9e3d051bc76c6",
+    "120311012": "c59ed801dcb391d60c10c2084470d8af4bf420fc74f3da1e2ad8bc0d58afd023",
+    "120311013": "77a35f9ac045b803353fd04644013d6b754427fc3a8780233b2af69d033ee0cb",
+    "120311018": "553e543b403298bf33544ef83c37f8a1971756ff6fc762a155db179b34c78f44",
+    "120311020": "a69546b5954a6df6e8d61efc5961f28a675f38cc03417b3af789bb08327c2873",
+    "120311022": "2d1e928078a61e1cbcdbc4bfa9ed0e657190bf0bad86bf876223824bf2361e44",
+    "120311023": "96defead3e8663d0039ec41a3668f8462df98374b480c7c4dcc78a72347d6634",
+    "120311026": "05739613689da9cc009d356efbc425210ac62d25a8471b55642e46880432c76d",
+    "120311027": "96a112976c1dafb36bb33802330de34bb7d0bd11be93606370f5932ae4e6ba2f",
+    "120311029": "51823dad324850f1562147b53b121f90c7d8dfb25391a736c4346c1751a5fc9b",
+    "120311030": "f2a5c2f0db5302985e6ac8b21b1388c789b0fa4ca384e4b34cdb3ee4d16bf5aa",
     "120311031": "ccfac2683bca763df2dd489b3d377bb21b837a764042335453f584316a337f4e",
     "120311032": "89da473686dbe57bf24e28088677ce623a98dbc4fe6f9e36dc28ca6838131873",
     "120311033": "ba200044cf715563c00e86a0484680d6faaaeb66177638539fabe5c0c93d7247",

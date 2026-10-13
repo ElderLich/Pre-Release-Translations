@@ -106,18 +106,18 @@
     120307059,
     120307060
   ],
-  "local_inputs_sha256": "08c8951e81774b9ee88c4b65510f427120b1560551ad258483d8a9b757966d81",
+  "local_inputs_sha256": "37eda34157c1a017c5c978ea7b7cfb497a4f2416521f75053440b6ade48cea97",
   "patch_sha256": "e77cf68e1cd3e74628ea4a77852abd0a244931c04bb115598ff8013c75d1c58e",
   "pending_locales": {
     "DE": 61,
-    "EN": 52,
-    "ES": 42,
-    "FR": 53,
+    "EN": 38,
+    "ES": 2,
+    "FR": 39,
     "IT": 61,
     "JP": 17,
     "KR": 61,
     "PT": 61,
-    "TH": 52
+    "TH": 38
   },
   "source_fingerprint": "7f37f9cf5deeb10257207d02755beb7ef41cdf4244bbfdcc496211fa9239b08c",
   "source_revision": "93b5e353040152fdfcf785d3e958679bf5639f46",
