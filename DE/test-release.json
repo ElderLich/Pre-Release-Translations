@@ -1,5 +1,35 @@
 [
   {
+    "name": "Marinzessin Azuri",
+    "desc": "Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 WASSER Cyberse-Monster mit 1000 oder weniger ATK als Spezialbeschwörung von deinem Deck beschwören, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer WASSER Monstern. Falls du ein oder mehr „Marinzessin“-Linkmonster als Linkbeschwörung beschwörst, solange sich diese Karte in deinem Friedhof befindet: Du kannst diese Karte verbannen; rüste 1 jener Linkmonster mit 1 „Marinzessin“-Monster von deinem Friedhof als Ausrüstungszauber aus, der ihm 600 ATK gibt. Du kannst jeden Effekt von „Marinzessin Azuri“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Cyberse/Wasser  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Marinzessin Ulpis",
+    "desc": "Falls sich diese Karte in deiner Hand befindet: Du kannst 1 andere „Marinzessin“-Karte oder 1 WASSER Monster abwerfen; beschwöre diese Karte als Spezialbeschwörung. Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 „Marinzessin“-Zauber/Falle direkt von deinem Deck setzen. Du kannst 1 „Marinzessin“-Linkmonsterkarte, die du kontrollierst, auf den Friedhof legen; ziehe 1 Karte. Du kannst jeden Effekt von „Marinzessin Ulpis“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Cyberse/Wasser  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Aqua-Leviathan @Marinzessin",
+    "desc": "Du kannst diese Karte mit einer „Marinzessin“-Karte als Ritualbeschwörung beschwören. Monster, die dein Gegner kontrolliert, verlieren 1000 ATK. Du kannst jeden der folgenden Effekte von „Aqua-Leviathan @Marinzessin“ nur einmal pro Spielzug verwenden. Du kannst diese Karte in deiner Hand vorzeigen; füge deiner Hand 1 „Marinzessin“-Karte von deinem Deck hinzu, außer einem Ritualmonster, dann wirf 1 Karte ab. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst Karten, die dein Gegner kontrolliert, bis zur Anzahl der „Marinzessin“-Monsterkarten, die du kontrollierst, auf die Hand zurückgeben.",
+    "overallString": "[Monster|Effekt|Ritual] Cyberse/Wasser  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Marinzessin Wahrheitsherz",
+    "desc": "2+ „Marinzessin“-Monster\nFalls diese Karte mit einem Linkmonster mit 0 Grund-ATK als Material als Linkbeschwörung beschworen wird: Du kannst 1 „Marinzessin“-Monster mit Link-3 oder niedriger als Spezialbeschwörung von deinem Extra Deck beschwören. Du kannst diesen Effekt von „Marinzessin Wahrheitsherz“ nur einmal pro Spielzug verwenden. Du kannst 1 Linkmonsterkarte von deiner Spielfeldseite oder deinem Friedhof verbannen; zerstöre 1 Karte, die dein Gegner kontrolliert, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster mit derselben Linkzahl verbannen, um diesen Effekt von „Marinzessin Wahrheitsherz“ zu aktivieren.",
+    "overallString": "[Monster|Effekt|Link] Cyberse/Wasser  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Marinzessin-Rifflagune",
+    "desc": "Wenn diese Karte aktiviert wird: Du kannst deiner Hand 1 WASSER Cyberse-Monster von deinem Deck hinzufügen. Einmal pro Spielzug, während der End Phase deines Gegners: Du kannst bis zu 3 WASSER Monster von deinem Friedhof und/oder deinen verbannten Karten ins Deck mischen. Du kannst diese offene Karte auf den Friedhof legen; beschwöre 1 WASSER Cyberse-Ritualmonster als Ritualbeschwörung von deiner Hand, indem du WASSER Monster von deinem Friedhof verbannst, deren gemeinsame Stufe größer oder gleich der Stufe des Ritualmonsters ist. Du kannst nur 1 „Marinzessin-Rifflagune“ pro Spielzug aktivieren.",
+    "overallString": "[Zauber|Permanente]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
     "name": "Ars Magna Kunstmagus",
     "desc": "2+ Monster, darunter ein „Ars Magna“- oder „Kunstmagus“-Monster\nDein Gegner kann deine gelinkten Monster nicht als Ziel für Karteneffekte wählen. Während deiner Main Phase: Du kannst deiner Hand 1 „Ars Magna“-, „Kunstmagus“-, „UntergangZ“- oder „Elfnote“-Monster von deinem Deck hinzufügen oder es als Spezialbeschwörung beschwören, dann, falls sich Monster mit 3 oder mehr unterschiedlichen Typen auf deiner Spielfeldseite befinden, kannst du 1 Monster als Spezialbeschwörung von deinem Friedhof oder deinen verbannten Karten beschwören. Du kannst diesen Effekt von „Ars Magna Kunstmagus“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Link] Fee/Licht  [LINK-4] 2500/-  [↑][←][→][↓]",
