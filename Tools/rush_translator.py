@@ -56,12 +56,15 @@ def check_conflicts(reports: Path, report: dict) -> None:
         raise ValueError(f"{len(report['conflicts'])} Rush translation fields changed both locally and in the repository. "
                          f"No card database was overwritten. Compare local/published values in {reports / 'sync.json'}, "
                          "accept the published values in Rush/raw2 and refresh again, or explicitly keep your local versions "
-                         "with rush-refresh --keep-local after reviewing that report.")
+                         "with rush-refresh --no-pull-first --keep-local after reviewing that report.")
 
 
-def refresh_locale(repo_root: Path, local_root: Path, folder: str, *, keep_local=False, fetch_text=True, log=print) -> Path:
+def refresh_locale(repo_root: Path, local_root: Path, folder: str, *, keep_local=False, fetch_text=True,
+                   published_commit=None, log=print) -> Path:
     published, local, baseline, reports = paths(repo_root, local_root, folder)
     payload, report = merged_workspace(published, local, baseline, keep_local=keep_local)
+    if published_commit:
+        report["published_commit"] = published_commit
     check_conflicts(reports, report)
     write_changed(local, payload)
     write_changed(baseline, published.read_bytes())

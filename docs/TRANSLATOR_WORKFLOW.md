@@ -11,10 +11,11 @@ building the `.ypk`, and updating `test-release.json` and version files.
    **Standard**, **Rush** and **All locales**.
 2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
    translation and copy/upload workflow.
-3. **Rush** operates on your selected language. Fetch/pull downloads the latest
-   published Pre-Release Translations workspace and merges it into your local
-   `<LANG>/Rush/raw2/rush-pre-release.cdb`. Missing English, French and Japanese
-   text is then fetched using the source identity snapshot bundled in this repo.
+3. **Rush** operates on your selected language. **Pull published** downloads the
+   latest Pre-Release Translations workspace and merges it into your local
+   `<LANG>/Rush/raw2/rush-pre-release.cdb`. **Fetch Rush updates** also checks
+   web sources for missing English, French and Japanese text using the source
+   identity snapshot bundled in this repo.
    Select **Open Database in DataEditorX** to edit that CDB.
 4. Copy Rush translations into the repo to review locally, or explicitly use
    **Upload & Push** to commit that locale's workspace and start its cloud build.
@@ -31,10 +32,38 @@ those dependencies and builds all Rush packages after a workspace upload.
 adds Rush actions for the wrapper's language (8–13). Existing Standard command
 arguments remain compatible.
 
+### Pull published
+
+Use **Pull published** to bring another translator's uploaded changes into your
+local working database. It fetches the latest `origin/main` commit before
+reading any workspace files. On `main`, the checkout is fast-forwarded when
+possible. If a different branch, local commits or conflicting edits prevent
+that update, the tool reads the fetched commit directly and leaves your checkout
+work intact. The activity log identifies the published commit used.
+
+- **Standard:** copies `<LANG>/Workspace/test-release.cdb` and
+  `test-strings.conf` into your local `<LANG>/raw2`, and refreshes
+  `<LANG>/Mappings.csv`. Files that would be replaced are backed up under
+  `<LANG>/Backups/Published/<timestamp>/` first. Save and close the database in
+  your editor before pulling; reopen it afterward to see the downloaded text.
+- **Rush:** merges `<LANG>/Rush/Workspace/rush-pre-release.cdb` into your local
+  `<LANG>/Rush/raw2`. It keeps local text changes, reports conflicts and does
+  not contact card-text websites. Use **Fetch Rush updates** when you also want
+  automatic source-text lookup.
+
+These are the repository's latest translator workspaces. A workspace can contain
+cards still awaiting translation even while the downloadable game package stays
+at its last complete release. Pulling does not upload or publish local edits.
+
+The Standard `pull --dry-run` command fetches the latest commit to show what it
+would copy, but does not update the checkout or write local files or backups.
+
 ### Safe Rush updates
 
-- Pre-Release Translations must be on `main` and have no uncommitted changes before a
-  fetch/pull. The tool never stashes, resets or discards work automatically.
+- **Fetch Rush updates** and upload refreshes require a clean `main` checkout.
+  **Pull published** can read the fetched commit without changing a checkout
+  containing local work. The tool never stashes, resets or discards work
+  automatically.
 - Your edits live in `<LANG>/Rush/raw2/rush-pre-release.cdb`. The downloaded
   baseline in `Rush/Base Files` is bookkeeping; do not translate it.
 - Current IDs and gameplay follow the published repository workspace. New

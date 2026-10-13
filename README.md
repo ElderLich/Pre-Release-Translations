@@ -91,7 +91,7 @@ Standard also supports automatic English and French source text. Existing transl
 ## What the automation handles
 
 - **Fresh inventory.** New upstream cards enter the workspaces; retired cards leave them. Rush inventory follows `RD Patch.cdb` and the reviewed exclusions.
-- **Translation review.** Rush preserves local text edits and reports conflicting changes. Pending translations are recorded for completion before a full release.
+- **Translation review.** Rush preserves local text edits and reports conflicting changes. Each completed language releases independently; languages still awaiting translation keep their previous packages.
 - **Shared artwork.** Files in [Shared/Rush Artworks](Shared/Rush%20Artworks) are included in every locale's Rush package. Missing artwork appears in the reports.
 - **Daily updates.** One dispatcher checks what needs updating. Standard locales released within 24 hours skip scheduled imports unless the upstream package is newer. Rush checks source revisions and local inputs.
 - **Game packages.** Successful builds produce `.ypk` packages, JSON card data, and version files.

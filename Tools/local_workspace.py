@@ -18,7 +18,9 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 from dataclasses import dataclass
+from datetime import datetime
 from pathlib import Path
 
 DEFAULT_REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -177,7 +179,11 @@ def sync_shared_mappings_to_local(repo_root: Path, local_dir: Path, *, dry_run: 
 def copy_workspace(args: argparse.Namespace) -> list[Path]:
     config = LANGS[args.lang]
     local_dir, source_dir, workspace_dir = local_paths(args, config)
-    workspace_dir.mkdir(parents=True, exist_ok=True)
+    for filename in REQUIRED_WORKSPACE_FILES:
+        if not (source_dir / filename).is_file():
+            fail(f"required file missing: {source_dir / filename}")
+    if not args.dry_run:
+        workspace_dir.mkdir(parents=True, exist_ok=True)
 
     changed_paths: list[Path] = []
     for filename in REQUIRED_WORKSPACE_FILES:
@@ -195,27 +201,50 @@ def copy_workspace(args: argparse.Namespace) -> list[Path]:
     return changed_paths
 
 
-def pull_workspace_to_local(args: argparse.Namespace) -> list[Path]:
+def pull_workspace_to_local(args: argparse.Namespace, published_root: Path | None = None) -> list[Path]:
     config = LANGS[args.lang]
     local_dir, source_dir, workspace_dir = local_paths(args, config, source_required=False)
+    published_root = published_root or Path(args.repo_root).expanduser()
+    workspace_dir = published_root / config.folder / "Workspace"
     if not workspace_dir.exists():
         fail(f"repo Workspace folder not found: {workspace_dir}")
 
-    changed_paths: list[Path] = []
-    source_dir.mkdir(parents=True, exist_ok=True)
-    for filename in REQUIRED_WORKSPACE_FILES:
-        source = workspace_dir / filename
-        target = source_dir / filename
-        if not source.exists():
+    copies = [(workspace_dir / filename, source_dir / filename) for filename in REQUIRED_WORKSPACE_FILES]
+    copies.append((published_root / "Shared" / LOCAL_MAPPINGS_FILE, local_dir / LOCAL_MAPPINGS_FILE))
+    for source, target in copies:
+        if not source.is_file():
             fail(f"required repo workspace file missing: {source}")
-        if args.dry_run:
-            log(f"would copy {source} -> {target}")
-        else:
-            shutil.copy2(source, target)
-            log(f"copied {source} -> {target}")
-        changed_paths.append(target)
+        if not target.resolve().is_relative_to(local_dir.resolve()):
+            fail(f"local target must stay inside the locale folder: {target}")
+        if target.exists() and not target.is_file():
+            fail(f"local target is not a file: {target}")
+    changed = [(source, target) for source, target in copies
+               if not target.is_file() or source.read_bytes() != target.read_bytes()]
+    if args.dry_run:
+        for source, target in changed:
+            log(f"would copy {source} -> {target} (back up existing local file first)")
+        return [target for _, target in changed]
 
-    return changed_paths
+    replaced = [target for _, target in changed if target.is_file()]
+    if replaced:
+        backup = local_dir / "Backups" / "Published" / datetime.now().strftime("%Y%m%d-%H%M%S-%f")
+        for target in replaced:
+            saved = backup / target.relative_to(local_dir)
+            saved.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(target, saved)
+        log(f"Saved previous local files in {backup}")
+    # Validate every input and finish all backups before replacing any local file.
+    for source, target in changed:
+        target.parent.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile(prefix=target.name + ".", suffix=".tmp", dir=target.parent, delete=False) as stream:
+            temporary = Path(stream.name)
+        try:
+            shutil.copy2(source, temporary)
+            temporary.replace(target)
+        finally:
+            temporary.unlink(missing_ok=True)
+        log(f"copied published file -> {target}")
+    return [target for _, target in changed]
 
 
 def ensure_no_staged_changes(repo_root: Path) -> None:
@@ -253,9 +282,12 @@ def commit_and_push(args: argparse.Namespace, paths: list[Path]) -> None:
 
 def command_upload(args: argparse.Namespace) -> None:
     repo_root = Path(args.repo_root).expanduser()
+    if args.push and args.dry_run:
+        fail("Use either --push or --dry-run, not both.")
     if args.push:
         ensure_main_branch(repo_root)
-    if args.pull_first:
+        ensure_no_staged_changes(repo_root)
+    if args.pull_first and not args.dry_run:
         run(["git", "pull", "--ff-only", "origin", "main"], repo_root)
     changed_paths = copy_workspace(args)
     if args.push:
@@ -310,16 +342,24 @@ def command_refresh(args: argparse.Namespace) -> None:
 
 
 def command_pull(args: argparse.Namespace) -> None:
-    run(["git", "pull", "--ff-only", "origin", "main"], Path(args.repo_root).expanduser())
+    from published_workspace import published_snapshot
+    repo_root = Path(args.repo_root).expanduser()
+    files = {}
     if args.lang:
-        changed_paths = pull_workspace_to_local(args)
         config = LANGS[args.lang]
-        local_dir, _source_dir, _workspace_dir = local_paths(args, config, source_required=False)
-        sync_shared_mappings_to_local(Path(args.repo_root).expanduser(), local_dir, dry_run=args.dry_run)
-        if args.dry_run:
-            log("dry run completed; no local files were copied")
-        else:
-            log(f"pulled latest {config.folder} workspace into local {args.source_dir}: files={len(changed_paths) + 1}")
+        local_paths(args, config, source_required=False)
+        files = {f"{config.folder}/Workspace/{name}": True for name in REQUIRED_WORKSPACE_FILES}
+        files[f"Shared/{LOCAL_MAPPINGS_FILE}"] = True
+    try:
+        with published_snapshot(repo_root, files, dry_run=args.dry_run, log=log) as (snapshot, _revision):
+            if args.lang:
+                changed_paths = pull_workspace_to_local(args, snapshot)
+                if args.dry_run:
+                    log("dry run completed; no local files were copied")
+                else:
+                    log(f"pulled latest {config.folder} workspace into local {args.source_dir}: files={len(changed_paths)}")
+    except (ValueError, OSError, subprocess.CalledProcessError) as error:
+        fail(str(error))
 
 
 def command_status(args: argparse.Namespace) -> None:
@@ -396,15 +436,38 @@ def pull_clean_translator_repo(repo_root: Path) -> None:
 
 
 def command_rush_refresh(args: argparse.Namespace) -> None:
-    from rush_translator import refresh_locale
+    from rush_translator import refresh_locale, read_json
     repo_root = Path(args.repo_root).expanduser().resolve()
     local_root = resolve_local_root(args.local_root, args.lang).resolve()
+    # A published pull may deliberately leave a dirty/diverged checkout intact.
+    # Resolve exactly the commit described by its conflict report, not that checkout.
+    if args.keep_local and not args.pull_first:
+        report = read_json(local_root / RUSH_LANGS[args.lang].folder / "Rush/Reports/sync.json", {})
+        if report.get("conflicts") and report.get("published_commit"):
+            command_rush_pull(args, revision=report["published_commit"])
+            return
     if args.pull_first:
         pull_clean_translator_repo(repo_root)
     try:
         refresh_locale(repo_root, local_root, RUSH_LANGS[args.lang].folder,
                        keep_local=args.keep_local, fetch_text=not args.offline, log=log)
     except (ValueError, OSError) as error:
+        fail(str(error))
+
+
+def command_rush_pull(args: argparse.Namespace, *, revision=None) -> None:
+    from published_workspace import published_snapshot
+    from rush_translator import refresh_locale
+    repo_root = Path(args.repo_root).expanduser().resolve()
+    local_root = resolve_local_root(args.local_root, args.lang).resolve()
+    folder = RUSH_LANGS[args.lang].folder
+    files = {f"{folder}/Rush/Workspace/rush-pre-release.cdb": True,
+             f"{folder}/Rush/report.json": False, f"{folder}/Rush/source_text.json": False}
+    try:
+        with published_snapshot(repo_root, files, revision=revision, log=log) as (snapshot, commit):
+            refresh_locale(snapshot, local_root, folder, keep_local=args.keep_local,
+                           fetch_text=False, published_commit=commit, log=log)
+    except (ValueError, OSError, subprocess.CalledProcessError) as error:
         fail(str(error))
 
 
@@ -468,6 +531,10 @@ def build_parser() -> argparse.ArgumentParser:
     rush_refresh.add_argument("--offline", action="store_true", help="Refresh the published workspace without querying card text websites")
     rush_refresh.set_defaults(func=command_rush_refresh, pull_first=True)
 
+    rush_pull = subparsers.add_parser("rush-pull", help="Fetch published Rush translations without querying card text websites")
+    rush_pull.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
+    rush_pull.set_defaults(func=command_rush_pull, keep_local=False)
+
     rush_upload = subparsers.add_parser("rush-upload", help="Copy one locale's Rush translations into the repository")
     rush_upload.add_argument("--lang", choices=sorted(RUSH_LANGS), required=True)
     rush_upload.add_argument("--push", action="store_true", help="Commit and push only this locale's Rush workspace; GitHub builds the packages")
@@ -506,7 +573,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     refresh.set_defaults(func=command_refresh, pull_first=True)
 
-    pull = subparsers.add_parser("pull", help="Fast-forward local Pre-Release Translations main, then optionally copy <lang>/Workspace to local raw2")
+    pull = subparsers.add_parser("pull", help="Fetch published main, then optionally back up and copy <lang>/Workspace to local raw2")
     pull.add_argument("--lang", choices=sorted(LANGS), help="Language Workspace to copy back into the local folder")
     pull.add_argument("--source-dir", default="raw2", help="Local target folder inside the locale folder")
     pull.add_argument("--no-mappings", action="store_true", help="Accepted for compatibility; mappings are shared in Shared/Mappings.csv")

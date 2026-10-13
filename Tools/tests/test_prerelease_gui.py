@@ -115,6 +115,12 @@ class RushButtonContractTests(unittest.TestCase):
             self.assertNotIn("rush", command)
 
     @unittest.skipIf(gui is None, "Tkinter unavailable")
+    def test_rush_pull_uses_published_only_command(self):
+        command = gui.rush_workspace_command(self.root, self.root / "local", "pull", "DE")
+        self.assertIn("rush-pull", command)
+        self.assertNotIn("rush-refresh", command)
+
+    @unittest.skipIf(gui is None, "Tkinter unavailable")
     def test_wrapper_opens_shared_gui_and_keeps_refresh_command(self):
         import AutoPR_local as wrapper
         with patch.object(wrapper, "relaunch_windowless", return_value=False), patch.object(wrapper, "detect_lang", return_value="en"), patch.object(wrapper, "resolve_repo_root", return_value=self.root):

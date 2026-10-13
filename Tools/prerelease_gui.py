@@ -52,7 +52,7 @@ def rush_command(repo: Path, source: Path, translations: Path, *, fetch: bool, o
 
 
 def rush_workspace_command(repo: Path, local: Path, command: str, lang: str) -> list[str]:
-    action = {"refresh": "rush-refresh", "pull": "rush-refresh", "upload": "rush-upload",
+    action = {"refresh": "rush-refresh", "pull": "rush-pull", "upload": "rush-upload",
               "push": "rush-upload", "status": "status", "resolve": "rush-refresh"}[command]
     args = [python_console(), "-u", str(repo / "Tools/local_workspace.py"),
             "--repo-root", str(repo), "--local-root", str(local), action, "--lang", lang.lower()]

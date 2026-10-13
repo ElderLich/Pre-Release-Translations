@@ -1,5 +1,7 @@
 import importlib.util
+import io
 import json
+from contextlib import redirect_stdout, redirect_stderr
 from pathlib import Path
 import tempfile
 import unittest
@@ -89,16 +91,78 @@ class RushPrereleaseTests(unittest.TestCase):
         self.assertEqual(result["packaged_cards"], 1)
         self.assertEqual(set(rush.read_cdb(self.workspace())[0]), {100})
 
-    def test_missing_translation_preserves_all_last_good_release_files(self):
+    def test_missing_translation_preserves_only_pending_locale_release_files(self):
         self.sync(["en", "de"])
-        before = {p: p.read_bytes() for p in self.root.glob("*/rush-*")}
+        before = {p: p.read_bytes() for p in (self.root / "DE").glob("rush-*")}
         self.set_cards([100, 101, 102]); self.seed("en-US", [100, 101, 102])
-        with self.assertRaisesRegex(ValueError, "DE: 1 cards"):
-            self.sync(["en", "de"])
+        result = self.sync(["en", "de"])
+        self.assertEqual(result["pending_locales"], {"DE": 1})
         self.assertEqual(before, {p: p.read_bytes() for p in before})
+        self.assertEqual(set(rush.read_json(self.root / "EN/rush-pre-release.json")), {"100", "101", "102"})
         self.assertEqual(set(rush.read_cdb(self.workspace("DE"))[0]), {100, 101, 102})
         report = rush.read_json(self.root / "DE/Rush/report.json")
         self.assertEqual(report["pending_translations"][0]["id"], 102)
+
+    def run_cli(self, *arguments):
+        argv = ["rush_prerelease.py", "sync", "--repo-root", str(self.root),
+                "--source-root", str(self.source), "--translations-root", str(self.translations),
+                "--offline", *arguments]
+        stdout, stderr = io.StringIO(), io.StringIO()
+        with patch.object(rush.sys, "argv", argv), redirect_stdout(stdout), redirect_stderr(stderr):
+            try:
+                status = rush.main()
+            except SystemExit as error:
+                status = error.code
+        return status, stdout.getvalue(), stderr.getvalue()
+
+    def test_ci_publishes_spanish_independently_while_other_locales_remain_pending(self):
+        self.seed("es-ES", [100, 101])
+        self.sync(["en", "de", "es"])
+        before = {p: p.read_bytes() for p in self.root.glob("*/rush-*") if p.parent.name != "ES"}
+        self.edit_text(self.workspace("ES"), 100, "Spanish translator correction.")
+        self.set_cards([100, 101, 102]); self.seed("es-ES", [100, 101, 102])
+        summary = self.root / "summary.md"
+        status, stdout, stderr = self.run_cli("--summary-file", str(summary))
+        self.assertEqual(status, 0, stderr)
+        result = json.loads(stdout[stdout.index("{"):])
+        self.assertEqual(result["status"], "partial")
+        self.assertIn("ES", result["updated_locales"])
+        self.assertEqual(result["pending_locales"]["DE"], 1)
+        self.assertEqual(before, {p: p.read_bytes() for p in before})
+        published = rush.read_json(self.root / "ES/rush-pre-release.json")
+        self.assertEqual(set(published), {"100", "101", "102"})
+        self.assertEqual(published["100"]["desc"], "Spanish translator correction.")
+        receipt = rush.read_json(self.root / "Shared/Rush/source.json")
+        self.assertIn("ES", receipt["built_locales"])
+        self.assertNotIn("DE", receipt["built_locales"])
+        self.assertEqual(receipt["pending_locales"]["DE"], 1)
+        self.assertIn("| ES | 0 | Published |", summary.read_text())
+        self.assertIn("| DE | 1 | Pending; publication withheld |", summary.read_text())
+
+    def test_cli_saves_pending_translations_without_reporting_build_failure(self):
+        self.set_cards([100, 101, 102])
+        status, stdout, stderr = self.run_cli("--lang", "en")
+        self.assertEqual(status, 0, stderr)
+        self.assertEqual(json.loads(stdout)["status"], "pending_translations")
+        self.assertFalse(self.package().exists())
+
+    def test_ci_still_fails_for_actual_build_errors(self):
+        self.sync(); before = self.package().read_bytes()
+        (self.source / "script/c100.lua").unlink()
+        summary = self.root / "summary.md"
+        status, _, stderr = self.run_cli("--lang", "en", "--summary-file", str(summary))
+        self.assertEqual(status, 1)
+        self.assertIn("Missing effect script", stderr)
+        self.assertEqual(before, self.package().read_bytes())
+        self.assertFalse(summary.exists())
+
+    def test_ci_reports_successful_complete_batch(self):
+        summary = self.root / "summary.md"
+        status, _, stderr = self.run_cli("--lang", "en", "--summary-file", str(summary))
+        self.assertEqual(status, 0, stderr)
+        self.assertTrue(self.package().exists())
+        self.assertIn("| EN | 0 | Published |", summary.read_text())
+        self.assertIn("| TH | 0 | Published |", summary.read_text())
 
     def test_unchanged_run_preserves_all_bytes_and_versions(self):
         self.sync(["en", "de"])
@@ -110,23 +174,40 @@ class RushPrereleaseTests(unittest.TestCase):
         self.sync(["th"])
         self.assertEqual(self.package().read_bytes(), self.package("TH").read_bytes())
 
+    def test_thai_waits_for_english_source_review_then_updates_with_english_only_build(self):
+        self.sync(["en"])
+        before = self.package().read_bytes()
+        row = list(self.texts[100]); row[2] += "（修改）"; self.texts[100] = tuple(row); self.write_source()
+        result = self.sync(["th"])
+        self.assertEqual(result["pending_locales"], {"EN": 1, "TH": 1})
+        self.assertEqual(before, self.package().read_bytes())
+        self.assertEqual(before, self.package("TH").read_bytes())
+        self.edit_text(self.workspace(), 100, "Reviewed English effect.")
+        result = self.sync(["en"])
+        self.assertEqual(result["pending_locales"], {})
+        self.assertEqual(self.package().read_bytes(), self.package("TH").read_bytes())
+        self.assertNotEqual(before, self.package().read_bytes())
+
     def test_changed_source_text_requires_translator_review(self):
         self.sync()
         row = list(self.texts[100]); row[2] += "（修改）"; self.texts[100] = tuple(row); self.write_source()
-        with self.assertRaisesRegex(ValueError, "need translation/review"):
-            self.sync()
+        self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
         self.assertIn("source_changed", rush.read_json(self.root / "EN/Rush/report.json")["pending_translations"][0]["fields"])
         self.edit_text(self.workspace(), 100, "Reviewed updated effect.")
         self.sync()
 
-    def test_staggered_locale_reviews_survive_failed_batches(self):
+    def test_staggered_locale_reviews_publish_each_ready_locale_and_preserve_pending_baselines(self):
         self.sync(["en", "de"])
+        old_german_report = rush.read_json(self.root / "DE/Rush/report.json")
         row = list(self.texts[100]); row[2] += "（修改）"; self.texts[100] = tuple(row); self.write_source()
-        with self.assertRaisesRegex(ValueError, "EN: 1 cards.*DE: 1 cards"):
-            self.sync(["en", "de"])
+        self.assertEqual(self.sync(["en", "de"])["pending_locales"], {"EN": 1, "DE": 1, "TH": 1})
         self.edit_text(self.workspace("EN"), 100, "Reviewed English effect.")
-        with self.assertRaisesRegex(ValueError, "DE: 1 cards"):
-            self.sync(["en", "de"])
+        self.assertEqual(self.sync(["en", "de"])["pending_locales"], {"DE": 1})
+        report = rush.read_json(self.root / "DE/Rush/report.json")
+        self.assertEqual(report["published_source_fields"], old_german_report["published_source_fields"])
+        self.assertEqual(report["published_text_fields"], old_german_report["published_text_fields"])
+        self.assertEqual(rush.read_json(self.root / "EN/rush-pre-release.json")["100"]["desc"], "Reviewed English effect.")
+        self.assertEqual(self.sync(["en", "de"])["pending_locales"], {"DE": 1})
         self.edit_text(self.workspace("DE"), 100, "Reviewed German effect.")
         self.sync(["en", "de"])
         self.assertEqual(rush.read_json(self.root / "EN/Rush/report.json")["pending_translations"], [])
@@ -136,8 +217,7 @@ class RushPrereleaseTests(unittest.TestCase):
         self.sync(["en", "de"])
         self.edit_text(self.workspace("DE"), 100, "Human correction.")
         self.set_cards([100, 101, 102]); self.seed("en-US", [100, 101, 102])
-        with self.assertRaisesRegex(ValueError, "DE: 1 cards"):
-            self.sync(["en", "de"])
+        self.assertEqual(self.sync(["en", "de"])["pending_locales"], {"DE": 1})
         self.seed("de-DE", [100, 101, 102])
         self.sync(["en", "de"])
         _, texts = rush.read_cdb(self.workspace("DE"))
@@ -151,8 +231,7 @@ class RushPrereleaseTests(unittest.TestCase):
         datas, texts = rush.read_cdb(seed_path)
         row = list(texts[100]); row[3] = "A newly supplied prompt"; texts[100] = tuple(row)
         rush.write_changed(seed_path, rush.cdb_bytes(datas, texts))
-        with self.assertRaisesRegex(ValueError, "need translation/review"):
-            self.sync()
+        self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
         report = rush.read_json(self.root / "EN/Rush/report.json")
         self.assertIn("source_changed", report["pending_translations"][0]["fields"])
 
@@ -184,7 +263,7 @@ class RushPrereleaseTests(unittest.TestCase):
                 self.assertNotIn("script/c102.lua", archive.namelist())
         self.assertEqual(self.package("TH").read_bytes(), self.package("EN").read_bytes())
 
-    def test_formatting_does_not_approve_changed_source_after_failed_batch(self):
+    def test_formatting_does_not_approve_changed_source_after_pending_run(self):
         self.sync()
         # Emulate a last-good package produced by the old inline formatter.
         inline = "【REQUIREMENT】 None. 【EFFECT】 Draw."
@@ -195,8 +274,7 @@ class RushPrereleaseTests(unittest.TestCase):
         rush.write_changed(report_path, rush.json_bytes(report))
         row = list(self.texts[100]); row[2] += "（修改）"; self.texts[100] = tuple(row); self.write_source()
         for _ in range(2):
-            with self.assertRaisesRegex(ValueError, "need translation/review"):
-                self.sync()
+            self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
             self.assertEqual(rush.read_cdb(self.workspace())[1][100][2], inline)
             self.assertIn("source_changed", rush.read_json(report_path)["pending_translations"][0]["fields"])
 
@@ -210,19 +288,19 @@ class RushPrereleaseTests(unittest.TestCase):
         for lang, (_, locale) in rush.LANGS.items():
             if lang not in ("fr", "zh-cn", "th"):
                 self.seed(locale, [100, 102])
-        with self.assertRaisesRegex(ValueError, "Retired cards removed.*FR: 1 cards"):
-            self.sync(languages)
+        result = self.sync(languages)
+        self.assertEqual(result["pending_locales"], {"FR": 1})
+        self.assertEqual(result["retired_ids"], {"FR": [101]})
         for folder, _ in rush.LANGS.values():
             self.assertEqual(set(rush.read_cdb(self.workspace(folder))[0]), {100, 102})
             with zipfile.ZipFile(self.package(folder)) as archive:
                 self.assertNotIn("script/c101.lua", archive.namelist())
-                self.assertNotIn("script/c102.lua", archive.namelist())
+                self.assertEqual("script/c102.lua" in archive.namelist(), folder != "FR")
                 self.assertNotIn("Picture/Rush_Arts/101.jpg", archive.namelist())
             data = rush.read_json(self.root / folder / "rush-pre-release.json")
-            self.assertEqual(set(data), {"100"})
+            self.assertEqual(set(data), {"100"} if folder == "FR" else {"100", "102"})
         before = {p: p.read_bytes() for p in self.root.glob("*/rush-*")}
-        with self.assertRaisesRegex(ValueError, "FR: 1 cards"):
-            self.sync(languages)
+        self.assertEqual(self.sync(languages)["pending_locales"], {"FR": 1})
         self.assertEqual(before, {p: p.read_bytes() for p in before})
         self.assertEqual(self.package("TH").read_bytes(), self.package("EN").read_bytes())
 
@@ -230,8 +308,7 @@ class RushPrereleaseTests(unittest.TestCase):
         (self.source / "script/c100.lua").write_text('Duel.LoadScript("c101.lua")', encoding="utf-8")
         self.sync()
         self.set_cards([100, 102])
-        with self.assertRaisesRegex(ValueError, "Retired cards removed"):
-            self.sync()
+        self.assertEqual(self.sync()["retired_ids"], {"EN": [101], "TH": [101]})
         with zipfile.ZipFile(self.package()) as archive:
             self.assertEqual(archive.read("script/c100.lua"), b'Duel.LoadScript("c101.lua")')
             self.assertIn("script/c101.lua", archive.namelist())
@@ -263,6 +340,33 @@ class RushPrereleaseTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing effect script"):
             self.sync()
         self.assertEqual(before, self.package().read_bytes())
+
+    def test_invalid_later_locale_database_prevents_ready_locale_publication(self):
+        self.sync(["en", "de"])
+        before = {p: p.read_bytes() for p in self.root.glob("*/rush-*")}
+        self.edit_text(self.workspace(), 100, "English correction.")
+        self.workspace("DE").write_bytes(b"invalid database")
+        with self.assertRaises(rush.sqlite3.DatabaseError):
+            self.sync(["en", "de"])
+        self.assertEqual(before, {p: p.read_bytes() for p in before})
+
+    def test_invalid_version_prevents_any_package_replacement(self):
+        self.sync(["en", "de"])
+        self.edit_text(self.workspace(), 100, "English correction.")
+        (self.root / "DE/rush-version.txt").write_text("invalid", encoding="utf-8")
+        before = {p: p.read_bytes() for p in self.root.glob("*/rush-*")}
+        with self.assertRaises(ValueError):
+            self.sync(["en", "de"])
+        self.assertEqual(before, {p: p.read_bytes() for p in before})
+
+    def test_invalid_pending_retirement_archive_prevents_ready_locale_publication(self):
+        self.sync(["en", "de"])
+        self.set_cards([100, 102]); self.seed("en-US", [100, 102])
+        self.package("DE").write_bytes(b"invalid archive")
+        before = {p: p.read_bytes() for p in self.root.glob("*/rush-*")}
+        with self.assertRaises(zipfile.BadZipFile):
+            self.sync(["en", "de"])
+        self.assertEqual(before, {p: p.read_bytes() for p in before})
 
     def test_duplicate_artwork_is_rejected(self):
         (self.root / "Shared/Rush Artworks/100.png").write_bytes(b"\x89PNG\r\n\x1a\nfixture")
@@ -301,8 +405,7 @@ class RushPrereleaseTests(unittest.TestCase):
         datas, texts = rush.read_cdb(self.translations / "en-US/rush_cards.cdb")
         row = list(texts[100]); row[3] = self.texts[100][3]; texts[100] = tuple(row)
         rush.write_changed(self.translations / "en-US/rush_cards.cdb", rush.cdb_bytes(datas, texts))
-        with self.assertRaisesRegex(ValueError, "need translation/review"):
-            self.sync()
+        self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
         self.assertFalse(self.package().exists())
 
     def test_standard_english_sync_preserves_shared_rush_mappings(self):
@@ -327,8 +430,8 @@ class RushPrereleaseTests(unittest.TestCase):
         self.set_cards([100, 102])
         row = list(self.datas[100]); row[5] = 1900; self.datas[100] = tuple(row); self.write_source()
         with patch("card_text_autofill.request_url", side_effect=AssertionError("Korean web fetch")) as request:
-            with self.assertRaisesRegex(ValueError, "KR: 1 cards"):
-                rush.synchronize(self.root, self.source, self.translations, ["kr"], fetch_source_text=True)
+            result = rush.synchronize(self.root, self.source, self.translations, ["kr"], fetch_source_text=True)
+            self.assertEqual(result["pending_locales"], {"KR": 1})
             request.assert_not_called()
         datas, texts = rush.read_cdb(self.workspace("KR"))
         self.assertEqual(set(datas), {100, 102})

@@ -57,22 +57,23 @@ jobs:
           for attempt in 1 2 3 4 5; do
             git fetch origin "$branch"
             git checkout -B "$branch" "origin/$branch"
-            build_status=0
             python Tools/rush_prerelease.py sync \
               --source-root "$RUNNER_TEMP/rush-source" \
-              --translations-root "$RUNNER_TEMP/rush-translations/Data/locales" || build_status=$?
+              --translations-root "$RUNNER_TEMP/rush-translations/Data/locales" \
+              --summary-file "$RUNNER_TEMP/rush-summary.md"
             # Preserve pending translator work even when incomplete locales block publication.
             for path in Shared/Rush/source.json Shared/Rush/sets.md */Rush */rush-pre-release.ypk */rush-pre-release.json */rush-version.txt; do
               if [ -e "$path" ]; then git add -A -- "$path"; fi
             done
             if git diff --cached --quiet; then
-              echo "No generated Rush changes to commit (build status: $build_status)."
-              exit "$build_status"
+              cat "$RUNNER_TEMP/rush-summary.md" >> "$GITHUB_STEP_SUMMARY"
+              echo "No generated Rush changes to commit. See the summary for translation readiness."
+              exit 0
             fi
             git commit -m "Update Rush pre-release cards in all locales"
             if git push origin "HEAD:$branch"; then
-              if [ "$build_status" -ne 0 ]; then echo "Translator workspaces/reports saved; Untranslated additions remain pending; retired cards are removed from last-good packages."; fi
-              exit "$build_status"
+              cat "$RUNNER_TEMP/rush-summary.md" >> "$GITHUB_STEP_SUMMARY"
+              exit 0
             fi
             echo "Branch changed while building; retrying from its latest contents ($attempt/5)."
             sleep $((attempt * 5))

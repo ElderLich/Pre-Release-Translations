@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Synchronize the authoritative Rush patch into translated, reproducible YPKs.
 
-Workspace CDBs are translator inputs; packages are rebuilt, never merged with an
-old package. A missing translation prevents publication of the whole selected
-batch, while updated workspaces and diagnostic reports remain available.
+Workspace CDBs are translator inputs; completed locales publish independently.
+Incomplete locales keep their last-good packages, with retired cards removed,
+while updated workspaces and diagnostic reports remain available.
 """
 from __future__ import annotations
 
@@ -255,7 +255,7 @@ def apply_prompt_translations(row: tuple, source_row: tuple, lang: str,
 
 
 
-def prune_retired_releases(root: Path, languages: list[str], active_ids: set[int]) -> dict:
+def prepare_retired_releases(root: Path, languages: list[str], active_ids: set[int]) -> tuple[dict, dict]:
     """Remove retired IDs even while new untranslated additions block publication.
 
     Retained rows and scripts come from the last-good archive, not the changed
@@ -295,12 +295,22 @@ def prune_retired_releases(root: Path, languages: list[str], active_ids: set[int
                 str(key): {**dict(zip(DATA_FIELDS, datas[key])), **dict(zip(TEXT_FIELDS[1:], texts[key][1:]))}
                 for key in sorted(datas)})
             removed[folder] = sorted(retired)
+    return outputs, removed
+
+
+def prepare_versions(outputs: dict[Path, bytes]) -> list[str]:
+    """Validate every version before any ready or retirement-only package is written."""
+    versions, changed_locales = {}, []
     for path, data in outputs.items():
-        if write_changed(path, data) and path.suffix == ".ypk":
-            version = path.with_name("rush-version.txt")
-            old_version = int(version.read_text().strip()) if version.exists() else 0
-            write_changed(version, str(max(int(time.time()), old_version + 1)).encode("ascii"))
-    return removed
+        if path.suffix != ".ypk":
+            continue
+        version = path.with_name("rush-version.txt")
+        old_version = int(version.read_text().strip()) if version.exists() else 0
+        if not path.is_file() or path.read_bytes() != data or not version.exists():
+            versions[version] = str(max(int(time.time()), old_version + 1)).encode("ascii")
+            changed_locales.append(path.parent.name)
+    outputs.update(versions)
+    return sorted(changed_locales)
 
 
 def synchronize(root: Path, source: Path, translations_root: Path | None,
@@ -327,11 +337,12 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
     pending_workspaces = {}
     reports = {}
     publication_fields = {}
-    errors = []
-    # English first, so Thai has byte-identical text and package content.
-    selected = list(dict.fromkeys((["en"] if "th" in languages else []) + languages))
+    pending_languages = []
+    # Keep English and its Thai fallback together, including single-locale builds.
+    selected = list(dict.fromkeys((["en", "th"] if {"en", "th"} & set(languages) else []) + languages))
     selected.sort(key=lambda key: (key != "en", key))
     english_rows = None
+    english_pending = None
     for lang in selected:
         folder, locale = LANGS[lang]
         locale_root = root / folder / "Rush"
@@ -342,7 +353,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         unformatted_rows = {}
         unresolved = []
         previous_report = read_json(locale_root / "report.json", {})
-        # Diagnostic row hashes change on failed runs. Review must compare against
+        # Diagnostic row hashes change on pending runs. Review must compare against
         # the last successful publication, including across staggered locale edits.
         old_published_hashes = previous_report.get("published_text_sha256", previous_report.get("text_sha256", {}))
         old_source_hashes = previous_report.get("published_source_sha256", previous_source.get("text_sha256", {}))
@@ -394,9 +405,14 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
             formatted[2] = encode_rush_description(row[2] or "", "en" if lang == "th" else lang)
             merged[card_id] = tuple(formatted)
         if lang == "en":
-            english_rows = merged
+            english_rows = unformatted_rows
+            english_pending = unresolved
+        elif lang == "th":
+            # Thai is the English fallback, including review requirements. Its own
+            # previous text must never approve an unreviewed English source change.
+            unresolved = english_pending
         write_changed(locale_root / "Base Files/rush-pre-release.cdb", cdb_bytes(datas, texts))
-        # A failed batch must not rewrite old text merely for presentation:
+        # A pending locale must not rewrite old text merely for presentation:
         # otherwise the next run could mistake formatting for translator review.
         pending_workspaces[workspace] = cdb_bytes(datas, unformatted_rows)
         formatted_workspaces[workspace] = cdb_bytes(datas, merged)
@@ -414,40 +430,38 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         report.pop("removed_ids")
         write_changed(locale_root / "report.json", json_bytes(report))
         reports[folder] = report
-        # Kept in memory until every locale passes; failed runs keep old baselines.
+        # Pending locales keep their own last-published review baselines.
         publication_fields[folder] = {str(key): text_field_hashes(merged[key]) for key in sorted(ids)}
         if unresolved:
-            errors.append(f"{folder}: {len(unresolved)} cards need translation/review")
+            pending_languages.append(lang)
             continue
         card_json = {str(key): {**dict(zip(DATA_FIELDS, datas[key])),
                                **dict(zip(TEXT_FIELDS[1:], merged[key][1:]))} for key in sorted(ids)}
         package = {"rush-pre-release.cdb": cdb_bytes(datas, merged), **scripts, **artwork}
         outputs[root / folder / "rush-pre-release.ypk"] = zip_bytes(package)
         outputs[root / folder / "rush-pre-release.json"] = json_bytes(card_json)
-    if errors:
-        for path, data in pending_workspaces.items():
-            write_changed(path, data)
-        retired = prune_retired_releases(root, selected, ids)
-        prefix = ("Retired cards removed from last-good packages in " + ", ".join(sorted(retired)) +
-                  "; untranslated additions remain pending. ") if retired else "No release files were changed. "
-        raise ValueError(prefix + "; ".join(errors) +
-                         ". Translate */Rush/Workspace/rush-pre-release.cdb and rerun sync.")
-    # Preflight the complete batch before replacing any locale release files.
-    for path, data in formatted_workspaces.items():
-        write_changed(path, data)
+    pending_locales = {LANGS[lang][0]: len(reports[LANGS[lang][0]]["pending_translations"])
+                       for lang in pending_languages}
+    ready_locales = sorted(reports.keys() - pending_locales.keys())
+    # Preflight all locale databases, retirement archives and version files before
+    # replacing any release, so a real build error cannot publish a partial run.
+    retired_outputs, retired = prepare_retired_releases(root, pending_languages, ids)
+    outputs.update(retired_outputs)
+    updated_locales = prepare_versions(outputs)
+    for path, data in pending_workspaces.items():
+        write_changed(path, data if path.parents[2].name in pending_locales else formatted_workspaces[path])
     for path, data in outputs.items():
-        changed = write_changed(path, data)
-        if path.suffix == ".ypk" and (changed or not path.with_name("rush-version.txt").exists()):
-            version_path = path.with_name("rush-version.txt")
-            old_version = int(version_path.read_text().strip()) if version_path.exists() else 0
-            write_changed(version_path, str(max(int(time.time()), old_version + 1)).encode("ascii"))
+        write_changed(path, data)
     for folder, report in reports.items():
+        if folder in pending_locales:
+            continue
         report["published_text_sha256"] = report["text_sha256"]
         report["published_source_sha256"] = source_hashes
         report["published_source_fields"] = source_fields
         report["published_text_fields"] = publication_fields[folder]
         write_changed(root / folder / "Rush/report.json", json_bytes(report))
-    receipt = {"version": 1, "source_revision": revision(source), "built_locales": sorted(reports),
+    receipt = {"version": 2, "source_revision": revision(source), "built_locales": ready_locales,
+               "pending_locales": pending_locales,
                "translations_revision": revision(translations_root.parents[1]) if translations_root else None,
                "patch_sha256": digest((source / "RD Patch.cdb").read_bytes()),
                "source_fingerprint": file_fingerprint(source, [source / "RD Patch.cdb"] + ([source / "sets.md"] if (source / "sets.md").exists() else []) + list((source / "script").glob("*.lua"))),
@@ -455,9 +469,35 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
                "card_ids": sorted(ids), "excluded_ids": sorted(set(source_datas) & excluded.keys()),
                "text_sha256": source_hashes}
     write_changed(root / "Shared/Rush/source.json", json_bytes(receipt))
-    return {"source_cards": len(source_datas), "packaged_cards": len(ids),
+    return {"status": "partial" if pending_locales and ready_locales else "pending_translations" if pending_locales else "ready",
+            "source_cards": len(source_datas), "packaged_cards": len(ids) if ready_locales else 0,
             "locales": sorted(reports), "artworks": len(artwork), "missing_artwork": missing_art,
-            "scripts": len(scripts), "pending_translations": 0}
+            "scripts": len(scripts), "pending_translations": sum(pending_locales.values()),
+            "ready_locales": ready_locales, "updated_locales": updated_locales,
+            "pending_locales": pending_locales, "retired_ids": retired}
+
+
+def write_summary(path: Path, result: dict) -> None:
+    pending = result.get("pending_locales", {})
+    lines = ["## Rush translation update", "",
+             "Completed locales publish independently. Translator workspaces and reports were saved.", "",
+             "| Locale | Cards needing translation/review | Status |", "| --- | ---: | --- |"]
+    for locale in result["locales"]:
+        count = pending.get(locale, 0)
+        if count:
+            state = "Pending; publication withheld"
+            if locale in result["retired_ids"]:
+                state = "Pending; retired cards removed from last-good release"
+        else:
+            state = "Published" if locale in result["updated_locales"] else "Ready; already current"
+        lines.append(f"| {locale} | {count} | {state} |")
+    if pending:
+        lines += ["", "See each locale's `Rush/report.json` for card IDs and fields. "
+                  "Edit `Rush/Workspace/rush-pre-release.cdb` to complete the pending translations."]
+        if result.get("retired_ids"):
+            lines += ["", "Retired cards were removed from the last-good packages in: " +
+                      ", ".join(sorted(result["retired_ids"])) + ". Retained cards keep their published text and scripts."]
+    path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main() -> int:
@@ -468,13 +508,16 @@ def main() -> int:
     parser.add_argument("--translations-root", type=Path)
     parser.add_argument("--lang", choices=("all", *LANGS), default="all")
     parser.add_argument("--offline", action="store_true", help="Use local translations only; skip automatic web source imports")
+    parser.add_argument("--summary-file", type=Path, help="Write a Markdown build outcome for the Actions job summary")
     args = parser.parse_args()
     try:
         result = synchronize(args.repo_root.resolve(), args.source_root.resolve(),
                              args.translations_root.resolve() if args.translations_root else None,
                              list(LANGS) if args.lang == "all" else [args.lang], fetch_source_text=not args.offline)
-    except (ValueError, sqlite3.Error, OSError) as error:
+    except (ValueError, sqlite3.Error, OSError, zipfile.BadZipFile) as error:
         parser.exit(1, f"Rush sync failed: {error}\n")
+    if args.summary_file:
+        write_summary(args.summary_file, result)
     print(json.dumps(result, indent=2))
     return 0
 

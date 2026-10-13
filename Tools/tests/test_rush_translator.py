@@ -151,6 +151,7 @@ class RushTranslatorTests(unittest.TestCase):
 
     def test_wrapper_rush_actions_are_bound_to_its_locale(self):
         for command, expected in [('rush-refresh', ('rush-refresh','--lang','fr')),
+                                  ('rush-pull', ('rush-pull','--lang','fr')),
                                   ('rush-copy', ('rush-upload','--lang','fr')),
                                   ('rush-upload', ('rush-upload','--lang','fr','--push'))]:
             with patch.object(wrapper,'detect_lang',return_value='fr'), patch.object(sys,'argv',['AutoPR.py',command]), patch.object(wrapper,'run_tool',return_value=0) as run:

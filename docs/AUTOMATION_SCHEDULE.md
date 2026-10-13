@@ -32,6 +32,12 @@ the current `main` of MDPro4_Data (only Data/locales), reconciles each workspace
 then commits the deterministic packages and reports. It rebuilds on top of the
 latest branch after a push conflict so concurrent translator edits are preserved.
 
-If a Rush translation is incomplete, the job saves the refreshed translator
-workspaces and reports, then fails visibly. Existing packages, versions and the
-last successful source receipt stay unchanged until every locale is complete.
+If a Rush translation is incomplete, the job successfully saves the refreshed
+translator workspaces and reports. The Actions summary lists ready and pending
+locales with the number of cards needing translation/review. Each completed
+locale publishes independently; pending locales retain their last-good releases
+and review baselines. EN and its TH fallback publish together. Retired cards can
+still be removed from pending locales' packages, advancing their versions while
+retaining the other published cards. The source receipt records completed and
+pending locales separately, so unfinished translations still get daily source
+checks. Actual source-fetch, database and build errors still fail the job.

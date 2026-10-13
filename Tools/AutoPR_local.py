@@ -246,7 +246,9 @@ def main() -> int:
         return 0
     if sys.argv[1] != "--menu":
         command = sys.argv[1].lower()
-        if command in {"rush-refresh", "rush-update", "rush-pull"}:
+        if command == "rush-pull":
+            return run_tool("rush-pull", "--lang", lang, *sys.argv[2:])
+        if command in {"rush-refresh", "rush-update"}:
             return run_tool("rush-refresh", "--lang", lang, *sys.argv[2:])
         if command in {"rush-upload", "rush-push"}:
             return run_tool("rush-upload", "--lang", lang, "--push", *sys.argv[2:])

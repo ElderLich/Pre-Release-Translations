@@ -2,11 +2,14 @@
 
 ## Translator workflow
 
-Open your usual locale `AutoPR.pyw` (or `AutoPR.py`) and select the **Rush** tab. Fetch/pull uses
-the Pre-Release Translations repository and prepares
-`<LANG>/Rush/raw2/rush-pre-release.cdb` in your local translation folder. Missing
-EN/FR/JP fields are also fetched from the web using source snapshots inside
-Pre-Release Translations. Use **Open Database in DataEditorX** to edit that file, then copy or explicitly upload/push your locale's workspace. The
+Open your usual locale `AutoPR.pyw` (or `AutoPR.py`) and select the **Rush** tab.
+**Pull published** fetches the latest Pre-Release Translations commit and merges
+its workspace into `<LANG>/Rush/raw2/rush-pre-release.cdb` in your local
+translation folder. It reads the fetched commit even if local repository changes
+prevent a fast-forward. **Fetch Rush updates** also fills missing EN/FR/JP fields
+from the web using source snapshots inside Pre-Release Translations and requires
+a clean `main` checkout. Use **Open Database in DataEditorX** to edit the local
+file, then copy or explicitly upload/push your locale's workspace. The
 existing GitHub workflow obtains Rush sources, translations and shared artwork
 and builds all packages. Translators do not need local upstream repositories or
 the maintainer's paths.
@@ -122,16 +125,24 @@ base `rush_cards.cdb` files.
 New untranslated cards stay in every workspace and appear in `report.json`.
 Changed source descriptions/prompts require review when the corresponding
 translated fields have not changed since the last successful publication.
-Completing one locale review remains recorded while other locales are pending;
-an unrelated prompt change does not approve a changed effect description. New or
-changed card translations are held back across the selected release batch until
-all required locales are ready. If upstream also retired cards, those IDs are
-immediately pruned from every last-good package/JSON and the versions advance;
-retained cards keep their previously published text and scripts. Untranslated
-new rows never enter those retirement-only packages. The GitHub
-workflow still saves the workspaces/reports from that failed run so translators
-can fix them. No untranslated placeholder package is published. Pure additions with translation
-gaps leave all previous release bytes untouched.
+Each completed locale publishes independently. A ready Spanish translation,
+for example, updates its package immediately even while German or English still
+needs review. An unrelated prompt change does not approve a changed effect
+description. Pending locales retain their last published review baselines and
+packages; their workspaces and reports are saved for translators to complete.
+If upstream also retired cards, those IDs are pruned from each pending locale's
+last-good package/JSON and its version advances. Retained cards keep their
+previously published text and scripts. Untranslated new rows never enter those
+retirement-only packages. Pure additions with translation gaps leave that
+locale's previous release bytes untouched.
+
+Thai uses the English fallback: selecting either EN or TH rebuilds both, and
+Thai follows English translation/review readiness and has the same package bytes.
+The Actions summary distinguishes published, already-current and pending locales.
+Pending translation is a normal successful `sync` outcome; invalid databases,
+missing scripts and other build failures still fail the job before releases are
+written. The shared source receipt lists only ready locales as built and records
+pending counts, so the daily dispatcher continues checking unfinished work.
 
 ## Automatic names and card effects
 
@@ -239,7 +250,7 @@ client and is not overridden. Missing required effect scripts stop the build.
 
 The dedicated Rush workflow builds all locales and commits outputs locally on
 the Actions runner before its existing authorized workflow push. The daily
-dispatcher checks the last successful source and translations revisions plus
+dispatcher checks pending locales, recorded source and translations revisions plus
 the shared artwork, config, prompt patcher, mappings, tool, source importer/mappings, and workspace fingerprint before starting a
 Rush build. An unchanged run has identical CDB, ZIP, JSON, and version bytes.
 
