@@ -1,25 +1,55 @@
 [
   {
-    "name": "无垢牵绊 神艺学徒",
-    "desc": "包含「无垢大艺术」、「神艺」怪兽之内任意种的怪兽2只以上\r\n这个卡名的②的效果1回合只能使用1次。\r\n①：对方不能把自己场上的连接状态的怪兽作为效果的对象。\r\n②：自己主要阶段才能发动。从卡组选1只「无垢大艺术」、「神艺」、「终刻」、「耀圣」怪兽，加入手卡或特殊召唤。那之后，自己场上的怪兽的种族是3种类以上的场合，可以把自己墓地·除外状态的1只怪兽特殊召唤。",
+    "name": "Marincesa Azuri",
+    "desc": "Se este card é Invocado por Invocação-Normal ou Especial: você pode Invocar por Invocação-Especial 1 monstro Ciberso ÁGUA com 1000 ou menos de ATK do seu Deck, você também não pode Invocar por Invocação-Especial pelo resto deste turno, exceto monstros ÁGUA.\r\nSe você Invocar por Invocação-Link um ou mais Monstros Link \"Marincesa\", enquanto este card está no seu Cemitério: você pode banir este card; equipe 1 monstro \"Marincesa\" do seu Cemitério a 1 daqueles Monstros Link como uma Magia de Equipamento que da 600 de ATK.\r\nVocê só pode usar cada um dos efeitos de \"Marincesa Azuri\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Ciberso/Água  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Marincesa Ulpis",
+    "desc": "Se este card está na sua mão: você pode descartar 1 outro card \"Marincesa\" ou monstro ÁGUA; Invoque este card por Invocação-Especial.\r\nSe este card é Invocado por Invocação-Normal ou Especial: você pode Baixar 1 Magia/Armadilha \"Marincesa\" do seu Deck.\r\nVocê pode enviar 1 Card de Monstro Link \"Marincesa\" que você controla ao Cemitério; compre 1 card.\r\nVocê só pode usar cada um dos efeitos de \"Marincesa Ulpis\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Ciberso/Água  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Aqua Leviathan @Marincesa",
+    "desc": "Você pode Invocar por Invocação-Ritual este card com um card \"Marincesa\".\r\nMonstros que seu oponente controla perdem 1000 de ATK.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Aqua Leviathan @Marincesa\" uma vez por turno.\r\nVocê pode revelar este card na sua mão; adicione 1 card \"Marincesa\" do seu Deck à sua mão, exceto um Monstro Ritual, então descarte 1 card.\r\nSe este card é Invocado por Invocação-Ritual: você pode retornar cards que seu oponente controle para a mão até o número de Cards de Monstro \"Marincesa\" que você controla.",
+    "overallString": "[Monstro|Efeito|Ritual] Ciberso/Água  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Marincesa Truth Heart",
+    "desc": "2+ monstros \"Marincesa\"\r\nSe este card é Invocado por Invocação-Link usando um Monstro Link com ATK original 0: você pode Invocar por Invocação-Especial 1 monstro \"Marincesa\" Link-3 ou menor do seu Deck Adicional. Você só pode usar este efeito de \"Marincesa Truth Heart\" uma vez por turno.\r\nVocê pode banir 1 Card de Monstro Link do seu campo ou Cemitério; destrói 1 card que seu oponente controla, também pelo resto deste turno, você não pode banir monstros com o mesmo Valor Link para ativar este efeito de \"Marincesa Truth Heart\".",
+    "overallString": "[Monstro|Efeito|Link] Ciberso/Água  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Lagoa do Recife de Marincesa",
+    "desc": "Quando este card é ativado: você pode adicionar 1 monstro Ciberso ÁGUA do seu Deck à sua mão.\r\nUma vez por turno, durante a Fase Final do seu oponente: você pode embaralhar até 3 monstros ÁGUA do seu Cemitério e/ou banimento no Deck.\r\nVocê pode enviar este card com a face para cima ao Cemitperio; Invoque por Invocação-Ritual 1 Monstro Ritual Ciberso de ÁGUA da sua mão, baningo monstros de ÁGUA do seu Cemitério cujo Nível total seja igual ou excedente ao Nível do Monstro Ritual.\r\nVocê só pode ativar 1 \"Lagoa do Recife de Marincesa\" por turno.",
+    "overallString": "[Magia|Magia Contínuo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
+    "name": "Ars Magna Artmage",
+    "desc": "2+ monstros, incluindo um monstro \"Ars Magna\" ou \"Artmage\"\r\nSeu oponente não pode escolher seus monstros linkados com efeitos.\r\nDurante sua Fase Principal: você pode adicionar à sua mão, ou Invocar por Invocação-Especial, 1 monstro \"Ars Magna\", \"Artmage\", \"DoomZ\", ou \"Elfnota\" do seu Deck, então se você tem 3 ou mais diferentes Tipos de Monstro no seu campo, você pode Invocar por Invocação-Especial 1 monstro do seu Cemitério ou banimento. Você só pode usar este efeito de \"Ars Magna Artmage\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Link] Fada/Luz  [LINK-4] 2500/-  [↑][←][→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307045.jpg?version=19.7"
   },
   {
-    "name": "无垢血盟 终刻龙卫",
-    "desc": "包含「无垢大艺术」、「终刻」怪兽之内任意种的怪兽2只\r\n这个卡名的②③的效果1回合各能使用1次。\r\n①：连接状态的自己怪兽战斗破坏的怪兽不去墓地而除外。\r\n②：自己主要阶段才能发动。选自己场上1张卡，破坏或除外。那之后，可以让自己·对方墓地的卡合计最多2张回到卡组。\r\n③：把墓地的这张卡除外才能发动。从手卡把1只「终刻」怪兽特殊召唤。",
+    "name": "Ars Magna DoomZ",
+    "desc": "2 monstros, incluindo um monstro \"Ars Magna\" ou \"DoomZ\"\r\nQualquer monstro destruído por batalha com seu monstro linkado é banido.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Ars Magna DoomZ\" uma vez por turno.\r\nDurante sua Fase Principal: você pode destruir, ou banir, 1 card que você controla, então você pode embaralhar até 2 cards de qualquer Cemitério(s) no Deck.\r\nVocê pode banir este card do seu Cemitério; Invoque por Invocação-Especial 1 monstro \"DoomZ\" da sua mão.",
     "overallString": "[Monstro|Efeito|Link] Dragão/Luz  [LINK-2] 1500/-  [←][↙]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307046.jpg?version=19.7"
   },
   {
-    "name": "无垢协奏 耀圣诗团",
-    "desc": "包含「无垢大艺术」、「耀圣」怪兽之内任意种的怪兽2只\r\n这个卡名的②③的效果1回合各能使用1次。\r\n①：自己场上的连接状态的怪兽的攻击力，上升场上的怪兽的种族种类×300。\r\n②：自己主要阶段才能发动。选自己场上1张卡，送去墓地或除外。那之后，可以让场上1只怪兽回到手卡。\r\n③：把墓地的这张卡除外才能发动。从手卡把1只「耀圣」怪兽特殊召唤。",
+    "name": "Ars Magna Elfnota",
+    "desc": "2 monstros, incluindo um monstro \"Ars Magna\" ou \"Elfnota\"\r\nSeus monstros linkados ganham 300 de ATK para cada diferente Tipo de Monstro no campo.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Ars Magna Elfnota\" uma vez por turno.\r\nDurante sua Fase Principal: você pode enviar ao Cemitério, ou banir, e card que você controla, então você pode retornar 1 monstro no campo à mão.\r\nVocê pode banir este card do seu Cemitério; Invoque por Invocação-Especial 1 monstro \"Elfnota\" da sua mão.",
     "overallString": "[Monstro|Efeito|Link] Mago/Luz  [LINK-2] 1500/-  [→][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307047.jpg?version=19.7"
   },
   {
-    "name": "神幻学都 无垢大艺术学园",
-    "desc": "这个卡名在规则上也当作「神艺」卡使用。\r\n①：自己发动的「米底乌斯」怪兽的效果不会被无效化。\r\n②：自己墓地有「狱神」怪兽存在的场合，从自己墓地把1只融合·同调·超量·怪兽除外，宣言1个「无垢大艺术」连接怪兽的卡名才能发动（这个回合，不能为让这个卡名的这个效果的发动而宣言相同卡名）。宣言的1只怪兽从额外卡组特殊召唤。这个效果特殊召唤的怪兽不能作为连接素材。",
+    "name": "Ars Magna Aparição Arcana Acadêmica Acrópole",
+    "desc": "(Este card é sempre considerado como um card \"Artmage\".)\r\nSeus efeitos de monstros \"Medius\" ativados não pode ser negados.\r\nSe você tem um monstro \"Patrono(a) do Poder\" no seu Cemitério: você pode banir 1 Monstro Fusão, Sinchro, ou Xyz do seu Cemitério, e declarar 1 Card de Monstro Link \"Ars Magna\" que não tenha sido declarado por \"Ars Magna Aparição Arcana Acadêmica Acrópole\" neste turno; Invoque por Invocação-Especial aquele monstro do seu Deck Adicional, mas ele não pode ser usado como Matéria Link.",
     "overallString": "[Magia|Magia de Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307061.jpg?version=19.7"
   },
