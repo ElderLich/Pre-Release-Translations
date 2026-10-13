@@ -55,7 +55,7 @@
   },
   {
     "name": "Omega Vidolium the Power Patron of Heaven's End",
-    "desc": "Pendulum Scale = 11\r\n[ Pendulum Effect ]\r\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\r\n----------------------------------------\r\n[ Monster Effect ]\r\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\r\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
+    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
     "overallString": "[Monster|Effect|Fusion|Pendulum] Dragon/Dark  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
@@ -301,7 +301,7 @@
   },
   {
     "name": "Diabellstar, the Seeker of Sinful Spoils",
-    "desc": "You can only Special Summon with the way in this card's ① effect once per turn. You can only use this card name's ② and ③ effects once per turn each.\r\n①：If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand).\r\n②：You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells and Traps your opponent controls.\r\n③：During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
+    "desc": "If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand). You can only Special Summon \"Diabellstar, the Seeker of Sinful Spoils\" once per turn this way. You can only use each of the following effects of \"Diabellstar, the Seeker of Sinful Spoils\" once per turn. You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells/Traps your opponent controls. During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
     "overallString": "[Monster|Effect] Spellcaster/Dark  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
