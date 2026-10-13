@@ -7,7 +7,7 @@ building the `.ypk`, and updating `test-release.json` and version files.
 
 ## Short version
 
-1. Open your local `AutoPR.pyw` helper (or `AutoPR.py`). It opens the shared three-tab window:
+1. Open your local `AutoPR.py` helper. It opens the shared three-tab window:
    **Standard**, **Rush** and **All locales**.
 2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
    translation and copy/upload workflow.
@@ -43,9 +43,10 @@ work intact. The activity log identifies the published commit used.
 
 - **Standard:** copies `<LANG>/Workspace/test-release.cdb` and
   `test-strings.conf` into your local `<LANG>/raw2`, and refreshes
-  `<LANG>/Mappings.csv`. Files that would be replaced are backed up under
-  `<LANG>/Backups/Published/<timestamp>/` first. Save and close the database in
-  your editor before pulling; reopen it afterward to see the downloaded text.
+  `<LANG>/Mappings.csv`. This replaces those local files without creating backup
+  folders. Upload local translations you want to keep before pulling. Save and
+  close the database in your editor first; reopen it afterward to see the
+  downloaded text.
 - **Rush:** merges `<LANG>/Rush/Workspace/rush-pre-release.cdb` into your local
   `<LANG>/Rush/raw2`. It keeps local text changes, reports conflicts and does
   not contact card-text websites. Use **Fetch Rush updates** when you also want
@@ -56,7 +57,7 @@ cards still awaiting translation even while the downloadable game package stays
 at its last complete release. Pulling does not upload or publish local edits.
 
 The Standard `pull --dry-run` command fetches the latest commit to show what it
-would copy, but does not update the checkout or write local files or backups.
+would copy, but does not update the checkout or write local files.
 
 ### Safe Rush updates
 
@@ -228,11 +229,12 @@ available card counts. **Show log / Hide log** switches between full output and
 compact activity without interrupting the job. Language, editor and log settings
 are saved in `.transsuperpre_local.json` beside the language folders.
 
-Install `Tools/AutoPR_local.pyw` alongside the `.py` wrapper, renaming it to
-`AutoPR.pyw`. Double-click the `.pyw` file for a launch without a console. The
-`.py` GUI entry also relaunches under `pythonw.exe` on Windows; explicit commands
-and `--menu` retain their console. GUI workers and their command-line children
-are hidden, while their output remains available in the activity log.
+Only `AutoPR.py` is needed. Its GUI entry relaunches under `pythonw.exe` on
+Windows; explicit commands and `--menu` retain their console. Remove the old
+`AutoPR.pyw` if you previously installed both launchers. GUI workers and their
+command-line children are hidden, while their output remains available in the
+activity log. Pulling no longer creates `Backups/Published` folders; existing
+backup folders are left untouched.
 
 ## Legacy numbered menu
 

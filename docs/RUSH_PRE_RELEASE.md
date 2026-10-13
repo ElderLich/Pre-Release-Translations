@@ -2,7 +2,7 @@
 
 ## Translator workflow
 
-Open your usual locale `AutoPR.pyw` (or `AutoPR.py`) and select the **Rush** tab.
+Open your usual locale `AutoPR.py` and select the **Rush** tab.
 **Pull published** fetches the latest Pre-Release Translations commit and merges
 its workspace into `<LANG>/Rush/raw2/rush-pre-release.cdb` in your local
 translation folder. It reads the fetched commit even if local repository changes

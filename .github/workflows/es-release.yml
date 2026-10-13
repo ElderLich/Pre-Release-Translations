@@ -63,7 +63,7 @@ jobs:
             fi
 
             # Ignore old timestamp-style tags such as ES-v1775706240.
-            latest_tag=$(git tag --list 'ES-v*' | sed -E 's/^ES-v([0-9]+)$/\1/' | grep -E '^[0-9]+$' | awk '$1 < 10000' | sort -n | tail -1)
+            latest_tag=$(git tag --list 'ES-v*' | sed -E 's/^ES-v([0-9]+)$/\1/' | grep -E '^[0-9]+$' | awk '$1 < 10000' | sort -n | tail -1 || true)
             next_tag_number=$(( ${latest_tag:-0} + 1 ))
             tag="ES-v${next_tag_number}"
             commit_message=$(mktemp)
@@ -72,11 +72,14 @@ jobs:
             git commit -F "$commit_message"
             rm -f "$commit_message" ES/.autopr-commit-body.txt
 
-            if git push origin "HEAD:$branch"; then
-              git tag -a "$tag" -m "Release $tag"
-              git push origin "$tag"
+            git tag -a "$tag" -m "Release $tag"
+            # Publish the build and its tag together. A competing push must not
+            # leave an untagged build or a tag on an unpublished commit.
+            if git push --atomic origin "HEAD:$branch" "refs/tags/$tag"; then
               exit 0
             fi
+            # Only discard the local tag created by this failed attempt.
+            git tag -d "$tag"
 
             echo "Push failed; refreshing and rebuilding (${attempt}/10)..."
           sleep $((attempt * 5))

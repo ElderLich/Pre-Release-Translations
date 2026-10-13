@@ -9,6 +9,8 @@ example:
     Super-Pre Translations/JP/AutoPR.py
 
 Opening this file launches the shared Standard/Rush window from the repository.
+On Windows the GUI automatically relaunches without a console; only this one
+launcher is needed in each language folder.
 Use --menu for the legacy numbered menu; existing command arguments still work.
 The standard build runs in GitHub Actions. This wrapper can refresh the local raw2
 workspace from the latest upstream package, then copy it into the Pre-Release Translations

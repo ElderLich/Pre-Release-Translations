@@ -36,14 +36,13 @@ The interface follows your selected language by default. **Settings** lets you c
 
 Install [Python 3](https://www.python.org/downloads/), [Git](https://git-scm.com/downloads), and a database editor such as [DataEditorX](https://github.com/ElderLich/DataEditorX) or [DB Browser for SQLite](https://sqlitebrowser.org/dl/). Clone this repository with Git or [GitHub Desktop](https://desktop.github.com/).
 
-Create a separate local language folder, then copy these two launchers into it:
+Create a separate local language folder, then copy this launcher into it:
 
 | From this repository | Into your local folder, for example `FR/` |
 | :--- | :--- |
 | [Tools/AutoPR_local.py](Tools/AutoPR_local.py) | `AutoPR.py` |
-| [Tools/AutoPR_local.pyw](Tools/AutoPR_local.pyw) | `AutoPR.pyw` |
 
-Use `DE`, `EN`, `ES`, `FR`, `IT`, `JP`, `KR`, `PT`, or `TH` as the folder name. Open **AutoPR.pyw** on Windows for a launch without a console window, and select your Pre-Release Translations checkout when prompted. Your folders can live wherever you prefer.
+Use `DE`, `EN`, `ES`, `FR`, `IT`, `JP`, `KR`, `PT`, or `TH` as the folder name. Open **AutoPR.py**; on Windows it automatically opens the GUI without a console window. Select your Pre-Release Translations checkout when prompted. Your folders can live wherever you prefer. If you previously installed both launchers, remove the old `AutoPR.pyw` after updating `AutoPR.py`.
 
 ### 02 · Fetch and translate
 
@@ -67,6 +66,8 @@ Use **Copy workspace into repository** to review locally, or **Upload workspace 
 > This repository was renamed from TransSuperpre. Its old download URLs are retired. Existing translator checkouts can keep their folder names; follow the [remote migration instructions](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translators) to update an older checkout.
 
 The [full translator guide](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translators) covers setup, conflict resolution, reports, and the legacy `AutoPR.py --menu` interface.
+
+**Spanish on Android/Termux:** [Zane's mobile helper](Tools/Zane_Tests/README.md) uses numbered menus and downloads only changed workspace files. It does not need a GUI or a full repository clone.
 
 ## Languages & card text
 

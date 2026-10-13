@@ -2,9 +2,21 @@
 # -*- coding: utf-8 -*-
 
 import os, re, shutil, subprocess, requests, time, json, zipfile, sqlite3
-import logging, csv, hashlib, base64, sys, tempfile
+import logging, csv, hashlib, base64, sys, tempfile, io
+from contextlib import closing
 from pathlib import Path
-from PromptPatcher import patch_cdb, export_remaining_cn, lang_from_cards_cdb
+from urllib.parse import quote, urlencode
+
+# Permite ejecutarlo desde Tools/Zane_Tests o copiarlo junto a PromptPatcher.py.
+SCRIPT_DIR = Path(__file__).resolve().parent
+if not (SCRIPT_DIR / "PromptPatcher.py").is_file():
+    sys.path.insert(0, str(SCRIPT_DIR.parent))
+try:
+    from PromptPatcher import patch_cdb, export_remaining_cn, lang_from_cards_cdb
+except ModuleNotFoundError as exc:
+    if exc.name != "PromptPatcher":
+        raise
+    raise SystemExit("Falta PromptPatcher.py. Copia Tools/PromptPatcher.py junto a AutoPR.py y vuelve a ejecutar.") from exc
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
@@ -12,23 +24,17 @@ from urllib3.util.retry import Retry
 def get_requests_session():
     session = requests.Session()
     retries = Retry(
-        total=5,
+        total=3,
         backoff_factor=1,
         status_forcelist=[429, 500, 502, 503, 504],
-        allowed_methods=["GET", "PUT", "POST", "DELETE"]
+        # Un reintento ciego de una escritura podría duplicar commits.
+        allowed_methods=["GET", "HEAD"],
+        raise_on_status=False,
     )
     adapter = HTTPAdapter(max_retries=retries)
     session.mount("https://", adapter)
     session.mount("http://", adapter)
     return session
-
-
-def check_internet():
-    try:
-        requests.get("https://8.8.8.8", timeout=5)
-        return True
-    except:
-        return False
 
 
 def check_disk_space(path, required_mb=500):
@@ -41,20 +47,13 @@ def check_disk_space(path, required_mb=500):
 
 
 def check_github_token():
-    token = get_github_token()
-    url_user = "https://api.github.com/user"
-    headers = {"Authorization": f"Bearer {token}", "Accept": "application/vnd.github.v3+json"}
     try:
-        r = requests.get(url_user, headers=headers, timeout=10)
-        if r.status_code != 200:
-            log(f"Token inválido: {r.status_code} - {r.text}")
-            return False
+        token = get_github_token()
+        r = _http_session().get("https://api.github.com/user",
+                                headers={"Authorization": f"Bearer {token}"},
+                                timeout=NETWORK_TIMEOUT)
+        r.raise_for_status()
         log("Token de GitHub válido.")
-        url_rate = "https://api.github.com/rate_limit"
-        r2 = requests.get(url_rate, headers=headers, timeout=10)
-        if r2.status_code == 200:
-            scopes = r2.headers.get('X-OAuth-Scopes', '')
-            log(f"Permisos del token: {scopes}")
         return True
     except Exception as e:
         log(f"Excepción al verificar token: {e}")
@@ -68,13 +67,28 @@ GITHUB_BRANCH = "main"
 
 
 # ---- CONFIG USUARIO ----
-BASE_DIR    = Path("/storage/emulated/0/pre_updates/Prelanzadas/AutoPR")
+_default_base = (Path("/storage/emulated/0/pre_updates/Prelanzadas/AutoPR")
+                 if Path("/storage/emulated/0").is_dir() else SCRIPT_DIR / "workspace")
+BASE_DIR    = Path(os.environ.get("ZANE_AUTOPR_BASE_DIR", _default_base)).expanduser()
+CONFIG_FILE = Path(os.environ.get("ZANE_AUTOPR_CONFIG", BASE_DIR / "config.json")).expanduser()
+cfg = {}
+if CONFIG_FILE.is_file():
+    with CONFIG_FILE.open(encoding="utf-8-sig") as config_input:
+        cfg = json.load(config_input)
+BASE_DIR = Path(cfg.get("base_dir", BASE_DIR)).expanduser()
+GITHUB_OWNER = cfg.get("github_owner", GITHUB_OWNER)
+GITHUB_REPO = cfg.get("github_repo", GITHUB_REPO)
+if GITHUB_OWNER.lower() == "elderlich" and GITHUB_REPO.lower() == "transsuperpre":
+    GITHUB_REPO = "Pre-Release-Translations"
+GITHUB_BRANCH = cfg.get("branch", GITHUB_BRANCH)
+GITHUB_TOKEN_FILE = Path(cfg.get("token_file", GITHUB_TOKEN_FILE)).expanduser()
+NETWORK_TIMEOUT = (float(cfg.get("connect_timeout", 20)), float(cfg.get("read_timeout", 120)))
 RAW_DIR     = BASE_DIR / "raw2"
 ES_DIR      = BASE_DIR / "ES"
 REPO_DIR    = Path("/data/data/com.termux/files/home/Pre-Release-Translations")
 REPO_SUBDIR = "ES"
 
-CARDS_CDB   = "/storage/emulated/0/pre_updates/Prelanzadas/cards.cdb"
+CARDS_CDB   = str(Path(cfg.get("cards_cdb", BASE_DIR.parent / "cards.cdb")).expanduser())
 
 # Rutas remotas Standard (todas bajo ES/ o Shared/)
 STANDARD_FILES = {
@@ -83,9 +97,10 @@ STANDARD_FILES = {
     "mappings": "Shared/Mappings.csv",
 }
 STANDARD_REMOTE_SHA_FILE = BASE_DIR / ".last_standard_remote_sha"
+STANDARD_BASELINE_CDB = BASE_DIR / ".standard-baseline.cdb"
+STANDARD_BASELINE_CONF = BASE_DIR / ".standard-baseline.conf"
 
-TAG_PREFIX = "ES-v"
-SUMMARY = "Actualización Pre-Release ES"
+SUMMARY = cfg.get("summary", "Actualización Pre-Release ES")
 
 
 # ---- CONFIG RUSH ----
@@ -99,43 +114,21 @@ RUSH_REPO_CDB_PATH = f"{REPO_SUBDIR}/Rush/Workspace/{RUSH_CDB_NAME}"
 RUSH_REMOTE_SHA_FILE = RUSH_DIR / ".last_rush_remote_sha"
 RUSH_REMOTE_REPORT_PATH = f"{REPO_SUBDIR}/Rush/report.json"
 
-for _d in (RUSH_RAW_DIR, RUSH_BASE_DIR, RUSH_REPORTS_DIR):
-    _d.mkdir(parents=True, exist_ok=True)
-
-
 # ---- LOGGER ----
 from logging.handlers import RotatingFileHandler
-logging.basicConfig(
-    format="%(asctime)s [%(levelname)s] %(message)s",
-    datefmt="%H:%M:%S",
-    level=logging.INFO,
-    handlers=[
-        RotatingFileHandler(
-            BASE_DIR / "autopr.log",
-            maxBytes=1_000_000,   # 1 MB
-            backupCount=3,
-            encoding="utf-8",
-        ),
-        logging.StreamHandler(),
-    ],
-)
 log = logging.getLogger("AUTOPR").info
 
 
-# ---- Cargar configuración externa (si existe) ----
-CONFIG_FILE = BASE_DIR / "config.json"
-if CONFIG_FILE.exists():
-    try:
-        with open(CONFIG_FILE, "r") as f:
-            cfg = json.load(f)
-            GITHUB_OWNER = cfg.get("github_owner", GITHUB_OWNER)
-            GITHUB_REPO = cfg.get("github_repo", GITHUB_REPO)
-            GITHUB_BRANCH = cfg.get("branch", GITHUB_BRANCH)
-            TAG_PREFIX = cfg.get("tag_prefix", TAG_PREFIX)
-            SUMMARY = cfg.get("summary", SUMMARY)
-        log("Configuración externa cargada.")
-    except Exception as e:
-        log(f"Error al cargar config.json: {e}")
+def initialize_workspace():
+    """Importar este módulo no crea carpetas ni archivos."""
+    BASE_DIR.mkdir(parents=True, exist_ok=True)
+    logging.basicConfig(
+        format="%(asctime)s [%(levelname)s] %(message)s", datefmt="%H:%M:%S",
+        level=logging.INFO,
+        handlers=[RotatingFileHandler(BASE_DIR / "autopr.log", maxBytes=1_000_000,
+                                      backupCount=1, encoding="utf-8"),
+                  logging.StreamHandler()],
+    )
 
 
 # ---- test-strings.conf: parseo y sincronización ----
@@ -210,9 +203,9 @@ def _format_test_strings_entry(directive, code, name):
     return f"!{directive} {code}"
 
 
-def sync_test_strings_conf(source_bytes, local_path, *, log_fn=None, report_limit=25, normalize_name=None):
-    """Fusiona el test-strings.conf upstream (bytes) con el local.
-    Preserva nombres traducidos; añade entradas nuevas en blanco; elimina retiradas."""
+def sync_test_strings_conf(source_bytes, local_path, *, log_fn=None, report_limit=25,
+                           normalize_name=None, baseline_bytes=None):
+    """Fusiona nombres publicados en ES, conservando las ediciones locales."""
     if log_fn is None:
         log_fn = log
 
@@ -222,6 +215,16 @@ def sync_test_strings_conf(source_bytes, local_path, *, log_fn=None, report_limi
 
     local_entries, duplicate_local = _collect_test_strings_entries(local_text)
     source_entries, duplicate_source = _collect_test_strings_entries(source_text)
+    baseline_entries, _ = _collect_test_strings_entries(
+        baseline_bytes.decode("utf-8-sig") if baseline_bytes is not None else "")
+    conflicts = []
+    for key in set(local_entries) & set(source_entries) & set(baseline_entries):
+        original, local, published = (entries[key]["name"] for entries in
+                                      (baseline_entries, local_entries, source_entries))
+        if local != original and published != original and local != published:
+            conflicts.append({"id": key, "field": "name", "previous": original,
+                              "local": local, "published": published})
+    decisions = _resolve_sync_conflicts(conflicts)
 
     output_lines = []
     new_blank_keys = []
@@ -236,6 +239,14 @@ def sync_test_strings_conf(source_bytes, local_path, *, log_fn=None, report_limi
 
         local_entry = local_entries.get(entry["key"])
         local_name = local_entry["name"] if local_entry else ""
+        original = baseline_entries.get(entry["key"])
+        decision = decisions.get(entry["key"], {}).get("name")
+        adopt_remote = (local_entry is None or
+                        (original is not None and local_name == original["name"]) or
+                        (original is None and (not local_name or
+                         (_has_cjk(local_name) and not _has_cjk(entry["name"])))) )
+        if decision == "repo" or (decision != "local" and adopt_remote):
+            local_name = entry["name"]
 
         if local_name and normalize_name is not None:
             normalized_name = normalize_name(entry["directive"], entry["code"], local_name)
@@ -253,10 +264,7 @@ def sync_test_strings_conf(source_bytes, local_path, *, log_fn=None, report_limi
     removed_keys = sorted(set(local_entries) - set(source_entries))
 
     local_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(local_path, "w", encoding="utf-8", newline="\n") as f:
-        f.write("\n".join(output_lines))
-        if output_lines:
-            f.write("\n")
+    _atomic_write(local_path, ("\n".join(output_lines) + ("\n" if output_lines else "")).encode("utf-8"))
 
     log_fn(f"{_STRINGS_TEXT['synced']} {local_path}")
     log_fn(f"{_STRINGS_TEXT['managed']} {len(source_entries)}")
@@ -333,8 +341,9 @@ def ensure_test_strings_ready_for_release(path, *, log_fn=None, report_limit=25)
 
 
 # ---- {CARD} MAPPINGS ----
-SCRIPT_DIR     = Path(__file__).resolve().parent
-MAPPINGS_CSV   = SCRIPT_DIR / "Mappings.csv"
+# Mantener una instalación antigua que guardaba Mappings.csv junto al script.
+MAPPINGS_CSV   = Path(cfg.get("mappings_csv", SCRIPT_DIR / "Mappings.csv"
+                            if (SCRIPT_DIR / "Mappings.csv").is_file() else BASE_DIR / "Mappings.csv"))
 CARD_TOKEN     = "{CARD}"
 CARD_ID_DELIM  = "|"
 SELF_TOKEN     = "self"
@@ -415,8 +424,12 @@ def _replace_placeholders(template: str, names, quote_open="\"", quote_close="\"
 
 def _parse_mappings_text(text: str) -> dict:
     rows = {}
-    reader = csv.DictReader(text.splitlines())
-    for row in reader:
+    reader = csv.DictReader(io.StringIO(text))
+    source_rows = list(reader)
+    # Igual que el workflow: reglas globales primero, overrides ES después.
+    applicable = [row for row in source_rows if _clean_cell(row.get("lang")).lower() in ("", "*", "all", "default")]
+    applicable += [row for row in source_rows if _clean_cell(row.get("lang")).lower() == "es"]
+    for row in applicable:
         try:
             cid = int(str(row.get("id", "")).strip())
         except Exception:
@@ -432,17 +445,13 @@ def load_mappings_csv(csv_path: Path):
     csv_path = Path(csv_path)
     if not csv_path.exists():
         return {}
-    try:
-        text = csv_path.read_text(encoding="utf-8-sig")
-    except Exception:
-        return {}
+    text = csv_path.read_text(encoding="utf-8-sig")
     return _parse_mappings_text(text)
 
 
 def save_mappings_csv(csv_path: Path, rows_by_id: dict):
     fieldnames = ["id", "name"] + [f"str{i}" for i in range(1, 17)]
-    csv_path.parent.mkdir(parents=True, exist_ok=True)
-    with open(csv_path, "w", encoding="utf-8-sig", newline="") as f:
+    with io.StringIO(newline="") as f:
         w = csv.DictWriter(f, fieldnames=fieldnames)
         w.writeheader()
         for cid in sorted(rows_by_id.keys()):
@@ -453,6 +462,7 @@ def save_mappings_csv(csv_path: Path, rows_by_id: dict):
             for i in range(1, 17):
                 out[f"str{i}"] = _clean_cell(r.get(f"str{i}", ""))
             w.writerow(out)
+        _atomic_write(csv_path, f.getvalue().encode("utf-8-sig"))
 
 
 def _fuse_mappings(remote_rows: dict, local_path: Path) -> dict:
@@ -844,16 +854,6 @@ def import_str_translations(cdb_path, input_path, *, log_fn=None):
     if skipped_cjk:
         log_fn(f"   Aún con CJK:      {skipped_cjk} (probablemente sin traducir)")
 
-    # Backup del TXT solo si se aplicó algo y aún existe
-    if applied > 0 and input_path.exists():
-        ts = time.strftime("%Y%m%d_%H%M%S")
-        backup = input_path.with_name(f"{input_path.stem}.applied_{ts}{input_path.suffix}")
-        try:
-            input_path.rename(backup)
-            log_fn(f"   TXT respaldado: {backup.name}")
-        except Exception as e:
-            log_fn(f"   ⚠️  No se pudo respaldar el TXT: {e}")
-
     return applied
 
 # ---- PENDULUM LAYOUT PATCH ----
@@ -939,138 +939,231 @@ def patch_pendulum_layout_desc(cdb_path: Path, lang_key: str, log_fn=None, repor
 # =========================================================
 # ==============  GITHUB API (usado por Standard y Rush) ==
 # =========================================================
-def get_github_token():
-    if not GITHUB_TOKEN_FILE.exists():
-        raise FileNotFoundError(f"No se encuentra el token en {GITHUB_TOKEN_FILE}")
-    return GITHUB_TOKEN_FILE.read_text().strip()
+def get_github_token(required=True):
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
+    if not token and GITHUB_TOKEN_FILE.is_file():
+        token = GITHUB_TOKEN_FILE.read_text(encoding="utf-8-sig").strip()
+    if required and not token:
+        raise FileNotFoundError(f"Para subir cambios, configura GITHUB_TOKEN o {GITHUB_TOKEN_FILE}")
+    return token
 
 
 _session = None
 
 
-def github_api_request(method, endpoint, data=None):
+def _http_session():
     global _session
     if _session is None:
         _session = get_requests_session()
-    token = get_github_token()
+    return _session
+
+
+def _github_headers(required=False, accept="application/vnd.github+json"):
+    headers = {"Accept": accept, "User-Agent": "Zane-AutoPR",
+               "X-GitHub-Api-Version": "2022-11-28"}
+    token = get_github_token(required=required)
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    return headers
+
+
+def github_api_request(method, endpoint, data=None):
     url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/{endpoint}"
-    headers = {
-        "Authorization": f"Bearer {token}",
-        "Accept": "application/vnd.github.v3+json"
-    }
-    if data:
-        headers["Content-Type"] = "application/json"
-    response = _session.request(method, url, headers=headers, json=data)
-    if response.status_code not in [200, 201, 204]:
-        raise Exception(f"API error {response.status_code}: {response.text}")
+    headers = _github_headers(required=method.upper() not in ("GET", "HEAD"))
+    response = _http_session().request(method, url, headers=headers, json=data, timeout=NETWORK_TIMEOUT)
+    response.raise_for_status()
     return response.json() if response.content else None
+
+
+def _contents_endpoint(path, ref=None):
+    return f"contents/{quote(path, safe='/')}?{urlencode({'ref': ref or GITHUB_BRANCH})}"
+
+
+def _remote_file_metadata(path):
+    """Listar el directorio evita descargar el CDB base64 solo para ver su SHA."""
+    directory = path.rsplit("/", 1)[0]
+    entries = github_api_request("GET", _contents_endpoint(directory))
+    if isinstance(entries, list):
+        for info in entries:
+            if info.get("path") == path and info.get("type") == "file":
+                return info
+    raise RuntimeError(f"No se encontró el archivo publicado: {path}")
 
 
 def get_remote_file_sha(path):
     try:
-        result = github_api_request("GET", f"contents/{path}")
+        result = github_api_request("GET", _contents_endpoint(path))
         return result.get("sha")
-    except Exception:
-        return None
+    except requests.HTTPError as exc:
+        if exc.response is not None and exc.response.status_code == 404:
+            return None
+        raise
 
 
-def download_remote_file(path):
-    """Descarga un archivo del repo (bytes). Soporta archivos > 1MB vía download_url."""
-    result = github_api_request("GET", f"contents/{path}")
-    content_b64 = result.get("content", "")
-    if content_b64:
-        return base64.b64decode(content_b64)
-    # Archivos grandes (>1MB): usar download_url
-    dl_url = result.get("download_url")
-    if dl_url:
-        headers = {"Authorization": f"Bearer {get_github_token()}"}
-        r = requests.get(dl_url, headers=headers, timeout=120)
-        r.raise_for_status()
-        return r.content
-    raise RuntimeError(f"Respuesta sin contenido descargable: {path}")
+def _atomic_write(path, data):
+    """Publicar un archivo completo; borrar el temporal incluso si falla."""
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=path.parent, prefix=f".{path.name}.", suffix=".part", delete=False) as stream:
+            temporary = Path(stream.name)
+            stream.write(data)
+        temporary.replace(path)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
 
-def upload_file_via_api(local_path, remote_path, commit_message):
-    with open(local_path, "rb") as f:
-        content = base64.b64encode(f.read()).decode("utf-8")
-    sha = get_remote_file_sha(remote_path)
-    data = {
-        "message": commit_message,
-        "content": content,
-        "branch": GITHUB_BRANCH
-    }
-    if sha:
-        data["sha"] = sha
-    github_api_request("PUT", f"contents/{remote_path}", data)
-    log(f"Archivo {remote_path} subido/actualizado correctamente.")
+def _blob_sha(content):
+    return hashlib.sha1(f"blob {len(content)}\0".encode("ascii") + content).hexdigest()
+
+
+def download_remote_file(path, *, metadata=None, ref=None):
+    """Descarga/verifica un blob; reutiliza su caché tras cortes de conexión.
+
+    La caché guarda solamente la versión remota actual de cada archivo, nunca
+    copias del trabajo local. Un fallo no confirma el SHA como sincronizado.
+    """
+    info = metadata or github_api_request("GET", _contents_endpoint(path, ref))
+    expected = info.get("sha", "")
+    if not re.fullmatch(r"[0-9a-f]{40}", expected):
+        raise RuntimeError(f"SHA remoto inválido para {path}")
+    cache_key = hashlib.sha256(f"{GITHUB_OWNER}/{GITHUB_REPO}/{path}".encode()).hexdigest()[:20]
+    cache_path = BASE_DIR / ".download-cache" / cache_key
+    if cache_path.is_file():
+        cached = cache_path.read_bytes()
+        if _blob_sha(cached) == expected:
+            log(f"   Reutilizando descarga verificada: {path}")
+            return cached
+
+    inline_content = info.get("content") if info.get("encoding") == "base64" else None
+    if inline_content is not None:
+        content = base64.b64decode(inline_content)
+    else:
+        # git/blobs fija exactamente el SHA consultado aunque main avance.
+        url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/git/blobs/{expected}"
+        for attempt in range(1, 4):
+            try:
+                with _http_session().get(url, headers=_github_headers(accept="application/vnd.github.raw+json"),
+                                         timeout=NETWORK_TIMEOUT, stream=True) as response:
+                    response.raise_for_status()
+                    content = b"".join(response.iter_content(chunk_size=64 * 1024))
+                if _blob_sha(content) != expected:
+                    raise ValueError(f"Descarga incompleta o SHA distinto: {path}")
+                break
+            except (requests.ConnectionError, requests.Timeout,
+                    requests.exceptions.ChunkedEncodingError, ValueError) as exc:
+                if attempt == 3:
+                    raise RuntimeError(f"No se pudo descargar {path} tras 3 intentos: {exc}") from exc
+                log(f"Conexión interrumpida; reintentando {path} ({attempt}/3)...")
+                time.sleep(attempt)
+    if _blob_sha(content) != expected:
+        raise RuntimeError(f"SHA de descarga distinto para {path}; no se aplicó el archivo")
+    _atomic_write(cache_path, content)
+    return content
+
+
+def upload_files_via_api(files, commit_message, *, expected_shas):
+    """Publica todos los archivos en un commit, sin sobrescribir cambios ajenos.
+
+    La referencia se actualiza sin force. Los tags pertenecen a GitHub Actions,
+    que los crea cuando termina de compilar el paquete de estas traducciones.
+    """
+    allowed = {STANDARD_FILES["cdb"], STANDARD_FILES["conf"], RUSH_REPO_CDB_PATH}
+    contents = {}
+    for local_path, remote_path in files:
+        if remote_path not in allowed or remote_path in contents:
+            raise ValueError(f"Ruta de publicación no permitida o repetida: {remote_path}")
+        contents[remote_path] = Path(local_path).read_bytes()
+    if not contents:
+        raise ValueError("No hay archivos seleccionados para publicar.")
+
+    ref_endpoint = f"git/ref/heads/{quote(GITHUB_BRANCH, safe='/')}"
+    head = github_api_request("GET", ref_endpoint)["object"]["sha"]
+    commit = github_api_request("GET", f"git/commits/{head}")
+    remote_shas = {}
+    # Consultar directorios evita descargar otra vez los CDB solo para su SHA.
+    for parent in sorted({path.rsplit("/", 1)[0] for path in contents}):
+        try:
+            entries = github_api_request(
+                "GET", f"contents/{quote(parent, safe='/')}?ref={quote(head, safe='')}"
+            )
+        except requests.HTTPError as exc:
+            if exc.response is None or exc.response.status_code != 404:
+                raise
+            entries = []
+        if not isinstance(entries, list):
+            raise RuntimeError(f"GitHub no devolvió un directorio válido: {parent}")
+        remote_shas.update({entry["path"]: entry["sha"] for entry in entries})
+
+    local_shas = {path: _blob_sha(content) for path, content in contents.items()}
+    changed = [path for path in contents if local_shas[path] != remote_shas.get(path)]
+    for path in changed:
+        if path not in expected_shas or remote_shas.get(path) != expected_shas[path]:
+            raise RuntimeError(
+                f"{path} cambió en GitHub o no tiene una base sincronizada. "
+                "Ejecuta primero la sincronización y revisa tus traducciones antes de subir."
+            )
+    if not changed:
+        log("GitHub ya contiene los archivos seleccionados; no se crea otro commit.")
+        return {"commit": head, "changed": [], "shas": local_shas, "contents": contents}
+
+    tree_entries = []
+    for path in changed:
+        blob = github_api_request("POST", "git/blobs", {
+            "content": base64.b64encode(contents[path]).decode("ascii"), "encoding": "base64"
+        })
+        tree_entries.append({"path": path, "mode": "100644", "type": "blob", "sha": blob["sha"]})
+    tree = github_api_request("POST", "git/trees", {
+        "base_tree": commit["tree"]["sha"], "tree": tree_entries
+    })
+    published = github_api_request("POST", "git/commits", {
+        "message": commit_message, "tree": tree["sha"], "parents": [head]
+    })["sha"]
+    try:
+        github_api_request("PATCH", f"git/refs/heads/{quote(GITHUB_BRANCH, safe='/')}", {
+            "sha": published, "force": False
+        })
+    except requests.RequestException as exc:
+        # Una conexión cortada puede ocultar una actualización que sí terminó.
+        # Comprobar el commit evita volver a subir los mismos datos a ciegas.
+        try:
+            current = github_api_request("GET", ref_endpoint)["object"]["sha"]
+        except requests.RequestException:
+            current = None
+        if current != published:
+            raise RuntimeError(
+                "No se pudo confirmar la publicación. La rama pudo cambiar o la conexión "
+                "se interrumpió. Sincroniza antes de volver a subir; no se forzó la rama."
+            ) from exc
+    log(f"Publicación confirmada en {GITHUB_BRANCH}: {published[:12]} ({len(changed)} archivos).")
+    return {"commit": published, "changed": changed, "shas": local_shas, "contents": contents}
+
+
+def upload_file_via_api(local_path, remote_path, commit_message, *, expected_sha):
+    return upload_files_via_api(
+        [(local_path, remote_path)], commit_message, expected_shas={remote_path: expected_sha}
+    )
 
 
 def get_remote_json(path):
     try:
-        result = github_api_request("GET", f"contents/{path}")
-        content = base64.b64decode(result["content"]).decode("utf-8")
-        return json.loads(content)
+        return json.loads(download_remote_file(path).decode("utf-8-sig"))
     except Exception as e:
         log(f"No se pudo obtener {path}: {e}")
         return None
-
-
-def create_tag(tag_name, commit_sha):
-    url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/git/refs/tags/{tag_name}"
-    headers = {"Authorization": f"Bearer {get_github_token()}", "Accept": "application/vnd.github.v3+json"}
-    response = requests.get(url, headers=headers)
-    if response.status_code == 200:
-        log(f"El tag {tag_name} ya existe. No se creará uno nuevo.")
-        return
-    elif response.status_code != 404:
-        log(f"Error al verificar tag: {response.status_code}")
-        return
-    data = {"ref": f"refs/tags/{tag_name}", "sha": commit_sha}
-    github_api_request("POST", "git/refs", data)
-    log(f"Tag {tag_name} creado en GitHub.")
-
-
-def next_tag():
-    url = f"https://api.github.com/repos/{GITHUB_OWNER}/{GITHUB_REPO}/tags"
-    headers = {"Authorization": f"Bearer {get_github_token()}", "Accept": "application/vnd.github.v3+json"}
-    try:
-        response = requests.get(url, headers=headers, timeout=30)
-        response.raise_for_status()
-        tags = response.json()
-        max_num = 0
-        for tag_info in tags:
-            tag_name = tag_info['name']
-            if tag_name.startswith(TAG_PREFIX):
-                try:
-                    num = int(tag_name[len(TAG_PREFIX):])
-                    if num > max_num:
-                        max_num = num
-                except ValueError:
-                    pass
-        return f"{TAG_PREFIX}{max_num + 1}"
-    except Exception as e:
-        log(f"Error al obtener tags de GitHub: {e}")
-        while True:
-            try:
-                user_input = input("Introduce el número de versión (ej. 5): ").strip()
-                if user_input.isdigit():
-                    return f"{TAG_PREFIX}{user_input}"
-                log("Número inválido. Introduce solo dígitos.")
-            except KeyboardInterrupt:
-                raise
-            except Exception:
-                pass
 
 
 # =========================================================
 # ====================  RUSH  =============================
 # =========================================================
 def _schema_from_cdb(path):
-    conn = sqlite3.connect(str(path))
-    cur = conn.cursor()
-    datas = [r[1] for r in cur.execute("PRAGMA table_info(datas)")]
-    texts = [r[1] for r in cur.execute("PRAGMA table_info(texts)")]
-    conn.close()
+    with closing(sqlite3.connect(str(path))) as conn:
+        datas = [r[1] for r in conn.execute("PRAGMA table_info(datas)")]
+        texts = [r[1] for r in conn.execute("PRAGMA table_info(texts)")]
+    if not datas or not texts:
+        raise RuntimeError(f"CDB inválido: faltan tablas datas/texts en {path}")
     return datas, texts
 
 
@@ -1080,11 +1173,9 @@ def _read_cdb_from_path(path, optional=False):
         return {}, {}
     if not path.is_file():
         raise FileNotFoundError(f"CDB no encontrado: {path}")
-    conn = sqlite3.connect(str(path))
-    cur = conn.cursor()
-    datas = {row[0]: tuple(row) for row in cur.execute("SELECT * FROM datas")}
-    texts = {row[0]: tuple(row) for row in cur.execute("SELECT * FROM texts")}
-    conn.close()
+    with closing(sqlite3.connect(str(path))) as conn:
+        datas = {row[0]: tuple(row) for row in conn.execute("SELECT * FROM datas")}
+        texts = {row[0]: tuple(row) for row in conn.execute("SELECT * FROM texts")}
     return datas, texts
 
 
@@ -1127,6 +1218,9 @@ def _rush_merge(datas, incoming, edited, before, schema_texts, conflict_decision
             original = before.get(card_id)
             for index in range(1, len(schema_texts)):
                 local_value = edited[card_id][index]
+                if original is None and (not local_value or
+                        (_has_cjk(local_value) and not _has_cjk(remote[index]))):
+                    continue
                 changed_here = (original is None) or (local_value != original[index])
                 if not changed_here:
                     continue
@@ -1168,7 +1262,7 @@ def _show_conflicts(conflicts, limit=20):
         print(f"   Repo:   {c['published']!r}")
     if total > limit:
         print()
-        print(f"   ... y {total - limit} más (ver Rush/Reports/sync.json para el detalle completo)")
+        print(f"   ... y {total - limit} más (elige uno por uno para revisar todos)")
         print()
     try:
         input("Presiona Enter para continuar...")
@@ -1226,6 +1320,25 @@ def _resolve_one_by_one(conflicts):
     return decisions
 
 
+def _resolve_sync_conflicts(conflicts):
+    """Resolver explícitamente antes de escribir o confirmar una nueva base."""
+    if not conflicts:
+        return {}
+    _show_conflicts(conflicts)
+    choice = _ask_conflict_resolution()
+    if choice == "cancel":
+        raise RuntimeError("Sincronización cancelada; no se confirmó una nueva base")
+    if choice == "interactive":
+        decisions = _resolve_one_by_one(conflicts)
+        if decisions is None:
+            raise RuntimeError("Sincronización cancelada; no se confirmó una nueva base")
+        return decisions
+    decisions = {}
+    for conflict in conflicts:
+        decisions.setdefault(conflict["id"], {})[conflict["field"]] = choice
+    return decisions
+
+
 def _open_folder(path):
     path = Path(path)
     if not path.is_dir():
@@ -1258,17 +1371,9 @@ def rush_sync(keep_local=False):
     log("RUSH: Sincronizando desde GitHub")
     log("=" * 60)
 
-    try:
-        if not check_github_token():
-            log("❌ Token de GitHub inválido.")
-            return False
-    except Exception as e:
-        log(f"❌ Error verificando token: {e}")
-        return False
-
     # 1. Consultar metadata remota
     try:
-        info = github_api_request("GET", f"contents/{RUSH_REPO_CDB_PATH}")
+        info = _remote_file_metadata(RUSH_REPO_CDB_PATH)
     except Exception as e:
         log(f"❌ No se pudo consultar el CDB Rush publicado: {e}")
         return False
@@ -1280,7 +1385,8 @@ def rush_sync(keep_local=False):
     if RUSH_REMOTE_SHA_FILE.exists():
         stored_sha = RUSH_REMOTE_SHA_FILE.read_text(encoding="utf-8").strip() or None
 
-    first_time = stored_sha is None
+    first_time = (stored_sha is None or not (RUSH_RAW_DIR / RUSH_CDB_NAME).is_file()
+                  or not (RUSH_BASE_DIR / RUSH_CDB_NAME).is_file())
 
     if first_time:
         log("ℹ️  Primera sincronización: no hay baseline local.")
@@ -1289,6 +1395,8 @@ def rush_sync(keep_local=False):
     elif remote_sha == stored_sha:
         log("✅ Sin novedades: el CDB Rush publicado no ha cambiado.")
         log(f"   sha={remote_sha[:12]} ({remote_size} bytes)")
+        if keep_local:
+            return True
         if not keep_local:
             respuesta = input("¿Forzar descarga y merge de todos modos? (s/n): ").strip().lower()
             if respuesta != "s":
@@ -1322,7 +1430,7 @@ def rush_sync(keep_local=False):
     # 2. Descargar
     log(f"Descargando {RUSH_REPO_CDB_PATH}...")
     try:
-        published_bytes = download_remote_file(RUSH_REPO_CDB_PATH)
+        published_bytes = download_remote_file(RUSH_REPO_CDB_PATH, metadata=info)
     except Exception as e:
         log(f"❌ Error descargando: {e}")
         return False
@@ -1381,7 +1489,9 @@ def rush_sync(keep_local=False):
                 # result ya tiene local por defecto
             elif choice == "repo":
                 log("✅ Usando la versión del REPO para todos los conflictos.")
-                decisions = {c["id"]: {c["field"]: "repo"} for c in conflicts}
+                decisions = {}
+                for conflict in conflicts:
+                    decisions.setdefault(conflict["id"], {})[conflict["field"]] = "repo"
                 result, _ = _rush_merge(datas, incoming, edited, before,
                                         schema_texts, conflict_decisions=decisions)
             elif choice == "interactive":
@@ -1423,9 +1533,9 @@ def rush_sync(keep_local=False):
         # 6. Escribir
         _write_cdb_from_dicts(local_path, datas, result, schema_datas, schema_texts)
         baseline_path.parent.mkdir(parents=True, exist_ok=True)
-        baseline_path.write_bytes(published_bytes)
+        _atomic_write(baseline_path, published_bytes)
         if remote_sha:
-            RUSH_REMOTE_SHA_FILE.write_text(remote_sha + "\n", encoding="utf-8")
+            _atomic_write(RUSH_REMOTE_SHA_FILE, (remote_sha + "\n").encode("utf-8"))
 
         log(f"✅ Rush sincronizado → {local_path}")
         _apply_rush_mappings(local_path)
@@ -1534,7 +1644,7 @@ def rush_upload():
         if diff["removed_ids"]:
             log(f"      cartas publicadas no locales: {len(diff['removed_ids'])}")
 
-        if total == 0 and not diff["new_ids"]:
+        if total == 0 and not diff["new_ids"] and not diff["removed_ids"]:
             log("   ℹ️  No hay cambios respecto al publicado.")
             confirm = input("¿Subir de todos modos? (s/n): ").strip().lower()
             if confirm != "s":
@@ -1553,11 +1663,18 @@ def rush_upload():
                 return False
 
     try:
-        upload_file_via_api(local_path, RUSH_REPO_CDB_PATH, "Update ES Rush translations")
+        expected_sha = (RUSH_REMOTE_SHA_FILE.read_text(encoding="utf-8").strip()
+                        if RUSH_REMOTE_SHA_FILE.exists() else None)
+        result = upload_file_via_api(
+            local_path, RUSH_REPO_CDB_PATH, "Update ES Rush translations", expected_sha=expected_sha
+        )
+        _atomic_write(RUSH_BASE_DIR / RUSH_CDB_NAME, result["contents"][RUSH_REPO_CDB_PATH])
+        _atomic_write(RUSH_REMOTE_SHA_FILE, result["shas"][RUSH_REPO_CDB_PATH].encode("ascii"))
     except Exception as e:
         log(f"❌ Error al subir: {e}")
         return False
-    log("✅ Rush subido. GitHub Actions compilará el rush-pre-release.ypk en unos minutos.")
+    if result["changed"]:
+        log("✅ Rush subido. GitHub Actions validará las traducciones y compilará el paquete cuando estén completas.")
     return True
 
 def rush_show_diff():
@@ -1614,6 +1731,14 @@ def rush_show_diff():
         log("")
         log("✅ Todo sincronizado: tu local coincide con el publicado.")
 
+def _run_menu_action(action):
+    try:
+        action()
+    except Exception as exc:
+        log(f"❌ No se completó la operación: {exc}")
+        log("Puedes corregir el problema y volver a elegir la opción.")
+
+
 def standard_menu():
     while True:
         print()
@@ -1625,13 +1750,13 @@ def standard_menu():
         print("5 = Volver al menú principal")
         choice = input("Opción Standard: ").strip()
         if choice == "1":
-            option1_sync_only()
+            _run_menu_action(option1_sync_only)
         elif choice == "2":
-            option2_full_update()
+            _run_menu_action(option2_full_update)
         elif choice == "3":
-            option3_export_standard()
+            _run_menu_action(option3_export_standard)
         elif choice == "4":
-            option4_import_standard()
+            _run_menu_action(option4_import_standard)
         elif choice == "5":
             return
         else:
@@ -1651,19 +1776,19 @@ def rush_menu():
         print("8 = Volver al menú principal")
         choice = input("Opción Rush: ").strip()
         if choice == "1":
-            rush_sync()
+            _run_menu_action(rush_sync)
         elif choice == "2":
-            rush_upload()
+            _run_menu_action(rush_upload)
         elif choice == "3":
             _open_folder(RUSH_RAW_DIR)
         elif choice == "4":
             _open_folder(RUSH_REPORTS_DIR)
         elif choice == "5":
-            rush_export()
+            _run_menu_action(rush_export)
         elif choice == "6":
-            rush_import()
+            _run_menu_action(rush_import)
         elif choice == "7":
-            rush_show_diff()
+            _run_menu_action(rush_show_diff)
         elif choice == "8":
             return
         else:
@@ -1676,23 +1801,27 @@ def rush_menu():
 # =========================================================
 # ============  STANDARD: REFRESH DESDE GITHUB  ===========
 # =========================================================
+_standard_remote_metadata = {}
+
+
 def _fetch_standard_remote_shas():
-    """Obtiene los shas de los 3 archivos Standard sin descargar contenido."""
-    try:
-        result = github_api_request("GET", f"git/trees/{GITHUB_BRANCH}?recursive=1")
-    except Exception as e:
-        raise RuntimeError(f"No se pudo consultar el árbol del repo: {e}")
-
-    if result.get("truncated"):
-        log("⚠️  Árbol del repo truncado; usando contents API individual.")
-        shas = {}
-        for key, path in STANDARD_FILES.items():
-            info = github_api_request("GET", f"contents/{path}")
-            shas[key] = info.get("sha", "")
-        return shas
-
-    path_to_sha = {e["path"]: e.get("sha", "") for e in result.get("tree", [])}
-    return {key: path_to_sha.get(path, "") for key, path in STANDARD_FILES.items()}
+    """Consultar solo dos directorios pequeños, fijados al mismo commit."""
+    global _standard_remote_metadata
+    _standard_remote_metadata = {}
+    branch = github_api_request("GET", f"git/ref/heads/{quote(GITHUB_BRANCH, safe='/')}")
+    revision = branch["object"]["sha"]
+    for directory in sorted({str(Path(path).parent).replace('\\', '/') for path in STANDARD_FILES.values()}):
+        entries = github_api_request("GET", _contents_endpoint(directory, revision))
+        if not isinstance(entries, list):
+            raise RuntimeError(f"Directorio remoto inválido: {directory}")
+        for entry in entries:
+            for key, path in STANDARD_FILES.items():
+                if entry.get("path") == path and entry.get("type") == "file":
+                    _standard_remote_metadata[key] = entry
+    missing = [path for key, path in STANDARD_FILES.items() if key not in _standard_remote_metadata]
+    if missing:
+        raise RuntimeError(f"Faltan archivos publicados: {', '.join(missing)}")
+    return {key: info["sha"] for key, info in _standard_remote_metadata.items()}
 
 
 def _load_stored_shas():
@@ -1705,95 +1834,94 @@ def _load_stored_shas():
 
 
 def _save_stored_shas(shas):
-    try:
-        STANDARD_REMOTE_SHA_FILE.write_text(
-            json.dumps(shas, indent=2, sort_keys=True) + "\n",
-            encoding="utf-8"
-        )
-    except Exception as e:
-        log(f"⚠️  No se pudo guardar {STANDARD_REMOTE_SHA_FILE}: {e}")
+    _atomic_write(STANDARD_REMOTE_SHA_FILE,
+                  (json.dumps(shas, indent=2, sort_keys=True) + "\n").encode("utf-8"))
+
+
+def _restore_standard_baselines(stored):
+    """Migrar el script anterior usando exactamente el blob que ya descargó."""
+    for key, baseline in (("cdb", STANDARD_BASELINE_CDB), ("conf", STANDARD_BASELINE_CONF)):
+        if baseline.is_file():
+            continue
+        previous_sha = stored.get(key, "")
+        if not re.fullmatch(r"[0-9a-f]{40}", previous_sha):
+            log(f"Sin base anterior para {key}; se conservarán los textos locales ya traducidos.")
+            continue
+        log(f"Recuperando una sola vez la base anterior de {key} ({previous_sha[:12]})...")
+        try:
+            content = download_remote_file(STANDARD_FILES[key], metadata={"sha": previous_sha})
+        except requests.HTTPError as exc:
+            if exc.response is None or exc.response.status_code != 404:
+                raise
+            log(f"La base anterior de {key} ya no está disponible; se conservarán los textos locales traducidos.")
+            continue
+        _atomic_write(baseline, content)
 
 
 def _merge_cdb_into_local(local_path, upstream_bytes):
-    """Fusiona el CDB upstream con el local.
-    - datas: upsert todas (gameplay se actualiza)
-    - texts: solo INSERTAR cartas nuevas (preserva traducciones)
-    - Elimina entradas que ya no existen en upstream"""
+    """Actualizar gameplay y textos sin reemplazar traducciones locales editadas.
+
+    El baseline es una sola versión publicada para comparar campos; no es un
+    historial de respaldos. Sin baseline, solo reemplazar vacíos/textos CJK.
+    """
     local_path = Path(local_path)
-    with tempfile.NamedTemporaryFile(suffix=".cdb", delete=False) as tmp:
-        tmp.write(upstream_bytes)
-        upstream_path = Path(tmp.name)
-
+    local_path.parent.mkdir(parents=True, exist_ok=True)
+    temporary = None
     try:
-        conn_l = sqlite3.connect(str(local_path))
-        conn_u = sqlite3.connect(str(upstream_path))
-        cur_l, cur_u = conn_l.cursor(), conn_u.cursor()
+        with tempfile.NamedTemporaryFile(dir=local_path.parent, suffix=".cdb", delete=False) as output:
+            temporary = Path(output.name)
+            output.write(upstream_bytes)
+        schema_d, schema_t = _schema_from_cdb(temporary)
+        if not schema_d or not schema_t or schema_d[0] != "id" or schema_t[0] != "id":
+            raise RuntimeError("El archivo publicado no es un CDB válido")
+        datas, incoming = _read_cdb_from_path(temporary)
+        edited = {}
+        before = {}
+        if local_path.is_file():
+            if _schema_from_cdb(local_path) != (schema_d, schema_t):
+                raise RuntimeError("El CDB local tiene un schema distinto; no se modificó")
+            _, edited = _read_cdb_from_path(local_path)
+        if STANDARD_BASELINE_CDB.is_file():
+            if _schema_from_cdb(STANDARD_BASELINE_CDB) != (schema_d, schema_t):
+                raise RuntimeError("El baseline tiene un schema distinto; no se modificó el CDB")
+            _, before = _read_cdb_from_path(STANDARD_BASELINE_CDB)
 
-        # datas: upsert
-        cur_u.execute("SELECT * FROM datas")
-        cols = [d[0] for d in cur_u.description]
-        idx = {name: i for i, name in enumerate(cols)}
-        id_idx = idx.get("id", 0)
-        set_cols = [c for c in cols if c != "id"]
-        set_idx = [idx[c] for c in set_cols]
-        assignments = ", ".join(f"{c}=?" for c in set_cols)
-        update_sql = f"UPDATE datas SET {assignments} WHERE id=?"
-        placeholders = ",".join("?" * len(cols))
-        for row in cur_u.fetchall():
-            cid = row[id_idx]
-            cur_l.execute("SELECT 1 FROM datas WHERE id=?", (cid,))
-            if cur_l.fetchone() is None:
-                cur_l.execute(f"INSERT INTO datas VALUES ({placeholders})", row)
-            else:
-                values = [row[i] for i in set_idx]
-                cur_l.execute(update_sql, (*values, cid))
-
-        # texts: solo insertar nuevas
-        cur_u.execute("SELECT * FROM texts")
-        cols_t = [d[0] for d in cur_u.description]
-        idx_t = {name: i for i, name in enumerate(cols_t)}
-        id_idx_t = idx_t.get("id", 0)
-        placeholders_t = ",".join("?" * len(cols_t))
-        cur_l.execute("SELECT id FROM texts")
-        existing_ids = {row[0] for row in cur_l.fetchall()}
-        inserted = 0
-        for row in cur_u.fetchall():
-            cid = row[id_idx_t]
-            if cid in existing_ids:
+        conflicts = []
+        merged_rows = {}
+        for card_id, remote in incoming.items():
+            if card_id not in edited:
                 continue
-            cur_l.execute(f"INSERT INTO texts VALUES ({placeholders_t})", row)
-            inserted += 1
-
-        # eliminar las que ya no están en upstream
-        cur_u.execute("SELECT id FROM datas")
-        up_ids = {r[0] for r in cur_u.fetchall()}
-        cur_l.execute("SELECT id FROM datas")
-        local_ids = {r[0] for r in cur_l.fetchall()}
-        to_remove = local_ids - up_ids
-        if to_remove:
-            cur_l.executemany("DELETE FROM datas WHERE id=?", [(c,) for c in to_remove])
-
-        cur_u.execute("SELECT id FROM texts")
-        up_tids = {r[0] for r in cur_u.fetchall()}
-        cur_l.execute("SELECT id FROM texts")
-        local_tids = {r[0] for r in cur_l.fetchall()}
-        to_remove_t = local_tids - up_tids
-        if to_remove_t:
-            cur_l.executemany("DELETE FROM texts WHERE id=?", [(c,) for c in to_remove_t])
-
-        conn_l.commit()
-        cur_l.execute("VACUUM")
-        conn_l.commit()
-        conn_l.close()
-        conn_u.close()
-
-        log(f"   Merge CDB: cartas nuevas insertadas={inserted}, "
-            f"datas retiradas={len(to_remove)}, texts retiradas={len(to_remove_t)}")
+            row = list(remote)
+            original = before.get(card_id)
+            for index in range(1, len(schema_t)):
+                local_value = edited[card_id][index]
+                if original is not None:
+                    if local_value == original[index]:
+                        continue
+                    if remote[index] != original[index] and remote[index] != local_value:
+                        conflicts.append({"id": card_id, "field": schema_t[index],
+                                          "previous": original[index], "local": local_value,
+                                          "published": remote[index]})
+                elif not local_value or (_has_cjk(local_value) and not _has_cjk(remote[index])):
+                    continue
+                row[index] = local_value
+            merged_rows[card_id] = row
+        decisions = _resolve_sync_conflicts(conflicts)
+        for conflict in conflicts:
+            if decisions.get(conflict["id"], {}).get(conflict["field"]) == "repo":
+                merged_rows[conflict["id"]][schema_t.index(conflict["field"])] = conflict["published"]
+        updates = [(*row[1:], card_id) for card_id, row in merged_rows.items()]
+        with closing(sqlite3.connect(temporary)) as connection:
+            with connection:
+                if connection.execute("PRAGMA quick_check").fetchone()[0] != "ok":
+                    raise RuntimeError("CDB publicado dañado; no se modificó el archivo local")
+                fields = ", ".join(f'"{field}"=?' for field in schema_t[1:])
+                connection.executemany(f"UPDATE texts SET {fields} WHERE id=?", updates)
+        temporary.replace(local_path)
+        log(f"   CDB actualizado: {len(datas)} cartas, {len(set(incoming) - set(edited))} nuevas")
     finally:
-        try:
-            upstream_path.unlink()
-        except Exception:
-            pass
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
 
 
 def option1_sync_only(dry_run=False):
@@ -1801,14 +1929,6 @@ def option1_sync_only(dry_run=False):
         log("*** MODO SIMULACIÓN (dry-run) ***")
         return
     start = time.time()
-
-    try:
-        if not check_github_token():
-            log("❌ No se puede continuar sin un token válido.")
-            return
-    except Exception as e:
-        log(f"❌ Error verificando token: {e}")
-        return
 
     log("Verificando novedades en GitHub...")
     try:
@@ -1818,6 +1938,8 @@ def option1_sync_only(dry_run=False):
         return
 
     stored = _load_stored_shas()
+    local_files = {"cdb": RAW_DIR / "test-release.cdb", "conf": RAW_DIR / "test-strings.conf",
+                   "mappings": MAPPINGS_CSV}
     changed = {}
     for key, path in STANDARD_FILES.items():
         r_sha = remote_shas.get(key, "")
@@ -1825,7 +1947,9 @@ def option1_sync_only(dry_run=False):
         if not r_sha:
             log(f"⚠️  No se encontró {path} en el repo.")
             continue
-        if r_sha != o_sha:
+        missing_baseline = ((key == "cdb" and not STANDARD_BASELINE_CDB.is_file()) or
+                            (key == "conf" and not STANDARD_BASELINE_CONF.is_file()))
+        if r_sha != o_sha or not local_files[key].is_file() or missing_baseline:
             changed[key] = r_sha
 
     if not changed:
@@ -1845,12 +1969,17 @@ def option1_sync_only(dry_run=False):
         return
 
     # Descargar solo lo que cambió
+    try:
+        _restore_standard_baselines(stored)
+    except Exception as exc:
+        log(f"❌ No se pudo recuperar la base anterior; vuelve a intentar: {exc}")
+        return False
     downloaded = {}
     for key in changed:
         path = STANDARD_FILES[key]
         log(f"Descargando {path}...")
         try:
-            downloaded[key] = download_remote_file(path)
+            downloaded[key] = download_remote_file(path, metadata=_standard_remote_metadata.get(key))
             log(f"   {len(downloaded[key])} bytes")
         except Exception as e:
             log(f"❌ Error descargando {path}: {e}")
@@ -1861,17 +1990,15 @@ def option1_sync_only(dry_run=False):
     # 1) CDB
     if "cdb" in downloaded:
         target = RAW_DIR / "test-release.cdb"
-        if target.exists():
-            log("Fusionando CDB upstream con local (preservando traducciones)...")
-            _merge_cdb_into_local(target, downloaded["cdb"])
-        else:
-            target.write_bytes(downloaded["cdb"])
-            log(f"   Guardado nuevo {target}")
+        log("Fusionando CDB upstream con local (preservando traducciones)...")
+        _merge_cdb_into_local(target, downloaded["cdb"])
 
     # 2) test-strings.conf
     if "conf" in downloaded:
         sync_test_strings_conf(downloaded["conf"], RAW_DIR / "test-strings.conf",
-                               log_fn=log, report_limit=25)
+                               log_fn=log, report_limit=25,
+                               baseline_bytes=STANDARD_BASELINE_CONF.read_bytes()
+                               if STANDARD_BASELINE_CONF.is_file() else None)
 
     # 3) Mappings (fusión local + remoto)
     if "mappings" in downloaded:
@@ -1881,6 +2008,7 @@ def option1_sync_only(dry_run=False):
             _fuse_mappings(remote_rows, MAPPINGS_CSV)
         except Exception as e:
             log(f"⚠️  Error fusionando Mappings: {e}")
+            return False
 
     # 4) Parches finales sobre el CDB local
     raw_cdb = RAW_DIR / "test-release.cdb"
@@ -1901,6 +2029,10 @@ def option1_sync_only(dry_run=False):
         reemplazar_card_desde_csv(raw_cdb, MAPPINGS_CSV, CARDS_CDB)
 
     # 5) Guardar shas actuales
+    if "cdb" in downloaded:
+        _atomic_write(STANDARD_BASELINE_CDB, downloaded["cdb"])
+    if "conf" in downloaded:
+        _atomic_write(STANDARD_BASELINE_CONF, downloaded["conf"])
     new_stored = dict(stored)
     for key in changed:
         new_stored[key] = changed[key]
@@ -1979,23 +2111,23 @@ def option2_full_update():
         elif "test-strings.conf" in str(remote):
             names.append("strings.conf")
     desc_files = ", ".join(names)
-    tag_name = next_tag()
-    version_num = tag_name.replace(TAG_PREFIX, "")
-    commit_msg = f"{SUMMARY} - v{version_num}\n\nArchivos subidos: {desc_files}"
+    commit_msg = f"{SUMMARY}\n\nArchivos subidos: {desc_files}"
+    stored = _load_stored_shas()
+    expected = {path: stored[key] for key, path in STANDARD_FILES.items() if key in stored}
+    try:
+        result = upload_files_via_api(files_to_upload, commit_msg, expected_shas=expected)
+        for key, baseline in (("cdb", STANDARD_BASELINE_CDB), ("conf", STANDARD_BASELINE_CONF)):
+            path = STANDARD_FILES[key]
+            if path in result["shas"]:
+                _atomic_write(baseline, result["contents"][path])
+                stored[key] = result["shas"][path]
+        _save_stored_shas(stored)
+    except Exception as exc:
+        log(f"❌ No se pudo completar la subida: {exc}")
+        return
 
-    uploaded = 0
-    total = len(files_to_upload)
-    for idx, (local, remote) in enumerate(files_to_upload, 1):
-        log(f"Subiendo {idx}/{total}: {remote}")
-        upload_file_via_api(local, remote, commit_msg)
-        uploaded += 1
-    log(f"✅ Subidos {uploaded}/{total}.")
-
-    crear_tag = input("¿Crear tag de release? (s/n): ").strip().lower() == 's'
-    if crear_tag:
-        branch_info = github_api_request("GET", f"branches/{GITHUB_BRANCH}")
-        create_tag(tag_name, branch_info["commit"]["sha"])
-        log(f"✅ Tag {tag_name} creado.")
+    if result["changed"]:
+        log("✅ Traducciones subidas en un solo commit. GitHub Actions compilará el paquete y creará su tag ES-v automáticamente.")
 
     log(f"Proceso completado en {time.time()-start:.1f}s")
 
@@ -2118,6 +2250,7 @@ def reemplazar_card_desde_csv(cdb_path, csv_path, cards_cdb_path):
 
 if __name__ == "__main__":
     try:
+        initialize_workspace()
         while True:
             print()
             print("Elige una opción:")

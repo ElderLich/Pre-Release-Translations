@@ -20,7 +20,6 @@ import subprocess
 import sys
 import tempfile
 from dataclasses import dataclass
-from datetime import datetime
 from pathlib import Path
 
 DEFAULT_REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -222,28 +221,25 @@ def pull_workspace_to_local(args: argparse.Namespace, published_root: Path | Non
                if not target.is_file() or source.read_bytes() != target.read_bytes()]
     if args.dry_run:
         for source, target in changed:
-            log(f"would copy {source} -> {target} (back up existing local file first)")
+            log(f"would copy {source} -> {target}")
         return [target for _, target in changed]
 
-    replaced = [target for _, target in changed if target.is_file()]
-    if replaced:
-        backup = local_dir / "Backups" / "Published" / datetime.now().strftime("%Y%m%d-%H%M%S-%f")
-        for target in replaced:
-            saved = backup / target.relative_to(local_dir)
-            saved.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copy2(target, saved)
-        log(f"Saved previous local files in {backup}")
-    # Validate every input and finish all backups before replacing any local file.
-    for source, target in changed:
-        target.parent.mkdir(parents=True, exist_ok=True)
-        with tempfile.NamedTemporaryFile(prefix=target.name + ".", suffix=".tmp", dir=target.parent, delete=False) as stream:
-            temporary = Path(stream.name)
-        try:
+    # Prepare every incoming file before replacing any existing translation.
+    # Sibling temporary files allow atomic replacement without backup folders.
+    prepared = []
+    try:
+        for source, target in changed:
+            target.parent.mkdir(parents=True, exist_ok=True)
+            with tempfile.NamedTemporaryFile(prefix=target.name + ".", suffix=".tmp", dir=target.parent, delete=False) as stream:
+                temporary = Path(stream.name)
+            prepared.append((temporary, target))
             shutil.copy2(source, temporary)
+        for temporary, target in prepared:
             temporary.replace(target)
-        finally:
+            log(f"copied published file -> {target}")
+    finally:
+        for temporary, _target in prepared:
             temporary.unlink(missing_ok=True)
-        log(f"copied published file -> {target}")
     return [target for _, target in changed]
 
 
@@ -573,7 +569,7 @@ def build_parser() -> argparse.ArgumentParser:
     )
     refresh.set_defaults(func=command_refresh, pull_first=True)
 
-    pull = subparsers.add_parser("pull", help="Fetch published main, then optionally back up and copy <lang>/Workspace to local raw2")
+    pull = subparsers.add_parser("pull", help="Fetch published main, then copy <lang>/Workspace to local raw2")
     pull.add_argument("--lang", choices=sorted(LANGS), help="Language Workspace to copy back into the local folder")
     pull.add_argument("--source-dir", default="raw2", help="Local target folder inside the locale folder")
     pull.add_argument("--no-mappings", action="store_true", help="Accepted for compatibility; mappings are shared in Shared/Mappings.csv")

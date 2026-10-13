@@ -55,7 +55,7 @@ class PublishedPullTests(unittest.TestCase):
         self.write(path, rush.cdb_bytes({100: (100, 4, 0, 0, 33, 1000, 1000, 4, 1, 1, 0)},
                                       {100: (100, "Card", effect, *([""] * 16))}))
 
-    def test_standard_fetches_new_commit_and_backs_up_all_replaced_files(self):
+    def test_standard_fetches_new_commit_without_creating_backup_folders(self):
         self.write(self.local / "DE/raw2/test-release.cdb", b"unpublished translation")
         self.write(self.local / "DE/raw2/test-strings.conf", b"unpublished strings")
         self.write(self.local / "DE/Mappings.csv", b"previous mappings")
@@ -64,12 +64,35 @@ class PublishedPullTests(unittest.TestCase):
         self.pull()
         self.assertEqual(self.git(self.repo, "rev-parse", "HEAD"), self.git(self.origin, "rev-parse", "HEAD"))
         self.assertEqual((self.local / "DE/raw2/test-release.cdb").read_bytes(), b"latest database")
-        backup, = (self.local / "DE/Backups/Published").iterdir()
-        self.assertEqual((backup / "raw2/test-release.cdb").read_bytes(), b"unpublished translation")
-        self.assertEqual((backup / "raw2/test-strings.conf").read_bytes(), b"unpublished strings")
-        self.assertEqual((backup / "Mappings.csv").read_bytes(), b"previous mappings")
+        self.assertEqual((self.local / "DE/raw2/test-strings.conf").read_bytes(), b"original strings")
+        self.assertEqual((self.local / "DE/Mappings.csv").read_bytes(), b"original mappings")
+        self.assertFalse((self.local / "DE/Backups").exists())
+        self.assertEqual(list(self.local.rglob("*.tmp")), [])
         self.pull()
-        self.assertEqual(len(list(backup.parent.iterdir())), 1)
+        self.assertFalse((self.local / "DE/Backups").exists())
+
+    def test_failed_staging_preserves_all_local_files_and_cleans_temporary_files(self):
+        originals = {
+            self.local / "DE/raw2/test-release.cdb": b"unpublished translation",
+            self.local / "DE/raw2/test-strings.conf": b"unpublished strings",
+            self.local / "DE/Mappings.csv": b"previous mappings",
+        }
+        for path, data in originals.items():
+            self.write(path, data)
+        copy_file = helper.shutil.copy2
+
+        def failing_copy(source, target):
+            if source.name == "test-strings.conf":
+                raise OSError("Not enough space")
+            return copy_file(source, target)
+
+        with patch.object(helper.shutil, "copy2", side_effect=failing_copy):
+            with self.assertRaisesRegex(SystemExit, "Not enough space"):
+                self.pull()
+        for path, data in originals.items():
+            self.assertEqual(path.read_bytes(), data)
+        self.assertFalse((self.local / "DE/Backups").exists())
+        self.assertEqual(list(self.local.rglob("*.tmp")), [])
 
     def test_dirty_checkout_cannot_block_or_contaminate_published_download(self):
         database = self.repo / "DE/Workspace/test-release.cdb"
