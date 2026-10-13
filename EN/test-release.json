@@ -1,5 +1,35 @@
 [
   {
+    "name": "Marincess Azuri",
+    "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 WATER Cyberse monster with 1000 or less ATK from your Deck, also you cannot Special Summon for the rest of this turn, except WATER monsters. If you Link Summon a \"Marincess\" Link Monster(s), while this card is in your GY: You can banish this card; equip 1 \"Marincess\" monster from your GY to 1 of those Link Monsters as an Equip Spell that gives it 600 ATK. You can only use each effect of \"Marincess Azuri\" once per turn.",
+    "overallString": "[Monster|Effect] Cyberse/Water  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Ulpis",
+    "desc": "If this card is in your hand: You can discard 1 other \"Marincess\" card or WATER monster; Special Summon this card. If this card is Normal or Special Summoned: You can Set 1 \"Marincess\" Spell/Trap from your Deck. You can send 1 \"Marincess\" Link Monster Card you control to the GY; draw 1 card. You can only use each effect of \"Marincess Ulpis\" once per turn.",
+    "overallString": "[Monster|Effect] Cyberse/Water  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Aqua Leviathan @Marincess",
+    "desc": "You can Ritual Summon this card with a \"Marincess\" card. Monsters your opponent controls lose 1000 ATK. You can only use each of the following effects of \"Aqua Leviathan @Marincess\" once per turn. You can reveal this card in your hand; add 1 \"Marincess\" card from your Deck to your hand, except a Ritual Monster, then discard 1 card. If this card is Ritual Summoned: You can return cards your opponent controls to the hand up to the number of \"Marincess\" Monster Cards you control.",
+    "overallString": "[Monster|Effect|Ritual] Cyberse/Water  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Truth Heart",
+    "desc": "2+ \"Marincess\" monsters\nIf this card is Link Summoned using a Link Monster with 0 original ATK: You can Special Summon 1 Link-3 or lower \"Marincess\" monster from your Extra Deck. You can only use this effect of \"Marincess Truth Heart\" once per turn. You can banish 1 Link Monster Card from your field or GY; destroy 1 card your opponent controls, also for the rest of this turn, you cannot banish monsters with that same Link Rating to activate this effect of \"Marincess Truth Heart\".",
+    "overallString": "[Monster|Effect|Link] Cyberse/Water  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Reef Lagoon",
+    "desc": "When this card is activated: You can add 1 WATER Cyberse monster from your Deck to your hand. Once per turn, during your opponent's End Phase: You can shuffle up to 3 WATER monsters from your GY and/or banishment into the Deck. You can send this face-up card to the GY; Ritual Summon 1 WATER Cyberse Ritual Monster from your hand, by banishing WATER monsters from your GY whose total Levels equal or exceed the Level of the Ritual Monster. You can only activate 1 \"Marincess Reef Lagoon\" per turn.",
+    "overallString": "[Spell|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
     "name": "Ars Magna Artmage",
     "desc": "2+ monsters, including an \"Ars Magna\" or \"Artmage\" monster\nYour opponent cannot target your linked monsters with card effects. During your Main Phase: You can add to your hand, or Special Summon, 1 \"Ars Magna\", \"Artmage\", \"DoomZ\", or \"Elfnote\" monster from your Deck, then if you have 3 or more different Monster Types on your field, you can Special Summon 1 monster from your GY or banishment. You can only use this effect of \"Ars Magna Artmage\" once per turn.",
     "overallString": "[Monster|Effect|Link] Fairy/Light  [LINK-4] 2500/-  [↑][←][→][↓]",
@@ -25,7 +55,7 @@
   },
   {
     "name": "Omega Vidolium the Power Patron of Heaven's End",
-    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
+    "desc": "Pendulum Scale = 11\r\n[ Pendulum Effect ]\r\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\r\n----------------------------------------\r\n[ Monster Effect ]\r\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\r\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
     "overallString": "[Monster|Effect|Fusion|Pendulum] Dragon/Dark  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
