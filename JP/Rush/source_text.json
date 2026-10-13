@@ -5,10 +5,388 @@
       "fields": [],
       "set_code": "RD/LP01-JP014",
       "source": "https://ocg-card.com/list_r/lp01/"
+    },
+    "120311001": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP001",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311002": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP002",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311004": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP004",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311006": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP006",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311007": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP007",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311008": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP008",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311010": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP010",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311011": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP011",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311012": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP012",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311013": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP013",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311018": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP018",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311020": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP020",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311022": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP022",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311023": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP023",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311026": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP026",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311027": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP027",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311029": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP029",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311030": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP030",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311031": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP031",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311032": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP032",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311033": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP033",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311034": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP034",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311035": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP035",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311036": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP036",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311041": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP041",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311042": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP042",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311044": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP044",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311047": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP047",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311048": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP048",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311049": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP049",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311050": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP050",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311051": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP051",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311052": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP052",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311053": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP053",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311054": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP054",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311055": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP055",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311056": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP056",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311057": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP057",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311058": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP058",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311059": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP059",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311061": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP061",
+      "source": "https://ocg-card.com/list_r/lp02/"
+    },
+    "120311062": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP062",
+      "source": "https://ocg-card.com/list_r/lp02/"
     }
   },
   "requested_ids": [
-    120307014
+    120307014,
+    120311001,
+    120311002,
+    120311004,
+    120311006,
+    120311007,
+    120311008,
+    120311010,
+    120311011,
+    120311012,
+    120311013,
+    120311018,
+    120311020,
+    120311022,
+    120311023,
+    120311026,
+    120311027,
+    120311029,
+    120311030,
+    120311031,
+    120311032,
+    120311033,
+    120311034,
+    120311035,
+    120311036,
+    120311041,
+    120311042,
+    120311044,
+    120311047,
+    120311048,
+    120311049,
+    120311050,
+    120311051,
+    120311052,
+    120311053,
+    120311054,
+    120311055,
+    120311056,
+    120311057,
+    120311058,
+    120311059,
+    120311061,
+    120311062
   ],
   "unresolved": []
 }

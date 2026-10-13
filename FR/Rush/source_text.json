@@ -1,6 +1,23 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120311001": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP001",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16508&languages=fr"
+    },
+    "120311002": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP002",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17803&languages=fr"
+    }
+  },
   "requested_ids": [
     120310013,
     120310014,
@@ -11,7 +28,49 @@
     120310019,
     120310052,
     120310062,
-    120310063
+    120310063,
+    120311001,
+    120311002,
+    120311004,
+    120311006,
+    120311007,
+    120311008,
+    120311010,
+    120311011,
+    120311012,
+    120311013,
+    120311018,
+    120311020,
+    120311022,
+    120311023,
+    120311026,
+    120311027,
+    120311029,
+    120311030,
+    120311031,
+    120311032,
+    120311033,
+    120311034,
+    120311035,
+    120311036,
+    120311041,
+    120311042,
+    120311044,
+    120311047,
+    120311048,
+    120311049,
+    120311050,
+    120311051,
+    120311052,
+    120311053,
+    120311054,
+    120311055,
+    120311056,
+    120311057,
+    120311058,
+    120311059,
+    120311061,
+    120311062
   ],
   "unresolved": [
     {
@@ -124,6 +183,206 @@
       "reason": "Localized fields are missing",
       "set_code": "RD/KP27-JP063",
       "source": "https://yugipedia.com/wiki/Mad_Rare_Hack"
+    },
+    {
+      "id": 120311004,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP004"
+    },
+    {
+      "id": 120311006,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP006"
+    },
+    {
+      "id": 120311007,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP007"
+    },
+    {
+      "id": 120311008,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP008"
+    },
+    {
+      "id": 120311010,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP010"
+    },
+    {
+      "id": 120311011,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP011"
+    },
+    {
+      "id": 120311012,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP012"
+    },
+    {
+      "id": 120311013,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP013"
+    },
+    {
+      "id": 120311018,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP018"
+    },
+    {
+      "id": 120311020,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP020"
+    },
+    {
+      "id": 120311022,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP022"
+    },
+    {
+      "id": 120311023,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP023"
+    },
+    {
+      "id": 120311026,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP026"
+    },
+    {
+      "id": 120311027,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP027"
+    },
+    {
+      "id": 120311029,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP029"
+    },
+    {
+      "id": 120311030,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP030"
+    },
+    {
+      "id": 120311031,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP031"
+    },
+    {
+      "id": 120311032,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP032"
+    },
+    {
+      "id": 120311033,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP033"
+    },
+    {
+      "id": 120311034,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP034"
+    },
+    {
+      "id": 120311035,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP035"
+    },
+    {
+      "id": 120311036,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP036"
+    },
+    {
+      "id": 120311041,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP041"
+    },
+    {
+      "id": 120311042,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP042"
+    },
+    {
+      "id": 120311044,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP044"
+    },
+    {
+      "id": 120311047,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP047"
+    },
+    {
+      "id": 120311048,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP048"
+    },
+    {
+      "id": 120311049,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP049"
+    },
+    {
+      "id": 120311050,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP050"
+    },
+    {
+      "id": 120311051,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP051"
+    },
+    {
+      "id": 120311052,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP052"
+    },
+    {
+      "id": 120311053,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP053"
+    },
+    {
+      "id": 120311054,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP054"
+    },
+    {
+      "id": 120311055,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP055"
+    },
+    {
+      "id": 120311056,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP056"
+    },
+    {
+      "id": 120311057,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP057"
+    },
+    {
+      "id": 120311058,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP058"
+    },
+    {
+      "id": 120311059,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP059"
+    },
+    {
+      "id": 120311061,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP061"
+    },
+    {
+      "id": 120311062,
+      "reason": "No source card page found",
+      "set_code": "RD/LP02-JP062"
     }
   ]
 }
