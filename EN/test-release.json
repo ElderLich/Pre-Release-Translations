@@ -1,5 +1,23 @@
 [
   {
+    "name": "Trinitas Magistus",
+    "desc": "2+ Spellcaster monsters\r\nYou can only use 1 of this card name's ①, ②, or ③ effect per turn, and only once that turn.\r\n①：If this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to it.\r\n②：You can discard 1 card; shuffle all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY into the Extra Deck.\r\n③：During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand.",
+    "overallString": "[Monster|Effect|Link] Spellcaster/Light  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "Invoked Magistus Heruvim",
+    "desc": "1 \"Magistus\" monster + 1 Spellcaster monster\r\nYou can only once use this card name's ① and ② effects once per turn each.\r\n①：If this card is Special Summoned from the Extra Deck: You can target 1 card your opponent controls; destroy it.\r\n②：When your opponent activates a monster effect, or their monster declares an attack, except during the turn this card was Special Summoned (Quick Effect): You can banish this card; Special Summon 1 \"Magistus\" or \"Invoked\" monster from your Extra Deck, except \"Invoked Magistus Heruvim\".",
+    "overallString": "[Monster|Effect|Fusion] Spellcaster/Light  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus Witchcrafter Aruru",
+    "desc": "You can only use this card name's ①, ②, and ③ effects once per turn each.\r\n①：If this card is in your hand and a \"Magistus\" monster is on the field: You can Special Summon this card.\r\n②：You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn.\r\n③：If this card is sent to the GY: You can banish it, then target 1 \"Magistus\" or \"Witchcrafter\" monster in your GY; Special Summon it.",
+    "overallString": "[Monster|Effect] Spellcaster/Light  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
     "name": "Marincess Azuri",
     "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 WATER Cyberse monster with 1000 or less ATK from your Deck, also you cannot Special Summon for the rest of this turn, except WATER monsters. If you Link Summon a \"Marincess\" Link Monster(s), while this card is in your GY: You can banish this card; equip 1 \"Marincess\" monster from your GY to 1 of those Link Monsters as an Equip Spell that gives it 600 ATK. You can only use each effect of \"Marincess Azuri\" once per turn.",
     "overallString": "[Monster|Effect] Cyberse/Water  [★3] 1600/1000",
@@ -55,7 +73,7 @@
   },
   {
     "name": "Omega Vidolium the Power Patron of Heaven's End",
-    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
+    "desc": "Pendulum Scale = 11\r\n[ Pendulum Effect ]\r\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\r\n----------------------------------------\r\n[ Monster Effect ]\r\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\r\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
     "overallString": "[Monster|Effect|Fusion|Pendulum] Dragon/Dark  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
@@ -301,7 +319,7 @@
   },
   {
     "name": "Diabellstar, the Seeker of Sinful Spoils",
-    "desc": "If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand). You can only Special Summon \"Diabellstar, the Seeker of Sinful Spoils\" once per turn this way. You can only use each of the following effects of \"Diabellstar, the Seeker of Sinful Spoils\" once per turn. You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells/Traps your opponent controls. During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
+    "desc": "You can only Special Summon with the way in this card's ① effect once per turn. You can only use this card name's ② and ③ effects once per turn each.\r\n①：If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand).\r\n②：You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells and Traps your opponent controls.\r\n③：During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
     "overallString": "[Monster|Effect] Spellcaster/Dark  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
