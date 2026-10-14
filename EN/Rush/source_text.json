@@ -1,152 +1,200 @@
 {
   "language": "en",
   "matches": {
-    "120311004": {
+    "120311031": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP004",
-      "source": "https://yugipedia.com/wiki/Dendrovenus_the_Planetairy"
+      "set_code": "RD/LP02-JP031",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Voltic_Wingman"
     },
-    "120311006": {
+    "120311032": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP006",
-      "source": "https://yugipedia.com/wiki/Marsphlox_the_Planetairy"
+      "set_code": "RD/LP02-JP032",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Burst_Wingman"
     },
-    "120311007": {
+    "120311033": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP007",
-      "source": "https://yugipedia.com/wiki/Osmanjupiter_the_Planetairy"
+      "set_code": "RD/LP02-JP033",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Flame_Wingman_%28Rush_Duel%29"
     },
-    "120311008": {
+    "120311034": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP008",
-      "source": "https://yugipedia.com/wiki/Saturnchamomile_the_Planetairy"
+      "set_code": "RD/LP02-JP034",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Thunder_Giant_%28Rush_Duel%29"
     },
-    "120311010": {
+    "120311035": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP010",
-      "source": "https://yugipedia.com/wiki/Pluamone_the_Planetairy"
+      "set_code": "RD/LP02-JP035",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Wild_Wingman_%28Rush_Duel%29"
     },
-    "120311011": {
+    "120311036": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP011",
-      "source": "https://yugipedia.com/wiki/Cosmostar_the_Luminous_Polairy"
+      "set_code": "RD/LP02-JP036",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Tempest_%28Rush_Duel%29"
     },
-    "120311012": {
+    "120311041": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP012",
-      "source": "https://yugipedia.com/wiki/Cosmostar_the_Black_Hole_Polairy"
+      "set_code": "RD/LP02-JP041",
+      "source": "https://yugipedia.com/wiki/Praime_Stock"
     },
-    "120311013": {
+    "120311042": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP013",
-      "source": "https://yugipedia.com/wiki/Cosmostar_the_Hypernova_Polairy"
+      "set_code": "RD/LP02-JP042",
+      "source": "https://yugipedia.com/wiki/Praime_Requiem"
     },
-    "120311018": {
+    "120311044": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP018",
-      "source": "https://yugipedia.com/wiki/Princess_Cosmos%27_Change_of_Clothes"
+      "set_code": "RD/LP02-JP044",
+      "source": "https://yugipedia.com/wiki/Transam_Praime_Master_Nova"
     },
-    "120311020": {
+    "120311047": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP020",
-      "source": "https://yugipedia.com/wiki/Princess_Cosmos%27_Beauty_Sleep"
+      "set_code": "RD/LP02-JP047",
+      "source": "https://yugipedia.com/wiki/Praime_Nova"
     },
-    "120311022": {
+    "120311048": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP022",
-      "source": "https://yugipedia.com/wiki/Evil_HERO_Inferno_Wing_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP048",
+      "source": "https://yugipedia.com/wiki/Prophecy_Phrase_the_Colors_of_the_Wind"
     },
-    "120311023": {
+    "120311049": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP023",
-      "source": "https://yugipedia.com/wiki/Evil_HERO_Lightning_Golem_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP049",
+      "source": "https://yugipedia.com/wiki/Mahavaio_the_Melody_Maker"
     },
-    "120311026": {
+    "120311050": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP026",
-      "source": "https://yugipedia.com/wiki/Dark_Fusion_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP050",
+      "source": "https://yugipedia.com/wiki/Pirate_of_the_Apport_Winds"
     },
-    "120311027": {
+    "120311051": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP027",
-      "source": "https://yugipedia.com/wiki/Elemental_HERO_Clayman_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP051",
+      "source": "https://yugipedia.com/wiki/Plectcrime_of_the_Deadly_Dirge"
     },
-    "120311029": {
+    "120311052": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP029",
-      "source": "https://yugipedia.com/wiki/Elemental_HERO_Bubbleman_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP052",
+      "source": "https://yugipedia.com/wiki/Bandijo_the_Battle_Ballad"
     },
-    "120311030": {
+    "120311053": {
       "fields": [
         "name",
         "desc"
       ],
-      "set_code": "RD/LP02-JP030",
-      "source": "https://yugipedia.com/wiki/Elemental_HERO_Wildheart_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP053",
+      "source": "https://yugipedia.com/wiki/Mokey_Mokey_%28Rush_Duel%29"
+    },
+    "120311054": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP054",
+      "source": "https://yugipedia.com/wiki/Sparks_%28Rush_Duel%29"
+    },
+    "120311055": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP055",
+      "source": "https://yugipedia.com/wiki/Lair_Wire_%28Rush_Duel%29"
+    },
+    "120311056": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP056",
+      "source": "https://yugipedia.com/wiki/Reshef_the_Dark_Being_%28Rush_Duel%29"
+    },
+    "120311057": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP057",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Avian_%28Rush_Duel%29"
+    },
+    "120311058": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP058",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Burstinatrix_%28Rush_Duel%29"
+    },
+    "120311059": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP059",
+      "source": "https://yugipedia.com/wiki/Elemental_HERO_Sparkman_%28Rush_Duel%29"
+    },
+    "120311061": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP061",
+      "source": "https://yugipedia.com/wiki/Transam_Linac"
+    },
+    "120311062": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP062",
+      "source": "https://yugipedia.com/wiki/Transam_Praime_Armor_Nova"
     }
   },
   "requested_ids": [
-    120311004,
-    120311006,
-    120311007,
-    120311008,
-    120311010,
-    120311011,
-    120311012,
-    120311013,
-    120311018,
-    120311020,
-    120311022,
-    120311023,
-    120311026,
-    120311027,
-    120311029,
-    120311030,
     120311031,
     120311032,
     120311033,
@@ -172,126 +220,5 @@
     120311061,
     120311062
   ],
-  "unresolved": [
-    {
-      "id": 120311031,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP031"
-    },
-    {
-      "id": 120311032,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP032"
-    },
-    {
-      "id": 120311033,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP033"
-    },
-    {
-      "id": 120311034,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP034"
-    },
-    {
-      "id": 120311035,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP035"
-    },
-    {
-      "id": 120311036,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP036"
-    },
-    {
-      "id": 120311041,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP041"
-    },
-    {
-      "id": 120311042,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP042"
-    },
-    {
-      "id": 120311044,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP044"
-    },
-    {
-      "id": 120311047,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP047"
-    },
-    {
-      "id": 120311048,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP048"
-    },
-    {
-      "id": 120311049,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP049"
-    },
-    {
-      "id": 120311050,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP050"
-    },
-    {
-      "id": 120311051,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP051"
-    },
-    {
-      "id": 120311052,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP052"
-    },
-    {
-      "id": 120311053,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP053"
-    },
-    {
-      "id": 120311054,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP054"
-    },
-    {
-      "id": 120311055,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP055"
-    },
-    {
-      "id": 120311056,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP056"
-    },
-    {
-      "id": 120311057,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP057"
-    },
-    {
-      "id": 120311058,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP058"
-    },
-    {
-      "id": 120311059,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP059"
-    },
-    {
-      "id": 120311061,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP061"
-    },
-    {
-      "id": 120311062,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP062"
-    }
-  ]
+  "unresolved": []
 }
