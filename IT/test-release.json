@@ -1,5 +1,77 @@
 [
   {
+    "name": "Necromante della Magia del Drago",
+    "desc": "2 Mostri con Effetto\r\nDurante la tua Main Phase: puoi rivelare 1 Mostro Fusione nel tuo Extra Deck, scegliere 1 mostro non-Fusione nel tuo Cimitero il cui nome è menzionato sul mostro rivelato e il nome di questa carta diventa quello di quel mostro (fino alla End Phase), poi puoi Evocare tramite Fusione il Mostro Fusione rivelato, bandendo i suoi materiali dalla tua mano, Terreno e/o Cimitero, inoltre per il resto di questo turno non puoi Evocare Specialmente dall'Extra Deck, eccetto Mostri Fusione.\r\nPuoi utilizzare questo effetto di \"Necromante della Magia del Drago\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Link] Drago/Vento  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X il Drago Furioso di Metallo Nero",
+    "desc": "Se questa carta viene aggiunta dal Deck alla tua mano, eccetto pescandola: puoi Evocarla Specialmente.\r\nSe questa carta viene Evocata Specialmente: puoi pagare la metà dei tuoi LP; distruggi quanti più altri mostri possibile sul Terreno e, se lo fai, infliggi al tuo avversario danno pari all'ATK più alto sul Terreno tra i mostri scoperti distrutti di sua proprietà e, se fai ciò, questa carta guadagna altrettanto ATK.\r\nSe questa carta viene distrutta: puoi aggiungere 1 \"Imposizione Finale\" dal tuo Deck alla tua mano.\r\nPuoi utilizzare ciascun effetto di \"Gandora-X il Drago Furioso di Metallo Nero\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Drago/Oscurità  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Catena Temporale",
+    "desc": "Distruggi questa carta durante la 2ª Standby Phase del tuo avversario dopo la sua attivazione.\r\nAttiva questa carta quando un tuo mostro viene scelto come bersaglio per un attacco: nessuno dei due mostri che combattono può essere distrutto in quella battaglia, inoltre bandiscili dopo il calcolo dei danni fino alla 2ª Standby Phase dei rispettivi controllori.\r\nAnnulla gli effetti attivati dei mostri con lo stesso nome originale dei mostri attualmente banditi dall'effetto di questa carta.\r\nDurante la tua Draw Phase, invece di effettuare la tua normale pescata: puoi aggiungere 1 mostro dal tuo Deck alla tua mano.",
+    "overallString": "[Trappola|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Devozione del Guerriero",
+    "desc": "Manda 1 mostro Guerriero dalla tua mano o Deck al Cimitero, poi scegli come bersaglio 1 mostro scoperto controllato dal tuo avversario; esso perde ATK pari all'ATK del mostro mandato. Se uno o più mostri Guerriero che controlli stanno per essere distrutti in battaglia o dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero. Puoi utilizzare ciascun effetto di \"Devozione del Guerriero\" una sola volta per turno.",
+    "overallString": "[Trappola]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
+    "name": "Trinitas Magistus",
+    "desc": "2+ mostri Incantatore\r\nSe questa carta viene Evocata Specialmente dall'Extra Deck: puoi equipaggiare 1 mostro \"Magistus\" o Incantatore dal tuo Extra Deck a questa carta come Magia Equipaggiamento.\r\nPuoi scartare 1 carta; fai ritornare tutti i Mostri Fusione, Synchro, Xyz e Link dal Terreno e Cimitero del tuo avversario nell'Extra Deck.\r\nDurante la Main Phase del tuo avversario (Effetto Rapido): puoi aggiungere 1 carta \"Magistus\" dal tuo Cimitero o dalle tue carte bandite alla tua mano.\r\nPuoi utilizzare solo 1 effetto di \"Trinitas Magistus\" per turno, e solo una volta in quel turno.",
+    "overallString": "[Mostro|Effetto|Link] Incantatore/Luce  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus Invokato Heruvim",
+    "desc": "1 mostro \"Magistus\" + 1 mostro Incantatore\r\nSe questa carta viene Evocata Specialmente dall'Extra Deck: puoi scegliere come bersaglio 1 carta controllata dal tuo avversario; distruggila.\r\nQuando il tuo avversario attiva l'effetto di un mostro, oppure un suo mostro dichiara un attacco, eccetto durante il turno in cui questa carta è stata Evocata Specialmente (Effetto Rapido): puoi bandire questa carta; Evoca Specialmente 1 mostro \"Magistus\" o \"Invokato\" dal tuo Extra Deck, eccetto \"Magistus Invokato Heruvim\".\r\nPuoi utilizzare ciascun effetto di \"Magistus Invokato Heruvim\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Fusione] Incantatore/Luce  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus Stregartigiana Aruru",
+    "desc": "Se questa carta è nella tua mano e un mostro \"Magistus\" è sul Terreno: puoi Evocare Specialmente questa carta.\r\nPuoi scegliere come bersaglio 1 mostro scoperto controllato dal tuo avversario; annulla i suoi effetti fino alla fine di questo turno.\r\nSe questa carta viene mandata al Cimitero: puoi bandirla, poi scegliere come bersaglio 1 mostro \"Magistus\" o \"Stregartigiana\" nel tuo Cimitero; Evocalo Specialmente.\r\nPuoi utilizzare ciascun effetto di \"Magistus Stregartigiana Aruru\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Incantatore/Luce  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
+    "name": "Marincipessa Azuri",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi Evocare Specialmente 1 mostro Cyberse ACQUA con 1000 o meno ATK dal tuo Deck, inoltre non puoi Evocare Specialmente per il resto di questo turno, eccetto mostri ACQUA.\r\nSe Evochi tramite Link uno o più Mostri Link \"Marincipessa\", mentre questa carta è nel tuo Cimitero: puoi bandire questa carta; equipaggia 1 mostro \"Marincipessa\" dal tuo Cimitero a 1 di quei Mostri Link come una Magia Equipaggiamento che gli fa guadagnare 600 ATK.\r\nPuoi utilizzare ciascun effetto di \"Marincipessa Azuri\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Cyberso/Acqua  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Marincipessa Ulpis",
+    "desc": "Se questa carta è nella tua mano: puoi scartare 1 altra carta \"Marincipessa\" o 1 mostro ACQUA; Evoca Specialmente questa carta.\r\nSe questa carta viene Evocata Normalmente o Specialmente: puoi Posizionare 1 Magia/Trappola \"Marincipessa\" dal tuo Deck.\r\nPuoi mandare 1 Carta Mostro Link \"Marincipessa\" che controlli al Cimitero; pesca 1 carta.\r\nPuoi utilizzare ciascun effetto di \"Marincipessa Ulpis\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Cyberso/Acqua  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Leviatano Acquatico @Marincipessa",
+    "desc": "Puoi Evocare tramite Rituale questa carta con una carta \"Marincipessa\".\r\nI mostri controllati dal tuo avversario perdono 1000 ATK.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Leviatano Acquatico @Marincipessa\" una sola volta per turno.\r\nPuoi rivelare questa carta nella tua mano; aggiungi 1 carta \"Marincipessa\" dal tuo Deck alla tua mano, eccetto un Mostro Rituale, poi scarta 1 carta.\r\nSe questa carta viene Evocata tramite Rituale: puoi far ritornare alla mano carte controllate dal tuo avversario fino al numero di Carte Mostro \"Marincipessa\" che controlli.",
+    "overallString": "[Mostro|Effetto|Rituale] Cyberso/Acqua  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Marincipessa Cuore della Verità",
+    "desc": "2+ mostri \"Marincipessa\"\r\nSe questa carta viene Evocata tramite Link utilizzando un Mostro Link con 0 ATK originale: puoi Evocare Specialmente 1 Mostro Link \"Marincipessa\" Link-3 o inferiore dal tuo Extra Deck. Puoi utilizzare questo effetto di \"Marincipessa Cuore della Verità\" una sola volta per turno.\r\nPuoi bandire 1 Carta Mostro Link dal tuo Terreno o Cimitero; distruggi 1 carta controllata dal tuo avversario, inoltre per il resto di questo turno non puoi bandire mostri con lo stesso Valore Link per attivare questo effetto di \"Marincipessa Cuore della Verità\".",
+    "overallString": "[Mostro|Effetto|Link] Cyberso/Acqua  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Laguna della Barriera Corallina Marincipessa",
+    "desc": "Quando questa carta viene attivata: puoi aggiungere 1 mostro Cyberse ACQUA dal tuo Deck alla tua mano.\r\nUna volta per turno, durante la End Phase del tuo avversario: puoi mischiare nel Deck fino a 3 mostri ACQUA dal tuo Cimitero e/o dalle tue carte bandite.\r\nPuoi mandare questa carta scoperta al Cimitero; Evoca tramite Rituale 1 Mostro Rituale Cyberse ACQUA dalla tua mano, bandendo mostri ACQUA dal tuo Cimitero i cui Livelli totali siano pari o superiori al Livello del Mostro Rituale.\r\nPuoi attivare solo 1 \"Laguna della Barriera Corallina Marincipessa\" per turno.",
+    "overallString": "[Magia|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
     "name": "Ars Magna Artmage",
     "desc": "2+ mostri, compreso un mostro \"Ars Magna\" o \"Artmage\"\r\nIl tuo avversario non può scegliere come bersaglio con gli effetti delle carte i tuoi mostri puntati.\r\nDurante la tua Main Phase: puoi aggiungere alla tua mano, oppure Evocare Specialmente, 1 mostro \"Ars Magna\", \"Artmage\", \"DoomZ\" o \"Elfnote\" dal tuo Deck, poi, se hai 3 o più Tipi di Mostro diversi sul tuo Terreno, puoi Evocare Specialmente 1 mostro dal tuo Cimitero o dalle tue carte bandite.\r\nPuoi utilizzare questo effetto di \"Ars Magna Artmage\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Link] Fata/Luce  [LINK-4] 2500/-  [↑][←][→][↓]",
