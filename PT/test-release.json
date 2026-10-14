@@ -1,5 +1,29 @@
 [
   {
+    "name": "Necromancer do Dragão Mágico",
+    "desc": "2 Monstros de Efeito\r\nDurante sua Fase Principal: você pode revelar 1 Monstro Fusão no seu Deck Adicional, escolha 1 Monstro não-Fusão no seu Cemitério cujo nome seja mencionado no monstro revelado, e o nome deste card se torna o daquele (até a Fase Final), então você pode Invocar por Invocação-Fusão o Monstro Fusão revelado, ao banir suas matérias da sua mão, campo e/ou Cemitério, você também não pode Invocar por Invocação-Especial do seu Deck Adicional pelo resto deste turno, exceto Monstros Fusão. Você só pode usar este efeito de \"Necromancer do Dragão Mágico\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Link] Dragão/Vento  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X, o Dragão Furioso de Metal Negro",
+    "desc": "Se este card é adiciona do seu Deck à sua mão, exceto por compra-lo: você pode Invoca-lo por Invocação-Especial.\r\nSe este card é Invocado por Invocação-Especial: você pode pagar metade do seu PV; destrói quantos outros monstros no campo possível, e se você fizer, cause dano ao seu oponente igual ao maior ATK no campo dentre os monstros com a face para cima destruído que seja dele, e se fizer, este card ganha aquela quantia de ATK.\r\nSe este card é destruído: você pode adicionar 1 \"Obrigação Final\" do seu Deck à mão.\r\nVocê só pode usar cada um dos efeitos de \"Gandora-X, o Dragão Furioso de Metal Negro\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Dragão/Trevas  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Corrente do Tempo",
+    "desc": "Destrói este card durante a 2ª Fase de Apoio do seu oponente após a ativação.\r\nAtive este card quando seu monstro é alvo de um ataque: nenhum monstro pode ser destruído por aquela batalha, também bana-os após o cálculo de dano até a 2ª Fase de Apoio do controlador dele.\r\nNegue os efeitos ativados dos monstros com o mesmo nome original do monstro que está atualmente banido pelo efeito deste card.\r\nDurante sua Fase de Compra, em vez de conduzir sua compra normal: você pode adicionar 1 monstro do seu Deck à sua mão.",
+    "overallString": "[Armadilha|Magia Contínuo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Devoção do Guerreiro",
+    "desc": "Envie 1 monstro Guerreiro da sua mão ou Deck ao Cemitério, então escolha 1 monstro com a face para cima que seu oponente controla; ele perde ATK igual ao ATK do monstro enviado.\r\nSe um ou mais monstros Guerreiro que você controla seriam destruído por batalha ou efeito, em vez disso você pode banir este card do seu Cemitério.\r\nVocê só pode usar cada efeito de \"Devoção do Guerreiro\" uma vez por turno.",
+    "overallString": "[Armadilha]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
     "name": "Trinitas Magistus",
     "desc": "2+ monstros Magos\r\nSe este card é Invocado por Invocação-Especial do seu Deck Adicional: você pode equipar 1 monstro \"Magistus\" ou Mago do seu Deck Adicional nele.\r\nVocê pode descartar 1 card; embaralhe todos os Monstros Fusão, Sinchro, Xyz e Link do campo do seu oponente e Cemitério no Deck Adicional.\r\nDurante a Fase Principal do seu oponente (Efeito Rápido): você pode adicionar 1 card \"Magistus\" do seu Cemitério ou banimento à sua mão.\r\nVocê só pode ativar 1 dos efeitos de \"Trinitas Magistus\" e somente uma vez por turno.",
     "overallString": "[Monstro|Efeito|Link] Mago/Luz  [LINK-3] 2500/-  [↑][↙][↘]",
