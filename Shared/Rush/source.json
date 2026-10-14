@@ -105,14 +105,14 @@
     120307059,
     120307060
   ],
-  "local_inputs_sha256": "cf1ef45575335f990cc50c121770bd73afe894e2b37da34cfbf0d9c50cbf83fd",
+  "local_inputs_sha256": "6740bbb45e52567532e3b9f14baf853184dfe210de7eb8ea3402be6ac966efd1",
   "patch_sha256": "7da28791383c033fa4b60d25562e8e5efe48b5085987adc5756f875b6f3d7c16",
   "pending_locales": {
     "DE": 61,
     "EN": 17,
     "ES": 4,
     "FR": 21,
-    "IT": 61,
+    "IT": 17,
     "JP": 17,
     "KR": 61,
     "PT": 61,
@@ -220,6 +220,6 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470"
   },
-  "translations_revision": "6b277cc6df9217280ee5311bcdb7e87a27d0a1b2",
+  "translations_revision": "28d0002691819ba02551e218d81fde0ea8262ac8",
   "version": 2
 }
