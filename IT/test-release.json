@@ -1,5 +1,11 @@
 [
   {
+    "name": "Castello del Vampiro",
+    "desc": "Quando questa carta viene attivata: Evoca Specialmente 1 mostro Zombie OSCURITÀ dal tuo Deck o Cimitero.\r\nQuando quel mostro lascia il Terreno, distruggi questa carta.\r\nQuel mostro è immune agli effetti attivati degli altri mostri non-OSCURITÀ.\r\nSe questa carta scoperta lascia il Terreno: distruggi quante più carte possibile che controlli e, se lo fai, subisci 400 danni per ogni carta distrutta.\r\nPuoi attivare solo 1 \"Castello del Vampiro\" per turno.",
+    "overallString": "[Magia|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
     "name": "Necromante della Magia del Drago",
     "desc": "2 Mostri con Effetto\r\nDurante la tua Main Phase: puoi rivelare 1 Mostro Fusione nel tuo Extra Deck, scegliere 1 mostro non-Fusione nel tuo Cimitero il cui nome è menzionato sul mostro rivelato e il nome di questa carta diventa quello di quel mostro (fino alla End Phase), poi puoi Evocare tramite Fusione il Mostro Fusione rivelato, bandendo i suoi materiali dalla tua mano, Terreno e/o Cimitero, inoltre per il resto di questo turno non puoi Evocare Specialmente dall'Extra Deck, eccetto Mostri Fusione.\r\nPuoi utilizzare questo effetto di \"Necromante della Magia del Drago\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Link] Drago/Vento  [LINK-2] 900/-  [↙][↘]",
