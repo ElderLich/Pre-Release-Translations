@@ -1,7 +1,7 @@
 {
   "language": "fr",
-  "candidates": 3,
-  "matched": 0,
+  "candidates": 7,
+  "matched": 4,
   "unmatched_ids": [
     100274001,
     100274002,
@@ -28,5 +28,22 @@
       "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
     }
   ],
-  "matches": {}
+  "matches": {
+    "100275002": {
+      "set_code": "MVB1-JP002",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17821&languages=fr"
+    },
+    "100275005": {
+      "set_code": "MVB1-JP005",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17822&languages=fr"
+    },
+    "100275008": {
+      "set_code": "MVB1-JP008",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17823&languages=fr"
+    },
+    "101307050": {
+      "set_code": "IMPH-JP050",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17824&languages=fr"
+    }
+  }
 }
