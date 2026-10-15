@@ -5,11 +5,101 @@
     "lang": "en",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261012_175201",
-    "rows_in_report": 0,
-    "unique_cn_strings": 0,
-    "total_cn_cells": 0
+    "timestamp": "20261015_190540",
+    "rows_in_report": 2,
+    "unique_cn_strings": 4,
+    "total_cn_cells": 4
   },
-  "unique_strings": [],
-  "cards": []
+  "unique_strings": [
+    {
+      "string": "代替抽卡并检索",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "怪兽回到场上",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "因「时空锁」被除外",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "恢复卡名",
+      "count": 1,
+      "is_new": true
+    }
+  ],
+  "cards": [
+    {
+      "id": 100275005,
+      "name": "Time Chain",
+      "desc": "Destroy this card during your opponent's 2 Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's 2 Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
+      "str1": "Activate",
+      "str2": "",
+      "str3": "代替抽卡并检索",
+      "str4": "怪兽回到场上",
+      "str5": "因「时空锁」被除外",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str3",
+          "value": "代替抽卡并检索",
+          "normalized": "代替抽卡并检索"
+        },
+        {
+          "col": "str4",
+          "value": "怪兽回到场上",
+          "normalized": "怪兽回到场上"
+        },
+        {
+          "col": "str5",
+          "value": "因「时空锁」被除外",
+          "normalized": "因{CARD}被除外"
+        }
+      ],
+      "desc_preview": "Destroy this card during your opponent's 2 Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's 2 Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand."
+    },
+    {
+      "id": 101307050,
+      "name": "Necromancer of Dragon Magic",
+      "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
+      "str1": "Activate",
+      "str2": "Fusion Summon?",
+      "str3": "恢复卡名",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str3",
+          "value": "恢复卡名",
+          "normalized": "恢复卡名"
+        }
+      ],
+      "desc_preview": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn."
+    }
+  ]
 }

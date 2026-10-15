@@ -1,29 +1,13 @@
 {
   "language": "en",
-  "candidates": 5,
-  "matched": 5,
+  "candidates": 1,
+  "matched": 1,
   "unmatched_ids": [],
   "unresolved": [],
   "matches": {
-    "100272026": {
-      "set_code": "RV02-JP026",
-      "source": "https://yugipedia.com/wiki/Marincess_Azuri"
-    },
-    "100272027": {
-      "set_code": "RV02-JP027",
-      "source": "https://yugipedia.com/wiki/Marincess_Ulpis"
-    },
-    "100272028": {
-      "set_code": "RV02-JP028",
-      "source": "https://yugipedia.com/wiki/Aqua_Leviathan_%40Marincess"
-    },
-    "100272030": {
-      "set_code": "RV02-JP030",
-      "source": "https://yugipedia.com/wiki/Marincess_Truth_Heart"
-    },
-    "100272031": {
-      "set_code": "RV02-JP031",
-      "source": "https://yugipedia.com/wiki/Marincess_Reef_Lagoon"
+    "101307070": {
+      "set_code": "IMPH-JP070",
+      "source": "https://yugipedia.com/wiki/Castle_of_Vampire"
     }
   }
 }
