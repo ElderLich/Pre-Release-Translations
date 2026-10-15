@@ -1,14 +1,14 @@
 {
   "language": "jp",
-  "matches": {
-    "120307014": {
-      "fields": [],
-      "set_code": "RD/LP01-JP014",
-      "source": "https://ocg-card.com/list_r/lp01/"
-    }
-  },
+  "matches": {},
   "requested_ids": [
     120307014
   ],
-  "unresolved": []
+  "unresolved": [
+    {
+      "id": 120307014,
+      "reason": "No complete localized card text at the verified set code (or source unavailable)",
+      "set_code": "RD/LP01-JP014"
+    }
+  ]
 }
