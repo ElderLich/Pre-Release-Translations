@@ -1,6 +1,127 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310013": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP013",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17787&languages=fr"
+    },
+    "120310014": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP014",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17788&languages=fr"
+    },
+    "120310015": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP015",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17789&languages=fr"
+    },
+    "120310016": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP016",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17790&languages=fr"
+    },
+    "120310017": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP017",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17791&languages=fr"
+    },
+    "120310018": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP018",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17792&languages=fr"
+    },
+    "120310019": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP019",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17793&languages=fr"
+    },
+    "120310052": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP052",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17794&languages=fr"
+    },
+    "120310062": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP062",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17795&languages=fr"
+    },
+    "120310063": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP063",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17796&languages=fr"
+    },
+    "120311041": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP041",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17814&languages=fr"
+    },
+    "120311042": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP042",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17815&languages=fr"
+    },
+    "120311044": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP044",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17816&languages=fr"
+    },
+    "120311047": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP047",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17817&languages=fr"
+    },
+    "120311062": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP062",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=12454&languages=fr"
+    }
+  },
   "requested_ids": [
     120310013,
     120310014,
@@ -18,176 +139,5 @@
     120311047,
     120311062
   ],
-  "unresolved": [
-    {
-      "id": 120310013,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP013",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Rappid"
-    },
-    {
-      "id": 120310014,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP014",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Amy"
-    },
-    {
-      "id": 120310015,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP015",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Beeko"
-    },
-    {
-      "id": 120310016,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP016",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Chreia"
-    },
-    {
-      "id": 120310017,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP017",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Fitz"
-    },
-    {
-      "id": 120310018,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP018",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Maqui"
-    },
-    {
-      "id": 120310019,
-      "missing_fields": [
-        "fr_condition",
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP019",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Gramma"
-    },
-    {
-      "id": 120310052,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP052",
-      "source": "https://yugipedia.com/wiki/Occult_Preservation_Agency_Mad_Rare"
-    },
-    {
-      "id": 120310062,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP062",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Disturb"
-    },
-    {
-      "id": 120310063,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP063",
-      "source": "https://yugipedia.com/wiki/Mad_Rare_Hack"
-    },
-    {
-      "id": 120311041,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/LP02-JP041",
-      "source": "https://yugipedia.com/wiki/Praime_Stock"
-    },
-    {
-      "id": 120311042,
-      "missing_fields": [
-        "fr_condition",
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/LP02-JP042",
-      "source": "https://yugipedia.com/wiki/Praime_Requiem"
-    },
-    {
-      "id": 120311044,
-      "missing_fields": [
-        "fr_materials",
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/LP02-JP044",
-      "source": "https://yugipedia.com/wiki/Transam_Praime_Master_Nova"
-    },
-    {
-      "id": 120311047,
-      "missing_fields": [
-        "fr_condition",
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/LP02-JP047",
-      "source": "https://yugipedia.com/wiki/Praime_Nova"
-    },
-    {
-      "id": 120311062,
-      "missing_fields": [
-        "fr_condition",
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/LP02-JP062",
-      "source": "https://yugipedia.com/wiki/Transam_Praime_Armor_Nova"
-    }
-  ]
+  "unresolved": []
 }
