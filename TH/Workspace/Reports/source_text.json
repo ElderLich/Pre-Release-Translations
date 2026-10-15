@@ -1,25 +1,8 @@
 {
   "language": "en",
-  "candidates": 4,
-  "matched": 4,
+  "candidates": 0,
+  "matched": 0,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {
-    "100274001": {
-      "set_code": "CH03-JPP01",
-      "source": "https://yugipedia.com/wiki/Trinitas_Magistus"
-    },
-    "100274002": {
-      "set_code": "CH03-JPP02",
-      "source": "https://yugipedia.com/wiki/Invoked_Magistus_Heruvim"
-    },
-    "100274004": {
-      "set_code": "CH03-JPP04",
-      "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
-    },
-    "101307070": {
-      "set_code": "IMPH-JP070",
-      "source": "https://yugipedia.com/wiki/Castle_of_Vampire"
-    }
-  }
+  "matches": {}
 }
