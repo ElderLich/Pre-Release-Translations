@@ -9,7 +9,7 @@ translation folder. It reads the fetched commit even if local repository changes
 prevent a fast-forward. **Fetch Rush updates** also fills missing EN/FR/JP fields
 from the web using source snapshots inside Pre-Release Translations and requires
 a clean `main` checkout. Use **Open Database in DataEditorX** to edit the local
-file, then copy or explicitly upload/push your locale's workspace. The
+file, then use **Upload workspace & push to GitHub** when your locale's translations are ready. The
 existing GitHub workflow obtains Rush sources, translations and shared artwork
 and builds all packages. Translators do not need local upstream repositories or
 the maintainer's paths.
@@ -28,7 +28,7 @@ Rush has its own packages and workspaces. The standard Super-Pre package flow re
 
 ## Maintainer all-locale builds
 
-Open any locale's `AutoPR.py` in `Super-Pre Translations`, then select **All locales**. The same window also keeps the standard MyCard, copy, upload/push
+Open any locale's `AutoPR.py` in `Super-Pre Translations`, then select **All locales**. The same window also keeps the standard MyCard, upload/push
 and workspace pull actions on its **Standard** tab.
 
 - **Fetch Updates & Build All Locales** fast-forwards the configured

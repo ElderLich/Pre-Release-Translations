@@ -10,15 +10,15 @@ building the `.ypk`, and updating `test-release.json` and version files.
 1. Open your local `AutoPR.py` helper. It opens the shared three-tab window:
    **Standard**, **Rush** and **All locales**.
 2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
-   translation and copy/upload workflow.
+   translation and upload/push workflow.
 3. **Rush** operates on your selected language. **Pull published** downloads the
    latest Pre-Release Translations workspace and merges it into your local
    `<LANG>/Rush/raw2/rush-pre-release.cdb`. **Fetch Rush updates** also checks
    web sources for missing English, French and Japanese text using the source
    identity snapshot bundled in this repo.
    Select **Open Database in DataEditorX** to edit that CDB.
-4. Copy Rush translations into the repo to review locally, or explicitly use
-   **Upload & Push** to commit that locale's workspace and start its cloud build.
+4. Review your local Rush translations, then use **Upload workspace & push to GitHub**
+   to commit that locale's workspace and start its cloud build.
 5. **All locales** shows published versions and translation/artwork gaps. Its
    source-fetch/build controls are for maintainers with the source repositories;
    ordinary translators do not need them.

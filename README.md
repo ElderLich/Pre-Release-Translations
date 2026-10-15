@@ -57,7 +57,7 @@ For Standard archetype and prompt strings, also edit `raw2/test-strings.conf` wh
 
 ### 03 · Review and publish
 
-Use **Copy workspace into repository** to review locally, or **Upload workspace & push to GitHub** when your translations are ready. You need repository write access to push. GitHub Actions builds the packages and metadata from your workspace.
+Review your local translations, then use **Upload workspace & push to GitHub** when they are ready. You need repository write access to push. GitHub Actions builds the packages and metadata from your workspace.
 
 > [!TIP]
 > Rush translators need Python, Git, this repository, and their language folder. The cloud build obtains the Rush source and locale databases; a separate `ygopro-rush-duel` or MDPro4_Data checkout is only needed for maintainer builds.
