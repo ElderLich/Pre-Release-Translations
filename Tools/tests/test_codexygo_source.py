@@ -40,6 +40,49 @@ class CodexTests(unittest.TestCase):
         other = record(); other['codexygoId'] = 13
         self.assertIsNone(self.fetch({'data': [record(), other]})[0])
 
+    def test_different_english_name_is_discovered_but_exact_slug_is_required(self):
+        for title, alias, search in (('Mad Rare Amy', 'Mad Rhea Amy', 'Amy'),
+                                     ('Praime Stock', 'Prime Stock', 'Stock')):
+            card = record(True)
+            card['yugipediaSlug'] = title.replace(' ', '_')
+            card['translations']['en']['name'] = alias
+            card['translations']['fr']['fullText'] = 'Piochez.'
+            unrelated = deepcopy(card)
+            unrelated['codexygoId'] = 13
+            unrelated['yugipediaSlug'] = 'Different_Card'
+            queries = []
+            def request(url):
+                query = parse_qs(urlparse(url).query)['search'][0]
+                queries.append(query)
+                return json.dumps({'data': [unrelated, card] if query == search else []})
+            result = codex.fetch_french(title, {}, True, request, lambda _: None)
+            self.assertIsNotNone(result, title)
+            self.assertEqual(parse_qs(urlparse(result.source).query)['codexygo_ids'], ['12'])
+            self.assertEqual(queries[0], title)
+            self.assertIn(search, queries)
+
+    def test_broader_search_still_rejects_ambiguity_on_later_pages(self):
+        first, second = record(), record()
+        second['codexygoId'] = 13
+        def request(url):
+            query = parse_qs(urlparse(url).query)
+            if query['search'] == ['Verified Card']:
+                return json.dumps({'data': []})
+            page = int(query['page'][0])
+            return json.dumps({'data': [first if page == 1 else second], 'pagination': {'totalPages': 2}})
+        self.assertIsNone(codex.fetch_french('Verified Card', {}, False, request, lambda _: None))
+
+    def test_overbroad_search_does_not_accept_a_partial_page_match(self):
+        queries = []
+        def request(url):
+            query = parse_qs(urlparse(url).query)['search'][0]
+            queries.append(query)
+            if query == 'Verified Card':
+                return json.dumps({'data': []})
+            return json.dumps({'data': [record()], 'pagination': {'totalPages': 11}})
+        self.assertIsNone(codex.fetch_french('Verified Card', {}, False, request, lambda _: None))
+        self.assertLessEqual(len(queries), 5)
+
     def test_pagination_does_not_hide_second_identity(self):
         first, second = record(), record(); second['codexygoId'] = 13
         def request(url):

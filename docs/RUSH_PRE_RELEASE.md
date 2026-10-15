@@ -156,8 +156,10 @@ adds card IDs beyond `RD Patch.cdb` or rewrites gameplay columns.
   French reads `fr_name`, `fr_text`, `fr_requirement`, `fr_materials` and
   `fr_condition`, not English fallbacks. If French fields are incomplete, the
   importer uses [CodexYGO's public API](https://codexygo.fr/api/card/v1/docs/?lang=en)
-  with `format=rush`. Both the verified Yugipedia identity and Rush flag must
-  match. French requirements, materials, continuous effects, choices and Maximum
+  with `format=rush`. When English names differ (such as Mad Rare/Mad Rhea or
+  Praime/Prime), bounded searches using words from the title find candidates.
+  Both the verified Yugipedia identity and Rush flag must still match.
+  French requirements, materials, continuous effects, choices and Maximum
   ATK are preserved; partial translations stay pending.
 - Korean is translator-managed. No Korean web text is fetched; existing Korean
   workspace translations and reviewed Korean locale seeds are preserved. New

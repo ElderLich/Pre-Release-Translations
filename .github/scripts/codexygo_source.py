@@ -67,28 +67,41 @@ def format_french(card: dict, title: str, params: dict, rush: bool):
 def fetch_french(title: str, params: dict, rush: bool, request, log):
     """Caller has already verified this Yugipedia page contains the printed code."""
     wanted = identity(title, rush)
-    query = {"search": re.sub(r"\s+\(Rush Duel\)$", "", title).replace("_", " "),
-             "search_type": "name", "format": "rush" if rush else "master", "languages": "en,fr",
+    name = re.sub(r"\s+\(Rush Duel\)$", "", title).replace("_", " ")
+    # CodexYGO can use a different English name while retaining the verified
+    # Yugipedia slug (e.g. Mad Rare / Mad Rhea, Praime / Prime). Broaden only
+    # discovery; every accepted result must still match that exact slug.
+    words = sorted({word for word in re.findall(r"[^\W_]+", name) if len(word) >= 3},
+                   key=lambda word: (-len(word), word.casefold()))[:4]
+    searches = list(dict.fromkeys([name, *words]))
+    query = {"search_type": "name", "format": "rush" if rush else "master", "languages": "en,fr",
              "page_size": 100, "include_images": "false", "include_meta_translations": "false", "include_errata": "false"}
     matches = {}
     try:
-        for page in range(1, 11):
-            query["page"] = page
-            response = json.loads(request(API + "?" + urllib.parse.urlencode(query)))
-            if not isinstance(response, dict):
-                raise ValueError("Unexpected CodexYGO API response")
-            result = response.get("result", response)
-            if not isinstance(result, dict) or not isinstance(result.get("data"), list):
-                raise ValueError("Unexpected CodexYGO API response")
-            for card in result["data"]:
-                if not isinstance(card, dict) or not isinstance(card.get("yugipediaSlug"), str) or not isinstance(card.get("codexygoId"), int):
-                    continue
-                if bool(card.get("rush", False)) == rush and identity(card.get("yugipediaSlug", ""), rush) == wanted:
-                    matches[card.get("codexygoId")] = card
-            pages = int(result.get("pagination", {}).get("totalPages", 1))
-            if pages > 10:
-                raise ValueError("CodexYGO search is too broad to verify safely")
-            if page >= pages:
+        for search in searches:
+            query["search"] = search
+            matches = {}
+            for page in range(1, 11):
+                query["page"] = page
+                response = json.loads(request(API + "?" + urllib.parse.urlencode(query)))
+                if not isinstance(response, dict):
+                    raise ValueError("Unexpected CodexYGO API response")
+                result = response.get("result", response)
+                if not isinstance(result, dict) or not isinstance(result.get("data"), list):
+                    raise ValueError("Unexpected CodexYGO API response")
+                pages = int(result.get("pagination", {}).get("totalPages", 1))
+                if pages > 10:
+                    log(f"[SourceText] CodexYGO search too broad for {title}: {search}; skipped")
+                    matches = {}
+                    break
+                for card in result["data"]:
+                    if not isinstance(card, dict) or not isinstance(card.get("yugipediaSlug"), str) or not isinstance(card.get("codexygoId"), int):
+                        continue
+                    if bool(card.get("rush", False)) == rush and identity(card.get("yugipediaSlug", ""), rush) == wanted:
+                        matches[card.get("codexygoId")] = card
+                if page >= pages:
+                    break
+            if matches:
                 break
         if len(matches) != 1:
             log(f"[SourceText] CodexYGO: {len(matches)} exact identities for {title}; skipped")
