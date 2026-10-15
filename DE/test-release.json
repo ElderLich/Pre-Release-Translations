@@ -1,5 +1,53 @@
 [
   {
+    "name": "Schloss des Vampirs",
+    "desc": "Wenn diese Karte aktiviert wird: Beschwöre 1 FINSTERNIS Zombie-Monster als Spezialbeschwörung von deinem Deck oder Friedhof. Wenn jenes Monster das Spielfeld verlässt, zerstöre diese Karte. Jenes Monster bleibt von den aktivierten Effekten anderer Monster unberührt, außer von denen von FINSTERNIS Monstern. Falls diese offene Karte das Spielfeld verlässt: Zerstöre so viele Karten, die du kontrollierst, wie möglich und falls du dies tust, erhältst du für jede zerstörte Karte 400 Schaden. Du kannst nur 1 „Schloss des Vampirs“ pro Spielzug aktivieren.",
+    "overallString": "[Zauber|Permanente]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
+    "name": "Totenbeschwörer der Drachenmagie",
+    "desc": "2 Effektmonster\nWährend deiner Main Phase: Du kannst 1 Fusionsmonster in deinem Extra Deck vorzeigen, 1 Monster in deinem Friedhof bestimmen, das kein Fusionsmonster ist und dessen Name auf dem vorgezeigten Monster erwähnt wird, und der Name dieser Karte wird bis zur End Phase zu dem Namen jenes Monsters, dann kannst du das vorgezeigte Fusionsmonster als Fusionsbeschwörung beschwören, indem du sein Material von deiner Hand, Spielfeldseite und/oder deinem Friedhof verbannst, zusätzlich kannst du für den Rest dieses Spielzugs keine Spezialbeschwörungen vom Extra Deck durchführen, außer von Fusionsmonstern. Du kannst diesen Effekt von „Totenbeschwörer der Drachenmagie“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt|Link] Drache/Wind  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X der tobende schwarze Metalldrache",
+    "desc": "Falls diese Karte deiner Hand vom Deck hinzugefügt wird, außer indem sie gezogen wird: Du kannst sie als Spezialbeschwörung beschwören. Falls diese Karte als Spezialbeschwörung beschworen wird: Du kannst die Hälfte deiner LP zahlen; zerstöre so viele andere Monster auf dem Spielfeld wie möglich und falls du dies tust, füge deinem Gegner Schaden in Höhe der höchsten ATK zu, die eines der zerstörten offenen Monster, die ihm gehören, auf dem Spielfeld hatte, und falls du dies tust, erhält diese Karte genauso viele ATK. Falls diese Karte zerstört wird: Du kannst deiner Hand 1 „Letztes Verbot“ von deinem Deck hinzufügen. Du kannst jeden Effekt von „Gandora-X der tobende schwarze Metalldrache“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Drache/Finsternis  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Zeitkette",
+    "desc": "Zerstöre diese Karte während der 2. Standby Phase deines Gegners nach ihrer Aktivierung. Aktiviere diese Karte, wenn dein Monster als Angriffsziel gewählt wird: Keines der kämpfenden Monster kann durch jenen Kampf zerstört werden, zusätzlich verbanne sie nach der Schadensberechnung bis zur jeweils 2. Standby Phase ihres Beherrschers. Annulliere die aktivierten Effekte von Monstern mit demselben Grund-Namen wie Monster, die derzeit durch den Effekt dieser Karte verbannt sind. Während deiner Draw Phase, anstatt dein normales Ziehen durchzuführen: Du kannst deiner Hand 1 Monster von deinem Deck hinzufügen.",
+    "overallString": "[Falle|Permanente]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Hingabe des Kriegers",
+    "desc": "Lege 1 Krieger-Monster von deiner Hand oder deinem Deck auf den Friedhof und wähle dann 1 offenes Monster, das dein Gegner kontrolliert; es verliert ATK in Höhe der ATK des auf den Friedhof gelegten Monsters. Falls ein oder mehr Krieger-Monster, die du kontrollierst, durch Kampf oder einen Karteneffekt zerstört würden, kannst du stattdessen diese Karte von deinem Friedhof verbannen. Du kannst jeden Effekt von „Hingabe des Kriegers“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Falle]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
+    "name": "Trinitas Magistus",
+    "desc": "2+ Hexer-Monster\r\nFalls diese Karte als Spezialbeschwörung vom Extra Deck beschworen wird: Du kannst diese Karte mit 1 „Magistus“- oder Hexer-Monster von deinem Extra Deck als Ausrüstungszauber ausrüsten. Du kannst 1 Karte abwerfen; lege alle Fusions-, Synchro-, Xyz- und Linkmonster von der Spielfeldseite und dem Friedhof deines Gegners ins Extra Deck zurück. Während der Main Phase deines Gegners (Schnelleffekt): Du kannst deiner Hand 1 „Magistus“-Karte von deinem Friedhof oder deinen verbannten Karten hinzufügen. Du kannst nur 1 Effekt von „Trinitas Magistus“ pro Spielzug verwenden und in jenem Spielzug nur einmal.",
+    "overallString": "[Monster|Effekt|Link] Hexer/Licht  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "Beschworener Magistus Heruvim",
+    "desc": "1 „Magistus“-Monster + 1 Hexer-Monster\r\nFalls diese Karte als Spezialbeschwörung vom Extra Deck beschworen wird: Du kannst 1 Karte wählen, die dein Gegner kontrolliert; zerstöre sie. Wenn dein Gegner einen Monstereffekt aktiviert oder ein Monster deines Gegners einen Angriff deklariert, außer während des Spielzugs, in dem diese Karte als Spezialbeschwörung beschworen wurde (Schnelleffekt): Du kannst diese Karte verbannen; beschwöre 1 „Magistus“- oder „Beschworen“-Monster als Spezialbeschwörung von deinem Extra Deck, außer „Beschworener Magistus Heruvim“. Du kannst jeden Effekt von „Beschworener Magistus Heruvim“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt|Fusion] Hexer/Licht  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus-Hexwerkerin Aruru",
+    "desc": "Falls sich diese Karte in deiner Hand befindet und sich ein „Magistus“-Monster auf dem Spielfeld befindet: Du kannst diese Karte als Spezialbeschwörung beschwören. Du kannst 1 offenes Monster wählen, das dein Gegner kontrolliert; annulliere bis zum Ende dieses Spielzugs seine Effekte. Falls diese Karte auf den Friedhof gelegt wird: Du kannst sie verbannen und dann 1 „Magistus“- oder „Hexwerker“-Monster in deinem Friedhof wählen; beschwöre es als Spezialbeschwörung. Du kannst jeden Effekt von „Magistus-Hexwerkerin Aruru“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Hexer/Licht  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
     "name": "Marinzessin Azuri",
     "desc": "Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 WASSER Cyberse-Monster mit 1000 oder weniger ATK als Spezialbeschwörung von deinem Deck beschwören, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer WASSER Monstern. Falls du ein oder mehr „Marinzessin“-Linkmonster als Linkbeschwörung beschwörst, solange sich diese Karte in deinem Friedhof befindet: Du kannst diese Karte verbannen; rüste 1 jener Linkmonster mit 1 „Marinzessin“-Monster von deinem Friedhof als Ausrüstungszauber aus, der ihm 600 ATK gibt. Du kannst jeden Effekt von „Marinzessin Azuri“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt] Cyberse/Wasser  [★3] 1600/1000",
