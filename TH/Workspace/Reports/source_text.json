@@ -1,49 +1,25 @@
 {
   "language": "en",
-  "candidates": 7,
+  "candidates": 4,
   "matched": 4,
-  "unmatched_ids": [
-    100274001,
-    100274002,
-    100274004
-  ],
-  "unresolved": [
-    {
-      "id": 100274001,
-      "name": "伟大的三贤者",
-      "set_code": "CH03-JP001",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100274002,
-      "name": "召唤兽 大贤者智天使",
-      "set_code": "CH03-JP002",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100274004,
-      "name": "结晶之魔女神 阿鲁鲁",
-      "set_code": "CH03-JP004",
-      "reason": "Printed set code does not match source page",
-      "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
-    }
-  ],
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
-    "100275002": {
-      "set_code": "MVB1-JP002",
-      "source": "https://yugipedia.com/wiki/Gandora-X_the_Blackmetal_Rampaging_Dragon"
+    "100274001": {
+      "set_code": "CH03-JPP01",
+      "source": "https://yugipedia.com/wiki/Trinitas_Magistus"
     },
-    "100275005": {
-      "set_code": "MVB1-JP005",
-      "source": "https://yugipedia.com/wiki/Time_Chain"
+    "100274002": {
+      "set_code": "CH03-JPP02",
+      "source": "https://yugipedia.com/wiki/Invoked_Magistus_Heruvim"
     },
-    "100275008": {
-      "set_code": "MVB1-JP008",
-      "source": "https://yugipedia.com/wiki/Warrior%27s_Devotion"
+    "100274004": {
+      "set_code": "CH03-JPP04",
+      "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
     },
-    "101307050": {
-      "set_code": "IMPH-JP050",
-      "source": "https://yugipedia.com/wiki/Necromancer_of_Dragon_Magic"
+    "101307070": {
+      "set_code": "IMPH-JP070",
+      "source": "https://yugipedia.com/wiki/Castle_of_Vampire"
     }
   }
 }
