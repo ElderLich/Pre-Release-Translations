@@ -5,7 +5,7 @@
     "lang": "fr",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261015_132340",
+    "timestamp": "20261015_190632",
     "rows_in_report": 2,
     "unique_cn_strings": 4,
     "total_cn_cells": 4
@@ -35,8 +35,8 @@
   "cards": [
     {
       "id": 100275005,
-      "name": "时空锁",
-      "desc": "这张卡发动后，第2次的对方准备阶段破坏。\r\n①：自己怪兽被选择作为攻击对象时才能把这张卡发动。双方怪兽不会被那次战斗破坏，伤害计算后直到各自自身的第2次的准备阶段除外。\r\n②：这张卡的①的效果除外中的怪兽以及和那些怪兽原本卡名相同的怪兽发动的效果无效化。\r\n③：自己抽卡阶段作为通常抽卡的代替才能发动。从卡组把1只怪兽加入手卡。",
+      "name": "Chaîne du Temps",
+      "desc": "Détruisez cette carte durant la 2e Standby Phase de votre adversaire après activation. Activez cette carte lorsque votre monstre est ciblé par une attaque : aucun des monstres combattants ne peut être détruit par ce combat, et aussi, bannissez-les après le calcul des dommages jusqu'à la 2e Standby Phase de leur contrôleur. Annulez les effets activés des monstres du même nom d'origine que les monstres qui sont actuellement bannis par l'effet de cette carte. Durant votre Draw Phase, au lieu de mener votre pioche normale : vous pouvez ajouter 1 monstre depuis votre Deck à votre main.",
       "str1": "Activer",
       "str2": "",
       "str3": "代替抽卡并检索",
@@ -70,12 +70,12 @@
           "normalized": "因{CARD}被除外"
         }
       ],
-      "desc_preview": "这张卡发动后，第2次的对方准备阶段破坏。\r\n①：自己怪兽被选择作为攻击对象时才能把这张卡发动。双方怪兽不会被那次战斗破坏，伤害计算后直到各自自身的第2次的准备阶段除外。\r\n②：这张卡的①的效果除外中的怪兽以及和那些怪兽原本卡名相同的怪兽发动的效果无效化。\r\n③：自己抽卡阶段作为通常抽卡的代替才能发动。从卡组把1只怪兽加入手卡。"
+      "desc_preview": "Détruisez cette carte durant la 2e Standby Phase de votre adversaire après activation. Activez cette carte lorsque votre monstre est ciblé par une attaque : aucun des monstres combattants ne peut être détruit par ce combat, et aussi, bannissez-les après le calcul des dommages jusqu'à la 2e Standby Phase de leur contrôleur. Annulez les effets activés des monstres du même nom d'origine que les monstres qui sont actuellement bannis par l'effet de cette carte. Durant votre Draw Phase, au lieu de mener votre pioche normale : vous pouvez ajouter 1 monstre depuis votre Deck à votre main."
     },
     {
       "id": 101307050,
-      "name": "龙魔导降灵师",
-      "desc": "效果怪兽2只\r\n这个卡名的效果1回合只能使用1次。\r\n①：自己主要阶段才能发动。从额外卡组把1只融合怪兽给对方观看。从自己墓地选除融合怪兽外的，那只怪兽有卡名记述的1只怪兽，这张卡直到结束阶段当作和那只怪兽同名卡使用。那之后，可以把自己手卡·场上·墓地的怪兽作为融合素材除外，把观看的融合怪兽融合召唤。这个回合，自己不是融合怪兽不能从额外卡组特殊召唤。",
+      "name": "Nécromancien de la Magie du Dragon",
+      "desc": "2 Monstres à Effet\nDurant votre Main Phase : vous pouvez révéler 1 Monstre Fusion dans votre Extra Deck, choisissez 1 Monstre non-Fusion dans votre Cimetière dont le nom est mentionné sur le monstre révélé, et le nom de cette carte devient celui du monstre (jusqu'à la End Phase), puis vous pouvez Invoquer par Fusion le Monstre Fusion révélé, en bannissant ses Matériels depuis votre main, Terrain et/ou Cimetière, et aussi, vous ne pouvez pas Invoquer Spécialement (Monstres Fusion exclus) depuis l'Extra Deck le reste de ce tour. Vous ne pouvez utiliser cet effet de \"Nécromancien de la Magie du Dragon\" qu'une fois par tour.",
       "str1": "Activer",
       "str2": "Invocation Fusion ?",
       "str3": "恢复卡名",
@@ -99,7 +99,7 @@
           "normalized": "恢复卡名"
         }
       ],
-      "desc_preview": "效果怪兽2只\r\n这个卡名的效果1回合只能使用1次。\r\n①：自己主要阶段才能发动。从额外卡组把1只融合怪兽给对方观看。从自己墓地选除融合怪兽外的，那只怪兽有卡名记述的1只怪兽，这张卡直到结束阶段当作和那只怪兽同名卡使用。那之后，可以把自己手卡·场上·墓地的怪兽作为融合素材除外，把观看的融合怪兽融合召唤。这个回合，自己不是融合怪兽不能从额外卡组特殊召唤。"
+      "desc_preview": "2 Monstres à Effet\nDurant votre Main Phase : vous pouvez révéler 1 Monstre Fusion dans votre Extra Deck, choisissez 1 Monstre non-Fusion dans votre Cimetière dont le nom est mentionné sur le monstre révélé, et le nom de cette carte devient celui du monstre (jusqu'à la End Phase), puis vous pouvez Invoquer par Fusion le Monstre Fusion révélé, en bannissant ses Matériels depuis votre main, Terrain et/ou Cimetière, et aussi, vous ne pouvez pas Invoquer Spécialement (Monstres Fusion exclus) depuis l'Extra Deck le reste de ce tour. Vous ne pouvez utiliser cet effet de \"Nécromancien de la Magie du Dragon\" qu'une fois par tour."
     }
   ]
 }
