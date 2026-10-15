@@ -1,5 +1,11 @@
 [
   {
+    "name": "Castillo del Vampiro",
+    "desc": "Cuando esta carta se resuelve, Invoca de Modo Especial 1 monstruo Zombi de OSCURIDAD desde tu Deck o Cementerio. Cuando este deje el Campo, destruye esta carta. \r\nEl monstruo Invocado de Modo Especial por el 1er efecto de \"Castillo del Vampiro\" no es afectado por efectos activados de otros monstruos que no sean de OSCURIDAD. \r\nSi esta carta boca arriba deja el Campo: destruye tantas cartas que controles como sea posible y, si lo haces, recibe 400 puntos de daño por cada carta destruida por este efecto. \r\nSólo puedes activar 1 \"Castillo del Vampiro\" por turno.",
+    "overallString": "[Mágica|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
     "name": "Nigromante de la Magia del Dragón",
     "desc": "2 Monstruos de Efecto\t\r\nDurante tu Main Phase: puedes revelar 1 Monstruo de Fusión desde el Deck Extra; el nombre de esta carta se trata como el mismo nombre que 1 monstruo en tu Cementerio cuyo nombre sea mencionado como material, excepto un Monstruo de Fusión. \r\nDespués, puedes Invocar por Fusión el Monstruo de Fusión revelado desterrando monstruos de tu mano, Campo o Cementerio como material, pero no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto Monstruos de Fusión. \r\nSólo puedes usar el efecto de \"Nigromante de la Magia del Dragón\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Enlace] Dragón/VIENTO  [LINK-2] 900/-  [↙][↘]",
