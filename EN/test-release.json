@@ -1,5 +1,11 @@
 [
   {
+    "name": "Castle of Vampire",
+    "desc": "When this card is activated: Special Summon 1 DARK Zombie monster from your Deck or GY. When that monster leaves the field, destroy this card. That monster is unaffected by the activated effects of other non-DARK monsters. If this face-up card leaves the field: Destroy as many cards you control as possible, and if you do, take 400 damage for each card destroyed. You can only activate 1 \"Castle of Vampire\" per turn.",
+    "overallString": "[Spell|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
     "name": "Necromancer of Dragon Magic",
     "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
     "overallString": "[Monster|Effect|Link] Dragon/Wind  [LINK-2] 900/-  [↙][↘]",
