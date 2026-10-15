@@ -1,24 +1,9 @@
 {
   "language": "jp",
-  "candidates": 21,
-  "matched": 6,
+  "candidates": 2,
+  "matched": 2,
   "unmatched_ids": [
-    100270002,
-    101306082,
-    101306083,
-    101306084,
-    101306085,
-    101306086,
-    101306087,
-    101306088,
-    101306089,
-    101306090,
-    101306091,
-    101306092,
-    101306093,
-    101306094,
-    101306095,
-    101306096
+    100270002
   ],
   "unresolved": [
     {
@@ -26,118 +11,12 @@
       "name": "邪心教典",
       "set_code": null,
       "reason": "No printed set code mapping"
-    },
-    {
-      "id": 101306082,
-      "name": "静寂猛虎",
-      "set_code": "BETB-JP082",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306083,
-      "name": "听天投命",
-      "set_code": "BETB-JP083",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306084,
-      "name": "九色鹿 九面妖",
-      "set_code": "BETB-JP084",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306085,
-      "name": "贪玩的呱呱公主",
-      "set_code": "BETB-JP085",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306086,
-      "name": "魔道乌贼 大王",
-      "set_code": "BETB-JP086",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306087,
-      "name": "飞临的蓝锯手",
-      "set_code": "BETB-JP087",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306088,
-      "name": "红砷镍半身矿",
-      "set_code": "BETB-JP088",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306089,
-      "name": "混沌诞生主教",
-      "set_code": "BETB-JP089",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306090,
-      "name": "城主之具象天使",
-      "set_code": "BETB-JP090",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306091,
-      "name": "具象天使的元帅",
-      "set_code": "BETB-JP091",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306092,
-      "name": "具象天使的战略分值",
-      "set_code": "BETB-JP092",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306093,
-      "name": "具象天使的精妙一手",
-      "set_code": "BETB-JP093",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306094,
-      "name": "具象天使的对峙格位",
-      "set_code": "BETB-JP094",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306095,
-      "name": "具象天使的终局之问",
-      "set_code": "BETB-JP095",
-      "reason": "No verified source match"
-    },
-    {
-      "id": 101306096,
-      "name": "具象天使之裁",
-      "set_code": "BETB-JP096",
-      "reason": "No verified source match"
     }
   ],
   "matches": {
-    "100272026": {
-      "set_code": "RV02-JP026",
-      "source": "https://ocg-card.com/list/rv02/"
-    },
-    "100272027": {
-      "set_code": "RV02-JP027",
-      "source": "https://ocg-card.com/list/rv02/"
-    },
-    "100272028": {
-      "set_code": "RV02-JP028",
-      "source": "https://ocg-card.com/list/rv02/"
-    },
-    "100272030": {
-      "set_code": "RV02-JP030",
-      "source": "https://ocg-card.com/list/rv02/"
-    },
-    "100272031": {
-      "set_code": "RV02-JP031",
-      "source": "https://ocg-card.com/list/rv02/"
+    "101307070": {
+      "set_code": "IMPH-JP070",
+      "source": "https://ocg-card.com/list/imph/"
     },
     "101307071": {
       "set_code": "IMPH-JP071",
