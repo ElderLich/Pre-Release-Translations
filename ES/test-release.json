@@ -1,7 +1,31 @@
 [
   {
+    "name": "Nigromante de la Magia del Dragón",
+    "desc": "2 Monstruos de Efecto\t\r\nDurante tu Main Phase: puedes revelar 1 Monstruo de Fusión desde el Deck Extra; el nombre de esta carta se trata como el mismo nombre que 1 monstruo en tu Cementerio cuyo nombre sea mencionado como material, excepto un Monstruo de Fusión. \r\nDespués, puedes Invocar por Fusión el Monstruo de Fusión revelado desterrando monstruos de tu mano, Campo o Cementerio como material, pero no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto Monstruos de Fusión. \r\nSólo puedes usar el efecto de \"Nigromante de la Magia del Dragón\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Enlace] Dragón/VIENTO  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X el Dragón Arrasador de Metal Negro",
+    "desc": "Si esta carta es añadida del Deck a la mano, excepto robándola: puedes Invocarla de Modo Especial. \r\nSi esta carta es Invocada de Modo Especial: puedes pagar la mitad de tus LP; destruye tantos otros monstruos en el Campo como sea posible y, si lo haces, inflige daño a tu adversario igual al ATK más alto que tenían en el Campo los monstruos boca arriba destruidos que él posee y, si haces eso, esta carta gana ese ATK. \r\nSi esta carta es destruida: puedes añadir a tu mano 1 \"Geas Final\" desde tu Deck.\r\nSólo puedes usar los efectos de \"Gandora-X el Dragón Arrasador de Metal Negro\" una vez por turno.\r\n",
+    "overallString": "[Monstruo|Efecto] Dragón/OSCURIDAD  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Cadena de Tiempo",
+    "desc": "Activa esta carta cuando tu monstruo es seleccionado para un ataque: ningún monstruo en batalla puede ser destruido en esa batalla, y además destiérralos después del cálculo de daño hasta la 2ª Standby Phase de quien los controla después de la resolución. \r\nNiega los efectos activados de monstruos con el mismo nombre original que los monstruos que están actualmente desterrados por estr efecto. \r\nDurante tu Draw Phase, en lugar de realizar tu robo normal: puedes añadir a tu mano 1 monstruo desde tu Deck. \r\nDestruye esta carta durante la 2ª Standby Phase de tu adversario después de su activación.\r\n",
+    "overallString": "[Trampa|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Devoción del Guerrero",
+    "desc": "Manda al Cementerio 1 monstruo Guerrero desde tu mano o Deck, y después selecciona 1 monstruo boca arriba que controle tu adversario; este pierde ATK igual al del monstruo mandado. \r\nSi uno o más monstruos Guerrero que controlas fueran a ser destruidos en batalla o por efecto de carta, puedes desterrar esta carta en tu Cementerio en su lugar. \r\nSólo puedes usar los efectos de \"Devoción del Guerrero\" una vez por turno.",
+    "overallString": "[Trampa]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
     "name": "Trinitas Magistus",
-    "desc": "2+ monstruos Lanzador de Conjuros\n\n\t\r\nSi esta carta es Invocada de Modo Especial desde el Deck Extra: puedes equipar 1 monstruo \"Magistus\" o Lanzador de Conjuros desde tu Deck Extra a ella.\n \r\nPuedes descartar 1 carta; baraja al Deck Extra todos los Monstruos de Fusión, Sincronía, Xyz y Enlace del Campo y Cementerio de tu adversario. \r\n(Efecto Rápido): Durante la Main Phase de tu adversario: puedes añadir a tu mano 1 carta \"Magistus\" desde tu Cementerio o destierro. \r\nSólo puedes usar 1 de los efectos de \"Trinitas Magistus\" por turno, y sólo una vez ese turno.\n",
+    "desc": "2+ monstruos Lanzador de Conjuros\t\r\nSi esta carta es Invocada de Modo Especial desde el Deck Extra: puedes equipar 1 monstruo \"Magistus\" o Lanzador de Conjuros desde tu Deck Extra a ella. \r\nPuedes descartar 1 carta; baraja al Deck Extra todos los Monstruos de Fusión, Sincronía, Xyz y Enlace del Campo y Cementerio de tu adversario. \r\n(Efecto Rápido): Durante la Main Phase de tu adversario: puedes añadir a tu mano 1 carta \"Magistus\" desde tu Cementerio o destierro. \r\nSólo puedes usar 1 de los efectos de \"Trinitas Magistus\" por turno, y sólo una vez ese turno.\r\n",
     "overallString": "[Monstruo|Efecto|Enlace] Lanzador de Conjuros/LUZ  [LINK-3] 2500/-  [↑][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
   },
@@ -19,31 +43,31 @@
   },
   {
     "name": "Marincesa Azury",
-    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo Ciberso de AGUA con 1000 ATK o menos desde tu Deck, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de AGUA.\n \r\nSi Invocas por Enlace un Monstruo de Enlace \"Marincesa\" mientras esta carta está en tu Cementerio: puedes desterrar esta carta; equipa 1 monstruo \"Marincesa\" de tu Cementerio a ese Monstruo de Enlace como una Mágica de Equipo que le da 600 ATK. \r\nSólo puedes usar los efectos de \"Marincesa Azury\" una vez por turno cada uno.",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo Ciberso de AGUA con 1000 ATK o menos desde tu Deck, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de AGUA. \r\nSi Invocas por Enlace un Monstruo de Enlace \"Marincesa\" mientras esta carta está en tu Cementerio: puedes desterrar esta carta; equipa 1 monstruo \"Marincesa\" de tu Cementerio a ese Monstruo de Enlace como una Mágica de Equipo que le da 600 ATK. \r\nSólo puedes usar los efectos de \"Marincesa Azury\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★3] 1600/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
   },
   {
     "name": "Marincesa Ulpis",
-    "desc": "Si esta carta está en tu mano: puedes descartar otra carta \"Marincesa\" o un monstruo de AGUA; Invoca esta carta de Modo Especial.\n \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa \"Marincesa\" desde tu Deck.\n \r\nPuedes mandar al Cementerio 1 Carta de Monstruo de Enlace \"Marincesa\" que controles; roba 1 carta. \r\nSólo puedes usar los efectos de \"Marincesa Ulpis\" una vez por turno cada uno.",
+    "desc": "Si esta carta está en tu mano: puedes descartar otra carta \"Marincesa\" o un monstruo de AGUA; Invoca esta carta de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa \"Marincesa\" desde tu Deck. \r\nPuedes mandar al Cementerio 1 Carta de Monstruo de Enlace \"Marincesa\" que controles; roba 1 carta. \r\nSólo puedes usar los efectos de \"Marincesa Ulpis\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★5] 600/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
   },
   {
     "name": "Aqua Leviatán @Marincesa",
-    "desc": "Puedes Invocar esta carta por Ritual con una carta \"Marincesa\".\n \r\nLos monstruos que controle tu adversario pierden 1000 ATK. \r\nSólo puedes usar los siguientes efectos de \"Aqua Leviatán @Marincesa\" una vez por turno cada uno. \t\nPuedes revelar esta carta en tu mano; añade a tu mano 1 carta \"Marincesa\" desde tu Deck, excepto un Monstruo de Ritual, y después descarta 1 carta.\n \r\nSi esta carta es Invocada por Ritual: puedes devolver a la mano cartas que controle tu adversario hasta el número de Cartas de Monstruo \"Marincesa\" que controles.\n",
+    "desc": "Puedes Invocar esta carta por Ritual con una carta \"Marincesa\". \r\nLos monstruos que controle tu adversario pierden 1000 ATK. \r\nSólo puedes usar los siguientes efectos de \"Aqua Leviatán @Marincesa\" una vez por turno cada uno. \t\r\nPuedes revelar esta carta en tu mano; añade a tu mano 1 carta \"Marincesa\" desde tu Deck, excepto un Monstruo de Ritual, y después descarta 1 carta. \r\nSi esta carta es Invocada por Ritual: puedes devolver a la mano cartas que controle tu adversario hasta el número de Cartas de Monstruo \"Marincesa\" que controles.\r\n",
     "overallString": "[Monstruo|Efecto|Ritual] Ciberso/AGUA  [★7] 2300/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
   },
   {
     "name": "Corazón Verdadero Marincesa",
-    "desc": "2+ monstruos \"Marincesa\"\t\r\nSi esta carta es Invocada por Enlace usando un Monstruo de Enlace con 0 ATK original: puedes Invocar de Modo Especial 1 monstruo \"Marincesa\" Link-3 o menor desde tu Deck Extra.\n \r\nSólo puedes usar este efecto de \"Corazón Verdadero Marincesa\" una vez por turno.\n \r\nPuedes desterrar 1 Monstruo de Enlace de tu Campo o Cementerio; destruye 1 carta que controle tu adversario, y además por el resto de este turno, no puedes desterrar monstruos con el mismo Rating de Enlace para activar este efecto de \"Corazón Verdadero Marincesa\".",
+    "desc": "2+ monstruos \"Marincesa\"\t\r\nSi esta carta es Invocada por Enlace usando un Monstruo de Enlace con 0 ATK original: puedes Invocar de Modo Especial 1 monstruo \"Marincesa\" Link-3 o menor desde tu Deck Extra. \r\nSólo puedes usar este efecto de \"Corazón Verdadero Marincesa\" una vez por turno. \r\nPuedes desterrar 1 Monstruo de Enlace de tu Campo o Cementerio; destruye 1 carta que controle tu adversario, y además por el resto de este turno, no puedes desterrar monstruos con el mismo Rating de Enlace para activar este efecto de \"Corazón Verdadero Marincesa\".",
     "overallString": "[Monstruo|Efecto|Enlace] Ciberso/AGUA  [LINK-4] 2800/-  [↑][→][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
   },
   {
     "name": "Laguna de Arrecife Marincesa",
-    "desc": "Cuando esta carta se resuelve, puedes añadir a tu mano 1 monstruo Ciberso de AGUA desde tu Deck.\n \r\nUna vez por turno, durante la End Phase de tu adversario: puedes barajar al Deck hasta 3 monstruos de AGUA desde tu Cementerio y/o destierro.\n \r\nPuedes mandar esta carta boca arriba al Cementerio; Invoca por Ritual 1 Monstruo de Ritual Ciberso de AGUA desde tu mano, desterrando monstruos de AGUA de tu Cementerio cuyos Niveles totales sean iguales o superen el Nivel del Monstruo de Ritual. \r\nSólo puedes activar 1 \"Laguna de Arrecife Marincesa\" por turno.",
+    "desc": "Cuando esta carta se resuelve, puedes añadir a tu mano 1 monstruo Ciberso de AGUA desde tu Deck. \r\nUna vez por turno, durante la End Phase de tu adversario: puedes barajar al Deck hasta 3 monstruos de AGUA desde tu Cementerio y/o destierro. \r\nPuedes mandar esta carta boca arriba al Cementerio; Invoca por Ritual 1 Monstruo de Ritual Ciberso de AGUA desde tu mano, desterrando monstruos de AGUA de tu Cementerio cuyos Niveles totales sean iguales o superen el Nivel del Monstruo de Ritual. \r\nSólo puedes activar 1 \"Laguna de Arrecife Marincesa\" por turno.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
   },

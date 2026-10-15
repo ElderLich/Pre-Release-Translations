@@ -68,7 +68,22 @@
     120311061,
     120311062
   ],
-  "pending_translations": [],
+  "pending_translations": [
+    {
+      "fields": [
+        "source_changed"
+      ],
+      "id": 120310014,
+      "name": "疯狂犯罪者·松鼠女"
+    },
+    {
+      "fields": [
+        "source_changed"
+      ],
+      "id": 120310015,
+      "name": "疯狂犯罪者·羊驼女"
+    }
+  ],
   "published_source_fields": {
     "120307001": {
       "desc": "90169974eacbf814091c72b222272b290364a6fbc9437dc49d9adcfba3339026",

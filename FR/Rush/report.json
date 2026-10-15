@@ -218,52 +218,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311031,
-      "name": "元素英雄 电流翼侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311032,
-      "name": "元素英雄 爆热翼侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311033,
-      "name": "元素英雄 火焰翼侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311034,
-      "name": "元素英雄 雷霆巨人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311035,
-      "name": "元素英雄 荒野翼侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120311036,
-      "name": "元素英雄 暴风侠"
+      "name": "Tempête, HÉROS Élémentaire"
     },
     {
       "fields": [
@@ -299,110 +257,6 @@
       ],
       "id": 120311047,
       "name": "高天新星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311048,
-      "name": "风彩之预言乐句盗贼"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311049,
-      "name": "极奏之小提琴马赫毗奥"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311050,
-      "name": "风碎之消物哨管海盗"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311051,
-      "name": "斩奏之琴拨罪犯"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311052,
-      "name": "斗奏之班卓琴盗贼"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311053,
-      "name": "悠悠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311054,
-      "name": "火星"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311055,
-      "name": "蛛穴丝网"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311056,
-      "name": "大邪神 雷瑟夫"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311057,
-      "name": "元素英雄 羽翼侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311058,
-      "name": "元素英雄 爆热女郎"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311059,
-      "name": "元素英雄 电光侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311061,
-      "name": "穿越侍·线性海牛侍"
     },
     {
       "fields": [
@@ -1667,29 +1521,29 @@
     "120311027": "4f8e7283bed3a472aac91e0064fef57a9917cb6c53ed713ae38268b1e914cdfd",
     "120311029": "8fe1bd1a4566fc7b850026bc7ba66c775ed5e8695d6b38685d0e206d80ddbd37",
     "120311030": "e1fa4a2de66a1ec78a088e026e85a1d45a0381754d2fd8a099c7bf7484e15561",
-    "120311031": "b26b9aff9ab4913ffa9fd11ee6f53e20fe9d1b007854065ba030f0f73b12273e",
-    "120311032": "c081623fc751be73e9af1843f02c8c5f5bc47513aa5d39f473f0c1c557726d88",
-    "120311033": "ba200044cf715563c00e86a0484680d6faaaeb66177638539fabe5c0c93d7247",
-    "120311034": "45dc697009bfdd99f1a31658192223d861bd4c24a3b60d9fa7251bc1f5711cac",
-    "120311035": "89f55dc75d4a0b3284cd2c300273883ace1dce140cb1d75416cd0018484a9892",
-    "120311036": "71d93f8667ded0ae9abc430117e6770c66236bcc216331bcf61928efac332f1a",
+    "120311031": "f0369cfaaabd962bb24e53def3db7f5b553c52c0f565f368e3cf69ca3973e181",
+    "120311032": "1c971e93e15dc24ea222ed2a2ba9bec28f3b780d5542c8e35f73b7de406c12d6",
+    "120311033": "f1dd018fa483c01dc930e47d7bc604075f1c70378c5cd46abbc798ed7f645cb7",
+    "120311034": "c9a64fb03509ace6d708c2c4b1c47aac89d34151e0c45d65aa3eda21f987b2a1",
+    "120311035": "bddb45f5a83aeeac4fae6ace3f5960bdb87a3e9b641d27b71370330b7a3d33cd",
+    "120311036": "d6395fb844768431e33f2f6a577b08141fe0bc119d825f276181fa4df0c06ee0",
     "120311041": "414e779a57d357261697d4b84281ad878472c5dcd0512b8fd0bfebae72dbfa99",
     "120311042": "1820ab3b5299efbf5487e0f1fc4b02839b3aad5fee5cf2073d914e85f2fb3fe8",
     "120311044": "c7d0634ca41ca2945f8795c0f5d62428dd73a33225762bf50ae11b1e0f20ed33",
     "120311047": "1c4220c9e458e99c0ee55b85b8e8587639b745f5d8039cd3573203558f2ccb1e",
-    "120311048": "93ba916b62a694d1238e1a7f0e0f6b3a67eaccaabaaf6d6f34f0dbd1a740e67f",
-    "120311049": "ccca9369f9191862d0e3b4094a86d30b50279b222e5764a03ff8cac01c0c3342",
-    "120311050": "686cb05976efbffb4ca011f317a90aa824fe591f14cee6c98c9113d339ce2fce",
-    "120311051": "ca2e6cb3d6335d049ea947c3188c29238c966085330b30627f8a5ed6d342ff2c",
-    "120311052": "7f535ac8d64adeccbe27c19794d1f515c64f626219a160fdd48d383ec846d7e0",
-    "120311053": "a7c7a40fa844232858841463f27ce814b94b1acc76e372a0d143f60f90ea6ae0",
-    "120311054": "2ed3b8c767e0518208591bcc675860ec08972106c7eff36d3008c59b2e4642d5",
-    "120311055": "176f0d6fd99e63208a66fafdb1ab4f25f7a2eac9f61a118dcb429d62a43b9033",
-    "120311056": "9552eab1a5f7624027e826ab0cecf102efa7c1639ec1cb3117bc683ed2fa2b69",
-    "120311057": "3b4e6a86072c0bbf6c56c15b494c81e36b176f2c1097a9448e673413fc82508c",
-    "120311058": "8a9aa34e5a1ed56f51142ef797baef06e2757c96e02f1d5cd8459193d2b3a402",
-    "120311059": "2d3dfd9476754253b542d404e544e4d91853a2235b29b7851c62fd9f80081eda",
-    "120311061": "1f62b33b9da885fcd44b808c11f8756a4a6d106be7d66ee1c34cf2a43c07f783",
+    "120311048": "649a67cf8f6195d1fc23dd38bd454f29d89e60256f5e438801d8a2ea788f5351",
+    "120311049": "f32a53c3b01b50b1e2aabfc55fdeaf93d82d10a8c273a228da7c6e6f171450bf",
+    "120311050": "cc05edc2447a2f2614158c7745b2e550a71fd9f91ce94ab5634cdccd1658d2d9",
+    "120311051": "b7502bdaeb74e53ab893f1a924273d51fc1c9be1009be21e04d44d3647aee202",
+    "120311052": "6104eb7e046fd16abb998dd778992bdef2f717ca9955b93251ad7c7b888a5946",
+    "120311053": "3fbe67ee8a86d249aeef28cc1f7dea0b24b55b7a9b70edbc14632f301e82699c",
+    "120311054": "510f0b89341db8abf9e1ced49a220f69f20246a60f8b28507f96837e1b1f68c2",
+    "120311055": "470d1e598fcee2c5a90c85d28765f84060cbd2125ea8e9c2769fd86af4cb70ea",
+    "120311056": "90c3bbbe5f3e365d2ea9a02ce91453de4ceeef8431ca707e4de53c5f434e518f",
+    "120311057": "97763ba9f2c0168824d198c028eeabadf0f10c074899392bd5c2c8c3c8ea9f02",
+    "120311058": "1437f88ff0bbae9032ebacdcc7457adf6c662443a5bd0ee751d4b3c6418a9080",
+    "120311059": "925f24f796d7c4c49db6ffc5574bf165c34e49f7ccf5dbe27f4d94994580f46c",
+    "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
     "120311062": "934292acfcd49f9cf923ff8e84de8493e016adbb4290b917557d34a3a84beb19"
   }
 }

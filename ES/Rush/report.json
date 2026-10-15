@@ -71,6 +71,20 @@
   "pending_translations": [
     {
       "fields": [
+        "source_changed"
+      ],
+      "id": 120310014,
+      "name": "Mad Rare Amy"
+    },
+    {
+      "fields": [
+        "source_changed"
+      ],
+      "id": 120310015,
+      "name": "Mad Rare Beeko"
+    },
+    {
+      "fields": [
         "str3"
       ],
       "id": 120311013,

@@ -1,5 +1,29 @@
 [
   {
+    "name": "Necromancer of Dragon Magic",
+    "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
+    "overallString": "[Monster|Effect|Link] Dragon/Wind  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X the Blackmetal Rampaging Dragon",
+    "desc": "If this card is added from the Deck to your hand, except by drawing it: You can Special Summon it. If this card is Special Summoned: You can pay half your LP; destroy as many other monsters on the field as possible, and if you do, inflict damage to your opponent equal to the highest ATK on the field among the destroyed face-up monsters they own, and if you do that, this card gains that much ATK. If this card is destroyed: You can add 1 \"Final Geas\" from your Deck to your hand. You can only use each effect of \"Gandora-X the Blackmetal Rampaging Dragon\" once per turn.",
+    "overallString": "[Monster|Effect] Dragon/Dark  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Time Chain",
+    "desc": "Destroy this card during your opponent's 2 Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's 2 Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
+    "overallString": "[Trap|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Warrior's Devotion",
+    "desc": "Send 1 Warrior monster from your hand or Deck to the GY, then target 1 face-up monster your opponent controls; it loses ATK equal to the sent monster's ATK. If a Warrior monster(s) you control would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use each effect of \"Warrior's Devotion\" once per turn.",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
     "name": "Trinitas Magistus",
     "desc": "2+ Spellcaster monsters\r\nYou can only use 1 of this card name's ①, ②, or ③ effect per turn, and only once that turn.\r\n①：If this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to it.\r\n②：You can discard 1 card; shuffle all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY into the Extra Deck.\r\n③：During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand.",
     "overallString": "[Monster|Effect|Link] Spellcaster/Light  [LINK-3] 2500/-  [↑][↙][↘]",
@@ -73,7 +97,7 @@
   },
   {
     "name": "Omega Vidolium the Power Patron of Heaven's End",
-    "desc": "Pendulum Scale = 11\r\n[ Pendulum Effect ]\r\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\r\n----------------------------------------\r\n[ Monster Effect ]\r\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\r\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
+    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
     "overallString": "[Monster|Effect|Fusion|Pendulum] Dragon/Dark  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
@@ -415,13 +439,13 @@
   },
   {
     "name": "Wicked Canon",
-    "desc": "Each time an opponent's monster declares an attack, place 1 Sinister Doctrine Counter on this card. You can only use each of the following effects of \"Wicked Canon\" once per turn. During your Main Phase, if this card was activated this turn: You can add 1 DARK Fiend monster from your Deck to your hand, then discard 1 Fiend monster. You can send this card with 4 or more Sinister Doctrine Counters to the GY; Special Summon 1 Fiend monster from your Deck, then you can add 1 \"Super Polymerization\" from your Deck to your hand.",
+    "desc": "Each time an opponent's monster declares an attack, place 1 Sinister Doctrine Counter on this card. You can only use each of the following effects of \"Wicked Canon\" once per turn. During your Main Phase, if this card was activated this turn: You can add 1 DARK Fiend monster from your Deck to your hand, then discard 1 Fiend monster. You can send this card with 4 or more Sinister Doctrine Counters to the GY; Special Summon 1 Fiend monster from your Deck, then you can add 1 \"Super Polymerization\" from your Deck to your hand.\r\n",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
   {
     "name": "Hope for the Future",
-    "desc": "If you control a \"Neos\" Fusion Monster or \"Elemental HERO Neos\": Discard 1 card; Fusion Summon 1 Fusion Monster from your Extra Deck that mentions a \"HERO\" monster as material, using monsters from your hand, Deck, or field. If you control a \"Neos\" Fusion Monster: You can banish this card from your GY, then target 1 face-up card your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Hope for the Future\" once per turn.",
+    "desc": "If you control a \"Neos\" Fusion Monster or \"Elemental HERO Neos\": Discard 1 card; Fusion Summon 1 Fusion Monster from your Extra Deck that mentions a \"HERO\" monster as material, using monsters from your hand, Deck, or field. If you control a \"Neos\" Fusion Monster: You can banish this card from your GY, then target 1 face-up card your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Hope for the Future\" once per turn.\r\n",
     "overallString": "[Trap]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270003.jpg?version=19.7"
   },
@@ -661,7 +685,7 @@
   },
   {
     "name": "Audhumla, Progenitor of the Frozen Expanse",
-    "desc": "If 4 or more cards are on the field: You can Special Summon this card from your hand. You can send up to 2 Spells/Traps you control to the GY; draw that many cards, then you can Special Summon 1 WATER monster from your hand. When your opponent activates a card or effect (Quick Effect): You can change this card to face-down Defense Position, also for the rest of this turn, all face-down cards you control cannot be destroyed by your opponent's card effects, and your opponent cannot target them with card effects. You can only use each effect of \"Audhumla, Progenitor of the Frozen Expanse\" once per turn.",
+    "desc": "If 4 or more cards are on the field: You can Special Summon this card from your hand. You can send up to 2 Spells/Traps you control to the GY; draw that many cards, then you can Special Summon 1 WATER monster from your hand. When your opponent activates a card or effect (Quick Effect): You can change this card to face-down Defense Position, also for the rest of this turn, all face-down cards you control cannot be destroyed by your opponent's card effects, and your opponent cannot target them with card effects. You can only use each effect of \"Audhumla, Progenitor of the Frozen Expanse\" once per turn.\r\n",
     "overallString": "[Monster|Effect] Aqua/Water  [★9] 2500/3200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306281.jpg?version=19.7"
   },
@@ -673,7 +697,7 @@
   },
   {
     "name": "Dark Paladin - Wave-Motion",
-    "desc": "\"Dark Magician\" + 1 Level 7 or higher monster\nMust be Fusion Summoned. Gains 500 ATK for every other monster on the field. Can attack all your opponent's monsters, once each. Once per turn, when your opponent activates a Spell Card or effect (Quick Effect): You can negate that effect, then you can destroy 1 card on the field. After this card destroys a card by battle or card effect and sends it to the GY, neither player can activate its effects while it is in the GY.",
+    "desc": "\"Dark Magician\" + 1 Level 7 or higher monster\r\nMust be Fusion Summoned. Gains 500 ATK for every other monster on the field. Can attack all your opponent's monsters, once each. Once per turn, when your opponent activates a Spell Card or effect (Quick Effect): You can negate that effect, then you can destroy 1 card on the field. After this card destroys a card by battle or card effect and sends it to the GY, neither player can activate its effects while it is in the GY.\r\n",
     "overallString": "[Monster|Effect|Fusion] Spellcaster/Dark  [★8] 2900/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268201.jpg?version=19.7"
   }
