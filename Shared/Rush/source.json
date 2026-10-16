@@ -107,12 +107,12 @@
     120307059,
     120307060
   ],
-  "local_inputs_sha256": "a3f510577885195ddf82f998ee91067c28f4169db9ec58c6d2ee27f892e1c0f4",
+  "local_inputs_sha256": "eeef2ef29ae08df72274368ed83f992cc552e5a0f47d80fa36b779f290df1381",
   "patch_sha256": "a47e10974b964bd790798ed443818b64cd711da146b548a5129ab046e74aebaf",
   "pending_locales": {
     "DE": 63,
     "EN": 18,
-    "ES": 6,
+    "ES": 4,
     "FR": 18,
     "IT": 19,
     "JP": 17,
