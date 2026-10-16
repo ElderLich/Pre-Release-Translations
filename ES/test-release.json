@@ -1,5 +1,101 @@
 [
   {
+    "name": "Poder del Duelista",
+    "desc": "Declara 2, 3 o 4 Atributos diferentes; aplica este efecto basado en el número declarado, y además durante la End Phase de este turno, debes mandar todas las cartas que controles al Cementerio, a menos que hayas activado los efectos de monstruos de todos los Atributos declarados en tu Campo y/o Cementerio este turno;\r\n● 2: Selecciona 1 monstruo en el Campo; destiérralo.\r\n● 3: Roba 2 cartas, y después descarta 1 carta.\r\n● 4: Niega los efectos de 2 cartas boca arriba en el Campo.\t\r\nSólo puedes activar 1 \"Poder del Duelista\" por turno.",
+    "overallString": "[Mágica|Juego Rápido]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Rescate Dramático Amazoness",
+    "desc": "Selecciona 1 monstruo en el Campo; Invoca de Modo Especial 1 monstruo \"Arpía\" o \"Amazoness\" desde tu mano o Deck y, si lo haces, devuelve el monstruo seleccionado a la mano. \r\nPuedes desterrar esta carta en tu Cementerio; añade a tu mano 1 monstruo \"Arpía\" o \"Amazoness\" desde tu Cementerio o destierro. \r\nSólo puedes usar los efectos de \"Rescate Dramático Amazoness\" una vez por turno cada uno. \r\nSi controlas un monstruo \"Dama Arpía\" o \"Amazoness\", puedes activar esta carta el turno en que fue Colocada.",
+    "overallString": "[Trampa]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Muro Espejo Atrayente",
+    "desc": "Gana estos efectos mientras controlas un monstruo \"Amazoness\" o \"Dama Arpía\";\r\n● Los monstruos boca arriba que controle tu adversario se cambian a Posición de Ataque y deben atacar si pueden.\r\n● Una vez por batalla, cuando un monstruo del adversario declara un ataque: puedes reducir su ATK a la mitad.\t\r\nUna vez por turno, durante la Standby Phase: puedes Colocar 1 Mágica/Trampa de tu Cementerio o destierro que mencione \"Dama Arpía\", excepto \"Muro Espejo Atrayente\".\r\n",
+    "overallString": "[Trampa|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte",
+    "desc": "Si esta carta es mandada al Cementerio y tienes otro monstruo \"Amazoness\" allí: puedes pagar 1000 LP; tu adversario puede elegir 1 monstruo de Nivel 10 en su Deck o Deck Extra y, si lo hace, puedes Invocarlo de Modo Especial a tu Campo, ignorando sus condiciones de Invocación, pero no puede activar sus efectos este turno. Si no lo hace, tú descartas 1 carta al azar de su mano. \r\nSólo puedes usar el efecto de \"Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Luchadora Amazoness - Danza de Muerte Instantánea",
+    "desc": "Si esta carta es añadida a tu mano, excepto robándola: puedes Invocarla de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa desde tu Deck que mencione \"Dama Arpía\". \r\nDurante el cálculo de daño, si tu monstruo \"Amazoness\" batalla con un monstruo del adversario: puedes hacer que ambos monstruos en batalla no puedan ser destruidos en esa batalla, y además no recibes daño de batalla de ella. \r\nSólo puedes usar los efectos de \"Luchadora Amazoness - Danza de Muerte Instantánea\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/TIERRA  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Lanzadora de Conjuros Amazoness - Danza del Hechizo Prohibido",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 monstruo \"Amazoness\" desde tu Deck, excepto un monstruo de Nivel 3. \r\nDurante tu Main Phase: puedes Invocar por Fusión 1 Monstruo de Fusión de TIERRA o VIENTO desde tu Deck Extra, usando monstruos de tu mano o Campo. \r\nDurante el cálculo de daño, si tu monstruo \"Amazoness\" batalla con un monstruo del adversario: puedes desterrar esta carta en tu Cementerio; intercambia el ATK de los monstruos batallantes hasta el final de este turno. \r\nSólo puedes usar los efectos de \"Lanzadora de Conjuros Amazoness - Danza del Hechizo Prohibido\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Dama Arpía - Danza Seductora",
+    "desc": "(El nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o Cementerio).\t\r\n(Efecto Rápido): Durante la Main Phase, si esta carta está en tu mano: puedes seleccionar 1 monstruo de TIERRA o VIENTO que controles; devuélvelo a la mano/Deck Extra y, si lo haces, Invoca esta carta de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 Mágica/Trampa desde tu Deck que mencione \"Dama Arpía\". \r\nSólo puedes usar los efectos de \"Dama Arpía - Danza Seductora\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Bestia Alada/VIENTO  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Maestra de Espadas Amazoness",
+    "desc": "2 monstruos \"Amazoness\"\t\r\nCuando tu monstruo \"Amazoness\" destruye un monstruo del adversario en batalla: puedes robar 1 carta. \r\nSólo puedes usar los siguientes efectos de \"Maestra de Espadas Amazoness\" una vez por turno cada uno. \r\nSi esta carta es Invocada por Fusión: puedes Invocar de Modo Especial 1 monstruo \"Amazoness\" de Nivel 4 o menor desde tu Deck. \r\n(Efecto Rápido): Puedes Sacrificar 1 monstruo, y después seleccionar 1 Monstruo de Efecto en el Campo; este pierde 500 ATK, y además sus efectos son negados.",
+    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/TIERRA  [★8] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Hermanas de la Dama Arpía - Éxtasis Triangular",
+    "desc": "3 monstruos \"Dama Arpía\"\t\r\nDebe ser primero Invocada por Fusión. \r\nEl nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o Cementerio. \r\nGana 500 ATK por cada \"Dama Arpía\" en tu Cementerio. Tu adversario no puede seleccionar esta carta con efectos de monstruos que no sean de VIENTO. \r\nUna vez por turno (Efecto Rápido): puedes destruir todas las Mágicas y Trampas que controle tu adversario.",
+    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/VIENTO  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Elegante Tri-Espejo",
+    "desc": "Añade a tu mano 1 monstruo \"Arpía\" desde tu Deck, y después si solo tu adversario controla un monstruo, puedes Invocar de Modo Especial 1 \"Dama Arpía\", o 1 monstruo que la mencione, desde tu mano o Cementerio. \r\nPuedes desterrar esta carta en tu Cementerio; Invoca por Fusión 1 Monstruo de Fusión de TIERRA o VIENTO desde tu Deck Extra, usando monstruos de tu mano o Campo. \r\nSólo puedes usar los efectos de \"Elegante Tri-Espejo\" una vez por turno cada uno.",
+    "overallString": "[Mágica]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Formación Rakshasa de Arpía & Amazoness",
+    "desc": "Selecciona 1 monstruo \"Arpía\" o \"Amazoness\" en tu Cementerio o destierro; Invócalo de Modo Especial, y después puedes aplicar 1 de estos efectos basados en el número de monstruos \"Dama Arpía\" y monstruos \"Amazoness\" que controles;\r\n● 1+: Coloca 1 \"Muro Espejo Atrayente\" desde tu Deck boca arriba en tu Zona de Mágicas y Trampas.\r\n● 2+: Toma el control de 1 monstruo que controle tu adversario.\r\n● 3+: Destruye todos los monstruos que controle tu adversario.\t\r\nSólo puedes activar 1 \"Formación Rakshasa de Arpía & Amazoness\" por turno.",
+    "overallString": "[Mágica|Juego Rápido]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Primula, la Hada Gemela Rikka",
+    "desc": "Si uno o más monstruos son Sacrificados: puedes Invocar esta carta de Modo Especial desde tu mano y 1 monstruo \"Rikka\" desde tu Deck, excepto \"Primula, la Hada Gemela Rikka\", en Posición de Defensa, pero no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos Planta. \r\nPuedes seleccionar 1 monstruo Planta que controles; aumenta o reduce su Nivel en 2. \r\n(Efecto Rápido): Durante la Main Phase de tu adversario, puedes: inmediatamente después de que este efecto se resuelva, Invocar Xyz 1 monstruo Planta. \r\nSólo puedes usar los efectos \"Primula, la Hada Gemela Rikka\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Planta/AGUA  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Princesa Negra Rikka",
+    "desc": "Si no controlas monstruos, o todos los monstruos que controlas son monstruos Planta: puedes Invocar esta carta de Modo Especial desde tu mano o Cementerio, pero destiérrala cuando deje el Campo, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos Planta. \r\nPuedes Sacrificar 1 monstruo Planta de tu mano o Campo; Invoca de Modo Especial 1 monstruo \"Rikka\" desde tu Deck, excepto \"Princesa Negra Rikka\". \r\nSólo puedes usar los efectos de \"Princesa Negra Rikka\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto] Planta/AGUA  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Lágrima, la Emperatriz Rikka",
+    "desc": "2 monstruos Planta de Nivel 10\t\r\nTambién puedes Invocar Xyz esta carta usando \"Lágrima, la Reina Rikka\" que controles (transfiere sus materiales). \r\n(Efecto Rápido): Puedes desacoplar hasta 6 materiales de esta carta; manda al Cementerio esa misma cantidad de Mágicas/Trampas en el Campo, y después puedes Sacrificar 1 monstruo en el Campo. \r\nSólo puedes usar este efecto de \"Lágrima, la Emperatriz Rikka\" una vez por turno. \r\nCada vez que uno o más monstruos son Sacrificados (excepto durante el Damage Step): acopla 1 carta del Cementerio de tu adversario a tu Monstruo Xyz Planta.",
+    "overallString": "[Monstruo|Efecto|Xyz] Planta/AGUA  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Emperatriz Strenna Rikka",
+    "desc": "2 monstruos Planta de Nivel 6\t\r\nPuedes desacoplar 2 materiales de esta carta; Invoca de Modo Especial 1 Monstruo Xyz Planta desde tu Deck Extra en Posición de Defensa, excepto \"Emperatriz Strenna Rikka\", y después si es un monstruo \"Rikka\", puedes acoplarle 1 monstruo \"Rikka\" desde tu Deck. \r\nSi uno o más monstruos son Sacrificados: puedes Colocar 1 Trampa \"Rikka\" desde tu Deck o Cementerio. \r\nSólo puedes usar los efectos de \"Emperatriz Strenna Rikka\" una vez por turno cada uno.",
+    "overallString": "[Monstruo|Efecto|Xyz] Planta/AGUA  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Luna de Junio Rikka",
+    "desc": "Toma 2 monstruos \"Rikka\" de tu Deck con el mismo Nivel, pero nombres diferentes y, si lo haces, añade 1 de ellos a tu mano y, si haces eso, manda el otro al Cementerio. Si Sacrificaste un monstruo cuando activaste esta carta, tu adversario no puede seleccionar monstruos \"Rikka\" que controles con efectos de cartas este turno. No puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno después de que esta carta se resuelva, excepto Monstruos Xyz Planta. \r\nSólo puedes activar 1 \"Luna de Junio Rikka\" por turno. Cuando activas esta carta, también puedes Sacrificar 1 monstruo Planta.",
+    "overallString": "[Mágica]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
     "name": "Castillo del Vampiro",
     "desc": "Cuando esta carta se resuelve, Invoca de Modo Especial 1 monstruo Zombi de OSCURIDAD desde tu Deck o Cementerio. Cuando este deje el Campo, destruye esta carta. \r\nEl monstruo Invocado de Modo Especial por el 1er efecto de \"Castillo del Vampiro\" no es afectado por efectos activados de otros monstruos que no sean de OSCURIDAD. \r\nSi esta carta boca arriba deja el Campo: destruye tantas cartas que controles como sea posible y, si lo haces, recibe 400 puntos de daño por cada carta destruida por este efecto. \r\nSólo puedes activar 1 \"Castillo del Vampiro\" por turno.",
     "overallString": "[Mágica|Continua]",
