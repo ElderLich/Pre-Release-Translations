@@ -1,6 +1,24 @@
 {
   "language": "fr",
-  "matches": {},
-  "requested_ids": [],
-  "unresolved": []
+  "matches": {
+    "120109069": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/SJMP-JP069",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17826&languages=fr"
+    }
+  },
+  "requested_ids": [
+    120109069,
+    120310002
+  ],
+  "unresolved": [
+    {
+      "id": 120310002,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP002"
+    }
+  ]
 }

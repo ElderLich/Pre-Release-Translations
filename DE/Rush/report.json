@@ -1,11 +1,13 @@
 {
-  "active_cards": 97,
+  "active_cards": 99,
   "artwork_files": 36,
   "excluded_ids": [
     120307059,
     120307060
   ],
   "missing_artwork": [
+    120109069,
+    120310002,
     120310004,
     120310005,
     120310006,
@@ -69,6 +71,22 @@
     120311062
   ],
   "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120109069,
+      "name": "接合科技王牌霸王龙"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310002,
+      "name": "魔法石采掘"
+    },
     {
       "fields": [
         "desc",
@@ -1777,9 +1795,10 @@
     "120309061": "fd3bad6e0b6bb5a823da56eb3f5afba02ebfd583847441a0446ef922a4372430",
     "120309085": "8f223a30b3e80161c470b24e909724a3ca5f95de7fb0f6535de13778203a81f6"
   },
-  "script_files": 127,
-  "source_cards": 99,
+  "script_files": 130,
+  "source_cards": 101,
   "text_sha256": {
+    "120109069": "7a18c9c865d9683021edab15daac9e43e4748a1cfb20559dd41dab0a7e0bcc89",
     "120307001": "621b73f01bb8e8e55deccf70ad24e948faac426ec1fdcef4bd0b3af267bc195d",
     "120307002": "476480b8b7659aeb8cc76dce63f4d0e10489760bf3094d9a748168f0fe71aa8c",
     "120307003": "82a8045fa1a4138d10657a3b45a4830f9170908dd1d0f614453f8b6af53aabf0",
@@ -1816,6 +1835,7 @@
     "120307034": "40444bcf8752be7eae4034d554291eea135794a1d183df9a5337bad2a6472ea4",
     "120307035": "b3f09a102d68a7c38ca2a5700cfcd8fb0eaf6807e003125815fba048404da5d1",
     "120307057": "460184cb6b665a6c9842541ce3d336df78c89f852aa389a994af1674c9594861",
+    "120310002": "e01ece08ec14a122de6aca392357b54c6f1aa28483f16035028538eab97b76b4",
     "120310004": "95b16d61c2217a15bea230fffef939cd2be0a49037c56a0f8584e32dee5a334d",
     "120310005": "9f1d06c387925e4dc1200d02b8cec151a51cefd59fc2f030b813471739f57cde",
     "120310006": "1f6cec38e05cbd9cf5bbddf94a276be1b6f7fd739829c989e4275782161fb192",

@@ -1,11 +1,13 @@
 {
-  "active_cards": 97,
+  "active_cards": 99,
   "artwork_files": 36,
   "excluded_ids": [
     120307059,
     120307060
   ],
   "missing_artwork": [
+    120109069,
+    120310002,
     120310004,
     120310005,
     120310006,
@@ -69,6 +71,14 @@
     120311062
   ],
   "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310002,
+      "name": "魔法石采掘"
+    },
     {
       "fields": [
         "str2"
@@ -1391,9 +1401,10 @@
     "120309061": "29cdf42db1e4b3f1f26451aa779e89d2a05be38d942f27061a3eaa58ae1e9f9b",
     "120309085": "e8cb5f3f7962de2544ed7adb43a26ace7c4014cae42cd522dd992009343ea95d"
   },
-  "script_files": 127,
-  "source_cards": 99,
+  "script_files": 130,
+  "source_cards": 101,
   "text_sha256": {
+    "120109069": "327a521e9b41429a081d98a61eb8504f630cc09328e875728c43ac0c6ecc8def",
     "120307001": "4f42210fbea863363ef9fbb306bcc20904b6167d0333c1af68ee2f525a4de1ef",
     "120307002": "8d011316c5e53f75e0cb9eab649956223e63fa8a0c589d716da334ff33b9ce32",
     "120307003": "803de985d9490b30ffa9d3657ccc14c3c73e5cdb9dc1209099b9c56a17335fa4",
@@ -1430,6 +1441,7 @@
     "120307034": "391cbd46b7b7c8e1a0ec74915b5218209a73b89dd8da01b093d0d391f55eb30b",
     "120307035": "abd82655d2df6e3740c91afa71453e8d1ebd41d374b60c6780cbcd3794713616",
     "120307057": "0410663135ea0f72667afac61a8232a82d8add2f65effa658db2fe96cd8c5f8e",
+    "120310002": "e01ece08ec14a122de6aca392357b54c6f1aa28483f16035028538eab97b76b4",
     "120310004": "d22be62b7d0e2f8c2eed1bc41186cf9f05422e7de4a9970ec425f21fc6f58e58",
     "120310005": "8f580ba7d17b8f7997e93ec886d3f6a0323f1bd1bd9dc6b142c2f47a08df5a5b",
     "120310006": "336b88474aa568a687016c4beb3f6e888481b92dd83e748a398565894baab6b6",
