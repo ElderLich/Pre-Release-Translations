@@ -26,7 +26,7 @@
   {
     "name": "Amazoness Fighter - Instant Kill Dance",
     "desc": "If this card is added to your hand, except by drawing it: You can Special Summon it. If this card is Normal or Special Summoned: You can Set 1 Spell/Trap from your Deck that mentions \"Harpie Lady\". During damage calculation, if your \"Amazoness\" monster battles an opponent's monster: You can activate this effect; for that battle, neither monster can be destroyed by battle, also you take no battle damage. You can only use each effect of \"Amazoness Fighter - Instant Kill Dance\" once per turn.",
-    "overallString": "[Monster|Effect] Spellcaster/Earth  [★4] 1500/1300",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★4] 1500/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
   },
   {
@@ -50,7 +50,7 @@
   {
     "name": "Triangle Ecstasy Harpie Lady Sisters",
     "desc": "3 \"Harpie Lady\" monsters\r\nMust first be Fusion Summoned.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：Gains 500 ATK for each \"Harpie Lady\" in your GY. Your opponent cannot target this card with non-WIND monsters' effects.\r\n③：Once per turn (Quick Effect): You can destroy all Spells and Traps your opponent controls.",
-    "overallString": "[Monster|Effect|Fusion] Warrior/Wind  [★8] 3000/2100",
+    "overallString": "[Monster|Effect|Fusion] Winged Beast/Wind  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
   {
