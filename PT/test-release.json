@@ -1,5 +1,107 @@
 [
   {
+    "name": "Poder do Duelista",
+    "desc": "Declara 2, 3, ou 4 Atributos; aplique este efeito baseado no número declara, também durante a Fase Final deste turno, você deve enviar todos os cards que você controla ao Cemitério, a menos que você tenha ativado efeitos de monstros de todos os Atributos declarados no seu campo e/ou Cemitério neste turno.\r\n● 2: Escolha 1 monstro no campo; bana-o.\r\n● 3: Compre 2 cards, então descarte 1 card.\r\n● 4: Negue os efeitos de 2 cards com a face para cima no campo.\r\nVocê só pode ativar 1 \"Poder do Duelista\" por turno.",
+    "overallString": "[Magia|Magia Rápida]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Resgate Dramático das Amazoness",
+    "desc": "Se você controla um monstro \"Lady Harpia\" ou \"Amazoness\", você pode ativar este card no turno em que foi Baixado.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Resgate Dramático das Amazoness\" uma vez por turno.\r\nEscolha 1 monstro no campo; Invoque por Invocação-Especial 1 monstro \"Harpia\" ou \"Amazoness\" da sua mão ou Deck, e se fizer, retorne o monstro alvo à mão.\r\nVocê pode banir este card do seu Cemitério; adicione 1 monstro \"Harpia\" ou \"Amazoness\" do seu Cemitério ou banimento à sua mão.",
+    "overallString": "[Armadilha]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Parede de Espelhos Cativante",
+    "desc": "Ganha estes efeitos enquanto você controla um monstro \"Amazoness\" ou \"Lady Harpia\".\r\n● Monstros com a face para cima que seu oponente controla são alterados para Posição de Ataque e devem atacar se possível.\r\n● Uma vez por batalha, quando um monstro do oponente declara um ataque: você pode reduzir seu ATK pela metade.\r\nUma vez por turno, durante a Fase de Apoio: você pode Baixar 1 Magia/Armadilha do seu Cemitério ou banimento que menciona \"Lady Harpia\", exceto \"Parede de Espelhos Cativante\".",
+    "overallString": "[Armadilha|Magia Contínuo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Mestra da Corrente Amazoness - Dança da Corrente à Beira da Morte",
+    "desc": "Se este card é enviado ao Cemitério e você tem um monstro \"Amazoness\" no seu Cemitério: você pode pagar 1000 PV; seu oponente pode escolher 1 monstro de Nível 10 no seu Deck ou Deck Adicional, e se ele fizer, você pode Invoca-lo por Invocação-Especial para o seu campo, ignorando suas condições de Invocação, mas nenhum jogador pode ativar seus efeitos neste turno. Se ele não fizer, você descarta 1 card aleatório da mão dele. Você só pode usar este efeito de \"Mestra da Corrente Amazoness - Dança da Corrente à Beira da Morte\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Guerreiro/Terra  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Lutador Amazoness - Dança da Morte Instantânea",
+    "desc": "Se este card é adicionado à sua mão, exceto por compra-lo: você pode Invoca-lo por Invocação-Especial.\r\nSe este card é Invocado por Invocação-Especial: você pode Baixar 1 Magia/Armadilha do seu Deck que mencione \"Lady Harpia\".\r\nDurante o cálculo de dano, se seu monstro \"Amazoness\" batalha com um monstro do oponente: você pode ativar este efeito; para aquela batalha, nenhum monstro pode ser destruído por batalha, você também não recebe dano de batalha.\r\nVocê só pode usar cada um dos efeitos de \"Lutador Amazoness - Dança da Morte Instantânea\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Guerreiro/Terra  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Mago Amazoness - Dança do Feitiço Proibido",
+    "desc": "Se este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 monstro \"Amazoness\" do seu Deck à sua mão, exceto um monstro de Nível 3.\r\nDurante sua Fase Principal: você pode Invocar por Invocação-Fusão 1 Monstro Fusão TERRA ou VENTO do seu Deck Adicional, usando monstros da sua mão ou campo.\r\nDurante o cálculo de dano, se seu monstro \"Amazoness\" batalha com um monstro do oponente: você pode banir este card do seu Cemitério; altere o ATK dos monstros batalhando até o final deste turno.\r\nVocê só pode usar cada um dos efeitos de \"Mago Amazoness - Dança do Feitiço Proibido\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Guerreiro/Terra  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Lady Harpia - Dança Sedutora",
+    "desc": "O nome deste card se torna \"Lady Harpia\" enquanto está no campo ou Cemitério.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Lady Harpia - Dança Sedutora\" uma vez por turno.\r\nDurante a Fase Principal, se este card está na sua mão (Efeito Rápido): você pode escolher 1 monstro TERRA ou VENTO que você controla; retorne-o ao Deck/Deck Adicional, e se fizer, Invoque este card por Invocação-Especial.\r\nSe este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 Magia/Armadilha do seu Deck à sua mão que mencione \"Lady Harpia\".",
+    "overallString": "[Monstro|Efeito] Besta Alada/Vento  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Mestra da Espada Amazoness",
+    "desc": "2 monstros \"Amazoness\"\r\nQuando seu monstro \"Amazoness\" destrói um monstro do oponente por batalha: você pode comprar 1 card.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Mestra da Espada Amazoness\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Fusão: você pode Invocar por Invocação-Especial 1 monstro \"Amazoness\" de Nível 4 ou menor do seu Deck.\r\n(Efeito Rápido): você pode oferecer como Tributo 1 monstro, então escolha 1 Monstro de Efeito no campo; ele perde 500 de ATK, seus efeitos também são negados.",
+    "overallString": "[Monstro|Efeito|Fusão] Guerreiro/Terra  [★8] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Irmãs Lady Harpias – Êxtase Triplo",
+    "desc": "3 monstros \"Lady Harpia\"\r\nPrimeiro deve ser Invocado por Invocação-Fusão.\r\nO nome deste card se torna \"Lady Harpia\" enquanto está no campo ou Cemitério.\r\nGanha 500 de ATK para cada \"Lady Harpia\" no seu Cemitério. Seu oponente não pode escolher este card com efeitos de monstros não-VENTO.\r\nUma vez por turno (Efeito Rápido): você pode destruir todas as Magias e Armadilhas que seu oponente controla.",
+    "overallString": "[Monstro|Efeito|Fusão] Besta Alada/Vento  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Três Espelhos Elegantes",
+    "desc": "Adicione 1 monstro \"Harpia\" do seu Deck à sua mão, então se apenas seu oponente controla uma monstro, você pode Invocar por Invocação-Especial 1 \"Lady Harpia\", ou 1 monstro que o menciona, da sua mão ou Cemitério.\r\nVocê pode banir este card do seu Cemitério; Invoque por Invocação-Fusão 1 Monstro Fusão TERRA ou VENTO do seu Deck Adicional, usando monstros da sua mão ou campo.\r\nVocê só pode usar cada um dos efeitos de \"Três Espelhos Elegantes\" uma vez por turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Harpia e Amazoness Formação Rakshasa",
+    "desc": "Você só pode ativar 1 \"Harpia e Amazoness Formação Rakshasa\" uma vez por turno.\r\nEscolha 1 monstro \"Harpia\" ou \"Amazoness\" no seu Cemitério ou banimento; Invoque-o por Invocação-Especial, então você pode aplicar 1 desses efeitos baseados no número de monstros \"Lady Harpia\" e \"Amazoness\" que você controla.\r\n● 1+: Coloque 1 \"Parede de Espelhos Cativante\" do seu Deck com a face para cima na sua Zona de Magia & Armadilha.\r\n● 2+: Tome controle de 1 monstro que seu oponente controla.\r\n● 3+: Destrói todos os monstros que seu oponente controla.",
+    "overallString": "[Magia|Magia Rápida]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Primrose, a Fada Gêmea Rikka",
+    "desc": "Se um ou mais monstros é oferecido como Tributo: você pode Invocar por Invocação-Especial este card da sua mão e 1 monstro \"Rikka\" do seu Deck, exceto \"Primrose, a Fada Gêmea Rikka\", em Posição de Defesa, você também não pode Invocar por Invocação-Especial pelo resto deste turno, exceto monstros Planta.\r\nVocê pode escolher 1 monstro Planta que você controla; aumente ou reduza seu Nível em 2.\r\nDurante a Fase Principal do seu oponente, você pode (Efeito Rápido): imediatamente após ativar este efeito, Invoque por Invocação-Xyz 1 Monstro Xyz Planta.\r\nVocê só pode usar cada um dos efeitos de \"Primrose, a Fada Gêmea Rikka\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Planta/Água  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka Princesa Negra",
+    "desc": "Se você não controla monstros, ou todos os monstros que você controla são monstros Planta: você pode Invocar por Invocação-Especial este card da sua mão ou Cemitério, mas bana-o quando deixar o campo, você também não pode Invocar por Invocação-Especial pelo resto deste turno, exceto monstros Plant.\r\nVocê pode oferecer como Tributo 1 monstro Planta da sua mão ou campo; Invoque por Invocação-Especial 1 monstro \"Rikka\" do seu Deck, exceto \"Rikka Princesa Negra\".\r\nVocê só pode usar cada um dos efeitos de \"Rikka Princesa Negra\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Planta/Água  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Lágrima, a Imperatriz Rikka",
+    "desc": "2 monstros Planta Nível 10\r\nVocê também pode Invocar por Invocação-Xyz este card usando \"Lágrima, a Rainha Rikka\" que você controla (transfira suas matérias).\r\n(Efeito Rápido): você pode desassociar até 6 matérias deste card; envie aquela quantia de Magias/Armadilhas no campo ao Cemitério, então você pode oferecer como Tributo 1 monstro no campo. Você só pode usar este efeito de \"Lágrima, a Imperatriz Rikka\" uma vez por turno.\r\nToda vez que um ou mais monstros é oferecido como Tributo: associe 1 card do Cemitério do seu oponente à 1 Monstro Xyz Planta que você controla.",
+    "overallString": "[Monstro|Efeito|Xyz] Planta/Água  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka Imperatriz Strenna",
+    "desc": "2 monstros Planta Nível 6\r\nVocê pode desassociar 2 matérias deste card; Invoque por Invocação-Especial 1 Monstro Xyz Planta do seu Deck Adicional em Posição de Defesa, exceto \"Rikka Imperatriz Strenna\", então se você Invocou por Invocação-Especial um monstro \"Rikka\", você pode associar 1 monstro \"Rikka\" do seu Deck a ele.\r\nSe um ou mais monstros é oferecido como Tributo: você pode Baixar 1 Armadilha \"Rikka\" do seu Deck ou Cemitério.\r\nVocê só pode usar cada um dos efeitos de \"Rikka Imperatriz Strenna\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Xyz] Planta/Água  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Lua de Junho de Rikka",
+    "desc": "Quando você ativa este card, você também pode oferecer como Tributo 1 monstro Planta; pegue 2 monstros \"Rikka\" do seu Deck com o mesmo Nível, mas nomes diferentes, adicione 1 deles à sua mão e envie o outro ao Cemitério, também se você ofereceu um monstro como Tributo na ativação, seu oponente não pode escolher monstros \"Rikka\" que você controla com efeitos neste turno.\r\nPelo resto deste turno após ativar este card, você não pode Invocar por Invocação-Especial do Deck Adicional, exceto Monstros Xyz Planta.\r\nVocê só pode ativar 1 \"Lua de Junho de Rikka\" por turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
+    "name": "Castelo do Vampiro",
+    "desc": "Quando este card é ativado: Invoque por Invocação-Especial 1 monstro Zumbi TREVAS do seu Deck ou Cemitério. Quando aquele monstro deixar o campo, destrói este card. Aquele monstro não é afetado pelo efeito ativado de outros monstros não-TREVAS.\r\nSe este card com a face para cima deixa o campo: destrói aquela quantia de cards que você controla quanto possível, e se fizer, receba 400 de dano para card destruído.\r\nVocê só pode ativar 1 \"Castelo do Vampiro\" por turno.",
+    "overallString": "[Magia|Magia Contínuo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
     "name": "Necromancer do Dragão Mágico",
     "desc": "2 Monstros de Efeito\r\nDurante sua Fase Principal: você pode revelar 1 Monstro Fusão no seu Deck Adicional, escolha 1 Monstro não-Fusão no seu Cemitério cujo nome seja mencionado no monstro revelado, e o nome deste card se torna o daquele (até a Fase Final), então você pode Invocar por Invocação-Fusão o Monstro Fusão revelado, ao banir suas matérias da sua mão, campo e/ou Cemitério, você também não pode Invocar por Invocação-Especial do seu Deck Adicional pelo resto deste turno, exceto Monstros Fusão. Você só pode usar este efeito de \"Necromancer do Dragão Mágico\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Link] Dragão/Vento  [LINK-2] 900/-  [↙][↘]",
