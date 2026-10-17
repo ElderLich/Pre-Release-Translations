@@ -1,5 +1,101 @@
 [
   {
+    "name": "Potere del Duellante",
+    "desc": "Dichiara 2, 3 o 4 Attributi; applica questo effetto a seconda del numero dichiarato, inoltre durante la End Phase di questo turno, devi mandare tutte le carte che controlli al Cimitero, a meno che tu non abbia attivato in questo turno gli effetti di mostri di tutti gli Attributi dichiarati sul tuo Terreno e/o nel tuo Cimitero.\r\n● 2: Scegli come bersaglio 1 mostro sul Terreno; bandiscilo.\r\n● 3: Pesca 2 carte, poi scarta 1 carta.\r\n● 4: Annulla gli effetti di 2 carte scoperte sul Terreno.\r\nPuoi attivare solo 1 \"Potere del Duellante\" per turno.",
+    "overallString": "[Magia|Rapida]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Salvataggio Drammatico Amazoness",
+    "desc": "Se controlli un mostro \"Amazoness\" o \"Lady Arpia\", puoi attivare questa carta nel turno in cui è stata Posizionata. Scegli come bersaglio 1 mostro sul Terreno; Evoca Specialmente 1 mostro \"Arpia\" o \"Amazoness\" dalla tua mano o Deck e, se lo fai, fai ritornare il mostro scelto come bersaglio nella mano. Puoi bandire questa carta dal tuo Cimitero; aggiungi 1 mostro \"Arpia\" o \"Amazoness\" dal tuo Cimitero o dalle tue carte bandite alla tua mano. Puoi utilizzare ciascun effetto di \"Salvataggio Drammatico Amazoness\" una sola volta per turno.",
+    "overallString": "[Trappola]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Muro a Specchio Ammaliante",
+    "desc": "Guadagna questi effetti mentre controlli un mostro \"Amazoness\" o \"Lady Arpia\".\r\n● I mostri scoperti controllati dal tuo avversario vengono messi in Posizione di Attacco e devono attaccare, se possibile.\r\n● Una volta per battaglia, quando un mostro dell'avversario dichiara un attacco: puoi dimezzare il suo ATK.\r\nUna volta per turno, durante la Standby Phase: puoi Posizionare 1 Magia/Trappola dal tuo Cimitero o dalle tue carte bandite che menziona \"Lady Arpia\", eccetto \"Muro a Specchio Ammaliante\".",
+    "overallString": "[Trappola|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Maestra delle Catene Amazzones - Danza Incatenata al Ciglio della Morte",
+    "desc": "Se questa carta viene mandata al Cimitero e hai un altro mostro \"Amazoness\" nel tuo Cimitero: puoi pagare 1000 LP; il tuo avversario può scegliere 1 mostro di Livello 10 nel suo Deck o Extra Deck e, se lo fa, puoi Evocarlo Specialmente sul tuo Terreno, ignorando le sue condizioni di Evocazione, ma nessun giocatore può attivare i suoi effetti in questo turno. Se non lo fa, scarti 1 carta a caso dalla sua mano. Puoi utilizzare questo effetto di \"Maestra delle Catene Amazzones - Danza Incatenata al Ciglio della Morte\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Guerriero/Terra  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Guerriera Amazoness - Danza Letale Istantanea",
+    "desc": "Se questa carta viene aggiunta alla tua mano, eccetto pescandola: puoi Evocarla Specialmente.\r\nSe questa carta viene Evocata Normalmente o Specialmente: puoi Posizionare 1 Magia/Trappola dal tuo Deck che menziona \"Lady Arpia\".\r\nDurante il calcolo dei danni, se un tuo mostro \"Amazoness\" combatte con un mostro dell'avversario: puoi attivare questo effetto; per quella battaglia, nessuno dei due mostri può essere distrutto in battaglia, inoltre non subisci danno da combattimento.\r\nPuoi utilizzare ciascun effetto di \"Guerriera Amazoness - Danza Letale Istantanea\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Guerriero/Terra  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Incantatrice Amazoness - Danza dell'Incantesimo Proibito",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 mostro \"Amazoness\" dal tuo Deck alla tua mano, eccetto un mostro di Livello 3.\r\nDurante la tua Main Phase: puoi Evocare tramite Fusione 1 Mostro Fusione TERRA o VENTO dal tuo Extra Deck, utilizzando mostri dalla tua mano o Terreno.\r\nDurante il calcolo dei danni, se un tuo mostro \"Amazoness\" combatte con un mostro dell'avversario: puoi bandire questa carta dal tuo Cimitero; scambia l'ATK dei mostri che combattono fino alla fine di questo turno.\r\nPuoi utilizzare ciascun effetto di \"Incantatrice Amazoness - Danza dell'Incantesimo Proibito\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Guerriero/Terra  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Lady Arpia - Danza Ammaliante",
+    "desc": "Il nome di questa carta diventa \"Lady Arpia\" mentre è sul Terreno o nel Cimitero.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Lady Arpia - Danza Ammaliante\" una sola volta per turno.\r\nDurante la Main Phase, se questa carta è nella tua mano (Effetto Rapido): puoi scegliere come bersaglio 1 mostro TERRA o VENTO che controlli; fallo ritornare nella mano/Extra Deck e, se lo fai, Evoca Specialmente questa carta.\r\nSe questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 Magia/Trappola dal tuo Deck alla tua mano che menziona \"Lady Arpia\".",
+    "overallString": "[Mostro|Effetto] Bestia Alata/Vento  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Maestra di Spada Amazoness",
+    "desc": "2 mostri \"Amazoness\"\r\nQuando un tuo mostro \"Amazoness\" distrugge un mostro dell'avversario in battaglia: puoi pescare 1 carta.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Amazoness Maestra delle Spade\" una sola volta per turno.\r\nSe questa carta viene Evocata tramite Fusione: puoi Evocare Specialmente 1 mostro \"Amazoness\" di Livello 4 o inferiore dal tuo Deck.\r\n(Effetto Rapido): puoi offrire come Tributo 1 mostro, poi scegliere come bersaglio 1 Mostro con Effetto sul Terreno; esso perde 500 ATK, inoltre annulla i suoi effetti.",
+    "overallString": "[Mostro|Effetto|Fusione] Guerriero/Terra  [★8] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Sorelle Lady Arpia dell'Estasi Triangolare",
+    "desc": "3 mostri \"Lady Arpia\"\r\nDeve prima essere Evocata tramite Fusione.\r\nIl nome di questa carta diventa \"Lady Arpia\" mentre è sul Terreno o nel Cimitero.\r\nGuadagna 500 ATK per ogni \"Lady Arpia\" nel tuo Cimitero, inoltre il tuo avversario non può scegliere questa carta come bersaglio con gli effetti dei mostri non-VENTO.\r\nUna volta per turno (Effetto Rapido): puoi distruggere tutte le Magie/Trappole controllate dal tuo avversario.",
+    "overallString": "[Mostro|Effetto|Fusione] Bestia Alata/Vento  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Triplice Specchio Elegante",
+    "desc": "Aggiungi 1 mostro \"Arpia\" dal tuo Deck alla tua mano, poi, se solo il tuo avversario controlla un mostro, puoi Evocare Specialmente 1 \"Lady Arpia\", oppure 1 mostro che la menziona, dalla tua mano o Cimitero.\r\nPuoi bandire questa carta dal tuo Cimitero; Evoca tramite Fusione 1 Mostro Fusione TERRA o VENTO dal tuo Extra Deck, utilizzando mostri dalla tua mano o Terreno.\r\nPuoi utilizzare ciascun effetto di \"Triplice Specchio Elegante\" una sola volta per turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Arpia & Amazoness Formazione Rakshasa",
+    "desc": "Scegli come bersaglio 1 mostro \"Arpia\" o \"Amazoness\" nel tuo Cimitero o tra le tue carte bandite; Evocalo Specialmente, poi puoi applicare 1 di questi effetti a seconda del numero di mostri \"Amazoness\" e \"Lady Arpia\" che controlli.\r\n● 1+: Metti 1 \"Muro a Specchio Ammaliante\" dal tuo Deck scoperto nella tua Zona Magie & Trappole.\r\n● 2+: Prendi il controllo di 1 mostro controllato dal tuo avversario.\r\n● 3+: Distruggi tutti i mostri controllati dal tuo avversario.\r\nPuoi attivare solo 1 \"Arpia & Amazoness Formazione Rakshasa\" per turno.",
+    "overallString": "[Magia|Rapida]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Primrosa la Fata Gemella Rikka",
+    "desc": "Se uno o più mostri vengono offerti come Tributo: puoi Evocare Specialmente questa carta dalla tua mano e 1 mostro \"Rikka\" dal tuo Deck, eccetto \"Primrosa la Fata Gemella Rikka\", in Posizione di Difesa, inoltre non puoi Evocare Specialmente per il resto di questo turno, eccetto mostri Pianta.\r\nPuoi scegliere come bersaglio 1 mostro Pianta che controlli; aumenta o diminuisci il suo Livello di 2.\r\nDurante la Main Phase del tuo avversario, puoi (Effetto Rapido): immediatamente dopo che questo effetto si è risolto, Evoca tramite Xyz 1 Mostro Xyz Pianta.\r\nPuoi utilizzare ciascun effetto di \"Primrosa la Fata Gemella Rikka\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Pianta/Acqua  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Principessa Nera Rikka",
+    "desc": "Se non controlli nessun mostro, oppure tutti i mostri che controlli sono mostri Pianta: puoi Evocare Specialmente questa carta dalla tua mano o Cimitero, ma bandiscila quando lascia il Terreno, inoltre non puoi Evocare Specialmente per il resto di questo turno, eccetto mostri Pianta.\r\nPuoi offrire come Tributo 1 mostro Pianta dalla tua mano o Terreno; Evoca Specialmente 1 mostro \"Rikka\" dal tuo Deck, eccetto \"Principessa Nera Rikka\".\r\nPuoi utilizzare ciascun effetto di \"Principessa Nera Rikka\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Pianta/Acqua  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Lacrima l'Imperatrice Rikka",
+    "desc": "2 mostri Pianta di Livello 10\r\nPuoi anche Evocare tramite Xyz questa carta utilizzando \"Lacrima la Regina Rikka\" che controlli (trasferisci i suoi materiali).\r\n(Effetto Rapido): puoi staccare fino a 6 materiali da questa carta; manda al Cimitero altrettante Magie/Trappole sul Terreno, poi puoi offrire come Tributo 1 mostro sul Terreno. Puoi utilizzare questo effetto di \"Lacrima l'Imperatrice Rikka\" una sola volta per turno.\r\nOgni volta che uno o più mostri vengono offerti come Tributo: attacca 1 carta dal Cimitero del tuo avversario a 1 Mostro Xyz Pianta che controlli come materiale.",
+    "overallString": "[Mostro|Effetto|Xyz] Pianta/Acqua  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Strenna l'Imperatrice Rikka",
+    "desc": "2 mostri Pianta di Livello 6\r\nPuoi staccare 2 materiali da questa carta; Evoca Specialmente 1 Mostro Xyz Pianta dal tuo Extra Deck in Posizione di Difesa, eccetto \"Strenna l'Imperatrice Rikka\", poi, se hai Evocato Specialmente un mostro \"Rikka\", puoi attaccargli 1 mostro \"Rikka\" dal tuo Deck come materiale.\r\nSe uno o più mostri vengono offerti come Tributo: puoi Posizionare 1 Trappola \"Rikka\" dal tuo Deck o Cimitero.\r\nPuoi utilizzare ciascun effetto di \"Strenna l'Imperatrice Rikka\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Xyz] Pianta/Acqua  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Luna di Giugno Rikka",
+    "desc": "Quando attivi questa carta, puoi anche offrire come Tributo 1 mostro Pianta; prendi 2 mostri \"Rikka\" dal tuo Deck con lo stesso Livello, ma nomi diversi, aggiungine 1 alla tua mano e manda l'altro al Cimitero, inoltre, se hai offerto come Tributo un mostro all'attivazione, il tuo avversario non può scegliere come bersaglio i mostri \"Rikka\" che controlli con gli effetti delle carte in questo turno.\r\nPer il resto di questo turno dopo che questa carta si è risolta, non puoi Evocare Specialmente dall'Extra Deck, eccetto Mostri Xyz Pianta.\r\nPuoi attivare solo 1 \"Luna di Giugno Rikka\" per turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
     "name": "Castello del Vampiro",
     "desc": "Quando questa carta viene attivata: Evoca Specialmente 1 mostro Zombie OSCURITÀ dal tuo Deck o Cimitero.\r\nQuando quel mostro lascia il Terreno, distruggi questa carta.\r\nQuel mostro è immune agli effetti attivati degli altri mostri non-OSCURITÀ.\r\nSe questa carta scoperta lascia il Terreno: distruggi quante più carte possibile che controlli e, se lo fai, subisci 400 danni per ogni carta distrutta.\r\nPuoi attivare solo 1 \"Castello del Vampiro\" per turno.",
     "overallString": "[Magia|Continua]",
