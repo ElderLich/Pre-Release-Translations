@@ -71,22 +71,6 @@
   "pending_translations": [
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120109069,
-      "name": "接合科技王牌霸王龙"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310002,
-      "name": "魔法石采掘"
-    },
-    {
-      "fields": [
         "str2"
       ],
       "id": 120310006,
@@ -161,12 +145,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310036,
-      "name": "岩角兽 鹿豚本我"
+      "name": "Contraente del Drago Abissale"
     },
     {
       "fields": [
@@ -1419,8 +1401,8 @@
   "script_files": 98,
   "source_cards": 64,
   "text_sha256": {
-    "120109069": "864cccad89155449eb791b646e1ba9d52d6573618c247e675b05f0d3dade3e0c",
-    "120310002": "e01ece08ec14a122de6aca392357b54c6f1aa28483f16035028538eab97b76b4",
+    "120109069": "b08c72ba0ea00255316f82f5d1d91b4dccb3c144f2d024457cbfe067681c99a8",
+    "120310002": "9b9cfedc6714fabbecb75373b00992aead4e7e9f688721b7e08e5b65ec2777c6",
     "120310004": "bd5978273f7877545c5aac8cd07308c5df1877d48c0ca3a503bdebb96ecfe630",
     "120310005": "6cc43956d0ca1443b6722cc41357d939a49fd9d45ec0a0aff113f93737ac5394",
     "120310006": "0641caf144b85fba2e15ba62621c41f21f1ad48120ca919efbceaa4ebd437864",
@@ -1432,7 +1414,7 @@
     "120310017": "c559d0c293fe5ab55c0b98b817145281f3293703adbcfeb6433f34f140e78089",
     "120310018": "33f8c1f2ba5f6cedda625d79fd54b794425d52571ac7c07fb5eaee1af5b6308a",
     "120310019": "31bf9113c43323c6173347c95ef240131664d8658aa7b223778b5b45c33301e3",
-    "120310036": "8ad72253a0e1033f9ffc93c1404fd2560992451b29aea821954ea2284b0e41c8",
+    "120310036": "874c0e250aa8824208d73079350b8044e943f26dce3e595b3fd70aa5b0bc65b0",
     "120310037": "7cdabc217d529c1b25f37dec0bd2938f00eb544fcbf57b190f5844751a9b71a2",
     "120310038": "c6ee72b8ce595e3521787fd66b1373c86547c7b49d7b2400d2eea66e051b2a34",
     "120310045": "bf6cbdfb18f3f0832b347469413945a077ab827f6ed5ea0a573beb231aefe0f0",
@@ -1460,7 +1442,7 @@
     "120311029": "9c4ba398efa0fdd146799e2db78f33f882a99b4eacc269a3d8ff822b40c21047",
     "120311030": "66279ed4fd209604f96a815fbc9c05c26393970a8d8633664fd8fc30afbf9dfe",
     "120311031": "d78451e0b17a21b87b6c43b8faf0d9963c1d71b33d4968cfe104aeed87ce3175",
-    "120311032": "3b14b13407c80e0dedd134d49cdeaee70c0e7dc0632f2f44c051ac3f45968faa",
+    "120311032": "dc14155da15027c4ed1502a1336d2cd181559c7fa58f412c5f88c01e88ca903b",
     "120311033": "8b880c12ee029bdde36263913b5e5e4f7ba4f30adeeeba5ed6ec7e58e3d1aaa7",
     "120311034": "4289ecc8b38cead348b9df0a16300ef9045261b230f25e06b16547736cd344bb",
     "120311035": "eab8b8b98680ba0dcf015106e7703678682235377455c9c5079949378b8d145a",

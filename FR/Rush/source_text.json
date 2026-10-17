@@ -1,17 +1,7 @@
 {
   "language": "fr",
-  "matches": {
-    "120310002": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP002",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=14861&languages=fr"
-    }
-  },
+  "matches": {},
   "requested_ids": [
-    120310002,
     120310036
   ],
   "unresolved": [
