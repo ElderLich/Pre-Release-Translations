@@ -1,14 +1,17 @@
 {
   "language": "jp",
   "matches": {
-    "120307014": {
-      "fields": [],
-      "set_code": "RD/LP01-JP014",
-      "source": "https://ocg-card.com/list_r/lp01/"
+    "120310036": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP036",
+      "source": "https://ocg-card.com/list_r/kp27/"
     }
   },
   "requested_ids": [
-    120307014
+    120310036
   ],
   "unresolved": []
 }
