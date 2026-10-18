@@ -41,6 +41,8 @@ sin afirmar que la fuente CN esté al día. Si la importación sigue en curso,
 vuelve a sincronizar cuando termine. También puedes ejecutar **Sync ES Workspace**
 desde Actions para solicitar una importación inmediata. El control diario se
 cuenta desde la última importación correcta; subir traducciones no lo reinicia.
+La importación conserva los prompts españoles escritos por el traductor en los
+slots que siguen activos; añade los nuevos y limpia los que CN haya eliminado.
 
 Al actualizar desde la versión anterior, la primera sincronización recupera la
 base anterior a partir de los SHA guardados. Puede necesitar una descarga
