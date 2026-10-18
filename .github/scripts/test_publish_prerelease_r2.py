@@ -313,6 +313,21 @@ class PublishTests(unittest.TestCase):
                 self.assertEqual(0, publisher.main(arguments))
         client.assert_not_called()
 
+    def test_public_verification_identifies_publisher_for_payload_and_catalog(self):
+        class Response(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return PUBLIC
+        body = b"verified public bytes"
+        for key in ("prerelease/standard/DE/hash/ygopro-super-pre.ypk", publisher.CATALOG_KEY):
+            with self.subTest(key=key), patch.object(publisher, "urlopen", return_value=Response(body)) as opener:
+                publisher.verify_public(PUBLIC + "/" + key, len(body), hashlib.sha256(body).hexdigest())
+            request = opener.call_args.args[0]
+            self.assertEqual("MDPro4-prerelease-publisher/1.0", request.get_header("User-agent"))
+            self.assertEqual("no-cache", request.get_header("Cache-control"))
+            self.assertEqual("identity", request.get_header("Accept-encoding"))
+            self.assertIsNone(request.get_header("Authorization"))
+
     def test_public_verification_streams_actual_bytes(self):
         class Response(io.BytesIO):
             status = 200

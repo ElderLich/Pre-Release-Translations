@@ -185,7 +185,8 @@ def current_main_commit(repository=SOURCE_REPOSITORY):
 
 def verify_public(url, expected_size, expected_sha256):
     try:
-        request = Request(url, headers={"Cache-Control": "no-cache", "Accept-Encoding": "identity"})
+        request = Request(url, headers={"Cache-Control": "no-cache", "Accept-Encoding": "identity",
+                                        "User-Agent": "MDPro4-prerelease-publisher/1.0"})
         with urlopen(request, timeout=60) as response:
             if response.status != 200 or urlsplit(response.geturl()).scheme != "https":
                 raise ValueError("status or transport")
