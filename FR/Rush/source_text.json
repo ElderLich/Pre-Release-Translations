@@ -1,32 +1,13 @@
 {
   "language": "fr",
-  "matches": {
-    "120310001": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP001",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=14396&languages=fr"
-    },
-    "120310036": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP036",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17843&languages=fr"
-    }
-  },
+  "matches": {},
   "requested_ids": [
     120000012,
-    120310001,
     120310020,
     120310021,
     120310022,
     120310023,
     120310025,
-    120310036,
     120310041,
     120310046,
     120310054,
