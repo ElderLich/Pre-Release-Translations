@@ -147,6 +147,15 @@ locale's previous release bytes untouched.
 Thai uses the English fallback: selecting either EN or TH rebuilds both, and
 Thai follows English translation/review readiness and has the same package bytes.
 The Actions summary distinguishes published, already-current and pending locales.
+Each changed Rush package also gets an annotated Git tag such as `EN_Rush-v1`,
+`ES_Rush-v1`, or `ZH-CN_Rush-v1`. Every locale has its own counter, starting at 1
+and increasing only when its package changes. These counters are independent of
+the standard `EN-v...` tags and the client-facing `rush-version.txt` timestamps.
+Workspace/report-only updates and unchanged packages create no tags; retirement-only
+package updates do. Existing packages are not tagged retroactively. The workflow
+pushes the package commit and all its tags atomically, then links the published
+tags in the Actions summary. These are Git tags, matching the standard workflow;
+no separate GitHub Release entries or release assets are created.
 Pending translation is a normal successful `sync` outcome; invalid databases,
 missing scripts and other build failures still fail the job before releases are
 written. The shared source receipt lists only ready locales as built and records
