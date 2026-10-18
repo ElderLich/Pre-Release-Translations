@@ -1,0 +1,100 @@
+name: Mirror pre-release packages to Cloudflare
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows:
+      - "Release DE"
+      - "Release EN"
+      - "Release ES"
+      - "Release FR"
+      - "Release IT"
+      - "Release JP"
+      - "Release KR"
+      - "Release PT"
+      - "Release TH"
+      - "AutoPR ZH-TW"
+      - "Update Rush pre-release cards"
+    branches: [main]
+    types: [completed]
+  push:
+    branches: [main]
+    paths:
+      - "*/ygopro-super-pre.ypk"
+      - "*/version.txt"
+      - "*/rush-pre-release.ypk"
+      - "*/rush-version.txt"
+      - ".github/scripts/publish_prerelease_r2.py"
+      - ".github/scripts/requirements-prerelease-r2.txt"
+      - ".github/workflows/cloudflare-prerelease.yml"
+
+permissions:
+  contents: read
+
+# All triggers publish current main, never the older event commit. This fixed
+# group prevents two jobs from promoting different snapshots concurrently.
+concurrency:
+  group: cloudflare-prerelease-main
+  cancel-in-progress: false
+
+jobs:
+  mirror:
+    name: Verify and mirror current main
+    if: >-
+      github.repository == 'ElderLich/Pre-Release-Translations' &&
+      ((github.event_name == 'workflow_run' &&
+        github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository) ||
+       ((github.event_name == 'workflow_dispatch' || github.event_name == 'push') &&
+        github.ref == 'refs/heads/main'))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Check out current trusted main
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: false
+
+      - name: Set up Python
+        uses: actions/setup-python@v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install publisher dependencies
+        run: python -m pip install --disable-pip-version-check -r .github/scripts/requirements-prerelease-r2.txt
+
+      - name: Publish verified packages and catalog
+        env:
+          R2_ACCOUNT_ID: ${{ vars.R2_ACCOUNT_ID }}
+          R2_PRERELEASE_BUCKET: ${{ vars.R2_PRERELEASE_BUCKET }}
+          R2_PRERELEASE_PUBLIC_BASE_URL: ${{ vars.R2_PRERELEASE_PUBLIC_BASE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.R2_PRERELEASE_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_PRERELEASE_SECRET_ACCESS_KEY }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          missing=()
+          for key in R2_ACCOUNT_ID R2_PRERELEASE_BUCKET R2_PRERELEASE_PUBLIC_BASE_URL AWS_ACCESS_KEY_ID AWS_SECRET_ACCESS_KEY; do
+            if [ -z "${!key:-}" ]; then missing+=("$key"); fi
+          done
+          if [ "${#missing[@]}" -gt 0 ]; then
+            echo "::notice title=Cloudflare mirror is not configured::Missing configuration: ${missing[*]}. Nothing was uploaded or promoted."
+            {
+              printf '### Cloudflare mirror: not configured\n\n'
+              printf 'Nothing was uploaded or promoted. Missing configuration: `%s`.\n\n' "${missing[*]}"
+              printf 'Follow docs/CLOUDFLARE_DELIVERY.md, then run this workflow manually from main.\n'
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          source_commit="$(git rev-parse HEAD)"
+          python .github/scripts/publish_prerelease_r2.py \
+            --source-dir "$GITHUB_WORKSPACE" \
+            --source-repository "ElderLich/Pre-Release-Translations" \
+            --source-commit "$source_commit" \
+            --public-base-url "$R2_PRERELEASE_PUBLIC_BASE_URL" \
+            --bucket "$R2_PRERELEASE_BUCKET" \
+            --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
+            --catalog-key "prerelease/catalog-v1.json"

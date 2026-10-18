@@ -97,7 +97,7 @@ Standard also supports automatic English and French source text. Existing transl
 - **Daily updates.** One dispatcher checks what needs updating. Standard locales imported successfully within 24 hours skip scheduled imports unless the upstream package is newer. Translation releases do not postpone source imports. Rush checks source revisions and local inputs.
 - **Game packages.** Successful builds produce `.ypk` packages, JSON card data, and version files.
 
-[Read the schedule rules →](docs/AUTOMATION_SCHEDULE.md) &nbsp; [Inspect workflow runs →](https://github.com/ElderLich/Pre-Release-Translations/actions)
+[Read the schedule rules →](docs/AUTOMATION_SCHEDULE.md) &nbsp; [Inspect workflow runs →](https://github.com/ElderLich/Pre-Release-Translations/actions) &nbsp; [Cloudflare delivery →](docs/CLOUDFLARE_DELIVERY.md)
 
 <details>
 <summary><strong>Repository map & package names</strong></summary>

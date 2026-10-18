@@ -1,0 +1,390 @@
+"""Publish one complete, verified prerelease snapshot; promote its catalog last.
+
+Only small conditional S3 PUTs are used. The SDK is optional for validation/tests.
+Credentials come from environment variables and are never command arguments.
+"""
+from __future__ import annotations
+
+import argparse
+import base64
+import hashlib
+import json
+import os
+from pathlib import Path, PurePosixPath
+import re
+import shutil
+import sqlite3
+import stat
+import subprocess
+import sys
+import tempfile
+from urllib.parse import quote, urlsplit
+from urllib.request import Request, urlopen
+import zipfile
+
+
+SOURCE_REPOSITORY = "ElderLich/Pre-Release-Translations"
+CATALOG_KEY = "prerelease/catalog-v1.json"
+STANDARD_LOCALES = ("DE", "EN", "ES", "FR", "IT", "JP", "KR", "PT", "TH", "ZH-TW")
+RUSH_LOCALES = STANDARD_LOCALES + ("ZH-CN",)
+KINDS = {
+    "standard": (STANDARD_LOCALES, "ygopro-super-pre.ypk", "version.txt", "test-release.cdb"),
+    "rush": (RUSH_LOCALES, "rush-pre-release.ypk", "rush-version.txt", "rush-pre-release.cdb"),
+}
+MAX_PUT_BYTES = 5 * 1024**3 - 1
+MAX_CATALOG_BYTES = 1024 * 1024
+CHUNK_BYTES = 1024 * 1024
+
+
+class PublishError(RuntimeError):
+    """A controlled diagnostic which contains no credentials or server body."""
+
+
+def canonical_json(value):
+    return (json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False) + "\n").encode("utf-8")
+
+
+def https_base(value):
+    parsed = urlsplit(value)
+    if (parsed.scheme != "https" or not parsed.hostname or parsed.username or
+            parsed.password or parsed.query or parsed.fragment or parsed.port not in (None, 443)):
+        raise PublishError("The public base must be an HTTPS URL without credentials, query or fragment.")
+    if any(part in (".", "..") for part in parsed.path.split("/")):
+        raise PublishError("The public base contains an unsafe path.")
+    return value.rstrip("/")
+
+
+def inventory_paths():
+    return [f"{locale}/{name}" for locales, package, version, _ in KINDS.values()
+            for locale in locales for name in (package, version)]
+
+
+def sha256_file(path):
+    digest = hashlib.sha256()
+    with path.open("rb") as stream:
+        for chunk in iter(lambda: stream.read(CHUNK_BYTES), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+
+def validate_archive(path, database):
+    try:
+        with zipfile.ZipFile(path) as archive:
+            names = set()
+            for item in archive.infolist():
+                name = item.filename
+                parts = PurePosixPath(name).parts
+                if (not name or name.startswith("/") or "\\" in name or ":" in name or
+                        any(part in (".", "..") for part in parts) or
+                        any(ord(character) < 32 for character in name) or
+                        name.casefold() in names or item.flag_bits & 1 or
+                        stat.S_ISLNK(item.external_attr >> 16)):
+                    raise PublishError(f"Unsafe or duplicate archive entry in {path.name}.")
+                names.add(name.casefold())
+            if database not in archive.namelist() or archive.getinfo(database).is_dir():
+                raise PublishError(f"Required database is missing from {path.name}.")
+            if archive.testzip() is not None:
+                raise PublishError(f"Archive CRC validation failed for {path.name}.")
+            # Check the actual database, not merely a ZIP magic number or filename.
+            with tempfile.TemporaryDirectory(prefix="mdpro4-prerelease-db-") as temporary:
+                db_path = Path(temporary) / "cards.cdb"
+                with archive.open(database) as source, db_path.open("wb") as target:
+                    shutil.copyfileobj(source, target, CHUNK_BYTES)
+                connection = sqlite3.connect(db_path.as_uri() + "?mode=ro", uri=True)
+                try:
+                    if connection.execute("PRAGMA quick_check").fetchall() != [("ok",)]:
+                        raise PublishError(f"Database integrity validation failed for {path.name}.")
+                    connection.execute("SELECT id FROM datas LIMIT 0")
+                    connection.execute("SELECT id,name,desc FROM texts LIMIT 0")
+                finally:
+                    connection.close()
+    except PublishError:
+        raise
+    except (OSError, ValueError, RuntimeError, zipfile.BadZipFile, sqlite3.Error):
+        raise PublishError(f"Invalid prerelease archive: {path.name}.") from None
+
+
+def build_snapshot(source_dir, source_commit, public_base, source_repository=SOURCE_REPOSITORY):
+    if source_repository != SOURCE_REPOSITORY or not re.fullmatch(r"[0-9a-f]{40}", source_commit):
+        raise PublishError("Expected the configured source repository and a lowercase 40-character commit SHA.")
+    public_base = https_base(public_base)
+    root = Path(source_dir).resolve()
+    packs, files = [], {}
+    for kind, (locales, filename, version_name, database) in KINDS.items():
+        for locale in locales:
+            path = root / locale / filename
+            version_path = root / locale / version_name
+            for candidate in (path, version_path):
+                if (not candidate.is_file() or candidate.is_symlink() or
+                        not candidate.resolve().is_relative_to(root)):
+                    raise PublishError(f"Missing or unsafe required input: {locale}/{candidate.name}.")
+            size = path.stat().st_size
+            if not 0 < size <= MAX_PUT_BYTES:
+                raise PublishError(f"Package size is outside the conditional PUT limit: {locale}/{filename}.")
+            if version_path.stat().st_size > 128:
+                raise PublishError(f"Invalid version file: {locale}/{version_name}.")
+            try:
+                version = version_path.read_text(encoding="utf-8-sig").strip()
+            except (OSError, UnicodeError):
+                raise PublishError(f"Unreadable version file: {locale}/{version_name}.") from None
+            if not re.fullmatch(r"[0-9]{1,20}", version) or int(version) <= 0:
+                raise PublishError(f"Invalid version file: {locale}/{version_name}.")
+            validate_archive(path, database)
+            digest = sha256_file(path)
+            key = f"prerelease/{kind}/{locale}/{digest}/{filename}"
+            packs.append({"locale": locale, "kind": kind, "version": version,
+                          "fileName": filename, "sizeBytes": size, "sha256": digest,
+                          "url": public_base + "/" + quote(key, safe="/"),
+                          "mirrors": [f"https://raw.githubusercontent.com/{source_repository}/{source_commit}/{locale}/{filename}"]})
+            files[key] = path
+    return {"schemaVersion": 1, "sourceRepository": source_repository,
+            "sourceCommit": source_commit, "packs": packs}, files
+
+
+def verify_checkout(source_dir, source_commit):
+    def git(*arguments):
+        result = subprocess.run(["git", "-C", str(source_dir), *arguments],
+                                capture_output=True, text=True, check=False)
+        if result.returncode:
+            raise PublishError("Could not verify the pinned source checkout.")
+        return result.stdout.strip()
+    if git("rev-parse", "HEAD") != source_commit:
+        raise PublishError("The source checkout does not match sourceCommit.")
+    paths = inventory_paths()
+    git("ls-files", "--error-unmatch", "--", *paths)
+    if git("status", "--porcelain", "--", *paths):
+        raise PublishError("Required source files differ from the pinned commit.")
+
+
+def current_main_commit(repository=SOURCE_REPOSITORY):
+    if repository != SOURCE_REPOSITORY:
+        raise PublishError("Unexpected source repository.")
+    headers = {"Accept": "application/vnd.github+json", "User-Agent": "MDPro4-prerelease-publisher",
+               "Cache-Control": "no-cache"}
+    token = os.environ.get("GH_TOKEN")
+    if token:
+        headers["Authorization"] = "Bearer " + token
+    try:
+        # The ref response is small even when the newest commit changes large
+        # card databases or translation files. Commit details include file diffs.
+        request = Request(f"https://api.github.com/repos/{repository}/git/ref/heads/main", headers=headers)
+        with urlopen(request, timeout=30) as response:
+            data = response.read(MAX_CATALOG_BYTES + 1)
+        if len(data) > MAX_CATALOG_BYTES:
+            raise ValueError("response size")
+        value = json.loads(data)
+        if value.get("ref") != "refs/heads/main" or value.get("object", {}).get("type") != "commit":
+            raise ValueError("ref identity")
+        commit = value["object"]["sha"]
+        if not isinstance(commit, str) or not re.fullmatch(r"[0-9a-f]{40}", commit):
+            raise ValueError("commit")
+        return commit
+    except Exception:
+        raise PublishError("Could not verify the current source main commit; catalog was not promoted.") from None
+
+
+def verify_public(url, expected_size, expected_sha256):
+    try:
+        request = Request(url, headers={"Cache-Control": "no-cache", "Accept-Encoding": "identity"})
+        with urlopen(request, timeout=60) as response:
+            if response.status != 200 or urlsplit(response.geturl()).scheme != "https":
+                raise ValueError("status or transport")
+            count, digest = 0, hashlib.sha256()
+            for chunk in iter(lambda: response.read(CHUNK_BYTES), b""):
+                count += len(chunk)
+                if count > expected_size:
+                    raise ValueError("oversized response")
+                digest.update(chunk)
+        if count != expected_size or digest.hexdigest() != expected_sha256:
+            raise ValueError("content mismatch")
+    except Exception:
+        raise PublishError("Public payload verification failed; catalog was not promoted.") from None
+
+
+def error_status(error):
+    response = getattr(error, "response", {})
+    return response.get("ResponseMetadata", {}).get("HTTPStatusCode")
+
+
+def read_catalog(client, bucket, key):
+    try:
+        response = client.get_object(Bucket=bucket, Key=key)
+        body = response["Body"]
+        try:
+            data = body.read(MAX_CATALOG_BYTES + 1)
+        finally:
+            body.close()
+        if len(data) > MAX_CATALOG_BYTES or not response.get("ETag"):
+            raise PublishError("Existing catalog is oversized or has no ETag.")
+        return data, response["ETag"]
+    except PublishError:
+        raise
+    except Exception as error:
+        if error_status(error) == 404:
+            return None, None
+        raise PublishError("Could not read the current R2 catalog.") from None
+
+
+def ensure_payload(client, bucket, key, path, pack, public_verifier):
+    # A HEAD avoids resending an existing file, but never substitutes for a full
+    # public read-back. Its metadata/ETag is not a trusted SHA-256 proof.
+    absent = False
+    try:
+        result = client.head_object(Bucket=bucket, Key=key)
+        if result.get("ContentLength") != pack["sizeBytes"]:
+            raise PublishError("An immutable payload key has conflicting bytes.")
+    except PublishError:
+        raise
+    except Exception as error:
+        if error_status(error) != 404:
+            raise PublishError("Could not inspect an immutable R2 payload.") from None
+        absent = True
+    if absent:
+        # Re-hash at the write boundary, so changed local files cannot be uploaded
+        # with an earlier snapshot's identity. The runner owns this checkout.
+        if path.stat().st_size != pack["sizeBytes"] or sha256_file(path) != pack["sha256"]:
+            raise PublishError("A local package changed after validation.")
+        md5 = hashlib.md5(usedforsecurity=False)
+        with path.open("rb") as stream:
+            for chunk in iter(lambda: stream.read(CHUNK_BYTES), b""):
+                md5.update(chunk)
+            stream.seek(0)
+            try:
+                client.put_object(Bucket=bucket, Key=key, Body=stream, IfNoneMatch="*",
+                                  ContentLength=pack["sizeBytes"],
+                                  ContentMD5=base64.b64encode(md5.digest()).decode("ascii"),
+                                  Metadata={"sha256": pack["sha256"]},
+                                  ContentType="application/zip", CacheControl="public, max-age=31536000, immutable")
+            except Exception as error:
+                if error_status(error) != 412:
+                    raise PublishError("R2 payload upload failed; catalog was not promoted.") from None
+                # Another create-once writer won. Compare its actual public bytes.
+    public_verifier(pack["url"], pack["sizeBytes"], pack["sha256"])
+
+
+def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_public,
+                     main_resolver=current_main_commit, catalog_key=CATALOG_KEY):
+    if catalog_key != CATALOG_KEY:
+        raise PublishError("Unexpected catalog key.")
+    expected = {(kind, locale) for kind, (locales, _, _, _) in KINDS.items() for locale in locales}
+    packs = catalog.get("packs", [])
+    actual = [(pack.get("kind"), pack.get("locale")) for pack in packs]
+    if (catalog.get("schemaVersion") != 1 or catalog.get("sourceRepository") != SOURCE_REPOSITORY or
+            not re.fullmatch(r"[0-9a-f]{40}", catalog.get("sourceCommit", "")) or
+            len(actual) != len(expected) or set(actual) != expected):
+        raise PublishError("Refusing to publish an incomplete or unexpected catalog snapshot.")
+    keys, public_bases = set(), set()
+    for pack in packs:
+        kind, locale = pack["kind"], pack["locale"]
+        filename = KINDS[kind][1]
+        if (pack.get("fileName") != filename or not re.fullmatch(r"[0-9a-f]{64}", pack.get("sha256", "")) or
+                type(pack.get("sizeBytes")) is not int or not 0 < pack["sizeBytes"] <= MAX_PUT_BYTES or
+                not re.fullmatch(r"[0-9]{1,20}", pack.get("version", "")) or int(pack["version"]) <= 0):
+            raise PublishError("Refusing to publish an invalid package descriptor.")
+        key = f"prerelease/{kind}/{locale}/{pack['sha256']}/{filename}"
+        https_base(pack.get("url", ""))
+        if (not pack["url"].endswith("/" + key) or pack.get("mirrors") !=
+                [f"https://raw.githubusercontent.com/{SOURCE_REPOSITORY}/{catalog['sourceCommit']}/{locale}/{filename}"]):
+            raise PublishError("Refusing to publish an unpinned or mismatched package URL.")
+        keys.add(key)
+        public_bases.add(pack["url"][:-(len(key) + 1)])
+    if set(files) != keys:
+        raise PublishError("Catalog and local package inventory differ.")
+    if len(public_bases) != 1:
+        raise PublishError("Catalog payloads must use one public delivery base.")
+    public_catalog_url = next(iter(public_bases)) + "/" + catalog_key
+    previous, etag = read_catalog(client, bucket, catalog_key)
+    for pack in catalog["packs"]:
+        key = f"prerelease/{pack['kind']}/{pack['locale']}/{pack['sha256']}/{pack['fileName']}"
+        ensure_payload(client, bucket, key, files[key], pack, public_verifier)
+    if main_resolver(catalog["sourceRepository"]) != catalog["sourceCommit"]:
+        raise PublishError("Source main advanced; rerun publication from its latest complete snapshot.")
+    body = canonical_json(catalog)
+    if previous == body:
+        verify_public_catalog(public_verifier, public_catalog_url, body)
+        return "unchanged"
+    conditions = {"IfMatch": etag} if etag else {"IfNoneMatch": "*"}
+    try:
+        client.put_object(Bucket=bucket, Key=catalog_key, Body=body, **conditions,
+                          ContentType="application/json; charset=utf-8",
+                          CacheControl="no-cache, max-age=0, must-revalidate",
+                          ContentMD5=base64.b64encode(hashlib.md5(body, usedforsecurity=False).digest()).decode("ascii"))
+    except Exception:
+        # A timeout can mean the write committed. A conflict can be an identical
+        # concurrent run. Neither permits replacing a different current catalog.
+        current, _ = read_catalog(client, bucket, catalog_key)
+        if current != body:
+            raise PublishError("Catalog promotion conflicted or failed; current catalog was preserved.") from None
+    confirmed, _ = read_catalog(client, bucket, catalog_key)
+    if confirmed != body:
+        raise PublishError("Catalog changed after promotion; rerun from current source main.")
+    verify_public_catalog(public_verifier, public_catalog_url, body)
+    return "published"
+
+
+def verify_public_catalog(public_verifier, url, body):
+    try:
+        public_verifier(url, len(body), hashlib.sha256(body).hexdigest())
+    except Exception:
+        # The conditional write has already committed. Rolling it back could
+        # erase another publisher's work and cannot repair a public cache rule.
+        raise PublishError("Catalog is committed to R2 but public catalog verification failed; check the public host and rerun publication.") from None
+
+
+def create_client(endpoint):
+    if not re.fullmatch(r"https://[a-z0-9]{32}(?:\.(?:eu|us|fedramp))?\.r2\.cloudflarestorage\.com/?", endpoint):
+        raise PublishError("Use the account's HTTPS R2 S3 endpoint.")
+    access = os.environ.get("AWS_ACCESS_KEY_ID")
+    secret = os.environ.get("AWS_SECRET_ACCESS_KEY")
+    if not access or not secret:
+        raise PublishError("R2 upload credentials are not configured.")
+    try:
+        import boto3
+        from botocore.config import Config
+    except ImportError:
+        raise PublishError("Install requirements-prerelease-r2.txt before publishing.") from None
+    return boto3.client("s3", endpoint_url=endpoint.rstrip("/"), region_name="auto",
+                        aws_access_key_id=access, aws_secret_access_key=secret,
+                        aws_session_token=os.environ.get("AWS_SESSION_TOKEN"),
+                        config=Config(signature_version="s3v4", connect_timeout=30, read_timeout=120,
+                                      retries={"mode": "standard", "total_max_attempts": 3},
+                                      request_checksum_calculation="when_required",
+                                      response_checksum_validation="when_required"))
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--source-dir", type=Path, required=True)
+    parser.add_argument("--source-commit", required=True)
+    parser.add_argument("--source-repository", default=SOURCE_REPOSITORY)
+    parser.add_argument("--public-base-url", required=True)
+    parser.add_argument("--bucket", default="mdpro4-prerelease")
+    parser.add_argument("--endpoint-url")
+    parser.add_argument("--catalog-key", default=CATALOG_KEY)
+    parser.add_argument("--dry-run", action="store_true", help="Validate local inputs without credentials or network access")
+    args = parser.parse_args(argv)
+    try:
+        if not re.fullmatch(r"[a-z0-9][a-z0-9-]{1,61}[a-z0-9]", args.bucket):
+            raise PublishError("Invalid R2 bucket name.")
+        verify_checkout(args.source_dir, args.source_commit)
+        catalog, files = build_snapshot(args.source_dir, args.source_commit, args.public_base_url, args.source_repository)
+        if args.dry_run:
+            print(f"Validated {len(catalog['packs'])} packages; dry run uploaded nothing.")
+            return 0
+        if not args.endpoint_url:
+            raise PublishError("The R2 S3 endpoint is not configured.")
+        result = publish_snapshot(create_client(args.endpoint_url), args.bucket, catalog, files,
+                                  catalog_key=args.catalog_key)
+        print(f"Prerelease catalog {result}; {len(catalog['packs'])} packages verified.")
+        return 0
+    except PublishError as error:
+        print(f"Publication stopped: {error}", file=sys.stderr)
+        return 1
+    except Exception as error:
+        # SDK/HTTP exception text can contain signed URLs or credential material.
+        print(f"Publication stopped: {type(error).__name__}; no diagnostic response body was logged.", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
