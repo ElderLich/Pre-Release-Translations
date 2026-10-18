@@ -1,73 +1,8 @@
 {
   "language": "en",
-  "candidates": 16,
-  "matched": 16,
+  "candidates": 0,
+  "matched": 0,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {
-    "101307005": {
-      "set_code": "IMPH-JP005",
-      "source": "https://yugipedia.com/wiki/Amazoness_Chain_Master_-_Brink_of_Death_Chain_Dance"
-    },
-    "101307006": {
-      "set_code": "IMPH-JP006",
-      "source": "https://yugipedia.com/wiki/Amazoness_Fighter_-_Instant_Kill_Dance"
-    },
-    "101307007": {
-      "set_code": "IMPH-JP007",
-      "source": "https://yugipedia.com/wiki/Amazoness_Spellcaster_-_Forbidden_Spell_Dance"
-    },
-    "101307008": {
-      "set_code": "IMPH-JP008",
-      "source": "https://yugipedia.com/wiki/Harpie_Lady_-_Alluring_Dance"
-    },
-    "101307015": {
-      "set_code": "IMPH-JP015",
-      "source": "https://yugipedia.com/wiki/Primrose_the_Twin_Rikka_Fairy"
-    },
-    "101307016": {
-      "set_code": "IMPH-JP016",
-      "source": "https://yugipedia.com/wiki/Rikka_Black_Princess"
-    },
-    "101307032": {
-      "set_code": "IMPH-JP032",
-      "source": "https://yugipedia.com/wiki/Amazoness_Swordmaster"
-    },
-    "101307033": {
-      "set_code": "IMPH-JP033",
-      "source": "https://yugipedia.com/wiki/Triangle_Ecstasy_Harpie_Lady_Sisters"
-    },
-    "101307041": {
-      "set_code": "IMPH-JP041",
-      "source": "https://yugipedia.com/wiki/Teardrop_the_Rikka_Empress"
-    },
-    "101307042": {
-      "set_code": "IMPH-JP042",
-      "source": "https://yugipedia.com/wiki/Rikka_Empress_Strenna"
-    },
-    "101307053": {
-      "set_code": "IMPH-JP053",
-      "source": "https://yugipedia.com/wiki/Elegant_Tri-Mirror"
-    },
-    "101307054": {
-      "set_code": "IMPH-JP054",
-      "source": "https://yugipedia.com/wiki/Harpie_%26_Amazoness_Rakshasa_Formation"
-    },
-    "101307064": {
-      "set_code": "IMPH-JP064",
-      "source": "https://yugipedia.com/wiki/Rikka_June_Moon"
-    },
-    "101307067": {
-      "set_code": "IMPH-JP067",
-      "source": "https://yugipedia.com/wiki/Power_of_the_Duelist_%28card%29"
-    },
-    "101307074": {
-      "set_code": "IMPH-JP074",
-      "source": "https://yugipedia.com/wiki/Amazoness_Dramatic_Rescue"
-    },
-    "101307075": {
-      "set_code": "IMPH-JP075",
-      "source": "https://yugipedia.com/wiki/Eyelluring_Mirror_Wall"
-    }
-  }
+  "matches": {}
 }
