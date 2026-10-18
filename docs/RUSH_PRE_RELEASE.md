@@ -61,7 +61,10 @@ The workflow and daily freshness check use the project's advertised HTTPS URL,
 SSH hostname; it does not serve the HTTPS clone used by GitHub runners.
 `.github/scripts/fetch_rush_sources.py` fetches fresh shallow checkouts of Rush
 and only the `Data/locales/*/rush_cards.cdb` seed databases, with three attempts.
-Clones have a 90-second limit; the larger database transfer has five minutes.
+Connections may stay below 1 KiB/s for up to 60 seconds before retrying.
+Each clone and sparse database transfer has a five-minute limit, with 15- and
+45-second pauses between attempts. Both repositories share a 15-minute download
+budget so the 30-minute workflow retains time for packaging. Tags are skipped.
 Timeouts terminate Git workers before partial attempts are discarded. Required
 source files are checked, and existing checkouts are never overwritten. A source outage stops publication
 instead of building packages from an old cached patch.
