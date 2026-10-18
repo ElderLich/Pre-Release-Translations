@@ -5,7 +5,7 @@
     "lang": "it",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261017_121557",
+    "timestamp": "20261018_123810",
     "rows_in_report": 6,
     "unique_cn_strings": 8,
     "total_cn_cells": 8
@@ -55,8 +55,8 @@
   "cards": [
     {
       "id": 101307005,
-      "name": "亚马逊锁链使-临终锁舞-",
-      "desc": "这个卡名的效果1回合只能使用1次。\r\n①：这张卡被送去墓地的场合，若自己墓地有其他「亚马逊」怪兽存在，则能支付1000基本分发动。对方可以从自身卡组·额外卡组选1只10星怪兽。那个场合，自己可以把那只怪兽无视召唤条件在自己场上特殊召唤。没有选的场合，自己把对方手卡随机丢弃1张。这个效果特殊召唤的怪兽在这个回合不能把效果发动。",
+      "name": "Maestra delle Catene Amazzones - Danza Incatenata al Ciglio della Morte",
+      "desc": "Se questa carta viene mandata al Cimitero e hai un altro mostro \"Amazoness\" nel tuo Cimitero: puoi pagare 1000 LP; il tuo avversario può scegliere 1 mostro di Livello 10 nel suo Deck o Extra Deck e, se lo fa, puoi Evocarlo Specialmente sul tuo Terreno, ignorando le sue condizioni di Evocazione, ma nessun giocatore può attivare i suoi effetti in questo turno. Se non lo fa, scarti 1 carta a caso dalla sua mano. Puoi utilizzare questo effetto di \"Maestra delle Catene Amazzones - Danza Incatenata al Ciglio della Morte\" una sola volta per turno.",
       "str1": "Attiva",
       "str2": "是否选卡？",
       "str3": "",
@@ -80,12 +80,12 @@
           "normalized": "是否选卡?"
         }
       ],
-      "desc_preview": "这个卡名的效果1回合只能使用1次。\r\n①：这张卡被送去墓地的场合，若自己墓地有其他「亚马逊」怪兽存在，则能支付1000基本分发动。对方可以从自身卡组·额外卡组选1只10星怪兽。那个场合，自己可以把那只怪兽无视召唤条件在自己场上特殊召唤。没有选的场合，自己把对方手卡随机丢弃1张。这个效果特殊召唤的怪兽在这个回合不能把效果发动。"
+      "desc_preview": "Se questa carta viene mandata al Cimitero e hai un altro mostro \"Amazoness\" nel tuo Cimitero: puoi pagare 1000 LP; il tuo avversario può scegliere 1 mostro di Livello 10 nel suo Deck o Extra Deck e, se lo fa, puoi Evocarlo Specialmente sul tuo Terreno, ignorando le sue condizioni di Evocazione, ma nessun giocatore può attivare i suoi effetti in questo turno. Se non lo fa, scarti 1 carta a caso dalla sua mano. Puoi utilizzare questo effetto di \"Maestra delle Catene Amazzones - Danza Incatenata al Ciglio della Morte\" una sola volta per turno."
     },
     {
       "id": 101307007,
-      "name": "亚马逊诅咒师-咒印之舞-",
-      "desc": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡召唤·特殊召唤的场合才能发动。从卡组把3星以外的1只「亚马逊」怪兽加入手卡。\r\n②：自己主要阶段才能发动。自己的手卡·场上的怪兽作为融合素材，把1只地·风属性融合怪兽融合召唤。\r\n③：自己的「亚马逊」怪兽和对方怪兽进行战斗的伤害计算时，把墓地的这张卡除外才能发动。那2只的攻击力直到回合结束时交换。",
+      "name": "Incantatrice Amazoness - Danza dell'Incantesimo Proibito",
+      "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 mostro \"Amazoness\" dal tuo Deck alla tua mano, eccetto un mostro di Livello 3.\r\nDurante la tua Main Phase: puoi Evocare tramite Fusione 1 Mostro Fusione TERRA o VENTO dal tuo Extra Deck, utilizzando mostri dalla tua mano o Terreno.\r\nDurante il calcolo dei danni, se un tuo mostro \"Amazoness\" combatte con un mostro dell'avversario: puoi bandire questa carta dal tuo Cimitero; scambia l'ATK dei mostri che combattono fino alla fine di questo turno.\r\nPuoi utilizzare ciascun effetto di \"Incantatrice Amazoness - Danza dell'Incantesimo Proibito\" una sola volta per turno.",
       "str1": "Aggiungere alla mano",
       "str2": "Evocazione tramite Fusione",
       "str3": "攻击力交换",
@@ -109,12 +109,12 @@
           "normalized": "攻击力交换"
         }
       ],
-      "desc_preview": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡召唤·特殊召唤的场合才能发动。从卡组把3星以外的1只「亚马逊」怪兽加入手卡。\r\n②：自己主要阶段才能发动。自己的手卡·场上的怪兽作为融合素材，把1只地·风属性融合怪兽融合召唤。\r\n③：自己的「亚马逊」怪兽和对方怪兽进行战斗的伤害计算时，把墓地的这张卡除外才能发动。那2只的攻击力直到回合结束时交换。"
+      "desc_preview": "Se questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 mostro \"Amazoness\" dal tuo Deck alla tua mano, eccetto un mostro di Livello 3.\r\nDurante la tua Main Phase: puoi Evocare tramite Fusione 1 Mostro Fusione TERRA o VENTO dal tuo Extra Deck, utilizzando mostri dalla tua mano o Terreno.\r\nDurante il calcolo dei danni, se un tuo mostro \"Amazoness\" combatte con un mostro dell'avversario: puoi bandire questa carta dal tuo Cimitero; scambia l'ATK dei mostri che combattono fino alla fine di questo turno.\r\nPuoi utilizzare ciascun effetto di \"Incantatrice Amazoness - Danza dell'Incantesimo Proibito\" una sola volta per turno."
     },
     {
       "id": 101307041,
-      "name": "六花深圣 泪滴花束雪花莲",
-      "desc": "植物族10星怪兽×2\r\n这张卡也能在自己场上的「六花圣 泪滴花束雪花莲」上面重叠来超量召唤。这个卡名的①的效果1回合只能使用1次。\r\n①：自己·对方回合，把这张卡最多6个超量素材取除才能发动。以那个数量把场上的魔法·陷阱卡送去墓地。那之后，可以把自己或对方场上1只怪兽解放。\r\n②：怪兽被解放的场合发动。对方墓地1张卡作为自己场上的1只植物族超量怪兽的超量素材。",
+      "name": "Lacrima l'Imperatrice Rikka",
+      "desc": "2 mostri Pianta di Livello 10\r\nPuoi anche Evocare tramite Xyz questa carta utilizzando \"Lacrima la Regina Rikka\" che controlli (trasferisci i suoi materiali).\r\n(Effetto Rapido): puoi staccare fino a 6 materiali da questa carta; manda al Cimitero altrettante Magie/Trappole sul Terreno, poi puoi offrire come Tributo 1 mostro sul Terreno. Puoi utilizzare questo effetto di \"Lacrima l'Imperatrice Rikka\" una sola volta per turno.\r\nOgni volta che uno o più mostri vengono offerti come Tributo: attacca 1 carta dal Cimitero del tuo avversario a 1 Mostro Xyz Pianta che controlli come materiale.",
       "str1": "Evocare Xyz usando {CARD} come materiale?",
       "str2": "把卡送去墓地",
       "str3": "Attaccare Materiale Xyz",
@@ -138,12 +138,12 @@
           "normalized": "把卡送去墓地"
         }
       ],
-      "desc_preview": "植物族10星怪兽×2\r\n这张卡也能在自己场上的「六花圣 泪滴花束雪花莲」上面重叠来超量召唤。这个卡名的①的效果1回合只能使用1次。\r\n①：自己·对方回合，把这张卡最多6个超量素材取除才能发动。以那个数量把场上的魔法·陷阱卡送去墓地。那之后，可以把自己或对方场上1只怪兽解放。\r\n②：怪兽被解放的场合发动。对方墓地1张卡作为自己场上的1只植物族超量怪兽的超量素材。"
+      "desc_preview": "2 mostri Pianta di Livello 10\r\nPuoi anche Evocare tramite Xyz questa carta utilizzando \"Lacrima la Regina Rikka\" che controlli (trasferisci i suoi materiali).\r\n(Effetto Rapido): puoi staccare fino a 6 materiali da questa carta; manda al Cimitero altrettante Magie/Trappole sul Terreno, poi puoi offrire come Tributo 1 mostro sul Terreno. Puoi utilizzare questo effetto di \"Lacrima l'Imperatrice Rikka\" una sola volta per turno.\r\nOgni volta che uno o più mostri vengono offerti come Tributo: attacca 1 carta dal Cimitero del tuo avversario a 1 Mostro Xyz Pianta che controlli come materiale."
     },
     {
       "id": 101307054,
-      "name": "鹰身&亚马逊 -罗刹之阵-",
-      "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：以自己墓地·除外状态的1只「鹰身」怪兽或「亚马逊」怪兽为对象才能发动。那只怪兽特殊召唤。那之后，可以根据自己场上的「鹰身女郎」以及「亚马逊」怪兽的数量从以下选1个适用。\r\n●1只以上：从卡组把1张「诱惑之镜壁」在自己的魔法与陷阱区域以表侧表示放置。\r\n●2只以上：得到对方场上1只怪兽的控制权。\r\n●3只以上：对方场上的怪兽全部破坏。",
+      "name": "Arpia & Amazoness Formazione Rakshasa",
+      "desc": "Scegli come bersaglio 1 mostro \"Arpia\" o \"Amazoness\" nel tuo Cimitero o tra le tue carte bandite; Evocalo Specialmente, poi puoi applicare 1 di questi effetti a seconda del numero di mostri \"Amazoness\" e \"Lady Arpia\" che controlli.\r\n● 1+: Metti 1 \"Muro a Specchio Ammaliante\" dal tuo Deck scoperto nella tua Zona Magie & Trappole.\r\n● 2+: Prendi il controllo di 1 mostro controllato dal tuo avversario.\r\n● 3+: Distruggi tutti i mostri controllati dal tuo avversario.\r\nPuoi attivare solo 1 \"Arpia & Amazoness Formazione Rakshasa\" per turno.",
       "str1": "Attiva",
       "str2": "Effetto di posizionamento",
       "str3": "控制权获取",
@@ -167,12 +167,12 @@
           "normalized": "控制权获取"
         }
       ],
-      "desc_preview": "这个卡名的卡在1回合只能发动1张。\r\n①：以自己墓地·除外状态的1只「鹰身」怪兽或「亚马逊」怪兽为对象才能发动。那只怪兽特殊召唤。那之后，可以根据自己场上的「鹰身女郎」以及「亚马逊」怪兽的数量从以下选1个适用。\r\n●1只以上：从卡组把1张「诱惑之镜壁」在自己的魔法与陷阱区域以表侧表示放置。\r\n●2只以上：得到对方场上1只怪兽的控制权。\r\n●3只以上：对方场上的怪兽全部破坏。"
+      "desc_preview": "Scegli come bersaglio 1 mostro \"Arpia\" o \"Amazoness\" nel tuo Cimitero o tra le tue carte bandite; Evocalo Specialmente, poi puoi applicare 1 di questi effetti a seconda del numero di mostri \"Amazoness\" e \"Lady Arpia\" che controlli.\r\n● 1+: Metti 1 \"Muro a Specchio Ammaliante\" dal tuo Deck scoperto nella tua Zona Magie & Trappole.\r\n● 2+: Prendi il controllo di 1 mostro controllato dal tuo avversario.\r\n● 3+: Distruggi tutti i mostri controllati dal tuo avversario.\r\nPuoi attivare solo 1 \"Arpia & Amazoness Formazione Rakshasa\" per turno."
     },
     {
       "id": 101307067,
-      "name": "决斗者之力",
-      "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：宣言以下数量的属性才能发动。那个效果适用。这个回合的结束阶段，除非是自己在这个回合把宣言的各属性的怪兽的效果在场上·墓地发动过的场合，自己必须把自己场上的卡全部送去墓地。\r\n●2：以场上1只怪兽为对象才能发动。那个除外。\r\n●3：自己抽2张。那之后，选自己1张手卡丢弃。\r\n●4：场上2张表侧表示卡的效果无效。",
+      "name": "Potere del Duellante",
+      "desc": "Dichiara 2, 3 o 4 Attributi; applica questo effetto a seconda del numero dichiarato, inoltre durante la End Phase di questo turno, devi mandare tutte le carte che controlli al Cimitero, a meno che tu non abbia attivato in questo turno gli effetti di mostri di tutti gli Attributi dichiarati sul tuo Terreno e/o nel tuo Cimitero.\r\n● 2: Scegli come bersaglio 1 mostro sul Terreno; bandiscilo.\r\n● 3: Pesca 2 carte, poi scarta 1 carta.\r\n● 4: Annulla gli effetti di 2 carte scoperte sul Terreno.\r\nPuoi attivare solo 1 \"Potere del Duellante\" per turno.",
       "str1": "Attiva",
       "str2": "宣言2个",
       "str3": "宣言3个",
@@ -206,12 +206,12 @@
           "normalized": "宣言4个"
         }
       ],
-      "desc_preview": "这个卡名的卡在1回合只能发动1张。\r\n①：宣言以下数量的属性才能发动。那个效果适用。这个回合的结束阶段，除非是自己在这个回合把宣言的各属性的怪兽的效果在场上·墓地发动过的场合，自己必须把自己场上的卡全部送去墓地。\r\n●2：以场上1只怪兽为对象才能发动。那个除外。\r\n●3：自己抽2张。那之后，选自己1张手卡丢弃。\r\n●4：场上2张表侧表示卡的效果无效。"
+      "desc_preview": "Dichiara 2, 3 o 4 Attributi; applica questo effetto a seconda del numero dichiarato, inoltre durante la End Phase di questo turno, devi mandare tutte le carte che controlli al Cimitero, a meno che tu non abbia attivato in questo turno gli effetti di mostri di tutti gli Attributi dichiarati sul tuo Terreno e/o nel tuo Cimitero.\r\n● 2: Scegli come bersaglio 1 mostro sul Terreno; bandiscilo.\r\n● 3: Pesca 2 carte, poi scarta 1 carta.\r\n● 4: Annulla gli effetti di 2 carte scoperte sul Terreno.\r\nPuoi attivare solo 1 \"Potere del Duellante\" per turno."
     },
     {
       "id": 101307075,
-      "name": "诱惑之镜壁",
-      "desc": "①：只要自己场上有「鹰身女郎」或「亚马逊」怪兽存在，这张卡得到以下效果。\r\n●对方场上的表侧表示怪兽变成攻击表示，可以攻击的对方怪兽必须作出攻击。\r\n●对方怪兽的攻击宣言时1次，可以发动。那只怪兽的攻击力变成一半。\r\n②：自己·对方的准备阶段1次，可以发动。从自己的墓地·除外状态把除「诱惑之镜壁」外的，有「鹰身女郎」的卡名记述的1张魔法·陷阱卡在自己场上盖放。",
+      "name": "Muro a Specchio Ammaliante",
+      "desc": "Guadagna questi effetti mentre controlli un mostro \"Amazoness\" o \"Lady Arpia\".\r\n● I mostri scoperti controllati dal tuo avversario vengono messi in Posizione di Attacco e devono attaccare, se possibile.\r\n● Una volta per battaglia, quando un mostro dell'avversario dichiara un attacco: puoi dimezzare il suo ATK.\r\nUna volta per turno, durante la Standby Phase: puoi Posizionare 1 Magia/Trappola dal tuo Cimitero o dalle tue carte bandite che menziona \"Lady Arpia\", eccetto \"Muro a Specchio Ammaliante\".",
       "str1": "",
       "str2": "攻击力减半",
       "str3": "Posiziona",
@@ -235,7 +235,7 @@
           "normalized": "攻击力减半"
         }
       ],
-      "desc_preview": "①：只要自己场上有「鹰身女郎」或「亚马逊」怪兽存在，这张卡得到以下效果。\r\n●对方场上的表侧表示怪兽变成攻击表示，可以攻击的对方怪兽必须作出攻击。\r\n●对方怪兽的攻击宣言时1次，可以发动。那只怪兽的攻击力变成一半。\r\n②：自己·对方的准备阶段1次，可以发动。从自己的墓地·除外状态把除「诱惑之镜壁」外的，有「鹰身女郎」的卡名记述的1张魔法·陷阱卡在自己场上盖放。"
+      "desc_preview": "Guadagna questi effetti mentre controlli un mostro \"Amazoness\" o \"Lady Arpia\".\r\n● I mostri scoperti controllati dal tuo avversario vengono messi in Posizione di Attacco e devono attaccare, se possibile.\r\n● Una volta per battaglia, quando un mostro dell'avversario dichiara un attacco: puoi dimezzare il suo ATK.\r\nUna volta per turno, durante la Standby Phase: puoi Posizionare 1 Magia/Trappola dal tuo Cimitero o dalle tue carte bandite che menziona \"Lady Arpia\", eccetto \"Muro a Specchio Ammaliante\"."
     }
   ]
 }
