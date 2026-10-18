@@ -1,14 +1,93 @@
 {
   "language": "en",
-  "matches": {},
+  "matches": {
+    "120310001": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP001",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Aquila"
+    },
+    "120310036": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP036",
+      "source": "https://yugipedia.com/wiki/Rocktusk_Beast_Babirusaite"
+    }
+  },
   "requested_ids": [
-    120310036
+    120000012,
+    120310001,
+    120310020,
+    120310021,
+    120310022,
+    120310023,
+    120310025,
+    120310036,
+    120310041,
+    120310046,
+    120310054,
+    120310055,
+    120310066
   ],
   "unresolved": [
     {
-      "id": 120310036,
+      "id": 120000012,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
+    },
+    {
+      "id": 120310020,
       "reason": "No source card page found",
-      "set_code": "RD/KP27-JP036"
+      "set_code": "RD/KP27-JP020"
+    },
+    {
+      "id": 120310021,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP021"
+    },
+    {
+      "id": 120310022,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP022"
+    },
+    {
+      "id": 120310023,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP023"
+    },
+    {
+      "id": 120310025,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP025"
+    },
+    {
+      "id": 120310041,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP041"
+    },
+    {
+      "id": 120310046,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP046"
+    },
+    {
+      "id": 120310054,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP054"
+    },
+    {
+      "id": 120310055,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP055"
+    },
+    {
+      "id": 120310066,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP066"
     }
   ]
 }
