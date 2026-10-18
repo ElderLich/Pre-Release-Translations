@@ -33,6 +33,15 @@ conflictos que indique el programa. Las descargas se verifican por SHA y se
 reutilizan cuando vuelves a intentar una operación interrumpida. Los archivos
 remotos sin cambios no se vuelven a descargar.
 
+Standard descarga `ES/Workspace` de GitHub. Primero, **Sync ES Workspace** debe
+importar las nuevas cartas y claves de strings desde CN; **Release ES** solo
+compila las traducciones existentes. Cuando no cambian los archivos de GitHub,
+el script muestra el estado del importador y la última importación correcta,
+sin afirmar que la fuente CN esté al día. Si la importación sigue en curso,
+vuelve a sincronizar cuando termine. También puedes ejecutar **Sync ES Workspace**
+desde Actions para solicitar una importación inmediata. El control diario se
+cuenta desde la última importación correcta; subir traducciones no lo reinicia.
+
 Al actualizar desde la versión anterior, la primera sincronización recupera la
 base anterior a partir de los SHA guardados. Puede necesitar una descarga
 adicional una sola vez. Si no existe un SHA anterior válido, conserva el texto

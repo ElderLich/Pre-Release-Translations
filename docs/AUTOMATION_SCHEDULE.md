@@ -4,11 +4,17 @@
 08:10 UTC and uses one lightweight job to choose the imports that need running.
 It does not download or rebuild the card packages itself.
 
-- A locale released within the previous 24 hours skips its next scheduled import.
-  For example, an English release ten hours before the schedule skips the EN job.
+- A locale whose source import succeeded within the previous 24 hours skips its
+  next scheduled import. This uses the start time of the latest successful
+  `Sync <LANG> Workspace` run, including a successful run with no file changes.
+  ZH-TW uses its combined `AutoPR ZH-TW` workflow.
+- Translation uploads and release builds do not reset the import cooldown.
+  A new ES release cannot postpone the job that brings new CN cards into ES.
 - The upstream package's HTTP Last-Modified date bypasses that cooldown if a newer
-  package is available. If that date is unavailable, the cooldown remains bounded
-  to 24 hours; a manual workflow run always checks immediately.
+  package is newer than the last successful import, even if ES was released more
+  recently. If that date is unavailable, the cooldown remains bounded to 24 hours
+  after an import; a manual workspace sync always checks immediately. Missing,
+  failed or unreadable import history never marks the sources as current.
 - Each locale is checked independently, so an English-only update cannot hide
   pending work in other languages. If all locales are fresh, none of their sync
   or release workflows is launched.
@@ -22,8 +28,10 @@ The normal import/release jobs run only when needed.
 
 ## Manual updates
 
-Run the existing `Sync EN Workspace`, `Release EN`, or equivalent locale workflow
-to force that locale immediately. Translator pushes still trigger their releases.
+Run `Sync EN Workspace`, `Sync ES Workspace`, or the equivalent locale workflow
+to import the current CN cards and string keys immediately. `Release EN` and
+`Release ES` package the existing translations; they do not refresh the workspace.
+Translator pushes still trigger their releases.
 Run `Update Rush pre-release cards` to refresh every Rush locale immediately.
 The daily dispatcher also has an optional **force** switch to request all locales.
 

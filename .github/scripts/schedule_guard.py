@@ -9,8 +9,10 @@ import subprocess
 import sys
 import time
 import urllib.request
+from datetime import datetime
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from urllib.parse import urlencode
 
 from shared_downloads import YPK_URL_DEFAULT, download_urls
 from fetch_rush_sources import RUSH_SOURCE, RUSH_TRANSLATIONS
@@ -20,29 +22,38 @@ LOCALES = ("DE", "EN", "ES", "FR", "IT", "JP", "KR", "PT", "TH", "ZH-TW")
 RUSH_LOCALES = frozenset((*LOCALES, "ZH-CN"))
 
 
-def git(*args: str) -> str:
-    return subprocess.check_output(["git", *args], text=True, encoding="utf-8").strip()
-
-
-def cooldown_decision(event: str, released: int | None, now: float,
+def cooldown_decision(event: str, checked: int | None, now: float,
                       hours: float = 24, upstream_modified: float | None = None) -> tuple[bool, str]:
     if event != "schedule":
         return True, "Manual and push runs bypass the scheduled cooldown."
-    if released is None or released <= 0 or released > now:
-        return True, "No valid committed release timestamp; checking sources."
-    age = now - released
+    if checked is None or checked <= 0 or checked > now:
+        return True, "No valid successful import timestamp; checking sources."
+    age = now - checked
     if age >= hours * 3600:
-        return True, f"Last release is at least {hours:g} hours old."
-    if upstream_modified is not None and upstream_modified > released:
-        return True, "Upstream package changed after the latest release."
-    return False, f"Released {age / 3600:.1f} hours ago; next scheduled import waits until {hours:g} hours."
+        return True, f"Last successful import is at least {hours:g} hours old."
+    if upstream_modified is not None and upstream_modified > checked:
+        return True, "Upstream package changed after the latest import."
+    return False, f"Sources checked {age / 3600:.1f} hours ago; next scheduled import waits until {hours:g} hours."
 
 
-def latest_release(version_path: str) -> int | None:
+def latest_import(workflow: str, branch: str) -> int | None:
+    """A translation release does not prove that the CN workspace was refreshed."""
     try:
-        value = git("log", "-1", "--format=%ct", "--", version_path)
-        return int(value) if value else None
-    except (ValueError, subprocess.CalledProcessError):
+        query = urlencode({"branch": branch, "status": "success", "per_page": 1})
+        runs = github_api(f"actions/workflows/{workflow}/runs?{query}").get("workflow_runs", [])
+        if not runs:
+            return None
+        run = runs[0]
+        if run.get("conclusion") != "success" or run.get("head_branch") != branch:
+            return None
+        # Use the start, not completion: sources might change while a job is running.
+        value = run.get("run_started_at")
+        if not isinstance(value, str):
+            return None
+        started = datetime.fromisoformat(value.replace("Z", "+00:00"))
+        return int(started.timestamp()) if started.tzinfo else None
+    except (OSError, ValueError, TypeError, KeyError) as exc:
+        print(f"{workflow}: cannot confirm last successful import ({type(exc).__name__}); checking sources.")
         return None
 
 
@@ -75,7 +86,8 @@ def github_api(path: str, payload: dict | None = None) -> dict:
 
 
 def dispatch_workflow(workflow: str, branch: str) -> bool:
-    runs = github_api(f"actions/workflows/{workflow}/runs?branch={branch}&per_page=20").get("workflow_runs", [])
+    query = urlencode({"branch": branch, "per_page": 20})
+    runs = github_api(f"actions/workflows/{workflow}/runs?{query}").get("workflow_runs", [])
     if any(run.get("status") != "completed" for run in runs):
         print(f"{workflow}: already queued or running; no duplicate dispatch.")
         return False
@@ -116,12 +128,12 @@ def dispatch_daily(force: bool, cooldown_hours: float) -> None:
     modified = upstream_modified(UPSTREAM_YPK)
     dispatched = []
     for locale in LOCALES:
+        workflow = "autopr-zh-tw.yml" if locale == "ZH-TW" else f"{locale.lower()}-workspace-sync.yml"
         should_run, reason = cooldown_decision(
-            "workflow_dispatch" if force else "schedule", latest_release(f"{locale}/version.txt"),
+            "workflow_dispatch" if force else "schedule", None if force else latest_import(workflow, branch),
             time.time(), cooldown_hours, modified,
         )
         print(f"{locale}: {reason}")
-        workflow = "autopr-zh-tw.yml" if locale == "ZH-TW" else f"{locale.lower()}-workspace-sync.yml"
         if should_run and dispatch_workflow(workflow, branch):
             dispatched.append(locale)
     rush_changed, rush_reason = rush_needs_update()
