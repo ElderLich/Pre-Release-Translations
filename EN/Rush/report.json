@@ -165,44 +165,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310020,
-      "name": "腐灼的崇拜者"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310021,
-      "name": "绳之王冠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310022,
-      "name": "绳之王剑"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310023,
-      "name": "黑刹的暗杀者"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310025,
-      "name": "黑刹的骑士"
+      "name": "Worshiper of the Blightblaze"
     },
     {
       "fields": [
@@ -222,22 +188,6 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310041,
-      "name": "黑刹的王 绳"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310046,
-      "name": "进行腐灼的恶果"
-    },
-    {
-      "fields": [
         "str2",
         "str4"
       ],
@@ -246,21 +196,17 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310054,
-      "name": "黑腐的分歧点"
+      "name": "The Crossroads of the Blackblight"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310055,
-      "name": "蕾娜的蘑菇汤"
+      "name": "Lena's Mushroom Soup"
     },
     {
       "fields": [
@@ -276,13 +222,6 @@
       ],
       "id": 120310063,
       "name": "Mad Rare Hack"
-    },
-    {
-      "fields": [
-        "name"
-      ],
-      "id": 120310066,
-      "name": "黑腐的亡者"
     },
     {
       "fields": [
@@ -1527,26 +1466,26 @@
     "120310017": "c057e12346dcccc50e3740e8a65666ac3d61820841341aab0c6ca3fe92af7deb",
     "120310018": "59dea6f87210789ab454641382da75c833603b03f089166d0e25d74d72432b83",
     "120310019": "f73773e998bd2a8bd843d884e19bce0a7c80ba64f0749b8e69526a1f53e8230f",
-    "120310020": "49eb93d8412e3446322f6ea3e2853e0250772658e6c22b2386923f7e1358fcd5",
-    "120310021": "b21d28cbbddc314f31f0e1ca339b1e31077980ca3e51bad8e245892888802737",
-    "120310022": "a12240378ccf098edc129a8272ee4965fb131078d9a6ffaf5797b62471762b9e",
-    "120310023": "5aa6027809b38f8ca6150d4222f1ec160c1f3b34e6af407be188dedd084de6bb",
-    "120310025": "28e77ae01eb9997a8a004caf78c75b409e027ded9682d0cb4a8e406491885eef",
+    "120310020": "705e3199942d2bddfd494b0745c5ee6ddf3275c226be6cd2bf812d89102c0ae3",
+    "120310021": "5ae68d5b8b0ff7580786da44be297e8c4b327c9fc1de0a5d8f50fba2f46d42de",
+    "120310022": "2c29d743f8d202f1f16c163363edad1a2d350f1ecbc78e168e350a19873c1993",
+    "120310023": "0c131442d58769a284de7d73eb9157ce20aae90f41052456679315c941759925",
+    "120310025": "0906f7b0d2c1586e72491c6c97df69dccd504403ddd00afbaf9865f3e3be6f79",
     "120310026": "9cce26e9574cef71b0646ee896ae31a73282e3c587d96873e3a15d63b536666d",
     "120310036": "3eafff196d727f5a240f652a8c82eb32160fabea7ac9e40f07cd7a449b917e5c",
     "120310037": "2390dfe5d8182fdc6a45d8af09e83124259e893a5961ee4eccf729aa2e3acf98",
     "120310038": "bae14427ade83883bfe08035fd5fba155ed32ee2b546b6ada98e00ad8071e0da",
-    "120310041": "8a6ab76f9021cbf3de8610c8fbeeae7811f145aeb586039aea5e634aceb8e71f",
+    "120310041": "6fda2577e725b04af92880bd2ca26d9e0875ce79d3ac9f7eb3d19d934ab32d53",
     "120310045": "ecf03d407d8dd9093eb4ab6f74fbbdca6d8e530befcb320c78760836e4f76e8a",
-    "120310046": "fef1bca7243b360768a46b96df62b5a2a7e1e2f900fd06efb7aca9fe54ed6cc8",
+    "120310046": "8d69e172ec97a7a990480e1afcd7b7a1a6f5e8c5f0ccfb00cc5e2267a057c999",
     "120310048": "9a81471e60d3c866182424a5e33e46c624ffbf78507f6b5ab1f00cbe009592a2",
     "120310052": "5af5e836cadd053a7c7e609d17193f0493e9c16fd7aa57ba8b27bd1bcb8e6ee8",
-    "120310054": "9a139fd7d1ddb6560323259db0598c53a3ea44a49ed46b35b387d6be8a883744",
-    "120310055": "4afc93c86d7af637d77f1789daaa69fa5ceca2068ba67673ec7a545b5757f9c5",
+    "120310054": "1184535e7adc75394a207ac6240498726d95f2a4c0415b36b9dd3f46b4cd6229",
+    "120310055": "a37557f17b9eabf775509f070e609c6065ab60bd07deca041f355057d410bc9a",
     "120310061": "086657f0e3f74d1931e60a56ff33e9908748395f31a82d4470a08b7d007cd203",
     "120310062": "ab5fcaa2953010beba00c5624351d713c01cd3135a234aa6feb2b87c5d4168eb",
     "120310063": "ec05dda1bbb1fecd864a9f49f0f0d1c7805b013d62c67e3ac29bebe809118fbd",
-    "120310066": "fb0bde80efddc30f4e45fcbadb2f5425358eeaa55b633b5da0d5a6be730bb036",
+    "120310066": "601e34808fa1498d3745eb65cbdca96ccbb679f55c3230c7fbf2593311901de6",
     "120311001": "f6cc7627a0d69650b9c240032ef107aec3c5c4b55b7b828ee2b129a652b86ea5",
     "120311002": "648a2953a7bf5e5573a9d8486b7d710591535d7ff20fed585e579d3767d4e32f",
     "120311004": "a6f041fbaab4f4e32f8d3d8be356acebe2689dccdc9fb004f98d9e4a35874ae6",
