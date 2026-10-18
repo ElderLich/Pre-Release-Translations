@@ -1,79 +1,175 @@
 [
   {
+    "name": "Power of the Duelist",
+    "desc": "ประกาศ 2, 3 หรือ 4 Attributes; ใช้เอฟเฟกต์นี้ตามจำนวนที่ประกาศ นอกจากนี้ ในช่วง End Phase ของเทิร์นนี้ คุณต้องส่งการ์ดทั้งหมดที่คุณควบคุมไปยัง GY เว้นแต่ว่าคุณได้สั่งใช้งานเอฟเฟกต์ของมอนสเตอร์ครบทุก Attributes ที่ประกาศไว้บน field และ/หรือ GY ของคุณในเทิร์นนี้\n● 2: เล็งเป้ามอนสเตอร์ 1 ตัวบน field; banish การ์ดนั้น\n● 3: Draw การ์ด 2 ใบ จากนั้น discard การ์ด 1 ใบ\n● 4: Negate เอฟเฟกต์ของการ์ดที่หงายหน้าอยู่ 2 ใบที่อยู่บน field\nคุณสามารถสั่งใช้งาน \"Power of the Duelist\" ได้เพียงเทิร์นละ 1 ใบเท่านั้น",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Dramatic Rescue",
+    "desc": "คุณสามารถใช้เอฟเฟกต์ ① และ ② ของชื่อการ์ดนี้ได้เพียงอย่างละครั้งต่อเทิร์น หากคุณควบคุมมอนสเตอร์ \"Harpie Lady\" หรือมอนสเตอร์ \"Amazoness\" คุณสามารถสั่งใช้งานการ์ดใบนี้ได้ในเทิร์นที่มันถูก Set\n①：เล็งเป้ามอนสเตอร์ 1 ตัวบน field; Special Summon มอนสเตอร์ \"Harpie\" หรือ \"Amazoness\" 1 ตัวจาก hand หรือ Deck ของคุณ และหากทำสำเร็จ ให้นำมอนสเตอร์เป้าหมายกลับขึ้น hand\n②：คุณสามารถ banish การ์ดใบนี้จาก GY ของคุณ; นำมอนสเตอร์ \"Harpie\" หรือ \"Amazoness\" 1 ตัวจาก GY หรือ banishment ของคุณขึ้น hand",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Eyelluring Mirror Wall",
+    "desc": "①：จะได้รับเอฟเฟกต์เหล่านี้ในขณะที่คุณควบคุมมอนสเตอร์ \"Amazoness\" หรือมอนสเตอร์ \"Harpie Lady\"\n● มอนสเตอร์ที่หงายหน้าอยู่ซึ่งฝ่ายตรงข้ามของคุณควบคุมจะถูกเปลี่ยนเป็น Attack Position และต้องทำการโจมตีหากทำได้\n● ครั้งละหนึ่งครั้งต่อการต่อสู้ เมื่อมอนสเตอร์ของฝ่ายตรงข้ามประกาศโจมตี: คุณสามารถทำให้ ATK ของมันลดลงครึ่งหนึ่งได้\n②：เทิร์นละครั้ง ในช่วง Standby Phase: คุณสามารถ Set การ์ด Spell/Trap 1 ใบจาก GY หรือ banishment ของคุณที่ระบุถึง \"Harpie Lady\" ยกเว้น \"Eyelluring Mirror Wall\"",
+    "overallString": "[Trap|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Chain Master - Brink of Death Chain Dance",
+    "desc": "หากการ์ดใบนี้ถูกส่งไปที่ GY และคุณมีมอนสเตอร์ \"Amazoness\" ตัวอื่นอยู่ใน GY ของคุณ: คุณสามารถจ่าย 1000 LP; ฝ่ายตรงข้ามของคุณสามารถเลือกมอนสเตอร์ Level 10 จำนวน 1 ตัวจากใน Deck หรือ Extra Deck ของพวกเขา และหากพวกเขาเลือก คุณสามารถ Special Summon มอนสเตอร์ตัวนั้นมายังสนามของคุณได้ โดยไม่สนใจเงื่อนไขการ Summon แต่ผู้เล่นทั้งสองฝ่ายจะไม่สามารถเปิดใช้งานเอฟเฟกต์ของมันได้ในเทิร์นนี้ หากพวกเขาไม่เลือก คุณจะทิ้งการ์ดแบบสุ่ม 1 ใบจากบนมือของพวกเขา คุณสามารถใช้เอฟเฟกต์นี้ของ \"Amazoness Chain Master - Brink of Death Chain Dance\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Fighter - Instant Kill Dance",
+    "desc": "หากการ์ดใบนี้ถูกเพิ่มขึ้นมือของคุณ ยกเว้นโดยการจั่ว: คุณสามารถ Special Summon การ์ดใบนี้ได้ หากการ์ดใบนี้ถูก Normal หรือ Special Summon: คุณสามารถ Set การ์ด Spell/Trap 1 ใบจากใน Deck ของคุณที่ระบุถึง \"Harpie Lady\" ได้ ในช่วงคำนวณความเสียหาย หากมอนสเตอร์ \"Amazoness\" ของคุณต่อสู้กับมอนสเตอร์ของฝ่ายตรงข้าม: คุณสามารถเปิดใช้งานเอฟเฟกต์นี้; ในการต่อสู้นั้น มอนสเตอร์ทั้งสองตัวจะไม่สามารถถูกทำลายจากการต่อสู้ได้ และคุณจะไม่ได้รับความเสียหายจากการต่อสู้ คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Amazoness Fighter - Instant Kill Dance\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Spellcaster - Forbidden Spell Dance",
+    "desc": "หากการ์ดใบนี้ถูก Normal หรือ Special Summon: คุณสามารถนำมอนสเตอร์ \"Amazoness\" 1 ตัวจากใน Deck ของคุณขึ้นมือได้ ยกเว้นมอนสเตอร์ Level 3 ในช่วง Main Phase ของคุณ: คุณสามารถ Fusion Summon มอนสเตอร์ Fusion ธาตุ EARTH หรือ WIND 1 ตัวจาก Extra Deck ของคุณ โดยใช้วัตถุดิบเป็นมอนสเตอร์จากบนมือหรือบนสนามของคุณ ในช่วงคำนวณความเสียหาย หากมอนสเตอร์ \"Amazoness\" ของคุณต่อสู้กับมอนสเตอร์ของฝ่ายตรงข้าม: คุณสามารถ banish การ์ดใบนี้จากใน GY ของคุณ; สลับ ATK ของมอนสเตอร์ที่กำลังต่อสู้กันจนกว่าจะจบเทิร์นนี้ คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Amazoness Spellcaster - Forbidden Spell Dance\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Harpie Lady - Alluring Dance",
+    "desc": "คุณสามารถใช้เอฟเฟกต์ ② และ ③ ของชื่อการ์ดนี้ได้เพียงอย่างละครั้งต่อเทิร์น\n①：ชื่อของการ์ดใบนี้จะกลายเป็น \"Harpie Lady\" ตราบใดที่อยู่บนสนามหรือใน GY\n②：ในช่วง Main Phase หากการ์ดใบนี้อยู่บนมือของคุณ (Quick Effect): คุณสามารถเล็งเป้ามอนสเตอร์ EARTH หรือ WIND 1 ตัวที่คุณควบคุม; นำมอนสเตอร์นั้นกลับเข้า Deck/Extra Deck และหากทำสำเร็จ Special Summon การ์ดใบนี้\n③：หากการ์ดใบนี้ถูก Normal หรือ Special Summon: คุณสามารถนำการ์ด Spell/Trap 1 ใบจากใน Deck ของคุณที่ระบุถึง \"Harpie Lady\" ขึ้นมือได้",
+    "overallString": "[Monster|Effect] Winged Beast/Wind  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Swordmaster",
+    "desc": "มอนสเตอร์ \"Amazoness\" 2 ตัว\nคุณสามารถใช้เอฟเฟกต์ ① และ ③ ของชื่อการ์ดนี้ได้เพียงอย่างละครั้งต่อเทิร์น\n①：หากการ์ดใบนี้ถูก Fusion Summon: คุณสามารถ Special Summon มอนสเตอร์ \"Amazoness\" Level 4 หรือต่ำกว่า 1 ตัวจากใน Deck ของคุณได้\n②：เมื่อมอนสเตอร์ \"Amazoness\" ของคุณทำลายมอนสเตอร์ของฝ่ายตรงข้ามจากการต่อสู้: คุณสามารถจั่วการ์ด 1 ใบ\n③：(Quick Effect): คุณสามารถ Tribute มอนสเตอร์ 1 ตัว จากนั้นเล็งเป้ามอนสเตอร์ Effect 1 ตัวบนสนาม; มอนสเตอร์ตัวนั้นจะสูญเสีย 500 ATK และเอฟเฟกต์ของมันจะถูก negate",
+    "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★8] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Triangle Ecstasy Harpie Lady Sisters",
+    "desc": "มอนสเตอร์ \"Harpie Lady\" 3 ตัว\nต้องถูก Fusion Summon ก่อนเป็นอันดับแรก\n①：ชื่อของการ์ดใบนี้จะกลายเป็น \"Harpie Lady\" ตราบใดที่อยู่บนสนามหรือใน GY\n②：ได้รับ 500 ATK ต่อ \"Harpie Lady\" แต่ละตัวใน GY ของคุณ ฝ่ายตรงข้ามไม่สามารถเล็งเป้าการ์ดใบนี้ด้วยเอฟเฟกต์ของมอนสเตอร์ที่ไม่ใช่ธาตุ WIND ได้\n③：เทิร์นละครั้ง (Quick Effect): คุณสามารถทำลายการ์ด Spell และ Trap ทั้งหมดที่ฝ่ายตรงข้ามของคุณควบคุมได้",
+    "overallString": "[Monster|Effect|Fusion] Winged Beast/Wind  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Elegant Tri-Mirror",
+    "desc": "คุณสามารถใช้เอฟเฟกต์ ① และ ② ของชื่อการ์ดนี้ได้เพียงอย่างละครั้งต่อเทิร์น\n①：นำมอนสเตอร์ \"Harpie\" 1 ตัวจาก Deck ของคุณขึ้น hand จากนั้นหากมีเพียงฝ่ายตรงข้ามของคุณที่ควบคุมมอนสเตอร์ คุณสามารถ Special Summon \"Harpie Lady\" 1 ตัว หรือมอนสเตอร์ที่ระบุถึงการ์ดดังกล่าว 1 ตัวจาก hand หรือ GY ของคุณได้\n②：คุณสามารถ banish การ์ดใบนี้จาก GY ของคุณ; Fusion Summon มอนสเตอร์ Fusion Monster ธาตุ EARTH หรือ WIND 1 ตัวจาก Extra Deck ของคุณ โดยใช้วัตถุดิบมอนสเตอร์จาก hand หรือ field ของคุณ",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Harpie & Amazoness Rakshasa Formation",
+    "desc": "คุณสามารถสั่งใช้งานการ์ดที่มีชื่อการ์ดนี้ได้เพียงเทิร์นละ 1 ใบเท่านั้น\n①：เล็งเป้ามอนสเตอร์ \"Harpie\" หรือ \"Amazoness\" 1 ตัวใน GY หรือ banishment ของคุณ; Special Summon มอนสเตอร์นั้น จากนั้นคุณสามารถเลือกใช้ 1 ในเอฟเฟกต์เหล่านี้ตามจำนวนมอนสเตอร์ \"Harpie Lady\" และมอนสเตอร์ \"Amazoness\" ที่คุณควบคุม\n● 1+: วาง \"Eyelluring Mirror Wall\" 1 ใบจาก Deck ของคุณหงายหน้าไว้ใน Spell & Trap Zone ของคุณ\n● 2+: ควบคุมมอนสเตอร์ 1 ตัวที่ฝ่ายตรงข้ามของคุณควบคุม\n● 3+: ทำลายมอนสเตอร์ทั้งหมดที่ฝ่ายตรงข้ามของคุณควบคุม",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Primrose the Twin Rikka Fairy",
+    "desc": "หากมอนสเตอร์ถูก Tribute: คุณสามารถ Special Summon การ์ดใบนี้จากบนมือของคุณ และมอนสเตอร์ \"Rikka\" 1 ตัวจากใน Deck ของคุณ ยกเว้น \"Primrose the Twin Rikka Fairy\" ในสภาพ Defense Position อีกทั้งคุณจะไม่สามารถ Special Summon ได้ตลอดช่วงที่เหลือของเทิร์นนี้ ยกเว้นมอนสเตอร์ Plant คุณสามารถเล็งเป้ามอนสเตอร์ Plant 1 ตัวที่คุณควบคุม; เพิ่มหรือลด Level ของมันลง 2 ในช่วง Main Phase ของฝ่ายตรงข้าม คุณสามารถ (Quick Effect): ทำการ Xyz Summon มอนสเตอร์ Plant Xyz 1 ตัวได้ทันทีหลังจากเอฟเฟกต์นี้ทำงานเสร็จสิ้น คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Primrose the Twin Rikka Fairy\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect] Plant/Water  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka Black Princess",
+    "desc": "หากคุณไม่ได้ควบคุมมอนสเตอร์ หรือมอนสเตอร์ทั้งหมดที่คุณควบคุมเป็นมอนสเตอร์ Plant: คุณสามารถ Special Summon การ์ดใบนี้จากบนมือหรือ GY ของคุณได้ แต่ให้ banish การ์ดใบนี้เมื่อมันออกจากสนาม อีกทั้งคุณจะไม่สามารถ Special Summon ได้ตลอดช่วงที่เหลือของเทิร์นนี้ ยกเว้นมอนสเตอร์ Plant คุณสามารถ Tribute มอนสเตอร์ Plant 1 ตัวจากบนมือหรือบนสนามของคุณ; Special Summon มอนสเตอร์ \"Rikka\" 1 ตัวจากใน Deck ของคุณ ยกเว้น \"Rikka Black Princess\" คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Rikka Black Princess\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect] Plant/Water  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Teardrop the Rikka Empress",
+    "desc": "มอนสเตอร์ Plant Level 10 จำนวน 2 ตัว\nคุณสามารถ Xyz Summon การ์ดใบนี้ได้เช่นกันโดยใช้ \"Teardrop the Rikka Queen\" ที่คุณควบคุม (transfer its materials) (Quick Effect): คุณสามารถ detach material ได้สูงสุด 6 ชิ้นจากการ์ดใบนี้; ส่งการ์ด Spell/Trap บนสนามตามจำนวนนั้นไปที่ GY จากนั้นคุณสามารถ Tribute มอนสเตอร์ 1 ตัวบนสนามได้ คุณสามารถใช้เอฟเฟกต์นี้ของ \"Teardrop the Rikka Empress\" ได้เพียงเทิร์นละครั้งเท่านั้น ในแต่ละครั้งที่มอนสเตอร์ถูก Tribute: Attach การ์ด 1 ใบจาก GY ของฝ่ายตรงข้ามให้กับมอนสเตอร์ Plant Xyz 1 ตัวที่คุณควบคุม",
+    "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka Empress Strenna",
+    "desc": "มอนสเตอร์ Plant Level 6 จำนวน 2 ตัว\nคุณสามารถ detach 2 materials จากการ์ดใบนี้; Special Summon มอนสเตอร์ Plant Xyz Monster 1 ตัวจาก Extra Deck ของคุณใน Defense Position ยกเว้น \"Rikka Empress Strenna\" จากนั้นหากคุณ Special Summon มอนสเตอร์ \"Rikka\" คุณสามารถ attach มอนสเตอร์ \"Rikka\" 1 ตัวจาก Deck ของคุณเข้ากับการ์ดนั้นได้ หากมีมอนสเตอร์ถูก Tribute: คุณสามารถ Set การ์ด Trap \"Rikka\" 1 ใบจาก Deck หรือ GY ของคุณได้ คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Rikka Empress Strenna\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka June Moon",
+    "desc": "เมื่อคุณสั่งใช้งานการ์ดใบนี้ คุณสามารถ Tribute มอนสเตอร์ Plant 1 ตัวเพิ่มเติมได้; เลือกมอนสเตอร์ \"Rikka\" 2 ตัวที่มี Level เดียวกันแต่มีชื่อต่างกันจาก Deck ของคุณ นำ 1 ตัวขึ้น hand ของคุณ และส่งอีกตัวไปยัง GY นอกจากนี้ หากคุณทำการ Tribute มอนสเตอร์เมื่อสั่งใช้งาน ฝ่ายตรงข้ามจะไม่สามารถเล็งเป้ามอนสเตอร์ \"Rikka\" ที่คุณควบคุมด้วยเอฟเฟกต์การ์ดได้ในเทิร์นนี้ ในช่วงที่เหลือของเทิร์นนี้หลังจากเอฟเฟกต์ของการ์ดใบนี้ทำงานเสร็จสิ้น คุณไม่สามารถ Special Summon จาก Extra Deck ได้ ยกเว้น Plant Xyz Monsters คุณสามารถสั่งใช้งาน \"Rikka June Moon\" ได้เพียงเทิร์นละ 1 ใบเท่านั้น",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
     "name": "Castle of Vampire",
-    "desc": "When this card is activated: Special Summon 1 DARK Zombie monster from your Deck or GY. When that monster leaves the field, destroy this card. That monster is unaffected by the activated effects of other non-DARK monsters. If this face-up card leaves the field: Destroy as many cards you control as possible, and if you do, take 400 damage for each card destroyed. You can only activate 1 \"Castle of Vampire\" per turn.",
+    "desc": "เมื่อการ์ดใบนี้ถูกสั่งใช้งาน: Special Summon มอนสเตอร์ Zombie ธาตุ DARK 1 ตัวจาก Deck หรือ GY ของคุณ เมื่อมอนสเตอร์นั้นออกจาก field ให้ทำลายการ์ดใบนี้ มอนสเตอร์นั้นจะไม่ได้รับผลกระทบจากเอฟเฟกต์ที่ถูกสั่งใช้งานของมอนสเตอร์ตัวอื่นที่ไม่ใช่ DARK หากการ์ดที่หงายหน้านี้ออกจาก field: ทำลายการ์ดที่คุณควบคุมให้ได้มากที่สุดเท่าที่จะทำได้ และหากทำสำเร็จ คุณจะได้รับ damage 400 ต่อการ์ดแต่ละใบที่ถูกทำลาย คุณสามารถสั่งใช้งาน \"Castle of Vampire\" ได้เพียงเทิร์นละ 1 ใบเท่านั้น",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
   },
   {
     "name": "Necromancer of Dragon Magic",
-    "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
+    "desc": "มอนสเตอร์ Effect Monsters 2 ตัว\nในระหว่าง Main Phase ของคุณ: คุณสามารถเปิดเผย Fusion Monster 1 ตัวใน Extra Deck ของคุณ, เลือกมอนสเตอร์ที่ไม่ใช่ Fusion Monster 1 ตัวใน GY ของคุณที่มีชื่อระบุอยู่บนการ์ดมอนสเตอร์ที่เปิดเผย และชื่อของการ์ดใบนี้จะกลายเป็นชื่อของมอนสเตอร์ตัวนั้น (until the End Phase) จากนั้นคุณสามารถ Fusion Summon มอนสเตอร์ Fusion Monster ที่เปิดเผยนั้น โดยการ banish materials ของมันจาก hand, field และ/หรือ GY ของคุณ นอกจากนี้ คุณไม่สามารถ Special Summon จาก Extra Deck ได้ในช่วงที่เหลือของเทิร์นนี้ ยกเว้น Fusion Monsters คุณสามารถใช้เอฟเฟกต์นี้ของ \"Necromancer of Dragon Magic\" ได้เพียงเทิร์นละครั้งเท่านั้น",
     "overallString": "[Monster|Effect|Link] Dragon/Wind  [LINK-2] 900/-  [↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
   },
   {
     "name": "Gandora-X the Blackmetal Rampaging Dragon",
-    "desc": "If this card is added from the Deck to your hand, except by drawing it: You can Special Summon it. If this card is Special Summoned: You can pay half your LP; destroy as many other monsters on the field as possible, and if you do, inflict damage to your opponent equal to the highest ATK on the field among the destroyed face-up monsters they own, and if you do that, this card gains that much ATK. If this card is destroyed: You can add 1 \"Final Geas\" from your Deck to your hand. You can only use each effect of \"Gandora-X the Blackmetal Rampaging Dragon\" once per turn.",
+    "desc": "ถ้าการ์ดใบนี้ถูกนำจาก Deck ขึ้นมือของคุณ ยกเว้นโดยการจั่ว: คุณสามารถ Special Summon การ์ดนี้ได้. ถ้าการ์ดใบนี้ถูก Special Summon: คุณสามารถจ่าย LP ครึ่งหนึ่งของคุณ; ทำลายมอนสเตอร์ตัวอื่นบนสนามให้ได้มากที่สุด และถ้าทำสำเร็จ สร้างความเสียหายแก่อีกฝ่ายเท่ากับ ATK ที่สูงที่สุดบนสนามในบรรดามอนสเตอร์ที่หงายหน้าที่ถูกทำลายซึ่งอีกฝ่ายเป็นเจ้าของ และถ้าทำเช่นนั้น การ์ดใบนี้จะได้รับ ATK เพิ่มขึ้นตามค่านั้น. ถ้าการ์ดใบนี้ถูกทำลาย: คุณสามารถนำ \"Final Geas\" 1 ใบจาก Deck ของคุณขึ้นมือ. คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Gandora-X the Blackmetal Rampaging Dragon\" ได้เทิร์นละครั้งเท่านั้น",
     "overallString": "[Monster|Effect] Dragon/Dark  [★8] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
   },
   {
     "name": "Time Chain",
-    "desc": "Destroy this card during your opponent's ② Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's ② Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
+    "desc": "ทำลายการ์ดใบนี้ในช่วง ② Standby Phase ของอีกฝ่ายหลังจากการสั่งใช้งาน. สั่งใช้งานการ์ดใบนี้เมื่อมอนสเตอร์ของคุณตกเป็นเป้าหมายการโจมตี: มอนสเตอร์ที่ต่อสู้กันทั้งสองตัวจะไม่สามารถถูกทำลายจากการต่อสู้นั้นได้ รวมถึง banish มอนสเตอร์เหล่านั้นหลังคำนวณความเสียหาย จนกระทั่งถึง ② Standby Phase ของผู้ควบคุมมอนสเตอร์นั้น. ยกเลิกเอฟเฟกต์ที่สั่งใช้งานของมอนสเตอร์ที่มีชื่อดั้งเดิมเหมือนกับมอนสเตอร์ที่กำลังถูก banish อยู่ในขณะนั้นโดยเอฟเฟกต์ของการ์ดใบนี้. ในช่วง Draw Phase ของคุณ สามารถทำสิ่งนี้แทนการจั่วการ์ดตามปกติ: คุณสามารถนำมอนสเตอร์ 1 ตัวจาก Deck ของคุณขึ้นมือได้",
     "overallString": "[Trap|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
   },
   {
     "name": "Warrior's Devotion",
-    "desc": "Send 1 Warrior monster from your hand or Deck to the GY, then target 1 face-up monster your opponent controls; it loses ATK equal to the sent monster's ATK. If a Warrior monster(s) you control would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use each effect of \"Warrior's Devotion\" once per turn.",
+    "desc": "ส่งมอนสเตอร์ Warrior 1 ตัวจากบนมือหรือใน Deck ของคุณไปที่ GY จากนั้นเล็งเป้ามอนสเตอร์ที่หงายหน้าอยู่บนสนามของฝ่ายตรงข้าม 1 ตัว; มอนสเตอร์ตัวนั้นจะสูญเสีย ATK เท่ากับ ATK ของมอนสเตอร์ที่ถูกส่งไป หากมอนสเตอร์ Warrior ที่คุณควบคุมจะถูกทำลายจากการต่อสู้หรือเอฟเฟกต์การ์ด คุณสามารถ banish การ์ดใบนี้จากใน GY ของคุณแทนได้ คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Warrior's Devotion\" ได้เพียงเทิร์นละครั้งเท่านั้น",
     "overallString": "[Trap]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
   },
   {
     "name": "Trinitas Magistus",
-    "desc": "2+ Spellcaster monsters\nIf this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to this card as an Equip Spell. You can discard 1 card; return all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY to the Extra Deck. During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand. You can only use 1 \"Trinitas Magistus\" effect per turn, and only once that turn.",
+    "desc": "มอนสเตอร์ Spellcaster 2+ ตัว\nคุณสามารถใช้เอฟเฟกต์ ①, ②, หรือ ③ ของชื่อการ์ดนี้ได้เพียง 1 อย่างต่อเทิร์น และใช้ได้เพียงครั้งเดียวในเทิร์นนั้น\n①：ถ้าการ์ดใบนี้ถูก Special Summon จาก Extra Deck: คุณสามารถนำมอนสเตอร์ \"Magistus\" หรือ Spellcaster 1 ตัวจาก Extra Deck ของคุณมาสวมใส่ให้การ์ดนี้ได้\n②：คุณสามารถทิ้งการ์ด 1 ใบ; สับ Fusion, Synchro, Xyz, และ Link Monster ทั้งหมดจากบนสนามและ GY ของอีกฝ่ายกลับเข้า Extra Deck\n③：ในระหว่าง Main Phase ของอีกฝ่าย (Quick Effect): คุณสามารถนำการ์ด \"Magistus\" 1 ใบจาก GY หรือที่ถูก banish ของคุณขึ้นมือได้",
     "overallString": "[Monster|Effect|Link] Spellcaster/Light  [LINK-3] 2500/-  [↑][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
   },
   {
     "name": "Invoked Magistus Heruvim",
-    "desc": "1 \"Magistus\" monster + 1 Spellcaster monster\nIf this card is Special Summoned from the Extra Deck: You can target 1 card your opponent controls; destroy it. When your opponent activates a monster effect, or their monster declares an attack, except during the turn this card was Special Summoned (Quick Effect): You can banish this card; Special Summon 1 \"Magistus\" or \"Invoked\" monster from your Extra Deck, except \"Invoked Magistus Heruvim\". You can only use each effect of \"Invoked Magistus Heruvim\" once per turn.",
+    "desc": "มอนสเตอร์ \"Magistus\" 1 ตัว + มอนสเตอร์ Spellcaster 1 ตัว\nคุณสามารถใช้แต่ละเอฟเฟกต์ ① และ ② ของชื่อการ์ดนี้ได้เทิร์นละครั้งเท่านั้น\n①：ถ้าการ์ดใบนี้ถูก Special Summon จาก Extra Deck: คุณสามารถเล็งเป้าหมายการ์ดที่อีกฝ่ายควบคุม 1 ใบ; ทำลายการ์ดนั้น\n②：เมื่ออีกฝ่ายสั่งใช้งานเอฟเฟกต์มอนสเตอร์ หรือมอนสเตอร์ของอีกฝ่ายประกาศโจมตี ยกเว้นในเทิร์นที่การ์ดใบนี้ถูก Special Summon (Quick Effect): คุณสามารถ banish การ์ดใบนี้; Special Summon มอนสเตอร์ \"Magistus\" หรือ \"Invoked\" 1 ตัวจาก Extra Deck ของคุณ ยกเว้น \"Invoked Magistus Heruvim\"",
     "overallString": "[Monster|Effect|Fusion] Spellcaster/Light  [★9] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
   },
   {
     "name": "Magistus Witchcrafter Aruru",
-    "desc": "If this card is in your hand and a \"Magistus\" monster is on the field: You can Special Summon this card. You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn. If this card is sent to the GY: You can banish it, then target 1 \"Magistus\" or \"Witchcrafter\" monster in your GY; Special Summon it. You can only use each effect of \"Magistus Witchcrafter Aruru\" once per turn.",
+    "desc": "คุณสามารถใช้แต่ละเอฟเฟกต์ ①, ②, และ ③ ของชื่อการ์ดนี้ได้เทิร์นละครั้งเท่านั้น\n①：ถ้าการ์ดใบนี้อยู่บนมือของคุณ และมีมอนสเตอร์ \"Magistus\" อยู่บนสนาม: คุณสามารถ Special Summon การ์ดใบนี้\n②：คุณสามารถเล็งเป้าหมายมอนสเตอร์ที่หงายหน้าอยู่ 1 ตัวที่อีกฝ่ายควบคุม; ยกเลิกเอฟเฟกต์ของมอนสเตอร์นั้นจนจบเทิร์นนี้\n③：ถ้าการ์ดใบนี้ถูกส่งไปที่ GY: คุณสามารถ banish การ์ดนี้ จากนั้นเล็งเป้าหมายมอนสเตอร์ \"Magistus\" หรือ \"Witchcrafter\" 1 ตัวใน GY ของคุณ; Special Summon มอนสเตอร์นั้น",
     "overallString": "[Monster|Effect] Spellcaster/Light  [★8] 2800/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
   },
   {
     "name": "Marincess Azuri",
-    "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 WATER Cyberse monster with 1000 or less ATK from your Deck, also you cannot Special Summon for the rest of this turn, except WATER monsters. If you Link Summon a \"Marincess\" Link Monster(s), while this card is in your GY: You can banish this card; equip 1 \"Marincess\" monster from your GY to 1 of those Link Monsters as an Equip Spell that gives it 600 ATK. You can only use each effect of \"Marincess Azuri\" once per turn.",
+    "desc": "ถ้าการ์ดใบนี้ถูก Normal หรือ Special Summon: คุณสามารถ Special Summon มอนสเตอร์ WATER Cyberse ที่มี ATK 1000 หรือต่ำกว่า 1 ตัวจาก Deck ของคุณ, รวมถึงคุณไม่สามารถ Special Summon ได้ตลอดช่วงที่เหลือของเทิร์นนี้ ยกเว้นมอนสเตอร์ WATER. ถ้าคุณ Link Summon มอนสเตอร์ \"Marincess\" Link Monster ขณะที่การ์ดใบนี้อยู่ใน GY ของคุณ: คุณสามารถ banish การ์ดใบนี้; สวมใส่มอนสเตอร์ \"Marincess\" 1 ตัวจาก GY ของคุณ ให้กับหนึ่งใน Link Monster ดังกล่าวในฐานะ Equip Spell ที่เพิ่ม ATK ให้มอนสเตอร์นั้น 600. คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Marincess Azuri\" ได้เทิร์นละครั้งเท่านั้น",
     "overallString": "[Monster|Effect] Cyberse/Water  [★3] 1600/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
   },
   {
     "name": "Marincess Ulpis",
-    "desc": "If this card is in your hand: You can discard 1 other \"Marincess\" card or WATER monster; Special Summon this card. If this card is Normal or Special Summoned: You can Set 1 \"Marincess\" Spell/Trap from your Deck. You can send 1 \"Marincess\" Link Monster Card you control to the GY; draw 1 card. You can only use each effect of \"Marincess Ulpis\" once per turn.",
+    "desc": "ถ้าการ์ดใบนี้อยู่บนมือของคุณ: คุณสามารถทิ้งการ์ด \"Marincess\" ใบอื่น หรือมอนสเตอร์ WATER 1 ใบ; Special Summon การ์ดใบนี้. ถ้าการ์ดใบนี้ถูก Normal หรือ Special Summon: คุณสามารถ Set การ์ด Spell/Trap \"Marincess\" 1 ใบจาก Deck ของคุณ. คุณสามารถส่งการ์ด \"Marincess\" Link Monster ที่คุณควบคุม 1 ใบไปที่ GY; จั่วการ์ด 1 ใบ. คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Marincess Ulpis\" ได้เทิร์นละครั้งเท่านั้น",
     "overallString": "[Monster|Effect] Cyberse/Water  [★5] 600/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
   },
   {
     "name": "Aqua Leviathan @Marincess",
-    "desc": "You can Ritual Summon this card with a \"Marincess\" card. Monsters your opponent controls lose 1000 ATK. You can only use each of the following effects of \"Aqua Leviathan @Marincess\" once per turn. You can reveal this card in your hand; add 1 \"Marincess\" card from your Deck to your hand, except a Ritual Monster, then discard 1 card. If this card is Ritual Summoned: You can return cards your opponent controls to the hand up to the number of \"Marincess\" Monster Cards you control.",
+    "desc": "คุณสามารถ Ritual Summon การ์ดใบนี้ด้วยการ์ด \"Marincess\". มอนสเตอร์ที่อีกฝ่ายควบคุมจะเสีย ATK 1000. คุณสามารถใช้แต่ละเอฟเฟกต์ต่อไปนี้ของ \"Aqua Leviathan @Marincess\" ได้เทิร์นละครั้งเท่านั้น. คุณสามารถเปิดเผยการ์ดใบนี้บนมือของคุณ; นำการ์ด \"Marincess\" 1 ใบจาก Deck ของคุณขึ้นมือ ยกเว้น Ritual Monster จากนั้นทิ้งการ์ด 1 ใบ. ถ้าการ์ดใบนี้ถูก Ritual Summon: คุณสามารถนำการ์ดที่อีกฝ่ายควบคุมกลับขึ้นมือได้สูงสุดไม่เกินจำนวนการ์ดมอนสเตอร์ \"Marincess\" ที่คุณควบคุม",
     "overallString": "[Monster|Effect|Ritual] Cyberse/Water  [★7] 2300/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
   },
   {
     "name": "Marincess Truth Heart",
-    "desc": "2+ \"Marincess\" monsters\nIf this card is Link Summoned using a Link Monster with 0 original ATK: You can Special Summon 1 Link-3 or lower \"Marincess\" monster from your Extra Deck. You can only use this effect of \"Marincess Truth Heart\" once per turn. You can banish 1 Link Monster Card from your field or GY; destroy 1 card your opponent controls, also for the rest of this turn, you cannot banish monsters with that same Link Rating to activate this effect of \"Marincess Truth Heart\".",
+    "desc": "มอนสเตอร์ \"Marincess\" 2+ ตัว\nถ้าการ์ดใบนี้ถูก Link Summon โดยใช้ Link Monster ที่มี ATK ดั้งเดิม 0: คุณสามารถ Special Summon มอนสเตอร์ \"Marincess\" Link-3 หรือต่ำกว่า 1 ตัวจาก Extra Deck ของคุณ. คุณสามารถใช้เอฟเฟกต์นี้ของ \"Marincess Truth Heart\" ได้เทิร์นละครั้งเท่านั้น. คุณสามารถ banish การ์ด Link Monster 1 ใบจากบนสนามหรือ GY ของคุณ; ทำลายการ์ดที่อีกฝ่ายควบคุม 1 ใบ รวมถึงตลอดช่วงที่เหลือของเทิร์นนี้ คุณไม่สามารถ banish มอนสเตอร์ที่มี Link Rating เดียวกันนั้นเพื่อสั่งใช้เอฟเฟกต์นี้ของ \"Marincess Truth Heart\" ได้",
     "overallString": "[Monster|Effect|Link] Cyberse/Water  [LINK-4] 2800/-  [↑][→][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
   },
   {
     "name": "Marincess Reef Lagoon",
-    "desc": "When this card is activated: You can add 1 WATER Cyberse monster from your Deck to your hand. Once per turn, during your opponent's End Phase: You can shuffle up to 3 WATER monsters from your GY and/or banishment into the Deck. You can send this face-up card to the GY; Ritual Summon 1 WATER Cyberse Ritual Monster from your hand, by banishing WATER monsters from your GY whose total Levels equal or exceed the Level of the Ritual Monster. You can only activate 1 \"Marincess Reef Lagoon\" per turn.",
+    "desc": "เมื่อการ์ดใบนี้ถูกสั่งใช้งาน: คุณสามารถนำมอนสเตอร์ WATER Cyberse 1 ตัวจาก Deck ของคุณขึ้นมือ. เทิร์นละครั้ง ในช่วง End Phase ของอีกฝ่าย: คุณสามารถนำมอนสเตอร์ WATER สูงสุด 3 ตัวจาก GY และ/หรือ ที่ถูก banish ของคุณ สับกลับเข้า Deck. คุณสามารถส่งการ์ดที่หงายหน้าอยู่นี้ไปที่ GY; Ritual Summon มอนสเตอร์ WATER Cyberse Ritual Monster 1 ตัวจากบนมือของคุณ โดย banish มอนสเตอร์ WATER จาก GY ของคุณ ที่มี Level รวมกันเท่ากับหรือมากกว่า Level ของ Ritual Monster นั้น. คุณสามารถสั่งใช้งาน \"Marincess Reef Lagoon\" ได้เทิร์นละ 1 ใบเท่านั้น",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
   },
