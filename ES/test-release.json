@@ -26,7 +26,7 @@
   {
     "name": "Luchadora Amazoness - Danza de Muerte Instantánea",
     "desc": "Si esta carta es añadida a tu mano, excepto robándola: puedes Invocarla de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa desde tu Deck que mencione \"Dama Arpía\". \r\nDurante el cálculo de daño, si tu monstruo \"Amazoness\" batalla con un monstruo del adversario: puedes hacer que ambos monstruos en batalla no puedan ser destruidos en esa batalla, y además no recibes daño de batalla de ella. \r\nSólo puedes usar los efectos de \"Luchadora Amazoness - Danza de Muerte Instantánea\" una vez por turno cada uno.",
-    "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/TIERRA  [★4] 1500/1300",
+    "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★4] 1500/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
   },
   {
@@ -50,7 +50,7 @@
   {
     "name": "Hermanas de la Dama Arpía - Éxtasis Triangular",
     "desc": "3 monstruos \"Dama Arpía\"\t\r\nDebe ser primero Invocada por Fusión. \r\nEl nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o Cementerio. \r\nGana 500 ATK por cada \"Dama Arpía\" en tu Cementerio. Tu adversario no puede seleccionar esta carta con efectos de monstruos que no sean de VIENTO. \r\nUna vez por turno (Efecto Rápido): puedes destruir todas las Mágicas y Trampas que controle tu adversario.",
-    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/VIENTO  [★8] 3000/2100",
+    "overallString": "[Monstruo|Efecto|Fusión] Bestia Alada/VIENTO  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
   {
