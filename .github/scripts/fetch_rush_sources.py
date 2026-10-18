@@ -7,6 +7,7 @@ from pathlib import Path
 import os
 import signal
 import subprocess
+import sys
 import tempfile
 import time
 
@@ -54,11 +55,13 @@ def run_git(command: list[str], *, env: dict, timeout: float) -> None:
 
 def clone_repository(url: str, branch: str, target: Path, *,
                      required: tuple[str, ...], sparse: str | None = None,
-                     deadline: float | None = None) -> None:
+                     deadline: float | None = None, archive_fallback: bool = False) -> None:
     """Retry in disposable folders; never reset an existing checkout or reuse stale data."""
     target = target.resolve()
     if target.exists():
         raise ValueError(f"Refusing to replace existing source checkout: {target}")
+    if archive_fallback and (url != RUSH_SOURCE or branch != "master" or sparse):
+        raise ValueError("Archive fallback is only available for the official Rush master source")
     if deadline is None:
         deadline = time.monotonic() + FETCH_TIMEOUT
     target.parent.mkdir(parents=True, exist_ok=True)
@@ -70,10 +73,16 @@ def clone_repository(url: str, branch: str, target: Path, *,
         try:
             with tempfile.TemporaryDirectory(prefix=f".{target.name}-", dir=target.parent) as directory:
                 checkout = Path(directory) / "checkout"
-                clone = command + ["clone", "--depth", "1", "--no-tags", "--single-branch", "--branch", branch]
-                if sparse:
-                    clone += ["--filter=blob:none", "--sparse"]
-                run_git(clone + [url, str(checkout)], timeout=remaining_timeout(deadline, GIT_TIMEOUT), env=env)
+                if archive_fallback and attempt > 1:
+                    print("Git transfer failed; trying the current commit through the GitLab archive API.", flush=True)
+                    download = [sys.executable, str(Path(__file__).with_name("rush_source_archive.py")),
+                                "--target", str(checkout)]
+                else:
+                    download = command + ["clone", "--depth", "1", "--no-tags", "--single-branch", "--branch", branch]
+                    if sparse:
+                        download += ["--filter=blob:none", "--sparse"]
+                    download += [url, str(checkout)]
+                run_git(download, timeout=remaining_timeout(deadline, GIT_TIMEOUT), env=env)
                 if sparse:
                     print(f"Fetching translated databases in {sparse}", flush=True)
                     run_git(command + ["-C", str(checkout), "sparse-checkout", "set", "--no-cone", sparse],
@@ -103,7 +112,8 @@ def main() -> None:
     deadline = time.monotonic() + FETCH_TIMEOUT
     try:
         clone_repository(RUSH_SOURCE, "master", args.source_root,
-                         required=("RD Patch.cdb", "sets.md", "script/RDBase.lua"), deadline=deadline)
+                         required=("RD Patch.cdb", "sets.md", "script/RDBase.lua"), deadline=deadline,
+                         archive_fallback=True)
         clone_repository(RUSH_TRANSLATIONS, "main", args.translations_root,
                          sparse=RUSH_DATABASES, required=("Data/locales/en-US/rush_cards.cdb",), deadline=deadline)
     except (RuntimeError, ValueError, OSError) as error:

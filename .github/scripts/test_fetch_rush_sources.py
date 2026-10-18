@@ -111,12 +111,44 @@ class RushFetchTests(unittest.TestCase):
     def test_main_shares_download_budget_between_both_repositories(self):
         def clone(url, branch, target, **kwargs):
             self.assertEqual(kwargs['deadline'], 100 + sources.FETCH_TIMEOUT)
+            self.assertEqual(kwargs.get('archive_fallback', False), url == sources.RUSH_SOURCE)
         with patch.object(sources.time, 'monotonic', return_value=100), \
              patch.object(sources, 'clone_repository', side_effect=clone) as mock, \
              patch('sys.argv', ['fetch_rush_sources.py', '--source-root', str(self.target),
                                '--translations-root', str(self.directory / 'translations')]):
             sources.main()
         self.assertEqual(mock.call_count, 2)
+
+    def test_rush_git_failure_switches_to_bounded_archive_in_a_fresh_folder(self):
+        attempts = []
+        def download(command, **kwargs):
+            folder = Path(command[-1])
+            attempts.append(folder)
+            self.assertEqual(kwargs['timeout'], sources.GIT_TIMEOUT)
+            if 'clone' in command:
+                folder.mkdir()
+                (folder / 'partial').write_text('incomplete git transfer')
+                raise subprocess.CalledProcessError(128, command)
+            self.assertFalse(attempts[0].exists())
+            self.assertEqual(command[0], sources.sys.executable)
+            self.assertTrue(command[1].endswith('rush_source_archive.py'))
+            folder.mkdir()
+            (folder / 'RD Patch.cdb').write_text('fresh archive')
+        with patch.object(sources, 'run_git', side_effect=download) as run:
+            sources.clone_repository(sources.RUSH_SOURCE, 'master', self.target,
+                                     required=('RD Patch.cdb',), archive_fallback=True)
+        self.assertEqual(run.call_count, 2)
+        self.assertEqual((self.target / 'RD Patch.cdb').read_text(), 'fresh archive')
+        self.assertEqual(list(self.directory.iterdir()), [self.target])
+
+    def test_archive_failure_is_retried_then_stops_without_publishing_partial_source(self):
+        with patch.object(sources, 'run_git', side_effect=subprocess.CalledProcessError(1, 'download')) as run:
+            with self.assertRaisesRegex(RuntimeError, 'no packages were built'):
+                sources.clone_repository(sources.RUSH_SOURCE, 'master', self.target,
+                                         required=('RD Patch.cdb',), archive_fallback=True)
+        self.assertEqual(run.call_count, sources.ATTEMPTS)
+        self.assertTrue(all('rush_source_archive.py' in call.args[0][1] for call in run.call_args_list[1:]))
+        self.assertFalse(self.target.exists())
 
     def test_expired_budget_does_not_start_a_download(self):
         with patch.object(sources.time, 'monotonic', return_value=140), \

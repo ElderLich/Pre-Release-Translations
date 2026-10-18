@@ -65,6 +65,11 @@ Connections may stay below 1 KiB/s for up to 60 seconds before retrying.
 Each clone and sparse database transfer has a five-minute limit, with 15- and
 45-second pauses between attempts. Both repositories share a 15-minute download
 budget so the 30-minute workflow retains time for packaging. Tags are skipped.
+If the Rush Git transfer fails, the remaining attempts use the same server's
+GitLab archive API. Each attempt resolves the current `master` commit and
+downloads its exact archive. The archive root, required files, entry paths and
+sizes are checked before accepting it; its commit is recorded in the build's
+source receipt. GitHub translation databases continue to use sparse Git clones.
 Timeouts terminate Git workers before partial attempts are discarded. Required
 source files are checked, and existing checkouts are never overwritten. A source outage stops publication
 instead of building packages from an old cached patch.

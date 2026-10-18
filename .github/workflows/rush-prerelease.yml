@@ -7,6 +7,7 @@ on:
     paths:
       - "Tools/rush_prerelease.py"
       - ".github/scripts/fetch_rush_sources.py"
+      - ".github/scripts/rush_source_archive.py"
       - "Tools/rush_source_text.py"
       - ".github/scripts/card_text_autofill.py"
       - ".github/scripts/codexygo_source.py"
