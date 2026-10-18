@@ -1,5 +1,83 @@
 [
   {
+    "name": "Castle of Vampire",
+    "desc": "When this card is activated: Special Summon 1 DARK Zombie monster from your Deck or GY. When that monster leaves the field, destroy this card. That monster is unaffected by the activated effects of other non-DARK monsters. If this face-up card leaves the field: Destroy as many cards you control as possible, and if you do, take 400 damage for each card destroyed. You can only activate 1 \"Castle of Vampire\" per turn.",
+    "overallString": "[Spell|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
+    "name": "Necromancer of Dragon Magic",
+    "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
+    "overallString": "[Monster|Effect|Link] Dragon/Wind  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X the Blackmetal Rampaging Dragon",
+    "desc": "If this card is added from the Deck to your hand, except by drawing it: You can Special Summon it. If this card is Special Summoned: You can pay half your LP; destroy as many other monsters on the field as possible, and if you do, inflict damage to your opponent equal to the highest ATK on the field among the destroyed face-up monsters they own, and if you do that, this card gains that much ATK. If this card is destroyed: You can add 1 \"Final Geas\" from your Deck to your hand. You can only use each effect of \"Gandora-X the Blackmetal Rampaging Dragon\" once per turn.",
+    "overallString": "[Monster|Effect] Dragon/Dark  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Time Chain",
+    "desc": "Destroy this card during your opponent's ② Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's ② Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
+    "overallString": "[Trap|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Warrior's Devotion",
+    "desc": "Send 1 Warrior monster from your hand or Deck to the GY, then target 1 face-up monster your opponent controls; it loses ATK equal to the sent monster's ATK. If a Warrior monster(s) you control would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use each effect of \"Warrior's Devotion\" once per turn.",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
+    "name": "Trinitas Magistus",
+    "desc": "2+ Spellcaster monsters\nIf this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to this card as an Equip Spell. You can discard 1 card; return all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY to the Extra Deck. During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand. You can only use 1 \"Trinitas Magistus\" effect per turn, and only once that turn.",
+    "overallString": "[Monster|Effect|Link] Spellcaster/Light  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "Invoked Magistus Heruvim",
+    "desc": "1 \"Magistus\" monster + 1 Spellcaster monster\nIf this card is Special Summoned from the Extra Deck: You can target 1 card your opponent controls; destroy it. When your opponent activates a monster effect, or their monster declares an attack, except during the turn this card was Special Summoned (Quick Effect): You can banish this card; Special Summon 1 \"Magistus\" or \"Invoked\" monster from your Extra Deck, except \"Invoked Magistus Heruvim\". You can only use each effect of \"Invoked Magistus Heruvim\" once per turn.",
+    "overallString": "[Monster|Effect|Fusion] Spellcaster/Light  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus Witchcrafter Aruru",
+    "desc": "If this card is in your hand and a \"Magistus\" monster is on the field: You can Special Summon this card. You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn. If this card is sent to the GY: You can banish it, then target 1 \"Magistus\" or \"Witchcrafter\" monster in your GY; Special Summon it. You can only use each effect of \"Magistus Witchcrafter Aruru\" once per turn.",
+    "overallString": "[Monster|Effect] Spellcaster/Light  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Azuri",
+    "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 WATER Cyberse monster with 1000 or less ATK from your Deck, also you cannot Special Summon for the rest of this turn, except WATER monsters. If you Link Summon a \"Marincess\" Link Monster(s), while this card is in your GY: You can banish this card; equip 1 \"Marincess\" monster from your GY to 1 of those Link Monsters as an Equip Spell that gives it 600 ATK. You can only use each effect of \"Marincess Azuri\" once per turn.",
+    "overallString": "[Monster|Effect] Cyberse/Water  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Ulpis",
+    "desc": "If this card is in your hand: You can discard 1 other \"Marincess\" card or WATER monster; Special Summon this card. If this card is Normal or Special Summoned: You can Set 1 \"Marincess\" Spell/Trap from your Deck. You can send 1 \"Marincess\" Link Monster Card you control to the GY; draw 1 card. You can only use each effect of \"Marincess Ulpis\" once per turn.",
+    "overallString": "[Monster|Effect] Cyberse/Water  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Aqua Leviathan @Marincess",
+    "desc": "You can Ritual Summon this card with a \"Marincess\" card. Monsters your opponent controls lose 1000 ATK. You can only use each of the following effects of \"Aqua Leviathan @Marincess\" once per turn. You can reveal this card in your hand; add 1 \"Marincess\" card from your Deck to your hand, except a Ritual Monster, then discard 1 card. If this card is Ritual Summoned: You can return cards your opponent controls to the hand up to the number of \"Marincess\" Monster Cards you control.",
+    "overallString": "[Monster|Effect|Ritual] Cyberse/Water  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Truth Heart",
+    "desc": "2+ \"Marincess\" monsters\nIf this card is Link Summoned using a Link Monster with 0 original ATK: You can Special Summon 1 Link-3 or lower \"Marincess\" monster from your Extra Deck. You can only use this effect of \"Marincess Truth Heart\" once per turn. You can banish 1 Link Monster Card from your field or GY; destroy 1 card your opponent controls, also for the rest of this turn, you cannot banish monsters with that same Link Rating to activate this effect of \"Marincess Truth Heart\".",
+    "overallString": "[Monster|Effect|Link] Cyberse/Water  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Marincess Reef Lagoon",
+    "desc": "When this card is activated: You can add 1 WATER Cyberse monster from your Deck to your hand. Once per turn, during your opponent's End Phase: You can shuffle up to 3 WATER monsters from your GY and/or banishment into the Deck. You can send this face-up card to the GY; Ritual Summon 1 WATER Cyberse Ritual Monster from your hand, by banishing WATER monsters from your GY whose total Levels equal or exceed the Level of the Ritual Monster. You can only activate 1 \"Marincess Reef Lagoon\" per turn.",
+    "overallString": "[Spell|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
     "name": "Ars Magna Artmage",
     "desc": "มอนสเตอร์ 2 ตัวขึ้นไป รวมถึงมอนสเตอร์ \"Ars Magna\" หรือ \"Artmage\"\nอีกฝ่ายไม่สามารถเล็งเป้ามอนสเตอร์ที่ linked ของคุณด้วยเอฟเฟกต์การ์ด ระหว่าง Main Phase ของคุณ: คุณสามารถนำมอนสเตอร์ \"Ars Magna\", \"Artmage\", \"DoomZ\", หรือ \"Elfnote\" 1 ตัวจากในเด็คของคุณขึ้นมือ หรือ Special Summon จากนั้นถ้าคุณมีมอนสเตอร์ที่มี Type แตกต่างกันตั้งแต่ 3 Type ขึ้นไปบนสนามของคุณ คุณสามารถ Special Summon มอนสเตอร์ 1 ตัวจากใน GY หรือที่ถูก banish ของคุณ คุณสามารถใช้เอฟเฟกต์นี้ของ \"Ars Magna Artmage\" ได้เพียงเทิร์นละครั้งเท่านั้น",
     "overallString": "[Monster|Effect|Link] Fairy/Light  [LINK-4] 2500/-  [↑][←][→][↓]",

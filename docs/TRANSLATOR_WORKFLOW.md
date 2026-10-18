@@ -10,15 +10,15 @@ building the `.ypk`, and updating `test-release.json` and version files.
 1. Open your local `AutoPR.py` helper. It opens the shared three-tab window:
    **Standard**, **Rush** and **All locales**.
 2. **Standard** keeps the existing per-language MyCard refresh, local `raw2`
-   translation and copy/upload workflow.
+   translation and upload/push workflow.
 3. **Rush** operates on your selected language. **Pull published** downloads the
    latest Pre-Release Translations workspace and merges it into your local
    `<LANG>/Rush/raw2/rush-pre-release.cdb`. **Fetch Rush updates** also checks
    web sources for missing English, French and Japanese text using the source
    identity snapshot bundled in this repo.
    Select **Open Database in DataEditorX** to edit that CDB.
-4. Copy Rush translations into the repo to review locally, or explicitly use
-   **Upload & Push** to commit that locale's workspace and start its cloud build.
+4. Review your local Rush translations, then use **Upload workspace & push to GitHub**
+   to commit that locale's workspace and start its cloud build.
 5. **All locales** shows published versions and translation/artwork gaps. Its
    source-fetch/build controls are for maintainers with the source repositories;
    ordinary translators do not need them.
@@ -341,12 +341,17 @@ pack entries resolve to exact printed set numbers; the
 pages and the importer verifies the set number is actually listed there.
 French first uses `fr_name`, `fr_text` and `fr_pendulum_effect` from Yugipedia.
 When those are incomplete it queries the [CodexYGO public API](https://codexygo.fr/api/card/v1/docs/?lang=en).
-The search uses the verified English page title, `format=master` (or `rush`),
-and `languages=en,fr`. A result must have an exact `yugipediaSlug` identity and
+The search starts with the verified English page title, `format=master` (or `rush`),
+and `languages=en,fr`. If CodexYGO uses a different English name, the importer
+tries up to four words from that title. A result must have an exact `yugipediaSlug` identity and
 the correct game format. Similar names, ambiguous matches and partial Pendulum
 translations are rejected. The source inventory still comes from the upstream
 CDB; the API does not add arbitrary new cards. English is never substituted as
 French, and missing translations remain available for manual completion.
+
+Reviewed printed-code exceptions cover CH03's `JPP01`/`JPP02`/`JPP04` numbers
+and Castle of Vampire (`IMPH-JP070`), whose upstream CDB entry preceded its pack
+listing. These mappings only apply to cards already present in the workspace.
 
 Human-edited names and effects are preserved field by field. Only blank,
 source-identical or still-Chinese fields are filled. Prompts remain owned by

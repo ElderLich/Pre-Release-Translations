@@ -1,5 +1,83 @@
 [
   {
+    "name": "Château du Vampire",
+    "desc": "Lorsque cette carte est activée : Invoquez Spécialement 1 monstre TÉNÈBRES Zombie depuis votre Deck ou Cimetière. Lorsque le monstre quitte le Terrain, détruisez cette carte. Le monstre n'est pas affecté par les effets activés des autres monstres non-TÉNÈBRES. Si cette carte face recto quitte le Terrain : détruisez autant de cartes que vous contrôlez que possible, et si vous le faites, recevez 400 points de dommages pour chaque carte détruite. Vous ne pouvez activer qu'1 \"Château du Vampire\" par tour.",
+    "overallString": "[Magie|Continu]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
+    "name": "Nécromancien de la Magie du Dragon",
+    "desc": "2 Monstres à Effet\nDurant votre Main Phase : vous pouvez révéler 1 Monstre Fusion dans votre Extra Deck, choisissez 1 Monstre non-Fusion dans votre Cimetière dont le nom est mentionné sur le monstre révélé, et le nom de cette carte devient celui du monstre (jusqu'à la End Phase), puis vous pouvez Invoquer par Fusion le Monstre Fusion révélé, en bannissant ses Matériels depuis votre main, Terrain et/ou Cimetière, et aussi, vous ne pouvez pas Invoquer Spécialement (Monstres Fusion exclus) depuis l'Extra Deck le reste de ce tour. Vous ne pouvez utiliser cet effet de \"Nécromancien de la Magie du Dragon\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Lien] Dragon/Vent  [LINK-2] 900/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
+  },
+  {
+    "name": "Gandora-X le Dragon Saccageur de Métal Noir",
+    "desc": "Si cette carte est ajoutée depuis le Deck à votre main, sauf en la piochant : vous pouvez l'Invoquer Spécialement. Si cette carte est Invoquée Spécialement : vous pouvez payer la moitié de vos LP ; détruisez autant d'autres monstres sur le Terrain que possible, et si vous le faites, infligez des dommages à votre adversaire égaux à la plus haute ATK sur le Terrain parmi les monstres face recto détruits qu'il possède, et si vous faites ça, cette carte gagne autant d'ATK. Si cette carte est détruite : vous pouvez ajouter 1 \"Sortilège Final\" depuis votre Deck à votre main. Vous ne pouvez utiliser chaque effet de \"Gandora-X le Dragon Saccageur de Métal Noir\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Dragon/Ténébres  [★8] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
+  },
+  {
+    "name": "Chaîne du Temps",
+    "desc": "Détruisez cette carte durant la 2e Standby Phase de votre adversaire après activation. Activez cette carte lorsque votre monstre est ciblé par une attaque : aucun des monstres combattants ne peut être détruit par ce combat, et aussi, bannissez-les après le calcul des dommages jusqu'à la 2e Standby Phase de leur contrôleur. Annulez les effets activés des monstres du même nom d'origine que les monstres qui sont actuellement bannis par l'effet de cette carte. Durant votre Draw Phase, au lieu de mener votre pioche normale : vous pouvez ajouter 1 monstre depuis votre Deck à votre main.",
+    "overallString": "[Piège|Continu]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
+  },
+  {
+    "name": "Dévotion du Guerrier",
+    "desc": "Envoyez 1 monstre Guerrier depuis votre main ou Deck au Cimetière, puis ciblez 1 monstre face recto contrôlé par votre adversaire ; il perd une ATK égale à l'ATK du monstre envoyé. Si un ou plusieurs monstres Guerrier que vous contrôlez vont être détruits au combat ou par un effet de carte, vous pouvez bannir cette carte depuis votre Cimetière à la place. Vous ne pouvez utiliser chaque effet de \"Dévotion du Guerrier\" qu'une fois par tour.",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
+  },
+  {
+    "name": "Trinitas Magistus",
+    "desc": "2+ monstres Magicien\nSi cette carte est Invoquée Spécialement depuis l'Extra Deck : vous pouvez équiper 1 monstre \"Magistus\" ou Magicien depuis votre Extra Deck à cette carte comme Magie d'Équipement. Vous pouvez défausser 1 carte ; renvoyez tous les Monstres Fusion, Synchro, Xyz et Lien depuis le Terrain et Cimetière de votre adversaire à l'Extra Deck. Durant la Main Phase de votre adversaire (Effet Rapide) : vous pouvez ajouter 1 carte \"Magistus\" depuis votre Cimetière ou bannissement à votre main. Vous ne pouvez utiliser qu'1 effet de \"Trinitas Magistus\" par tour, et uniquement une fois le tour.",
+    "overallString": "[Monstre|Effet|Lien] Magicien/Lumiére  [LINK-3] 2500/-  [↑][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
+  },
+  {
+    "name": "Magistus Heruvim l'Invokhé",
+    "desc": "1 monstre \"Magistus\" + 1 monstre Magicien\nSi cette carte est Invoquée Spécialement depuis l'Extra Deck : vous pouvez cibler 1 carte contrôlée par votre adversaire ; détruisez-la. Lorsque votre adversaire active un effet de monstre, ou que son monstre déclare une attaque, sauf le tour où cette carte a été Invoquée Spécialement (Effet Rapide) : vous pouvez bannir cette carte ; Invoquez Spécialement 1 monstre \"Magistus\" ou \"Invokhé\" (\"Magistus Heruvim l'Invokhé\" exclu) depuis votre Extra Deck. Vous ne pouvez utiliser chaque effet de \"Magistus Heruvim l'Invokhé\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Fusion] Magicien/Lumiére  [★9] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
+  },
+  {
+    "name": "Aruru, Artisanesorcière Magistus",
+    "desc": "Si cette carte est dans votre main et qu'un monstre \"Magistus\" est sur le Terrain : vous pouvez Invoquer Spécialement cette carte. Vous pouvez cibler 1 monstre face recto contrôlé par votre adversaire ; annulez ses effets jusqu'à la fin de ce tour. Si cette carte est envoyée au Cimetière : vous pouvez la bannir, puis ciblez 1 monstre \"Magistus\" ou \"Artisanesorcière\" dans votre Cimetière ; Invoquez-le Spécialement. Vous ne pouvez utiliser chaque effet de \"Aruru, Artisanesorcière Magistus\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Magicien/Lumiére  [★8] 2800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
+  },
+  {
+    "name": "Azuri Marincesse",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez Invoquer Spécialement 1 monstre EAU Cyberse avec max. 1000 ATK depuis votre Deck, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres EAU exclus) le reste de ce tour. Si vous Invoquez par Lien un ou plusieurs Monstres Lien \"Marincesse\", tant que cette carte est dans votre Cimetière : vous pouvez bannir cette carte ; équipez 1 monstre \"Marincesse\" depuis votre Cimetière à 1 des Monstres Lien comme Magie d'Équipement qui lui donne 600 ATK. Vous ne pouvez utiliser chaque effet de \"Azuri Marincesse\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Cyberse/Eau  [★3] 1600/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
+  },
+  {
+    "name": "Ulpis Marincesse",
+    "desc": "Si cette carte est dans votre main : vous pouvez défausser 1 autre carte \"Marincesse\" ou monstre EAU ; Invoquez Spécialement cette carte. Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez Poser 1 Magie/Piège \"Marincesse\" depuis votre Deck. Vous pouvez envoyer 1 Carte Monstre Lien \"Marincesse\" que vous contrôlez au Cimetière ; piochez 1 carte. Vous ne pouvez utiliser chaque effet de \"Ulpis Marincesse\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Cyberse/Eau  [★5] 600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
+  },
+  {
+    "name": "Léviathan Aquatique @Marincesse",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec une carte \"Marincesse\". Les monstres contrôlés par votre adversaire perdent 1000 ATK. Vous ne pouvez utiliser chacun des effets suivants de \"Léviathan Aquatique @Marincesse\" qu'une fois par tour. Vous pouvez révéler cette carte dans votre main ; ajoutez 1 carte \"Marincesse\" (Monstres Rituel exclus) depuis votre Deck à votre main, puis défaussez 1 carte. Si cette carte est Invoquée Rituellement : vous pouvez renvoyer un nombre de cartes contrôlées par votre adversaire à la main inférieur ou égal au nombre de Cartes Monstre \"Marincesse\" que vous contrôlez.",
+    "overallString": "[Monstre|Effet|Rituel] Cyberse/Eau  [★7] 2300/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
+  },
+  {
+    "name": "Cœur de Vérité Marincesse",
+    "desc": "2+ monstres \"Marincesse\"\nSi cette carte est Invoquée par Lien en utilisant un Monstre Lien avec 0 ATK d'origine : vous pouvez Invoquer Spécialement 1 monstre \"Marincesse\" de max. Link-3 depuis votre Extra Deck. Vous ne pouvez utiliser cet effet de \"Cœur de Vérité Marincesse\" qu'une fois par tour. Vous pouvez bannir 1 Carte Monstre Lien depuis votre Terrain ou Cimetière ; détruisez 1 carte contrôlée par votre adversaire, et aussi, le reste de ce tour, vous ne pouvez pas bannir de monstres de la même Classification Lien pour activer cet effet de \"Cœur de Vérité Marincesse\".",
+    "overallString": "[Monstre|Effet|Lien] Cyberse/Eau  [LINK-4] 2800/-  [↑][→][↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
+  },
+  {
+    "name": "Lagon Récifal Marincesse",
+    "desc": "Lorsque cette carte est activée : vous pouvez ajouter 1 monstre EAU Cyberse depuis votre Deck à votre main. Une fois par tour, durant la End Phase de votre adversaire : vous pouvez mélanger max. 3 monstres EAU depuis votre Cimetière et/ou bannissement dans le Deck. Vous pouvez envoyer cette carte face recto au Cimetière ; Invoquez Rituellement 1 Monstre Rituel EAU Cyberse depuis votre main, en bannissant des monstres EAU depuis votre Cimetière dont la somme des Niveaux est supérieure ou égale au Niveau du Monstre Rituel. Vous ne pouvez activer qu'1 \"Lagon Récifal Marincesse\" par tour.",
+    "overallString": "[Magie|Continu]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
+  },
+  {
     "name": "Ars Magna Artmage",
     "desc": "2+ monstres (un monstre \"Ars Magna\" ou \"Artmage\" inclus)\nVotre adversaire ne peut pas cibler vos monstres liés avec des effets de carte. Durant votre Main Phase : vous pouvez ajouter à votre main ou Invoquer Spécialement 1 monstre \"Ars Magna\", \"Artmage\", \"DoomZ\" ou \"Notes Elfiques\" depuis votre Deck, puis si vous avez min. 3 Types de Monstre différents sur votre Terrain, vous pouvez Invoquer Spécialement 1 monstre depuis votre Cimetière ou bannissement. Vous ne pouvez utiliser cet effet de \"Ars Magna Artmage\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Lien] Elfe/Lumiére  [LINK-4] 2500/-  [↑][←][→][↓]",

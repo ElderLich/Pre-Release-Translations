@@ -1,5 +1,107 @@
 [
   {
+    "name": "Power of the Duelist",
+    "desc": "Declare 2, 3, or 4 Attributes; apply this effect based on the number declared, also during the End Phase of this turn, you must send all cards you control to the GY, unless you have activated effects of monsters of all declared Attributes in your field and/or GY this turn.\n● 2: Target 1 monster on the field; banish it.\n● 3: Draw 2 cards, then discard 1 card.\n● 4: Negate the effects of 2 face-up cards on the field.\nYou can only activate 1 \"Power of the Duelist\" per turn.",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Dramatic Rescue",
+    "desc": "You can only use the ① and ② effects of this card's name each once per turn. If you control a \"Harpie Lady\" monster or \"Amazoness\" monster, you can activate this card the turn it was Set.\r\n①：Target 1 monster on the field; Special Summon 1 \"Harpie\" or \"Amazoness\" monster from your hand or Deck, and if you do, return the targeted monster to the hand.\r\n②：You can banish this card from your GY; add 1 \"Harpie\" or \"Amazoness\" monster from your GY or banishment to your hand.",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Eyelluring Mirror Wall",
+    "desc": "①：Gains these effects while you control an \"Amazoness\" monster or \"Harpie Lady\" monster.\r\n● Face-up monsters your opponent controls are changed to Attack Position and must attack if able.\r\n● Once per battle, when an opponent's monster declares an attack: You can halve its ATK.\r\n②：Once per turn, during the Standby Phase: You can Set 1 Spell/Trap from your GY or banishment that mentions \"Harpie Lady\", except \"Eyelluring Mirror Wall\".",
+    "overallString": "[Trap|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Chain Master - Brink of Death Chain Dance",
+    "desc": "If this card is sent to the GY and you have another \"Amazoness\" monster in your GY: You can pay 1000 LP; your opponent can choose 1 Level 10 monster in their Deck or Extra Deck, and if they do, you can Special Summon it to your field, ignoring its Summoning conditions, but neither player can activate its effects this turn. If they do not, you discard 1 random card from their hand. You can only use this effect of \"Amazoness Chain Master - Brink of Death Chain Dance\" once per turn.",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Fighter - Instant Kill Dance",
+    "desc": "If this card is added to your hand, except by drawing it: You can Special Summon it. If this card is Normal or Special Summoned: You can Set 1 Spell/Trap from your Deck that mentions \"Harpie Lady\". During damage calculation, if your \"Amazoness\" monster battles an opponent's monster: You can activate this effect; for that battle, neither monster can be destroyed by battle, also you take no battle damage. You can only use each effect of \"Amazoness Fighter - Instant Kill Dance\" once per turn.",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Spellcaster - Forbidden Spell Dance",
+    "desc": "If this card is Normal or Special Summoned: You can add 1 \"Amazoness\" monster from your Deck to your hand, except a Level 3 monster. During your Main Phase: You can Fusion Summon 1 EARTH or WIND Fusion Monster from your Extra Deck, using monsters from your hand or field. During damage calculation, if your \"Amazoness\" monster battles an opponent's monster: You can banish this card from your GY; switch the battling monsters' ATK until the end of this turn. You can only use each effect of \"Amazoness Spellcaster - Forbidden Spell Dance\" once per turn.",
+    "overallString": "[Monster|Effect] Warrior/Earth  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Harpie Lady - Alluring Dance",
+    "desc": "You can only use the ② and ③ effects of this card's name each once per turn.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：During the Main Phase, if this card is in your hand (Quick Effect): You can target 1 EARTH or WIND monster you control; return it to the Deck/Extra Deck, and if you do, Special Summon this card.\r\n③：If this card is Normal or Special Summoned: You can add 1 Spell/Trap from your Deck to your hand that mentions \"Harpie Lady\".",
+    "overallString": "[Monster|Effect] Winged Beast/Wind  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Amazoness Swordmaster",
+    "desc": "2 \"Amazoness\" monsters\r\nYou can only use the ① and ③ effects of this card's name each once per turn.\r\n①：If this card is Fusion Summoned: You can Special Summon 1 Level 4 or lower \"Amazoness\" monster from your Deck.\r\n②：When your \"Amazoness\" monster destroys an opponent's monster by battle: You can draw 1 card.\r\n③：(Quick Effect): You can Tribute 1 monster, then target 1 Effect Monster on the field; it loses 500 ATK, also its effects are negated.",
+    "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★8] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Triangle Ecstasy Harpie Lady Sisters",
+    "desc": "3 \"Harpie Lady\" monsters\r\nMust first be Fusion Summoned.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：Gains 500 ATK for each \"Harpie Lady\" in your GY. Your opponent cannot target this card with non-WIND monsters' effects.\r\n③：Once per turn (Quick Effect): You can destroy all Spells and Traps your opponent controls.",
+    "overallString": "[Monster|Effect|Fusion] Winged Beast/Wind  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Elegant Tri-Mirror",
+    "desc": "You can only use the ① and ② effects of this card's name each once per turn.\r\n①：Add 1 \"Harpie\" monster from your Deck to your hand, then if only your opponent controls a monster, you can Special Summon 1 \"Harpie Lady\", or 1 monster that mentions it, from your hand or GY.\r\n②：You can banish this card from your GY; Fusion Summon 1 EARTH or WIND Fusion Monster from your Extra Deck, using monsters from your hand or field.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Harpie & Amazoness Rakshasa Formation",
+    "desc": "You can only activate 1 card with this card's name per turn.\r\n①：Target 1 \"Harpie\" or \"Amazoness\" monster in your GY or banishment; Special Summon it, then you can apply 1 of these effects based on the number of \"Harpie Lady\" monsters and \"Amazoness\" monsters you control.\r\n● 1+: Place 1 \"Eyelluring Mirror Wall\" from your Deck face-up in your Spell & Trap Zone.\r\n● 2+: Take control of 1 monster your opponent controls.\r\n● 3+: Destroy all monsters your opponent controls.",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Primrose the Twin Rikka Fairy",
+    "desc": "If a monster(s) is Tributed: You can Special Summon this card from your hand and 1 \"Rikka\" monster from your Deck, except \"Primrose the Twin Rikka Fairy\", in Defense Position, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can target 1 Plant monster you control; increase or decrease its Level by 2. During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Xyz Summon 1 Plant Xyz Monster. You can only use each effect of \"Primrose the Twin Rikka Fairy\" once per turn.",
+    "overallString": "[Monster|Effect] Plant/Water  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka Black Princess",
+    "desc": "If you control no monsters, or all monsters you control are Plant monsters: You can Special Summon this card from your hand or GY, but banish it when it leaves the field, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can Tribute 1 Plant monster from your hand or field; Special Summon 1 \"Rikka\" monster from your Deck, except \"Rikka Black Princess\". You can only use each effect of \"Rikka Black Princess\" once per turn.",
+    "overallString": "[Monster|Effect] Plant/Water  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Teardrop the Rikka Empress",
+    "desc": "2 Level 10 Plant monsters\nYou can also Xyz Summon this card by using \"Teardrop the Rikka Queen\" you control (transfer its materials). (Quick Effect): You can detach up to 6 materials from this card; send that many Spells/Traps on the field to the GY, then you can Tribute 1 monster on the field. You can only use this effect of \"Teardrop the Rikka Empress\" once per turn. Each time a monster(s) is Tributed: Attach 1 card from your opponent's GY to 1 Plant Xyz Monster you control.",
+    "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka Empress Strenna",
+    "desc": "2 Level 6 Plant monsters\nYou can detach 2 materials from this card; Special Summon 1 Plant Xyz Monster from your Extra Deck in Defense Position, except \"Rikka Empress Strenna\", then if you Special Summoned a \"Rikka\" monster, you can attach 1 \"Rikka\" monster from your Deck to it. If a monster(s) is Tributed: You can Set 1 \"Rikka\" Trap from your Deck or GY. You can only use each effect of \"Rikka Empress Strenna\" once per turn.",
+    "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka June Moon",
+    "desc": "When you activate this card, you can also Tribute 1 Plant monster; take 2 \"Rikka\" monsters from your Deck with the same Level, but different names, add 1 of them to your hand and send the other to the GY, also if you Tributed a monster at activation, your opponent cannot target \"Rikka\" monsters you control with card effects this turn. For the rest of this turn after this card resolves, you cannot Special Summon from the Extra Deck, except Plant Xyz Monsters. You can only activate 1 \"Rikka June Moon\" per turn.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
+    "name": "Castle of Vampire",
+    "desc": "When this card is activated: Special Summon 1 DARK Zombie monster from your Deck or GY. When that monster leaves the field, destroy this card. That monster is unaffected by the activated effects of other non-DARK monsters. If this face-up card leaves the field: Destroy as many cards you control as possible, and if you do, take 400 damage for each card destroyed. You can only activate 1 \"Castle of Vampire\" per turn.",
+    "overallString": "[Spell|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
+  },
+  {
     "name": "Necromancer of Dragon Magic",
     "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
     "overallString": "[Monster|Effect|Link] Dragon/Wind  [LINK-2] 900/-  [↙][↘]",
@@ -13,7 +115,7 @@
   },
   {
     "name": "Time Chain",
-    "desc": "Destroy this card during your opponent's 2 Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's 2 Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
+    "desc": "Destroy this card during your opponent's ② Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's ② Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
     "overallString": "[Trap|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
   },

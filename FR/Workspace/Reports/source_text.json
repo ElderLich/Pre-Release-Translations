@@ -1,32 +1,73 @@
 {
   "language": "fr",
-  "candidates": 3,
-  "matched": 0,
-  "unmatched_ids": [
-    100274001,
-    100274002,
-    100274004
-  ],
-  "unresolved": [
-    {
-      "id": 100274001,
-      "name": "伟大的三贤者",
-      "set_code": "CH03-JP001",
-      "reason": "No source card page found"
+  "candidates": 16,
+  "matched": 16,
+  "unmatched_ids": [],
+  "unresolved": [],
+  "matches": {
+    "101307005": {
+      "set_code": "IMPH-JP005",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17832&languages=fr"
     },
-    {
-      "id": 100274002,
-      "name": "召唤兽 大贤者智天使",
-      "set_code": "CH03-JP002",
-      "reason": "No source card page found"
+    "101307006": {
+      "set_code": "IMPH-JP006",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17833&languages=fr"
     },
-    {
-      "id": 100274004,
-      "name": "结晶之魔女神 阿鲁鲁",
-      "set_code": "CH03-JP004",
-      "reason": "Printed set code does not match source page",
-      "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
+    "101307007": {
+      "set_code": "IMPH-JP007",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17834&languages=fr"
+    },
+    "101307008": {
+      "set_code": "IMPH-JP008",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17835&languages=fr"
+    },
+    "101307015": {
+      "set_code": "IMPH-JP015",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17827&languages=fr"
+    },
+    "101307016": {
+      "set_code": "IMPH-JP016",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17828&languages=fr"
+    },
+    "101307032": {
+      "set_code": "IMPH-JP032",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17836&languages=fr"
+    },
+    "101307033": {
+      "set_code": "IMPH-JP033",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17837&languages=fr"
+    },
+    "101307041": {
+      "set_code": "IMPH-JP041",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17829&languages=fr"
+    },
+    "101307042": {
+      "set_code": "IMPH-JP042",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17830&languages=fr"
+    },
+    "101307053": {
+      "set_code": "IMPH-JP053",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17838&languages=fr"
+    },
+    "101307054": {
+      "set_code": "IMPH-JP054",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17839&languages=fr"
+    },
+    "101307064": {
+      "set_code": "IMPH-JP064",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17831&languages=fr"
+    },
+    "101307067": {
+      "set_code": "IMPH-JP067",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17842&languages=fr"
+    },
+    "101307074": {
+      "set_code": "IMPH-JP074",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17840&languages=fr"
+    },
+    "101307075": {
+      "set_code": "IMPH-JP075",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17841&languages=fr"
     }
-  ],
-  "matches": {}
+  }
 }

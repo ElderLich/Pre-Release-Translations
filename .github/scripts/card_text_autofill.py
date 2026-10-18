@@ -62,6 +62,14 @@ EXTRA_SET_CODES_BY_ID = {
     100264002: "VP26-JP002",
     100264003: "VP26-JP003",
     100265002: "YOS3-JP002",
+    # CH03's new cards use the JPP01-style printed numbers, not JP001.
+    # Verified against https://yugipedia.com/wiki/CH03-JPP01 (and JPP02/JPP04).
+    100274001: "CH03-JPP01",
+    100274002: "CH03-JPP02",
+    100274004: "CH03-JPP04",
+    # Present in the upstream CDB before its pack list was updated.
+    # https://yugipedia.com/wiki/IMPH-JP070
+    101307070: "IMPH-JP070",
 }
 
 OFFICIAL_SLUGS_BY_SET_PREFIX = {
@@ -147,8 +155,10 @@ def pack_code_from_filename(filename: str) -> str:
 
 
 def set_code_for_entry(entry: PackEntry, lang: str) -> str | None:
+    if entry.card_id in EXTRA_SET_CODES_BY_ID:
+        return EXTRA_SET_CODES_BY_ID[entry.card_id]
     if entry.pack_code.lower() == "etc":
-        return EXTRA_SET_CODES_BY_ID.get(entry.card_id)
+        return None
     base, sep, suffix = entry.pack_code.partition("-")
     if not base:
         return None
