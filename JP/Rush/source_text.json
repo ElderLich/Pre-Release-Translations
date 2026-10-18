@@ -1,8 +1,18 @@
 {
   "language": "jp",
-  "matches": {},
+  "matches": {
+    "120310026": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP026",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    }
+  },
   "requested_ids": [
-    120000012
+    120000012,
+    120310026
   ],
   "unresolved": [
     {

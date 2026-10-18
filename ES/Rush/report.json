@@ -1,5 +1,5 @@
 {
-  "active_cards": 76,
+  "active_cards": 77,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -23,6 +23,7 @@
     120310022,
     120310023,
     120310025,
+    120310026,
     120310036,
     120310037,
     120310038,
@@ -150,6 +151,15 @@
       ],
       "id": 120310025,
       "name": "黑刹的骑士"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310026,
+      "name": "迫击炮的石像"
     },
     {
       "fields": [
@@ -947,8 +957,8 @@
     "120310062": "c99571f13ad8dd6355a27c769eef4ff11fe10fd43fae517d481ada0e2af620b7",
     "120310063": "2d8ecdb493527b43b73f74a5591e6b16c42f6cabac392e187e6955dde116ec2f"
   },
-  "script_files": 109,
-  "source_cards": 76,
+  "script_files": 110,
+  "source_cards": 77,
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "e4e2baad8ad86d16a1249b2367ca65849cc7be78cb15ad9ffe2ce754646846b0",
@@ -970,6 +980,7 @@
     "120310022": "c97a5da6ac6ee681a087891734574e763cb5bfd274880f50fd39d1ba44a5ab5f",
     "120310023": "6d6cbddcfcc7f84ae14f9767f17a083709926e16837f5addde5df47a14313450",
     "120310025": "e8e287d9da23d625626488ac33d0d4bc50deff6f4cbb80ece771e2cba017ec9a",
+    "120310026": "f76c95b252ff03494052bfd6d7f15b58fd666f4dfe4097be38c33b4418901056",
     "120310036": "a9b2fe59fe5ed01bfbc4baa9354b520fbc016628e379e1c7f99d7442636764a4",
     "120310037": "48df2ad5f6d20eb0cc89c5a383cd32a457514dfd4ebe8bf85faa6478d066cf36",
     "120310038": "3b920e5a9161d76bdfb28209b9dafe4798179b6bece2e6cc3a21a4e0c3965d35",

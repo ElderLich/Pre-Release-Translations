@@ -8,6 +8,7 @@
     120310022,
     120310023,
     120310025,
+    120310026,
     120310041,
     120310046,
     120310054,
@@ -44,6 +45,11 @@
       "id": 120310025,
       "reason": "No source card page found",
       "set_code": "RD/KP27-JP025"
+    },
+    {
+      "id": 120310026,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP026"
     },
     {
       "id": 120310041,
