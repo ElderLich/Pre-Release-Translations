@@ -93,12 +93,12 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "e5a2a6560554bfbbd459a99847830a01e22d40e1e91ddcaf55101358665fd9d3",
+  "local_inputs_sha256": "9e86f05b88ccccecd3153ec5050956b548d61c014801fb31a2285b5e50e6e6b3",
   "patch_sha256": "be51dc0a595853a1c3da8fb437414753fd3c75f883dfa3561a02a6b17f2414b6",
   "pending_locales": {
     "DE": 88,
     "EN": 27,
-    "ES": 13,
+    "ES": 3,
     "FR": 27,
     "IT": 42,
     "JP": 26,
