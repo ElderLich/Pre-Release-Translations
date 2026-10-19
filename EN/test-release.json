@@ -1,5 +1,17 @@
 [
   {
+    "name": "Rampant Wings of Atlantis",
+    "desc": "This card's name becomes \"Umi\" while on the field. You can only use each of the following effects of \"Rampant Wings of Atlantis\" once per turn. You can send this card from your hand and 1 Spell/Trap or \"Umi\" from your hand or face-up field to the GY, then target 1 card your opponent controls; send it to the GY. If you control \"Atlantis, City of the Sea Dragon\": You can banish this card from your GY; Special Summon 1 Level 4 or lower Sea Serpent monster from your hand or Deck.",
+    "overallString": "[Monster|Effect] Sea Serpent/Water  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codaedalus",
+    "desc": "2 WATER monsters\nYou can only Special Summon \"Codaedalus(s)\" once per turn. This card's name becomes \"Umi\" while on the field. If this card is Link Summoned: You can activate this effect; during the End Phase of this turn, add 1 card from your GY to your hand that mentions \"Atlantis, City of the Sea Dragon\", except \"Codaedalus\". Once per turn: You can send 1 face-up \"Umi\" you control to the GY; send up to 2 Spells/Traps on the field to the GY.",
+    "overallString": "[Monster|Effect|Link] Sea Serpent/Water  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
     "name": "Power of the Duelist",
     "desc": "Declare 2, 3, or 4 Attributes; apply this effect based on the number declared, also during the End Phase of this turn, you must send all cards you control to the GY, unless you have activated effects of monsters of all declared Attributes in your field and/or GY this turn.\n● 2: Target 1 monster on the field; banish it.\n● 3: Draw 2 cards, then discard 1 card.\n● 4: Negate the effects of 2 face-up cards on the field.\nYou can only activate 1 \"Power of the Duelist\" per turn.",
     "overallString": "[Spell|Quick-Play]",
@@ -44,7 +56,7 @@
   {
     "name": "Amazoness Swordmaster",
     "desc": "2 \"Amazoness\" monsters\r\nYou can only use the ① and ③ effects of this card's name each once per turn.\r\n①：If this card is Fusion Summoned: You can Special Summon 1 Level 4 or lower \"Amazoness\" monster from your Deck.\r\n②：When your \"Amazoness\" monster destroys an opponent's monster by battle: You can draw 1 card.\r\n③：(Quick Effect): You can Tribute 1 monster, then target 1 Effect Monster on the field; it loses 500 ATK, also its effects are negated.",
-    "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★8] 2600/2200",
+    "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
