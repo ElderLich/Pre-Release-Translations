@@ -95,28 +95,6 @@
   "pending_translations": [
     {
       "fields": [
-        "name"
-      ],
-      "id": 120000012,
-      "name": "绳之遗物"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310001,
-      "name": "疯狂犯罪者·空鹰女"
-    },
-    {
-      "fields": [
-        "name"
-      ],
-      "id": 120310003,
-      "name": "α计数龙"
-    },
-    {
-      "fields": [
         "str2"
       ],
       "id": 120310006,
@@ -131,45 +109,17 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310008,
-      "name": "α版重建龙"
+      "name": "Ricostrudra Ustione Alfa "
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310009,
-      "name": "α版SSD"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310010,
-      "name": "α版飞龙"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310011,
-      "name": "真红动初速龙"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310012,
-      "name": "碧牙试速龙"
+      "name": "Viverna Ustione Alfa"
     },
     {
       "fields": [
@@ -233,53 +183,17 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310020,
-      "name": "腐灼的崇拜者"
+      "name": "Adoratore della Piagafuoco"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310021,
-      "name": "绳之王冠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310022,
-      "name": "绳之王剑"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310023,
-      "name": "黑刹的暗杀者"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310025,
-      "name": "黑刹的骑士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310026,
-      "name": "迫击炮的石像"
+      "name": "Statue di Pietra dei Cannoni Mortaio"
     },
     {
       "fields": [
@@ -290,62 +204,18 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3",
         "str4"
       ],
       "id": 120310039,
-      "name": "Eα版燃龙兽"
+      "name": "Draghetto Ustione Accesso Anticipato"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310040,
-      "name": "大师升级燃龙兽"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310041,
-      "name": "黑刹的王 绳"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310046,
-      "name": "进行腐灼的恶果"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310049,
-      "name": "U·更新维护"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310050,
-      "name": "T·传输维护"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310051,
-      "name": "S·系统维护"
+      "name": "Manutenzione di Trasferimento"
     },
     {
       "fields": [
@@ -357,21 +227,17 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310054,
-      "name": "黑腐的分歧点"
+      "name": "Il Crocevia della Piaga Nera"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310055,
-      "name": "蕾娜的蘑菇汤"
+      "name": "Zuppa di Funghi di Lena"
     },
     {
       "fields": [
@@ -387,13 +253,6 @@
       ],
       "id": 120310063,
       "name": "Mad Rare Hack"
-    },
-    {
-      "fields": [
-        "name"
-      ],
-      "id": 120310066,
-      "name": "黑腐的亡者"
     },
     {
       "fields": [
@@ -1623,20 +1482,20 @@
   "script_files": 120,
   "source_cards": 88,
   "text_sha256": {
-    "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
+    "120000012": "cd668a82acb2df93ddc2061720dade359c57c364481db933496f555dc1ef1476",
     "120109069": "b08c72ba0ea00255316f82f5d1d91b4dccb3c144f2d024457cbfe067681c99a8",
-    "120310001": "8bd0f93d1f4437b81d4e4eaf574f9c8d825d8fb033995c360323c141f832a858",
+    "120310001": "78443f02e5e3691908aa854b208bb3f39d410951cd29c2445d6e14a6d851f8d1",
     "120310002": "9b9cfedc6714fabbecb75373b00992aead4e7e9f688721b7e08e5b65ec2777c6",
-    "120310003": "3b95c6f3c5d096870b4ec05a4f47ceb5d7dfeaf494569fb1bc2713c5158e6ac0",
+    "120310003": "fbf56e103d83d709e89b767283b65cb192f520d87df529c64306dc3064da7eb0",
     "120310004": "bd5978273f7877545c5aac8cd07308c5df1877d48c0ca3a503bdebb96ecfe630",
     "120310005": "6cc43956d0ca1443b6722cc41357d939a49fd9d45ec0a0aff113f93737ac5394",
     "120310006": "0641caf144b85fba2e15ba62621c41f21f1ad48120ca919efbceaa4ebd437864",
     "120310007": "5d2bf7d67a43981169509d139233da5a551f34b9dbdf5f8fc55f73af5807d31d",
-    "120310008": "c6867927ba82c388b7cbab3efef22fb49f02b662616083fe805f894010c2812f",
-    "120310009": "3e75145f97bd1c7020433fb292574688f7e541657043d1ac83c8b04585126679",
-    "120310010": "ff4f6112eefeae2605f312776874da45aa9564a493eafb77fef657439c3ef29d",
-    "120310011": "80c7112da9f59288a577ffc93026b9a5bc11ae532ffc9c293a40d629fc830de0",
-    "120310012": "52413d24147dc6c674e09e950558f89b36628b72ac94535afa1678aa72ffd03a",
+    "120310008": "e9e9b7ea5ca39d24a0d54a707f3379b10469b25adf00907a5516d0c0fd0e91c6",
+    "120310009": "9aa90d5370d88b4b519bbcb21001db73e98c10d7b55e6bd8d5408afc843f7f0a",
+    "120310010": "7c29ce9cecce51055c0495f3c8125cd102b933ae37a348c0e0f83a207faee262",
+    "120310011": "3abb64a4165202b918a13c87b61cd3f1c109260856f53ab294da7a702ade84d5",
+    "120310012": "101897443d7304d54f985c415db5fae57dd49c2319429c810f48c12dd28a292f",
     "120310013": "42c22bf70c1f06100561548ec234a2fd2dc0395b13d3dd530a679f0ad0cb3d47",
     "120310014": "2e5eff3d685be86b3ae8b1c438f7ce8d29b78c68497d0f7058cb61348ea5d2f0",
     "120310015": "fb2126d731bdd2d4184a41953c0742df2a35b7d3f30ac989d4168ca4f39dc1a3",
@@ -1644,31 +1503,31 @@
     "120310017": "c559d0c293fe5ab55c0b98b817145281f3293703adbcfeb6433f34f140e78089",
     "120310018": "33f8c1f2ba5f6cedda625d79fd54b794425d52571ac7c07fb5eaee1af5b6308a",
     "120310019": "31bf9113c43323c6173347c95ef240131664d8658aa7b223778b5b45c33301e3",
-    "120310020": "d1f02c829552a2ac16dac2bfb2ab75ee38665dafda6790d1885ff4a245de016d",
-    "120310021": "72154ff5a9d6f50a73be01913578a38529a260f9d21fc8a12886626ad4fc67f5",
-    "120310022": "acd0a60e43247d9ab9ab594d06975706526437337e43599e65d8acefce6da7d9",
-    "120310023": "56ad792434edfdf328f82b2192031102207d2052cdf5a1f1022fe59750392c95",
-    "120310025": "47440c7968f49acd38202d60e5fdadad263044b2e1c2ab2937518ec4e930ed28",
-    "120310026": "ae842ff5d90173afd49e6520d9401cb3e28fcfb2dddf925604501e4a48388c61",
+    "120310020": "8391e8ee256499d6851e7d669e145487e6bb96810248260f9c08230b07998b3d",
+    "120310021": "dcba3cd61e4e2766889cc3b75e3f954087f81e7e72bbf9c0cb8bcc902c5b735a",
+    "120310022": "51e03e526f533183193f753330df1d9cc04fe2fd21a841aa44891d171e413c58",
+    "120310023": "0585da95088f719e1a83e3a9d97853197e8eaee5083fa1f49c7b10fc60356c00",
+    "120310025": "c867345fe543fec6e32fa6504edc3a5695b77ceb4038c2a75df5585d43ac51ad",
+    "120310026": "8a43e9ff6b577916cfd142d4e96a8cda2cc4f4a6e743255cce69c81e836a48a2",
     "120310036": "874c0e250aa8824208d73079350b8044e943f26dce3e595b3fd70aa5b0bc65b0",
     "120310037": "7cdabc217d529c1b25f37dec0bd2938f00eb544fcbf57b190f5844751a9b71a2",
     "120310038": "c6ee72b8ce595e3521787fd66b1373c86547c7b49d7b2400d2eea66e051b2a34",
-    "120310039": "cb79ffade27d5f1a44603ba49b83fe2371ec1eba219eebbf3b66e646f37ea08b",
-    "120310040": "09bc4bd3371068ac22fae4f86ea3e7106f906d262db38a895ccdbf4d6971554d",
-    "120310041": "f6ae73bd8390a9c1170b58b5781785f17525e231d44d66d7e66a24a933afca43",
+    "120310039": "a304e9983fc418afd4357abd79e85e5a5efa91652fdbdd6fb67ba2038a6e53ea",
+    "120310040": "4bf9d285a8b22a9da150187cf92649168d21c0e89a00c408ebf13fca0b33852a",
+    "120310041": "d46a653539c8c655276cc8654084130bcdd9678e40e7126e82c10ae9bb97769c",
     "120310045": "bf6cbdfb18f3f0832b347469413945a077ab827f6ed5ea0a573beb231aefe0f0",
-    "120310046": "fef1bca7243b360768a46b96df62b5a2a7e1e2f900fd06efb7aca9fe54ed6cc8",
+    "120310046": "4fa3d65df04d53cd22b685eb0a34d7b67d85b7959753989f15fdbf0db6ec2ac6",
     "120310048": "81c9e3a9cb25ef3c1d06495f6000e073bf18cca23bb32365f171ef1f9a6a3734",
-    "120310049": "d309dbf7eb9b11f0cf6800c81fb5b8964db81b7bb14bf0da12ee80d7cb0afaeb",
-    "120310050": "cb2fa71205e3a37c4860893edd847c5d10c5bd13150da509a346ea93a2185017",
-    "120310051": "c9add406eb272a95ed1166569b3538a83cbf23859d5f19e4ad9459a092f51210",
+    "120310049": "081a397fb33845387b3ab9b3c1997f93f39fd11dd177bea86f601bfad89614ef",
+    "120310050": "7d0640500fc1efa6818cc6f87c4fe6b3dc1808472c2c23c57bab75137258d2be",
+    "120310051": "d8e0077fa8d98d16f53b0e422d0e483ef6b4480bcdd0869cded687049d1d8d96",
     "120310052": "3df5fdd7ad54968f16868c1313615090831f3ca18d571752a229ae2ca9b1fd63",
-    "120310054": "5a2dae44b995a555caa0b8a396e237e65eb217d5fc579725063e309e4a0cec62",
-    "120310055": "a56776b7e502db10eebc0fcf68d111aabaf80f4a5e0d8c24f096265e794f1f7d",
+    "120310054": "5af8063534027b2acb3f35193622f22e426fd1ddec0f961636e73618c7970582",
+    "120310055": "428a52a1867a1d86c8a614a04158595b992f9e3038bebd32f4f7067e4aae1e3e",
     "120310061": "21a6faf3d48673d5838ac4dba4a5baa7d6a974aefcb1e35a371534e03f585f74",
     "120310062": "10b7f5636d893193f402cfc6c2cfc076f6e94cf3711e54390e569cfdf5d49c56",
     "120310063": "3e88ae14e6684587afbfa594153248f270a1c69a77f04f6197cd961f53a9389b",
-    "120310066": "b1a11945cd1a2f1647d556b62b4b1e1e7a34c94a113702b6e7cf55a1c184d585",
+    "120310066": "fe7a1f64bcdbc159b2139a1c14bf1943de4b848fcdf4778a78aadbe7270bf863",
     "120311001": "a671367dfe6a4dc522908886d965b21913544db14e8487dac058da20224ba7be",
     "120311002": "33711b3fe67d9c0ee61729a9f0cfd9fa56e95d0bafef2f69f5fac02d103c4773",
     "120311004": "e248d3dcb06e097541defa561899e6844299d9c82fa6cfb34a992c120f102fda",
