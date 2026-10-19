@@ -1,8 +1,108 @@
 {
   "language": "jp",
-  "matches": {},
+  "matches": {
+    "120310003": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP003",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310008": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP008",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310009": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP009",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310010": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP010",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310011": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP011",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310012": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP012",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310039": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP039",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310040": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP040",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310049": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP049",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310050": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP050",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    },
+    "120310051": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP051",
+      "source": "https://ocg-card.com/list_r/kp27/"
+    }
+  },
   "requested_ids": [
-    120000012
+    120000012,
+    120310003,
+    120310008,
+    120310009,
+    120310010,
+    120310011,
+    120310012,
+    120310039,
+    120310040,
+    120310049,
+    120310050,
+    120310051
   ],
   "unresolved": [
     {

@@ -1,20 +1,123 @@
 {
   "language": "en",
-  "matches": {},
+  "matches": {
+    "120310003": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP003",
+      "source": "https://yugipedia.com/wiki/Alpha_Count"
+    },
+    "120310008": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP008",
+      "source": "https://yugipedia.com/wiki/Alpha_Burn_Rebuildra"
+    },
+    "120310009": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP009",
+      "source": "https://yugipedia.com/wiki/Alpha_Burn_SSD"
+    },
+    "120310010": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP010",
+      "source": "https://yugipedia.com/wiki/Alpha_Burn_Wyvern"
+    },
+    "120310011": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP011",
+      "source": "https://yugipedia.com/wiki/Red-Boot_Launch_Burn_Dragon"
+    },
+    "120310012": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP012",
+      "source": "https://yugipedia.com/wiki/Blue-Fang_Teaser_Burn_Dragon"
+    },
+    "120310026": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP026",
+      "source": "https://yugipedia.com/wiki/Stone_Statues_of_the_Mortar_Cannons"
+    },
+    "120310039": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP039",
+      "source": "https://yugipedia.com/wiki/Early_Access_Burn_Drake"
+    },
+    "120310040": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP040",
+      "source": "https://yugipedia.com/wiki/Master_Up-Drake"
+    },
+    "120310049": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP049",
+      "source": "https://yugipedia.com/wiki/Update_Maintenance"
+    },
+    "120310050": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP050",
+      "source": "https://yugipedia.com/wiki/Transfer_Maintenance"
+    },
+    "120310051": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP051",
+      "source": "https://yugipedia.com/wiki/System_Maintenance"
+    }
+  },
   "requested_ids": [
     120000012,
-    120310026
+    120310003,
+    120310008,
+    120310009,
+    120310010,
+    120310011,
+    120310012,
+    120310026,
+    120310039,
+    120310040,
+    120310049,
+    120310050,
+    120310051
   ],
   "unresolved": [
     {
       "id": 120000012,
       "reason": "No upstream sets.md range or reviewed mapping",
       "set_code": null
-    },
-    {
-      "id": 120310026,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP026"
     }
   ]
 }

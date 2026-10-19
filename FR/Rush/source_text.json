@@ -1,20 +1,123 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310003": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP003",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17855&languages=fr"
+    },
+    "120310008": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP008",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17856&languages=fr"
+    },
+    "120310009": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP009",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17857&languages=fr"
+    },
+    "120310010": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP010",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17858&languages=fr"
+    },
+    "120310011": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP011",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17859&languages=fr"
+    },
+    "120310012": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP012",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17860&languages=fr"
+    },
+    "120310026": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP026",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17854&languages=fr"
+    },
+    "120310039": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP039",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17861&languages=fr"
+    },
+    "120310040": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP040",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17862&languages=fr"
+    },
+    "120310049": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP049",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17863&languages=fr"
+    },
+    "120310050": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP050",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17864&languages=fr"
+    },
+    "120310051": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP051",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17865&languages=fr"
+    }
+  },
   "requested_ids": [
     120000012,
-    120310026
+    120310003,
+    120310008,
+    120310009,
+    120310010,
+    120310011,
+    120310012,
+    120310026,
+    120310039,
+    120310040,
+    120310049,
+    120310050,
+    120310051
   ],
   "unresolved": [
     {
       "id": 120000012,
       "reason": "No upstream sets.md range or reviewed mapping",
       "set_code": null
-    },
-    {
-      "id": 120310026,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP026"
     }
   ]
 }

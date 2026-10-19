@@ -1,5 +1,5 @@
 {
-  "active_cards": 77,
+  "active_cards": 88,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -7,10 +7,16 @@
     120109069,
     120310001,
     120310002,
+    120310003,
     120310004,
     120310005,
     120310006,
     120310007,
+    120310008,
+    120310009,
+    120310010,
+    120310011,
+    120310012,
     120310013,
     120310014,
     120310015,
@@ -27,10 +33,15 @@
     120310036,
     120310037,
     120310038,
+    120310039,
+    120310040,
     120310041,
     120310045,
     120310046,
     120310048,
+    120310049,
+    120310050,
+    120310051,
     120310052,
     120310054,
     120310055,
@@ -84,6 +95,55 @@
   "pending_translations": [
     {
       "fields": [
+        "name"
+      ],
+      "id": 120310003,
+      "name": "α计数龙"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310008,
+      "name": "α版重建龙"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310009,
+      "name": "α版SSD"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310010,
+      "name": "α版飞龙"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310011,
+      "name": "真红动初速龙"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310012,
+      "name": "碧牙试速龙"
+    },
+    {
+      "fields": [
         "source_changed"
       ],
       "id": 120310014,
@@ -95,6 +155,49 @@
       ],
       "id": 120310015,
       "name": "Mad Rare Beeko"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3",
+        "str4"
+      ],
+      "id": 120310039,
+      "name": "Eα版燃龙兽"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310040,
+      "name": "大师升级燃龙兽"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310049,
+      "name": "U·更新维护"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310050,
+      "name": "T·传输维护"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310051,
+      "name": "S·系统维护"
     }
   ],
   "published_source_fields": {
@@ -837,17 +940,23 @@
     "120310062": "c99571f13ad8dd6355a27c769eef4ff11fe10fd43fae517d481ada0e2af620b7",
     "120310063": "2d8ecdb493527b43b73f74a5591e6b16c42f6cabac392e187e6955dde116ec2f"
   },
-  "script_files": 110,
-  "source_cards": 77,
+  "script_files": 120,
+  "source_cards": 88,
   "text_sha256": {
     "120000012": "c71a6c5630578295f9d6f1975f89ed450edd9890187f1a57ee736acafbfb70d7",
     "120109069": "e4e2baad8ad86d16a1249b2367ca65849cc7be78cb15ad9ffe2ce754646846b0",
     "120310001": "53861e4185c88a06b9515bfc7d6ffd76cd3d937217beb3e3cf0bed645e4a69a5",
     "120310002": "296993002d73013cf72acea737deb3c9182f9f421a15bca0c8a29c01b1f172d3",
+    "120310003": "1b6dee5aa54e1964dd35fc9f421125f932071c484446bbd28527a07b92190af4",
     "120310004": "7aea80db6f3cc9fe6e5ba905d0b5c769758f9d897637f77730b889d258154639",
     "120310005": "175eea246f405c1c1b069f4b9757905da2409b07293c4efd279e649a5e037070",
     "120310006": "e03c14715e59102546a6a915e18dedf19d775a77eccbb512582e96ddaa27ddf1",
     "120310007": "7adc8af18d4b4d623a2c28fc15a67f23d17f7d60a2f500ec51e6b6a863e874ce",
+    "120310008": "b2d097d88f7bbd14cebae821ccd1430f55468ffafceafeee63768e781cb6c163",
+    "120310009": "52fafca34d4a92c84f1de540ff85ef37120f698d431a962ff3097fd0e57f01f3",
+    "120310010": "50df1dbd6eb0ac0ba9896dd8e20814bb0fdb1c46736b7ee01106643d325cdec1",
+    "120310011": "10f68454bf279893d865cd6e1d5bd1a60b00634491dee00d4e53e5e9d49a80b2",
+    "120310012": "57fdd7181a4c11199987ef368738b98b63f33c507274a361efd0ad35f53e7c9d",
     "120310013": "1bc67db569b3de80578bb8f7d10bc9a319d46492f16b6a2a4529eac7508bc353",
     "120310014": "ec95957bf89bbd9369e9e7bb317ff4e64cc347ecc50c46757df70d5517e7573b",
     "120310015": "1c399dc0642f598391a5a8c13bc65f5120b8c7fca281ce53644a3f39e8a1166f",
@@ -864,10 +973,15 @@
     "120310036": "a9b2fe59fe5ed01bfbc4baa9354b520fbc016628e379e1c7f99d7442636764a4",
     "120310037": "48df2ad5f6d20eb0cc89c5a383cd32a457514dfd4ebe8bf85faa6478d066cf36",
     "120310038": "3b920e5a9161d76bdfb28209b9dafe4798179b6bece2e6cc3a21a4e0c3965d35",
+    "120310039": "6e0935ebaba7bddae10c248f766c068fc6026bbb44bb34c8bcf9d54ecbf322aa",
+    "120310040": "a2ce184dbffd56cabebc12431820d4c3655e34307a01fd1236eb62e9803a5f60",
     "120310041": "72e8c4c1abc155bc7f10741fa5afb48934e42324588581b03961e2d1017350f7",
     "120310045": "1c0f07d5dc16da7646f49f20416366a9aff87d8bf0f044e34e4c7089e2d85c78",
     "120310046": "3f787a9f79684717a9c7b695fda33befcfb28a8977ddaf5dbb4850eef0bd2ad3",
     "120310048": "da21a2d9a0a517f6c15e068671eda6fac075fe587cf962032566682c7f7d192f",
+    "120310049": "58260f9902f4d3669997f62ba4935b9067fd26ccef96d8783f0871ed00eae3fa",
+    "120310050": "fff3dbf561687eabf717e58dcfcd586ebc1bca7d5da34326ea309211f6e27fb2",
+    "120310051": "5806e50e2c7c614c9d9a6dd8a7910d0c9e1c165c11f30667b40c014a437f9d9b",
     "120310052": "210d8fe7bfc17cea50eb8327ad336b3b4b8b1fe045500abd72e02d6e7f778d46",
     "120310054": "c718bb7b1aa453fa1146b1994b21d72f695fb7695d85c75f294f1e5b2ea1e5d4",
     "120310055": "8e2255c911f9dbb3a1ff26b1dba54b91d981687106f001a5827e726a106d7c36",
