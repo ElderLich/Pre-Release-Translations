@@ -1,5 +1,17 @@
 [
   {
+    "name": "Alas Desenfrenadas de Atlantis",
+    "desc": "(El nombre de esta carta se convierte en \"Umi\" mientras está en el Campo).\t\r\nPuedes mandar al Cementerio esta carta en tu mano y 1 Mágica/Trampa o \"Umi\" desde tu mano o Campo boca arriba, y después seleccionar 1 carta que controle tu adversario; mándala al Cementerio.\r\nSi controlas \"Atlantis, la Ciudad del Dragón Marino\": puedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo Serpiente Marina de Nivel 4 o menor desde tu mano o Deck.\r\nSólo puedes activar estos efectos de \"Alas Desenfrenadas de Atlantis\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Serpiente Marina/AGUA  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codaedalus",
+    "desc": "2 monstruos de AGUA\t\r\n(El nombre de esta carta se convierte en \"Umi\" mientras está en el Campo).\t\r\nSi esta carta es Invocada por Enlace: puedes activar este efecto; durante la End Phase de este turno, añade a tu mano 1 carta en tu Cementerio que mencione \"Atlantis, la Ciudad del Dragón Marino\", excepto \"Codaedalus\".\r\nUna vez por turno: puedes mandar al Cementerio 1 \"Umi\" boca arriba que controles; manda al Cementerio hasta 2 Mágicas/Trampas en el Campo.\r\nSólo puedes Invocar de Modo Especial \"Codaedalus\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Enlace] Serpiente Marina/AGUA  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
     "name": "Poder del Duelista",
     "desc": "Declara 2, 3 o 4 Atributos diferentes; aplica este efecto basado en el número declarado, y además durante la End Phase de este turno, debes mandar todas las cartas que controles al Cementerio, a menos que hayas activado los efectos de monstruos de todos los Atributos declarados en tu Campo y/o Cementerio este turno;\r\n● 2: Selecciona 1 monstruo en el Campo; destiérralo.\r\n● 3: Roba 2 cartas, y después descarta 1 carta.\r\n● 4: Niega los efectos de 2 cartas boca arriba en el Campo.\t\r\nSólo puedes activar 1 \"Poder del Duelista\" por turno.",
     "overallString": "[Mágica|Juego Rápido]",
@@ -44,7 +56,7 @@
   {
     "name": "Maestra de Espadas Amazoness",
     "desc": "2 monstruos \"Amazoness\"\t\r\nCuando tu monstruo \"Amazoness\" destruye un monstruo del adversario en batalla: puedes robar 1 carta. \r\nSólo puedes usar los siguientes efectos de \"Maestra de Espadas Amazoness\" una vez por turno cada uno. \r\nSi esta carta es Invocada por Fusión: puedes Invocar de Modo Especial 1 monstruo \"Amazoness\" de Nivel 4 o menor desde tu Deck. \r\n(Efecto Rápido): Puedes Sacrificar 1 monstruo, y después seleccionar 1 Monstruo de Efecto en el Campo; este pierde 500 ATK, y además sus efectos son negados.",
-    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/TIERRA  [★8] 2600/2200",
+    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/TIERRA  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
