@@ -1,5 +1,17 @@
 [
   {
+    "name": "Ashtrata Tamayori",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi Evocare Specialmente 1 mostro non-Tuner \"Ashtra\" dal tuo Deck in Posizione di Difesa, poi puoi mettere 1 mostro scoperto che controlli in Posizione di Difesa coperta, inoltre non puoi Evocare Specialmente dall'Extra Deck per il resto di questo turno, eccetto tramite Evocazione Synchro utilizzando un Tuner di Livello 1.\r\nSe uno o più mostri \"Ashtra\" e/o carte coperte che controlli stanno per essere distrutti dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero.\r\nPuoi utilizzare ciascun effetto di \"Ashtrata Tamayori\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Tuner] Fata/Fuoco  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrama Yoami",
+    "desc": "1 Tuner + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente, oppure mandata dal Terreno al Cimitero: puoi aggiungere alla tua mano o Posizionare 1 Trappola \"Ashtra\" dal tuo Deck.\r\nSe hai una Trappola nel tuo Cimitero: puoi far ritornare nella mano quante più carte coperte possibile sul Terreno, poi, se hai 5 o più Trappole nel tuo Cimitero, puoi far ritornare tutte le carte controllate dal tuo avversario nella mano.\r\nPuoi utilizzare ciascun effetto di \"Ashtrama Yoami\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Synchro] Incantatore/Vento  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
     "name": "Ali Impetuose di Atlantide",
     "desc": "Il nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Ali Impetuose di Atlantide\" una sola volta per turno.\r\nPuoi mandare questa carta dalla tua mano e 1 Magia/Trappola o \"Umi\" dalla tua mano o Terreno scoperto al Cimitero, poi scegliere come bersaglio 1 carta controllata dal tuo avversario; mandala al Cimitero.\r\nSe controlli \"Atlantide, Città del Drago del Mare\": puoi bandire questa carta dal tuo Cimitero; Evoca Specialmente 1 mostro Serpente Marino di Livello 4 o inferiore dalla tua mano o Deck.",
     "overallString": "[Mostro|Effetto] Serpente Marino/Acqua  [★5] 2000/2400",
