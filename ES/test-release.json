@@ -7,823 +7,823 @@
   },
   {
     "name": "Asutrama Yoami",
-    "desc": "1 Cantante + 1+ monstruos que no sean Cantantes\r\n\tSi esta carta es Invocada de Modo Especial, o mandada del Campo al Cementerio: puedes añadir a tu mano, o Colocar, 1 Trampa \"Asutra\" desde tu Deck.\r\nSi tienes una Trampa en tu Cementerio: puedes devolver a la mano tantas cartas boca abajo en el Campo como sea posible, y después si tienes 5 o más Trampas en tu Cementerio, puedes devolver a la mano todas las cartas que controle tu adversario.\r\nSólo puedes usar cada efecto de \"Asutrama Yoami\" una vez por turno.",
+    "desc": "1 Cantante + 1+ monstruos que no sean Cantantes\t\r\nSi esta carta es Invocada de Modo Especial, o mandada del Campo al Cementerio: puedes añadir a tu mano, o Colocar, 1 Trampa \"Asutra\" desde tu Deck. \r\nSi tienes una Trampa en tu Cementerio: puedes devolver a la mano tantas cartas boca abajo en el Campo como sea posible, y después si tienes 5 o más Trampas en tu Cementerio, puedes devolver a la mano todas las cartas que controle tu adversario. \r\nSólo puedes usar cada efecto de \"Asutrama Yoami\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Sincronía] Lanzador de Conjuros/VIENTO  [★8] 2400/3000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
   },
   {
-    "name": "Rampant Wings of Atlantis",
-    "desc": "This card's name becomes \"Umi\" while on the field. You can only use each of the following effects of \"Rampant Wings of Atlantis\" once per turn. You can send this card from your hand and 1 Spell/Trap or \"Umi\" from your hand or face-up field to the GY, then target 1 card your opponent controls; send it to the GY. If you control \"Atlantis, City of the Sea Dragon\": You can banish this card from your GY; Special Summon 1 Level 4 or lower Sea Serpent monster from your hand or Deck.",
+    "name": "Alas Desenfrenadas de Atlantis",
+    "desc": "(El nombre de esta carta se convierte en \"Umi\" mientras está en el Campo).\t\r\nPuedes mandar al Cementerio esta carta en tu mano y 1 Mágica/Trampa o \"Umi\" desde tu mano o Campo boca arriba, y después seleccionar 1 carta que controle tu adversario; mándala al Cementerio.\r\nSi controlas \"Atlantis, la Ciudad del Dragón Marino\": puedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo Serpiente Marina de Nivel 4 o menor desde tu mano o Deck.\r\nSólo puedes usar cada uno de los siguientes efectos de \"Alas Desenfrenadas de Atlantis\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Serpiente Marina/AGUA  [★5] 2000/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
   },
   {
     "name": "Codaedalus",
-    "desc": "2 WATER monsters\nYou can only Special Summon \"Codaedalus(s)\" once per turn. This card's name becomes \"Umi\" while on the field. If this card is Link Summoned: You can activate this effect; during the End Phase of this turn, add 1 card from your GY to your hand that mentions \"Atlantis, City of the Sea Dragon\", except \"Codaedalus\". Once per turn: You can send 1 face-up \"Umi\" you control to the GY; send up to 2 Spells/Traps on the field to the GY.",
+    "desc": "2 monstruos de AGUA\t\r\n(El nombre de esta carta se convierte en \"Umi\" mientras está en el Campo).\t\r\nSólo puedes Invocar de Modo Especial \"Codaedalus\" una vez por turno.\r\nSi esta carta es Invocada por Enlace: puedes activar este efecto; durante la End Phase de este turno, añade a tu mano 1 carta en tu Cementerio que mencione \"Atlantis, la Ciudad del Dragón Marino\", excepto \"Codaedalus\".\r\nUna vez por turno: puedes mandar al Cementerio 1 \"Umi\" boca arriba que controles; manda al Cementerio hasta 2 Mágicas/Trampas en el Campo.",
     "overallString": "[Monstruo|Efecto|Enlace] Serpiente Marina/AGUA  [LINK-2] 1400/-  [→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
   },
   {
-    "name": "Power of the Duelist",
-    "desc": "Declare 2, 3, or 4 Attributes; apply this effect based on the number declared, also during the End Phase of this turn, you must send all cards you control to the GY, unless you have activated effects of monsters of all declared Attributes in your field and/or GY this turn.\n● 2: Target 1 monster on the field; banish it.\n● 3: Draw 2 cards, then discard 1 card.\n● 4: Negate the effects of 2 face-up cards on the field.\nYou can only activate 1 \"Power of the Duelist\" per turn.",
+    "name": "Poder del Duelista",
+    "desc": "Declara 2, 3 o 4 Atributos diferentes; aplica este efecto basado en el número declarado, y además durante la End Phase de este turno, debes mandar todas las cartas que controles al Cementerio, a menos que hayas activado los efectos de monstruos de todos los Atributos declarados en tu Campo y/o Cementerio este turno;\r\n● 2: Selecciona 1 monstruo en el Campo; destiérralo.\r\n● 3: Roba 2 cartas, y después descarta 1 carta.\r\n● 4: Niega los efectos de 2 cartas boca arriba en el Campo.\t\r\nSólo puedes activar 1 \"Poder del Duelista\" por turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
   },
   {
-    "name": "Amazoness Dramatic Rescue",
-    "desc": "You can only use the ① and ② effects of this card's name each once per turn. If you control a \"Harpie Lady\" monster or \"Amazoness\" monster, you can activate this card the turn it was Set.\r\n①：Target 1 monster on the field; Special Summon 1 \"Harpie\" or \"Amazoness\" monster from your hand or Deck, and if you do, return the targeted monster to the hand.\r\n②：You can banish this card from your GY; add 1 \"Harpie\" or \"Amazoness\" monster from your GY or banishment to your hand.",
+    "name": "Rescate Dramático Amazoness",
+    "desc": "Selecciona 1 monstruo en el Campo; Invoca de Modo Especial 1 monstruo \"Arpía\" o \"Amazoness\" desde tu mano o Deck y, si lo haces, devuelve el monstruo seleccionado a la mano. \r\nPuedes desterrar esta carta en tu Cementerio; añade a tu mano 1 monstruo \"Arpía\" o \"Amazoness\" desde tu Cementerio o destierro. \r\nSólo puedes usar los efectos de \"Rescate Dramático Amazoness\" una vez por turno cada uno. \r\nSi controlas un monstruo \"Dama Arpía\" o \"Amazoness\", puedes activar esta carta el turno en que fue Colocada.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
   },
   {
-    "name": "Eyelluring Mirror Wall",
-    "desc": "①：Gains these effects while you control an \"Amazoness\" monster or \"Harpie Lady\" monster.\r\n● Face-up monsters your opponent controls are changed to Attack Position and must attack if able.\r\n● Once per battle, when an opponent's monster declares an attack: You can halve its ATK.\r\n②：Once per turn, during the Standby Phase: You can Set 1 Spell/Trap from your GY or banishment that mentions \"Harpie Lady\", except \"Eyelluring Mirror Wall\".",
+    "name": "Muro Espejo Atrayente",
+    "desc": "Gana estos efectos mientras controlas un monstruo \"Amazoness\" o \"Dama Arpía\";\r\n● Los monstruos boca arriba que controle tu adversario se cambian a Posición de Ataque y deben atacar si pueden.\r\n● Una vez por batalla, cuando un monstruo del adversario declara un ataque: puedes reducir su ATK a la mitad.\t\r\nUna vez por turno, durante la Standby Phase: puedes Colocar 1 Mágica/Trampa de tu Cementerio o destierro que mencione \"Dama Arpía\", excepto \"Muro Espejo Atrayente\".\r\n",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
   },
   {
-    "name": "Amazoness Chain Master - Brink of Death Chain Dance",
-    "desc": "If this card is sent to the GY and you have another \"Amazoness\" monster in your GY: You can pay 1000 LP; your opponent can choose 1 Level 10 monster in their Deck or Extra Deck, and if they do, you can Special Summon it to your field, ignoring its Summoning conditions, but neither player can activate its effects this turn. If they do not, you discard 1 random card from their hand. You can only use this effect of \"Amazoness Chain Master - Brink of Death Chain Dance\" once per turn.",
+    "name": "Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte",
+    "desc": "Si esta carta es mandada al Cementerio y tienes otro monstruo \"Amazoness\" allí: puedes pagar 1000 LP; tu adversario puede elegir 1 monstruo de Nivel 10 en su Deck o Deck Extra y, si lo hace, puedes Invocarlo de Modo Especial a tu Campo, ignorando sus condiciones de Invocación, pero no puede activar sus efectos este turno. Si no lo hace, tú descartas 1 carta al azar de su mano. \r\nSólo puedes usar el efecto de \"Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★4] 1500/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
   },
   {
-    "name": "Amazoness Fighter - Instant Kill Dance",
-    "desc": "If this card is added to your hand, except by drawing it: You can Special Summon it. If this card is Normal or Special Summoned: You can Set 1 Spell/Trap from your Deck that mentions \"Harpie Lady\". During damage calculation, if your \"Amazoness\" monster battles an opponent's monster: You can activate this effect; for that battle, neither monster can be destroyed by battle, also you take no battle damage. You can only use each effect of \"Amazoness Fighter - Instant Kill Dance\" once per turn.",
+    "name": "Luchadora Amazoness - Danza de Muerte Instantánea",
+    "desc": "Si esta carta es añadida a tu mano, excepto robándola: puedes Invocarla de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa desde tu Deck que mencione \"Dama Arpía\". \r\nDurante el cálculo de daño, si tu monstruo \"Amazoness\" batalla con un monstruo del adversario: puedes hacer que ambos monstruos en batalla no puedan ser destruidos en esa batalla, y además no recibes daño de batalla de ella. \r\nSólo puedes usar los efectos de \"Luchadora Amazoness - Danza de Muerte Instantánea\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★4] 1500/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
   },
   {
-    "name": "Amazoness Spellcaster - Forbidden Spell Dance",
-    "desc": "If this card is Normal or Special Summoned: You can add 1 \"Amazoness\" monster from your Deck to your hand, except a Level 3 monster. During your Main Phase: You can Fusion Summon 1 EARTH or WIND Fusion Monster from your Extra Deck, using monsters from your hand or field. During damage calculation, if your \"Amazoness\" monster battles an opponent's monster: You can banish this card from your GY; switch the battling monsters' ATK until the end of this turn. You can only use each effect of \"Amazoness Spellcaster - Forbidden Spell Dance\" once per turn.",
+    "name": "Lanzadora de Conjuros Amazoness - Danza del Hechizo Prohibido",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 monstruo \"Amazoness\" desde tu Deck, excepto un monstruo de Nivel 3. \r\nDurante tu Main Phase: puedes Invocar por Fusión 1 Monstruo de Fusión de TIERRA o VIENTO desde tu Deck Extra, usando monstruos de tu mano o Campo. \r\nDurante el cálculo de daño, si tu monstruo \"Amazoness\" batalla con un monstruo del adversario: puedes desterrar esta carta en tu Cementerio; intercambia el ATK de los monstruos batallantes hasta el final de este turno. \r\nSólo puedes usar los efectos de \"Lanzadora de Conjuros Amazoness - Danza del Hechizo Prohibido\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★3] 400/800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
   },
   {
-    "name": "Harpie Lady - Alluring Dance",
-    "desc": "You can only use the ② and ③ effects of this card's name each once per turn.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：During the Main Phase, if this card is in your hand (Quick Effect): You can target 1 EARTH or WIND monster you control; return it to the Deck/Extra Deck, and if you do, Special Summon this card.\r\n③：If this card is Normal or Special Summoned: You can add 1 Spell/Trap from your Deck to your hand that mentions \"Harpie Lady\".",
+    "name": "Dama Arpía - Danza Seductora",
+    "desc": "(El nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o Cementerio).\t\r\n(Efecto Rápido): Durante la Main Phase, si esta carta está en tu mano: puedes seleccionar 1 monstruo de TIERRA o VIENTO que controles; devuélvelo a la mano/Deck Extra y, si lo haces, Invoca esta carta de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 Mágica/Trampa desde tu Deck que mencione \"Dama Arpía\". \r\nSólo puedes usar los efectos de \"Dama Arpía - Danza Seductora\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Bestia Alada/VIENTO  [★4] 1300/1400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
   },
   {
-    "name": "Amazoness Swordmaster",
-    "desc": "2 \"Amazoness\" monsters\r\nYou can only use the ① and ③ effects of this card's name each once per turn.\r\n①：If this card is Fusion Summoned: You can Special Summon 1 Level 4 or lower \"Amazoness\" monster from your Deck.\r\n②：When your \"Amazoness\" monster destroys an opponent's monster by battle: You can draw 1 card.\r\n③：(Quick Effect): You can Tribute 1 monster, then target 1 Effect Monster on the field; it loses 500 ATK, also its effects are negated.",
+    "name": "Maestra de Espadas Amazoness",
+    "desc": "2 monstruos \"Amazoness\"\t\r\nCuando tu monstruo \"Amazoness\" destruye un monstruo del adversario en batalla: puedes robar 1 carta. \r\nSólo puedes usar los siguientes efectos de \"Maestra de Espadas Amazoness\" una vez por turno cada uno. \r\nSi esta carta es Invocada por Fusión: puedes Invocar de Modo Especial 1 monstruo \"Amazoness\" de Nivel 4 o menor desde tu Deck. \r\n(Efecto Rápido): Puedes Sacrificar 1 monstruo, y después seleccionar 1 Monstruo de Efecto en el Campo; este pierde 500 ATK, y además sus efectos son negados.",
     "overallString": "[Monstruo|Efecto|Fusión] Guerrero/TIERRA  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
-    "name": "Triangle Ecstasy Harpie Lady Sisters",
-    "desc": "3 \"Harpie Lady\" monsters\r\nMust first be Fusion Summoned.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：Gains 500 ATK for each \"Harpie Lady\" in your GY. Your opponent cannot target this card with non-WIND monsters' effects.\r\n③：Once per turn (Quick Effect): You can destroy all Spells and Traps your opponent controls.",
+    "name": "Hermanas de la Dama Arpía - Éxtasis Triangular",
+    "desc": "3 monstruos \"Dama Arpía\"\t\r\nDebe ser primero Invocada por Fusión. \r\nEl nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o Cementerio. \r\nGana 500 ATK por cada \"Dama Arpía\" en tu Cementerio. Tu adversario no puede seleccionar esta carta con efectos de monstruos que no sean de VIENTO. \r\nUna vez por turno (Efecto Rápido): puedes destruir todas las Mágicas y Trampas que controle tu adversario.",
     "overallString": "[Monstruo|Efecto|Fusión] Bestia Alada/VIENTO  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
   {
-    "name": "Elegant Tri-Mirror",
-    "desc": "You can only use the ① and ② effects of this card's name each once per turn.\r\n①：Add 1 \"Harpie\" monster from your Deck to your hand, then if only your opponent controls a monster, you can Special Summon 1 \"Harpie Lady\", or 1 monster that mentions it, from your hand or GY.\r\n②：You can banish this card from your GY; Fusion Summon 1 EARTH or WIND Fusion Monster from your Extra Deck, using monsters from your hand or field.",
+    "name": "Elegante Tri-Espejo",
+    "desc": "Añade a tu mano 1 monstruo \"Arpía\" desde tu Deck, y después si solo tu adversario controla un monstruo, puedes Invocar de Modo Especial 1 \"Dama Arpía\", o 1 monstruo que la mencione, desde tu mano o Cementerio. \r\nPuedes desterrar esta carta en tu Cementerio; Invoca por Fusión 1 Monstruo de Fusión de TIERRA o VIENTO desde tu Deck Extra, usando monstruos de tu mano o Campo. \r\nSólo puedes usar los efectos de \"Elegante Tri-Espejo\" una vez por turno cada uno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
   },
   {
-    "name": "Harpie & Amazoness Rakshasa Formation",
-    "desc": "You can only activate 1 card with this card's name per turn.\r\n①：Target 1 \"Harpie\" or \"Amazoness\" monster in your GY or banishment; Special Summon it, then you can apply 1 of these effects based on the number of \"Harpie Lady\" monsters and \"Amazoness\" monsters you control.\r\n● 1+: Place 1 \"Eyelluring Mirror Wall\" from your Deck face-up in your Spell & Trap Zone.\r\n● 2+: Take control of 1 monster your opponent controls.\r\n● 3+: Destroy all monsters your opponent controls.",
+    "name": "Formación Rakshasa de Arpía & Amazoness",
+    "desc": "Selecciona 1 monstruo \"Arpía\" o \"Amazoness\" en tu Cementerio o destierro; Invócalo de Modo Especial, y después puedes aplicar 1 de estos efectos basados en el número de monstruos \"Dama Arpía\" y monstruos \"Amazoness\" que controles;\r\n● 1+: Coloca 1 \"Muro Espejo Atrayente\" desde tu Deck boca arriba en tu Zona de Mágicas y Trampas.\r\n● 2+: Toma el control de 1 monstruo que controle tu adversario.\r\n● 3+: Destruye todos los monstruos que controle tu adversario.\t\r\nSólo puedes activar 1 \"Formación Rakshasa de Arpía & Amazoness\" por turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
   },
   {
-    "name": "Primrose the Twin Rikka Fairy",
-    "desc": "If a monster(s) is Tributed: You can Special Summon this card from your hand and 1 \"Rikka\" monster from your Deck, except \"Primrose the Twin Rikka Fairy\", in Defense Position, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can target 1 Plant monster you control; increase or decrease its Level by 2. During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Xyz Summon 1 Plant Xyz Monster. You can only use each effect of \"Primrose the Twin Rikka Fairy\" once per turn.",
+    "name": "Primula, la Hada Gemela Rikka",
+    "desc": "Si uno o más monstruos son Sacrificados: puedes Invocar esta carta de Modo Especial desde tu mano y 1 monstruo \"Rikka\" desde tu Deck, excepto \"Primula, la Hada Gemela Rikka\", en Posición de Defensa, pero no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos Planta. \r\nPuedes seleccionar 1 monstruo Planta que controles; aumenta o reduce su Nivel en 2. \r\n(Efecto Rápido): Durante la Main Phase de tu adversario, puedes: inmediatamente después de que este efecto se resuelva, Invocar Xyz 1 monstruo Planta. \r\nSólo puedes usar los efectos \"Primula, la Hada Gemela Rikka\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Planta/AGUA  [★8] 2600/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
   },
   {
-    "name": "Rikka Black Princess",
-    "desc": "If you control no monsters, or all monsters you control are Plant monsters: You can Special Summon this card from your hand or GY, but banish it when it leaves the field, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can Tribute 1 Plant monster from your hand or field; Special Summon 1 \"Rikka\" monster from your Deck, except \"Rikka Black Princess\". You can only use each effect of \"Rikka Black Princess\" once per turn.",
+    "name": "Princesa Negra Rikka",
+    "desc": "Si no controlas monstruos, o todos los monstruos que controlas son monstruos Planta: puedes Invocar esta carta de Modo Especial desde tu mano o Cementerio, pero destiérrala cuando deje el Campo, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos Planta. \r\nPuedes Sacrificar 1 monstruo Planta de tu mano o Campo; Invoca de Modo Especial 1 monstruo \"Rikka\" desde tu Deck, excepto \"Princesa Negra Rikka\". \r\nSólo puedes usar los efectos de \"Princesa Negra Rikka\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Planta/AGUA  [★6] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
   },
   {
-    "name": "Teardrop the Rikka Empress",
-    "desc": "2 Level 10 Plant monsters\nYou can also Xyz Summon this card by using \"Teardrop the Rikka Queen\" you control (transfer its materials). (Quick Effect): You can detach up to 6 materials from this card; send that many Spells/Traps on the field to the GY, then you can Tribute 1 monster on the field. You can only use this effect of \"Teardrop the Rikka Empress\" once per turn. Each time a monster(s) is Tributed: Attach 1 card from your opponent's GY to 1 Plant Xyz Monster you control.",
+    "name": "Lágrima, la Emperatriz Rikka",
+    "desc": "2 monstruos Planta de Nivel 10\t\r\nTambién puedes Invocar Xyz esta carta usando \"Lágrima, la Reina Rikka\" que controles (transfiere sus materiales). \r\n(Efecto Rápido): Puedes desacoplar hasta 6 materiales de esta carta; manda al Cementerio esa misma cantidad de Mágicas/Trampas en el Campo, y después puedes Sacrificar 1 monstruo en el Campo. \r\nSólo puedes usar este efecto de \"Lágrima, la Emperatriz Rikka\" una vez por turno. \r\nCada vez que uno o más monstruos son Sacrificados (excepto durante el Damage Step): acopla 1 carta del Cementerio de tu adversario a tu Monstruo Xyz Planta.",
     "overallString": "[Monstruo|Efecto|Xyz] Planta/AGUA  [☆10] 3200/3200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
   },
   {
-    "name": "Rikka Empress Strenna",
-    "desc": "2 Level 6 Plant monsters\nYou can detach 2 materials from this card; Special Summon 1 Plant Xyz Monster from your Extra Deck in Defense Position, except \"Rikka Empress Strenna\", then if you Special Summoned a \"Rikka\" monster, you can attach 1 \"Rikka\" monster from your Deck to it. If a monster(s) is Tributed: You can Set 1 \"Rikka\" Trap from your Deck or GY. You can only use each effect of \"Rikka Empress Strenna\" once per turn.",
+    "name": "Emperatriz Strenna Rikka",
+    "desc": "2 monstruos Planta de Nivel 6\t\r\nPuedes desacoplar 2 materiales de esta carta; Invoca de Modo Especial 1 Monstruo Xyz Planta desde tu Deck Extra en Posición de Defensa, excepto \"Emperatriz Strenna Rikka\", y después si es un monstruo \"Rikka\", puedes acoplarle 1 monstruo \"Rikka\" desde tu Deck. \r\nSi uno o más monstruos son Sacrificados: puedes Colocar 1 Trampa \"Rikka\" desde tu Deck o Cementerio. \r\nSólo puedes usar los efectos de \"Emperatriz Strenna Rikka\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Xyz] Planta/AGUA  [☆6] 2000/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
   },
   {
-    "name": "Rikka June Moon",
-    "desc": "When you activate this card, you can also Tribute 1 Plant monster; take 2 \"Rikka\" monsters from your Deck with the same Level, but different names, add 1 of them to your hand and send the other to the GY, also if you Tributed a monster at activation, your opponent cannot target \"Rikka\" monsters you control with card effects this turn. For the rest of this turn after this card resolves, you cannot Special Summon from the Extra Deck, except Plant Xyz Monsters. You can only activate 1 \"Rikka June Moon\" per turn.",
+    "name": "Luna de Junio Rikka",
+    "desc": "Toma 2 monstruos \"Rikka\" de tu Deck con el mismo Nivel, pero nombres diferentes y, si lo haces, añade 1 de ellos a tu mano y, si haces eso, manda el otro al Cementerio. Si Sacrificaste un monstruo cuando activaste esta carta, tu adversario no puede seleccionar monstruos \"Rikka\" que controles con efectos de cartas este turno. No puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno después de que esta carta se resuelva, excepto Monstruos Xyz Planta. \r\nSólo puedes activar 1 \"Luna de Junio Rikka\" por turno. Cuando activas esta carta, también puedes Sacrificar 1 monstruo Planta.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
   },
   {
-    "name": "Castle of Vampire",
-    "desc": "When this card is activated: Special Summon 1 DARK Zombie monster from your Deck or GY. When that monster leaves the field, destroy this card. That monster is unaffected by the activated effects of other non-DARK monsters. If this face-up card leaves the field: Destroy as many cards you control as possible, and if you do, take 400 damage for each card destroyed. You can only activate 1 \"Castle of Vampire\" per turn.",
+    "name": "Castillo del Vampiro",
+    "desc": "Cuando esta carta se resuelve, Invoca de Modo Especial 1 monstruo Zombi de OSCURIDAD desde tu Deck o Cementerio. Cuando este deje el Campo, destruye esta carta. \r\nEl monstruo Invocado de Modo Especial por el 1er efecto de \"Castillo del Vampiro\" no es afectado por efectos activados de otros monstruos que no sean de OSCURIDAD. \r\nSi esta carta boca arriba deja el Campo: destruye tantas cartas que controles como sea posible y, si lo haces, recibe 400 puntos de daño por cada carta destruida por este efecto. \r\nSólo puedes activar 1 \"Castillo del Vampiro\" por turno.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307070.jpg?version=19.7"
   },
   {
-    "name": "Necromancer of Dragon Magic",
-    "desc": "2 Effect Monsters\nDuring your Main Phase: You can reveal 1 Fusion Monster in your Extra Deck, choose 1 non-Fusion Monster in your GY whose name is mentioned on the revealed monster, and this card's name becomes that monster's (until the End Phase), then you can Fusion Summon the revealed Fusion Monster, by banishing its materials from your hand, field, and/or GY, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. You can only use this effect of \"Necromancer of Dragon Magic\" once per turn.",
+    "name": "Nigromante de la Magia del Dragón",
+    "desc": "2 Monstruos de Efecto\t\r\nDurante tu Main Phase: puedes revelar 1 Monstruo de Fusión desde el Deck Extra; el nombre de esta carta se trata como el mismo nombre que 1 monstruo en tu Cementerio cuyo nombre sea mencionado como material, excepto un Monstruo de Fusión. \r\nDespués, puedes Invocar por Fusión el Monstruo de Fusión revelado desterrando monstruos de tu mano, Campo o Cementerio como material, pero no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto Monstruos de Fusión. \r\nSólo puedes usar el efecto de \"Nigromante de la Magia del Dragón\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Enlace] Dragón/VIENTO  [LINK-2] 900/-  [↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307050.jpg?version=19.7"
   },
   {
-    "name": "Gandora-X the Blackmetal Rampaging Dragon",
-    "desc": "If this card is added from the Deck to your hand, except by drawing it: You can Special Summon it. If this card is Special Summoned: You can pay half your LP; destroy as many other monsters on the field as possible, and if you do, inflict damage to your opponent equal to the highest ATK on the field among the destroyed face-up monsters they own, and if you do that, this card gains that much ATK. If this card is destroyed: You can add 1 \"Final Geas\" from your Deck to your hand. You can only use each effect of \"Gandora-X the Blackmetal Rampaging Dragon\" once per turn.",
+    "name": "Gandora-X el Dragón Arrasador de Metal Negro",
+    "desc": "Si esta carta es añadida del Deck a la mano, excepto robándola: puedes Invocarla de Modo Especial. \r\nSi esta carta es Invocada de Modo Especial: puedes pagar la mitad de tus LP; destruye tantos otros monstruos en el Campo como sea posible y, si lo haces, inflige daño a tu adversario igual al ATK más alto que tenían en el Campo los monstruos boca arriba destruidos que él posee y, si haces eso, esta carta gana ese ATK. \r\nSi esta carta es destruida: puedes añadir a tu mano 1 \"Geas Final\" desde tu Deck.\r\nSólo puedes usar los efectos de \"Gandora-X el Dragón Arrasador de Metal Negro\" una vez por turno.\r\n",
     "overallString": "[Monstruo|Efecto] Dragón/OSCURIDAD  [★8] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275002.jpg?version=19.7"
   },
   {
-    "name": "Time Chain",
-    "desc": "Destroy this card during your opponent's ② Standby Phase after activation. Activate this card when your monster is targeted for an attack: Neither battling monster can be destroyed by that battle, also banish them after damage calculation until their controller's ② Standby Phase. Negate the activated effects of monsters with the same original name as monsters that are currently banished by this card's effect. During your Draw Phase, instead of conducting your normal draw: You can add 1 monster from your Deck to your hand.",
+    "name": "Cadena de Tiempo",
+    "desc": "Activa esta carta cuando tu monstruo es seleccionado para un ataque: ningún monstruo en batalla puede ser destruido en esa batalla, y además destiérralos después del cálculo de daño hasta la 2ª Standby Phase de quien los controla después de la resolución. \r\nNiega los efectos activados de monstruos con el mismo nombre original que los monstruos que están actualmente desterrados por estr efecto. \r\nDurante tu Draw Phase, en lugar de realizar tu robo normal: puedes añadir a tu mano 1 monstruo desde tu Deck. \r\nDestruye esta carta durante la 2ª Standby Phase de tu adversario después de su activación.\r\n",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275005.jpg?version=19.7"
   },
   {
-    "name": "Warrior's Devotion",
-    "desc": "Send 1 Warrior monster from your hand or Deck to the GY, then target 1 face-up monster your opponent controls; it loses ATK equal to the sent monster's ATK. If a Warrior monster(s) you control would be destroyed by battle or card effect, you can banish this card from your GY instead. You can only use each effect of \"Warrior's Devotion\" once per turn.",
+    "name": "Devoción del Guerrero",
+    "desc": "Manda al Cementerio 1 monstruo Guerrero desde tu mano o Deck, y después selecciona 1 monstruo boca arriba que controle tu adversario; este pierde ATK igual al del monstruo mandado. \r\nSi uno o más monstruos Guerrero que controlas fueran a ser destruidos en batalla o por efecto de carta, puedes desterrar esta carta en tu Cementerio en su lugar. \r\nSólo puedes usar los efectos de \"Devoción del Guerrero\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
   },
   {
     "name": "Trinitas Magistus",
-    "desc": "2+ Spellcaster monsters\r\nYou can only use 1 of this card name's ①, ②, or ③ effect per turn, and only once that turn.\r\n①：If this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to it.\r\n②：You can discard 1 card; shuffle all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY into the Extra Deck.\r\n③：During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand.",
+    "desc": "2+ monstruos Lanzador de Conjuros\t\r\nSi esta carta es Invocada de Modo Especial desde el Deck Extra: puedes equipar 1 monstruo \"Magistus\" o Lanzador de Conjuros desde tu Deck Extra a ella. \r\nPuedes descartar 1 carta; baraja al Deck Extra todos los Monstruos de Fusión, Sincronía, Xyz y Enlace del Campo y Cementerio de tu adversario. \r\n(Efecto Rápido): Durante la Main Phase de tu adversario: puedes añadir a tu mano 1 carta \"Magistus\" desde tu Cementerio o destierro. \r\nSólo puedes usar 1 de los efectos de \"Trinitas Magistus\" por turno, y sólo una vez ese turno.\r\n",
     "overallString": "[Monstruo|Efecto|Enlace] Lanzador de Conjuros/LUZ  [LINK-3] 2500/-  [↑][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
   },
   {
-    "name": "Invoked Magistus Heruvim",
-    "desc": "1 \"Magistus\" monster + 1 Spellcaster monster\r\nYou can only once use this card name's ① and ② effects once per turn each.\r\n①：If this card is Special Summoned from the Extra Deck: You can target 1 card your opponent controls; destroy it.\r\n②：When your opponent activates a monster effect, or their monster declares an attack, except during the turn this card was Special Summoned (Quick Effect): You can banish this card; Special Summon 1 \"Magistus\" or \"Invoked\" monster from your Extra Deck, except \"Invoked Magistus Heruvim\".",
+    "name": "Heruvim Magistus Invokado",
+    "desc": "1 monstruo \"Magistus\" + 1 monstruo Lanzador de Conjuros\t\r\nSi esta carta es Invocada de Modo Especial desde el Deck Extra: puedes seleccionar 1 carta que controle tu adversario; destrúyela. \r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo, o su monstruo declara un ataque, excepto durante el turno en que esta carta fue Invocada de Modo Especial: puedes desterrar esta carta; Invoca de Modo Especial 1 monstruo \"Magistus\" o \"Invokado\" desde tu Deck Extra, excepto \"Heruvim Magistus Invokado\". \r\nSólo puedes usar los efectos de \"Heruvim Magistus Invokado\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Fusión] Lanzador de Conjuros/LUZ  [★9] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
   },
   {
-    "name": "Magistus Witchcrafter Aruru",
-    "desc": "You can only use this card name's ①, ②, and ③ effects once per turn each.\r\n①：If this card is in your hand and a \"Magistus\" monster is on the field: You can Special Summon this card.\r\n②：You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn.\r\n③：If this card is sent to the GY: You can banish it, then target 1 \"Magistus\" or \"Witchcrafter\" monster in your GY; Special Summon it.",
+    "name": "Aruru Artibruja Magistus",
+    "desc": "Si esta carta está en tu mano y hay un monstruo \"Magistus\" en el Campo: puedes Invocar esta carta de Modo Especial. \r\nPuedes seleccionar 1 monstruo boca arriba que controle tu adversario; niega sus efectos hasta el final de este turno. \r\nSi esta carta es mandada al Cementerio: puedes desterrarla, y después seleccionar 1 monstruo \"Magistus\" o \"Artibruja\" en tu Cementerio; Invócalo de Modo Especial. \r\nSólo puedes usar los efectos de \"Aruru Artibruja Magistus\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/LUZ  [★8] 2800/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
   },
   {
-    "name": "Marincess Azuri",
-    "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 WATER Cyberse monster with 1000 or less ATK from your Deck, also you cannot Special Summon for the rest of this turn, except WATER monsters. If you Link Summon a \"Marincess\" Link Monster(s), while this card is in your GY: You can banish this card; equip 1 \"Marincess\" monster from your GY to 1 of those Link Monsters as an Equip Spell that gives it 600 ATK. You can only use each effect of \"Marincess Azuri\" once per turn.",
+    "name": "Marincesa Azury",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo Ciberso de AGUA con 1000 ATK o menos desde tu Deck, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de AGUA. \r\nSi Invocas por Enlace un Monstruo de Enlace \"Marincesa\" mientras esta carta está en tu Cementerio: puedes desterrar esta carta; equipa 1 monstruo \"Marincesa\" de tu Cementerio a ese Monstruo de Enlace como una Mágica de Equipo que le da 600 ATK. \r\nSólo puedes usar los efectos de \"Marincesa Azury\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★3] 1600/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272026.jpg?version=19.7"
   },
   {
-    "name": "Marincess Ulpis",
-    "desc": "If this card is in your hand: You can discard 1 other \"Marincess\" card or WATER monster; Special Summon this card. If this card is Normal or Special Summoned: You can Set 1 \"Marincess\" Spell/Trap from your Deck. You can send 1 \"Marincess\" Link Monster Card you control to the GY; draw 1 card. You can only use each effect of \"Marincess Ulpis\" once per turn.",
+    "name": "Marincesa Ulpis",
+    "desc": "Si esta carta está en tu mano: puedes descartar otra carta \"Marincesa\" o un monstruo de AGUA; Invoca esta carta de Modo Especial. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Colocar 1 Mágica/Trampa \"Marincesa\" desde tu Deck. \r\nPuedes mandar al Cementerio 1 Carta de Monstruo de Enlace \"Marincesa\" que controles; roba 1 carta. \r\nSólo puedes usar los efectos de \"Marincesa Ulpis\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Ciberso/AGUA  [★5] 600/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272027.jpg?version=19.7"
   },
   {
-    "name": "Aqua Leviathan @Marincess",
-    "desc": "You can Ritual Summon this card with a \"Marincess\" card. Monsters your opponent controls lose 1000 ATK. You can only use each of the following effects of \"Aqua Leviathan @Marincess\" once per turn. You can reveal this card in your hand; add 1 \"Marincess\" card from your Deck to your hand, except a Ritual Monster, then discard 1 card. If this card is Ritual Summoned: You can return cards your opponent controls to the hand up to the number of \"Marincess\" Monster Cards you control.",
+    "name": "Aqua Leviatán @Marincesa",
+    "desc": "Puedes Invocar esta carta por Ritual con una carta \"Marincesa\". \r\nLos monstruos que controle tu adversario pierden 1000 ATK. \r\nSólo puedes usar los siguientes efectos de \"Aqua Leviatán @Marincesa\" una vez por turno cada uno. \t\r\nPuedes revelar esta carta en tu mano; añade a tu mano 1 carta \"Marincesa\" desde tu Deck, excepto un Monstruo de Ritual, y después descarta 1 carta. \r\nSi esta carta es Invocada por Ritual: puedes devolver a la mano cartas que controle tu adversario hasta el número de Cartas de Monstruo \"Marincesa\" que controles.\r\n",
     "overallString": "[Monstruo|Efecto|Ritual] Ciberso/AGUA  [★7] 2300/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272028.jpg?version=19.7"
   },
   {
-    "name": "Marincess Truth Heart",
-    "desc": "2+ \"Marincess\" monsters\nIf this card is Link Summoned using a Link Monster with 0 original ATK: You can Special Summon 1 Link-3 or lower \"Marincess\" monster from your Extra Deck. You can only use this effect of \"Marincess Truth Heart\" once per turn. You can banish 1 Link Monster Card from your field or GY; destroy 1 card your opponent controls, also for the rest of this turn, you cannot banish monsters with that same Link Rating to activate this effect of \"Marincess Truth Heart\".",
+    "name": "Corazón Verdadero Marincesa",
+    "desc": "2+ monstruos \"Marincesa\"\t\r\nSi esta carta es Invocada por Enlace usando un Monstruo de Enlace con 0 ATK original: puedes Invocar de Modo Especial 1 monstruo \"Marincesa\" Link-3 o menor desde tu Deck Extra. \r\nSólo puedes usar este efecto de \"Corazón Verdadero Marincesa\" una vez por turno. \r\nPuedes desterrar 1 Monstruo de Enlace de tu Campo o Cementerio; destruye 1 carta que controle tu adversario, y además por el resto de este turno, no puedes desterrar monstruos con el mismo Rating de Enlace para activar este efecto de \"Corazón Verdadero Marincesa\".",
     "overallString": "[Monstruo|Efecto|Enlace] Ciberso/AGUA  [LINK-4] 2800/-  [↑][→][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272030.jpg?version=19.7"
   },
   {
-    "name": "Marincess Reef Lagoon",
-    "desc": "When this card is activated: You can add 1 WATER Cyberse monster from your Deck to your hand. Once per turn, during your opponent's End Phase: You can shuffle up to 3 WATER monsters from your GY and/or banishment into the Deck. You can send this face-up card to the GY; Ritual Summon 1 WATER Cyberse Ritual Monster from your hand, by banishing WATER monsters from your GY whose total Levels equal or exceed the Level of the Ritual Monster. You can only activate 1 \"Marincess Reef Lagoon\" per turn.",
+    "name": "Laguna de Arrecife Marincesa",
+    "desc": "Cuando esta carta se resuelve, puedes añadir a tu mano 1 monstruo Ciberso de AGUA desde tu Deck. \r\nUna vez por turno, durante la End Phase de tu adversario: puedes barajar al Deck hasta 3 monstruos de AGUA desde tu Cementerio y/o destierro. \r\nPuedes mandar esta carta boca arriba al Cementerio; Invoca por Ritual 1 Monstruo de Ritual Ciberso de AGUA desde tu mano, desterrando monstruos de AGUA de tu Cementerio cuyos Niveles totales sean iguales o superen el Nivel del Monstruo de Ritual. \r\nSólo puedes activar 1 \"Laguna de Arrecife Marincesa\" por turno.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272031.jpg?version=19.7"
   },
   {
-    "name": "Ars Magna Artmage",
-    "desc": "2+ monsters, including an \"Ars Magna\" or \"Artmage\" monster\nYour opponent cannot target your linked monsters with card effects. During your Main Phase: You can add to your hand, or Special Summon, 1 \"Ars Magna\", \"Artmage\", \"DoomZ\", or \"Elfnote\" monster from your Deck, then if you have 3 or more different Monster Types on your field, you can Special Summon 1 monster from your GY or banishment. You can only use this effect of \"Ars Magna Artmage\" once per turn.",
+    "name": "Ars Magna Artmagia",
+    "desc": "2+ monstruos, incluyendo un monstruo \"Ars Magna\" o \"Artmagia\"\t\nTu adversario no puede seleccionar tus monstruos enlazados con efectos de cartas. \nDurante tu Main Phase: puedes añadir a tu mano, o Invocar de Modo Especial, 1 monstruo \"Ars Magna\", \"Artmagia\", \"DoomZ\" o \"Elfnota\" desde tu Deck, y después si tienes 3 o más Tipos de Monstruo diferentes en tu Campo, puedes Invocar de Modo Especial 1 monstruo desde tu Cementerio o destierro. \nSólo puedes usar este efecto de \"Ars Magna Artmagia\" una vez por turno",
     "overallString": "[Monstruo|Efecto|Enlace] Hada/LUZ  [LINK-4] 2500/-  [↑][←][→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307045.jpg?version=19.7"
   },
   {
     "name": "Ars Magna DoomZ",
-    "desc": "2 monsters, including an \"Ars Magna\" or \"DoomZ\" monster\nAny monster destroyed by battle with your linked monster is banished. You can only use each of the following effects of \"Ars Magna DoomZ\" once per turn. During your Main Phase: You can destroy, or banish, 1 card you control, then you can shuffle up to 2 cards from any GY(s) into the Deck. You can banish this card from your GY; Special Summon 1 \"DoomZ\" monster from your hand.",
+    "desc": "2 monstruos, incluyendo un monstruo \"Ars Magna\" o \"DoomZ\"\t\nCualquier monstruo destruido en batalla con tu monstruo enlazado es desterrado. \nDurante tu Main Phase: puedes destruir, o desterrar, 1 carta que controles, y después puedes barajar al Deck hasta 2 cartas de cualquier Cementerio. \nSólo puedes usar estos efectos de \"Ars Magna DoomZ\" una vez por turno cada uno. \nPuedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo \"DoomZ\" desde tu mano.",
     "overallString": "[Monstruo|Efecto|Enlace] Dragón/LUZ  [LINK-2] 1500/-  [←][↙]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307046.jpg?version=19.7"
   },
   {
-    "name": "Ars Magna Elfnote",
-    "desc": "2 monsters, including an \"Ars Magna\" or \"Elfnote\" monster\nYour linked monsters gain 300 ATK for each different Monster Type on the field. You can only use each of the following effects of \"Ars Magna Elfnote\" once per turn. During your Main Phase: You can send to the GY, or banish, 1 card you control, then you can return 1 monster on the field to the hand. You can banish this card from your GY; Special Summon 1 \"Elfnote\" monster from your hand.",
+    "name": "Ars Magna Elfnota",
+    "desc": "2 monstruos, incluyendo un monstruo \"Ars Magna\" o \"Elfnota\"\t\r\nTus monstruos enlazados ganan 300 ATK por cada Tipo de Monstruo diferente en el Campo. \r\nSólo puedes usar los siguientes efectos de \"Ars Magna Elfnota\" una vez por turno cada uno. \r\nDurante tu Main Phase: puedes mandar al Cementerio, o desterrar, 1 carta que controles, y después puedes devolver 1 monstruo en el Campo a la mano. \r\nPuedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo \"Elfnota\" desde tu mano.",
     "overallString": "[Monstruo|Efecto|Enlace] Lanzador de Conjuros/LUZ  [LINK-2] 1500/-  [→][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307047.jpg?version=19.7"
   },
   {
-    "name": "Ars Magna Academic Arcane Apparition Acropolis",
-    "desc": "(This card is always treated as an \"Artmage\" card.)\nYour activated \"Medius\" monsters' effects cannot be negated. If you have a \"Power Patron\" monster in your GY: You can banish 1 Fusion, Synchro, or Xyz Monster from your GY, and declare 1 \"Ars Magna\" Link Monster Card name that has not been declared for \"Ars Magna Academic Arcane Apparition Acropolis\" this turn; Special Summon that monster from your Extra Deck, but it cannot be used as Link Material.",
+    "name": "Ars Magna Acrópolis de Apariciones Arcanas Académicas",
+    "desc": "(Esta carta se trata siempre como una carta \"Artmagia\").\nLos efectos activados de tus monstruos \"Medius\" no pueden ser negados. \nSi tienes un monstruo \"Modelo de Poder\" en tu Cementerio: puedes desterrar 1 Monstruo de Fusión, Sincronía o Xyz de tu Cementerio, y declarar 1 nombre de Carta de Monstruo de Enlace \"Ars Magna\" que no haya sido declarado para \"Ars Magna Acrópolis de Apariciones Arcanas Académicas\" este turno; Invoca de Modo Especial 1 monstruo con ese nombre desde tu Deck Extra, pero no puede ser usado como Material de Enlace.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307061.jpg?version=19.7"
   },
   {
-    "name": "Omega Vidolium the Power Patron of Heaven's End",
-    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
+    "name": "Omega Vidolium, el Modelo de Poder del Fin Celestial",
+    "desc": "←◊11 Escala 11◊→\r\n【Efecto de Péndulo】\r\nSi un monstruo es Invocado de Modo Especial desde el Deck Extra: puedes devolver esta carta al Deck Extra, y después puedes Invocar por Fusión 1 Monstruo de Fusión usando monstruos en cualquier Campo, incluyendo un monstruo \"Modelo de Poder\" que controles.\r\n━━━━━━━━━━━━━━━━━━━━━━━\r\n【Efecto de Monstruo】\r\n3 monstruos Invocados de Modo Especial desde el Deck Extra con 3000 ATK o más\t\r\nDebe ser primero Invocado por Fusión. \r\nNo es afectada por efectos de cartas que no sean \"Modelo de Poder\". \r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo mientras controla 2 o más monstruos del mismo Tipo que ese monstruo: puedes desterrar 3 cartas de la parte superior de tu Deck boca abajo; niega esa activación y, si lo haces, destiérrala boca abajo. \r\nDurante tu Fase de Standby: Coloca esta carta en tu Zona de Péndulo.",
     "overallString": "[Monstruo|Efecto|Fusión|Péndulo] Dragón/OSCURIDAD  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
   {
-    "name": "Power Patron Portal Plugging -Sword of Mutual Destruction-",
-    "desc": "Discard 1 \"Power Patron\" card; place 1 \"Power Patron\" Pendulum Monster from your Extra Deck in your Pendulum Zone, then if it is a Fusion Monster, you can place 1 \"Power Patron\" Pendulum Monster from your Deck in your Pendulum Zone. If you control a \"Power Patron\" monster: You can banish this card from your GY, then target 1 face-up monster on the field; it gains 1500 ATK, also it cannot attack this turn. You can only use each effect of \"Power Patron Portal Plugging -Sword of Mutual Destruction-\" once per turn.",
+    "name": "Portal del Modelo de Poder Sellado - Espada de la Destrucción Mutua",
+    "desc": "Descarta 1 carta \"Modelo de Poder\"; coloca 1 Monstruo de Péndulo \"Modelo de Poder\" desde tu Deck Extra en tu Zona de Péndulo, y después si es un Monstruo de Fusión, puedes colocar 1 Monstruo de Péndulo \"Modelo de Poder\" desde tu Deck en tu Zona de Péndulo. \r\nSi controlas un monstruo \"Modelo de Poder\": puedes desterrar esta carta en tu Cementerio, y después seleccionar 1 monstruo boca arriba en el Campo; este gana 1500 ATK, y además no puede atacar este turno. \r\nSólo puedes usar cada efecto de \"Portal del Modelo de Poder Sellado - Espada de la Destrucción Mutua\" una vez por turno.\r\n",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307060.jpg?version=19.7"
   },
   {
-    "name": "Theorealize Ephemeral Lull",
-    "desc": "(This card is always treated as a \"Power Patron\" card.)\nBanish 1 \"Medius\" monster from your hand or face-up field; banish as many monsters on the field as possible that were Special Summoned from the Extra Deck, then you can Special Summon 1 \"Artmage\" monster from your GY. If you have 3 or more different Monster Types on your field: You can banish this card from your GY; Special Summon 1 of your banished \"Medius\" monsters. You can only use each effect of \"Theorealize Ephemeral Lull\" once per turn.",
+    "name": "Teoresaber Calma Efímera",
+    "desc": "(Esta carta se trata siempre como una carta \"Modelo de Poder\").\t\r\nDestierra 1 monstruo \"Medius\" desde tu mano o Campo boca arriba; destierra tantos monstruos en el Campo Invocados de Modo Especial desde el Deck Extra como sea posible, y después puedes Invocar de Modo Especial 1 monstruo \"Artmagia\" desde tu Cementerio. \r\nSi tienes 3 o más Tipos de Monstruo diferentes en tu Campo: puedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 de tus monstruos \"Medius\" desterrados. \r\nSólo puedes usar cada efecto de \"Teoresaber Calma Efímera\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307079.jpg?version=19.7"
   },
   {
-    "name": "Heretic Eradicator",
-    "desc": "When your opponent would Special Summon exactly 1 monster, while this card is in your hand and your opponent has 4 or more monsters that cannot be Normal Summoned/Set in their face-up field, GY, and/or banishment (Quick Effect): You can negate the Summon, and if you do, destroy that monster, and if you do that, Special Summon this card (while you control no monsters, this effect and its activation cannot be negated). You can send this card from the field to the GY; halve the ATK of 1 monster on the field. You can only use each effect of \"Heretic Eradicator\" once per turn.",
+    "name": "Erradicador de Herejes",
+    "desc": "(Efecto Rápido): Cuando tu adversario fuera a Invocar de Modo Especial exactamente 1 monstruo, mientras esta carta está en tu mano y ellos tienen 4 o más monstruos que no pueden ser Invocados de Modo Normal/Colocados en su Campo boca arriba, Cementerio y/o destierro: puedes negar la Invocación y, si lo haces, destruye ese monstruo y, si haces eso, Invoca esta carta de Modo Especial. Este efecto y su activación no pueden ser negados mientras no controles monstruos. \nPuedes mandar esta carta que controles al Cementerio; reduce a la mitad el ATK de 1 monstruo en el Campo. \nSólo puedes usar los efectos de \"Erradicador de Herejes\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★7] 2700/400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307021.jpg?version=19.7"
   },
   {
-    "name": "Counter Spell \"Negate Attack\"",
-    "desc": "During the Battle Phase: Activate 1 of these effects;\n● When an opponent's monster declares an attack while they control more monsters than you do: Negate the attack, then end the Battle Phase.\n● When your opponent activates a monster effect: Negate that effect, and if you do, destroy that monster.\nWhen you draw for your normal draw in your Draw Phase: You can banish this card from your GY; Special Summon 1 monster from your hand.",
+    "name": "Contrahechizo \"¡Negar Ataque!\"",
+    "desc": "Durante la Battle Phase: activa 1 de estos efectos;\n● Cuando un monstruo de tu adversario declara un ataque mientras él controla más monstruos que tú: niega el ataque, y después termina la Battle Phase.\n● Cuando tu adversario activa un efecto de monstruo: niega ese efecto y, si lo haces, destruye esa carta.\t\nCuando robas una carta durante tu Draw Phase: puedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo desde tu mano.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200298.jpg?version=19.7"
   },
   {
-    "name": "Karin the Celestial Sage of the Highest Heights",
-    "desc": "2 Level 7 monsters\nWhen your opponent activates a card or effect that includes an effect that Special Summons a monster(s) from the Deck (Quick Effect): You can detach 1 material from this card; your opponent draws 1 card, then negate that activated effect, and if you do, destroy that card. During your Main Phase 2: You can target 1 Level 7 monster in your GY; take damage equal to its ATK, and if you do, return both it and this card on the field to the hand/Extra Deck. You can only use each effect of \"Karin the Celestial Sage of the Highest Heights\" once per turn.",
+    "name": "Karin la Sabia Celestial de las Alturas Supremas",
+    "desc": "2 monstruos de Nivel 7\t\t\r\n(Efecto Rápido): Cuando tu adversario activa una carta o efecto que incluya un efecto para Invocar de Modo Especial uno o más monstruos desde el Deck: puedes desacoplar 1 material de esta carta; tu adversario roba 1 carta, y después niega ese efecto y, si lo haces, destruye esa carta. \nDurante tu Main Phase 2: puedes seleccionar 1 monstruo de Nivel 7 en tu Cementerio; recibe daño igual a su ATK y, si lo haces, devuelve ese monstruo y esta carta en el Campo a la mano/Deck Extra. \nSólo puedes usar los efectos de \"Karin la Sabia Celestial de las Alturas Supremas\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Xyz] Lanzador de Conjuros/LUZ  [☆7] 2500/600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307044.jpg?version=19.7"
   },
   {
-    "name": "Card Crawl",
-    "desc": "You can banish (face-down) the top 5, 10, or 15 cards of your Deck, then target 1 face-up monster on the field; apply the appropriate effect to it.\n● 5: Its ATK/DEF become 0.\n● 10: Negate its effects.\n● 15: Banish it (face-down).\nYou can only use this effect of \"Card Crawl\" once per turn.",
+    "name": "Arrastre de Cartas",
+    "desc": "Sólo puedes usar el siguiente efecto de \"Arrastre de Cartas\" una vez por turno. \nPuedes desterrar (boca abajo) las 5, 10 o 15 cartas de la parte superior de tu Deck, y después seleccionar 1 monstruo boca arriba en el Campo; aplica el efecto correspondiente.\n● 5: Su ATK/DEF se convierte en 0.\n● 10: Niega sus efectos.\n● 15: Destiérralo (boca abajo). ",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307069.jpg?version=19.7"
   },
   {
-    "name": "The Pyramid of Kepher",
-    "desc": "Send 1 Zombie Ritual Monster from your Deck to the GY; place 1 Field Spell from your Deck or GY face-up on your field, also you cannot activate non-Zombie monster effects for the rest of this turn after this card resolves. If your opponent controls an Effect Monster: You can banish this card from your GY, then target 1 Ritual Monster in your GY; add it to your hand. You can only use each effect of \"The Pyramid of Kepher\" once per turn.",
+    "name": "La Pirámide de Kepel",
+    "desc": "Manda al Cementerio 1 Monstruo de Ritual Zombi desde tu Deck; coloca 1 Mágica de Campo desde tu Deck o Cementerio boca arriba en tu Campo. \nPor el resto de este turno, después de que esta carta se resuelva, no puedes activar efectos de monstruos, excepto los de monstruos Zombi. \nSi tu adversario controla un Monstruo de Efecto: puedes desterrar esta carta en el Cementerio, y después seleccionar 1 Monstruo de Ritual en tu Cementerio; añádelo a tu mano. \nSólo puedes usar cada uno de los efectos de \"La Pirámide de Kepel\" una vez por turno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307068.jpg?version=19.7"
   },
   {
-    "name": "Buster Blader, the One Who Surpasses the Limits",
-    "desc": "If this card is in your hand or GY: You can discard 1 Spell; Special Summon this card, and if you do, its name becomes \"Buster Blader\", also banish it when it leaves the field. You can only use this effect of \"Buster Blader, the One Who Surpasses the Limits\" once per turn. Gains 500 ATK for each Attack Position monster your opponent controls. When this card destroys a monster by battle: You can discard 1 card; Special Summon that monster to your field.",
+    "name": "Buster Blader, el que Supera los Límites",
+    "desc": "Si esta carta está en tu mano o Cementerio: puedes descartar 1 Mágica; Invoca esta carta de Modo Especial y, si lo haces, su nombre se convierte en \"Buster Blader\", pero destiérrala cuando deje el Campo. \nSólo puedes usar ese efecto de \"Buster Blader, el que Supera los Límites\" una vez por turno. \nGana 500 ATK por cada monstruo en Posición de Ataque de tu adversario. \nCuando esta carta destruye un monstruo en batalla: puedes descartar 1 carta; Invoca ese monstruo a tu Campo.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★8] 2600/2300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100273001.jpg?version=19.7"
   },
   {
-    "name": "Lethargisaurus",
-    "desc": "1 Defense Position Tuner + 1+ Defense Position non-Tuners\nIf this card is Special Summoned in Attack Position: Change it to Defense Position. This Defense Position card gains these effects.\n● Change all face-up monsters on the field to Defense Position.\n● Neither player can activate cards or effects in response to the activation of their own cards or effects.\n● Once per turn, during the End Phase: Each player gains 500 LP for each Defense Position monster they control.",
+    "name": "Letargisaurio",
+    "desc": "1 Cantante en Posición de Defensa + 1+ monstruos que no sean Cantantes en Posición de Defensa\t\r\nSi esta carta es Invocada de Modo Especial en Posición de Ataque: cámbiala a Posición de Defensa. \r\nEsta carta en Posición de Defensa gana estos efectos;\r\n● Los monstruos boca arriba en el Campo se cambian a Posición de Defensa.\r\n● Ningún jugador puede activar cartas o efectos en respuesta a la activación de sus propias cartas y efectos.\r\n● Una vez por turno, durante la End Phase: cada jugador gana 500 LP por cada uno de sus monstruos en Posición de Defensa.",
     "overallString": "[Monstruo|Efecto|Sincronía] Serpiente Marina/AGUA  [★8] 1000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307040.jpg?version=19.7"
   },
   {
-    "name": "The Dark Dragon Lord of Ultum",
-    "desc": "A dragon from another star that awoke from within a sealed underground world. It's a well-known fact even in Dimension Zeta that when you first wake up, you can only exert one-thousandth of your true strength.",
+    "name": "El Señor Dragón Oscuro de Ultum",
+    "desc": "Un dragón de otra estrella que despertó de un mundo subterráneo sellado. Es un hecho bien conocido que incluso en la Dimensión Zeta, cuando despiertas por primera vez, solo puedes ejercer 1/1000 de tu verdadera fuerza.",
     "overallString": "[Monstruo|Normal] Dragón/TIERRA  [★8] 2000/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100262301.jpg?version=19.7"
   },
   {
-    "name": "Javelin Beetle of the Alliance",
-    "desc": "You can Ritual Summon this card with \"Javelin Beetle of the Alliance\". During the Main Phase (Quick Effect): You can reveal this card in your hand; Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field whose total Levels equal or exceed its Level. You can only use this effect of \"Javelin Beetle of the Alliance\" once per Duel. If this card is Ritual Summoned: You can target 1 other card in this card's column; destroy it, and if you do, this card gains 600 ATK.",
+    "name": "Escarabajo Jabalina de la Alianza",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Escarabajo Jabalina de la Alianza\".  \n(Efecto Rápido): Durante la Main Phase: puedes revelar esta carta en tu mano; Invoca por Ritual 1 Monstruo de Ritual Insecto desde tu mano, Sacrificando monstruos de tu mano y/o Campo cuyos Niveles totales sean iguales o superen su Nivel. \nSólo puedes usar este efecto de \"Escarabajo Jabalina de la Alianza\" una vez por Duelo. \nSi esta carta es Invocada por Ritual: puedes seleccionar 1 otra carta en su misma columna; destrúyela y, si lo haces, esta carta gana 600 ATK.",
     "overallString": "[Monstruo|Efecto|Ritual] Insecto/TIERRA  [★8] 2450/2550",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307029.jpg?version=19.7"
   },
   {
-    "name": "Bunnillin Soft",
-    "desc": "While you control 2 or more non-Token Normal Monsters, Normal Monsters you control gain 1000 ATK. You can only use each of the following effects of \"Bunnillin Soft\" once per turn. You can target 2 Normal Monsters in your GY with different Types, Attributes, and Levels; Special Summon them. If a Level 5 or higher Normal Monster(s) with 2000 or less original ATK/DEF is Special Summoned or declares an attack: You can add 1 card from your GY to your hand.",
+    "name": "Bunnillin Suave",
+    "desc": "Los Monstruos Normales que controles ganan 1000 ATK mientras controles 2 o más Monstruos Normales que no sean Fichas. \r\nPuedes seleccionar 2 Monstruos Normales en tu Cementerio con diferentes Tipos, Atributos y Niveles; Invócalos de Modo Especial. \r\nSi uno o más Monstruos Normales de Nivel 5 o mayor con 2000 ATK/DEF originales o menos son Invocados de Modo Especial o declaran un ataque: puedes añadir a tu mano 1 carta de tu Cementerio.",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307080.jpg?version=19.7"
   },
   {
-    "name": "Bunnillin Extract",
-    "desc": "While you control 2 or more non-Token Normal Monsters, draw 2 cards instead of 1 for your normal draw during your Draw Phase. You can only use each of the following effects of \"Bunnillin Extract\" once per turn. If a card(s) is sent from your opponent's Deck to the GY: You can Special Summon 1 Normal Monster from your hand or Deck. If a Level 5 or higher Normal Monster(s) with 2000 or less original ATK/DEF is Special Summoned or declares an attack: You can target 1 card your opponent controls; destroy it.",
+    "name": "Extracto Bunnillin",
+    "desc": "Roba 2 cartas en lugar de 1 para tu robo normal durante tu Draw Phase mientras controles 2 o más Monstruos Normales que no sean Fichas. \r\nSi una o más cartas son mandadas del Deck de tu adversario al Cementerio: puedes Invocar de Modo Especial 1 Monstruo Normal desde tu mano o Deck. \r\nSi uno o más Monstruos Normales de Nivel 5 o mayor con 2000 ATK/DEF originales o menos son Invocados de Modo Especial o declaran un ataque: puedes seleccionar 1 carta que controle tu adversario; destrúyela.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307066.jpg?version=19.7"
   },
   {
     "name": "Bunnillin: Mocha MOD",
-    "desc": "You can send 1 Normal Monster with 2000 or less ATK from your Deck to the GY; Special Summon this card from your hand. If this card is Normal or Special Summoned: You can place 1 \"Bunnillin\" Continuous Spell/Trap from your Deck or GY face-up on your field. If your opponent Special Summons an Effect Monster(s), while this card is in the Monster Zone: You can Tribute this card; Special Summon 1 Normal Monster from your GY. You can only use each effect of \"Bunnillin: Mocha MOD\" once per turn.",
+    "desc": "Puedes mandar al Cementerio 1 Monstruo Normal con 2000 ATK o menos desde tu Deck; Invoca esta carta de Modo Especial desde tu mano. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes colocar 1 Mágica/Trampa Continua \"Bunnillin\" desde tu Deck o Cementerio boca arriba en tu Campo. \r\nSi tu adversario Invoca de Modo Especial uno o más Monstruos de Efecto mientras este monstruo está en el Campo: puedes Sacrificar esta carta; Invoca de Modo Especial 1 Monstruo Normal desde tu Cementerio.",
     "overallString": "[Monstruo|Efecto] Ciberso/LUZ  [★4] 0/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307020.jpg?version=19.7"
   },
   {
-    "name": "The Secret Crane Princess Who Returns A Favor",
-    "desc": "During your opponent's End Phase: You can place this card from your GY on top of the Deck. During the Main Phase (Quick Effect): You can return this card from the field to the hand, and if you do, each player draws 1 card, then your opponent can draw 1 card, and if they do, you must keep your hand revealed during this Main Phase. (Quick Effect): You can banish this revealed card from your hand; destroy all face-up cards your opponent controls. You can only use each effect of \"The Secret Crane Princess Who Returns A Favor\" once per turn.",
+    "name": "La Princesa Grulla Secreta que Devuelve un Favor",
+    "desc": "Durante la End Phase de tu adversario: puedes colocar esta carta desde tu Cementerio en la parte superior del Deck. \r\n(Efecto Rápido): Durante la Main Phase: puedes devolver esta carta del Campo a la mano y, si lo haces, cada jugador roba 1 carta, y después tu adversario puede robar 1 carta y, si lo hace, debes mantener tu mano revelada por el resto de esta fase. \r\n(Efecto Rápido): Puedes desterrar esta carta revelada en tu mano; destruye todas las cartas boca arriba que controle tu adversario. \r\nSólo puedes usar cada efecto de \"La Princesa Grulla Secreta que Devuelve un Favor\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Cantante] Bestia Alada/LUZ  [★1] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307023.jpg?version=19.7"
   },
   {
-    "name": "Silent Magician, the Silent Fighter",
-    "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by Tributing 1 Level 7 or lower monster (Spellcaster or Warrior). You can only Special Summon \"Silent Magician, the Silent Fighter\" once per turn this way. The first time this card would be destroyed by battle or card effect each turn, it is not destroyed. Twice per turn, each time your opponent draws a card(s) (except during the Damage Step): You can draw 1 card, or if your opponent drew by their own card effect, you draw the same number of cards instead. While you have 6 or more cards in your hand, negate all your opponent's activated Spell Cards and effects.",
+    "name": "Mago Silencioso, el Luchador Silencioso",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. \r\nDebe ser Invocado de Modo Especial (desde tu mano) Sacrificando 1 monstruo de Nivel 7 o menor (Lanzador de Conjuros o Guerrero). \r\nSólo puedes Invocar de Modo Especial \"Mago Silencioso, el Luchador Silencioso\" una vez por turno de esta forma. \r\nLa primera vez que esta carta fuera a ser destruida en batalla o por efecto de carta cada turno, no es destruida. \r\nDos veces por turno, cada vez que tu adversario roba una o más cartas: puedes robar 1 carta, o si tu adversario robó por el efecto de su propia carta, puedes robar esa misma cantidad de cartas en su lugar.  \r\nNiega todas las Cartas Mágicas y efectos activados de tu adversario mientras tengas 6 o más cartas en tu mano.",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Lanzador de Conjuros/LUZ  [★8] 3500/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268010.jpg?version=19.7"
   },
   {
-    "name": "Autumn",
-    "desc": "This card's name becomes \"Summer\" while in the Field Zone. Once per turn: You can place Season Counters on this card equal to the number of cards in your opponent's hand. At the start of the Battle Phase: You can take 1 Field Spell from your hand, Deck, or GY that you can place a Season Counter on, except \"Autumn\", and place it face-up on your field, and if you do, place all Season Counters on this card on that card. If a card(s) in the Field Zone would be destroyed by card effect, you can banish this card from your GY instead.",
+    "name": "Otoño",
+    "desc": "(El nombre de esta carta se convierte en \"Verano\" mientras está en la Zona del Campo).\t\r\nUna vez por turno: puedes poner Contadores de Estación en esta carta igual al número de cartas en la mano de tu adversario. \r\nAl comienzo de la Battle Phase: puedes tomar 1 Mágica de Campo en la que puedas poner un Contador de Estación desde tu mano, Deck o Cementerio, excepto \"Otoño\", y colocarla boca arriba en tu Campo y, si lo haces, pon todos los Contadores de Estación de esta carta en esa carta.  \r\nSi una carta en una Zona del Campo fuera a ser destruida por efecto de carta, puedes desterrar esta carta en tu Cementerio en su lugar.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307071.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Castellan",
-    "desc": "1 Tuner + 1+ non-Tuners\nYou can target 1 opponent's monster in this card's adjacent column, or 1 card in your opponent's Spell & Trap Zone that is 2 columns away from this card's; banish that card. If this card is placed in the Spell & Trap Zone as a Continuous Spell: You can send 1 \"Angelechy\" card from your Deck to the GY. You can only use each of the preceding effects of \"Angelechy Castellan\" once per turn. While this card is treated as a Continuous Spell, each player can only activate 1 card or effect per Chain.",
+    "name": "Castellano Angelequia",
+    "desc": "1 Cantante + 1+ monstruos que no sean Cantantes\t\t\r\nPuedes seleccionar 1 monstruo del adversario en la columna adyacente a esta carta, o 1 carta en la Zona de Mágicas y Trampas de tu adversario que esté a 2 columnas de esta carta; destierra esa carta.  \r\nSi esta carta es colocada en la Zona de Mágicas y Trampas como una Mágica Continua: puedes mandar al Cementerio 1 carta \"Angelequia\" desde tu Deck.  \r\nMientras esta carta es tratada como una Mágica Continua, cada jugador sólo puede activar 1 carta o efecto por Cadena. \r\nSólo puedes usar cada uno de los efectos de \"Castellano Angelequia\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Sincronía] Hada/LUZ  [★7] 2000/2500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306090.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Seneschal",
-    "desc": "1 Tuner + 1+ non-Tuners\nIf this card is Special Summoned: Activate this effect; each player can Special Summon 1 Fairy Synchro Monster from their Extra Deck (but negate its effects), also this card, and monsters Special Summoned by this effect, cannot be used as material for an Xyz or Link Summon, and return them to the Extra Deck when they leave the field. If an \"Angelechy\" monster targets this card for an attack: Negate that attack, and if you do, give control of this card to your opponent. You can only use each effect of \"Angelechy Seneschal\" once per turn.",
+    "name": "Senescal Angelequia",
+    "desc": "1 Cantante + 1+ monstruos que no sean Cantantes\t\t\r\nSi esta carta es Invocada de Modo Especial: activa este efecto; cada jugador puede Invocar de Modo Especial 1 Monstruo de Sincronía Hada desde su Deck Extra (pero niega sus efectos), y además esta carta, y los monstruos Invocados de Modo Especial por este efecto, no pueden ser usados como material para una Invocación Xyz o Enlace, y se devuelven al Deck Extra cuando dejan el Campo. \r\nSi un monstruo \"Angelequia\" selecciona esta carta para un ataque: niega ese ataque y, si lo haces, da el control de esta carta a tu adversario. \r\nSólo puedes usar cada efecto de \"Senescal Angelequia\" una vez por turno.\r\n",
     "overallString": "[Monstruo|Efecto|Sincronía] Hada/OSCURIDAD  [★10] 3000/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306091.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Strategy Score",
-    "desc": "Add 1 \"Angelechy\" Spell/Trap from your Deck to your hand, except \"Angelechy Strategy Score\", also for the rest of this turn after this card resolves, you cannot Special Summon from the Extra Deck, except LIGHT or DARK Synchro Monsters. If this card is in your GY, except the turn it was sent there: You can banish it; return 1 \"Angelechy\" Monster Card you own from your Spell & Trap Zone to the Extra Deck, then you can Special Summon it. You can only use each effect of \"Angelechy Strategy Score\" once per turn.",
+    "name": "Puntuación de Estrategia Angelequia",
+    "desc": "Añade a tu mano 1 Mágica/Trampa \"Angelequia\" desde tu Deck, excepto \"Puntuación de Estrategia Angelequia\", y además por el resto de este turno después de que esta carta se resuelva, no puedes Invocar de Modo Especial desde el Deck Extra, excepto Monstruos de Sincronía de LUZ u OSCURIDAD.  \r\nSi esta carta está en tu Cementerio, excepto en el turno en que fue mandada allí: puedes desterrarla; devuelve 1 Carta de Monstruo \"Angelequia\" que poseas desde tu Zona de Mágicas y Trampas al Deck Extra, y después puedes Invocarla de Modo Especial. \r\nSólo puedes usar cada efecto de \"Puntuación de Estrategia Angelequia\" una vez por turno.\r\n",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306092.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Brilliant Move",
-    "desc": "Return 1 \"Angelechy\" Monster Card you own from your Spell & Trap Zone to the Extra Deck, then you can Special Summon it. You can banish this card from your GY, then send 1 \"Angelechy\" card from your hand or face-up field to the GY; Special Summon 1 \"Angelechy\" monster from your Extra Deck. You can only use each effect of \"Angelechy Brilliant Move\" once per turn.",
+    "name": "Movimiento Brillante Angelequia",
+    "desc": "Devuelve 1 Carta de Monstruo \"Angelequia\" que poseas desde tu Zona de Mágicas y Trampas al Deck Extra, y después puedes Invocarla de Modo Especial.  \r\nPuedes desterrar esta carta en tu Cementerio, y después mandar al Cementerio 1 carta \"Angelequia\" desde tu mano o Campo boca arriba; Invoca de Modo Especial 1 monstruo \"Angelequia\" desde tu Deck Extra. \r\nSólo puedes usar cada efecto de \"Movimiento Brillante Angelequia\" una vez por turno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306093.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Opposition",
-    "desc": "Choose 2 \"Angelechy\" monsters in your Extra Deck, with different names than the cards in your Spell & Trap Zone, Special Summon 1 of them in your opponent's Main Monster Zone, and place the other in your Spell & Trap Zone as a face-up Continuous Spell. You can banish this card from your GY; shuffle up to 5 \"Angelechy\" cards into the Deck from your GY and/or banishment, except \"Angelechy Opposition\". You cannot Special Summon from the Extra Deck the turn you activate this card, except LIGHT or DARK Synchro Monsters. You can only activate 1 \"Angelechy Opposition\" per turn.",
+    "name": "Oposición Angelequia",
+    "desc": "Elige 2 monstruos \"Angelequia\" en tu Deck Extra, con nombres diferentes al de las cartas en tu Zona de Mágicas y Trampas, Invoca de Modo Especial 1 de ellos en la Zona de Monstruos Principal de tu adversario, y coloca el otro en tu Zona de Mágicas y Trampas como una Mágica Continua boca arriba.  \r\nPuedes desterrar esta carta en tu Cementerio; baraja al Deck hasta 5 cartas \"Angelequia\" desde tu Cementerio y/o destierro, excepto \"Oposición Angelequia\".  \r\nNo puedes Invocar de Modo Especial desde el Deck Extra el turno en que activas esta carta, excepto Monstruos de Sincronía de LUZ u OSCURIDAD. \r\nSólo puedes activar 1 \"Oposición Angelequia\" por turno.\r\n",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306094.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Endgame Problem",
-    "desc": "This card gains the following effects, based on the number of \"Angelechy\" Monster Cards in your Spell & Trap Zone.\n● 1+: Once per turn, during your opponent's Standby Phase: You can draw 1 card.\n● 2+: When your opponent would Special Summon a monster(s), you choose the zone(s) to place it.\n● 3+: Once per turn, you can activate 1 \"Angelechy\" Trap Card the turn it was Set.\n● 4+: Once per turn, when your opponent Special Summons a monster(s) (except during the Damage Step): You can banish that monster(s).\n● 5: Once per turn: You can Special Summon 1 \"Angelechy\" monster from your Extra Deck.",
+    "name": "Problema de Fin de Partida Angelequia",
+    "desc": "Esta carta gana los siguientes efectos, basados en el número de Cartas de Monstruo \"Angelequia\" en tu Zona de Mágicas y Trampas;\r\n● 1+: Una vez por turno, durante la Standby Phase de tu adversario: puedes robar 1 carta.\r\n● 2+: Cuando tu adversario fuera a Invocar de Modo Especial uno o más monstruos, tú eliges la(s) zona(s) para colocarlos.\r\n● 3+: Una vez por turno, puedes activar 1 Carta de Trampa \"Angelequia\" en el turno en que fue Colocada.\r\n● 4+: Una vez por turno, cuando tu adversario Invoca de Modo Especial uno o más monstruos (excepto durante el Damage Step): puedes desterrar ese o esos monstruos.\r\n● 5: Una vez por turno: puedes Invocar de Modo Especial 1 monstruo \"Angelequia\" desde tu Deck Extra.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306095.jpg?version=19.7"
   },
   {
-    "name": "Angelechy Verdict",
-    "desc": "Apply this effect based on the number of \"Angelechy\" Monster Cards on the field.\n● 1 to 4: Negate the effects of 1 face-up card your opponent controls.\n● 5+: Banish all cards your opponent controls.\nYou can banish this card from your GY; send 1 \"Angelechy\" card from your hand or face-up field to the GY, then you can place 1 \"Angelechy\" monster with a different name than the cards in your Spell & Trap Zone, from your Extra Deck in your Spell & Trap Zone as a face-up Continuous Spell. You can only use each effect of \"Angelechy Verdict\" once per turn.",
+    "name": "Veredicto Angelequia",
+    "desc": "Aplica este efecto basado en el número de Cartas de Monstruo \"Angelequia\" en el Campo;\r\n● 1 a 4: Niega los efectos de 1 carta boca arriba que controle tu adversario.\r\n● 5+: Destierra todas las cartas que controle tu adversario.\t\r\nPuedes desterrar esta carta en tu Cementerio; manda al Cementerio 1 carta \"Angelequia\" desde tu mano o Campo boca arriba, y después puedes Colocar 1 monstruo \"Angelequia\" con un nombre diferente al de las cartas en tu Zona de Mágicas y Trampas, desde tu Deck Extra en tu Zona de Mágicas y Trampas como una Mágica Continua boca arriba. \r\nSólo puedes usar cada efecto de \"Veredicto Angelequia\" una vez por turno.\r\n",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306096.jpg?version=19.7"
   },
   {
-    "name": "Tigress in Silent Repose",
-    "desc": "If this card is Normal or Special Summoned: You can target 1 Spell/Trap your opponent controls; destroy that card when this card leaves the field. If this card is sent from the hand or field to the GY: You can send 1 Spell/Trap you control to the GY; Special Summon this card, but banish it when it leaves the field. You can only use each effect of \"Tigress in Silent Repose\" once per turn.",
+    "name": "Tigresa en Reposo Silencioso",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes seleccionar 1 Mágica/Trampa que controle tu adversario; destruye esa carta cuando esta carta deje el Campo. \r\nSi esta carta es mandada de la mano o Campo al Cementerio: puedes mandar al Cementerio 1 Mágica/Trampa que controles; Invoca esta carta de Modo Especial, pero destiérrala cuando deje el Campo. \r\nSólo puedes usar cada efecto de \"Tigresa en Reposo Silencioso\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Guerrero Bestia/TIERRA  [★3] 1700/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306082.jpg?version=19.7"
   },
   {
-    "name": "Just Flip a Coin",
-    "desc": "If a face-up card(s) you control is destroyed by an opponent's card effect: You can toss a coin and call it. If you call it right, Special Summon 1 monster from your GY. If you call it wrong, Set 1 Trap from your GY. If this card in your possession is destroyed by an opponent's card effect: You can activate 1 of these effects;\n● Special Summon 1 monster from your GY.\n● Set 1 Trap from your GY.\nYou can only use each effect of \"Just Flip a Coin\" once per turn.",
+    "name": "Solo Lanza una Moneda",
+    "desc": "Si una o más cartas boca arriba que controles son destruidas por el efecto de una carta del adversario: puedes lanzar una moneda y adivinar cara o cruz. \r\nSi aciertas, Invoca de Modo Especial 1 monstruo desde tu Cementerio. \r\nSi fallas, Coloca 1 Trampa desde tu Cementerio. \r\nSi esta carta en tu posesión es destruida por el efecto de una carta del adversario: puedes activar 1 de estos efectos;\r\n● Invoca de Modo Especial 1 monstruo desde tu Cementerio.\r\n● Coloca 1 Trampa desde tu Cementerio.\t\r\nSólo puedes usar cada efecto de \"Solo Lanza una Moneda\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306083.jpg?version=19.7"
   },
   {
-    "name": "Kumenyo, the Nine-Hued Deer",
-    "desc": "2+ Level 4 LIGHT and/or DARK monsters\nDuring the Main Phase (Quick Effect): You can detach 1 material from this card; attach 1 card from your hand, GY, or banishment to this card, except the detached material. You can only use this effect of \"Kumenyo, the Nine-Hued Deer\" once per turn. Gains the following effects, based on the number of different Monster Types attached to it.\n● 2+: Cannot be destroyed by card effects.\n● 3+: Draw 2 cards instead of 1 for your normal draw during your Draw Phase.",
+    "name": "Kumenyo, el Ciervo de Nueve Tonos",
+    "desc": "2+ monstruos de LUZ y/o OSCURIDAD de Nivel 4\t\r\n(Efecto Rápido): Durante la Main Phase: puedes desacoplar 1 material de esta carta; acopla a esta carta 1 carta de tu mano, Cementerio o destierro, excepto el material desacoplado. \r\nSólo puedes usar este efecto de \"Kumenyo, el Ciervo de Nueve Tonos\" una vez por turno. \r\nGana los siguientes efectos, basados en el número de Tipos de Monstruo diferentes acoplados a ella;\r\n● 2+: No puede ser destruida por efectos de cartas.\r\n● 3+: Roba 2 cartas en lugar de 1 para tu robo normal durante tu Draw Phase.",
     "overallString": "[Monstruo|Efecto|Xyz] Lanzador de Conjuros/OSCURIDAD  [☆4] 2500/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306084.jpg?version=19.7"
   },
   {
-    "name": "Kerolia the Frolicsome",
-    "desc": "If a Spell/Trap(s) on the field is returned to the hand (except during the Damage Step): You can Special Summon this card from your GY (if it was there when that card was returned) or hand (even if not), in face-up or face-down Defense Position, but if you Summoned it from the GY, banish it when it leaves the field. If another card(s) on the field is returned to the hand, while this card is in the Monster Zone (except during the Damage Step): You can target 1 of your banished Normal Traps; Set it. You can only use each effect of \"Kerolia the Frolicsome\" once per turn.",
+    "name": "Kerolia la Juguetona",
+    "desc": "Si una o más Mágicas/Trampas en el Campo son devueltas a la mano (excepto durante el Damage Step): puedes Invocar esta carta de Modo Especial desde tu Cementerio (si estaba allí cuando esa carta fue devuelta) o mano (aunque no lo estuviera), en Posición de Defensa boca arriba o boca abajo, pero si la Invocaste desde el Cementerio, destiérrala cuando deje el Campo. \r\nSi otra u otras cartas en el Campo son devueltas a la mano, mientras esta carta está en la Zona de Monstruos (excepto durante el Damage Step): puedes seleccionar 1 de tus Trampas Normales desterradas; Colócala. \r\nSólo puedes usar cada efecto de \"Kerolia la Juguetona\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Cantante] Aqua/AGUA  [★1] 200/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306085.jpg?version=19.7"
   },
   {
-    "name": "Archidux, the Squid Sorcerer",
-    "desc": "2 WATER monsters\nYou can send 1 card you control to the GY; all WATER monsters you control gain 500 ATK/DEF this turn. If a WATER Link Monster(s) you control is destroyed by an opponent's card effect, while this card is in your GY (except during the Damage Step): You can banish this card, then target 1 of those destroyed monsters; Special Summon 1 WATER monster from your hand or GY, with a Level less than or equal to that monster's Link Rating. You can only use each effect of \"Archidux, the Squid Sorcerer\" once per turn.",
+    "name": "Archidux, el Hechicero Calamar",
+    "desc": "2 monstruos de AGUA\t\t\r\nPuedes mandar al Cementerio 1 carta que controles; todos los monstruos de AGUA que controles ganan 500 DEF este turno.  \r\nSi uno o más Monstruos de Enlace de AGUA que controles son destruidos por el efecto de una carta del adversario, mientras esta carta está en tu Cementerio (excepto durante el Damage Step): puedes desterrar esta carta, y después seleccionar 1 de esos monstruos destruidos; Invoca de Modo Especial 1 monstruo de AGUA desde tu mano o Cementerio, con un Nivel menor o igual al Valor de Enlace de ese monstruo. \r\nSólo puedes usar cada efecto de \"Archidux, el Hechicero Calamar\" una vez por turno.\r\n\r\n",
     "overallString": "[Monstruo|Efecto|Enlace] Aqua/AGUA  [LINK-2] 1500/-  [→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306086.jpg?version=19.7"
   },
   {
-    "name": "Skyborne Blue Cularsaw",
-    "desc": "1 Level 8 or higher DARK monster + 1 Warrior monster\nIf this card is Fusion Summoned: You can equip 1 Warrior monster from your GY or banishment, or 1 monster from your opponent's GY or banishment, to this card as an Equip Spell that gives it 500 ATK/DEF. When your opponent activates a Spell/Trap Card or effect (Quick Effect): You can send 1 Equip Card you control to the GY; negate the activation. You can only use each effect of \"Skyborne Blue Cularsaw\" once per turn.",
+    "name": "Sierra Circular Azulada del Cielo",
+    "desc": "1 monstruo de OSCURIDAD de Nivel 8 o mayor + 1 monstruo Guerrero\t\r\nSi esta carta es Invocada por Fusión: puedes equipar 1 monstruo Guerrero de tu Cementerio o destierro, o 1 monstruo del Cementerio o destierro de tu adversario, a esta carta como una Carta Mágica de Equipo que le da 500 ATK/DEF.  \r\n(Efecto Rápido): Cuando tu adversario activa una Carta Mágica/Trampa o efecto: puedes mandar al Cementerio 1 Carta de Equipo que controles; niega esa activación. \r\nSólo puedes usar cada efecto de \"Sierra Circular Azulada del Cielo\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Fusión] Guerrero/OSCURIDAD  [★8] 2800/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306087.jpg?version=19.7"
   },
   {
-    "name": "Half Slice of Nickeline",
-    "desc": "If this card is Special Summoned from the Deck: You can add 1 Level 4 or lower Rock monster from your Deck to your hand, except \"Half Slice of Nickeline\". If this card is sent to the GY as Synchro Material, you can (except during the Damage Step): Immediately after this effect resolves, Normal Summon 1 Rock monster. You can only use each effect of \"Half Slice of Nickeline\" once per turn.",
+    "name": "Media Rebanada de Niquelina",
+    "desc": "Si esta carta es Invocada de Modo Especial desde el Deck: puedes añadir a tu mano 1 monstruo Roca de Nivel 4 o menor desde tu Deck, excepto \"Media Rebanada de Niquelina\".  \r\nSi esta carta es mandada al Cementerio como Material de Sincronía, puedes (excepto durante el Damage Step): inmediatamente después de que este efecto se resuelva, Invocar de Modo Normal 1 monstruo Roca.",
     "overallString": "[Monstruo|Efecto] Roca/AGUA  [★4] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306088.jpg?version=19.7"
   },
   {
-    "name": "Chaospawn Bishop",
-    "desc": "If this card you control would be used as Synchro Material, you can treat it as a non-Tuner. If this card is Normal or Special Summoned: You can Special Summon 1 \"Chaospawn Bishop\" from your hand, Deck, or GY, and if you do, it becomes LIGHT, also for the rest of this turn, you cannot Special Summon, except LIGHT or DARK monsters, and you cannot Special Summon from the Extra Deck, except Synchro Monsters. You can only use this effect of \"Chaospawn Bishop\" once per turn.",
+    "name": "Obispo del Engendro del Caos",
+    "desc": "Si esta carta que controlas fuera a ser usada como Material de Sincronía, puedes tratarla como un monstruo que no sea Cantante.  \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 \"Obispo del Engendro del Caos\" desde tu mano, Deck o Cementerio y, si lo haces, se convierte en LUZ, y además por el resto de este turno, no puedes Invocar de Modo Especial, excepto monstruos de LUZ u OSCURIDAD, y no puedes Invocar de Modo Especial desde el Deck Extra, excepto Monstruos de Sincronía. \r\nSólo puedes usar el efecto de \"Obispo del Engendro del Caos\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Cantante] Demonio/OSCURIDAD  [★4] 100/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306089.jpg?version=19.7"
   },
   {
-    "name": "Exodia the Obliterator",
-    "desc": "When you draw this card during your turn: You can reveal it; Special Summon it. If this card is Special Summoned during your turn: You can activate this effect; for the rest of this turn, neither player can activate cards or effects, except \"Exodia the Obliterator\", also you cannot Normal or Special Summon monsters. At the start of the Damage Step, if this card battles: You can destroy as many monsters your opponent controls as possible, and if you do, inflict damage to your opponent equal to the total original ATK of those destroyed monsters.",
+    "name": "Exodia el Obliterar",
+    "desc": "Cuando robas esta carta durante tu turno: puedes revelarla; Invócala de Modo Especial. \r\nSi esta carta es Invocada de Modo Especial durante tu turno: puedes activar este efecto; por el resto de este turno, ningún jugador puede activar cartas o efectos, excepto \"Exodia el Obliterar\", y además no puedes Invocar de Modo Normal o Especial (pero puedes Colocar de Modo Normal). \r\nAl comienzo del Damage Step, si esta carta batalla: puedes destruir tantos monstruos que controle tu adversario como sea posible y, si lo haces, inflige daño a tu adversario igual al ATK original total de esos monstruos.",
     "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/OSCURIDAD  [★10] 1000/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268001.jpg?version=19.7"
   },
   {
-    "name": "Harpie Lady - Elegant Egotist",
-    "desc": "This card's name becomes \"Harpie Lady\" while on the field or in the GY. You can only use each of the following effects of \"Harpie Lady - Elegant Egotist\" once per turn. If this card is in your hand and you control a WIND or EARTH monster: You can Special Summon this card. If this card is Special Summoned: You can Special Summon up to 2 Level 5 \"Harpie\" monsters from your hand, Deck, and/or GY, also you cannot Special Summon for the rest of this turn, except WIND or EARTH monsters.",
+    "name": "Dama Arpía - Egotista Elegante",
+    "desc": "(El nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o Cementerio).\t\r\nSi controlas un monstruo de VIENTO o TIERRA: puedes Invocar esta carta de Modo Especial desde tu mano. \nSi esta carta es Invocada de Modo Especial: puedes Invocar de Modo Especial hasta 2 monstruos \"Arpía\" de Nivel 5 desde tu mano, Deck y/o Cementerio, y además no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de VIENTO o TIERRA. \nSólo puedes usar los efectos de \"Dama Arpía - Egotista Elegante\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto] Bestia Alada/VIENTO  [★5] 2100/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268003.jpg?version=19.7"
   },
   {
-    "name": "Dark Necrofear, the Ruler of Demise",
-    "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by card effect. If you have 3 or more Fiend and/or Zombie monsters in your GY: You can Special Summon this card from your hand. If this card on the field is destroyed: You can add this card to your hand, and if you do, take control of 1 monster your opponent controls (until the End Phase), then you can inflict damage to your opponent equal to half its ATK. You can only use each effect of \"Dark Necrofear, the Ruler of Demise\" once per turn.",
+    "name": "Necrofear Oscuro, la Gobernante de la Muerte",
+    "desc": "No puede ser Invocada de Modo Normal/Colocada. Debe ser Invocada de Modo Especial por el efecto de una carta. \r\nSi tienes 3 o más monstruos Zombi y/o Demonio en tu Cementerio: puedes Invocar esta carta de Modo Especial desde tu mano. \r\nSi esta carta en el Campo es destruida: puedes añadirla a tu mano y, si lo haces, toma el control de 1 monstruo que controle tu adversario (hasta la End Phase), y después puedes infligirle daño igual a la mitad de su ATK. \r\nSólo puedes usar los efectos de \"Necrofear Oscuro, la Gobernante de la Muerte\" una vez por turno.\r\n",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Demonio/OSCURIDAD  [★8] 2200/2800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268007.jpg?version=19.7"
   },
   {
-    "name": "Pritima the Infinity Cubic Vessel",
-    "desc": "Once per turn, during the Battle Phase (Quick Effect): You can Fusion Summon 1 \"Cubic\" Fusion Monster from your Extra Deck, using monsters from your hand or field. You can only use each of the following effects of \"Pritima the Infinity Cubic Vessel\" once per turn, also you cannot Special Summon from the Extra Deck the turn you activate either effect, except Fusion Monsters. During your Main Phase: You can Special Summon this card from your hand. If this card is Normal or Special Summoned: You can discard 1 card; add up to 2 \"Cubic\" Spells/Traps from your Deck to your hand.",
+    "name": "Pritima la Vasija Cúbica Infinita",
+    "desc": "Durante tu Main Phase: puedes Invocar esta carta de Modo Especial desde tu mano. \r\nSi esta carta es Invocada de Modo Normal o Especial: puedes descartar 1 carta; añade a tu mano hasta 2 Mágicas/Trampas \"Cúbico/a\" desde tu Deck. No puedes Invocar de Modo Especial desde el Deck Extra el turno en el que activas los efectos previos de esta carta, excepto Monstruos de Fusión. \r\nSólo puedes usar los efectos previos de \"Pritima la Vasija Cúbica Infinita\" una vez por turno cada uno. \r\nUna vez por turno, durante la Battle Phase (Efecto Rápido): puedes Invocar por Fusión 1 monstruo \"Cúbico/a\" desde tu Deck Extra, usando monstruos de tu mano o Campo.",
     "overallString": "[Monstruo|Efecto] Máquina/TIERRA  [★4] 800/800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272001.jpg?version=19.7"
   },
   {
-    "name": "Alditia Hell Blaze the Burning Cubic Lord",
-    "desc": "1 \"Cubic\" monster + \"Vijam the Cubic Seed\"\nMust be Special Summoned (from your Extra Deck) by sending the above cards from your hand and/or field to the GY. Gains 800 ATK for each \"Vijam the Cubic Seed\" in your GY. (Quick Effect): You can return this card to the Extra Deck, and if you do, Special Summon 2 \"Cubic\" monsters from your GY, and if you do that, add 1 \"Cubic\" card from your Deck to your hand. You can only use this effect of \"Alditia Hell Blaze the Burning Cubic Lord\" once per turn, also you cannot Special Summon from the Extra Deck the turn you activate this effect, except Fusion Monsters.",
+    "name": "Alditia Hell Blaze el Cúbico Ardiente",
+    "desc": "1 monstruo \"Cúbico/a\" + \"Vijam la Semilla Cúbica\"\t\r\nDebe ser Invocada de Modo Especial (desde tu Deck Extra) mandando al Cementerio las cartas mencionadas arriba desde tu mano y/o Campo. \r\nGana 800 ATK por cada \"Vijam la Semilla Cúbica\" en tu Cementerio. \r\n(Efecto Rápido): puedes devolver esta carta al Deck Extra y, si lo haces, Invoca de Modo Especial 2 monstruos \"Cúbico/a\" desde tu Cementerio y, si haces eso, añade a tu mano 1 carta \"Cúbico/a\" desde tu Deck. No puedes Invocar de Modo Especial desde el Deck Extra el turno en el que activas este efecto de esta carta, excepto Monstruos de Fusión. \r\nSólo puedes usar este efecto de \"Alditia Hell Blaze el Cúbico Ardiente\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Fusión] Demonio/FUEGO  [★6] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272002.jpg?version=19.7"
   },
   {
-    "name": "Abyss Vagrada the Abyssal Cubic Lord",
-    "desc": "3 \"Cubic\" monsters\nGains 1000 ATK for each \"Vijam the Cubic Seed\" in your GY, also unaffected by the activated effects of monsters with ATK less than this card. (Quick Effect): You can return this card to the Extra Deck, and if you do, Special Summon 3 \"Cubic\" monsters from your GY, and if you do that, add 1 \"Cubic\" card from your Deck to your hand. You can only use this effect of \"Abyss Vagrada the Abyssal Cubic Lord\" once per turn, also you cannot Special Summon from the Extra Deck the turn you activate this effect, except Fusion Monsters.",
+    "name": "Abismo Vagrada el Señor Cúbico Abisal",
+    "desc": "3 monstruos \"Cúbico/a\"\t\r\nGana 1000 ATK por cada \"Vijam la Semilla Cúbica\" en tu Cementerio. \r\nNo es afectada por efectos activados de cualquier monstruo cuyo ATK sea menor que el de esta carta. \r\n(Efecto Rápido): puedes devolver esta carta al Deck Extra y, si lo haces, Invoca de Modo Especial 3 monstruos \"Cúbico/a\" desde tu Cementerio y, si haces eso, añade a tu mano 1 carta \"Cúbico/a\" desde tu Deck. No puedes Invocar de Modo Especial desde el Deck Extra el turno en el que activas este efecto de esta carta, excepto Monstruos de Fusión. \r\nSólo puedes usar este efecto de \"Abismo Vagrada el Señor Cúbico Abisal\" una vez por turno. ",
     "overallString": "[Monstruo|Efecto|Fusión] Demonio/AGUA  [★8] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272003.jpg?version=19.7"
   },
   {
-    "name": "Divine Anima Infinity the Creation Cubic Overlord",
-    "desc": "4 \"Cubic\" monsters\nMust be Fusion Summoned. Gains 1500 ATK for each \"Vijam the Cubic Seed\" in your GY, also unaffected by the activated effects of monsters with ATK less than this card. Once per turn (Quick Effect): You can shuffle all your banished \"Cubic\" cards into the Deck, and if you do, destroy 1 card your opponent controls. If this face-up card in its owner's control leaves the field by an opponent's card: You can Special Summon up to 3 \"Vijam the Cubic Seed\" from your GY.",
+    "name": "Anima Divina Infinita el Señor Supremo Cúbico de la Creación",
+    "desc": "4 monstruos \"Cúbico/a\"\t\r\nDebe ser Invocada por Fusión. \r\nGana 1500 ATK por cada \"Vijam la Semilla Cúbica\" en tu Cementerio. \r\nNo es afectada por efectos activados de cualquier monstruo cuyo ATK sea menor que el de esta carta. \r\n(Efecto Rápido): Una vez por turno: puedes barajar al Deck todas tus cartas \"Cúbico/a\" desterradas y, si lo haces, destruye 1 carta que controle tu adversario. \r\nSi esta carta boca arriba en posesión de su dueño deja el Campo por tu adversario: puedes Invocar de Modo Especial hasta 3 \"Vijam la Semilla Cúbica\" desde tu Cementerio.",
     "overallString": "[Monstruo|Efecto|Fusión] Demonio/LUZ  [★10] 0/3000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272004.jpg?version=19.7"
   },
   {
-    "name": "Cubic Bodhi",
-    "desc": "When this card is activated: You can send 1 \"Cubic\" card from your Deck to the GY. Once per turn: You can discard 1 card; place 1 Cubic Counter on 1 face-up monster your opponent controls (monsters with a Cubic Counter cannot attack, also negate their effects). If a \"Cubic\" monster(s) is Special Summoned to your field: You can Fusion Summon 1 \"Cubic\" Fusion Monster from your Extra Deck, using monsters from your hand or field. You can only activate 1 \"Cubic Bodhi\" per turn.",
+    "name": "Bodhi Cúbico",
+    "desc": "Cuando esta carta se resuelve, puedes mandar al Cementerio 1 carta \"Cúbico/a\" desde tu Deck. \r\nUna vez por turno: puedes descartar 1 carta; pon 1 Contador Cúbico en 1 monstruo boca arriba que controle tu adversario. (Los monstruos con un Contador Cúbico no pueden atacar, y además sus efectos son negados). \r\nSi uno o más monstruos \"Cúbico/a\" son Invocados de Modo Especial a tu Campo: puedes Invocar por Fusión 1 monstruo \"Cúbico/a\" desde tu Deck Extra, usando monstruos de tu mano o Campo. \r\nSólo puedes activar 1 \"Bodhi Cúbico\" por turno.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272006.jpg?version=19.7"
   },
   {
-    "name": "Diabellstar, the Seeker of Sinful Spoils",
-    "desc": "You can only Special Summon with the way in this card's ① effect once per turn. You can only use this card name's ② and ③ effects once per turn each.\r\n①：If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand).\r\n②：You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells and Traps your opponent controls.\r\n③：During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
+    "name": "Diabellstar, la Cazadora de Botín Pecaminoso",
+    "desc": "Si \"Botín del Pecado de Subversión - Ojo de Serpiente\" o \"Álamo Ojo de Serpiente\" está en el Cementerio de cualquier jugador, puedes Invocar esta carta de Modo Especial desde tu mano. \r\nSólo puedes Invocar de Modo Especial esta carta una vez por turno de esta forma. \r\nSólo puedes usar cada uno de los siguientes efectos de \"Diabellstar, la Cazadora de Botín Pecaminoso\" una vez por turno. \r\nPuedes desterrar 1 \"Botín del Pecado de Perdición - Rciela\" de tu Cementerio: destruye todas las Mágicas/Trampas que controle tu adversario. \r\n(Efecto Rápido): Durante el turno de tu adversario: puedes desterrar 1 \"Botín del Pecado de Traición - Silvera\" de tu Cementerio: destruye todos los monstruos que controle tu adversario.",
     "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/OSCURIDAD  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
   {
-    "name": "Purifire of the Winter Raven's Forest",
-    "desc": "If you control a \"Winter Raven\" card, you can Special Summon this card (from your hand). You can only Special Summon \"Purifire of the Winter Raven's Forest\" once per turn this way. You can only use each of the following effects of \"Purifire of the Winter Raven's Forest\" once per turn. If this card is Normal or Special Summoned: You can add 1 \"Winter Raven\" Spell/Trap or 1 \"Sinful Spoils\" card from your Deck to your hand. You can target 1 \"Winter Raven\" Monster Card or 1 Level 7 or 8 Monster Card in the Spell & Trap Zone; Special Summon it to your field.",
+    "name": "Demonio de Fuego del Bosque del Cuervo Blanco",
+    "desc": "Si controlas una carta \"Cuervo Blanco\", puedes Invocar esta carta de Modo Especial (desde tu mano). \r\nSólo puedes Invocar de Modo Especial \"Demonio de Fuego del Bosque del Cuervo Blanco\" una vez por turno de esta forma. \r\nSólo puedes usar los siguientes efectos de \"Demonio de Fuego del Bosque del Cuervo Blanco\" una vez por turno cada uno.\r\nSi esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 Mágica/Trampa \"Cuervo Blanco\" o 1 carta \"Botín Pecaminoso\" desde tu Deck. \r\nPuedes seleccionar 1 Carta de Monstruo \"Cuervo Blanco\" o 1 Carta de Monstruo de Nivel 7 u 8 en la Zona de Mágicas y Trampas; Invócala de Modo Especial a tu Campo.",
     "overallString": "[Monstruo|Efecto] Piro/FUEGO  [★1] 700/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307009.jpg?version=19.7"
   },
   {
-    "name": "Mart, Knight of the Winter Raven",
-    "desc": "You can send 1 other card from your hand or field to the GY; place this card face-up in its owner's Spell & Trap Zone as a Continuous Spell, and if you do, Special Summon up to 2 \"Winter Raven\" monsters with different names from each other from your Deck, except \"Mart, Knight of the Winter Raven\". When a monster declares an attack and this card is a Continuous Spell: You can target 1 \"Winter Raven\" Monster Card in your Spell & Trap Zone; Special Summon it. You can only use each effect of \"Mart, Knight of the Winter Raven\" once per turn.",
+    "name": "Maluth, el Caballero del Cuervo Blanco",
+    "desc": "Puedes mandar al Cementerio otra carta de tu mano o Campo; coloca esta carta boca arriba en la Zona de Mágicas y Trampas de su propietario como una Mágica Continua y, si lo haces, Invoca de Modo Especial hasta 2 monstruos \"Cuervo Blanco\" con nombres diferentes entre sí desde tu Deck, excepto \"Maluth, el Caballero del Cuervo Blanco\". \r\nCuando un monstruo declara un ataque y esta carta es una Mágica Continua: puedes seleccionar 1 Carta de Monstruo \"Cuervo Blanco\" en tu Zona de Mágicas y Trampas; Invócala de Modo Especial. \r\nSólo puedes usar los efectos de \"Maluth, el Caballero del Cuervo Blanco\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Cantante] Ilusión/LUZ  [★4] 1700/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307010.jpg?version=19.7"
   },
   {
-    "name": "Anu, Knight of the Winter Raven",
-    "desc": "You can reveal this card in your hand; Special Summon 1 \"Winter Raven\" monster from your hand, except \"Anu, Knight of the Winter Raven\". During the Main Phase (Quick Effect): You can target 1 \"Winter Raven\" monster you control; place it face-up in its owner's Spell & Trap Zone as a Continuous Spell, and if you do, Special Summon 1 \"Winter Raven\" monster from your hand or GY, except \"Anu, Knight of the Winter Raven\". You can only use each effect of \"Anu, Knight of the Winter Raven\" once per turn.",
+    "name": "Ann, el Caballero del Cuervo Blanco",
+    "desc": "Puedes revelar esta carta en tu mano; Invoca de Modo Especial 1 monstruo \"Cuervo Blanco\" desde tu mano, excepto \"Ann, el Caballero del Cuervo Blanco\". \r\n(Efecto Rápido): Durante la Main Phase: puedes seleccionar 1 monstruo \"Cuervo Blanco\" que controles; colócalo boca arriba en la Zona de Mágicas y Trampas de su propietario como una Mágica Continua y, si lo haces, Invoca de Modo Especial 1 monstruo \"Cuervo Blanco\" desde tu mano o Cementerio, excepto \"Ann, el Caballero del Cuervo Blanco\". \r\nSólo puedes usar los efectos de \"Ann, el Caballero del Cuervo Blanco\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Cantante] Ilusión/LUZ  [★4] 1400/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307011.jpg?version=19.7"
   },
   {
-    "name": "Sinful Spoils of the Winter Raven's Forest",
-    "desc": "You can Special Summon this card (from your hand) by placing 1 Level 1 FIRE Monster Card from your face-up field or GY on the bottom of the Deck. You can only Special Summon \"Sinful Spoils of the Winter Raven's Forest\" once per turn this way. When your opponent activates a card or effect (Quick Effect): You can return this card to the hand, then target 1 monster in the face-up field or either GY; place it face-up in its owner's Spell & Trap Zone as a Continuous Spell. You can only use this effect of \"Sinful Spoils of the Winter Raven's Forest\" once per turn.",
+    "name": "Botín Pecaminoso del Bosque del Cuervo Blanco",
+    "desc": "Puedes Invocar esta carta de Modo Especial (desde tu mano) colocando 1 Carta de Monstruo de FUEGO de Nivel 1 desde tu Campo boca arriba o Cementerio en el fondo del Deck. \r\nSólo puedes Invocar de Modo Especial \"Botín Pecaminoso del Bosque del Cuervo Blanco\" una vez por turno de esta forma. \r\n(Efecto Rápido): Cuando tu adversario activa una carta o efecto: puedes devolver esta carta a la mano, y después seleccionar 1 monstruo en el Campo boca arriba o en cualquier Cementerio; colócalo boca arriba en la Zona de Mágicas y Trampas de su propietario como una Mágica Continua. \r\nSólo puedes usar este efecto de \"Botín Pecaminoso del Bosque del Cuervo Blanco\" una vez por turno.\r\n",
     "overallString": "[Monstruo|Efecto|Cantante] Lanzador de Conjuros/FUEGO  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307012.jpg?version=19.7"
   },
   {
-    "name": "Diabellze, Heiress of the Winter Raven's Forest",
-    "desc": "1 Fusion or Synchro Monster + 1 Spellcaster or Illusion monster\nIf this card is Special Summoned: You can place any number of monsters you control face-up in their owners' Spell & Trap Zones as Continuous Spells, then you can return cards on the field to the hand up to the number of Spells/Traps you control. You can only use this effect of \"Diabellze, Heiress of the Winter Raven's Forest\" once per turn. Gains 700 ATK/DEF for each Spell/Trap on the field. This face-up Fusion Summoned card cannot be used as Fusion Material.",
+    "name": "Diabellze, la Señora del Bosque del Cuervo Blanco",
+    "desc": "1 Monstruo de Fusión o Sincronía + 1 monstruo Lanzador de Conjuros o Ilusión\t\r\nEsta carta boca arriba Invocada por Fusión no puede ser usada como Material de Fusión. \r\nGana 700 ATK/DEF por cada Mágica/Trampa en el Campo. \r\nSi esta carta es Invocada de Modo Especial: puedes colocar cualquier número de monstruos que controles boca arriba en la Zona de Mágicas y Trampas de su propietario como Mágicas Continuas, y después puedes devolver a la mano cartas en el Campo hasta el número de Mágicas/Trampas que controles. \r\nSólo puedes usar este efecto de \"Diabellze, la Señora del Bosque del Cuervo Blanco\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Fusión] Ilusión/LUZ  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
   {
-    "name": "Zaltys, Knight of the Winter Raven",
-    "desc": "1 Illusion Tuner + 1+ non-Tuners\nIf this card is Special Summoned: You can target up to 2 Spells/Traps on the field; return them to the hand. If this card is sent to the GY: You can activate this effect based on where it was sent from;\n● Field: Set 1 \"Winter Raven\" Trap from your Deck.\n● Extra Deck: Add 1 \"Winter Raven\" card from your GY to your hand.\nYou can only use each effect of \"Zaltys, Knight of the Winter Raven\" once per turn.",
+    "name": "Zaltys, el Caballero del Cuervo Blanco",
+    "desc": "1 Cantante de Ilusión + 1+ monstruos que no sean Cantantes\t\r\nSi esta carta es Invocada de Modo Especial: puedes seleccionar hasta 2 Mágicas/Trampas en el Campo; devuélvelas a la mano. \r\nSi esta carta es mandada al Cementerio: puedes activar este efecto basado en desde dónde fue mandada; \r\n● Campo: Coloca 1 Trampa \"Cuervo Blanco\" desde tu Deck.\r\n● Deck Extra: Añade a tu mano 1 carta \"Cuervo Blanco\" desde tu Cementerio.\t\r\nSólo puedes usar los efectos de \"Zaltys, el Caballero del Cuervo Blanco\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Sincronía] Ilusión/FUEGO  [★5] 2600/1700",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307037.jpg?version=19.7"
   },
   {
-    "name": "Aitvaras, Knight of the Winter Raven",
-    "desc": "1 Illusion Tuner + 1+ non-Tuners\nIf this card is Special Summoned: You can target 1 card you control and 1 card your opponent controls; return them to the hand. If this card is sent to the GY: You can activate this effect based on where it was sent from;\n● Field: Target 1 card on the field; shuffle it into the Deck.\n● Extra Deck: Special Summon 1 \"Winter Raven\" monster from your GY.\nYou can only use each effect of \"Aitvaras, Knight of the Winter Raven\" once per turn.",
+    "name": "Aitvaras, el Caballero del Cuervo Blanco",
+    "desc": "1 Cantante de Ilusión + 1+ monstruos que no sean Cantantes\t\r\nSi esta carta es Invocada de Modo Especial: puedes seleccionar 1 carta que controles y 1 carta que controle tu adversario; devuélvelas a la mano. \r\nSi esta carta es mandada al Cementerio: puedes activar este efecto basado en desde dónde fue mandada; \r\n● Campo: Selecciona 1 carta en el Campo; barájala al Deck.\r\n● Deck Extra: Invoca de Modo Especial 1 monstruo \"Cuervo Blanco\" desde tu Cementerio.\t\r\nSólo puedes usar los efectos de \"Aitvaras, el Caballero del Cuervo Blanco\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Sincronía] Ilusión/FUEGO  [★5] 900/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307038.jpg?version=19.7"
   },
   {
-    "name": "Deep Forest of the Winter Raven",
-    "desc": "When this card is activated: You can add 1 \"Winter Raven\" monster from your Deck to your hand. \"Winter Raven\" Monster Cards you control cannot be destroyed by card effects. During your End Phase: You can Set 1 \"Winter Raven\" Trap from your Deck or GY. You can only use this effect of \"Deep Forest of the Winter Raven\" once per turn. You can only activate 1 \"Deep Forest of the Winter Raven\" per turn.",
+    "name": "El Bosque Profundo del Cuervo Blanco",
+    "desc": "Cuando esta carta se resuelve, puedes añadir a tu mano 1 monstruo \"Cuervo Blanco\" desde tu Deck. \r\nLas Cartas de Monstruo \"Cuervo Blanco\" que controles no pueden ser destruidas por efectos de cartas. \r\nDurante tu End Phase: puedes Colocar 1 Trampa \"Cuervo Blanco\" desde tu Deck o Cementerio. \r\nSólo puedes usar este efecto de \"El Bosque Profundo del Cuervo Blanco\" una vez por turno.\r\nSólo puedes activar 1 \"El Bosque Profundo del Cuervo Blanco\" por turno.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307059.jpg?version=19.7"
   },
   {
-    "name": "Splendor of the Winter Raven Witch",
-    "desc": "You can activate 1 of these effects;\n● Special Summon 1 \"Winter Raven\" monster from your hand or GY.\n● Fusion Summon 1 \"Diabell\" Fusion Monster from your Extra Deck, using up to 1 \"Winter Raven\" monster each from your hand, Extra Deck, and/or field.\n● If you control a \"Diabell\" monster: Target 1 face-up card on the field; negate its effects until the end of this turn.\nYou can only use this effect of \"Splendor of the Winter Raven Witch\" once per turn.",
+    "name": "Esplendor de la Bruja del Cuervo Blanco",
+    "desc": "Puedes activar 1 de estos efectos;\r\n● Invoca de Modo Especial 1 monstruo \"Cuervo Blanco\" desde tu mano o Cementerio.\r\n● Invoca por Fusión 1 monstruo \"Diabellstar\" desde tu Deck Extra, usando hasta 1 monstruo \"Cuervo Blanco\" de cada una de tus zonas (mano, Deck Extra y/o Campo).\r\n● Si controlas un monstruo \"Diabellstar\": selecciona 1 carta boca arriba en el Campo; niega sus efectos hasta el final de este turno.\t\r\nSólo puedes usar el efecto de \"Esplendor de la Bruja del Cuervo Blanco\" una vez por turno.",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307077.jpg?version=19.7"
   },
   {
-    "name": "Illusion of the Winter Raven Witch",
-    "desc": "Fusion Summon 1 Illusion Fusion Monster from your Extra Deck, using monsters from your Extra Deck and/or field, also you cannot activate monster effects in the hand or GY for the rest of this turn after this card resolves, except Illusion monsters'. If the activation of this card in its owner's possession was negated by an opponent's card effect and sent to your GY: You can Set this card, and if you do, return all cards your opponent controls to the hand. You can only activate 1 \"llusion of the Winter Raven Witch\" per turn.",
+    "name": "Ilusión de la Bruja del Cuervo Blanco",
+    "desc": "Invoca por Fusión 1 monstruo de Ilusión desde tu Deck Extra, usando monstruos de tu Deck Extra y/o Campo, y además no puedes activar efectos de monstruos en la mano o Cementerio por el resto de este turno después de que esta carta se resuelva, excepto los de monstruos de Ilusión. \r\nSi la activación de esta carta en posesión de su propietario fue negada por el efecto de una carta del adversario y mandada a tu Cementerio: puedes Colocar esta carta y, si lo haces, devuelve a la mano todas las cartas que controle tu adversario. \r\nSólo puedes activar 1 \"Ilusión de la Bruja del Cuervo Blanco\" por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307078.jpg?version=19.7"
   },
   {
-    "name": "Salamangreat Markhor",
-    "desc": "If this card is Normal or Special Summoned: You can add 1 \"Salamangreat\" Spell/Trap from your Deck or GY to your hand. If this card is sent to the GY as material for a Link-3 or higher FIRE Link Monster: You can Special Summon 1 FIRE Cyberse monster from your Deck. You can only use each effect of \"Salamangreat Markhor\" once per turn, also you cannot Special Summon the turn you activate either of this card's effects, except FIRE monsters.",
+    "name": "Salamangrande Marcall",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 Mágica/Trampa \"Salamangrande\" desde tu Deck o Cementerio. \r\nSi esta carta es mandada al Cementerio como material para la Invocación por Enlace de un monstruo de FUEGO de Enlace-3 o mayor: puedes Invocar de Modo Especial 1 monstruo Ciberso de FUEGO desde tu Deck. \r\nSólo puedes usar los efectos de \"Salamangrande Marcall\" una vez por turno cada uno. No puedes Invocar de Modo Especial el turno en que activas cualquiera de los efectos de esta carta, excepto monstruos de FUEGO.",
     "overallString": "[Monstruo|Efecto] Ciberso/FUEGO  [★4] 300/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307013.jpg?version=19.7"
   },
   {
-    "name": "Salamangreat Bastella",
-    "desc": "If you control no monsters, or all monsters you control are \"Salamangreat\" monsters: You can Special Summon this card from your hand, then you can increase or decrease the Level of 1 monster on the field by 1. If you Link Summon a Link-3 or higher FIRE Link Monster while this card is in your GY: You can banish this card; Set 1 \"Salamangreat\" Trap from your Deck. You can only use each effect of \"Salamangreat Bastella\" once per turn.",
+    "name": "Salamangrande Bastera",
+    "desc": "Si no controlas monstruos, o todos los monstruos que controlas son monstruos \"Salamangrande\": puedes Invocar esta carta de Modo Especial desde tu mano, y después puedes aumentar o reducir en 1 el Nivel de 1 monstruo en el Campo. \r\nSi Invocas por Enlace un monstruo de FUEGO de Link-3 o mayor mientras esta carta está en tu Cementerio: puedes desterrar esta carta; Coloca 1 Trampa \"Salamangrande\" desde tu Deck. \r\nSólo puedes usar los efectos de \"Salamangrande Bastera\" una vez por turno cada uno.",
     "overallString": "[Monstruo|Efecto|Cantante] Ciberso/FUEGO  [★3] 1600/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307014.jpg?version=19.7"
   },
   {
-    "name": "King of Beasts, Risen from the Valley of Flames",
-    "desc": "3 FIRE Effect Monsters\n(This card is always treated as \"Salamangreat Heatleo\".)\nFace-up monsters on the field become FIRE. During the Main Phase, if this card was Link Summoned using \"Salamangreat Heatleo\" (Quick Effect): You can target 1 card your opponent controls; shuffle it into the Deck, then you can make the ATK of 1 FIRE monster your opponent controls become the ATK of 1 monster in your GY. You can only use this effect of \"King of Beasts, Risen from the Valley of Flames\" once per turn.",
+    "name": "El Rey de las Bestias que Emerge del Valle de las Llamas",
+    "desc": "3 Monstruos de Efecto de FUEGO\t\r\n(Esta carta se trata siempre como \"Salamangrande Calienteleón\").\t\r\nLos monstruos boca arriba en el Campo se convierten en FUEGO. \r\n(Efecto Rápido): Durante la Main Phase, si esta carta fue Invocada por Enlace usando \"Salamangrande León de Fuego\": puedes seleccionar 1 carta que controle tu adversario; barájala al Deck, y después puedes hacer que el ATK de 1 monstruo de FUEGO que controle tu adversario se convierta en el ATK de 1 monstruo en tu Cementerio. \r\nSólo puedes usar este efecto de \"El Rey de las Bestias que Emerge del Valle de las Llamas\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Enlace] Ciberso/FUEGO  [LINK-3] 2300/-  [↑][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307048.jpg?version=19.7"
   },
   {
-    "name": "Salamangreat Shrine",
-    "desc": "(This card is always treated as \"Salamangreat Sanctuary\".)\n\"Salamangreat\" monsters you control are unaffected by your opponent's activated FIRE monsters' effects. You can only use each of the following effects of \"Salamangreat Shrine\" once per turn. If you Link Summon a \"Salamangreat\" Link Monster, you can use 1 \"Salamangreat\" Link Monster you control with its same name as the entire material. During your Main Phase: You can shuffle any number of \"Salamangreat\" cards from your hand into the Deck, then draw the same number of cards.",
+    "name": "Templo Salamangrande",
+    "desc": "(Esta carta se trata siempre como \"Santuario Salamangrande\").\t\r\nLos monstruos \"Salamangrande\" que controles no son afectados por los efectos activados de los monstruos de FUEGO de tu adversario. \r\nSólo puedes usar los siguientes efectos de \"Templo Salamangrande\" una vez por turno. \r\nSi Invocas por Enlace un monstruo \"Salamangrande\", puedes usar 1 Monstruo de Enlace \"Salamangrande\" que controles con su mismo nombre como el material completo. \r\nDurante tu Main Phase: puedes barajar al Deck cualquier número de cartas \"Salamangrande\" de tu mano, y después robar la misma cantidad de cartas.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307062.jpg?version=19.7"
   },
   {
-    "name": "Salamangreat Gearblade",
-    "desc": "Special Summon 1 \"Salamangreat\" monster from your hand or GY, and if you do, equip this card to it. You can send 1 \"Salamangreat\" monster from your Deck to the GY; the equipped monster gains ATK equal to the sent monster's Level x 300. If this card is in your GY: You can shuffle 3 \"Salamangreat\" cards from your GY into the Deck, except Equip Spells, and if you do, add this card to your hand. You can only use each effect of \"Salamangreat Gearblade\" once per turn.",
+    "name": "Hoja Mecánica Salamangrande",
+    "desc": "Invoca de Modo Especial 1 monstruo \"Salamangrande\" desde tu mano o Cementerio y, si lo haces, equipa esta carta a él. \r\nPuedes mandar al Cementerio 1 monstruo \"Salamangrande\" desde tu Deck; el monstruo equipado gana ATK igual al Nivel del monstruo mandado x 300. \r\nSi esta carta está en tu Cementerio: puedes barajar al Deck 3 cartas \"Salamangrande\" de tu Cementerio, excepto Mágicas de Equipo y, si lo haces, añade esta carta a tu mano. \r\nSólo puedes usar cada efecto de \"Hoja Mecánica Salamangrande\" una vez por turno.",
     "overallString": "[Mágica|Equipo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307063.jpg?version=19.7"
   },
   {
-    "name": "Wicked Canon",
-    "desc": "Each time an opponent's monster declares an attack, place 1 Sinister Doctrine Counter on this card. You can only use each of the following effects of \"Wicked Canon\" once per turn. During your Main Phase, if this card was activated this turn: You can add 1 DARK Fiend monster from your Deck to your hand, then discard 1 Fiend monster. You can send this card with 4 or more Sinister Doctrine Counters to the GY; Special Summon 1 Fiend monster from your Deck, then you can add 1 \"Super Polymerization\" from your Deck to your hand.\r\n",
+    "name": "Cañón Malvado",
+    "desc": "Cada vez que un monstruo del adversario declara un ataque, pon 1 Contador de Doctrina Siniestra en esta carta. \r\nSólo puedes usar los siguientes efectos de \"Cañón Malvado\" una vez por turno. \r\nDurante la Main Phase del turno en que esta carta fue activada: puedes añadir a tu mano 1 monstruo Demonio de OSCURIDAD desde tu Deck, y después descarta 1 monstruo Demonio. \r\nPuedes mandar al Cementerio esta carta con 4 o más Contadores de Doctrina Siniestra; Invoca de Modo Especial 1 monstruo Demonio desde tu Deck, y después puedes añadir a tu mano 1 \"Súper Polimerización\" desde tu Deck.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
   {
-    "name": "Hope for the Future",
-    "desc": "If you control a \"Neos\" Fusion Monster or \"Elemental HERO Neos\": Discard 1 card; Fusion Summon 1 Fusion Monster from your Extra Deck that mentions a \"HERO\" monster as material, using monsters from your hand, Deck, or field. If you control a \"Neos\" Fusion Monster: You can banish this card from your GY, then target 1 face-up card your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Hope for the Future\" once per turn.\r\n",
+    "name": "Esperanza para el Futuro",
+    "desc": "Si controlas un Monstruo de Fusión \"Neos\" o \"HÉROE Elemental Neos\": descarta 1 carta; Invoca por Fusión 1 Monstruo de Fusión \"HÉROE\", usando monstruos de tu mano, Deck y/o Campo como material. \r\nSi controlas un Monstruo de Fusión \"Neos\": puedes desterrar esta carta en tu Cementerio, y después seleccionar 1 carta boca arriba que controle tu adversario; niega sus efectos hasta el final de este turno. \r\nSólo puedes usar los efectos de \"Esperanza para el Futuro\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270003.jpg?version=19.7"
   },
   {
-    "name": "Perfect Eclosion - Perfectly Ultimate Great Moth",
-    "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) by having 6 or more Insect monsters in your GY. You can only Special Summon \"Perfect Eclosion - Perfectly Ultimate Great Moth\" once per turn this way. If this card is Special Summoned: You can return as many cards your opponent controls as possible to the hand, then if you have a Normal Monster in your GY, you can make this card gain 300 ATK for each Insect monster in your GY. Each time your opponent Normal or Special Summons a monster(s): All monsters your opponent currently controls lose ATK equal to their own Level x 100.",
+    "name": "Eclosión Perfecta - Polilla Definitiva Perfecta",
+    "desc": "No puede ser Invocada de Modo Normal/Colocada. Debe ser Invocada de Modo Especial (desde tu mano) teniendo 6 o más monstruos Insecto en tu Cementerio. Sólo puedes Invocar de Modo Especial \"Eclosión Perfecta - Polilla Definitiva Perfecta\" una vez por turno de esta forma. \r\nSi esta carta es Invocada de Modo Especial: puedes devolver a la mano tantas cartas que controle tu adversario como sea posible, y después si tienes un Monstruo Normal en tu Cementerio, esta carta gana 300 ATK por cada monstruo Insecto en tu Cementerio. \r\nCada vez que tu adversario Invoca de Modo Normal o Especial uno o más monstruos: todos los monstruos boca arriba que controle en ese momento pierden ATK igual a su propio Nivel x 100.",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Insecto/TIERRA  [★8] 3500/3000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Amurusa",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 non-WIND \"Reindsurm\" monsters from your Deck to your hand. If this card is sent to the GY, except by battle: You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Amurusa\" once per turn.",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Conquista Reindsurm\".\t\r\nSólo puedes usar los siguientes efectos de \"Reindsurm Amurusa\" una vez por turno. \r\nSi esta carta es Invocada por Ritual: puedes añadir a tu mano 2 monstruos \"Reindsurm\" que no sean de VIENTO desde tu Deck. \r\nSi esta carta es mandada al Cementerio, excepto en batalla: puedes Invocar por Ritual 1 Monstruo de Ritual Insecto desde tu mano, Sacrificando monstruos en tu mano o Campo, y/o barajando al Deck monstruos Insecto o Dragón desde tu Cementerio en lugar de Sacrificar, cuyos Niveles totales sean iguales o superen al Nivel del monstruo que invocas.",
     "overallString": "[Monstruo|Efecto|Ritual] Insecto/VIENTO  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Luvian",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 \"Reindsurm\" Spells/Traps from your Deck to your hand. If this card is sent to the GY, except by battle: You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Luvian\" once per turn.",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Conquista Reindsurm\".\t\r\nSólo puedes usar los siguientes efectos de \"Reindsurm Luvian\" una vez por turno. \r\nSi esta carta es Invocada por Ritual: puedes añadir a tu mano 2 Mágicas/Trampas \"Reindsurm\" desde tu Deck. \r\nSi esta carta es mandada al Cementerio, excepto en batalla: puedes Invocar por Ritual 1 Monstruo de Ritual Insecto desde tu mano, Sacrificando monstruos en tu mano o Campo, y/o barajando al Deck monstruos Insecto o Dragón desde tu Cementerio en lugar de Sacrificar, cuyos Niveles totales sean iguales o superen al Nivel del monstruo que invocas.",
     "overallString": "[Monstruo|Efecto|Ritual] Insecto/AGUA  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Carcasas",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can send 2 \"Reindsurm\" cards from your Deck to the GY. If this card is sent to the GY, except by battle: You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Carcasas\" once per turn.",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Conquista Reindsurm\".\t\r\nSólo puedes usar los siguientes efectos de \"Reindsurm Carcasas\" una vez por turno. \r\nSi esta carta es Invocada por Ritual: puedes mandar al Cementerio 2 cartas \"Reindsurm\" desde tu Deck. \r\nSi esta carta es mandada al Cementerio, excepto en batalla: puedes Invocar por Ritual 1 Monstruo de Ritual Insecto desde tu mano, Sacrificando monstruos en tu mano o Campo, y/o barajando al Deck monstruos Insecto o Dragón desde tu Cementerio en lugar de Sacrificar, cuyos Niveles totales sean iguales o superen al Nivel del monstruo que invocas.",
     "overallString": "[Monstruo|Efecto|Ritual] Insecto/LUZ  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Gigalovendra",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". (Quick Effect): You can send 2 cards from your hand to the GY, including this card; add 1 non-FIRE \"Reindsurm\" monster from your Deck to your hand. If this card is Ritual Summoned, or your opponent Special Summons a monster(s): You can shuffle up to 2 monsters on the field into the Deck. If this card and a WATER \"Reindsurm\" monster are in your GY: You can add this card to your hand. You can only use each effect of \"Reindsurm Gigalovendra\" once per turn.",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Conquista Reindsurm\".\t\r\nSólo puedes usar los siguientes efectos de \"Reindsurm Gigalovendra\" una vez por turno. \r\n(Efecto Rápido): puedes mandar al Cementerio 2 cartas de tu mano, incluyendo esta carta; añade a tu mano 1 monstruo \"Reindsurm\" que no sea de FUEGO desde tu Deck. \r\nSi esta carta es Invocada por Ritual, o tu adversario Invoca de Modo Especial uno o más monstruos: puedes barajar al Deck hasta 2 monstruos en el Campo. \r\nSi esta carta y un monstruo \"Reindsurm\" de AGUA están en tu Cementerio: puedes añadir esta carta a tu mano.",
     "overallString": "[Monstruo|Efecto|Ritual] Insecto/FUEGO  [★8] 3000/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307027.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Giriakarma",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". When your opponent activates a monster effect in the field or GY and you control this Ritual Summoned card (Quick Effect): You can negate the activation, then you can shuffle 1 monster each from both your opponent's field and GY into the Deck, also if either of them was a Dragon monster, double this card's ATK. If this card and a LIGHT \"Reindsurm\" monster are in your GY: You can add this card to your hand. You can only use each effect of \"Reindsurm Giriakarma\" once per turn.",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Conquista Reindsurm\".\t\r\nSólo puedes usar los siguientes efectos de \"Reindsurm Giriakarma\" una vez por turno. \r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo en el Campo o Cementerio, y controlas esta carta Invocada por Ritual: puedes negar la activación, y después puedes barajar al Deck 1 monstruo que controle tu adversario y 1 en su Cementerio, y además si alguno de ellos era un monstruo Dragón, duplica el ATK de esta carta. \r\nSi esta carta y un monstruo \"Reindsurm\" de LUZ están en tu Cementerio: puedes añadir esta carta a tu mano.",
     "overallString": "[Monstruo|Efecto|Ritual] Insecto/OSCURIDAD  [★8] 3300/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307028.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Conquest",
-    "desc": "This card can be used to Ritual Summon any number of Insect Ritual Monsters. You must also shuffle Insect and/or Dragon monsters from the GY(s) into the Deck whose total Levels equal or exceed the total Levels of the Ritual Monsters. If this card is in your GY: You can send 1 Insect monster from your hand or face-up field to the GY; add this card to your hand. You can only use each effect of \"Reindsurm Conquest\" once per turn.",
+    "name": "Conquista Reindsurm",
+    "desc": "Invoca por Ritual cualquier número de Monstruos de Ritual Insecto desde tu mano, barajando al Deck monstruos Insecto o Dragón desde los Cementerios cuyos Niveles totales sean iguales o superen a los Niveles de los monstruos que invocas. \r\nSi esta carta está en tu Cementerio: puedes mandar al Cementerio 1 monstruo Insecto desde tu mano o Campo boca arriba; añade esta carta a tu mano. \r\nSólo puedes usar los efectos de \"Conquista Reindsurm\" una vez por turno.",
     "overallString": "[Mágica|Ritual]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307055.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Carnation",
-    "desc": "While you control a \"Reindsurm\" monster whose original Level is 8 or higher or your opponent has a Dragon monster in their field or GY, the activated effects of your \"Reindsurm\" monsters cannot be negated. Once per turn: You can send 1 \"Reindsurm\" monster or Dragon monster from your hand or face-up field to the GY; add 1 Insect monster from your Deck to your hand with the same original Level, but a different original name.",
+    "name": "Clavel Reindsurm",
+    "desc": "Tus efectos de monstruos \"Reindsurm\" activados no pueden ser negados mientras controles un monstruo \"Reindsurm\" cuyo Nivel original sea 8 o mayor y/o tu adversario tenga un monstruo Dragón en su Campo o Cementerio. \r\nUna vez por turno: puedes mandar al Cementerio 1 monstruo \"Reindsurm\" o monstruo Dragón desde tu mano o Campo boca arriba; añade a tu mano 1 monstruo Insecto desde tu Deck con el mismo Nivel original, pero un nombre original diferente.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307056.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Butterfly",
-    "desc": "Send 2 monsters from your Deck to the GY, including an Insect monster, also you cannot Special Summon until the end of the next turn after this card resolves, except Insect monsters. If you Ritual Summon an Insect monster(s) while this card is in your GY: You can banish this card; all \"Reindsurm\" monsters you currently control gain 800 ATK/DEF. You can only use 1 \"Reindsurm Butterfly\" effect per turn, and only once that turn.",
+    "name": "Mariposa Reindsurm",
+    "desc": "Manda al Cementerio 2 monstruos desde tu Deck, incluyendo un monstruo Insecto, y además no puedes Invocar de Modo Especial hasta el final del próximo turno después de que esta carta se resuelva, excepto monstruos Insecto. \r\nSi Invocas por Ritual uno o más monstruos Insecto mientras esta carta está en tu Cementerio: puedes desterrar esta carta; todos los monstruos \"Reindsurm\" que controles en este momento ganan 800 ATK/DEF. \r\nSólo puedes usar 1 de los efectos de \"Mariposa Reindsurm\" por turno, y sólo una vez ese turno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307057.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Practice",
-    "desc": "Add 2 \"Reindsurm\" monsters from your Deck to your hand, then send 1 card from your hand to the GY, then if your opponent has a Dragon monster in their field or GY, you can add 1 Insect monster from your GY to your hand. If you Ritual Summon an Insect monster(s) while this card is in your GY: You can banish this card; place 1 \"Reindsurm\" Field Spell from your Deck face-up on your field. You can only use each effect of \"Reindsurm Practice\" once per turn.",
+    "name": "Práctica Reindsurm",
+    "desc": "Añade a tu mano 2 monstruos \"Reindsurm\" desde tu Deck, y después manda al Cementerio 1 carta de tu mano, y además si tu adversario tiene un monstruo Dragón en su Campo o Cementerio, puedes añadir a tu mano 1 monstruo Insecto desde tu Cementerio. \r\nSi Invocas por Ritual uno o más monstruos Insecto mientras esta carta está en tu Cementerio: puedes desterrar esta carta; Coloca 1 Mágica de Campo \"Reindsurm\" desde tu Deck boca arriba en tu Campo. \r\nSólo puedes usar los efectos de \"Práctica Reindsurm\" una vez por turno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307058.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Encounter",
-    "desc": "When a Spell/Trap Card, or monster effect, is activated while you control a \"Reindsurm\" monster: Negate the activation, then you can add 1 \"Reindsurm\" monster from your Deck or GY to your hand, and if you do, send 1 Insect monster you control to the GY. If a \"Reindsurm\" monster(s) you control would be destroyed by battle or card effect, you can place this card from your GY on the bottom of the Deck instead. You can only use each effect of \"Reindsurm Encounter\" once per turn.",
+    "name": "Encuentro Reindsurm",
+    "desc": "Cuando se activa una Carta Mágica/Trampa o efecto de monstruo mientras controlas un monstruo \"Reindsurm\": niega la activación, y después puedes añadir a tu mano 1 monstruo \"Reindsurm\" desde tu Deck o Cementerio y, si lo haces, manda al Cementerio 1 monstruo Insecto que controles. \r\nSi uno o más monstruos \"Reindsurm\" que controles fueran a ser destruidos en batalla o por efecto de carta, puedes Colocar esta carta de tu Cementerio en el fondo del Deck en su lugar. \r\nSólo puedes usar cada efecto de \"Encuentro Reindsurm\" una vez por turno.",
     "overallString": "[Trampa|Contraefecto]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307076.jpg?version=19.7"
   },
   {
-    "name": "Field Power Bonus",
-    "desc": "If a monster(s) is Normal or Special Summoned and there is another monster(s) on the field with the same Type: That Summoned monster(s) gains 1000 ATK/DEF. If this card is destroyed: Negate the effects of all face-up monsters currently on the field, also their ATK/DEF become their original ATK/DEF. Once per turn, during the Standby Phase, if this card is in your GY and there are no cards in the Field Zones: You can place this card face-up on your field.",
+    "name": "Bonificación de Poder de Campo",
+    "desc": "Si uno o más monstruos son Invocados de Modo Normal o Especial y hay otro monstruo en el Campo con el mismo Tipo: ese o esos monstruos Invocados ganan 1000 ATK/DEF. \r\nSi esta carta es destruida: niega los efectos de todos los monstruos boca arriba en el Campo en este momento, y además su ATK/DEF se convierte en su ATK/DEF original. \r\nUna vez por turno, durante la Standby Phase, si esta carta está en tu Cementerio y no hay cartas en ninguna Zona del Campo: puedes Colocar esta carta boca arriba en tu Campo.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268016.jpg?version=19.7"
   },
   {
-    "name": "Aroma Strategy",
-    "desc": "Once per turn: You can declare 1 card name; reveal the top card of your Deck, and if it is the declared card, you can apply this effect based on its card type. If it is not, destroy this card.\n● Monster: Special Summon it.\n● Spell/Trap: Set it.\nIf this card is destroyed by card effect: You can Special Summon 1 \"Harpie\" monster from your Deck or GY.",
+    "name": "Estrategia Aroma",
+    "desc": "Una vez por turno: puedes declarar 1 nombre de carta; revela la carta de la parte superior de tu Deck, y si es la carta declarada, puedes aplicar este efecto basado en su tipo. Si no lo es, destruye esta carta.\r\n● Monstruo: Invócala de Modo Especial.\r\n● Mágica/Trampa: Colócala.\t\r\nSi esta carta es destruida por efecto de carta: puedes Invocar de Modo Especial 1 monstruo \"Arpía\" desde tu Deck o Cementerio.",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268017.jpg?version=19.7"
   },
   {
-    "name": "King of Yamimado",
-    "desc": "While you control a face-down card, this card cannot be destroyed by your opponent's card effects, also your opponent cannot target it with card effects. You can only use each of the following effects of \"King of Yamimado\" once per turn. If this card is in your hand, and \"Yami\" and/or 2 or more face-down cards are on the field: You can Special Summon this card. When a monster on the field with less ATK than this card activates its effect or declares an attack (Quick Effect): You can destroy that monster.",
+    "name": "Rey de Yamimado",
+    "desc": "Mientras controles una carta boca abajo, esta carta no puede ser destruida por efectos de cartas de tu adversario, y además tu adversario no puede seleccionarla con efectos de cartas. \r\nSólo puedes usar los siguientes efectos de \"Rey de Yamimado\" una vez por turno. \r\nSi hay 2 o más cartas boca abajo y/o \"Yami\" en el Campo: puedes Invocar esta carta de Modo Especial desde tu mano. \r\n(Efecto Rápido): Cuando un monstruo en el Campo con ATK menor que esta carta activa su efecto o declara un ataque: puedes destruir ese monstruo.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★7] 2600/2300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268018.jpg?version=19.7"
   },
   {
-    "name": "Attribute Rejection",
-    "desc": "Target 1 face-up monster your opponent controls that was Special Summoned from the Extra Deck; send 1 DARK or Zombie monster from your hand, Deck, or face-up field to the GY, and if you do, the targeted monster loses ATK equal to the sent monster's original ATK, then if the targeted monster is LIGHT, negate its effects. You can only activate 1 \"Attribute Rejection\" per turn. If this card was activated as Chain Link 3 or higher, your opponent cannot activate cards or effects in response to this card's activation.",
+    "name": "Rechazo de Atributo",
+    "desc": "Tu adversario no puede activar cartas o efectos en respuesta a la activación de esta carta si fue activada como Eslabón de Cadena 3 o mayor. \r\nSelecciona 1 monstruo boca arriba del adversario Invocado de Modo Especial desde el Deck Extra; manda al Cementerio 1 monstruo de OSCURIDAD o Zombi desde tu mano, Deck o Campo boca arriba y, si lo haces, el monstruo seleccionado pierde ATK igual al ATK original del monstruo mandado, y después si es de LUZ, sus efectos son negados. \r\nSólo puedes activar 1 \"Rechazo de Atributo\" por turno. ",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268019.jpg?version=19.7"
   },
   {
-    "name": "Knight of Twin Swords",
-    "desc": "Can make up to 2 attacks on monsters during each Battle Phase. You can only use each of the following effects of \"Knight of Twin Swords\" once per turn. If this card is in your hand and you control a card with an effect that requires a die roll: You can Special Summon this card. During your Main Phase: You can roll a six-sided die 3 times, and if you do, this card gains ATK equal to the total x 350 (until the end of this turn), then if 2 or more of the results were the same, you can Special Summon 1 monster from your hand.",
+    "name": "Caballero de Espadas Gemelas",
+    "desc": "Si controlas una carta con un efecto que requiera un lanzamiento de dado: puedes Invocar esta carta de Modo Especial desde tu mano. \r\nDurante tu Main Phase: puedes lanzar un dado de seis caras tres veces y esta carta gana ATK igual al total x 350 hasta el final de este turno, y después si 2 o más de los resultados son iguales, puedes Invocar de Modo Especial 1 monstruo desde tu mano. \r\nSólo puedes usar estos efectos de \"Caballero de Espadas Gemelas\" una vez por turno. \r\nPuede hacer hasta 2 ataques a monstruos durante cada Battle Phase.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★3] 350/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268020.jpg?version=19.7"
   },
   {
-    "name": "Flashforce Sword",
-    "desc": "Banish (face-up) 1 random card from your opponent's hand (until the Standby Phase of the next turn), then if this card was Set before activation and it banished a monster, you can apply this effect based on its Level.\n● 4 or lower: Your opponent banishes all monsters with its same name from their hand, Deck, and GY.\n● 5 or higher: Add 1 Level 5 or higher monster with the same Type, Attribute, and/or Level from your Deck to your hand.\nYou can only activate 1 \"Flashforce Sword\" per turn.",
+    "name": "Espada Fuerza Relámpago",
+    "desc": "Destierra (boca arriba) 1 carta al azar de la mano de tu adversario (hasta la Standby Phase del próximo turno), y después si esta carta fue Colocada antes de la activación y desterró un monstruo, aplica este efecto basado en su Nivel.\r\n● 4 o menor: tu adversario destierra todos los monstruos con el mismo nombre de su mano, Deck y Cementerio.\r\n● 5 o mayor: añade a tu mano 1 monstruo de Nivel 5 o mayor con el mismo Tipo, Atributo y/o Nivel desde tu Deck. \t\r\nSólo puedes activar 1 \"Espada Fuerza Relámpago\" por turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268021.jpg?version=19.7"
   },
   {
-    "name": "Archfiend of Gilfer - Flame Attack",
-    "desc": "During the Main Phase (Quick Effect): You can send this card from your hand to the GY; draw 1 card, then discard 1 card, also all monsters your opponent controls lose 500 ATK this turn. When a monster is destroyed by battle involving your Fiend monster, while this card is in your GY: You can Special Summon this card, but banish it when it leaves the field. You can only use each effect of \"Archfiend of Gilfer - Flame Attack\" once per turn.",
+    "name": "Archidemonio de Gilfer - Ataque de Llama",
+    "desc": "(Efecto Rápido): Durante la Main Phase: puedes mandar esta carta de la mano al Cementerio; roba 1 carta, y después descarta 1 carta, y además todos los monstruos boca arriba que controle tu adversario pierden 500 ATK por el resto de este turno. \r\nSi uno o más monstruos son destruidos en una batalla que involucre a tu(s) monstruo(s) Demonio mientras esta carta está en tu Cementerio: puedes Invocar esta carta de Modo Especial, pero destiérrala cuando deje el Campo. \r\nSólo puedes usar los efectos de \"Archidemonio de Gilfer - Ataque de Llama\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★6] 2200/2500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268022.jpg?version=19.7"
   },
   {
-    "name": "Gearfried the Steel Knight",
-    "desc": "If a monster(s) you control was destroyed by battle or card effect this turn (Quick Effect): You can Special Summon this card from your hand, and if you do, equip 1 monster from your GY to it as an Equip Spell that gives it 800 ATK. During your Main Phase: You can destroy as many cards equipped to this card as possible, then if you destroyed a Monster Card by this effect, you can add 1 monster from your Deck to your hand with the same Attribute and Type as 1 of them, but a different Level. You can only use each effect of \"Gearfried the Steel Knight\" once per turn.",
+    "name": "Gearfried el Caballero de Acero",
+    "desc": "(Efecto Rápido): Si uno o más monstruos que controlas fueron destruidos en batalla o por efecto este turno: puedes Invocar esta carta de Modo Especial desde tu mano y, si lo haces, equipa 1 monstruo desde tu Cementerio a ella como una Mágica de Equipo que le da 800 ATK. \r\nDurante tu Main Phase: puedes destruir tantas cartas equipadas a esta carta como sea posible, y después si destruiste una Carta de Monstruo con este efecto, puedes añadir a tu mano 1 monstruo desde tu Deck con el mismo Atributo y Tipo que 1 de ellas, pero un Nivel diferente. \r\nSólo puedes usar los efectos de \"Gearfried el Caballero de Acero\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★4] 1800/1600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268023.jpg?version=19.7"
   },
   {
-    "name": "Spell Card \"Enemy Controller\"",
-    "desc": "Pay 1000 LP, then target 1 face-up monster your opponent controls; apply 1 of these effects.\n● Destroy it.\n● Immediately after this effect resolves, Tribute Summon 1 monster by Tributing monsters including the targeted opponent's monster, even though you do not control it.\nDuring your Main Phase: You can banish this card from your GY; add 1 \"Spell Card \"Enemy Controller\"\" from your Deck to your hand. You can only use 1 \"Spell Card \"Enemy Controller\"\" effect per turn, and only once that turn.",
+    "name": "Carta Mágica \"Controlador Enemigo\"",
+    "desc": "Paga 1000 LP, y después selecciona 1 monstruo boca arriba que controle tu adversario; aplica 1 de estos efectos.\r\n● Destrúyelo.\r\n● Inmediatamente después de que este efecto se resuelva, Invoca por Sacrificio 1 monstruo Sacrificando monstruos incluyendo el monstruo seleccionado (aunque no lo controles).\t\r\nDurante tu Main Phase: puedes desterrar esta carta en tu Cementerio; añade a tu mano 1 \"Carta Mágica \"Controlador Enemigo\"\" desde tu Deck. \r\nSólo puedes usar 1 efecto de los efectos de \"Carta Mágica \"Controlador Enemigo\"\" por turno, y sólo una vez ese turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268024.jpg?version=19.7"
   },
   {
-    "name": "Final Journey of the Soul",
-    "desc": "When your opponent activates a card or effect that includes an effect that Special Summons a Monster Card(s) from the GY: Negate that effect, and if you do, Special Summon 1 monster from your opponent's GY to their field, then send any number of face-up monsters they control to the GY whose total ATK equal 6000 or less. If this card is banished: You can add it to your hand, then immediately after this effect resolves (except during the Damage Step), you can Normal Summon 1 monster from your hand that requires 1 or more Tributes without Tributing. You can only use each effect of \"Final Journey of the Soul\" once per turn.",
+    "name": "Viaje Final del Alma",
+    "desc": "Cuando tu adversario activa una carta o efecto que incluya un efecto para Invocar de Modo Especial una o más Cartas de Monstruo desde el Cementerio: niega ese efecto y, si lo haces, Invoca de Modo Especial 1 monstruo del Cementerio de tu adversario a su Campo, y después manda al Cementerio cualquier número de monstruos boca arriba que controle cuyo ATK total sea 6000 o menos. \r\nSi esta carta es desterrada: puedes añadirla a tu mano, y después inmediatamente después de que este efecto se resuelva, puedes Invocar de Modo Normal 1 monstruo desde tu mano que requiera 1 o más Sacrificios sin Sacrificar. \r\nSólo puedes usar cada uno de los efectos de \"Viaje Final del Alma\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268025.jpg?version=19.7"
   },
   {
-    "name": "Helpoemer, Chanter of the Sun God",
-    "desc": "You can discard 1 other card; Special Summon this card from your hand. If this card is Special Summoned: You can add 1 \"Sun God\" card from your Deck to your hand, except \"Helpoemer, Chanter of the Sun God\", then if your opponent's LP are at least 2000 higher than yours, you can discard 1 random card from their hand. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from your GY to your hand. You can only use each effect of \"Helpoemer, Chanter of the Sun God\" once per turn.",
+    "name": "Helpoemer - El Poeta del Dios Solar",
+    "desc": "Puedes descartar 1 otra carta; Invoca esta carta de Modo Especial desde tu mano. \r\nSi esta carta es Invocada de Modo Especial: puedes añadir a tu mano 1 carta \"Dios Solar\" desde tu Deck, excepto \"Helpoemer - El Poeta del Dios Solar\", y después si los LP de tu adversario son al menos 2000 más que los tuyos, puedes descartar 1 carta al azar de su mano. \r\nDurante la End Phase, si \"El Dios Solar Inmortal\" fue mandado a tu Cementerio este turno: puedes añadir esta carta desde tu Cementerio a tu mano. \r\nSólo puedes usar los efectos de \"Helpoemer - El Poeta del Dios Solar\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★5] 2000/1400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307001.jpg?version=19.7"
   },
   {
-    "name": "Makyura, Destructor of the Sun God",
-    "desc": "If this card is Normal or Special Summoned, or sent from the hand or field to the GY: You can Set 1 \"Sun God\" Spell/Trap from your hand or Deck, and if you Set a Trap or Quick-Play Spell, it can be activated this turn. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from your GY to your hand. You can only use each effect of \"Makyura, Destructor of the Sun God\" once per turn.",
+    "name": "Makyura - El Destructor del Dios Solar",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial, o mandada de la mano o el Campo al Cementerio: puedes Colocar 1 Mágica/Trampa \"Dios Solar\" desde tu mano o Deck. Si es una Mágica de Juego Rápido o Trampa, puede ser activada este turno. \r\nDurante la End Phase, si \"El Dios Solar Inmortal\" fue mandado a tu Cementerio este turno: puedes añadir esta carta desde tu Cementerio a tu mano. \r\nSólo puedes usar los efectos de \"Makyura - El Destructor del Dios Solar\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Guerrero/OSCURIDAD  [★4] 1600/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307002.jpg?version=19.7"
   },
   {
-    "name": "Gil Garth, Exterminator of the Sun God",
-    "desc": "If this card is in your hand and you control a \"Sun God\" card: You can Special Summon this card. You can Tribute this card, then target 1 other card in either GY; send 1 \"Sun God\" card from your Deck to the GY, and if you do, place the targeted card on the bottom of the Deck. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from your GY to your hand. You can only use each effect of \"Gil Garth, Exterminator of the Sun God\" once per turn.",
+    "name": "Gil Garth - La Máquina del Terror del Dios Solar",
+    "desc": "Si controlas una carta \"Dios Solar\": puedes Invocar esta carta de Modo Especial desde tu mano. \r\nPuedes Sacrificar esta carta, y después seleccionar 1 otra carta en cualquier Cementerio; manda al Cementerio 1 carta \"Dios Solar\" desde tu Deck y, si lo haces, coloca la carta seleccionada en el fondo del Deck. \r\nDurante la End Phase, si \"El Dios Solar Inmortal\" fue mandado a tu Cementerio este turno: puedes añadir esta carta desde tu Cementerio a tu mano. \r\nSólo puedes usar los efectos de \"Gil Garth - La Máquina del Terror del Dios Solar\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★4] 1800/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307003.jpg?version=19.7"
   },
   {
-    "name": "Viser Des Shock, Tormentor of the Sun God",
-    "desc": "Cannot be destroyed by battle. You can only use each of the following effects of \"Viser Des Shock, Tormentor of the Sun God\" once per turn. If a monster(s) is sent to your opponent's GY and you control a \"Sun God\" card, even during the Damage Step: You can Special Summon this card from your hand, and if you do, return 1 other card on the field to the hand/Extra Deck, and if you do that, inflict 800 damage to your opponent. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from your GY to your hand.",
+    "name": "Viser Des Shock - El Dispositivo de Tortura del Dios Solar",
+    "desc": "No puede ser destruido en batalla. \r\nSólo puedes usar los siguientes efectos de \"Viser Des Shock - El Dispositivo de Tortura del Dios Solar\" una vez por turno. \r\nSi uno o más monstruos son mandados al Cementerio de tu adversario y controlas una carta \"Dios Solar\", incluso durante el Damage Step: puedes Invocar esta carta de Modo Especial desde tu mano y, si lo haces, devuelve 1 otra carta en el Campo a la mano/Deck Extra y, si haces eso, inflige 800 puntos de daño a tu adversario. \r\nDurante la End Phase, si \"El Dios Solar Inmortal\" fue mandado a tu Cementerio este turno: puedes añadir esta carta desde tu Cementerio a tu mano.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★4] 800/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307004.jpg?version=19.7"
   },
   {
-    "name": "The Winged Dragon of Ra, Sun God of Darkness",
-    "desc": "\"The Winged Dragon of Ra\" + 3 \"Sun God\" monsters\nUnaffected by other cards' effects. Once per turn, during the Main Phase (Quick Effect): You can discard any number of \"Sun God\" cards, then choose that many of your opponent's occupied Main Monster Zones; your opponent must send the monsters in those zones to the GY. When an attack is declared involving this card: You can pay LP so that you only have 1 left; this card gains ATK/DEF equal to the amount of LP paid and the total ATK of all \"Sun God\" monsters currently in your GY.",
+    "name": "El Dragón Alado de Ra - El Dios Solar de la Oscuridad",
+    "desc": "\"El Dragón Alado de Ra\" + 3 monstruos \"Dios Solar\"\t\r\nNo es afectada por efectos de otras cartas. \r\nUna vez por turno, durante la Main Phase (Efecto Rápido): puedes descartar cualquier número de cartas \"Dios Solar\", y después elegir esa misma cantidad de Zonas de Monstruos Principal ocupadas de tu adversario; tu adversario manda al Cementerio los monstruos en esas Zonas. \r\nCuando se declara un ataque que involucra a esta carta: puedes pagar LP hasta que solo te quede 1; esta carta gana ATK/DEF igual a la cantidad de LP pagados y al ATK total de todos los monstruos \"Dios Solar\" que estén actualmente en tu Cementerio.",
     "overallString": "[Monstruo|Efecto|Fusión] Bestia Divina/DIVINO  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },
   {
-    "name": "Lava Golem, Steelcage of the Sun God",
-    "desc": "1 \"Sun God\" monster you control + 2 face-up monsters on the field\nCannot be used as Fusion Material. Must be either Fusion Summoned, or Special Summoned (from your Extra Deck) to your opponent's Main Monster Zone by sending the above cards from either field to the GY, but if you Special Summon this card with the second method, you can only Special Summon once for the rest of this turn. You can only Special Summon \"Lava Golem, Steelcage of the Sun God\" once per turn this way, no matter which method you use. Once per turn, during your Standby Phase: Take 1000 damage.",
+    "name": "Golem de Lava - La Jaula de Acero del Dios Solar",
+    "desc": "1 monstruo \"Dios Solar\" que controles + 2 monstruos boca arriba en el Campo\t\r\nNo puede ser usado como Material de Fusión. \r\nDebe ser Invocado por Fusión, o Invocado de Modo Especial (desde tu Deck Extra) a la Zona de Monstruos Principal de tu adversario mandando al Cementerio las cartas mencionadas arriba desde cualquier Campo. Si lo Invocas con el segundo método, sólo puedes Invocar de Modo Especial una vez por el resto de este turno. \r\nSólo puedes Invocar de Modo Especial \"Golem de Lava - La Jaula de Acero del Dios Solar\" una vez por turno de esta forma, sin importar el método que uses. \r\nUna vez por turno, durante tu Standby Phase: recibe 1000 puntos de daño.",
     "overallString": "[Monstruo|Efecto|Fusión] Demonio/FUEGO  [★8] 3000/2500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307031.jpg?version=19.7"
   },
   {
-    "name": "The Immortal Sun God",
-    "desc": "Special Summon 1 \"The Winged Dragon of Ra\" monster from your GY or banishment, ignoring its Summoning conditions, then if you Special Summoned \"The Winged Dragon of Ra\" by this effect, you can send it to the GY, and if you do, Special Summon 1 \"The Winged Dragon of Ra\" monster from your Extra Deck. During the End Phase, send the monsters Special Summoned by this effect to the GY. During your Main Phase, if this card is in your GY: You can discard 1 \"Sun God\" card; add this card to your hand. You can only use each effect of \"The Immortal Sun God\" once per turn.",
+    "name": "El Dios Solar Inmortal",
+    "desc": "Invoca de Modo Especial 1 monstruo \"El Dragón Alado de Ra\" desde tu Cementerio o destierro, ignorando sus condiciones de Invocación, y después si es \"El Dragón Alado de Ra\", mándalo al Cementerio y, si lo haces, puedes Invocar de Modo Especial 1 monstruo \"El Dragón Alado de Ra\" desde tu Deck Extra. \r\nManda al Cementerio cualquier monstruo Invocado por este efecto durante la End Phase. \r\nDurante tu Main Phase, si esta carta está en tu Cementerio: puedes descartar 1 carta \"Dios Solar\"; añade esta carta a tu mano. \r\nSólo puedes usar los efectos de \"El Dios Solar Inmortal\" una vez por turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307051.jpg?version=19.7"
   },
   {
-    "name": "The Sun God Leading Down into Darkness",
-    "desc": "Activate this card by sending 1 \"The Winged Dragon of Ra\" monster from your hand, Deck, or face-up field to the GY. During your Main Phase, if this card was activated this turn: You can add 1 \"Sun God\" monster from your Deck to your hand. If a monster(s) is destroyed by battle: Its controller takes damage equal to its original ATK, then if you have \"The Winged Dragon of Ra\" in your GY, you gain 1000 LP. You can only use each effect of \"The Sun God Leading Down into Darkness\" once per turn.",
+    "name": "El Dios Solar Conduciendo Hacia la Oscuridad",
+    "desc": "Activa esta carta mandando al Cementerio 1 monstruo \"El Dragón Alado de Ra\" desde tu mano, Deck o Campo boca arriba. \r\nSólo puedes usar los siguientes efectos de \"El Dios Solar Conduciendo Hacia la Oscuridad\" una vez por turno. \r\nDurante tu Main Phase, si esta carta fue activada este turno: puedes añadir a tu mano 1 monstruo \"Dios Solar\" desde tu Deck. \r\nSi uno o más monstruos son destruidos en batalla: inflige daño a su controlador igual a su ATK original, y después si tienes \"El Dragón Alado de Ra\" en tu Cementerio, ganas 1000 LP.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307052.jpg?version=19.7"
   },
   {
-    "name": "Sun God Domination",
-    "desc": "If a \"The Winged Dragon of Ra\" monster is on the field: Apply these effects in sequence.\n● Special Summon 1 monster from each GY to your field.\n● If \"The Winged Dragon of Ra\" is on the field, take control of all monsters your opponent controls.\nYou can banish this card from your GY and Tribute 1 \"The Winged Dragon of Ra\" monster; gain LP equal to the ATK it had on the field. You can only use each effect of \"Sun God Domination\" once per turn.",
+    "name": "Dominación del Dios Solar",
+    "desc": "Si hay un monstruo \"El Dragón Alado de Ra\" en el Campo: aplica estos efectos, en secuencia;\r\n● Invoca de Modo Especial 1 monstruo de cada Cementerio a tu Campo.\r\n● Si \"El Dragón Alado de Ra\" está en el Campo, toma el control de todos los monstruos que controle tu adversario.\t\t\r\nPuedes desterrar esta carta en tu Cementerio y Sacrificar 1 monstruo \"El Dragón Alado de Ra\"; gana LP igual al ATK que tenía en el Campo. \r\nSólo puedes usar los efectos de \"Dominación del Dios Solar\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307072.jpg?version=19.7"
   },
   {
-    "name": "Egyptian God Slime, Protector of the Sun God",
-    "desc": "Special Summon this card in Defense Position as an Effect Monster (Aqua/WATER/Level 10/ATK 3000/DEF 3000) with the following effects (this card is also still a Trap).\n● If this card is Special Summoned: You can add 1 \"Sun God\" card from your Deck to your hand, then if you added a monster by this effect during your opponent's turn, you can Special Summon it.\n● Cannot be destroyed by card effects.\nYou can only activate 1 \"Egyptian God Slime, Protector of the Sun God\" per turn.",
+    "name": "Dios Egipcio Limo - El Protector del Dios Solar",
+    "desc": "Invoca esta carta de Modo Especial en Posición de Defensa como un Monstruo de Efecto (Aqua/AGUA/Nivel 10/ATK 3000/DEF 3000) con los siguientes efectos. (Esta carta todavía sigue siendo una Trampa);\r\n● Si es Invocada de Modo Especial: puedes añadir a tu mano 1 carta \"Dios Solar\" desde tu Deck, y después si es un monstruo y es el turno de tu adversario, puedes Invocarlo de Modo Especial.\r\n● No puede ser destruida por efectos de cartas.\t\r\nSólo puedes activar 1 \"Dios Egipcio Limo - El Protector del Dios Solar\" por turno.",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307073.jpg?version=19.7"
   },
   {
-    "name": "Super Critical",
-    "desc": "When this card is activated: You can add 1 card with an effect that requires a die roll from your Deck to your hand. Once per Chain per player, if either player rolls a 1 for a card effect's die roll (except during the Damage Step): They can activate 1 of these effects;\n● They destroy up to 3 monsters their opponent controls.\n● They destroy 1 monster their opponent controls, and if they do, they negate the effects of 1 monster their opponent controls.\n● They Special Summon 1 monster from their GY.\nYou can only activate 1 \"Super Critical\" per turn.",
+    "name": "Súper Crítico",
+    "desc": "Cuando esta carta se resuelve: puedes añadir a tu mano, desde tu Deck, 1 carta cuyo efecto requiera un lanzamiento de dado. \r\nUna vez por Cadena por jugador, si cualquier jugador obtiene un 1 en un lanzamiento de dado por el efecto de una carta: puede activar 1 de estos efectos;\r\n● Destruye hasta 3 monstruos que controle su adversario.\r\n● Destruye 1 monstruo que controle su adversario y, si lo haces, niega los efectos de 1 monstruo que controle su adversario.\r\n● Invoca de Modo Especial 1 monstruo desde su Cementerio. \t \r\nSólo puedes activar 1 \"Súper Crítico\" por turno.",
     "overallString": "[Mágica|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268015.jpg?version=19.7"
   },
   {
-    "name": "Barrel Dragon the Machine Dragon",
-    "desc": "If you control no monsters, you can Normal Summon this card without Tributing. You can only use each of the following effects of \"Barrel Dragon the Machine Dragon\" once per turn. During your Main Phase: You can add 1 DARK Machine monster from your Deck to your hand, except \"Barrel Dragon the Machine Dragon\". During the Battle Phase, if this card is in your GY because it was sent there from the field this turn (Quick Effect): You can Special Summon it, and if you do, toss a coin 3 times, then you can destroy monsters on the field up to the number of heads.",
+    "name": "Dragón Cañón, el Dragón Máquina",
+    "desc": "Si no controlas monstruos, puedes Invocar esta carta de Modo Normal sin Sacrificio. \r\nSólo puedes usar los siguientes efectos de \"Dragón Cañón, el Dragón Máquina\" una vez por turno. \r\nDurante tu Main Phase: puedes añadir a tu mano 1 monstruo Máquina de OSCURIDAD desde tu Deck, excepto \"Dragón Cañón, el Dragón Máquina\". \r\n(Efecto Rápido): Durante la Battle Phase, si esta carta está en tu Cementerio porque fue mandada allí desde el Campo este turno: puedes Invocarla de Modo Especial y, si lo haces, lanza una moneda 3 veces, y después puedes destruir monstruos en el Campo hasta el número de caras obtenidas.",
     "overallString": "[Monstruo|Efecto] Máquina/OSCURIDAD  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268005.jpg?version=19.7"
   },
   {
-    "name": "Relinquished the Wicked Eye of Illusion",
-    "desc": "You can Ritual Summon this card with \"Relinquished the Wicked Eye of Illusion\". Your opponent takes any battle damage you would have taken from battles involving this card. You can only use each of the following effects of \"Relinquished the Wicked Eye of Illusion\" once per turn. If this card is in your hand: You can Tribute 2 monsters; Special Summon this card (this is treated as a Ritual Summon). During the Main Phase (Quick Effect): You can target 1 Effect Monster your opponent controls; negate its effects, and if you do, equip it to this card as an Equip Spell that gives it 2000 ATK.",
+    "name": "Renunciado, el Ojo Malvado de la Ilusión",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Renunciado, el Ojo Malvado de la Ilusión\". \nTu adversario recibe cualquier daño que fueras a recibir de batallas que involucren a esta carta. \nSólo puedes usar los siguientes efectos  de \"Renunciado, el Ojo Malvado de la Ilusión\" una vez por turno. \nPuedes Sacrificar 2 monstruos; Invoca esta carta de Modo Especial desde tu mano (esto se trata como una Invocación por Ritual). \n(Efecto Rápido): Durante la Main Phase: puedes seleccionar 1 Monstruo de Efecto que controle tu adversario; niega sus efectos y, si lo haces, equípalo a esta carta como una Mágica de Equipo que le da 2000 ATK.",
     "overallString": "[Monstruo|Efecto|Ritual] Ilusión/OSCURIDAD  [★1] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268006.jpg?version=19.7"
   },
   {
-    "name": "Gilford the Lightning, the Warrior of Thunderbolts",
-    "desc": "You can Special Summon this card (from your hand) by Tributing 3 monsters, and if you Tributed a monster(s) that is owned by your opponent, your opponent cannot activate cards or effects when this card is Special Summoned this way. If Summoned this way: Your opponent must send all monsters they control to the GY. If this card is sent to the GY: You can activate this effect; during the End Phase of this turn, add 1 Warrior monster from your Deck to your hand. You can only use this effect of \"Gilford the Lightning, the Warrior of Thunderbolts\" once per turn.",
+    "name": "Gilford el Relámpago, el Guerrero de los Rayos",
+    "desc": "Puedes Invocar esta carta de Modo Especial (desde tu mano) Sacrificando 3 monstruos. \r\nTu adversario no puede activar cartas o efectos cuando es Invocada de esta forma si Sacrificas un monstruo que sea de su propiedad. \r\nSi esta carta es Invocada de Modo Especial por su efecto: tu adversario manda al Cementerio todos los monstruos que controle. \r\nSi esta carta es mandada al Cementerio: puedes activar este efecto; durante la End Phase de este turno, añade a tu mano 1 monstruo Guerrero desde tu Deck. \r\nSólo puedes usar este efecto de \"Gilford el Relámpago, el Guerrero de los Rayos\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Guerrero/LUZ  [★8] 2800/1400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268008.jpg?version=19.7"
   },
   {
-    "name": "Penalty Game \"GREED, the Illusion of Avarice\"",
-    "desc": "If your opponent added a card(s) from the Deck to the hand this turn, except during the Draw Phase: Inflict 400 damage to your opponent for each card in their hand, then if the total number of cards in their hand, field, and GY is 20 or more, you can banish their entire hand. You can only activate 1 \"Penalty Game \"GREED, the Illusion of Avarice\"\" per turn.",
+    "name": "Juego de Penitencia \"AVARICIA, la Ilusión de la Codicia\"",
+    "desc": "Sólo puedes activar 1 \"Juego de Penitencia \"AVARICIA, la Ilusión de la Codicia\"\" por turno. \r\nSi tu adversario añadió una o más cartas del Deck a su mano este turno, excepto durante la Draw Phase: inflige 400 puntos de daño a tu adversario por cada carta en su mano, y después, si el número total de cartas en su mano, Campo y Cementerio es 20 o más, puedes desterrar toda su mano.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268011.jpg?version=19.7"
   },
   {
-    "name": "Zombyra",
-    "desc": "When this card declares an attack: You lose 500 LP, and if you do, this card gains 500 ATK. When a monster is destroyed by battle: You can equip this card from your GY to the monster that destroyed that monster, then you can destroy the 1 monster your opponent controls with the highest ATK (your choice, if tied). The equipped monster's name becomes \"Zombyra\", also its effects are negated. When the equipped monster declares an attack: Its controller loses 500 LP, and if they do, the equipped monster gains 500 ATK.",
+    "name": "Zombia",
+    "desc": "Cuando esta carta declara un ataque: pierdes 500 LP y, si lo haces, esta carta gana 500 ATK. \r\nCuando un monstruo es destruido en batalla: puedes equipar esta carta en tu Cementerio al monstruo que destruyó a ese monstruo, y después puedes destruir al monstruo que controle tu adversario con el ATK más alto (si hay empate, eliges tú). \r\nEl monstruo equipado con esta carta ve su nombre cambiado a \"Zombia\", y además sus efectos son negados. \r\nCuando el monstruo equipado declara un ataque: su controlador pierde 500 LP y, si lo hace, el monstruo equipado gana 500 ATK.",
     "overallString": "[Monstruo|Efecto] Guerrero/OSCURIDAD  [★4] 2100/500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268012.jpg?version=19.7"
   },
   {
-    "name": "Evil Dragon Cards - Earth Dragon",
-    "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by revealing 3 EARTH monsters in your hand, including this card. You can reveal this card in your hand; add 1 \"Dragon Card\" card from your Deck to your hand, then discard 1 card. When your opponent activates a monster effect on the field (Quick Effect): You can negate that effect, then if a WATER monster is on the field, this card cannot be destroyed by battle or card effects this turn. You can only use each effect of \"Evil Dragon Cards - Earth Dragon\" once per turn.",
+    "name": "Cartas Dragón Malvado – Dragón Terrestre",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. \r\nDebe ser primero Invocado de Modo Especial (desde tu mano) revelando 3 monstruos de TIERRA en tu mano, incluyendo esta carta. \r\nPuedes revelar esta carta en tu mano; añade a tu mano 1 carta \"Carta Dragón\" desde tu Deck, y después descarta 1 carta. \r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo en el Campo: puedes negar ese efecto, y después si hay un monstruo de AGUA en el Campo, esta carta no puede ser destruida en batalla ni por efectos de cartas este turno. \r\nSólo puedes usar los efectos de \"Cartas Dragón Malvado – Dragón Terrestre\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Dragón/TIERRA  [★4] 1200/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268013.jpg?version=19.7"
   },
   {
-    "name": "Evil Dragon Cards - Metal Dragon",
-    "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) by revealing 3 LIGHT monsters in your hand, including this card. You can reveal this card in your hand; add 1 \"Dragon Card\" card from your Deck to your hand, then discard 1 card. During the Main Phase (Quick Effect): You can destroy 1 monster your opponent controls, and if you do, send this card to the GY, then if an EARTH monster is on the field, you can draw 1 card. You can only use each effect of \"Evil Dragon Cards - Metal Dragon\" once per turn.",
+    "name": "Cartas Dragón Malvado – Dragón Metálico",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. \r\nDebe ser primero Invocado de Modo Especial (desde tu mano) revelando 3 monstruos de LUZ en tu mano, incluyendo esta carta.  \r\nPuedes revelar esta carta en tu mano; añade a tu mano 1 carta \"Carta Dragón\" desde tu Deck, y después descarta 1 carta. \r\n(Efecto Rápido): Durante la Main Phase: puedes destruir 1 monstruo que controle tu adversario y, si lo haces, manda esta carta al Cementerio, y después si hay un monstruo de TIERRA en el Campo, puedes robar 1 carta. \r\nSólo puedes usar los efectos de \"Cartas Dragón Malvado – Dragón Metálico\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Dragón/LUZ  [★5] 2100/1500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268014.jpg?version=19.7"
   },
   {
-    "name": "Audhumla, Progenitor of the Frozen Expanse",
-    "desc": "If 4 or more cards are on the field: You can Special Summon this card from your hand. You can send up to 2 Spells/Traps you control to the GY; draw that many cards, then you can Special Summon 1 WATER monster from your hand. When your opponent activates a card or effect (Quick Effect): You can change this card to face-down Defense Position, also for the rest of this turn, all face-down cards you control cannot be destroyed by your opponent's card effects, and your opponent cannot target them with card effects. You can only use each effect of \"Audhumla, Progenitor of the Frozen Expanse\" once per turn.\r\n",
+    "name": "Audhumla, Progenitor de la Extensión Helada",
+    "desc": "Si hay 4 o más cartas en el Campo: puedes Invocar esta carta de Modo Especial desde tu mano. \nPuedes mandar al Cementerio hasta 2 Mágicas/Trampas que controles; roba esa misma cantidad de cartas, y después puedes Invocar de Modo Especial 1 monstruo de AGUA desde tu mano. \n(Efecto Rápido): Cuando tu adversario activa una carta o efecto: puedes cambiar esta carta a Posición de Defensa boca abajo, y además por el resto de este turno, todas las cartas boca abajo que controles no pueden ser destruidas por efectos de cartas de tu adversario, y tu adversario no puede seleccionarlas con efectos de cartas. \nSólo puedes usar cada efecto de \"Audhumla, Progenitor de la Extensión Helada\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Aqua/AGUA  [★9] 2500/3200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306281.jpg?version=19.7"
   },
   {
-    "name": "Blue-Eyes Ultimate Dragon, the God-Surpassing Servant",
-    "desc": "\"Blue-Eyes White Dragon\" + \"Blue-Eyes White Dragon\" + \"Blue-Eyes White Dragon\"\nCannot be destroyed by card effects, also unaffected by your opponent's activated effects during your opponent's turn. Can make up to 3 attacks during each Battle Phase. Once per Chain, during the Battle Phase (Quick Effect): You can target 1 monster that was Special Summoned this turn, or 1 face-down card, that your opponent controls; destroy it. You can only use this effect of \"Blue-Eyes Ultimate Dragon, the God-Surpassing Servant\" thrice per turn.",
+    "name": "Dragón de Ojos Azules Definitivo, el Sirviente que Supera a los Dioses",
+    "desc": "\"Dragón Blanco de Ojos Azules\" + \"Dragón Blanco de Ojos Azules\" + \"Dragón Blanco de Ojos Azules\"\t\r\nNo puede ser destruido por efectos de cartas, y además no es afectado por efectos activados de tu adversario durante su turno. \nPuede hacer un segundo y tercer ataque durante cada Battle Phase. \nUna vez por Cadena, durante la Battle Phase (Efecto Rápido): puedes seleccionar 1 monstruo del adversario Invocado de Modo Especial este turno o 1 carta boca abajo que controle; destrúyela. \nSólo puedes usar este efecto de \"Dragón de Ojos Azules Definitivo, el Sirviente que Supera a los Dioses\" hasta tres veces por turno.",
     "overallString": "[Monstruo|Efecto|Fusión] Dragón/LUZ  [★12] 4500/3800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268004.jpg?version=19.7"
   },
   {
-    "name": "Dark Paladin - Wave-Motion",
-    "desc": "\"Dark Magician\" + 1 Level 7 or higher monster\r\nMust be Fusion Summoned. Gains 500 ATK for every other monster on the field. Can attack all your opponent's monsters, once each. Once per turn, when your opponent activates a Spell Card or effect (Quick Effect): You can negate that effect, then you can destroy 1 card on the field. After this card destroys a card by battle or card effect and sends it to the GY, neither player can activate its effects while it is in the GY.\r\n",
+    "name": "Paladín Oscuro - Onda de Movimiento",
+    "desc": "\"Mago Oscuro\" + 1 monstruo de Nivel 7 o mayor\t\r\nDebe ser Invocado por Fusión. \r\nGana 500 ATK por cada otro monstruo en el Campo. \r\nPuede atacar a todos los monstruos del adversario una vez cada uno. \r\nUna vez por turno, cuando tu adversario activa una Carta Mágica o efecto (Efecto Rápido): puedes negar ese efecto, y después puedes destruir 1 carta en el Campo. \r\nDespués de que esta carta destruya una carta en batalla o por efecto de carta y la mande al Cementerio, esa carta no puede activar sus efectos mientras esté en el Cementerio.",
     "overallString": "[Monstruo|Efecto|Fusión] Lanzador de Conjuros/OSCURIDAD  [★8] 2900/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268201.jpg?version=19.7"
   }
