@@ -1,5 +1,17 @@
 [
   {
+    "name": "Ashtrata Tamayori",
+    "desc": "Se este card é Invocado por Invocação-Especial: você pode Invocar por Invocação-Especial 1 não-Regulador \"Ashtra\" do seu Deck em Posição de Defesa, então você pode alterar 1 monstro com a face para cima que você controla para Posição de Defesa com a face para baixo, você também não pode Invocar por Invocação-Especial do seu Deck Adicional pelo resto deste turno, exceto Invocação-Sinchro usando um Regulador Nível 1.\r\nSe um \"Ashtra\" e/ou mais cards com a face para baixo que você controla seriam destruídos por efeitos, em vez disso você pode banir este card do seu Cemitério.\r\nVocê só pode usar cada um dos efeitos de \"Ashtrata Tamayori\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Regulador] Fada/Fogo  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrama Yoami",
+    "desc": "1 Regulador + 1+ não-Reguladores\r\nSe este card é Invocado por Invocação-Especial, ou enviado do campo ao Cemitério: você pode adicionar à sua mão, ou Baixar, 1 Armadilha \"Ashtra\" do seu Deck.\r\nSe você tem uma Armadilha no seu Cemitério: você pode retornar quantos cards com a face para baixo possíveis no campo à mão, então se você tem 5 ou mais Armadilhas no seu Cemitério, você pode retornar todos os cards que seu oponente controla à mão.\r\nVocê só pode usar cada um dos efeitos de \"Ashtrama Yoami\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Sincro] Mago/Vento  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
     "name": "Asas Exuberantes de Atlântida",
     "desc": "O nome deste card se torna \"Umi\" enquanto está no campo.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Asas Exuberantes de Atlântida\" uma vez por turno.\r\nVocê pode enviar este card da sua mão e 1 Magia/Armadilha ou \"Umi\" da sua mão ou com a face para cima no campo ao Cemitério, então escolha 1 card que seu oponente controla; envie-o ao Cemitério.\r\nSe você controla \"Atlântida, a Cidade do Dragão Marinho\": você pode banir este card do seu Cemitério; Invoque por Invocação-Especial 1 monstro Serpente Marinha Nível 4 ou menor da sua mão ou Deck.",
     "overallString": "[Monstro|Efeito] Serpente Marinha/Água  [★5] 2000/2400",
