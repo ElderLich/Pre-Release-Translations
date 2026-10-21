@@ -5,10 +5,10 @@
     "lang": "pt",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261019_153718",
-    "rows_in_report": 6,
-    "unique_cn_strings": 8,
-    "total_cn_cells": 8
+    "timestamp": "20261021_134816",
+    "rows_in_report": 7,
+    "unique_cn_strings": 9,
+    "total_cn_cells": 9
   },
   "unique_strings": [
     {
@@ -18,6 +18,11 @@
     },
     {
       "string": "攻击力交换",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "是否让对方的卡全部回手？",
       "count": 1,
       "is_new": true
     },
@@ -59,7 +64,7 @@
       "desc": "Se este card é enviado ao Cemitério e você tem um monstro \"Amazoness\" no seu Cemitério: você pode pagar 1000 PV; seu oponente pode escolher 1 monstro de Nível 10 no seu Deck ou Deck Adicional, e se ele fizer, você pode Invoca-lo por Invocação-Especial para o seu campo, ignorando suas condições de Invocação, mas nenhum jogador pode ativar seus efeitos neste turno. Se ele não fizer, você descarta 1 card aleatório da mão dele. Você só pode usar este efeito de \"Mestra da Corrente Amazoness - Dança da Corrente à Beira da Morte\" uma vez por turno.",
       "str1": "Ativar",
       "str2": "是否选卡？",
-      "str3": "",
+      "str3": "Invocação Especial?",
       "str4": "",
       "str5": "",
       "str6": "",
@@ -110,6 +115,35 @@
         }
       ],
       "desc_preview": "Se este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 monstro \"Amazoness\" do seu Deck à sua mão, exceto um monstro de Nível 3.\r\nDurante sua Fase Principal: você pode Invocar por Invocação-Fusão 1 Monstro Fusão TERRA ou VENTO do seu Deck Adicional, usando monstros da sua mão ou campo.\r\nDurante o cálculo de dano, se seu monstro \"Amazoness\" batalha com um monstro do oponente: você pode banir este card do seu Cemitério; altere o ATK dos monstros batalhando até o final deste turno.\r\nVocê só pode usar cada um dos efeitos de \"Mago Amazoness - Dança do Feitiço Proibido\" uma vez por turno."
+    },
+    {
+      "id": 101307039,
+      "name": "Ashtrama Yoami",
+      "desc": "1 Regulador + 1+ não-Reguladores\r\nSe este card é Invocado por Invocação-Especial, ou enviado do campo ao Cemitério: você pode adicionar à sua mão, ou Baixar, 1 Armadilha \"Ashtra\" do seu Deck.\r\nSe você tem uma Armadilha no seu Cemitério: você pode retornar quantos cards com a face para baixo possíveis no campo à mão, então se você tem 5 ou mais Armadilhas no seu Cemitério, você pode retornar todos os cards que seu oponente controla à mão.\r\nVocê só pode usar cada um dos efeitos de \"Ashtrama Yoami\" uma vez por turno.",
+      "str1": "Buscar e Baixar",
+      "str2": "Retornar à mão",
+      "str3": "是否让对方的卡全部回手？",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str3",
+          "value": "是否让对方的卡全部回手？",
+          "normalized": "是否让对方的卡全部回手?"
+        }
+      ],
+      "desc_preview": "1 Regulador + 1+ não-Reguladores\r\nSe este card é Invocado por Invocação-Especial, ou enviado do campo ao Cemitério: você pode adicionar à sua mão, ou Baixar, 1 Armadilha \"Ashtra\" do seu Deck.\r\nSe você tem uma Armadilha no seu Cemitério: você pode retornar quantos cards com a face para baixo possíveis no campo à mão, então se você tem 5 ou mais Armadilhas no seu Cemitério, você pode retornar todos os cards que seu oponente controla à mão.\r\nVocê só pode usar cada um dos efeitos de \"Ashtrama Yoami\" uma vez por turno."
     },
     {
       "id": 101307041,
