@@ -1,7 +1,7 @@
 {
   "language": "jp",
-  "candidates": 4,
-  "matched": 4,
+  "candidates": 3,
+  "matched": 3,
   "unmatched_ids": [
     100270002
   ],
@@ -14,12 +14,8 @@
     }
   ],
   "matches": {
-    "101307019": {
-      "set_code": "IMPH-JP019",
-      "source": "https://ocg-card.com/list/imph/"
-    },
-    "101307049": {
-      "set_code": "IMPH-JP049",
+    "101307039": {
+      "set_code": "IMPH-JP039",
       "source": "https://ocg-card.com/list/imph/"
     },
     "101307064": {
