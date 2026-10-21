@@ -1,5 +1,17 @@
 [
   {
+    "name": "Número 96: Manipulador Oscuro",
+    "desc": "3 monstruos de OSCURIDAD de Nivel 2\r\n\tPuedes desacoplar 1 material de esta carta; esta carta gana ATK igual al ATK original total de todos los monstruos que controle tu adversario en este momento.\r\n\t(Efecto Rápido): Cuando tu adversario activa una carta o efecto: puedes mandar esta carta con material al Cementerio; Invoca de Modo Especial monstruos \"Horror de las Sombras\" y/o \"Malicioso\" desde tu Cementerio hasta el número de materiales que tenía esta carta.\r\n\tSólo puedes usar cada uno de los efectos de \"Número 96: Manipulador Oscuro\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Xyz] Demonio/OSCURIDAD  [☆2] 100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307043.jpg?version=19.7"
+  },
+  {
+    "name": "Cambio de Barian del Caos",
+    "desc": "Selecciona 1 Monstruo Xyz \"Mascarada\" que controles; Invoca de Modo Especial desde tu Deck Extra 1 monstruo \"Número\" que sea 1 Rango mayor o 2 Rangos menor que ese monstruo, usándolo como material (esto se trata como una Invocación Xyz, transfiere sus materiales).\r\n\tPuedes desterrar esta carta en tu Cementerio, y después seleccionar 3 monstruos \"Horror de las Sombras\" y/o Monstruos Xyz \"Mascarada\" en tu Cementerio; colócalos en el fondo del Deck en cualquier orden, y después roba 1 carta.\r\n\tSólo puedes usar 1 de los efectos de \"Cambio de Barian del Caos\" por turno, y sólo una vez ese turno.",
+    "overallString": "[Mágica]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307065.jpg?version=19.7"
+  },
+  {
     "name": "Asutrata Tamayori",
     "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo \"Asutra\" que no sea Cantante desde tu Deck en Posición de Defensa, y después puedes cambiar 1 monstruo boca arriba que controles a Posición de Defensa boca abajo, y además no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto por una Invocación por Sincronía usando un Cantante de Nivel 1.\r\nSi una o más cartas \"Asutra\" y/o cartas boca abajo que controles fueran a ser destruidas por efecto de carta, puedes desterrar esta carta en tu Cementerio en su lugar.\r\nSólo puedes usar cada efecto de \"Asutrata Tamayori\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Cantante] Hada/FUEGO  [★1] 0/0",
@@ -43,7 +55,7 @@
   },
   {
     "name": "Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte",
-    "desc": "Si esta carta es mandada al Cementerio y tienes otro monstruo \"Amazoness\" allí: puedes pagar 1000 LP; tu adversario puede elegir 1 monstruo de Nivel 10 en su Deck o Deck Extra y, si lo hace, puedes Invocarlo de Modo Especial a tu Campo, ignorando sus condiciones de Invocación, pero no puede activar sus efectos este turno. Si no lo hace, tú descartas 1 carta al azar de su mano. \r\nSólo puedes usar el efecto de \"Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte\" una vez por turno.",
+    "desc": "Si esta carta es mandada al Cementerio y tienes otro monstruo \"Amazoness\" allí: puedes pagar 1000 LP; tu adversario puede elegir 1 monstruo de Nivel 10 en su Deck o Deck Extra y, si lo hace, puedes Invocarlo de Modo Especial a tu Campo, ignorando sus condiciones de Invocación, pero no puede activar sus efectos este turno. Si no lo hace, tú descartas 1 carta al azar de su mano.\r\nSólo puedes usar el efecto de \"Maestra de Cadenas Amazoness - Danza de Cadenas al Borde de la Muerte\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Guerrero/TIERRA  [★4] 1500/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
   },
@@ -577,7 +589,7 @@
   },
   {
     "name": "Eclosión Perfecta - Polilla Definitiva Perfecta",
-    "desc": "No puede ser Invocada de Modo Normal/Colocada. Debe ser Invocada de Modo Especial (desde tu mano) teniendo 6 o más monstruos Insecto en tu Cementerio. Sólo puedes Invocar de Modo Especial \"Eclosión Perfecta - Polilla Definitiva Perfecta\" una vez por turno de esta forma. \r\nSi esta carta es Invocada de Modo Especial: puedes devolver a la mano tantas cartas que controle tu adversario como sea posible, y después si tienes un Monstruo Normal en tu Cementerio, esta carta gana 300 ATK por cada monstruo Insecto en tu Cementerio. \r\nCada vez que tu adversario Invoca de Modo Normal o Especial uno o más monstruos: todos los monstruos boca arriba que controle en ese momento pierden ATK igual a su propio Nivel x 100.",
+    "desc": "No puede ser Invocada de Modo Normal/Colocada. Debe ser Invocada de Modo Especial (desde tu mano) teniendo 6 o más monstruos Insecto en tu Cementerio. Sólo puedes Invocar de Modo Especial \"Eclosión Perfecta - Polilla Definitiva Perfecta\" una vez por turno de esta forma.\r\nSi esta carta es Invocada de Modo Especial: puedes devolver a la mano tantas cartas que controle tu adversario como sea posible, y después si tienes un Monstruo Normal en tu Cementerio, esta carta gana 300 ATK por cada monstruo Insecto en tu Cementerio.\r\nCada vez que tu adversario Invoca de Modo Normal o Especial uno o más monstruos: todos los monstruos boca arriba que controle en ese momento pierden ATK igual a su propio Nivel x 100.",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Insecto/TIERRA  [★8] 3500/3000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
@@ -649,13 +661,13 @@
   },
   {
     "name": "Estrategia Aroma",
-    "desc": "Una vez por turno: puedes declarar 1 nombre de carta; revela la carta de la parte superior de tu Deck, y si es la carta declarada, puedes aplicar este efecto basado en su tipo. Si no lo es, destruye esta carta.\r\n● Monstruo: Invócala de Modo Especial.\r\n● Mágica/Trampa: Colócala.\t\r\nSi esta carta es destruida por efecto de carta: puedes Invocar de Modo Especial 1 monstruo \"Arpía\" desde tu Deck o Cementerio.",
+    "desc": "Una vez por turno: puedes declarar 1 nombre de carta; revela la carta de la parte superior de tu Deck, y si es la carta declarada, puedes aplicar este efecto basado en su tipo. Si no lo es, destruye esta carta.\r\n● Monstruo: Invócala de Modo Especial.\r\n● Mágica/Trampa: Colócala.\r\nSi esta carta es destruida por efecto de carta: puedes Invocar de Modo Especial 1 monstruo \"Arpía\" desde tu Deck o Cementerio.",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268017.jpg?version=19.7"
   },
   {
     "name": "Rey de Yamimado",
-    "desc": "Mientras controles una carta boca abajo, esta carta no puede ser destruida por efectos de cartas de tu adversario, y además tu adversario no puede seleccionarla con efectos de cartas. \r\nSólo puedes usar los siguientes efectos de \"Rey de Yamimado\" una vez por turno. \r\nSi hay 2 o más cartas boca abajo y/o \"Yami\" en el Campo: puedes Invocar esta carta de Modo Especial desde tu mano. \r\n(Efecto Rápido): Cuando un monstruo en el Campo con ATK menor que esta carta activa su efecto o declara un ataque: puedes destruir ese monstruo.",
+    "desc": "Mientras controles una carta boca abajo, esta carta no puede ser destruida por efectos de cartas de tu adversario, y además tu adversario no puede seleccionarla con efectos de cartas.\r\nSólo puedes usar los siguientes efectos de \"Rey de Yamimado\" una vez por turno.\r\nSi hay 2 o más cartas boca abajo y/o \"Yami\" en el Campo: puedes Invocar esta carta de Modo Especial desde tu mano.\r\n(Efecto Rápido): Cuando un monstruo en el Campo con ATK menor que esta carta activa su efecto o declara un ataque: puedes destruir ese monstruo.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★7] 2600/2300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268018.jpg?version=19.7"
   },
@@ -739,7 +751,7 @@
   },
   {
     "name": "El Dios Solar Inmortal",
-    "desc": "Invoca de Modo Especial 1 monstruo \"El Dragón Alado de Ra\" desde tu Cementerio o destierro, ignorando sus condiciones de Invocación, y después si es \"El Dragón Alado de Ra\", mándalo al Cementerio y, si lo haces, puedes Invocar de Modo Especial 1 monstruo \"El Dragón Alado de Ra\" desde tu Deck Extra. \r\nManda al Cementerio cualquier monstruo Invocado por este efecto durante la End Phase. \r\nDurante tu Main Phase, si esta carta está en tu Cementerio: puedes descartar 1 carta \"Dios Solar\"; añade esta carta a tu mano. \r\nSólo puedes usar los efectos de \"El Dios Solar Inmortal\" una vez por turno.",
+    "desc": "Invoca de Modo Especial 1 monstruo \"El Dragón Alado de Ra\" desde tu Cementerio o destierro, ignorando sus condiciones de Invocación, y después si es \"El Dragón Alado de Ra\", mándalo al Cementerio y, si lo haces, puedes Invocar de Modo Especial 1 monstruo \"El Dragón Alado de Ra\" desde tu Deck Extra.\r\nManda al Cementerio cualquier monstruo Invocado por este efecto durante la End Phase.\r\nDurante tu Main Phase, si esta carta está en tu Cementerio: puedes descartar 1 carta \"Dios Solar\"; añade esta carta a tu mano.\r\nSólo puedes usar los efectos de \"El Dios Solar Inmortal\" una vez por turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307051.jpg?version=19.7"
   },
