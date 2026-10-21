@@ -206,28 +206,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310027,
-      "name": "刚腕的独眼巨人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310028,
-      "name": "灵敏的老虎斧战士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310029,
-      "name": "压坏的石人"
+      "name": "Golem Frantumatore"
     },
     {
       "fields": [
@@ -243,22 +225,6 @@
       ],
       "id": 120310039,
       "name": "Draghetto Ustione Accesso Anticipato"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310042,
-      "name": "坚守的千年石人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310047,
-      "name": "贯彻到底的千年原人"
     },
     {
       "fields": [
@@ -291,29 +257,17 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310056,
-      "name": "千年原人的仪式"
+      "name": "Rituale di Sengenjin"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310057,
-      "name": "千年原人的复活"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310058,
-      "name": "千年的粉碎者"
+      "name": "Frantumatore del Millennio"
     },
     {
       "fields": [
@@ -332,10 +286,10 @@
     },
     {
       "fields": [
-        "name"
+        "desc"
       ],
       "id": 120310069,
-      "name": "千年原人"
+      "name": "Sengenjin"
     },
     {
       "fields": [
@@ -1592,19 +1546,19 @@
     "120310023": "0585da95088f719e1a83e3a9d97853197e8eaee5083fa1f49c7b10fc60356c00",
     "120310025": "c867345fe543fec6e32fa6504edc3a5695b77ceb4038c2a75df5585d43ac51ad",
     "120310026": "8a43e9ff6b577916cfd142d4e96a8cda2cc4f4a6e743255cce69c81e836a48a2",
-    "120310027": "1f30b54ef4a3fd52aefb6367087d20bf0f5961cca9748f790333afa72b770651",
-    "120310028": "a30935dbfcfa99b7c29c0640a6e1c98ed24d348e41d21411b29e68b6f6fd8d3f",
-    "120310029": "28c69b68526bc67b5147d4b724d03c33c2bba087bb8c597b79091adbd3c35f78",
+    "120310027": "a41e0e667a2c03b70810a9fffd55847eeb3cab5b40711f2defcc07c8c379f04c",
+    "120310028": "7bf5bda3ad58abf9213f2670be2215be25e42654b48bdba4bc7f6a2ef461d632",
+    "120310029": "373bb9f7b28a70728b1c2683b459b221ddb090ee32ea7d8d6845b63bff95ae4c",
     "120310036": "874c0e250aa8824208d73079350b8044e943f26dce3e595b3fd70aa5b0bc65b0",
     "120310037": "7cdabc217d529c1b25f37dec0bd2938f00eb544fcbf57b190f5844751a9b71a2",
     "120310038": "c6ee72b8ce595e3521787fd66b1373c86547c7b49d7b2400d2eea66e051b2a34",
     "120310039": "a304e9983fc418afd4357abd79e85e5a5efa91652fdbdd6fb67ba2038a6e53ea",
     "120310040": "4bf9d285a8b22a9da150187cf92649168d21c0e89a00c408ebf13fca0b33852a",
     "120310041": "d46a653539c8c655276cc8654084130bcdd9678e40e7126e82c10ae9bb97769c",
-    "120310042": "fd4693593f2e42cfe75a7cb8cda6c85e1091ac4a55e83e8b042e2c4e6116d707",
+    "120310042": "5b53d2ec8a1e4a1c2fe6dd3dfdd7db2155cae9e638fb759b4802bbada8db87cd",
     "120310045": "bf6cbdfb18f3f0832b347469413945a077ab827f6ed5ea0a573beb231aefe0f0",
     "120310046": "4fa3d65df04d53cd22b685eb0a34d7b67d85b7959753989f15fdbf0db6ec2ac6",
-    "120310047": "83ec19b7506a6df2184cf647d9145500e474c6909d3384a773cff77c7ec41abb",
+    "120310047": "cce5c87ffe6e165b7c23f635172a6671976c2657ed80177b60c43fde4156d87c",
     "120310048": "81c9e3a9cb25ef3c1d06495f6000e073bf18cca23bb32365f171ef1f9a6a3734",
     "120310049": "081a397fb33845387b3ab9b3c1997f93f39fd11dd177bea86f601bfad89614ef",
     "120310050": "7d0640500fc1efa6818cc6f87c4fe6b3dc1808472c2c23c57bab75137258d2be",
@@ -1612,14 +1566,14 @@
     "120310052": "3df5fdd7ad54968f16868c1313615090831f3ca18d571752a229ae2ca9b1fd63",
     "120310054": "5af8063534027b2acb3f35193622f22e426fd1ddec0f961636e73618c7970582",
     "120310055": "428a52a1867a1d86c8a614a04158595b992f9e3038bebd32f4f7067e4aae1e3e",
-    "120310056": "5dd5fa97b9908768d89e2244701e7014031bf8f2426bf5a48a7f53b05b50fc56",
-    "120310057": "b8f147fb8bdf9fe21b498056ae586daf83c48577dfd1139afcb275aa11c45461",
-    "120310058": "4bca0dbeda41d5bb77ea3ec2a0325d12b1abfa243d5d5639bfd4e5e360a6e2ec",
+    "120310056": "3bd2dc2b58f9e9de55c020c5f5f7de1cb6850349dcb2a7b6869845852c5490d2",
+    "120310057": "99530a54b94d8b2baa8ea9444407bb68d46888a405bfabe9307011ad10fa7ce3",
+    "120310058": "d9b5c1e0ab36a9f5967b582f384c615d89b2f9419d8a970b818b4670d8250acb",
     "120310061": "21a6faf3d48673d5838ac4dba4a5baa7d6a974aefcb1e35a371534e03f585f74",
     "120310062": "10b7f5636d893193f402cfc6c2cfc076f6e94cf3711e54390e569cfdf5d49c56",
     "120310063": "3e88ae14e6684587afbfa594153248f270a1c69a77f04f6197cd961f53a9389b",
     "120310066": "fe7a1f64bcdbc159b2139a1c14bf1943de4b848fcdf4778a78aadbe7270bf863",
-    "120310069": "b6fc5c99c79a9ece53ad47e8554e88cd8c37d39860f0664a4b60b1ac7ee2f7f9",
+    "120310069": "8e128e2814fdf967b4e6cc682d4b89bfe5d90e63cc94d8281bd7e2cafece38ed",
     "120311001": "a671367dfe6a4dc522908886d965b21913544db14e8487dac058da20224ba7be",
     "120311002": "33711b3fe67d9c0ee61729a9f0cfd9fa56e95d0bafef2f69f5fac02d103c4773",
     "120311004": "e248d3dcb06e097541defa561899e6844299d9c82fa6cfb34a992c120f102fda",
