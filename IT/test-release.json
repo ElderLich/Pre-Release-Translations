@@ -1,5 +1,17 @@
 [
   {
+    "name": "Numero 96: Manipolatore Oscuro",
+    "desc": "3 mostri OSCURITÀ di Livello 2\r\nPuoi staccare 1 materiale da questa carta; questa carta guadagna ATK pari all'ATK originale totale di tutti i mostri attualmente controllati dal tuo avversario.\r\nQuando il tuo avversario attiva una carta o un effetto (Effetto Rapido): puoi mandare questa carta con materiali al Cimitero; Evoca Specialmente mostri \"Orrore Umbral\" e/o \"Divoramalizia\" dal tuo Cimitero fino al numero di materiali che questa carta aveva.\r\nPuoi utilizzare ciascun effetto di \"Numero 96: Manipolatore Oscuro\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Xyz] Demone/Oscurità  [☆2] 100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307043.jpg?version=19.7"
+  },
+  {
+    "name": "Trasformazione del Chaos di Barian",
+    "desc": "Scegli come bersaglio 1 Mostro Xyz \"Masquerade\" che controlli; Evoca Specialmente dal tuo Extra Deck 1 mostro \"Numero\" che sia di 1 Rango superiore o di 2 Ranghi inferiore a quel mostro, utilizzandolo come materiale (questa viene considerata un'Evocazione Xyz, trasferisci i suoi materiali).\r\nPuoi bandire questa carta dal tuo Cimitero, poi scegliere come bersaglio 3 mostri \"Orrore Umbral\" e/o Mostri Xyz \"Masquerade\" nel tuo Cimitero; mettili in fondo al Deck in qualsiasi ordine, poi pesca 1 carta.\r\nPuoi utilizzare solo 1 effetto di \"Trasformazione del Chaos di Barian\" per turno, e solo una volta in quel turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307065.jpg?version=19.7"
+  },
+  {
     "name": "Ashtrata Tamayori",
     "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi Evocare Specialmente 1 mostro non-Tuner \"Ashtra\" dal tuo Deck in Posizione di Difesa, poi puoi mettere 1 mostro scoperto che controlli in Posizione di Difesa coperta, inoltre non puoi Evocare Specialmente dall'Extra Deck per il resto di questo turno, eccetto tramite Evocazione Synchro utilizzando un Tuner di Livello 1.\r\nSe uno o più mostri \"Ashtra\" e/o carte coperte che controlli stanno per essere distrutti dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero.\r\nPuoi utilizzare ciascun effetto di \"Ashtrata Tamayori\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Tuner] Fata/Fuoco  [★1] 0/0",
