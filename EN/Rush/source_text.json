@@ -2,13 +2,13 @@
   "language": "en",
   "matches": {},
   "requested_ids": [
-    120310036
+    120000012
   ],
   "unresolved": [
     {
-      "id": 120310036,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP036"
+      "id": 120000012,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
     }
   ]
 }

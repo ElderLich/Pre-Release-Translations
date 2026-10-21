@@ -1,6 +1,14 @@
 {
   "language": "jp",
   "matches": {},
-  "requested_ids": [],
-  "unresolved": []
+  "requested_ids": [
+    120000012
+  ],
+  "unresolved": [
+    {
+      "id": 120000012,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
+    }
+  ]
 }

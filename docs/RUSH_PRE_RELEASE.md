@@ -61,7 +61,15 @@ The workflow and daily freshness check use the project's advertised HTTPS URL,
 SSH hostname; it does not serve the HTTPS clone used by GitHub runners.
 `.github/scripts/fetch_rush_sources.py` fetches fresh shallow checkouts of Rush
 and only the `Data/locales/*/rush_cards.cdb` seed databases, with three attempts.
-Clones have a 90-second limit; the larger database transfer has five minutes.
+Connections may stay below 1 KiB/s for up to 60 seconds before retrying.
+Each clone and sparse database transfer has a five-minute limit, with 15- and
+45-second pauses between attempts. Both repositories share a 15-minute download
+budget so the 30-minute workflow retains time for packaging. Tags are skipped.
+If the Rush Git transfer fails, the remaining attempts use the same server's
+GitLab archive API. Each attempt resolves the current `master` commit and
+downloads its exact archive. The archive root, required files, entry paths and
+sizes are checked before accepting it; its commit is recorded in the build's
+source receipt. GitHub translation databases continue to use sparse Git clones.
 Timeouts terminate Git workers before partial attempts are discarded. Required
 source files are checked, and existing checkouts are never overwritten. A source outage stops publication
 instead of building packages from an old cached patch.
@@ -139,6 +147,15 @@ locale's previous release bytes untouched.
 Thai uses the English fallback: selecting either EN or TH rebuilds both, and
 Thai follows English translation/review readiness and has the same package bytes.
 The Actions summary distinguishes published, already-current and pending locales.
+Each changed Rush package also gets an annotated Git tag such as `EN_Rush-v1`,
+`ES_Rush-v1`, or `ZH-CN_Rush-v1`. Every locale has its own counter, starting at 1
+and increasing only when its package changes. These counters are independent of
+the standard `EN-v...` tags and the client-facing `rush-version.txt` timestamps.
+Workspace/report-only updates and unchanged packages create no tags; retirement-only
+package updates do. Existing packages are not tagged retroactively. The workflow
+pushes the package commit and all its tags atomically, then links the published
+tags in the Actions summary. These are Git tags, matching the standard workflow;
+no separate GitHub Release entries or release assets are created.
 Pending translation is a normal successful `sync` outcome; invalid databases,
 missing scripts and other build failures still fail the job before releases are
 written. The shared source receipt lists only ready locales as built and records

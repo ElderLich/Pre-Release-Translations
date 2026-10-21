@@ -279,6 +279,51 @@ class ZaneUpdateTests(unittest.TestCase):
         self.assertEqual(rows[1]["str1"], "2")
         self.assertNotIn(2, rows)
 
+    def test_unchanged_github_files_report_import_status_instead_of_claiming_cn_is_current(self):
+        stored = {key: "a" * 40 for key in zane.STANDARD_FILES}
+        for path in (zane.RAW_DIR / "test-release.cdb", zane.RAW_DIR / "test-strings.conf",
+                     zane.MAPPINGS_CSV, zane.STANDARD_BASELINE_CDB, zane.STANDARD_BASELINE_CONF):
+            path.parent.mkdir(parents=True, exist_ok=True)
+            path.write_bytes(b"unchanged")
+        with patch.object(zane, "_fetch_standard_remote_shas", return_value=stored), \
+             patch.object(zane, "_load_stored_shas", return_value=stored), \
+             patch.object(zane, "_show_standard_import_status") as status, \
+             patch.object(zane, "download_remote_file") as download, \
+             patch.object(zane, "log") as log, patch("builtins.input", return_value="n"):
+            zane.option1_sync_only()
+        status.assert_called_once()
+        download.assert_not_called()
+        self.assertTrue(any("no comprueba directamente" in item.args[0] for item in log.call_args_list))
+
+    def test_standard_status_reports_stale_import_and_failure_using_only_read_access(self):
+        runs = [{"status": "completed", "conclusion": "failure"},
+                {"status": "completed", "conclusion": "success", "run_started_at": "2026-10-13T15:54:35Z"}]
+        with patch.object(zane, "github_api_request", return_value={"workflow_runs": runs}) as api, \
+             patch.object(zane, "GITHUB_BRANCH", "es/mobile"), \
+             patch.object(zane.time, "time", return_value=2_000_000_000), patch.object(zane, "log") as log:
+            zane._show_standard_import_status()
+        api.assert_called_once_with("GET", "actions/workflows/es-workspace-sync.yml/runs?branch=es%2Fmobile&per_page=20")
+        messages = "\n".join(call.args[0] for call in log.call_args_list)
+        self.assertIn("no terminó correctamente", messages)
+        self.assertIn("2026-10-13", messages)
+        self.assertIn("más de 24 horas", messages)
+
+    def test_standard_status_reports_active_import_without_blocking_sync(self):
+        with patch.object(zane, "github_api_request", return_value={"workflow_runs": [{"status": "in_progress"}]}), \
+             patch.object(zane, "log") as log:
+            zane._show_standard_import_status()
+        messages = "\n".join(call.args[0] for call in log.call_args_list)
+        self.assertIn("pendiente o en curso", messages)
+        self.assertIn("No se pudo confirmar", messages)
+
+    def test_status_network_failure_is_unknown_not_current_and_does_not_abort_sync(self):
+        with patch.object(zane, "github_api_request", side_effect=requests.Timeout("offline")), \
+             patch.object(zane, "log") as log:
+            zane._show_standard_import_status()
+        messages = "\n".join(call.args[0] for call in log.call_args_list)
+        self.assertIn("No se pudo verificar", messages)
+        self.assertIn("es-workspace-sync.yml", messages)
+
     def test_mapping_failure_never_advances_standard_sha(self):
         shas = {key: key for key in zane.STANDARD_FILES}
         with patch.object(zane, "_fetch_standard_remote_shas", return_value=shas), \

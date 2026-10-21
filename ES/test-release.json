@@ -1,5 +1,29 @@
 [
   {
+    "name": "Asutrata Tamayori",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes Invocar de Modo Especial 1 monstruo \"Asutra\" que no sea Cantante desde tu Deck en Posición de Defensa, y después puedes cambiar 1 monstruo boca arriba que controles a Posición de Defensa boca abajo, y además no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto por una Invocación por Sincronía usando un Cantante de Nivel 1.\r\nSi una o más cartas \"Asutra\" y/o cartas boca abajo que controles fueran a ser destruidas por efecto de carta, puedes desterrar esta carta en tu Cementerio en su lugar.\r\nSólo puedes usar cada efecto de \"Asutrata Tamayori\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Cantante] Hada/FUEGO  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Asutrama Yoami",
+    "desc": "1 Cantante + 1+ monstruos que no sean Cantantes\t\r\nSi esta carta es Invocada de Modo Especial, o mandada del Campo al Cementerio: puedes añadir a tu mano, o Colocar, 1 Trampa \"Asutra\" desde tu Deck. \r\nSi tienes una Trampa en tu Cementerio: puedes devolver a la mano tantas cartas boca abajo en el Campo como sea posible, y después si tienes 5 o más Trampas en tu Cementerio, puedes devolver a la mano todas las cartas que controle tu adversario. \r\nSólo puedes usar cada efecto de \"Asutrama Yoami\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Sincronía] Lanzador de Conjuros/VIENTO  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
+    "name": "Alas Desenfrenadas de Atlantis",
+    "desc": "(El nombre de esta carta se convierte en \"Umi\" mientras está en el Campo).\t\r\nPuedes mandar al Cementerio esta carta en tu mano y 1 Mágica/Trampa o \"Umi\" desde tu mano o Campo boca arriba, y después seleccionar 1 carta que controle tu adversario; mándala al Cementerio.\r\nSi controlas \"Atlantis, la Ciudad del Dragón Marino\": puedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo Serpiente Marina de Nivel 4 o menor desde tu mano o Deck.\r\nSólo puedes usar cada uno de los siguientes efectos de \"Alas Desenfrenadas de Atlantis\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Serpiente Marina/AGUA  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codaedalus",
+    "desc": "2 monstruos de AGUA\t\r\n(El nombre de esta carta se convierte en \"Umi\" mientras está en el Campo).\t\r\nSólo puedes Invocar de Modo Especial \"Codaedalus\" una vez por turno.\r\nSi esta carta es Invocada por Enlace: puedes activar este efecto; durante la End Phase de este turno, añade a tu mano 1 carta en tu Cementerio que mencione \"Atlantis, la Ciudad del Dragón Marino\", excepto \"Codaedalus\".\r\nUna vez por turno: puedes mandar al Cementerio 1 \"Umi\" boca arriba que controles; manda al Cementerio hasta 2 Mágicas/Trampas en el Campo.",
+    "overallString": "[Monstruo|Efecto|Enlace] Serpiente Marina/AGUA  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
     "name": "Poder del Duelista",
     "desc": "Declara 2, 3 o 4 Atributos diferentes; aplica este efecto basado en el número declarado, y además durante la End Phase de este turno, debes mandar todas las cartas que controles al Cementerio, a menos que hayas activado los efectos de monstruos de todos los Atributos declarados en tu Campo y/o Cementerio este turno;\r\n● 2: Selecciona 1 monstruo en el Campo; destiérralo.\r\n● 3: Roba 2 cartas, y después descarta 1 carta.\r\n● 4: Niega los efectos de 2 cartas boca arriba en el Campo.\t\r\nSólo puedes activar 1 \"Poder del Duelista\" por turno.",
     "overallString": "[Mágica|Juego Rápido]",
@@ -44,7 +68,7 @@
   {
     "name": "Maestra de Espadas Amazoness",
     "desc": "2 monstruos \"Amazoness\"\t\r\nCuando tu monstruo \"Amazoness\" destruye un monstruo del adversario en batalla: puedes robar 1 carta. \r\nSólo puedes usar los siguientes efectos de \"Maestra de Espadas Amazoness\" una vez por turno cada uno. \r\nSi esta carta es Invocada por Fusión: puedes Invocar de Modo Especial 1 monstruo \"Amazoness\" de Nivel 4 o menor desde tu Deck. \r\n(Efecto Rápido): Puedes Sacrificar 1 monstruo, y después seleccionar 1 Monstruo de Efecto en el Campo; este pierde 500 ATK, y además sus efectos son negados.",
-    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/TIERRA  [★8] 2600/2200",
+    "overallString": "[Monstruo|Efecto|Fusión] Guerrero/TIERRA  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
@@ -187,7 +211,7 @@
   },
   {
     "name": "Ars Magna Elfnota",
-    "desc": "2 monstruos, incluyendo un monstruo \"Ars Magna\" o \"Elfnota\"\t\nTus monstruos enlazados ganan 300 ATK por cada Tipo de Monstruo diferente en el Campo. \nSólo puedes usar los siguientes efectos de \"Ars Magna Elfnota\" una vez por turno cada uno. \nDurante tu Main Phase: puedes mandar al Cementerio, o desterrar, 1 carta que controles, y después puedes devolver 1 monstruo en el Campo a la mano. \nPuedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo \"Elfnota\" desde tu mano.",
+    "desc": "2 monstruos, incluyendo un monstruo \"Ars Magna\" o \"Elfnota\"\t\r\nTus monstruos enlazados ganan 300 ATK por cada Tipo de Monstruo diferente en el Campo. \r\nSólo puedes usar los siguientes efectos de \"Ars Magna Elfnota\" una vez por turno cada uno. \r\nDurante tu Main Phase: puedes mandar al Cementerio, o desterrar, 1 carta que controles, y después puedes devolver 1 monstruo en el Campo a la mano. \r\nPuedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 monstruo \"Elfnota\" desde tu mano.",
     "overallString": "[Monstruo|Efecto|Enlace] Lanzador de Conjuros/LUZ  [LINK-2] 1500/-  [→][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307047.jpg?version=19.7"
   },

@@ -91,6 +91,12 @@ def cdb_bytes(datas: dict, texts: dict) -> bytes:
 
 
 def revision(path: Path) -> str | None:
+    receipt = path / ".rush-source-revision"
+    if receipt.is_file() and not (path / ".git").exists():
+        value = receipt.read_text(encoding="ascii").strip()
+        if not re.fullmatch(r"[0-9a-f]{40}", value):
+            raise ValueError(f"Invalid Rush archive revision: {receipt}")
+        return value
     result = subprocess.run(["git", "-c", f"safe.directory={path.resolve().as_posix()}",
                              "-C", str(path), "rev-parse", "HEAD"],
                             capture_output=True, text=True, check=False)

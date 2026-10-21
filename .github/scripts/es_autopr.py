@@ -165,9 +165,19 @@ def merge_release_cdb(source_cdb: Path, target_cdb: Path) -> None:
         text_update = ", ".join(f'"{column}"=?' for column in str_cols)
         for row in src.execute(f"SELECT {text_select} FROM texts ORDER BY id"):
             card_id = row["id"]
-            if tgt.execute("SELECT 1 FROM texts WHERE id=?", (card_id,)).fetchone():
+            existing = tgt.execute("SELECT * FROM texts WHERE id=?", (card_id,)).fetchone()
+            if existing:
                 if str_cols:
-                    tgt.execute(f"UPDATE texts SET {text_update} WHERE id=?", ([row[column] for column in str_cols] + [card_id]))
+                    values = []
+                    for column in str_cols:
+                        source_value, translated = row[column], existing[column]
+                        # Keep translator wording for active slots. New/untranslated slots
+                        # still import CN for PromptPatcher; removed slots must be cleared.
+                        keep_translation = (str(source_value or "").strip() and
+                                            str(translated or "").strip() and
+                                            not re.search(r"[\u3400-\u9fff]", str(translated)))
+                        values.append(translated if keep_translation else source_value)
+                    tgt.execute(f"UPDATE texts SET {text_update} WHERE id=?", values + [card_id])
             else:
                 tgt.execute(f"INSERT INTO texts VALUES ({text_insert})", [row[column] for column in src_texts_cols])
 

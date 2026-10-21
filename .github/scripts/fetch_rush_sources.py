@@ -7,6 +7,7 @@ from pathlib import Path
 import os
 import signal
 import subprocess
+import sys
 import tempfile
 import time
 
@@ -15,11 +16,21 @@ RUSH_SOURCE = "https://code.moenext.com/mycard/ygopro-rush-duel.git"
 RUSH_TRANSLATIONS = "https://github.com/ElderLich/MDPro4_Data.git"
 RUSH_DATABASES = "/Data/locales/*/rush_cards.cdb"
 ATTEMPTS = 3
-GIT_TIMEOUT = 90
+GIT_TIMEOUT = 300
 SPARSE_TIMEOUT = 300
+FETCH_TIMEOUT = 900
+LOW_SPEED_SECONDS = 60
+RETRY_DELAY = 15
 
 
-def run_git(command: list[str], *, env: dict, timeout: int) -> None:
+def remaining_timeout(deadline: float, limit: float) -> float:
+    remaining = deadline - time.monotonic()
+    if remaining <= 0:
+        raise RuntimeError("Source download time budget exhausted; no packages were built.")
+    return min(limit, remaining)
+
+
+def run_git(command: list[str], *, env: dict, timeout: float) -> None:
     # Git spawns transport/index workers. Stop the complete process tree before
     # deleting a timed-out checkout, including on Windows where files stay locked.
     with subprocess.Popen(command, env=env, start_new_session=os.name != "nt") as process:
@@ -43,27 +54,39 @@ def run_git(command: list[str], *, env: dict, timeout: int) -> None:
 
 
 def clone_repository(url: str, branch: str, target: Path, *,
-                     required: tuple[str, ...], sparse: str | None = None) -> None:
+                     required: tuple[str, ...], sparse: str | None = None,
+                     deadline: float | None = None, archive_fallback: bool = False) -> None:
     """Retry in disposable folders; never reset an existing checkout or reuse stale data."""
     target = target.resolve()
     if target.exists():
         raise ValueError(f"Refusing to replace existing source checkout: {target}")
+    if archive_fallback and (url != RUSH_SOURCE or branch != "master" or sparse):
+        raise ValueError("Archive fallback is only available for the official Rush master source")
+    if deadline is None:
+        deadline = time.monotonic() + FETCH_TIMEOUT
     target.parent.mkdir(parents=True, exist_ok=True)
     env = {**os.environ, "GIT_TERMINAL_PROMPT": "0"}
-    command = ["git", "-c", "http.lowSpeedLimit=1024", "-c", "http.lowSpeedTime=20"]
+    command = ["git", "-c", "http.lowSpeedLimit=1024", "-c", f"http.lowSpeedTime={LOW_SPEED_SECONDS}"]
     for attempt in range(1, ATTEMPTS + 1):
-        print(f"Fetching {url} ({attempt}/{ATTEMPTS})", flush=True)
+        timeout = remaining_timeout(deadline, GIT_TIMEOUT)
+        print(f"Fetching {url} ({attempt}/{ATTEMPTS}; up to {timeout:g}s)", flush=True)
         try:
             with tempfile.TemporaryDirectory(prefix=f".{target.name}-", dir=target.parent) as directory:
                 checkout = Path(directory) / "checkout"
-                clone = command + ["clone", "--depth", "1", "--single-branch", "--branch", branch]
-                if sparse:
-                    clone += ["--filter=blob:none", "--sparse"]
-                run_git(clone + [url, str(checkout)], timeout=GIT_TIMEOUT, env=env)
+                if archive_fallback and attempt > 1:
+                    print("Git transfer failed; trying the current commit through the GitLab archive API.", flush=True)
+                    download = [sys.executable, str(Path(__file__).with_name("rush_source_archive.py")),
+                                "--target", str(checkout)]
+                else:
+                    download = command + ["clone", "--depth", "1", "--no-tags", "--single-branch", "--branch", branch]
+                    if sparse:
+                        download += ["--filter=blob:none", "--sparse"]
+                    download += [url, str(checkout)]
+                run_git(download, timeout=remaining_timeout(deadline, GIT_TIMEOUT), env=env)
                 if sparse:
                     print(f"Fetching translated databases in {sparse}", flush=True)
                     run_git(command + ["-C", str(checkout), "sparse-checkout", "set", "--no-cone", sparse],
-                            timeout=SPARSE_TIMEOUT, env=env)
+                            timeout=remaining_timeout(deadline, SPARSE_TIMEOUT), env=env)
                 for relative in required:
                     if not (checkout / relative).is_file():
                         raise ValueError(f"Fresh checkout is missing {relative}: {url}")
@@ -74,7 +97,9 @@ def clone_repository(url: str, branch: str, target: Path, *,
             print(f"Source fetch failed: {error}", flush=True)
             if attempt == ATTEMPTS:
                 raise RuntimeError(f"Cannot fetch current sources from {url}; no packages were built.") from error
-            time.sleep(attempt * 2)
+            delay = remaining_timeout(deadline, RETRY_DELAY * 3 ** (attempt - 1))
+            print(f"Retrying fresh checkout in {delay:g}s.", flush=True)
+            time.sleep(delay)
 
 
 def main() -> None:
@@ -82,11 +107,15 @@ def main() -> None:
     parser.add_argument("--source-root", required=True, type=Path)
     parser.add_argument("--translations-root", required=True, type=Path)
     args = parser.parse_args()
+    # Reserve the rest of the workflow's 30 minutes for packaging/publication,
+    # even when both source hosts need retries.
+    deadline = time.monotonic() + FETCH_TIMEOUT
     try:
         clone_repository(RUSH_SOURCE, "master", args.source_root,
-                         required=("RD Patch.cdb", "sets.md", "script/RDBase.lua"))
+                         required=("RD Patch.cdb", "sets.md", "script/RDBase.lua"), deadline=deadline,
+                         archive_fallback=True)
         clone_repository(RUSH_TRANSLATIONS, "main", args.translations_root,
-                         sparse=RUSH_DATABASES, required=("Data/locales/en-US/rush_cards.cdb",))
+                         sparse=RUSH_DATABASES, required=("Data/locales/en-US/rush_cards.cdb",), deadline=deadline)
     except (RuntimeError, ValueError, OSError) as error:
         parser.exit(1, f"Rush source update failed: {error}\n")
 

@@ -7,6 +7,7 @@ on:
     paths:
       - "Tools/rush_prerelease.py"
       - ".github/scripts/fetch_rush_sources.py"
+      - ".github/scripts/rush_source_archive.py"
       - "Tools/rush_source_text.py"
       - ".github/scripts/card_text_autofill.py"
       - ".github/scripts/codexygo_source.py"
@@ -48,14 +49,14 @@ jobs:
             --source-root "$RUNNER_TEMP/rush-source" \
             --translations-root "$RUNNER_TEMP/rush-translations"
 
-      - name: Reconcile, package and commit all Rush locales
+      - name: Reconcile, package, commit and tag Rush locales
         run: |
           set -euo pipefail
           git config user.name "ElderLich"
           git config user.email "35314175+ElderLich@users.noreply.github.com"
           branch="${GITHUB_REF_NAME:-main}"
           for attempt in 1 2 3 4 5; do
-            git fetch origin "$branch"
+            git fetch --tags origin "$branch"
             git checkout -B "$branch" "origin/$branch"
             python Tools/rush_prerelease.py sync \
               --source-root "$RUNNER_TEMP/rush-source" \
@@ -70,10 +71,41 @@ jobs:
               echo "No generated Rush changes to commit. See the summary for translation readiness."
               exit 0
             fi
-            git commit -m "Update Rush pre-release cards in all locales"
-            if git push origin "HEAD:$branch"; then
+            # Tag only locales whose package changed in this build.
+            tags=()
+            tag_refs=()
+            for locale in EN DE ES FR IT JP KR PT TH ZH-CN ZH-TW; do
+              package="$locale/rush-pre-release.ypk"
+              if [ ! -f "$package" ] || git diff --cached --quiet -- "$package"; then
+                continue
+              fi
+              latest_tag=$(git tag --list "${locale}_Rush-v*" | sed -E "s/^${locale}_Rush-v([0-9]+)$/\1/" | grep -E '^[0-9]+$' | sort -n | tail -1 || true)
+              tag="${locale}_Rush-v$(( ${latest_tag:-0} + 1 ))"
+              tags+=("$tag")
+              tag_refs+=("refs/tags/$tag")
+            done
+            commit_args=(-m "Update Rush pre-release cards in all locales")
+            if [ "${#tags[@]}" -gt 0 ]; then
+              commit_args+=(-m "Published Rush tags: ${tags[*]}")
+            fi
+            git commit "${commit_args[@]}"
+            for tag in "${tags[@]}"; do
+              git tag -a "$tag" -m "Release $tag"
+            done
+            # Publish every tag and the build together, or leave the remote untouched.
+            if git push --atomic origin "HEAD:$branch" "${tag_refs[@]}"; then
               cat "$RUNNER_TEMP/rush-summary.md" >> "$GITHUB_STEP_SUMMARY"
+              if [ "${#tags[@]}" -gt 0 ]; then
+                printf '\n### Published Rush tags\n\n' >> "$GITHUB_STEP_SUMMARY"
+                for tag in "${tags[@]}"; do
+                  printf -- '- [%s](%s/%s/tree/%s)\n' "$tag" "$GITHUB_SERVER_URL" "$GITHUB_REPOSITORY" "$tag" >> "$GITHUB_STEP_SUMMARY"
+                done
+              fi
               exit 0
+            fi
+            # Remove only tags created by this rejected attempt before fetching again.
+            if [ "${#tags[@]}" -gt 0 ]; then
+              git tag -d "${tags[@]}"
             fi
             echo "Branch changed while building; retrying from its latest contents ($attempt/5)."
             sleep $((attempt * 5))

@@ -4,6 +4,7 @@
 import os, re, shutil, subprocess, requests, time, json, zipfile, sqlite3
 import logging, csv, hashlib, base64, sys, tempfile, io
 from contextlib import closing
+from datetime import datetime
 from pathlib import Path
 from urllib.parse import quote, urlencode
 
@@ -1833,6 +1834,34 @@ def _load_stored_shas():
         return {}
 
 
+def _show_standard_import_status():
+    """El SHA del workspace no demuestra que la fuente CN ya se haya importado."""
+    workflow = "es-workspace-sync.yml"
+    link = f"https://github.com/{GITHUB_OWNER}/{GITHUB_REPO}/actions/workflows/{workflow}"
+    try:
+        query = urlencode({"branch": GITHUB_BRANCH, "per_page": 20})
+        runs = github_api_request("GET", f"actions/workflows/{workflow}/runs?{query}").get("workflow_runs", [])
+        if runs:
+            latest = runs[0]
+            if latest.get("status") != "completed":
+                log("⏳ La importación CN está pendiente o en curso. Vuelve a sincronizar cuando termine.")
+            elif latest.get("conclusion") != "success":
+                log(f"⚠️  La última importación CN no terminó correctamente: {latest.get('conclusion', 'desconocido')}.")
+        successful = next((run for run in runs if run.get("conclusion") == "success"), None)
+        if successful:
+            started = datetime.fromisoformat(successful["run_started_at"].replace("Z", "+00:00"))
+            if not started.tzinfo:
+                raise ValueError("Fecha de importación sin zona horaria")
+            log(f"Última importación CN correcta: {started.isoformat()}.")
+            if time.time() - started.timestamp() >= 24 * 3600:
+                log("⚠️  Han pasado más de 24 horas desde la importación CN; el workspace puede estar pendiente de actualizar.")
+        else:
+            log("⚠️  No se pudo confirmar una importación CN correcta en las últimas 20 ejecuciones.")
+    except Exception as exc:
+        log(f"⚠️  No se pudo verificar el estado del importador CN: {exc}")
+    log(f"Importador Standard (Sync ES Workspace): {link}")
+
+
 def _save_stored_shas(shas):
     _atomic_write(STANDARD_REMOTE_SHA_FILE,
                   (json.dumps(shas, indent=2, sort_keys=True) + "\n").encode("utf-8"))
@@ -1930,7 +1959,7 @@ def option1_sync_only(dry_run=False):
         return
     start = time.time()
 
-    log("Verificando novedades en GitHub...")
+    log("Verificando cambios en el workspace ES de GitHub...")
     try:
         remote_shas = _fetch_standard_remote_shas()
     except Exception as e:
@@ -1953,7 +1982,9 @@ def option1_sync_only(dry_run=False):
             changed[key] = r_sha
 
     if not changed:
-        log("✅ Sin novedades: los 3 archivos (CDB, conf, Mappings) están sin cambios.")
+        log("Los 3 archivos ES de GitHub (CDB, conf, Mappings) no cambiaron desde tu última sincronización.")
+        log("Esto no comprueba directamente si CN publicó cartas nuevas; primero debe importarlas Sync ES Workspace.")
+        _show_standard_import_status()
         respuesta = input("¿Forzar descarga y sincronización de todos modos? (s/n): ").strip().lower()
         if respuesta != "s":
             log("Operación cancelada.")

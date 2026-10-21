@@ -1,5 +1,29 @@
 [
   {
+    "name": "Ashtrata Tamayori",
+    "desc": "Se este card é Invocado por Invocação-Especial: você pode Invocar por Invocação-Especial 1 não-Regulador \"Ashtra\" do seu Deck em Posição de Defesa, então você pode alterar 1 monstro com a face para cima que você controla para Posição de Defesa com a face para baixo, você também não pode Invocar por Invocação-Especial do seu Deck Adicional pelo resto deste turno, exceto Invocação-Sinchro usando um Regulador Nível 1.\r\nSe um \"Ashtra\" e/ou mais cards com a face para baixo que você controla seriam destruídos por efeitos, em vez disso você pode banir este card do seu Cemitério.\r\nVocê só pode usar cada um dos efeitos de \"Ashtrata Tamayori\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Regulador] Fada/Fogo  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrama Yoami",
+    "desc": "1 Regulador + 1+ não-Reguladores\r\nSe este card é Invocado por Invocação-Especial, ou enviado do campo ao Cemitério: você pode adicionar à sua mão, ou Baixar, 1 Armadilha \"Ashtra\" do seu Deck.\r\nSe você tem uma Armadilha no seu Cemitério: você pode retornar quantos cards com a face para baixo possíveis no campo à mão, então se você tem 5 ou mais Armadilhas no seu Cemitério, você pode retornar todos os cards que seu oponente controla à mão.\r\nVocê só pode usar cada um dos efeitos de \"Ashtrama Yoami\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Sincro] Mago/Vento  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
+    "name": "Asas Exuberantes de Atlântida",
+    "desc": "O nome deste card se torna \"Umi\" enquanto está no campo.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Asas Exuberantes de Atlântida\" uma vez por turno.\r\nVocê pode enviar este card da sua mão e 1 Magia/Armadilha ou \"Umi\" da sua mão ou com a face para cima no campo ao Cemitério, então escolha 1 card que seu oponente controla; envie-o ao Cemitério.\r\nSe você controla \"Atlântida, a Cidade do Dragão Marinho\": você pode banir este card do seu Cemitério; Invoque por Invocação-Especial 1 monstro Serpente Marinha Nível 4 ou menor da sua mão ou Deck.",
+    "overallString": "[Monstro|Efeito] Serpente Marinha/Água  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codaedalus",
+    "desc": "2 monstros ÁGUA\r\nVocê só pode Invocar por Invocação-Especial um ou mais \"Codaedalus\" uma vez por turno.\r\nO nome deste card será \"Umi\" enquanto está no campo.\r\nSe este card é Invocado por Invocação-Link: você pode ativar este efeito; durante a Fase Final deste turno, adicione 1 card do seu Cemitério à sua mão que mencione \"Atlântida, a Cidade do Dragão Marinho\", exceto \"Codaedalus\".\r\nUma vez por turno: você pode enviar 1 \"Umi\" com a face para cima que você controla ao Cemitério; envie até 2 Magias/Armadilhas no campo ao Cemitério.",
+    "overallString": "[Monstro|Efeito|Link] Serpente Marinha/Água  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
     "name": "Poder do Duelista",
     "desc": "Declara 2, 3, ou 4 Atributos; aplique este efeito baseado no número declara, também durante a Fase Final deste turno, você deve enviar todos os cards que você controla ao Cemitério, a menos que você tenha ativado efeitos de monstros de todos os Atributos declarados no seu campo e/ou Cemitério neste turno.\r\n● 2: Escolha 1 monstro no campo; bana-o.\r\n● 3: Compre 2 cards, então descarte 1 card.\r\n● 4: Negue os efeitos de 2 cards com a face para cima no campo.\r\nVocê só pode ativar 1 \"Poder do Duelista\" por turno.",
     "overallString": "[Magia|Magia Rápida]",
@@ -44,7 +68,7 @@
   {
     "name": "Mestra da Espada Amazoness",
     "desc": "2 monstros \"Amazoness\"\r\nQuando seu monstro \"Amazoness\" destrói um monstro do oponente por batalha: você pode comprar 1 card.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Mestra da Espada Amazoness\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Fusão: você pode Invocar por Invocação-Especial 1 monstro \"Amazoness\" de Nível 4 ou menor do seu Deck.\r\n(Efeito Rápido): você pode oferecer como Tributo 1 monstro, então escolha 1 Monstro de Efeito no campo; ele perde 500 de ATK, seus efeitos também são negados.",
-    "overallString": "[Monstro|Efeito|Fusão] Guerreiro/Terra  [★8] 2600/2200",
+    "overallString": "[Monstro|Efeito|Fusão] Guerreiro/Terra  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
