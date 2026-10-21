@@ -1,5 +1,17 @@
 [
   {
+    "name": "Number 96: Dark Manipulator",
+    "desc": "You can only use the ① and ② effects of this card's name each one per turn.\r\n①：You can detach 1 material from this card; this card gains ATK equal to the total original ATK of all monsters your opponent currently controls.\r\n②：When your opponent activates a card or effect (Quick Effect): You can send this card with material to the GY; Special Summon \"Umbral Horror\" and/or \"Malicevorous\" monsters from your GY up to the number of materials this card had.",
+    "overallString": "[Monster|Effect|Xyz] Fiend/Dark  [☆2] 100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307043.jpg?version=19.7"
+  },
+  {
+    "name": "Chaos Barian's Change",
+    "desc": "You can only use 1 of the ① and ② effects of this card's name per turn, and only once that turn.\r\n①：Target 1 \"Masquerade\" Xyz Monster you control; Special Summon from your Extra Deck, 1 \"Number\" monster that is 1 Rank higher or 2 Ranks lower than that monster, by using it as material (this is treated as an Xyz Summon, transfer its materials).\r\n②：You can banish this card from your GY, then target 3 \"Umbral Horror\" monsters and/or \"Masquerade\" Xyz Monsters in your GY; place them on the bottom of the Deck in any order, then draw 1 card.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307065.jpg?version=19.7"
+  },
+  {
     "name": "Ashtrata Tamayori",
     "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 \"Ashtra\" non-Tuner from your Deck in Defense Position, then you can change 1 face-up monster you control to face-down Defense Position, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Synchro Summon using a Level 1 Tuner. If an \"Ashtra\" and/or face-down card(s) you control would be destroyed by card effect, you can banish this card from your GY instead. You can only use each effect of \"Ashtrata Tamayori\" once per turn.",
     "overallString": "[Monster|Effect|Tuner] Fairy/Fire  [★1] 0/0",
