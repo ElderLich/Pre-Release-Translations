@@ -1,5 +1,137 @@
 [
   {
+    "name": "Nummer 96: Finsterer Manipulator",
+    "desc": "3 FINSTERNIS Monster der Stufe 2\r\nDu kannst die Effekte ① und ② von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Du kannst 1 Material von dieser Karte abhängen; diese Karte erhält ATK in Höhe der Summe der Grund-ATK aller Monster, die dein Gegner derzeit kontrolliert.\r\n②: Wenn dein Gegner eine Karte oder einen Effekt aktiviert (Schnelleffekt): Du kannst diese Karte, die Material hat, auf den Friedhof legen; beschwöre bis zur Anzahl des Materials, das diese Karte hatte, „Schattenhorror“- und/oder „Bosheitsfresser“-Monster als Spezialbeschwörung von deinem Friedhof.",
+    "overallString": "[Monster|Effekt|Xyz] Unterweltler/Finsternis  [☆2] 100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307043.jpg?version=19.7"
+  },
+  {
+    "name": "Barians Chaosverwandlung",
+    "desc": "Du kannst nur 1 der Effekte ① und ② von Karten mit diesem Namen pro Spielzug verwenden und in jenem Spielzug nur einmal.\r\n①: Wähle 1 „Maskerade“-Xyz-Monster, das du kontrollierst; beschwöre 1 „Nummer“-Monster, dessen Rang um 1 höher oder um 2 niedriger ist als der jenes Monsters, als Spezialbeschwörung von deinem Extra Deck, indem du es als Material verwendest (dies wird als Xyz-Beschwörung behandelt, transferiere sein Material an das beschworene Monster).\r\n②: Du kannst diese Karte von deinem Friedhof verbannen und dann insgesamt 3 „Schattenhorror“-Monster und/oder „Maskerade“-Xyz-Monster in deinem Friedhof wählen; lege sie in beliebiger Reihenfolge unter das Deck, dann ziehe 1 Karte.",
+    "overallString": "[Zauber]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307065.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrata Tamayori",
+    "desc": "Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 „Ashtra“-Nicht-Empfänger-Monster als Spezialbeschwörung von deinem Deck in die Verteidigungsposition beschwören, dann kannst du 1 offenes Monster, das du kontrollierst, in die verdeckte Verteidigungsposition ändern, zusätzlich kannst du für den Rest dieses Spielzugs keine Spezialbeschwörungen vom Extra Deck durchführen, außer Synchrobeschwörungen, für die ein Empfänger der Stufe 1 verwendet wird. Falls eine oder mehr „Ashtra“- und/oder verdeckte Karten, die du kontrollierst, durch einen Karteneffekt zerstört würden, kannst du stattdessen diese Karte von deinem Friedhof verbannen. Du kannst jeden Effekt von „Ashtrata Tamayori“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt|Empfänger] Fee/Feuer  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrama Yoami",
+    "desc": "1 Empfänger + 1+ Nicht-Empfänger-Monster\nFalls diese Karte als Spezialbeschwörung beschworen oder vom Spielfeld auf den Friedhof gelegt wird: Du kannst 1 „Ashtra“-Falle von deinem Deck nehmen und sie entweder deiner Hand hinzufügen oder setzen. Falls sich eine Falle in deinem Friedhof befindet: Du kannst so viele verdeckte Karten auf dem Spielfeld wie möglich auf die Hand zurückgeben, dann, falls sich 5 oder mehr Fallen in deinem Friedhof befinden, kannst du alle Karten, die dein Gegner kontrolliert, auf die Hand zurückgeben. Du kannst jeden Effekt von „Ashtrama Yoami“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt|Synchro] Hexer/Wind  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
+    "name": "Tobende Schwingen von Atlantis",
+    "desc": "Der Name dieser Karte wird zu „Umi“, solange sie auf dem Spielfeld liegt. Du kannst jeden der folgenden Effekte von „Tobende Schwingen von Atlantis“ nur einmal pro Spielzug verwenden. Du kannst diese Karte von deiner Hand und 1 Zauber/Falle oder „Umi“ von deiner Hand oder offen von deiner Spielfeldseite auf den Friedhof legen und dann 1 Karte wählen, die dein Gegner kontrolliert; lege sie auf den Friedhof. Falls du „Atlantis, Stadt des Seedrachen“ kontrollierst: Du kannst diese Karte von deinem Friedhof verbannen; beschwöre 1 Seeschlange-Monster der Stufe 4 oder niedriger als Spezialbeschwörung von deiner Hand oder deinem Deck.",
+    "overallString": "[Monster|Effekt] Seeschlange/Wasser  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codaedalus",
+    "desc": "2 WASSER Monster\nDu kannst „Codaedalus“ nur einmal pro Spielzug als Spezialbeschwörung beschwören. Der Name dieser Karte wird zu „Umi“, solange sie auf dem Spielfeld liegt. Falls diese Karte als Linkbeschwörung beschworen wird: Du kannst diesen Effekt aktivieren; füge während der End Phase dieses Spielzugs deiner Hand 1 Karte von deinem Friedhof hinzu, die „Atlantis, Stadt des Seedrachen“ erwähnt, außer „Codaedalus“. Einmal pro Spielzug: Du kannst 1 offenes „Umi“, das du kontrollierst, auf den Friedhof legen; lege bis zu 2 Zauber/Fallen auf dem Spielfeld auf den Friedhof.",
+    "overallString": "[Monster|Effekt|Link] Seeschlange/Wasser  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
+    "name": "Kraft des Duellanten",
+    "desc": "Deklariere 2, 3 oder 4 Eigenschaften; führe diesen Effekt abhängig von der deklarierten Anzahl aus, zusätzlich musst du während der End Phase dieses Spielzugs alle Karten, die du kontrollierst, auf den Friedhof legen, es sei denn, du hast in diesem Spielzug die Effekte von Monstern mit allen deklarierten Eigenschaften auf deiner Spielfeldseite und/oder in deinem Friedhof aktiviert.\n● 2: Wähle 1 Monster auf dem Spielfeld; verbanne es.\n● 3: Ziehe 2 Karten, dann wirf 1 Karte ab.\n● 4: Annulliere die Effekte von 2 offenen Karten auf dem Spielfeld.\nDu kannst nur 1 „Kraft des Duellanten“ pro Spielzug aktivieren.",
+    "overallString": "[Zauber|Schnell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Amazonische dramatische Rettung",
+    "desc": "Du kannst die Effekte ① und ② von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden. Falls du ein „Harpyie“- oder „Amazonisch“-Monster kontrollierst, kannst du diese Karte in dem Spielzug aktivieren, in dem sie gesetzt wurde.\r\n①: Wähle 1 Monster auf dem Spielfeld; beschwöre 1 „Harpyie“- oder „Amazonisch“-Monster als Spezialbeschwörung von deiner Hand oder deinem Deck und falls du dies tust, gib das gewählte Monster auf die Hand zurück.\r\n②: Du kannst diese Karte von deinem Friedhof verbannen; füge deiner Hand 1 deiner verbannten „Harpyie“- oder „Amazonisch“-Monster oder 1 solches Monster von deinem Friedhof hinzu.",
+    "overallString": "[Falle]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Verlockende Spiegelwand",
+    "desc": "①: Erhält diese Effekte, solange du ein „Amazonisch“- oder „Harpyie“-Monster kontrollierst.\r\n● Offene Monster, die dein Gegner kontrolliert, werden in die Angriffsposition geändert und müssen angreifen, falls möglich.\r\n● Einmal pro Kampf, wenn ein Monster eines Gegners einen Angriff deklariert: Du kannst seine ATK halbieren.\r\n②: Einmal pro Spielzug, während der Standby Phase: Du kannst 1 Zauber/Falle von deinem Friedhof oder deinen verbannten Karten setzen, der oder die „Harpyie“ erwähnt, außer „Verlockende Spiegelwand“.",
+    "overallString": "[Falle|Permanente]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Amazonische Kettenmeisterin – Kettentanz am Rande des Todes",
+    "desc": "Falls diese Karte auf den Friedhof gelegt wird und sich ein anderes „Amazonisch“-Monster in deinem Friedhof befindet: Du kannst 1000 LP zahlen; dein Gegner kann 1 Monster der Stufe 10 in seinem Deck oder Extra Deck bestimmen und falls er dies tut, kannst du es als Spezialbeschwörung auf deine Spielfeldseite beschwören, ungeachtet seiner Beschwörungsbedingungen, aber kein Spieler kann in diesem Spielzug seine Effekte aktivieren. Falls er dies nicht tut, wirfst du 1 zufällige Karte von seiner Hand ab. Du kannst diesen Effekt von „Amazonische Kettenmeisterin – Kettentanz am Rande des Todes“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Krieger/Erde  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Amazonische Kämpferin – Tanz des sofortigen Todes",
+    "desc": "Falls diese Karte deiner Hand hinzugefügt wird, außer durch Ziehen: Du kannst sie als Spezialbeschwörung beschwören. Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 Zauber/Falle, der oder die „Harpyie“ erwähnt, direkt von deinem Deck setzen. Während der Schadensberechnung, falls dein „Amazonisch“-Monster gegen ein Monster eines Gegners kämpft: Du kannst diesen Effekt aktivieren; für jenen Kampf kann keines der Monster durch Kampf zerstört werden, zusätzlich erhältst du keinen Kampfschaden. Du kannst jeden Effekt von „Amazonische Kämpferin – Tanz des sofortigen Todes“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Krieger/Erde  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Amazonische Zauberwirkende – Tanz des verbotenen Zaubers",
+    "desc": "Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst deiner Hand 1 „Amazonisch“-Monster von deinem Deck hinzufügen, außer einem Monster der Stufe 3. Während deiner Main Phase: Du kannst 1 ERDE oder WIND Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck beschwören und dafür Monster von deiner Hand oder Spielfeldseite als Material verwenden. Während der Schadensberechnung, falls dein „Amazonisch“-Monster gegen ein Monster eines Gegners kämpft: Du kannst diese Karte von deinem Friedhof verbannen; vertausche bis zum Ende dieses Spielzugs die ATK der kämpfenden Monster. Du kannst jeden Effekt von „Amazonische Zauberwirkende – Tanz des verbotenen Zaubers“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Krieger/Erde  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Harpyie – Verlockender Tanz",
+    "desc": "Du kannst die Effekte ② und ③ von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Der Name dieser Karte wird zu „Harpyie“, solange sie auf dem Spielfeld oder im Friedhof liegt.\r\n②: Während der Main Phase, falls sich diese Karte in deiner Hand befindet (Schnelleffekt): Du kannst 1 ERDE oder WIND Monster wählen, das du kontrollierst; gib es auf die Hand oder ins Extra Deck zurück und falls du dies tust, beschwöre diese Karte als Spezialbeschwörung.\r\n③: Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst deiner Hand 1 Zauber/Falle von deinem Deck hinzufügen, der oder die „Harpyie“ erwähnt.",
+    "overallString": "[Monster|Effekt] Geflügeltes Ungeheuer/Wind  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Amazonische Schwertmeisterin",
+    "desc": "2 „Amazonisch“-Monster\r\nDu kannst die Effekte ① und ③ von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Falls diese Karte als Fusionsbeschwörung beschworen wird: Du kannst 1 „Amazonisch“-Monster der Stufe 4 oder niedriger als Spezialbeschwörung von deinem Deck beschwören.\r\n②: Wenn dein „Amazonisch“-Monster ein Monster eines Gegners durch Kampf zerstört: Du kannst 1 Karte ziehen.\r\n③ (Schnelleffekt): Du kannst 1 Monster als Tribut anbieten und dann 1 Effektmonster auf dem Spielfeld wählen; es verliert 500 ATK, zusätzlich werden seine Effekte annulliert.",
+    "overallString": "[Monster|Effekt|Fusion] Krieger/Erde  [★7] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Harpyien-Schwestern – Dreiecks-Ekstase",
+    "desc": "3 „Harpyie“-Monster\r\nMuss erst als Fusionsbeschwörung beschworen werden.\r\n①: Der Name dieser Karte wird zu „Harpyie“, solange sie auf dem Spielfeld oder im Friedhof liegt.\r\n②: Erhält für jede „Harpyie“ in deinem Friedhof 500 ATK. Dein Gegner kann diese Karte nicht als Ziel für die Effekte von Nicht-WIND Monstern wählen.\r\n③: Einmal pro Spielzug (Schnelleffekt): Du kannst alle Zauber und Fallen zerstören, die dein Gegner kontrolliert.",
+    "overallString": "[Monster|Effekt|Fusion] Geflügeltes Ungeheuer/Wind  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Eleganter Dreifachspiegel",
+    "desc": "Du kannst die Effekte ① und ② von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Füge deiner Hand 1 „Harpyie“-Monster von deinem Deck hinzu, dann, falls nur dein Gegner ein Monster kontrolliert, kannst du 1 „Harpyie“ oder 1 Monster, das sie erwähnt, als Spezialbeschwörung von deiner Hand oder deinem Friedhof beschwören.\r\n②: Du kannst diese Karte von deinem Friedhof verbannen; beschwöre 1 ERDE oder WIND Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck und verwende dafür Monster von deiner Hand oder Spielfeldseite als Material.",
+    "overallString": "[Zauber]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Harpyien- & Amazonische Rakshasa-Formation",
+    "desc": "Du kannst nur 1 Karte mit diesem Namen pro Spielzug aktivieren.\r\n①: Wähle 1 deiner verbannten „Harpyie“- oder „Amazonisch“-Monster oder 1 solches Monster in deinem Friedhof; beschwöre es als Spezialbeschwörung, dann kannst du, abhängig von der Anzahl der „Harpyie“- und „Amazonisch“-Monster, die du kontrollierst, 1 dieser Effekte ausführen.\r\n● 1+: Lege 1 „Verlockende Spiegelwand“ von deinem Deck offen in deine Zauber- & Fallenzone.\r\n● 2+: Übernimm die Kontrolle über 1 Monster, das dein Gegner kontrolliert.\r\n● 3+: Zerstöre alle Monster, die dein Gegner kontrolliert.",
+    "overallString": "[Zauber|Schnell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Schlüsselblume die Zwillings-Rikka-Fee",
+    "desc": "Falls ein oder mehr Monster als Tribut angeboten werden: Du kannst diese Karte von deiner Hand und 1 „Rikka“-Monster von deinem Deck, außer „Schlüsselblume die Zwillings-Rikka-Fee“, als Spezialbeschwörung in die Verteidigungsposition beschwören, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer Pflanze-Monstern. Du kannst 1 Pflanze-Monster wählen, das du kontrollierst; erhöhe oder verringere seine Stufe um 2. Während der Main Phase deines Gegners kannst du (Schnelleffekt): Sofort nachdem dieser Effekt aufgelöst wurde, beschwöre 1 Pflanze-Xyz-Monster als Xyz-Beschwörung. Du kannst jeden Effekt von „Schlüsselblume die Zwillings-Rikka-Fee“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Pflanze/Wasser  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Schwarze Rikka-Prinzessin",
+    "desc": "Falls du keine Monster kontrollierst oder alle Monster, die du kontrollierst, Pflanze-Monster sind: Du kannst diese Karte als Spezialbeschwörung von deiner Hand oder deinem Friedhof beschwören, aber verbanne sie, wenn sie das Spielfeld verlässt, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer Pflanze-Monstern. Du kannst 1 Pflanze-Monster von deiner Hand oder Spielfeldseite als Tribut anbieten; beschwöre 1 „Rikka“-Monster als Spezialbeschwörung von deinem Deck, außer „Schwarze Rikka-Prinzessin“. Du kannst jeden Effekt von „Schwarze Rikka-Prinzessin“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Pflanze/Wasser  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Tränenstrauß die Rikka-Kaiserin",
+    "desc": "2 Pflanze-Monster der Stufe 10\nDu kannst diese Karte auch als Xyz-Beschwörung beschwören, indem du „Tränenstrauß die Rikka-Königin“ verwendest, den du kontrollierst (transferiere sein Material an diese Karte). (Schnelleffekt): Du kannst bis zu 6 Material von dieser Karte abhängen; lege dieselbe Anzahl Zauber/Fallen auf dem Spielfeld auf den Friedhof, dann kannst du 1 Monster auf dem Spielfeld als Tribut anbieten. Du kannst diesen Effekt von „Tränenstrauß die Rikka-Kaiserin“ nur einmal pro Spielzug verwenden. Jedes Mal, wenn ein oder mehr Monster als Tribut angeboten werden: Hänge 1 Karte vom Friedhof deines Gegners als Material an 1 Pflanze-Xyz-Monster an, das du kontrollierst.",
+    "overallString": "[Monster|Effekt|Xyz] Pflanze/Wasser  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka-Kaiserin Strenna",
+    "desc": "2 Pflanze-Monster der Stufe 6\nDu kannst 2 Material von dieser Karte abhängen; beschwöre 1 Pflanze-Xyz-Monster als Spezialbeschwörung von deinem Extra Deck in die Verteidigungsposition, außer „Rikka-Kaiserin Strenna“, dann, falls du ein „Rikka“-Monster als Spezialbeschwörung beschworen hast, kannst du 1 „Rikka“-Monster von deinem Deck als Material daran anhängen. Falls ein oder mehr Monster als Tribut angeboten werden: Du kannst 1 „Rikka“-Falle direkt von deinem Deck oder Friedhof setzen. Du kannst jeden Effekt von „Rikka-Kaiserin Strenna“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt|Xyz] Pflanze/Wasser  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Rikka-Juni-Mond",
+    "desc": "Wenn du diese Karte aktivierst, kannst du zusätzlich 1 Pflanze-Monster als Tribut anbieten; nimm 2 „Rikka“-Monster mit derselben Stufe, aber unterschiedlichen Namen von deinem Deck, füge deiner Hand 1 davon hinzu und lege das andere auf den Friedhof, zusätzlich, falls du bei der Aktivierung ein Monster als Tribut angeboten hast, kann dein Gegner in diesem Spielzug keine „Rikka“-Monster, die du kontrollierst, als Ziel für Karteneffekte wählen. Für den Rest dieses Spielzugs, nachdem diese Karte aufgelöst wurde, kannst du keine Spezialbeschwörungen vom Extra Deck durchführen, außer von Pflanze-Xyz-Monstern. Du kannst nur 1 „Rikka-Juni-Mond“ pro Spielzug aktivieren.",
+    "overallString": "[Zauber]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
     "name": "Schloss des Vampirs",
     "desc": "Wenn diese Karte aktiviert wird: Beschwöre 1 FINSTERNIS Zombie-Monster als Spezialbeschwörung von deinem Deck oder Friedhof. Wenn jenes Monster das Spielfeld verlässt, zerstöre diese Karte. Jenes Monster bleibt von den aktivierten Effekten anderer Monster unberührt, außer von denen von FINSTERNIS Monstern. Falls diese offene Karte das Spielfeld verlässt: Zerstöre so viele Karten, die du kontrollierst, wie möglich und falls du dies tust, erhältst du für jede zerstörte Karte 400 Schaden. Du kannst nur 1 „Schloss des Vampirs“ pro Spielzug aktivieren.",
     "overallString": "[Zauber|Permanente]",
