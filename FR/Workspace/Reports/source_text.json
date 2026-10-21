@@ -1,17 +1,26 @@
 {
   "language": "fr",
   "candidates": 2,
-  "matched": 2,
-  "unmatched_ids": [],
-  "unresolved": [],
-  "matches": {
-    "101307019": {
-      "set_code": "IMPH-JP019",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17866&languages=fr"
+  "matched": 0,
+  "unmatched_ids": [
+    101307018,
+    101307039
+  ],
+  "unresolved": [
+    {
+      "id": 101307018,
+      "name": "鬼神童鸱 玉依",
+      "set_code": "IMPH-JP018",
+      "reason": "Source request failed",
+      "detail": "HTTP Error 503: Service Unavailable"
     },
-    "101307049": {
-      "set_code": "IMPH-JP049",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17867&languages=fr"
+    {
+      "id": 101307039,
+      "name": "鬼神 夜魅",
+      "set_code": "IMPH-JP039",
+      "reason": "Source request failed",
+      "detail": "HTTP Error 503: Service Unavailable"
     }
-  }
+  ],
+  "matches": {}
 }
