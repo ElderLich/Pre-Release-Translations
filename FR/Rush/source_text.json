@@ -2,13 +2,76 @@
   "language": "fr",
   "matches": {},
   "requested_ids": [
-    120000012
+    120000012,
+    120310027,
+    120310028,
+    120310029,
+    120310042,
+    120310047,
+    120310056,
+    120310057,
+    120310058,
+    120310069
   ],
   "unresolved": [
     {
       "id": 120000012,
       "reason": "No upstream sets.md range or reviewed mapping",
       "set_code": null
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310027,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP027"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310028,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP028"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310029,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP029"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310042,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP042"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310047,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP047"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310056,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP056"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310057,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP057"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310058,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP058"
+    },
+    {
+      "detail": "HTTP Error 503: Service Unavailable",
+      "id": 120310069,
+      "reason": "Source request failed",
+      "set_code": "RD/KP27-JP069"
     }
   ]
 }
