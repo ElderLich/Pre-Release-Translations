@@ -5,10 +5,10 @@
     "lang": "it",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261019_154051",
-    "rows_in_report": 6,
-    "unique_cn_strings": 8,
-    "total_cn_cells": 8
+    "timestamp": "20261021_134959",
+    "rows_in_report": 7,
+    "unique_cn_strings": 9,
+    "total_cn_cells": 9
   },
   "unique_strings": [
     {
@@ -18,6 +18,11 @@
     },
     {
       "string": "攻击力交换",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "是否让对方的卡全部回手？",
       "count": 1,
       "is_new": true
     },
@@ -59,7 +64,7 @@
       "desc": "Se questa carta viene mandata al Cimitero e hai un altro mostro \"Amazoness\" nel tuo Cimitero: puoi pagare 1000 LP; il tuo avversario può scegliere 1 mostro di Livello 10 nel suo Deck o Extra Deck e, se lo fa, puoi Evocarlo Specialmente sul tuo Terreno, ignorando le sue condizioni di Evocazione, ma nessun giocatore può attivare i suoi effetti in questo turno. Se non lo fa, scarti 1 carta a caso dalla sua mano. Puoi utilizzare questo effetto di \"Maestra delle Catene Amazzones - Danza Incatenata al Ciglio della Morte\" una sola volta per turno.",
       "str1": "Attiva",
       "str2": "是否选卡？",
-      "str3": "",
+      "str3": "Evocazione Speciale?",
       "str4": "",
       "str5": "",
       "str6": "",
@@ -110,6 +115,35 @@
         }
       ],
       "desc_preview": "Se questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 mostro \"Amazoness\" dal tuo Deck alla tua mano, eccetto un mostro di Livello 3.\r\nDurante la tua Main Phase: puoi Evocare tramite Fusione 1 Mostro Fusione TERRA o VENTO dal tuo Extra Deck, utilizzando mostri dalla tua mano o Terreno.\r\nDurante il calcolo dei danni, se un tuo mostro \"Amazoness\" combatte con un mostro dell'avversario: puoi bandire questa carta dal tuo Cimitero; scambia l'ATK dei mostri che combattono fino alla fine di questo turno.\r\nPuoi utilizzare ciascun effetto di \"Incantatrice Amazoness - Danza dell'Incantesimo Proibito\" una sola volta per turno."
+    },
+    {
+      "id": 101307039,
+      "name": "Ashtrama Yoami",
+      "desc": "1 Tuner + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente, oppure mandata dal Terreno al Cimitero: puoi aggiungere alla tua mano o Posizionare 1 Trappola \"Ashtra\" dal tuo Deck.\r\nSe hai una Trappola nel tuo Cimitero: puoi far ritornare nella mano quante più carte coperte possibile sul Terreno, poi, se hai 5 o più Trappole nel tuo Cimitero, puoi far ritornare tutte le carte controllate dal tuo avversario nella mano.\r\nPuoi utilizzare ciascun effetto di \"Ashtrama Yoami\" una sola volta per turno.",
+      "str1": "Cerca e Posiziona",
+      "str2": "Rimandare in mano",
+      "str3": "是否让对方的卡全部回手？",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str3",
+          "value": "是否让对方的卡全部回手？",
+          "normalized": "是否让对方的卡全部回手?"
+        }
+      ],
+      "desc_preview": "1 Tuner + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente, oppure mandata dal Terreno al Cimitero: puoi aggiungere alla tua mano o Posizionare 1 Trappola \"Ashtra\" dal tuo Deck.\r\nSe hai una Trappola nel tuo Cimitero: puoi far ritornare nella mano quante più carte coperte possibile sul Terreno, poi, se hai 5 o più Trappole nel tuo Cimitero, puoi far ritornare tutte le carte controllate dal tuo avversario nella mano.\r\nPuoi utilizzare ciascun effetto di \"Ashtrama Yoami\" una sola volta per turno."
     },
     {
       "id": 101307041,
