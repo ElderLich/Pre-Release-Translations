@@ -1,81 +1,8 @@
 {
   "language": "jp",
-  "matches": {
-    "120310027": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP027",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310028": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP028",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310029": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP029",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310042": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP042",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310047": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP047",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310056": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP056",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310057": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP057",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    },
-    "120310058": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP058",
-      "source": "https://ocg-card.com/list_r/kp27/"
-    }
-  },
+  "matches": {},
   "requested_ids": [
     120000012,
-    120310027,
-    120310028,
-    120310029,
-    120310042,
-    120310047,
-    120310056,
-    120310057,
-    120310058,
     120310069
   ],
   "unresolved": [
