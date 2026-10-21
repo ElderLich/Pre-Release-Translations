@@ -119,84 +119,10 @@
     {
       "fields": [
         "desc",
-        "name"
-      ],
-      "id": 120310027,
-      "name": "刚腕的独眼巨人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310028,
-      "name": "灵敏的老虎斧战士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
-        "str2"
-      ],
-      "id": 120310029,
-      "name": "压坏的石人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310042,
-      "name": "坚守的千年石人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310047,
-      "name": "贯彻到底的千年原人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
-        "str2"
-      ],
-      "id": 120310056,
-      "name": "千年原人的仪式"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310057,
-      "name": "千年原人的复活"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
-        "str2"
-      ],
-      "id": 120310058,
-      "name": "千年的粉碎者"
-    },
-    {
-      "fields": [
-        "desc",
         "str1"
       ],
       "id": 120310066,
       "name": "Condenado por la Plaga Negra"
-    },
-    {
-      "fields": [
-        "name"
-      ],
-      "id": 120310069,
-      "name": "千年原人"
     }
   ],
   "published_source_fields": {
@@ -969,19 +895,19 @@
     "120310023": "2f624b199912122e6ea0673c8e18dec62e23fd92e7194abac167f922d9b9b8d0",
     "120310025": "9f6c342b82b4c22bcd3dcc6bd6f7bac9347ce63b9526efdee4d4f13635002c8b",
     "120310026": "0719fd9866a1a7bd0f4b28c6eca0e53ec039fc17fab65f6794ec62a21bff60b2",
-    "120310027": "04bbd9659db79eb30c515752d2d3536cf726796c35772c0777d0ad774a65598a",
-    "120310028": "d51db571f81ed7f02d7379413fadffc54e1e1bbd6728c4ba4d5c27b5e7d85b7c",
-    "120310029": "fee9a91c01bf44f5deef289e3543f84fef5f73d2cd231899e48c91a1dad95c62",
+    "120310027": "269581b09560a48272c183633ecfd4ad1915250363bc748b24f4c74407ae66d2",
+    "120310028": "1b37c1927fd8113b70b5d524de64b290119571a537fd9b57a0c317e0e1a8e39b",
+    "120310029": "179e764be02ea33e6e2c00721d5bc250bca62cd47ace337277823c2e4b211ca7",
     "120310036": "a9b2fe59fe5ed01bfbc4baa9354b520fbc016628e379e1c7f99d7442636764a4",
     "120310037": "48df2ad5f6d20eb0cc89c5a383cd32a457514dfd4ebe8bf85faa6478d066cf36",
     "120310038": "3b920e5a9161d76bdfb28209b9dafe4798179b6bece2e6cc3a21a4e0c3965d35",
     "120310039": "2551ba252d664835e85e6f8fbebe4b96c31b12c14213263928577e5c871c2ad7",
     "120310040": "c43c08c327eb94afb387b981c026244a398016bf9a74e4f7f5f9ad46d7043896",
     "120310041": "72e8c4c1abc155bc7f10741fa5afb48934e42324588581b03961e2d1017350f7",
-    "120310042": "44c61536d373d02791babe8d19660ec26c7e5ac652f9ef6759446e4ce452d28e",
+    "120310042": "68e1f1c41c85478e495b83b39bbd223d3e0f8e3a818ed2d49927f6f294f5e846",
     "120310045": "fd3fa170888e507239ab9d5c8b9e4df4d518bc32814b06f301fa6118fcc4af67",
     "120310046": "3f787a9f79684717a9c7b695fda33befcfb28a8977ddaf5dbb4850eef0bd2ad3",
-    "120310047": "83ec19b7506a6df2184cf647d9145500e474c6909d3384a773cff77c7ec41abb",
+    "120310047": "3e653f3487b8b756ea9dcf05ccc4c08e76b215e0e9e9d3438bf88a163233f4ee",
     "120310048": "acc37e240a1bc84d5af19943c66b49a5b9938400c33ddf67cb49ba88f4c4bcbe",
     "120310049": "c682111f84e3fc70006ebbc0805b72559453f2beaed7644ebaeb416a5e1db49d",
     "120310050": "45ea8cb77e01d8daad236dbfc504b1c6745e8c3ee574a2e713c20331636c20c4",
@@ -989,14 +915,14 @@
     "120310052": "210d8fe7bfc17cea50eb8327ad336b3b4b8b1fe045500abd72e02d6e7f778d46",
     "120310054": "f5a6c32de95f59925a775cda89fd2ccd10dcbe211b6e5af79a379f563ea1ec43",
     "120310055": "8e2255c911f9dbb3a1ff26b1dba54b91d981687106f001a5827e726a106d7c36",
-    "120310056": "5dd5fa97b9908768d89e2244701e7014031bf8f2426bf5a48a7f53b05b50fc56",
-    "120310057": "b8f147fb8bdf9fe21b498056ae586daf83c48577dfd1139afcb275aa11c45461",
-    "120310058": "4bca0dbeda41d5bb77ea3ec2a0325d12b1abfa243d5d5639bfd4e5e360a6e2ec",
+    "120310056": "1cecee9df26d35e0ad36d89e71852c80b9df97b8ea7f7d76730e18ea46fe0c62",
+    "120310057": "48146f468f201022fed5feb96ccb91880ee98c569ae9f2469e4a7b0431e1f45d",
+    "120310058": "34d9304a1f6f50897dee84f82fe88a39fb1cdf85253863930df123cb0692771f",
     "120310061": "ed6f2332ad513b1f31627034b87282a1a012548b19a190ef1800e4a0298f7849",
     "120310062": "c99571f13ad8dd6355a27c769eef4ff11fe10fd43fae517d481ada0e2af620b7",
     "120310063": "2d8ecdb493527b43b73f74a5591e6b16c42f6cabac392e187e6955dde116ec2f",
     "120310066": "9742f0a6226839e4edd9b6737c00fd35951fd96fc439bc9facd40ff3a6b2c83c",
-    "120310069": "b6fc5c99c79a9ece53ad47e8554e88cd8c37d39860f0664a4b60b1ac7ee2f7f9",
+    "120310069": "12220d3151d6aaad6cbb9951fecae7ac586fb61830337464cdb97963d83c58c3",
     "120311001": "6e41f7cae2e588ba2f0e5996ada4dcbd3dfab9bccb0fc8c485bbdc8d17b5b2e1",
     "120311002": "96fafa0163b714af08223854988cae9d3eabc3d724715fde9955ef3578b714f4",
     "120311004": "816f97815b9f04ee7c208a4b00fe9149da14d81d4f2d19ca4f73fce4a897e770",
