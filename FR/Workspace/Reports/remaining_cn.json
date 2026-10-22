@@ -5,95 +5,26 @@
     "lang": "fr",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261021_134601",
-    "rows_in_report": 7,
-    "unique_cn_strings": 9,
-    "total_cn_cells": 9
+    "timestamp": "20261022_135951",
+    "rows_in_report": 1,
+    "unique_cn_strings": 1,
+    "total_cn_cells": 1
   },
   "unique_strings": [
     {
-      "string": "是否选卡？",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "攻击力交换",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "是否让对方的卡全部回手？",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "把卡送去墓地",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "控制权获取",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "宣言2个",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "宣言3个",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "宣言4个",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "攻击力减半",
+      "string": "是否改变攻击力？",
       "count": 1,
       "is_new": true
     }
   ],
   "cards": [
     {
-      "id": 101307005,
-      "name": "Amazonesse avec Chaîne - Danse de la Chaîne au Seuil de la Mort",
-      "desc": "Si cette carte est envoyée au Cimetière et que vous avez un autre monstre \"Amazonnesse\" dans votre Cimetière : vous pouvez payer 1000 LP ; votre adversaire peut choisir 1 monstre de Niveau 10 dans son Deck ou Extra Deck, et s'il le fait, vous pouvez l'Invoquer Spécialement sur votre Terrain, en ignorant ses conditions d'Invocation, mais aucun joueur ne peut pas activer ses effets ce tour. S'il ne le fait pas, défaussez 1 carte au hasard depuis sa main. Vous ne pouvez utiliser cet effet de \"Amazonesse avec Chaîne - Danse de la Chaîne au Seuil de la Mort\" qu'une fois par tour.",
-      "str1": "Activer",
-      "str2": "是否选卡？",
-      "str3": "Invocation Spéciale?",
-      "str4": "",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str2",
-          "value": "是否选卡？",
-          "normalized": "是否选卡?"
-        }
-      ],
-      "desc_preview": "Si cette carte est envoyée au Cimetière et que vous avez un autre monstre \"Amazonnesse\" dans votre Cimetière : vous pouvez payer 1000 LP ; votre adversaire peut choisir 1 monstre de Niveau 10 dans son Deck ou Extra Deck, et s'il le fait, vous pouvez l'Invoquer Spécialement sur votre Terrain, en ignorant ses conditions d'Invocation, mais aucun joueur ne peut pas activer ses effets ce tour. S'il ne le fait pas, défaussez 1 carte au hasard depuis sa main. Vous ne pouvez utiliser cet effet de \"Amazonesse avec Chaîne - Danse de la Chaîne au Seuil de la Mort\" qu'une fois par tour."
-    },
-    {
-      "id": 101307007,
-      "name": "Magicienne Amazonesse - Danse de la Magie Interdite",
-      "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 monstre \"Amazonnesse\" (monstres de Niveau 3 exclus) depuis votre Deck à votre main. Durant votre Main Phase : vous pouvez Invoquer par Fusion 1 Monstre Fusion TERRE ou VENT depuis votre Extra Deck, en utilisant des monstres depuis votre main ou Terrain. Durant le calcul des dommages, si votre monstre \"Amazonnesse\" combat un monstre de l'adversaire : vous pouvez bannir cette carte depuis votre Cimetière ; échangez les ATK des monstres combattants jusqu'à la fin de ce tour. Vous ne pouvez utiliser chaque effet de \"Magicienne Amazonesse - Danse de la Magie Interdite\" qu'une fois par tour.",
-      "str1": "Ajouter à la main",
-      "str2": "Invocation Fusion",
-      "str3": "攻击力交换",
+      "id": 101307017,
+      "name": "无敌的火箭战士",
+      "desc": "这个卡名的①③的效果1回合各能使用1次。\r\n①：从卡组把有「时间黑魔术师」的卡名记述的1张魔法·陷阱卡送去墓地才能发动。这张卡从手卡特殊召唤。那之后，可以把对方场上1只怪兽的攻击力下降1500。这个效果的发动后，直到回合结束时自己不是融合怪兽不能从额外卡组特殊召唤。\r\n②：场上的这张卡不会被效果破坏。\r\n③：这张卡的攻击宣言时才能发动。从卡组把1只战士族·4星怪兽加入手卡。 ",
+      "str1": "Invocation Spéciale",
+      "str2": "Effet d'ajout à la main",
+      "str3": "是否改变攻击力？",
       "str4": "",
       "str5": "",
       "str6": "",
@@ -110,166 +41,11 @@
       "flagged_cells": [
         {
           "col": "str3",
-          "value": "攻击力交换",
-          "normalized": "攻击力交换"
+          "value": "是否改变攻击力？",
+          "normalized": "是否改变攻击力?"
         }
       ],
-      "desc_preview": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 monstre \"Amazonnesse\" (monstres de Niveau 3 exclus) depuis votre Deck à votre main. Durant votre Main Phase : vous pouvez Invoquer par Fusion 1 Monstre Fusion TERRE ou VENT depuis votre Extra Deck, en utilisant des monstres depuis votre main ou Terrain. Durant le calcul des dommages, si votre monstre \"Amazonnesse\" combat un monstre de l'adversaire : vous pouvez bannir cette carte depuis votre Cimetière ; échangez les ATK des monstres combattants jusqu'à la fin de ce tour. Vous ne pouvez utiliser chaque effet de \"Magicienne Amazonesse - Danse de la Magie Interdite\" qu'une fois par tour."
-    },
-    {
-      "id": 101307039,
-      "name": "鬼神 夜魅",
-      "desc": "调整＋调整以外的怪兽1只以上\r\n这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡特殊召唤的场合，或者从场上送去墓地的场合才能发动。从卡组选1张「艮神鬼」陷阱卡，加入手卡或在自己场上盖放。\r\n②：自己墓地有陷阱卡存在的场合才能发动。场上的里侧表示卡全部回到手卡。那之后，自己墓地的陷阱卡是5张以上的场合，可以让对方场上的卡全部回到手卡。",
-      "str1": "Ajouter à la main et Poser",
-      "str2": "Renvoyer à la main",
-      "str3": "是否让对方的卡全部回手？",
-      "str4": "",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str3",
-          "value": "是否让对方的卡全部回手？",
-          "normalized": "是否让对方的卡全部回手?"
-        }
-      ],
-      "desc_preview": "调整＋调整以外的怪兽1只以上\r\n这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡特殊召唤的场合，或者从场上送去墓地的场合才能发动。从卡组选1张「艮神鬼」陷阱卡，加入手卡或在自己场上盖放。\r\n②：自己墓地有陷阱卡存在的场合才能发动。场上的里侧表示卡全部回到手卡。那之后，自己墓地的陷阱卡是5张以上的场合，可以让对方场上的卡全部回到手卡。"
-    },
-    {
-      "id": 101307041,
-      "name": "Larme l'Impératrice Rikka",
-      "desc": "2 monstres Plante de Niveau 10\nVous pouvez aussi Invoquer par Xyz cette carte en utilisant \"Larme la Reine Rikka\" que vous contrôlez (transférez ses Matériels). (Effet Rapide) : vous pouvez détacher max. 6 Matériels de cette carte ; envoyez autant de Magies/Pièges sur le Terrain au Cimetière, puis vous pouvez Sacrifier 1 monstre sur le Terrain. Vous ne pouvez utiliser cet effet de \"Larme l'Impératrice Rikka\" qu'une fois par tour. Chaque fois qu'un ou plusieurs monstres sont Sacrifiés : attachez 1 carte depuis le Cimetière de votre adversaire à 1 Monstre Xyz Plante que vous contrôlez.",
-      "str1": "Invoquer Xyz en utilisant {CARD} comme Matériel ?",
-      "str2": "把卡送去墓地",
-      "str3": "Attacher un Matériel Xyz",
-      "str4": "Sacrifier un monstre ?",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str2",
-          "value": "把卡送去墓地",
-          "normalized": "把卡送去墓地"
-        }
-      ],
-      "desc_preview": "2 monstres Plante de Niveau 10\nVous pouvez aussi Invoquer par Xyz cette carte en utilisant \"Larme la Reine Rikka\" que vous contrôlez (transférez ses Matériels). (Effet Rapide) : vous pouvez détacher max. 6 Matériels de cette carte ; envoyez autant de Magies/Pièges sur le Terrain au Cimetière, puis vous pouvez Sacrifier 1 monstre sur le Terrain. Vous ne pouvez utiliser cet effet de \"Larme l'Impératrice Rikka\" qu'une fois par tour. Chaque fois qu'un ou plusieurs monstres sont Sacrifiés : attachez 1 carte depuis le Cimetière de votre adversaire à 1 Monstre Xyz Plante que vous contrôlez."
-    },
-    {
-      "id": 101307054,
-      "name": "Harpie et Amazonnesse en Formation Rakshasa",
-      "desc": "Ciblez 1 monstre \"Harpie\" ou \"Amazonnesse\" dans votre Cimetière ou bannissement ; Invoquez-le Spécialement, puis vous pouvez appliquer 1 de ces effets selon le nombre de \"Dame Harpie\" et de monstres \"Amazonnesse\" que vous contrôlez.\n● 1+ : Placez 1 \"Mur Miroir Séduisœil\" depuis votre Deck face recto dans votre Zone Magie & Piège.\n● 2+ : Prenez le contrôle d'1 monstre contrôlé par votre adversaire.\n● 3+ : Détruisez tous les monstres contrôlés par votre adversaire.\nVous ne pouvez activer qu'1 \"Harpie et Amazonnesse en Formation Rakshasa\" par tour.",
-      "str1": "Activer",
-      "str2": "Effet de placement",
-      "str3": "控制权获取",
-      "str4": "Détruire un monstre",
-      "str5": "Aucun effet",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str3",
-          "value": "控制权获取",
-          "normalized": "控制权获取"
-        }
-      ],
-      "desc_preview": "Ciblez 1 monstre \"Harpie\" ou \"Amazonnesse\" dans votre Cimetière ou bannissement ; Invoquez-le Spécialement, puis vous pouvez appliquer 1 de ces effets selon le nombre de \"Dame Harpie\" et de monstres \"Amazonnesse\" que vous contrôlez.\n● 1+ : Placez 1 \"Mur Miroir Séduisœil\" depuis votre Deck face recto dans votre Zone Magie & Piège.\n● 2+ : Prenez le contrôle d'1 monstre contrôlé par votre adversaire.\n● 3+ : Détruisez tous les monstres contrôlés par votre adversaire.\nVous ne pouvez activer qu'1 \"Harpie et Amazonnesse en Formation Rakshasa\" par tour."
-    },
-    {
-      "id": 101307067,
-      "name": "Puissance du Duelliste",
-      "desc": "Déclarez 2, 3 ou 4 Attributs ; appliquez cet effet selon le nombre déclaré, et aussi, durant la End Phase de ce tour, vous devez envoyer toutes les cartes que vous contrôlez au Cimetière, sauf si vous ayez activé les effets de monstres de tous les Attributs déclarés dans votre Terrain et/ou Cimetière ce tour.\n● 2 : Ciblez 1 monstre sur le Terrain ; bannissez-le.\n● 3 : Piochez 2 cartes, puis défaussez 1 carte.\n● 4 : Annulez les effets de 2 cartes face recto sur le Terrain.\nVous ne pouvez activer qu'1 \"Puissance du Duelliste\" par tour.",
-      "str1": "Activer",
-      "str2": "宣言2个",
-      "str3": "宣言3个",
-      "str4": "宣言4个",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str2",
-          "value": "宣言2个",
-          "normalized": "宣言2个"
-        },
-        {
-          "col": "str3",
-          "value": "宣言3个",
-          "normalized": "宣言3个"
-        },
-        {
-          "col": "str4",
-          "value": "宣言4个",
-          "normalized": "宣言4个"
-        }
-      ],
-      "desc_preview": "Déclarez 2, 3 ou 4 Attributs ; appliquez cet effet selon le nombre déclaré, et aussi, durant la End Phase de ce tour, vous devez envoyer toutes les cartes que vous contrôlez au Cimetière, sauf si vous ayez activé les effets de monstres de tous les Attributs déclarés dans votre Terrain et/ou Cimetière ce tour.\n● 2 : Ciblez 1 monstre sur le Terrain ; bannissez-le.\n● 3 : Piochez 2 cartes, puis défaussez 1 carte.\n● 4 : Annulez les effets de 2 cartes face recto sur le Terrain.\nVous ne pouvez activer qu'1 \"Puissance du Duelliste\" par tour."
-    },
-    {
-      "id": 101307075,
-      "name": "Mur Miroir Séduisœil",
-      "desc": "Gagne ces effets tant que vous contrôlez \"Dame Harpie\" ou un monstre \"Amazonnesse\".\n● Les monstres face recto contrôlés par votre adversaire sont changés en Position d'Attaque et doivent attaquer si possible.\n● Une fois par combat, lorsqu'un monstre de l'adversaire déclare une attaque : vous pouvez diviser par deux son ATK.\nUne fois par tour, durant la Standby Phase : vous pouvez Poser 1 Magie/Piège qui mentionne \"Dame Harpie\" (\"Mur Miroir Séduisœil\" exclu) depuis votre Cimetière ou bannissement.",
-      "str1": "",
-      "str2": "攻击力减半",
-      "str3": "Poser",
-      "str4": "",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str2",
-          "value": "攻击力减半",
-          "normalized": "攻击力减半"
-        }
-      ],
-      "desc_preview": "Gagne ces effets tant que vous contrôlez \"Dame Harpie\" ou un monstre \"Amazonnesse\".\n● Les monstres face recto contrôlés par votre adversaire sont changés en Position d'Attaque et doivent attaquer si possible.\n● Une fois par combat, lorsqu'un monstre de l'adversaire déclare une attaque : vous pouvez diviser par deux son ATK.\nUne fois par tour, durant la Standby Phase : vous pouvez Poser 1 Magie/Piège qui mentionne \"Dame Harpie\" (\"Mur Miroir Séduisœil\" exclu) depuis votre Cimetière ou bannissement."
+      "desc_preview": "这个卡名的①③的效果1回合各能使用1次。\r\n①：从卡组把有「时间黑魔术师」的卡名记述的1张魔法·陷阱卡送去墓地才能发动。这张卡从手卡特殊召唤。那之后，可以把对方场上1只怪兽的攻击力下降1500。这个效果的发动后，直到回合结束时自己不是融合怪兽不能从额外卡组特殊召唤。\r\n②：场上的这张卡不会被效果破坏。\r\n③：这张卡的攻击宣言时才能发动。从卡组把1只战士族·4星怪兽加入手卡。 "
     }
   ]
 }
