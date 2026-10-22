@@ -1,5 +1,17 @@
 [
   {
+    "name": "Unbesiegbarer Racketen-Krieger",
+    "desc": "Du kannst die Effekte ① und ③ von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Du kannst 1 Zauber/Falle, der oder die „Dunkler Zeitzauberer“ erwähnt, von deinem Deck auf den Friedhof legen; beschwöre diese Karte als Spezialbeschwörung von deiner Hand, dann kannst du 1 Monster, das dein Gegner kontrolliert, 1500 ATK verlieren lassen, zusätzlich kannst du für den Rest dieses Spielzugs keine Spezialbeschwörungen vom Extra Deck durchführen, außer von Fusionsmonstern.\r\n②: Diese Karte kann nicht durch Karteneffekte zerstört werden.\r\n③: Wenn diese Karte einen Angriff deklariert: Du kannst deiner Hand 1 Krieger-Monster der Stufe 4 von deinem Deck hinzufügen.",
+    "overallString": "[Monster|Effekt] Krieger/Licht  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307017.jpg?version=19.7"
+  },
+  {
+    "name": "Die legendäre Insektenkönigin",
+    "desc": "2 Monster, die „Dunkler Zeitzauberer“ erwähnen, und/oder ERDE Spielmarken der Stufe 1\r\nMuss entweder als Fusionsbeschwörung oder als Spezialbeschwörung (von deinem Extra Deck) beschworen werden, indem du die oben aufgeführten Monster als Tribut anbietest. Du kannst „Die legendäre Insektenkönigin“ nur einmal pro Spielzug mit einer dieser Methoden als Spezialbeschwörung beschwören. Falls diese Karte als Spezialbeschwörung beschworen wird: Du kannst deiner Hand bis zu 2 Karten, die „Dunkler Zeitzauberer“ erwähnen, von deinem Friedhof und/oder deinen verbannten Karten hinzufügen. Dein Gegner kann andere Karten, die du kontrollierst und die „Dunkler Zeitzauberer“ erwähnen, nicht als Ziel für Karteneffekte wählen.",
+    "overallString": "[Monster|Effekt|Fusion] Insekt/Erde  [★8] 2600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307036.jpg?version=19.7"
+  },
+  {
     "name": "Nummer 96: Finsterer Manipulator",
     "desc": "3 FINSTERNIS Monster der Stufe 2\r\nDu kannst die Effekte ① und ② von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Du kannst 1 Material von dieser Karte abhängen; diese Karte erhält ATK in Höhe der Summe der Grund-ATK aller Monster, die dein Gegner derzeit kontrolliert.\r\n②: Wenn dein Gegner eine Karte oder einen Effekt aktiviert (Schnelleffekt): Du kannst diese Karte, die Material hat, auf den Friedhof legen; beschwöre bis zur Anzahl des Materials, das diese Karte hatte, „Schattenhorror“- und/oder „Bosheitsfresser“-Monster als Spezialbeschwörung von deinem Friedhof.",
     "overallString": "[Monster|Effekt|Xyz] Unterweltler/Finsternis  [☆2] 100/1000",
