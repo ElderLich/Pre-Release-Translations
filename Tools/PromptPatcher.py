@@ -35029,6 +35029,16 @@ def build_translation_pack(lang: str):
             "ja": "攻撃力を半分にする",
             "kr": "공격력을 절반으로 한다",
         },
+        "是否改变攻击力？": {
+            "en": "Change ATK?",
+            "fr": "Modifier l'ATK ?",
+            "de": "ATK ändern?",
+            "es": "¿Cambiar el ATK?",
+            "pt": "Alterar o ATK?",
+            "it": "Cambiare l'ATK?",
+            "ja": "攻撃力を変更しますか？",
+            "kr": "공격력을 변경하시겠습니까?",
+        },
 
     }
     for cn, out in extras.items():
