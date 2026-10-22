@@ -213,28 +213,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310027,
-      "name": "刚腕的独眼巨人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310028,
-      "name": "灵敏的老虎斧战士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310029,
-      "name": "压坏的石人"
+      "name": "Golem de Broyage"
     },
     {
       "fields": [
@@ -250,22 +232,6 @@
       ],
       "id": 120310039,
       "name": "Flamodrake d'Accès Anticipé"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310042,
-      "name": "坚守的千年石人"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310047,
-      "name": "贯彻到底的千年原人"
     },
     {
       "fields": [
@@ -298,12 +264,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310056,
-      "name": "千年原人的仪式"
+      "name": "Rituel de Sennen Genjin"
     },
     {
       "fields": [
@@ -315,12 +279,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310058,
-      "name": "千年的粉碎者"
+      "name": "Fracasseur Millénaire"
     },
     {
       "fields": [
@@ -1599,19 +1561,19 @@
     "120310023": "2cad3a787c124cdb6d5b0d3974ad2e849b3dcb3bea2e0e7a5db45c886a98b8e9",
     "120310025": "54345aa4b85a8e46779d2053df185a644b7e8216589331920b2a9bb03a40c8da",
     "120310026": "929e62e6f78a280f35053725f4c490e4b74f829162729ec5f136dbebfd1c1303",
-    "120310027": "d673f984f4eaaddd8ee7d38bc209b410c4f4f488a47f11c02342db3c953a6736",
-    "120310028": "781114a714d83a25b37021960488b422d0fd09ed9d0f5e5a86272b736a5fcb19",
-    "120310029": "e2371446946225cca0b6445aecfcc46534cddb036ce61bc853c941c8dd24e348",
+    "120310027": "39ccc4feede93bc5284b72f72fef277bcf768b1ba0e24e83382b2edb7e0c6a78",
+    "120310028": "095390ded3c0ac3b94d7123852fbf059642230f83e09ac5a6c7624720ed21613",
+    "120310029": "b47df99b02bf7e7c5bdbd92ac191e7ae6136d84d7050893c560561ed73a1e11b",
     "120310036": "024cd40f47542721590ecaa29013586b70646af85dd6ca65f9f4354308cb31f9",
     "120310037": "7b00a02ff913b490090644531f7f1bf282a43c25b26e9ae72431689c07dbe647",
     "120310038": "6b535ec79081f3ec296b9b91945c9ee96dffd9df44b50f9b77a8373e882e122f",
     "120310039": "6e2ce1af835ffad84caa65b246740ee5589328d052938e90c3f95e2c5d999c88",
     "120310040": "37f43b92ae4777b161b77092115713d15665d0f70832ea678f2940b2396b69dc",
     "120310041": "af762e99c0424ad38a94ddd488bf4a9183644553d1a77b602361a65cb426c7af",
-    "120310042": "0798ada211c7031f9f576fcc69c8a7989dd0826dc19232b85e236b2c69d6b385",
+    "120310042": "5a115b40941f45b510c9779f4f5fbbd822b84c9ffbb08a63c7fb284f65cc58e4",
     "120310045": "5313ed5c3315172b7a5e1de676dcc28688869e53587821feb89bf50d9148d28c",
     "120310046": "004aa269cc2a2f0f22ff023ac4625dac0408f62f7a597d17ae0f8e185236f4ab",
-    "120310047": "83ec19b7506a6df2184cf647d9145500e474c6909d3384a773cff77c7ec41abb",
+    "120310047": "d96e733cb619ac05cfb74728849fec9458971ba4a5179bad6351b4671c984f6b",
     "120310048": "79fd6c8aa2c19105df597b5198f3f70d7a3626968e216a1db7f09d5dba328059",
     "120310049": "f621dd227dd7c845068cb074c69fef1c6b4f6c315e8e4522291ba8c1338e819a",
     "120310050": "00c46edb53e5a832deb4c07b9ac77c2bb341afebd60e87c1b65d338dead7d28c",
@@ -1619,9 +1581,9 @@
     "120310052": "60655d9bd7817eee3227655ae4d703bae3f1820741e0c37562e8080e4437118f",
     "120310054": "0392bcf9d235e01657dc51ff47987e7678d5dffd9709b7cefea70152a776795d",
     "120310055": "09b78e4e6489518586e908ac484a7f56b108cc7736d2e1130c572b4257c5bf96",
-    "120310056": "5dd5fa97b9908768d89e2244701e7014031bf8f2426bf5a48a7f53b05b50fc56",
+    "120310056": "6d90815d32c2c7ee08a1ec8bedccd8789e8cff260f233bb7da7ba7b567030876",
     "120310057": "b8f147fb8bdf9fe21b498056ae586daf83c48577dfd1139afcb275aa11c45461",
-    "120310058": "4bca0dbeda41d5bb77ea3ec2a0325d12b1abfa243d5d5639bfd4e5e360a6e2ec",
+    "120310058": "a6f2012dc9a05aaf78e75a08b207dfe2547ce0ba8ecaae2d4d367caf7c88b78f",
     "120310061": "8c330dc39b679abe96ab085f577ed9c0972c19c7b9d28d4ee0027ae1d632feb1",
     "120310062": "c84d17ad00177e41722a2c772fdf00af86bdddc03f2f2d0809bd6c0807d80e97",
     "120310063": "a77f4eb39db20a2faad2a43ee5b986640fea5c373c829801fb8c970759dbab35",
