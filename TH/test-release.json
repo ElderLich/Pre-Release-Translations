@@ -1,5 +1,41 @@
 [
   {
+    "name": "Number 96: Dark Manipulator",
+    "desc": "คุณสามารถใช้เอฟเฟกต์ ① และ ② ของชื่อการ์ดนี้ได้เพียงอย่างละครั้งต่อเทิร์น\n①：คุณสามารถ detach วัตถุดิบ 1 ชิ้นออกจากการ์ดใบนี้; การ์ดใบนี้จะได้รับ ATK เท่ากับผลรวม ATK ดั้งเดิมของมอนสเตอร์ทั้งหมดที่อีกฝ่ายควบคุมอยู่ในปัจจุบัน\n②：เมื่ออีกฝ่ายเปิดใช้งานการ์ดหรือเอฟเฟกต์ (Quick Effect): คุณสามารถส่งการ์ดใบนี้ที่มีวัตถุดิบไปที่ GY; Special Summon มอนสเตอร์ \"Umbral Horror\" และ/หรือ \"Malicevorous\" จาก GY ของคุณได้สูงสุดตามจำนวนวัตถุดิบที่การ์ดใบนี้เคยมี",
+    "overallString": "[Monster|Effect|Xyz] Fiend/Dark  [☆2] 100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307043.jpg?version=19.7"
+  },
+  {
+    "name": "Chaos Barian's Change",
+    "desc": "คุณสามารถใช้เอฟเฟกต์ ① หรือ ② ของชื่อการ์ดนี้ได้เพียงอย่างใดอย่างหนึ่งต่อเทิร์น และใช้ได้เพียงครั้งเดียวในเทิร์นนั้น\n①：เล็งเป้าหมายมอนสเตอร์ Xyz \"Masquerade\" ที่คุณควบคุม 1 ตัว; Special Summon มอนสเตอร์ \"Number\" ที่มี Rank สูงกว่า 1 Rank หรือต่ำกว่า 2 Rank เมื่อเทียบกับมอนสเตอร์ตัวนั้นจาก Extra Deck ของคุณ โดยใช้มอนสเตอร์ตัวนั้นเป็นวัตถุดิบ (this is treated as an Xyz Summon, transfer its materials)\n②：คุณสามารถ banish การ์ดใบนี้จาก GY ของคุณ จากนั้นเล็งเป้าหมายมอนสเตอร์ \"Umbral Horror\" และ/หรือ มอนสเตอร์ Xyz \"Masquerade\" รวม 3 ตัวใน GY ของคุณ; นำการ์ดเหล่านั้นกลับไปวางไว้ใต้สุดของ Deck ในลำดับใดก็ได้ จากนั้นจั่วการ์ด 1 ใบ",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307065.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrata Tamayori",
+    "desc": "ถ้าการ์ดใบนี้ถูก Normal หรือ Special Summon: คุณสามารถ Special Summon มอนสเตอร์ \"Ashtra\" ที่ไม่ใช่ Tuner 1 ตัวจาก Deck ของคุณในรูปแบบ Defense Position จากนั้นคุณสามารถเปลี่ยนมอนสเตอร์ที่หงายหน้าอยู่บนสนามของคุณ 1 ตัวเป็นรูปแบบคว่ำหน้า Defense Position นอกจากนี้คุณจะไม่สามารถ Special Summon จาก Extra Deck ได้ตลอดช่วงที่เหลือของเทิร์นนี้ ยกเว้น Synchro Summon โดยใช้ Tuner Level 1 ถ้าการ์ด \"Ashtra\" และ/หรือการ์ดที่คว่ำหน้าอยู่บนสนามของคุณจะถูกทำลายจากเอฟเฟกต์การ์ด คุณสามารถ banish การ์ดใบนี้จาก GY แทนได้ คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Ashtrata Tamayori\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect|Tuner] Fairy/Fire  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Ashtrama Yoami",
+    "desc": "Tuner 1 ตัว + มอนสเตอร์ที่ไม่ใช่ Tuner 1 ตัวขึ้นไป\nถ้าการ์ดใบนี้ถูก Special Summon หรือถูกส่งจากสนามไป GY: คุณสามารถนำ Trap \"Ashtra\" 1 ใบจากใน Deck ขึ้นมือ หรือ Set ลงบนสนามได้ ถ้าคุณมี Trap ใน GY: คุณสามารถนำการ์ดที่คว่ำหน้าอยู่บนสนามให้ได้มากที่สุดกลับขึ้นมือ จากนั้นถ้าคุณมี Trap ใน GY 5 ใบขึ้นไป คุณสามารถนำการ์ดทั้งหมดที่อีกฝ่ายควบคุมกลับขึ้นมือได้ คุณสามารถใช้แต่ละเอฟเฟกต์ของ \"Ashtrama Yoami\" ได้เพียงเทิร์นละครั้งเท่านั้น",
+    "overallString": "[Monster|Effect|Synchro] Spellcaster/Wind  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
+    "name": "Rampant Wings of Atlantis",
+    "desc": "ชื่อของการ์ดใบนี้จะกลายเป็น \"Umi\" เมื่ออยู่บนสนาม คุณสามารถใช้แต่ละเอฟเฟกต์ต่อไปนี้ของ \"Rampant Wings of Atlantis\" ได้เพียงเทิร์นละครั้งเท่านั้น คุณสามารถส่งการ์ดใบนี้จากบนมือ และ Spell/Trap 1 ใบ หรือ \"Umi\" 1 ใบจากบนมือหรือบนสนามที่หงายหน้าอยู่ของคุณไปที่ GY จากนั้นเล็งเป้าหมายการ์ดที่อีกฝ่ายควบคุม 1 ใบ; ส่งการ์ดนั้นไปที่ GY ถ้าคุณควบคุม \"Atlantis, City of the Sea Dragon\": คุณสามารถ banish การ์ดใบนี้จาก GY ของคุณ; Special Summon มอนสเตอร์ Sea Serpent Level 4 หรือต่ำกว่า 1 ตัวจากบนมือหรือ Deck ของคุณ",
+    "overallString": "[Monster|Effect] Sea Serpent/Water  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codaedalus",
+    "desc": "มอนสเตอร์ WATER 2 ตัว\nคุณสามารถ Special Summon \"Codaedalus(s)\" ได้เพียงเทิร์นละครั้งเท่านั้น ชื่อของการ์ดใบนี้จะกลายเป็น \"Umi\" เมื่ออยู่บนสนาม ถ้าการ์ดใบนี้ถูก Link Summon: คุณสามารถเปิดใช้งานเอฟเฟกต์นี้; ในช่วง End Phase ของเทิร์นนี้ นำการ์ด 1 ใบที่ระบุถึง \"Atlantis, City of the Sea Dragon\" จาก GY ขึ้นมือ ยกเว้น \"Codaedalus\" เทิร์นละครั้ง: คุณสามารถส่ง \"Umi\" ที่หงายหน้าอยู่บนสนามของคุณ 1 ใบไปที่ GY; ส่ง Spell/Trap บนสนามสูงสุด 2 ใบไปที่ GY",
+    "overallString": "[Monster|Effect|Link] Sea Serpent/Water  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
     "name": "Power of the Duelist",
     "desc": "ประกาศ 2, 3 หรือ 4 Attributes; ใช้เอฟเฟกต์นี้ตามจำนวนที่ประกาศ นอกจากนี้ ในช่วง End Phase ของเทิร์นนี้ คุณต้องส่งการ์ดทั้งหมดที่คุณควบคุมไปยัง GY เว้นแต่ว่าคุณได้สั่งใช้งานเอฟเฟกต์ของมอนสเตอร์ครบทุก Attributes ที่ประกาศไว้บน field และ/หรือ GY ของคุณในเทิร์นนี้\n● 2: เล็งเป้ามอนสเตอร์ 1 ตัวบน field; banish การ์ดนั้น\n● 3: Draw การ์ด 2 ใบ จากนั้น discard การ์ด 1 ใบ\n● 4: Negate เอฟเฟกต์ของการ์ดที่หงายหน้าอยู่ 2 ใบที่อยู่บน field\nคุณสามารถสั่งใช้งาน \"Power of the Duelist\" ได้เพียงเทิร์นละ 1 ใบเท่านั้น",
     "overallString": "[Spell|Quick-Play]",
@@ -44,7 +80,7 @@
   {
     "name": "Amazoness Swordmaster",
     "desc": "มอนสเตอร์ \"Amazoness\" 2 ตัว\nคุณสามารถใช้เอฟเฟกต์ ① และ ③ ของชื่อการ์ดนี้ได้เพียงอย่างละครั้งต่อเทิร์น\n①：หากการ์ดใบนี้ถูก Fusion Summon: คุณสามารถ Special Summon มอนสเตอร์ \"Amazoness\" Level 4 หรือต่ำกว่า 1 ตัวจากใน Deck ของคุณได้\n②：เมื่อมอนสเตอร์ \"Amazoness\" ของคุณทำลายมอนสเตอร์ของฝ่ายตรงข้ามจากการต่อสู้: คุณสามารถจั่วการ์ด 1 ใบ\n③：(Quick Effect): คุณสามารถ Tribute มอนสเตอร์ 1 ตัว จากนั้นเล็งเป้ามอนสเตอร์ Effect 1 ตัวบนสนาม; มอนสเตอร์ตัวนั้นจะสูญเสีย 500 ATK และเอฟเฟกต์ของมันจะถูก negate",
-    "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★8] 2600/2200",
+    "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
