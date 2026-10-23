@@ -1,5 +1,11 @@
 [
   {
+    "name": "幻惑的绮罗星",
+    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡召唤·特殊召唤的场合才能发动。从卡组把除「幻惑的绮罗星」外的，7星以下的1只幻想魔族怪兽特殊召唤。这个效果特殊召唤的怪兽在结束阶段回到手卡。\r\n②：这张卡和怪兽进行战斗的场合，那2只不会被那次战斗破坏。\r\n③：1回合1次，怪兽进行战斗的伤害步骤结束时才能发动。场上的全部怪兽的表示形式变更。",
+    "overallString": "[Monster|Effekt] Illusion/Licht  [★4] 1700/1700",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307022.jpg?version=19.7"
+  },
+  {
     "name": "Unbesiegbarer Racketen-Krieger",
     "desc": "Du kannst die Effekte ① und ③ von Karten mit diesem Namen jeweils nur einmal pro Spielzug verwenden.\r\n①: Du kannst 1 Zauber/Falle, der oder die „Dunkler Zeitzauberer“ erwähnt, von deinem Deck auf den Friedhof legen; beschwöre diese Karte als Spezialbeschwörung von deiner Hand, dann kannst du 1 Monster, das dein Gegner kontrolliert, 1500 ATK verlieren lassen, zusätzlich kannst du für den Rest dieses Spielzugs keine Spezialbeschwörungen vom Extra Deck durchführen, außer von Fusionsmonstern.\r\n②: Diese Karte kann nicht durch Karteneffekte zerstört werden.\r\n③: Wenn diese Karte einen Angriff deklariert: Du kannst deiner Hand 1 Krieger-Monster der Stufe 4 von deinem Deck hinzufügen.",
     "overallString": "[Monster|Effekt] Krieger/Licht  [★4] 1500/1300",
