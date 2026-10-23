@@ -1,5 +1,155 @@
 [
   {
+    "name": "Scintillement du Cauchemar",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez Invoquer Spécialement 1 monstre Illusion de max. Niveau 7 (\"Scintillement du Cauchemar\" exclu) depuis votre Deck, mais renvoyez-le à la main durant la End Phase. Vous ne pouvez utiliser cet effet de \"Scintillement du Cauchemar\" qu'une fois par tour. Si cette carte combat un monstre, aucun de ces 2 ne peut être détruit par ce combat. Une fois par tour, à la fin de la Damage Step, si un monstre a combattu : vous pouvez changer la position de combat de tous les monstres sur le Terrain.",
+    "overallString": "[Monstre|Effet] Illusion/Lumiére  [★4] 1700/1700",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307022.jpg?version=19.7"
+  },
+  {
+    "name": "Guerrier Roquette Invincible",
+    "desc": "Non destructible par des effets de carte. Vous ne pouvez utiliser chacun des effets suivants de \"Guerrier Roquette Invincible\" qu'une fois par tour. Vous pouvez envoyer 1 Magie/Piège qui mentionne \"Magicien du Temps des Ténèbres\" depuis votre Deck au Cimetière ; Invoquez Spécialement cette carte depuis votre main, puis vous pouvez faire perdre 1500 ATK à 1 monstre contrôlé par votre adversaire, et aussi, vous ne pouvez pas Invoquer Spécialement (Monstres Fusion exclus) depuis l'Extra Deck le reste de ce tour. Lorsque cette carte déclare une attaque : vous pouvez ajouter 1 monstre Guerrier de Niveau 4 depuis votre Deck à votre main.",
+    "overallString": "[Monstre|Effet] Guerrier/Lumiére  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307017.jpg?version=19.7"
+  },
+  {
+    "name": "La Légendaire Reine Insecte",
+    "desc": "2 monstres qui mentionnent \"Magicien du Temps des Ténèbres\", et/ou Jetons TERRE de Niveau 1\nUniquement soit Invocable par Fusion soit Invocable Spécialement (depuis votre Extra Deck) en Sacrifiant les monstres ci-dessus. Vous ne pouvez Invoquer Spécialement \"La Légendaire Reine Insecte\" qu'une fois par tour de cette façon, peu importe la méthode que vous utilisez. Si cette carte est Invoquée Spécialement : vous pouvez ajouter max. 2 cartes qui mentionnent \"Magicien du Temps des Ténèbres\" depuis votre Cimetière et/ou bannissement à votre main. Votre adversaire ne peut pas cibler d'autres cartes que vous contrôlez qui mentionnent \"Magicien du Temps des Ténèbres\" avec des effets de carte.",
+    "overallString": "[Monstre|Effet|Fusion] Insecte/Terre  [★8] 2600/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307036.jpg?version=19.7"
+  },
+  {
+    "name": "Numéro 96 : Manipulateur Sombre",
+    "desc": "3 monstres TÉNÈBRES de Niveau 2\r\nVous pouvez détacher 1 Matériel de cette carte ; elle gagne une ATK égale à la somme des ATK d'origine de tous les monstres contrôlés par votre adversaire. Lorsque votre adversaire active une carte ou un effet (Effet Rapide) : vous pouvez envoyer cette carte avec du Matériel au Cimetière ; Invoquez Spécialement un nombre de monstres \"Horreur de l'Ombre\" et/ou \"Malicevore\" depuis votre Cimetière, inférieur ou égal au nombre de Matériels que cette carte avait sur le Terrain. Vous ne pouvez utiliser chaque effet de \"Numéro 96 : Manipulateur Sombre\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Xyz] Démon/Ténébres  [☆2] 100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307043.jpg?version=19.7"
+  },
+  {
+    "name": "Changement de Barian du Chaos",
+    "desc": "Ciblez 1 Monstre Xyz \"Mascarade\" que vous contrôlez ; Invoquez Spécialement depuis votre Extra Deck, 1 monstre \"Numéro\" qui a 1 Rang de plus ou 2 Rangs de moins que le monstre, en l'utilisant comme Matériel (ceci est traité comme Invocation Xyz, transférez ses Matériels). Vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 3 monstres \"Horreur de l'Ombre\" et/ou Monstres Xyz \"Mascarade\" dans votre Cimetière ; placez-les au-dessous du Deck dans l'ordre de votre choix, puis piochez 1 carte. Vous ne pouvez utiliser qu'1 effet de \"Changement de Barian du Chaos\" par tour, et uniquement une fois le tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307065.jpg?version=19.7"
+  },
+  {
+    "name": "Tamayori Ashtrata",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez Invoquer Spécialement 1 non-Syntoniseur \"Ashtra\" depuis votre Deck en Position de Défense, puis vous pouvez changer 1 monstre face recto que vous contrôlez en Position de Défense face verso, et aussi, vous ne pouvez pas Invoquer Spécialement depuis l'Extra Deck le reste de ce tour, sauf par Invocation Synchro en utilisant un Syntoniseur de Niveau 1. Si une ou plusieurs cartes \"Ashtra\" et/ou face verso que vous contrôlez vont être détruites par un effet de carte, vous pouvez bannir cette carte depuis votre Cimetière à la place. Vous ne pouvez utiliser chaque effet de \"Tamayori Ashtrata\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Syntoniseur] Elfe/Feu  [★1] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
+  },
+  {
+    "name": "Yoami Ashtrama",
+    "desc": "1 Syntoniseur + 1+ non-Syntoniseur\r\nSi cette carte est Invoquée Spécialement, ou envoyée depuis le Terrain au Cimetière : vous pouvez ajouter à votre main, ou Poser, 1 Piège \"Ashtra\" depuis votre Deck. Si vous avez un Piège dans votre Cimetière : vous pouvez renvoyer autant de cartes face verso sur le Terrain que possible à la main, puis si vous avez min. 5 Pièges dans votre Cimetière, vous pouvez renvoyer toutes les cartes contrôlées par votre adversaire à la main. Vous ne pouvez utiliser chaque effet de \"Yoami Ashtrama\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Synchro] Magicien/Vent  [★8] 2400/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307039.jpg?version=19.7"
+  },
+  {
+    "name": "Ailes Déchaînées d'Atlantis",
+    "desc": "Le nom de cette carte devient \"Umi\" tant qu'elle est sur le Terrain. Vous ne pouvez utiliser chacun des effets suivants de \"Ailes Déchaînées d'Atlantis\" qu'une fois par tour. Vous pouvez envoyer cette carte depuis votre main et 1 Magie/Piège ou \"Umi\" depuis votre main ou Terrain face recto au Cimetière, puis ciblez 1 carte contrôlée par votre adversaire ; envoyez-la au Cimetière. Si vous contrôlez \"Atlantis, Cité du Dragon des Mers\" : vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 monstre Serpent de Mer de max. Niveau 4 depuis votre main ou Deck.",
+    "overallString": "[Monstre|Effet] Serpent de Mer/Eau  [★5] 2000/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307019.jpg?version=19.7"
+  },
+  {
+    "name": "Codédale",
+    "desc": "2 monstres EAU\nVous ne pouvez Invoquer Spécialement un ou plusieurs \"Codédale\" qu'une fois par tour. Le nom de cette carte devient \"Umi\" tant qu'elle est sur le Terrain. Si cette carte est Invoquée par Lien : vous pouvez activer cet effet ; durant la End Phase de ce tour, ajoutez 1 carte qui mentionne \"Atlantis, Cité du Dragon des Mers\" (\"Codédale\" exclu) depuis votre Cimetière à votre main. Une fois par tour : vous pouvez envoyer 1 \"Umi\" face recto que vous contrôlez au Cimetière ; envoyez max. 2 Magies/Pièges sur le Terrain au Cimetière.",
+    "overallString": "[Monstre|Effet|Lien] Serpent de Mer/Eau  [LINK-2] 1400/-  [→][↓]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
+  },
+  {
+    "name": "Puissance du Duelliste",
+    "desc": "Déclarez 2, 3 ou 4 Attributs ; appliquez cet effet selon le nombre déclaré, et aussi, durant la End Phase de ce tour, vous devez envoyer toutes les cartes que vous contrôlez au Cimetière, sauf si vous ayez activé les effets de monstres de tous les Attributs déclarés dans votre Terrain et/ou Cimetière ce tour.\n● 2 : Ciblez 1 monstre sur le Terrain ; bannissez-le.\n● 3 : Piochez 2 cartes, puis défaussez 1 carte.\n● 4 : Annulez les effets de 2 cartes face recto sur le Terrain.\nVous ne pouvez activer qu'1 \"Puissance du Duelliste\" par tour.",
+    "overallString": "[Magie|Jeu-Rapide]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
+  },
+  {
+    "name": "Sauvetage Dramatique Amazonnesse",
+    "desc": "Si vous contrôlez \"Dame Harpie\" ou un monstre \"Amazonnesse\", vous pouvez activer cette carte le tour où elle a été Posée. Ciblez 1 monstre sur le Terrain ; Invoquez Spécialement 1 monstre \"Harpie\" ou \"Amazonnesse\" depuis votre main ou Deck, et si vous le faites, renvoyez le monstre ciblé à la main. Vous pouvez bannir cette carte depuis votre Cimetière ; ajoutez 1 monstre \"Harpie\" ou \"Amazonnesse\" depuis votre Cimetière ou bannissement à votre main. Vous ne pouvez utiliser chaque effet de \"Sauvetage Dramatique Amazonnesse\" qu'une fois par tour.",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
+  },
+  {
+    "name": "Mur Miroir Séduisœil",
+    "desc": "Gagne ces effets tant que vous contrôlez \"Dame Harpie\" ou un monstre \"Amazonnesse\".\n● Les monstres face recto contrôlés par votre adversaire sont changés en Position d'Attaque et doivent attaquer si possible.\n● Une fois par combat, lorsqu'un monstre de l'adversaire déclare une attaque : vous pouvez diviser par deux son ATK.\nUne fois par tour, durant la Standby Phase : vous pouvez Poser 1 Magie/Piège qui mentionne \"Dame Harpie\" (\"Mur Miroir Séduisœil\" exclu) depuis votre Cimetière ou bannissement.",
+    "overallString": "[Piège|Continu]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
+  },
+  {
+    "name": "Amazonesse avec Chaîne - Danse de la Chaîne au Seuil de la Mort",
+    "desc": "Si cette carte est envoyée au Cimetière et que vous avez un autre monstre \"Amazonnesse\" dans votre Cimetière : vous pouvez payer 1000 LP ; votre adversaire peut choisir 1 monstre de Niveau 10 dans son Deck ou Extra Deck, et s'il le fait, vous pouvez l'Invoquer Spécialement sur votre Terrain, en ignorant ses conditions d'Invocation, mais aucun joueur ne peut pas activer ses effets ce tour. S'il ne le fait pas, défaussez 1 carte au hasard depuis sa main. Vous ne pouvez utiliser cet effet de \"Amazonesse avec Chaîne - Danse de la Chaîne au Seuil de la Mort\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Guerrier/Terre  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307005.jpg?version=19.7"
+  },
+  {
+    "name": "Guerrière Amazonesse - Danse de la Mort Instantannée",
+    "desc": "Si cette carte est ajoutée à votre main, sauf en la piochant : vous pouvez l'Invoquer Spécialement. Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez Poser 1 Magie/Piège qui mentionne \"Dame Harpie\" depuis votre Deck. Durant le calcul des dommages, si votre monstre \"Amazonnesse\" combat un monstre de l'adversaire : vous pouvez activer cet effet ; pour ce combat, aucun monstre ne peut être détruit au combat, et aussi, vous ne recevez aucun dommage de combat. Vous ne pouvez utiliser chaque effet de \"Guerrière Amazonesse - Danse de la Mort Instantannée\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Guerrier/Terre  [★4] 1500/1300",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307006.jpg?version=19.7"
+  },
+  {
+    "name": "Magicienne Amazonesse - Danse de la Magie Interdite",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 monstre \"Amazonnesse\" (monstres de Niveau 3 exclus) depuis votre Deck à votre main. Durant votre Main Phase : vous pouvez Invoquer par Fusion 1 Monstre Fusion TERRE ou VENT depuis votre Extra Deck, en utilisant des monstres depuis votre main ou Terrain. Durant le calcul des dommages, si votre monstre \"Amazonnesse\" combat un monstre de l'adversaire : vous pouvez bannir cette carte depuis votre Cimetière ; échangez les ATK des monstres combattants jusqu'à la fin de ce tour. Vous ne pouvez utiliser chaque effet de \"Magicienne Amazonesse - Danse de la Magie Interdite\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Guerrier/Terre  [★3] 400/800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307007.jpg?version=19.7"
+  },
+  {
+    "name": "Dame Harpie - Danse Séduisante",
+    "desc": "Le nom de cette carte devient \"Dame Harpie\" tant qu'elle est dans le Terrain ou Cimetière. Vous ne pouvez utiliser chacun des effets suivants de \"Dame Harpie - Danse Séduisante\" qu'une fois par tour. Durant la Main Phase, si cette carte est dans votre main (Effet Rapide) : vous pouvez cibler 1 monstre TERRE ou VENT que vous contrôlez ; renvoyez-le à la main/Extra Deck, et si vous le faites, Invoquez Spécialement cette carte. Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 Magie/Piège qui mentionne \"Dame Harpie\" depuis votre Deck à votre main.",
+    "overallString": "[Monstre|Effet] Bête Ailée/Vent  [★4] 1300/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
+  },
+  {
+    "name": "Maîtresse de l'Épée Amazonesse",
+    "desc": "2 monstres \"Amazonnesse\"\nLorsque votre monstre \"Amazonnesse\" détruit un monstre de l'adversaire au combat : vous pouvez piocher 1 carte. Vous ne pouvez utiliser chacun des effets suivants de \"Maîtresse de l'Épée Amazonesse\" qu'une fois par tour. Si cette carte est Invoquée par Fusion : vous pouvez Invoquer Spécialement 1 monstre \"Amazonnesse\" de max. Niveau 4 depuis votre Deck. (Effet Rapide) : vous pouvez Sacrifier 1 monstre, puis ciblez 1 Monstre à Effet sur le Terrain ; il perd 500 ATK, et aussi, annulez ses effets.",
+    "overallString": "[Monstre|Effet|Fusion] Guerrier/Terre  [★7] 2600/2200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
+  },
+  {
+    "name": "Sœurs de Harpie d'Extase Triangulaire",
+    "desc": "3 monstres \"Dame Harpie\"\nDoit d'abord être Invoquée par Fusion. Le nom de cette carte devient \"Dame Harpie\" tant qu'elle est dans le Terrain ou Cimetière. Gagne 500 ATK pour chaque \"Dame Harpie\" dans votre Cimetière, et aussi, votre adversaire ne peut pas cibler cette carte avec des effets de monstre non-VENT. Une fois par tour (Effet Rapide) : vous pouvez détruire tous les Magies/Pièges contrôlés par votre adversaire.",
+    "overallString": "[Monstre|Effet|Fusion] Bête Ailée/Vent  [★8] 3000/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
+  },
+  {
+    "name": "Triple Miroir Élégant",
+    "desc": "Ajoutez 1 monstre \"Harpie\" depuis votre Deck à votre main, puis si uniquement votre adversaire contrôle un monstre, vous pouvez Invoquer Spécialement 1 \"Dame Harpie\", ou 1 monstre qui le mentionne, depuis votre main ou Cimetière. Vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez par Fusion 1 Monstre Fusion TERRE ou VENT depuis votre Extra Deck, en utilisant des monstres depuis votre main ou Terrain. Vous ne pouvez utiliser chaque effet de \"Triple Miroir Élégant\" qu'une fois par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
+  },
+  {
+    "name": "Harpie et Amazonnesse en Formation Rakshasa",
+    "desc": "Ciblez 1 monstre \"Harpie\" ou \"Amazonnesse\" dans votre Cimetière ou bannissement ; Invoquez-le Spécialement, puis vous pouvez appliquer 1 de ces effets selon le nombre de \"Dame Harpie\" et de monstres \"Amazonnesse\" que vous contrôlez.\n● 1+ : Placez 1 \"Mur Miroir Séduisœil\" depuis votre Deck face recto dans votre Zone Magie & Piège.\n● 2+ : Prenez le contrôle d'1 monstre contrôlé par votre adversaire.\n● 3+ : Détruisez tous les monstres contrôlés par votre adversaire.\nVous ne pouvez activer qu'1 \"Harpie et Amazonnesse en Formation Rakshasa\" par tour.",
+    "overallString": "[Magie|Jeu-Rapide]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
+  },
+  {
+    "name": "Primevère la Féé Rikka Jumelle",
+    "desc": "Si un ou plusieurs monstres sont Sacrifiés : vous pouvez Invoquer Spécialement cette carte depuis votre main et 1 monstre \"Rikka\" (\"Primevère la Féé Rikka Jumelle\" exclu) depuis votre Deck en Position de Défense, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres Plante exclus) le reste de ce tour. Vous pouvez cibler 1 monstre Plante que vous contrôlez ; augmentez ou réduisez son Niveau de 2. Durant la Main Phase de votre adversaire, vous pouvez (Effet Rapide) : immédiatement après la résolution de cet effet, Invoquez par Xyz 1 Monstre Xyz Plante. Vous ne pouvez utiliser chaque effet de \"Primevère la Féé Rikka Jumelle\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Plante/Eau  [★8] 2600/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
+  },
+  {
+    "name": "Princesse Noire Rikka",
+    "desc": "Si vous ne contrôlez aucun monstre, ou si tous les monstres que vous contrôlez sont des monstres Plante : vous pouvez Invoquer Spécialement cette carte depuis votre main ou Cimetière, mais bannissez-la lorsqu'elle quitte le Terrain, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres Plante exclus) le reste de ce tour. Vous pouvez Sacrifier 1 monstre Plante depuis votre main ou Terrain ; Invoquez Spécialement 1 monstre \"Rikka\" (\"Princesse Noire Rikka\" exclu) depuis votre Deck. Vous ne pouvez utiliser chaque effet de \"Princesse Noire Rikka\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Plante/Eau  [★6] 0/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
+  },
+  {
+    "name": "Larme l'Impératrice Rikka",
+    "desc": "2 monstres Plante de Niveau 10\nVous pouvez aussi Invoquer par Xyz cette carte en utilisant \"Larme la Reine Rikka\" que vous contrôlez (transférez ses Matériels). (Effet Rapide) : vous pouvez détacher max. 6 Matériels de cette carte ; envoyez autant de Magies/Pièges sur le Terrain au Cimetière, puis vous pouvez Sacrifier 1 monstre sur le Terrain. Vous ne pouvez utiliser cet effet de \"Larme l'Impératrice Rikka\" qu'une fois par tour. Chaque fois qu'un ou plusieurs monstres sont Sacrifiés : attachez 1 carte depuis le Cimetière de votre adversaire à 1 Monstre Xyz Plante que vous contrôlez.",
+    "overallString": "[Monstre|Effet|Xyz] Plante/Eau  [☆10] 3200/3200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
+  },
+  {
+    "name": "Strenna l'Impératrice Rikka",
+    "desc": "2 monstres Plante de Niveau 6\nVous pouvez détacher 2 Matériels de cette carte ; Invoquez Spécialement 1 Monstre Xyz Plante (\"Strenna l'Impératrice Rikka\" exclu) depuis votre Extra Deck en Position de Défense, puis si vous avez Invoqué Spécialement un monstre \"Rikka\", vous pouvez lui attacher 1 monstre \"Rikka\" depuis votre Deck. Si un ou plusieurs monstres sont Sacrifiés : vous pouvez Poser 1 Piège \"Rikka\" depuis votre Deck ou Cimetière. Vous ne pouvez utiliser chaque effet de \"Strenna l'Impératrice Rikka\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Xyz] Plante/Eau  [☆6] 2000/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
+  },
+  {
+    "name": "Lune de Juin Rikka",
+    "desc": "Lorsque vous activez cette carte, vous pouvez aussi Sacrifier 1 monstre Plante ; prenez 2 monstres \"Rikka\" depuis votre Deck du même Niveau, mais de noms différents, ajoutez-en 1 à votre main et envoyez l'autre au Cimetière, et aussi, si vous avez Sacrifié un monstre à l'activation, votre adversaire ne peut pas cibler les monstres \"Rikka\" que vous contrôlez avec des effets de carte ce tour. Le reste de ce tour après la résolution de cette carte, vous ne pouvez pas Invoquer Spécialement (Monstres Xyz Plante exclus) depuis l'Extra Deck. Vous ne pouvez activer qu'1 \"Lune de Juin Rikka\" par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
+  },
+  {
     "name": "Château du Vampire",
     "desc": "Lorsque cette carte est activée : Invoquez Spécialement 1 monstre TÉNÈBRES Zombie depuis votre Deck ou Cimetière. Lorsque le monstre quitte le Terrain, détruisez cette carte. Le monstre n'est pas affecté par les effets activés des autres monstres non-TÉNÈBRES. Si cette carte face recto quitte le Terrain : détruisez autant de cartes que vous contrôlez que possible, et si vous le faites, recevez 400 points de dommages pour chaque carte détruite. Vous ne pouvez activer qu'1 \"Château du Vampire\" par tour.",
     "overallString": "[Magie|Continu]",
