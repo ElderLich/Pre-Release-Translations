@@ -1,13 +1,8 @@
 {
   "language": "en",
-  "candidates": 1,
-  "matched": 1,
+  "candidates": 0,
+  "matched": 0,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {
-    "101307022": {
-      "set_code": "IMPH-JP022",
-      "source": "https://yugipedia.com/wiki/Nightmare_Twinkle"
-    }
-  }
+  "matches": {}
 }
