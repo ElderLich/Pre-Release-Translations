@@ -1,21 +1,8 @@
 {
   "language": "en",
-  "candidates": 3,
-  "matched": 3,
+  "candidates": 0,
+  "matched": 0,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {
-    "101307017": {
-      "set_code": "IMPH-JP017",
-      "source": "https://yugipedia.com/wiki/Invincible_Rocket_Warrior"
-    },
-    "101307022": {
-      "set_code": "IMPH-JP022",
-      "source": "https://yugipedia.com/wiki/Nightmare_Twinkle"
-    },
-    "101307036": {
-      "set_code": "IMPH-JP036",
-      "source": "https://yugipedia.com/wiki/The_Legendary_Insect_Queen"
-    }
-  }
+  "matches": {}
 }
