@@ -1,81 +1,9 @@
 {
   "language": "en",
-  "matches": {
-    "120310027": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP027",
-      "source": "https://yugipedia.com/wiki/Strong-Armed_Hitotsu-Me_Giant"
-    },
-    "120310028": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP028",
-      "source": "https://yugipedia.com/wiki/Keen_and_Nimble_Tiger_Axe"
-    },
-    "120310029": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP029",
-      "source": "https://yugipedia.com/wiki/Crusher_Golem"
-    },
-    "120310042": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP042",
-      "source": "https://yugipedia.com/wiki/Invincible_Millennium_Golem"
-    },
-    "120310047": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP047",
-      "source": "https://yugipedia.com/wiki/The_Unstoppable_Sengenjin"
-    },
-    "120310056": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP056",
-      "source": "https://yugipedia.com/wiki/Ritual_of_Sennen_Genjin"
-    },
-    "120310057": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP057",
-      "source": "https://yugipedia.com/wiki/Revival_of_Sennen_Genjin"
-    },
-    "120310058": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP058",
-      "source": "https://yugipedia.com/wiki/Millennium_Smasher"
-    }
-  },
+  "matches": {},
   "requested_ids": [
     120000012,
-    120310027,
-    120310028,
-    120310029,
-    120310042,
-    120310047,
-    120310056,
-    120310057,
-    120310058,
+    120310033,
     120310069
   ],
   "unresolved": [
@@ -83,6 +11,11 @@
       "id": 120000012,
       "reason": "No upstream sets.md range or reviewed mapping",
       "set_code": null
+    },
+    {
+      "id": 120310033,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP033"
     },
     {
       "id": 120310069,

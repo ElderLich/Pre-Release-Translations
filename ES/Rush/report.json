@@ -1,5 +1,5 @@
 {
-  "active_cards": 97,
+  "active_cards": 98,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -33,6 +33,7 @@
     120310027,
     120310028,
     120310029,
+    120310033,
     120310036,
     120310037,
     120310038,
@@ -115,6 +116,17 @@
       ],
       "id": 120310015,
       "name": "Mad Rare Beeko"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120310033,
+      "name": "美之里的栗子猫"
     },
     {
       "fields": [
@@ -865,8 +877,8 @@
     "120310062": "c99571f13ad8dd6355a27c769eef4ff11fe10fd43fae517d481ada0e2af620b7",
     "120310063": "2d8ecdb493527b43b73f74a5591e6b16c42f6cabac392e187e6955dde116ec2f"
   },
-  "script_files": 129,
-  "source_cards": 97,
+  "script_files": 130,
+  "source_cards": 98,
   "text_sha256": {
     "120000012": "c71a6c5630578295f9d6f1975f89ed450edd9890187f1a57ee736acafbfb70d7",
     "120109069": "e4e2baad8ad86d16a1249b2367ca65849cc7be78cb15ad9ffe2ce754646846b0",
@@ -898,6 +910,7 @@
     "120310027": "269581b09560a48272c183633ecfd4ad1915250363bc748b24f4c74407ae66d2",
     "120310028": "1b37c1927fd8113b70b5d524de64b290119571a537fd9b57a0c317e0e1a8e39b",
     "120310029": "179e764be02ea33e6e2c00721d5bc250bca62cd47ace337277823c2e4b211ca7",
+    "120310033": "54301ed620d54412055fb7e79e5cd09936896460429d066a3cb7b086d33d6aeb",
     "120310036": "a9b2fe59fe5ed01bfbc4baa9354b520fbc016628e379e1c7f99d7442636764a4",
     "120310037": "48df2ad5f6d20eb0cc89c5a383cd32a457514dfd4ebe8bf85faa6478d066cf36",
     "120310038": "3b920e5a9161d76bdfb28209b9dafe4798179b6bece2e6cc3a21a4e0c3965d35",

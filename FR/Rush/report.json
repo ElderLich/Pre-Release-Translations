@@ -1,5 +1,5 @@
 {
-  "active_cards": 97,
+  "active_cards": 98,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -33,6 +33,7 @@
     120310027,
     120310028,
     120310029,
+    120310033,
     120310036,
     120310037,
     120310038,
@@ -217,6 +218,17 @@
       ],
       "id": 120310029,
       "name": "Golem de Broyage"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120310033,
+      "name": "美之里的栗子猫"
     },
     {
       "fields": [
@@ -1531,8 +1543,8 @@
     "120309061": "3735ddeb435a829ced358e55628fff15dfc8467f131bfb8de031908dd55f1bd9",
     "120309085": "7b33d54f6dc67ce39eb25c661866725f906eb6418fb8360034cb4c52393830ba"
   },
-  "script_files": 129,
-  "source_cards": 97,
+  "script_files": 130,
+  "source_cards": 98,
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "5bc01d8e339c9ce0e44c4c1bf481563583ff662afd99debea8a4f1631105154e",
@@ -1564,6 +1576,7 @@
     "120310027": "39ccc4feede93bc5284b72f72fef277bcf768b1ba0e24e83382b2edb7e0c6a78",
     "120310028": "095390ded3c0ac3b94d7123852fbf059642230f83e09ac5a6c7624720ed21613",
     "120310029": "b47df99b02bf7e7c5bdbd92ac191e7ae6136d84d7050893c560561ed73a1e11b",
+    "120310033": "e18138f46b6a7a7624cdb3322449722ce46cdaffb39d10659c5e7ee77fe8772e",
     "120310036": "024cd40f47542721590ecaa29013586b70646af85dd6ca65f9f4354308cb31f9",
     "120310037": "7b00a02ff913b490090644531f7f1bf282a43c25b26e9ae72431689c07dbe647",
     "120310038": "6b535ec79081f3ec296b9b91945c9ee96dffd9df44b50f9b77a8373e882e122f",

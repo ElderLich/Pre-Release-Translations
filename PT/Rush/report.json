@@ -1,5 +1,5 @@
 {
-  "active_cards": 97,
+  "active_cards": 98,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -33,6 +33,7 @@
     120310027,
     120310028,
     120310029,
+    120310033,
     120310036,
     120310037,
     120310038,
@@ -370,6 +371,17 @@
       ],
       "id": 120310029,
       "name": "压坏的石人"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120310033,
+      "name": "美之里的栗子猫"
     },
     {
       "fields": [
@@ -2107,8 +2119,8 @@
     "120309061": "a98c70370651a3c7db894fd863a822baeaf4c7d1352705ab56b7f900209786ef",
     "120309085": "a4cf2fc7dca8f75d624729484a432332ef23802f3b46bff1f311b07e6602b266"
   },
-  "script_files": 129,
-  "source_cards": 97,
+  "script_files": 130,
+  "source_cards": 98,
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "5e41433cafa742394f5fa339133b6b9050e7bc0c173b43192b012e69db65f29c",
@@ -2140,6 +2152,7 @@
     "120310027": "499f5689a42e10f5c0ec6c74cc3f9a2d377076a8543ae5794eb4175c054ddaad",
     "120310028": "d51db571f81ed7f02d7379413fadffc54e1e1bbd6728c4ba4d5c27b5e7d85b7c",
     "120310029": "2f37000e3fca319304cd9115b8fee17a2f8232029f35b99db0652d58dea6f30e",
+    "120310033": "adc8aaf73df5b8ea4f9fe3f9219e8080897a7afe46a6dfa941455445491ad725",
     "120310036": "12b74899afadb16e7169bbc6fbd980e74c7682a1d962778d1a0cd0f5db03195c",
     "120310037": "157f2a0e578933a7d7a5d84fe868be6ab2aab642c35dc4c00fa803cc0e902819",
     "120310038": "0e0956e82c4362f1612a4689763545c8cc678ee9e4f98e477f601174bd38f10b",

@@ -1,5 +1,5 @@
 {
-  "active_cards": 97,
+  "active_cards": 98,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -33,6 +33,7 @@
     120310027,
     120310028,
     120310029,
+    120310033,
     120310036,
     120310037,
     120310038,
@@ -217,6 +218,17 @@
       ],
       "id": 120310029,
       "name": "Crusher Golem"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120310033,
+      "name": "美之里的栗子猫"
     },
     {
       "fields": [
@@ -1523,8 +1535,8 @@
     "120309061": "29cdf42db1e4b3f1f26451aa779e89d2a05be38d942f27061a3eaa58ae1e9f9b",
     "120309085": "e8cb5f3f7962de2544ed7adb43a26ace7c4014cae42cd522dd992009343ea95d"
   },
-  "script_files": 129,
-  "source_cards": 97,
+  "script_files": 130,
+  "source_cards": 98,
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "327a521e9b41429a081d98a61eb8504f630cc09328e875728c43ac0c6ecc8def",
@@ -1556,6 +1568,7 @@
     "120310027": "37daccc93f85d0e9178ac6b4ed2fb5a2bd78ae38d5cc1575af310320c8905ec9",
     "120310028": "70d4bc0fce85653d07a04c89418e85fdd303108a4c0b6d8128d343dc395b9f47",
     "120310029": "ecd865fb788755bbc2cf5fc8ef00f8bf92bbe97818fa3104117a7cdf244b2792",
+    "120310033": "21dd499a2e88502b28bd1fd30efd1d9124e8dd3c932fb672df130100683d1e38",
     "120310036": "3eafff196d727f5a240f652a8c82eb32160fabea7ac9e40f07cd7a449b917e5c",
     "120310037": "2390dfe5d8182fdc6a45d8af09e83124259e893a5961ee4eccf729aa2e3acf98",
     "120310038": "bae14427ade83883bfe08035fd5fba155ed32ee2b546b6ada98e00ad8071e0da",

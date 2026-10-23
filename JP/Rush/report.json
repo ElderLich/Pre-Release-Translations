@@ -1,5 +1,5 @@
 {
-  "active_cards": 97,
+  "active_cards": 98,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -33,6 +33,7 @@
     120310027,
     120310028,
     120310029,
+    120310033,
     120310036,
     120310037,
     120310038,
@@ -200,6 +201,15 @@
       ],
       "id": 120310029,
       "name": "圧壊のゴーレム"
+    },
+    {
+      "fields": [
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120310033,
+      "name": "美ノ里のマロンキャット"
     },
     {
       "fields": [
@@ -1498,8 +1508,8 @@
     "120309061": "d10b46872975249bfb7592e6973aa50e45416e78c3ff2c10d408681e2d065740",
     "120309085": "93cf97e29b8b023d002fe7a41c5b8bc3fd527721498f39c9ef0c359d3ea043f2"
   },
-  "script_files": 129,
-  "source_cards": 97,
+  "script_files": 130,
+  "source_cards": 98,
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "3bbe89a3294459b256f45c1e8164ac179781fabee9efc8f335e2d28ed4d4dcaf",
@@ -1531,6 +1541,7 @@
     "120310027": "8a7af4ffde8d9f084baef8a55e369e6d128c250d3f947a3ee980793e50b801db",
     "120310028": "966858dcb7ab5f2d6b5d575aa1699e9b859b7a7cf83975545c1754f390c5eb84",
     "120310029": "f22d6f45b8c21c9816608f905eb694367d66e0d511f1ebdb51c100a057e839fd",
+    "120310033": "c50a1b4f5c794f270164b4dfb28e187f63fe0d7b4f6354a08fffc4493dd98ac1",
     "120310036": "d560f94ee3ceab08279ec7320b30007c52ae4fa34f50902e67e0b425d772dcdb",
     "120310037": "026cd66bde6b03d96151a9f4e814cb3682ffac58d7fa8e530d8fcb8834bbd06b",
     "120310038": "507022a461cf44d2e4e15ccf0087069df0865e04064bd44ecb34a9dd4513f074",

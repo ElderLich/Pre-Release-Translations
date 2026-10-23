@@ -1,5 +1,5 @@
 {
-  "active_cards": 97,
+  "active_cards": 98,
   "artwork_files": 0,
   "excluded_ids": [],
   "missing_artwork": [
@@ -33,6 +33,7 @@
     120310027,
     120310028,
     120310029,
+    120310033,
     120310036,
     120310037,
     120310038,
@@ -210,6 +211,17 @@
       ],
       "id": 120310029,
       "name": "Golem Frantumatore"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120310033,
+      "name": "美之里的栗子猫"
     },
     {
       "fields": [
@@ -1516,8 +1528,8 @@
     "120309061": "b02cf197226131e18649dc0e7fb670e02ad4c71c49a37cd967154fad17dc3798",
     "120309085": "6bc464523e05ce3a7d465ccdc13d38432dfc4c1528f8dfa8d689f97bab4f741a"
   },
-  "script_files": 129,
-  "source_cards": 97,
+  "script_files": 130,
+  "source_cards": 98,
   "text_sha256": {
     "120000012": "cd668a82acb2df93ddc2061720dade359c57c364481db933496f555dc1ef1476",
     "120109069": "b08c72ba0ea00255316f82f5d1d91b4dccb3c144f2d024457cbfe067681c99a8",
@@ -1549,6 +1561,7 @@
     "120310027": "a41e0e667a2c03b70810a9fffd55847eeb3cab5b40711f2defcc07c8c379f04c",
     "120310028": "7bf5bda3ad58abf9213f2670be2215be25e42654b48bdba4bc7f6a2ef461d632",
     "120310029": "373bb9f7b28a70728b1c2683b459b221ddb090ee32ea7d8d6845b63bff95ae4c",
+    "120310033": "61363261e69a06c46f31468e2a20abe0c0163eec09ef873af5016a3103583b79",
     "120310036": "874c0e250aa8824208d73079350b8044e943f26dce3e595b3fd70aa5b0bc65b0",
     "120310037": "7cdabc217d529c1b25f37dec0bd2938f00eb544fcbf57b190f5844751a9b71a2",
     "120310038": "c6ee72b8ce595e3521787fd66b1373c86547c7b49d7b2400d2eea66e051b2a34",

@@ -1,73 +1,10 @@
 {
   "language": "fr",
-  "matches": {
-    "120310027": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP027",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17870&languages=fr"
-    },
-    "120310028": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP028",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17871&languages=fr"
-    },
-    "120310029": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP029",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17872&languages=fr"
-    },
-    "120310042": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP042",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17873&languages=fr"
-    },
-    "120310047": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP047",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17874&languages=fr"
-    },
-    "120310056": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP056",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17875&languages=fr"
-    },
-    "120310058": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP058",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17877&languages=fr"
-    }
-  },
+  "matches": {},
   "requested_ids": [
     120000012,
-    120310027,
-    120310028,
-    120310029,
-    120310042,
-    120310047,
-    120310056,
+    120310033,
     120310057,
-    120310058,
     120310069
   ],
   "unresolved": [
@@ -75,6 +12,11 @@
       "id": 120000012,
       "reason": "No upstream sets.md range or reviewed mapping",
       "set_code": null
+    },
+    {
+      "id": 120310033,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP033"
     },
     {
       "id": 120310057,
