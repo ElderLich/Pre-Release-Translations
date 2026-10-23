@@ -1,24 +1,13 @@
 {
   "language": "fr",
-  "candidates": 2,
-  "matched": 0,
-  "unmatched_ids": [
-    101307017,
-    101307036
-  ],
-  "unresolved": [
-    {
-      "id": 101307017,
-      "name": "无敌的火箭战士",
-      "set_code": "IMPH-JP017",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 101307036,
-      "name": "幻之昆虫女王",
-      "set_code": "IMPH-JP036",
-      "reason": "No source card page found"
+  "candidates": 1,
+  "matched": 1,
+  "unmatched_ids": [],
+  "unresolved": [],
+  "matches": {
+    "101307022": {
+      "set_code": "IMPH-JP022",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17883&languages=fr"
     }
-  ],
-  "matches": {}
+  }
 }
