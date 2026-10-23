@@ -19,23 +19,27 @@ on:
       - "Shared/Rush Artworks/**"
       - "Shared/Rush/config.json"
       - "*/Rush/Workspace/**"
+      - ".github/scripts/release_git.py"
+      - ".github/scripts/shared_builds.py"
       - ".github/workflows/rush-prerelease.yml"
 
 permissions:
   contents: write
 
-concurrency:
-  group: rush-prerelease
-  cancel-in-progress: false
-
 jobs:
   release:
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    # Keep every locale queued; only one job may publish to this branch at a time.
+    concurrency:
+      group: prerelease-writer-${{ github.event.workflow_run.head_branch || github.ref_name }}
+      queue: max
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v7.0.1
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v7.0.0
@@ -43,6 +47,8 @@ jobs:
           python-version: "3.x"
 
       - name: Get current Rush sources and translated databases
+        env:
+          AUTOPR_DOWNLOAD_CACHE: ${{ runner.temp }}/prerelease-downloads-${{ github.run_id }}
         run: |
           set -euo pipefail
           python .github/scripts/fetch_rush_sources.py \
@@ -50,13 +56,15 @@ jobs:
             --translations-root "$RUNNER_TEMP/rush-translations"
 
       - name: Reconcile, package, commit and tag Rush locales
+        env:
+          AUTOPR_DOWNLOAD_CACHE: ${{ runner.temp }}/prerelease-downloads-${{ github.run_id }}
         run: |
           set -euo pipefail
           git config user.name "ElderLich"
           git config user.email "35314175+ElderLich@users.noreply.github.com"
           branch="${GITHUB_REF_NAME:-main}"
           for attempt in 1 2 3 4 5; do
-            git fetch --tags origin "$branch"
+            git fetch --no-tags --depth=1 origin "+refs/heads/$branch:refs/remotes/origin/$branch"
             git checkout -B "$branch" "origin/$branch"
             python Tools/rush_prerelease.py sync \
               --source-root "$RUNNER_TEMP/rush-source" \
@@ -72,6 +80,7 @@ jobs:
               exit 0
             fi
             # Tag only locales whose package changed in this build.
+            python .github/scripts/release_git.py list-tags > "$RUNNER_TEMP/rush-tags.txt"
             tags=()
             tag_refs=()
             for locale in EN DE ES FR IT JP KR PT TH ZH-CN ZH-TW; do
@@ -79,8 +88,8 @@ jobs:
               if [ ! -f "$package" ] || git diff --cached --quiet -- "$package"; then
                 continue
               fi
-              latest_tag=$(git tag --list "${locale}_Rush-v*" | sed -E "s/^${locale}_Rush-v([0-9]+)$/\1/" | grep -E '^[0-9]+$' | sort -n | tail -1 || true)
-              tag="${locale}_Rush-v$(( ${latest_tag:-0} + 1 ))"
+              next_tag_number=$(python .github/scripts/release_git.py next-number --prefix "${locale}_Rush-v" --tags-file "$RUNNER_TEMP/rush-tags.txt")
+              tag="${locale}_Rush-v${next_tag_number}"
               tags+=("$tag")
               tag_refs+=("refs/tags/$tag")
             done

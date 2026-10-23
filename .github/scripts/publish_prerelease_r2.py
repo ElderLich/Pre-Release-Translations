@@ -18,6 +18,8 @@ import stat
 import subprocess
 import sys
 import tempfile
+import time
+from urllib.error import HTTPError
 from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
 import zipfile
@@ -34,6 +36,7 @@ KINDS = {
 MAX_PUT_BYTES = 5 * 1024**3 - 1
 MAX_CATALOG_BYTES = 1024 * 1024
 CHUNK_BYTES = 1024 * 1024
+PUBLIC_VERIFY_BUDGET = 120
 
 
 class PublishError(RuntimeError):
@@ -184,22 +187,47 @@ def current_main_commit(repository=SOURCE_REPOSITORY):
 
 
 def verify_public(url, expected_size, expected_sha256):
+    # Exclude query strings, userinfo and exception bodies from diagnostics.
+    parsed = urlsplit(url)
+    identity = (parsed.hostname or "unknown host") + parsed.path
+    started = time.monotonic()
+    count = 0
     try:
         request = Request(url, headers={"Cache-Control": "no-cache", "Accept-Encoding": "identity",
                                         "User-Agent": "MDPro4-prerelease-publisher/1.0"})
-        with urlopen(request, timeout=60) as response:
-            if response.status != 200 or urlsplit(response.geturl()).scheme != "https":
-                raise ValueError("status or transport")
+        with urlopen(request, timeout=30) as response:
+            if response.status != 200:
+                raise PublishError(f"HTTP {response.status}, expected 200")
+            if urlsplit(response.geturl()).scheme != "https":
+                raise PublishError("redirect did not preserve HTTPS")
             count, digest = 0, hashlib.sha256()
-            for chunk in iter(lambda: response.read(CHUNK_BYTES), b""):
+            read = getattr(response, "read1", response.read)
+            while True:
+                if time.monotonic() - started >= PUBLIC_VERIFY_BUDGET:
+                    raise PublishError(f"exceeded {PUBLIC_VERIFY_BUDGET}s transfer budget")
+                chunk = read(CHUNK_BYTES)
+                if not chunk:
+                    break
                 count += len(chunk)
                 if count > expected_size:
-                    raise ValueError("oversized response")
+                    raise PublishError(f"oversized response: received at least {count:,}, expected {expected_size:,} bytes")
                 digest.update(chunk)
-        if count != expected_size or digest.hexdigest() != expected_sha256:
-            raise ValueError("content mismatch")
-    except Exception:
-        raise PublishError("Public payload verification failed; catalog was not promoted.") from None
+        if count != expected_size:
+            raise PublishError(f"size mismatch: received {count:,}, expected {expected_size:,} bytes")
+        if digest.hexdigest() != expected_sha256:
+            raise PublishError(f"SHA-256 mismatch: received {digest.hexdigest()}, expected {expected_sha256}")
+    except Exception as error:
+        if isinstance(error, PublishError):
+            reason = str(error)
+        elif isinstance(error, HTTPError):
+            reason = f"HTTP {error.code}"
+            error.close()
+        else:
+            reason = type(error).__name__
+        raise PublishError(
+            f"Public verification failed for {identity}: {reason} "
+            f"({count:,} bytes read in {time.monotonic() - started:.1f}s)."
+        ) from None
 
 
 def error_status(error):
@@ -229,22 +257,23 @@ def read_catalog(client, bucket, key):
 def ensure_payload(client, bucket, key, path, pack, public_verifier):
     # A HEAD avoids resending an existing file, but never substitutes for a full
     # public read-back. Its metadata/ETag is not a trusted SHA-256 proof.
+    label = f"{pack['kind']}/{pack['locale']}/{pack['fileName']}"
     absent = False
     try:
         result = client.head_object(Bucket=bucket, Key=key)
         if result.get("ContentLength") != pack["sizeBytes"]:
-            raise PublishError("An immutable payload key has conflicting bytes.")
+            raise PublishError(f"Immutable payload size conflicts for {label}: R2 has {result.get('ContentLength')}, expected {pack['sizeBytes']} bytes.")
     except PublishError:
         raise
     except Exception as error:
         if error_status(error) != 404:
-            raise PublishError("Could not inspect an immutable R2 payload.") from None
+            raise PublishError(f"Could not inspect immutable R2 payload {label} (HTTP {error_status(error) or 'unknown'}).") from None
         absent = True
     if absent:
         # Re-hash at the write boundary, so changed local files cannot be uploaded
         # with an earlier snapshot's identity. The runner owns this checkout.
         if path.stat().st_size != pack["sizeBytes"] or sha256_file(path) != pack["sha256"]:
-            raise PublishError("A local package changed after validation.")
+            raise PublishError(f"Local package {label} changed after validation.")
         md5 = hashlib.md5(usedforsecurity=False)
         with path.open("rb") as stream:
             for chunk in iter(lambda: stream.read(CHUNK_BYTES), b""):
@@ -258,9 +287,14 @@ def ensure_payload(client, bucket, key, path, pack, public_verifier):
                                   ContentType="application/zip", CacheControl="public, max-age=31536000, immutable")
             except Exception as error:
                 if error_status(error) != 412:
-                    raise PublishError("R2 payload upload failed; catalog was not promoted.") from None
+                    raise PublishError(f"R2 upload failed for {label} (HTTP {error_status(error) or 'unknown'}); catalog was not promoted.") from None
                 # Another create-once writer won. Compare its actual public bytes.
-    public_verifier(pack["url"], pack["sizeBytes"], pack["sha256"])
+    try:
+        public_verifier(pack["url"], pack["sizeBytes"], pack["sha256"])
+    except PublishError as error:
+        raise PublishError(f"Payload {label}: {error} Catalog was not promoted.") from None
+    except Exception as error:
+        raise PublishError(f"Public verification failed for {label} ({type(error).__name__}); catalog was not promoted.") from None
 
 
 def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_public,
@@ -293,13 +327,17 @@ def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_publ
         raise PublishError("Catalog and local package inventory differ.")
     if len(public_bases) != 1:
         raise PublishError("Catalog payloads must use one public delivery base.")
+    # A queued older run can otherwise read every public package only to discover
+    # that its snapshot can no longer be promoted. This is a safe no-op.
+    if main_resolver(catalog["sourceRepository"]) != catalog["sourceCommit"]:
+        return "superseded"
     public_catalog_url = next(iter(public_bases)) + "/" + catalog_key
     previous, etag = read_catalog(client, bucket, catalog_key)
     for pack in catalog["packs"]:
         key = f"prerelease/{pack['kind']}/{pack['locale']}/{pack['sha256']}/{pack['fileName']}"
         ensure_payload(client, bucket, key, files[key], pack, public_verifier)
     if main_resolver(catalog["sourceRepository"]) != catalog["sourceCommit"]:
-        raise PublishError("Source main advanced; rerun publication from its latest complete snapshot.")
+        return "superseded"
     body = canonical_json(catalog)
     if previous == body:
         verify_public_catalog(public_verifier, public_catalog_url, body)
@@ -326,10 +364,11 @@ def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_publ
 def verify_public_catalog(public_verifier, url, body):
     try:
         public_verifier(url, len(body), hashlib.sha256(body).hexdigest())
-    except Exception:
+    except Exception as error:
         # The conditional write has already committed. Rolling it back could
         # erase another publisher's work and cannot repair a public cache rule.
-        raise PublishError("Catalog is committed to R2 but public catalog verification failed; check the public host and rerun publication.") from None
+        detail = str(error) if isinstance(error, PublishError) else type(error).__name__
+        raise PublishError(f"Catalog is committed to R2 but public catalog verification failed: {detail} Check the public host and rerun publication.") from None
 
 
 def create_client(endpoint):
@@ -376,6 +415,9 @@ def main(argv=None):
             raise PublishError("The R2 S3 endpoint is not configured.")
         result = publish_snapshot(create_client(args.endpoint_url), args.bucket, catalog, files,
                                   catalog_key=args.catalog_key)
+        if result == "superseded":
+            print("Skipped superseded snapshot: source main advanced; the current catalog was preserved.")
+            return 0
         print(f"Prerelease catalog {result}; {len(catalog['packs'])} packages verified.")
         return 0
     except PublishError as error:

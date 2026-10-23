@@ -8,26 +8,30 @@ on:
     paths:
       - ".github/scripts/autopr_zh_tw.py"
       - ".github/scripts/shared_downloads.py"
+      - ".github/scripts/release_git.py"
+      - ".github/scripts/shared_builds.py"
       - ".github/workflows/autopr-zh-tw.yml"
 
 permissions:
   contents: write
-
-concurrency:
-  group: autopr-zh-tw
-  cancel-in-progress: false
 
 jobs:
   build-zh-tw:
     name: Build ZH-TW package
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    # Keep every locale queued; only one job may publish to this branch at a time.
+    concurrency:
+      group: prerelease-writer-${{ github.event.workflow_run.head_branch || github.ref_name }}
+      queue: max
+      cancel-in-progress: false
 
     steps:
       - name: Checkout Pre-Release Translations
         uses: actions/checkout@v7.0.1
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+          fetch-depth: 1
 
       - name: Checkout CardEditor expansions
         uses: actions/checkout@v7.0.1
@@ -41,42 +45,46 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build package from AutoPR sources
-        run: python .github/scripts/autopr_zh_tw.py
+      - name: Build, commit, and tag ZH-TW package
         env:
+          AUTOPR_DOWNLOAD_CACHE: ${{ runner.temp }}/prerelease-downloads-${{ github.run_id }}
           TW_AUTOPR_CARDEDITOR_EXPANSIONS_DIR: ${{ github.workspace }}/_cardeditor/expansions
           TW_AUTOPR_CARDS_CDB_URL: https://github.com/salix5/cdb/releases/download/snapshot/cards.cdb
-
-      - name: Commit generated outputs
         run: |
+          set -euo pipefail
           git config user.name "ElderLich"
           git config user.email "35314175+ElderLich@users.noreply.github.com"
-          push_main() {
-            for attempt in 1 2 3 4 5 6 7 8 9 10; do
-              if git push origin "HEAD:${GITHUB_REF_NAME:-main}"; then
-                return 0
-              fi
-              echo "Push failed; rebasing and retrying (${attempt}/10)..."
-              sleep $((attempt * 5))
-              git pull --rebase origin "${GITHUB_REF_NAME:-main}"
-            done
-            git push origin "HEAD:${GITHUB_REF_NAME:-main}"
-          }
-          git add -A "ZH-TW/Base Files" ZH-TW/ygopro-super-pre.ypk ZH-TW/test-release.json ZH-TW/version.txt
-          if git diff --cached --quiet; then
-            echo "No generated output changes to commit."
+          branch="${GITHUB_REF_NAME:-main}"
+
+          for attempt in 1 2 3 4 5 6 7 8 9 10; do
+            git fetch --no-tags --depth=1 origin "+refs/heads/$branch:refs/remotes/origin/$branch"
+            git checkout -B "$branch" "origin/$branch"
             rm -f ZH-TW/.autopr-commit-body.txt
-            exit 0
-          fi
-          git fetch --tags origin
-          latest_tag=$(git tag --list 'TW-v*' | sed -E 's/^TW-v([0-9]+)$/\1/' | grep -E '^[0-9]+$' | awk '$1 < 10000' | sort -n | tail -1)
-          next_tag_number=$(( ${latest_tag:-0} + 1 ))
-          tag="TW-v${next_tag_number}"
-          commit_message=$(mktemp)
-          printf "預發布卡片更新 TW - v%s\n\n" "$next_tag_number" > "$commit_message"
-          cat ZH-TW/.autopr-commit-body.txt >> "$commit_message"
-          git commit -F "$commit_message"
-          rm -f "$commit_message" ZH-TW/.autopr-commit-body.txt
-          push_main
-          git tag -a "$tag" -m "Release $tag"
-          git push origin "$tag"
+
+            python .github/scripts/autopr_zh_tw.py
+            git add -A "ZH-TW/Base Files" ZH-TW/ygopro-super-pre.ypk ZH-TW/test-release.json ZH-TW/version.txt
+            if git diff --cached --quiet; then
+              echo "No ZH-TW release output changes to commit."
+              rm -f ZH-TW/.autopr-commit-body.txt
+              exit 0
+            fi
+
+            next_tag_number=$(python .github/scripts/release_git.py next-number --prefix TW-v --exclude-from 10000)
+            tag="TW-v${next_tag_number}"
+            commit_message=$(mktemp)
+            printf "預發布卡片更新 TW - v%s\n\n" "$next_tag_number" > "$commit_message"
+            cat ZH-TW/.autopr-commit-body.txt >> "$commit_message"
+            git commit -F "$commit_message"
+            rm -f "$commit_message" ZH-TW/.autopr-commit-body.txt
+
+            git tag -a "$tag" -m "Release $tag"
+            if git push --atomic origin "HEAD:$branch" "refs/tags/$tag"; then
+              exit 0
+            fi
+            git tag -d "$tag"
+            echo "Push failed; refreshing and rebuilding (${attempt}/10)..."
+            sleep $((attempt * 5))
+          done
+
+          echo "Unable to push ZH-TW release after rebuilding on the latest branch tip."
+          exit 1

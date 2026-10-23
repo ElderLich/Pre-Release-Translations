@@ -90,9 +90,12 @@ The mirror accepts successful publishers from this repository's main branch
 only. It never runs pull-request code with R2 credentials. One fixed concurrency
 group serializes every entry point without cancelling an upload. Each job checks
 out the latest main after entering that group, rather than an old event commit.
-The publisher checks main again before catalog promotion; if main changed, retry
-from its current snapshot. A newer pending run or a manual rerun performs that
-retry. A late publisher completion therefore does not restore an older catalog.
+The publisher checks main before payload transfers and again before catalog
+promotion. An already superseded snapshot is skipped before doing network work;
+if main changes during publication, the catalog is not promoted. A newer pending
+run or a manual rerun uses the current snapshot. A late publisher completion
+therefore does not restore an older catalog. Payload verification failures name
+the affected package and failed HTTP, size, hash or timeout check.
 
 ## Object and catalog contract
 

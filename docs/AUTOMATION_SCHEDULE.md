@@ -26,6 +26,35 @@ The one dispatcher job still uses a small amount of Actions time. Checking all
 locales in that job avoids starting an idle scheduled job for every language.
 The normal import/release jobs run only when needed.
 
+## Checkout, publication and retries
+
+Jobs fetch only the current commit. Release numbers come from remote tag names,
+so selecting the next version does not download historical package contents.
+All Standard and Rush jobs that write to the same branch share a queue with up
+to 100 pending jobs. A language waits for its turn instead of racing another
+language's push; the dispatcher and Cloudflare mirror remain independent.
+Queued time is distinct from time spent running a build.
+
+Each publishing attempt starts from the latest branch tip. Human pushes can
+still require a retry; the job rebuilds against those edits and publishes its
+commit and release tags atomically. ZH-TW follows the same retry pattern.
+
+Standard downloads are verified and cached only for the current workflow run
+and attempt, outside the checkout. A retry reuses its selected upstream input
+and remembers the official download endpoint that worked. A new run checks
+sources again. Cache reuse still verifies the file hash and format, and TLS
+verification remains enabled.
+
+Standard package comparison ignores ZIP timestamps and SQLite change counters.
+When content changes, archive metadata and ordering are normalized. Unchanged
+packages, metadata and version files retain their previous bytes, preventing
+timestamp-only releases. Incomplete prompt translations fail before downloads
+with the exact file, line and prompt key to fix.
+
+Deleting Actions run history also removes the dispatcher's import timestamps.
+The next daily check therefore refreshes locales whose successful imports can
+no longer be confirmed; subsequent checks resume the normal cooldown.
+
 ## Manual updates
 
 Run `Sync EN Workspace`, `Sync ES Workspace`, or the equivalent locale workflow

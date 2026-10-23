@@ -13,14 +13,12 @@ on:
     paths:
       - "JP/Workspace/test-release.cdb"
       - "JP/Workspace/test-strings.conf"
+      - ".github/scripts/release_git.py"
+      - ".github/scripts/shared_builds.py"
       - ".github/workflows/jp-release.yml"
 
 permissions:
   contents: write
-
-concurrency:
-  group: jp-automation-${{ github.ref }}
-  cancel-in-progress: false
 
 jobs:
   release:
@@ -28,12 +26,18 @@ jobs:
     if: github.event_name != 'workflow_run' || (github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.head_branch == 'main')
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    # Keep every locale queued; only one job may publish to this branch at a time.
+    concurrency:
+      group: prerelease-writer-${{ github.event.workflow_run.head_branch || github.ref_name }}
+      queue: max
+      cancel-in-progress: false
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7.0.1
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v7.0.0
@@ -42,6 +46,7 @@ jobs:
 
       - name: Build, commit, and tag JP release
         env:
+          AUTOPR_DOWNLOAD_CACHE: ${{ runner.temp }}/prerelease-downloads-${{ github.run_id }}
           BRANCH_NAME: ${{ github.event.workflow_run.head_branch || github.ref_name }}
         run: |
           set -euo pipefail
@@ -50,7 +55,7 @@ jobs:
           branch="${BRANCH_NAME:-main}"
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
-            git fetch --tags origin "$branch"
+            git fetch --no-tags --depth=1 origin "+refs/heads/$branch:refs/remotes/origin/$branch"
             git checkout -B "$branch" "origin/$branch"
             rm -f JP/.autopr-commit-body.txt
 
@@ -62,8 +67,7 @@ jobs:
               exit 0
             fi
 
-            latest_tag=$(git tag --list 'JP-v*' | sed -E 's/^JP-v([0-9]+)$/\1/' | grep -E '^[0-9]+$' | awk '$1 < 10000' | sort -n | tail -1 || true)
-            next_tag_number=$(( ${latest_tag:-0} + 1 ))
+            next_tag_number=$(python .github/scripts/release_git.py next-number --prefix JP-v --exclude-from 10000)
             tag="JP-v${next_tag_number}"
             commit_message=$(mktemp)
             printf "Pre-Release 更新 JP - v%s\n\n" "$next_tag_number" > "$commit_message"
@@ -71,14 +75,15 @@ jobs:
             git commit -F "$commit_message"
             rm -f "$commit_message" JP/.autopr-commit-body.txt
 
-            if git push origin "HEAD:$branch"; then
-              git tag -a "$tag" -m "Release $tag"
-              git push origin "$tag"
+            git tag -a "$tag" -m "Release $tag"
+            if git push --atomic origin "HEAD:$branch" "refs/tags/$tag"; then
               exit 0
             fi
+            # Only discard the local tag created by this rejected attempt.
+            git tag -d "$tag"
 
             echo "Push failed; refreshing and rebuilding (${attempt}/10)..."
-          sleep $((attempt * 5))
+            sleep $((attempt * 5))
           done
 
           echo "Unable to push JP release after rebuilding on the latest branch tip."

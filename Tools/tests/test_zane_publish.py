@@ -3,8 +3,10 @@ import base64
 import importlib.util
 import os
 from pathlib import Path
+import shlex
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -162,6 +164,9 @@ class SpanishReleaseGitTests(unittest.TestCase):
         self.git(self.root, "init", "--bare", str(self.remote))
         self.repo = self.root / "build"
         self.repo.mkdir()
+        helpers = self.repo / ".github/scripts"
+        helpers.mkdir(parents=True)
+        shutil.copyfile(ROOT / ".github/scripts/release_git.py", helpers / "release_git.py")
         self.git(self.repo, "init", "-b", "main")
         self.git(self.repo, "remote", "add", "origin", str(self.remote))
         self.commit("workspace")
@@ -173,7 +178,7 @@ class SpanishReleaseGitTests(unittest.TestCase):
     def git(self, cwd, *args, check=True):
         return subprocess.run(
             ["git", "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", *args],
-            cwd=cwd, capture_output=True, text=True, check=check
+            cwd=cwd, capture_output=True, text=True, encoding="utf-8", check=check
         ).stdout.strip()
 
     def commit(self, content):
@@ -203,21 +208,27 @@ class SpanishReleaseGitTests(unittest.TestCase):
         if os.name == "nt":
             script = 'export PATH="/usr/bin:/bin:$PATH"\n' + script
         return subprocess.run([str(executable), "-c", script], cwd=self.repo,
-                              check=True, capture_output=True, text=True).stdout.strip()
+                              check=True, capture_output=True, text=True, encoding="utf-8").stdout.strip()
 
     def workflow_tag_number(self):
         lines = (ROOT / ".github/workflows/es-release.yml").read_text(encoding="utf-8").splitlines()
-        assignment = next(line.strip() for line in lines if "latest_tag=$(" in line)
-        return self.bash('set -euo pipefail\n' + assignment + '\nprintf "%s" "$(( ${latest_tag:-0} + 1 ))"')
+        assignment = next(line.strip() for line in lines if "next_tag_number=$(" in line)
+        assignment = assignment.replace("python .github/scripts/release_git.py",
+                                        shlex.quote(sys.executable.replace("\\", "/")) + " .github/scripts/release_git.py")
+        return self.bash('set -euo pipefail\n' + assignment + '\nprintf "%s" "$next_tag_number"')
 
     def test_empty_tag_history_starts_at_one_under_pipefail(self):
         self.git(self.repo, "tag", "-d", "ES-v1")
+        self.assertEqual(self.git(self.remote, "tag", "--list"), "")
         self.assertEqual(self.workflow_tag_number(), "1")
 
     def test_tag_number_ignores_legacy_timestamps_and_non_numeric_suffixes(self):
         for tag in ("ES-v1775706240", "ES-v3", "ES-v8", "ES-v9-preview"):
-            self.git(self.repo, "tag", tag)
+            self.git(self.remote, "tag", "-a", tag, "-m", tag, self.workspace_sha)
+        # Release numbering follows published remote refs, not local-only tags.
+        self.git(self.repo, "tag", "ES-v999")
         self.assertEqual(self.workflow_tag_number(), "9")
+        self.assertEqual(self.git(self.repo, "tag", "--list").splitlines(), ["ES-v1", "ES-v999"])
 
 
 if __name__ == "__main__":

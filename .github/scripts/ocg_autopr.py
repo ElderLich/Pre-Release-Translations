@@ -12,13 +12,13 @@ import shutil
 import sqlite3
 import sys
 import tempfile
-import time
 import unicodedata
 import urllib.request
 import zipfile
 from dataclasses import dataclass
 from pathlib import Path
 
+from shared_builds import copy_if_changed, publish_release, validate_release_strings, write_deterministic_package
 from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, fetch_release_json, download_file as download_verified_file
 from shared_mappings import load_locale_mappings_csv
 
@@ -597,27 +597,11 @@ def sync_test_strings(source_path: Path, target_path: Path) -> None:
 
 
 def ensure_test_strings_ready(path: Path) -> None:
-    text = require_file(path, "workspace test-strings.conf").read_text(encoding="utf-8-sig")
-    seen = set()
-    duplicate = []
-    malformed = []
-    missing = []
-    for lineno, raw_line in enumerate(text.splitlines(), start=1):
-        stripped = raw_line.strip()
-        if not stripped or stripped.startswith("#"):
-            continue
-        entry = parse_string_entry(raw_line, lineno)
-        if not entry:
-            if stripped.startswith("!"):
-                malformed.append(lineno)
-            continue
-        if entry["key"] in seen:
-            duplicate.append((entry["key"], lineno))
-        seen.add(entry["key"])
-        if not entry["name"]:
-            missing.append(entry["key"])
-    if duplicate or malformed or missing:
-        fail(f"test-strings.conf is not ready: duplicate={len(duplicate)}, malformed={len(malformed)}, missing_translation={len(missing)}")
+    require_file(path, "workspace test-strings.conf")
+    try:
+        validate_release_strings(path)
+    except ValueError as exc:
+        fail(str(exc))
 
 
 def clean_cell(value: object) -> str:
@@ -952,17 +936,8 @@ def apply_workspace_mappings_for_release(cdb_path: Path, cards_cdb: Path) -> Non
 
 
 def replace_payloads_in_ypk(base_ypk: Path, output_ypk: Path, payloads: dict[str, Path]) -> None:
-    need = set(payloads)
-    temp_ypk = output_ypk.with_suffix(".tmp")
-    with zipfile.ZipFile(base_ypk, "r") as zin, zipfile.ZipFile(temp_ypk, "w", compression=zipfile.ZIP_DEFLATED) as zout:
-        for item in zin.infolist():
-            if item.filename in need:
-                continue
-            zout.writestr(item, zin.read(item.filename))
-        for name, source in sorted(payloads.items()):
-            zout.write(source, arcname=name)
-            log(f"Added {name} to ypk")
-    temp_ypk.replace(output_ypk)
+    write_deterministic_package(base_ypk, output_ypk, payloads)
+    log(f"Wrote deterministic package {output_ypk}")
 
 
 def extract_id_from_pic_url(pic_url: str) -> str | None:
@@ -1020,10 +995,6 @@ def write_release_json(cdb_path: Path, output_json: Path) -> list[dict]:
     return data
 
 
-def write_version() -> None:
-    (OUTPUT_DIR / "version.txt").write_text(str(int(time.time())), encoding="utf-8", newline="\n")
-
-
 def write_commit_body(new_cards: list[str]) -> None:
     body_path = OUTPUT_DIR / ".autopr-commit-body.txt"
     if new_cards:
@@ -1058,36 +1029,36 @@ def workspace_sync() -> None:
 def release_build() -> None:
     workspace_release = require_file(WORK_DIR / "test-release.cdb", "workspace test-release.cdb")
     workspace_strings = require_file(WORK_DIR / "test-strings.conf", "workspace test-strings.conf")
-    normalize_jp_cdb(workspace_release)
     ensure_test_strings_ready(workspace_strings)
 
-    BASE_DIR.mkdir(parents=True, exist_ok=True)
-    base_release = BASE_DIR / "test-release.cdb"
-    base_strings = BASE_DIR / "test-strings.conf"
-    shutil.copy2(workspace_release, base_release)
-    shutil.copy2(workspace_strings, base_strings)
-    log(f"Mirrored {CONFIG.folder} workspace files into Base Files")
-
-    payloads = {
-        "test-release.cdb": base_release,
-        "test-strings.conf": base_strings,
-    }
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     old_names = load_names(OUTPUT_DIR / "test-release.json")
     with tempfile.TemporaryDirectory(prefix=f".{CONFIG.lang}-release-", dir=OUTPUT_DIR) as temp_name:
         work = Path(temp_name)
         ypk = work / "ygopro-super-pre.ypk"
         cards_cdb = work / "cards.cdb"
+        release_cdb = work / "test-release.cdb"
         test_update = work / "test-update.cdb"
+        shutil.copy2(workspace_release, release_cdb)
         download_file(YPK_URL, ypk)
         download_file(CARDS_CDB_URL, cards_cdb)
-        apply_workspace_mappings_for_release(base_release, cards_cdb)
-        normalize_jp_cdb(base_release)
+        apply_workspace_mappings_for_release(release_cdb, cards_cdb)
+        normalize_jp_cdb(release_cdb)
         extract_member(ypk, "test-update.cdb", test_update)
         translate_test_update_cdb(test_update, cards_cdb)
-        payloads["test-update.cdb"] = test_update
-        replace_payloads_in_ypk(ypk, OUTPUT_DIR / "ygopro-super-pre.ypk", payloads)
-        new_data = write_release_json(payloads["test-release.cdb"], OUTPUT_DIR / "test-release.json")
-        write_version()
+        payloads = {
+            "test-release.cdb": release_cdb,
+            "test-strings.conf": workspace_strings,
+            "test-update.cdb": test_update,
+        }
+        candidate_ypk = work / "release.ypk"
+        candidate_json = work / "test-release.json"
+        replace_payloads_in_ypk(ypk, candidate_ypk, payloads)
+        new_data = write_release_json(release_cdb, candidate_json)
+        changed = publish_release(candidate_ypk, candidate_json, OUTPUT_DIR)
+        copy_if_changed(release_cdb, BASE_DIR / "test-release.cdb")
+        copy_if_changed(workspace_strings, BASE_DIR / "test-strings.conf")
+        log("Published changed release content" if changed else "Release content unchanged; kept package, JSON and version")
     new_names = {item.get("name") for item in new_data if isinstance(item, dict) and item.get("name")}
     write_commit_body(sorted(new_names - old_names))
     log(f"{CONFIG.folder} release build completed")
@@ -1096,13 +1067,15 @@ def release_build() -> None:
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--lang", choices=sorted(LANG_CONFIGS), required=True)
-    parser.add_argument("command", choices=["workspace-sync", "release-build"])
+    parser.add_argument("command", choices=["workspace-sync", "release-build", "check-release"])
     args = parser.parse_args()
     configure(args.lang)
     if args.command == "workspace-sync":
         workspace_sync()
     elif args.command == "release-build":
         release_build()
+    elif args.command == "check-release":
+        ensure_test_strings_ready(WORK_DIR / "test-strings.conf")
 
 
 if __name__ == "__main__":

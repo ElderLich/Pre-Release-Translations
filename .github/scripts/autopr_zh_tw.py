@@ -18,11 +18,11 @@ import shutil
 import sqlite3
 import sys
 import tempfile
-import time
 import urllib.request
 import zipfile
 from pathlib import Path
 
+from shared_builds import copy_if_changed, publish_release, validate_release_strings, write_deterministic_package
 from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, fetch_release_json, download_file as download_verified_file
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -252,7 +252,7 @@ def sync_base_files(payloads: dict[str, Path]) -> None:
     for name in ("test-release.cdb", "test-strings.conf"):
         source = payloads[name]
         destination = BASE_FILES_DIR / name
-        shutil.copy2(source, destination)
+        copy_if_changed(source, destination)
         log(f"Refreshed Base Files/{name}")
 
     stale_update = BASE_FILES_DIR / "test-update.cdb"
@@ -261,29 +261,8 @@ def sync_base_files(payloads: dict[str, Path]) -> None:
         log(f"Removed unused Base Files/{stale_update.name}")
 
 def replace_payloads_in_ypk(base_ypk: Path, output_ypk: Path, payloads: dict[str, Path]) -> None:
-    temp_ypk = output_ypk.with_suffix(".tmp")
-    names_to_replace = set(payloads)
-
-    log("Replacing AutoPR payloads inside ypk")
-    with zipfile.ZipFile(base_ypk, "r") as zin:
-        with zipfile.ZipFile(temp_ypk, "w", compression=zipfile.ZIP_DEFLATED) as zout:
-            for item in zin.infolist():
-                if item.filename in names_to_replace:
-                    continue
-                zout.writestr(item, zin.read(item.filename))
-
-            for archive_name, source in sorted(payloads.items()):
-                zout.write(source, arcname=archive_name)
-                log(f"Added {source.name} as {archive_name}")
-
-    temp_ypk.replace(output_ypk)
-
-    with zipfile.ZipFile(output_ypk, "r") as check:
-        missing = names_to_replace.difference(check.namelist())
-    if missing:
-        fail(f"Generated ypk is missing: {', '.join(sorted(missing))}")
-
-    log(f"Wrote {output_ypk}")
+    write_deterministic_package(base_ypk, output_ypk, payloads)
+    log(f"Wrote deterministic package {output_ypk}")
 
 
 def extract_id_from_pic_url(pic_url: str) -> str | None:
@@ -348,13 +327,6 @@ def write_release_json(cdb_path: Path, output_json: Path) -> list[dict]:
     log(f"Wrote {output_json} (updated={updated}, missing_in_cdb={missing})")
     return data
 
-def write_version(output_dir: Path) -> None:
-    version = str(int(time.time()))
-    version_path = output_dir / "version.txt"
-    version_path.write_text(version, encoding="utf-8", newline="\n")
-    log(f"Wrote {version_path}: {version}")
-
-
 def write_commit_body(new_cards: list[str]) -> None:
     body_path = OUTPUT_DIR / ".autopr-commit-body.txt"
     if new_cards:
@@ -366,6 +338,13 @@ def write_commit_body(new_cards: list[str]) -> None:
 
 
 def main() -> None:
+    # Validate external translations before downloading the large upstream pack.
+    require_file(CARDEDITOR_EXPANSIONS_DIR / "beta.cdb", "CardEditor expansions/beta.cdb")
+    pre_strings = require_file(CARDEDITOR_EXPANSIONS_DIR / "pre-strings.conf", "CardEditor expansions/pre-strings.conf")
+    try:
+        validate_release_strings(pre_strings)
+    except ValueError as exc:
+        fail(str(exc))
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     old_names = load_names(OUTPUT_DIR / "test-release.json")
 
@@ -374,10 +353,13 @@ def main() -> None:
         base_ypk = work_dir / "ygopro-super-pre.download.tmp"
         download_file(YPK_URL, base_ypk)
         payloads = prepare_payloads(base_ypk, work_dir)
+        candidate_ypk = work_dir / "release.ypk"
+        candidate_json = work_dir / "test-release.json"
+        replace_payloads_in_ypk(base_ypk, candidate_ypk, payloads)
+        new_data = write_release_json(payloads["test-release.cdb"], candidate_json)
+        changed = publish_release(candidate_ypk, candidate_json, OUTPUT_DIR)
         sync_base_files(payloads)
-        replace_payloads_in_ypk(base_ypk, OUTPUT_DIR / "ygopro-super-pre.ypk", payloads)
-        new_data = write_release_json(payloads["test-release.cdb"], OUTPUT_DIR / "test-release.json")
-        write_version(OUTPUT_DIR)
+        log("Published changed release content" if changed else "Release content unchanged; kept package, JSON and version")
 
     new_names = {item.get("name") for item in new_data if isinstance(item, dict) and item.get("name")}
     write_commit_body(sorted(new_names - old_names))

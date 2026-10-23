@@ -9,26 +9,29 @@ on:
       - ".github/scripts/es_autopr.py"
       - ".github/scripts/shared_mappings.py"
       - ".github/scripts/shared_downloads.py"
+      - ".github/scripts/shared_builds.py"
       - ".github/workflows/es-workspace-sync.yml"
 
 permissions:
   contents: write
-
-concurrency:
-  group: es-automation-${{ github.ref }}
-  cancel-in-progress: false
 
 jobs:
   sync:
     name: Import new ES cards and prompts
     runs-on: ubuntu-24.04
     timeout-minutes: 30
+    # Keep every locale queued; only one job may publish to this branch at a time.
+    concurrency:
+      group: prerelease-writer-${{ github.event.workflow_run.head_branch || github.ref_name }}
+      queue: max
+      cancel-in-progress: false
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v7.0.1
         with:
-          fetch-depth: 0
+          ref: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+          fetch-depth: 1
 
       - name: Set up Python
         uses: actions/setup-python@v7.0.0
@@ -36,6 +39,8 @@ jobs:
           python-version: "3.x"
 
       - name: Sync and commit workspace updates
+        env:
+          AUTOPR_DOWNLOAD_CACHE: ${{ runner.temp }}/prerelease-downloads-${{ github.run_id }}
         run: |
           set -euo pipefail
           git config user.name "ElderLich"
@@ -43,7 +48,7 @@ jobs:
           branch="${GITHUB_REF_NAME:-main}"
 
           for attempt in 1 2 3 4 5 6 7 8 9 10; do
-            git fetch origin "$branch"
+            git fetch --no-tags --depth=1 origin "+refs/heads/$branch:refs/remotes/origin/$branch"
             git checkout -B "$branch" "origin/$branch"
 
             python .github/scripts/es_autopr.py workspace-sync
@@ -59,7 +64,7 @@ jobs:
             fi
 
             echo "Push failed; refreshing and rebuilding (${attempt}/10)..."
-          sleep $((attempt * 5))
+            sleep $((attempt * 5))
           done
 
           echo "Unable to push ES workspace sync after rebuilding on the latest branch tip."

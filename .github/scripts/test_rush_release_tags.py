@@ -2,6 +2,7 @@
 import os
 from pathlib import Path
 import shutil
+import shlex
 import subprocess
 import sys
 import tempfile
@@ -26,6 +27,9 @@ class RushReleaseTagTests(unittest.TestCase):
         self.git(self.root, "init", "--bare", str(self.remote))
         self.repo = self.root / "build"
         self.repo.mkdir()
+        helpers = self.repo / ".github/scripts"
+        helpers.mkdir(parents=True)
+        shutil.copyfile(ROOT / ".github/scripts/release_git.py", helpers / "release_git.py")
         self.git(self.repo, "init", "-b", "main")
         self.git(self.repo, "config", "user.name", "Fixture")
         self.git(self.repo, "config", "user.email", "fixture@example.invalid")
@@ -42,7 +46,7 @@ class RushReleaseTagTests(unittest.TestCase):
     def git(self, cwd, *args):
         return subprocess.run(
             ["git", "-c", "user.name=Fixture", "-c", "user.email=fixture@example.invalid", *args],
-            cwd=cwd, check=True, capture_output=True, text=True
+            cwd=cwd, check=True, capture_output=True, text=True, encoding="utf-8"
         ).stdout.strip()
 
     def stage(self, path, content):
@@ -51,15 +55,22 @@ class RushReleaseTagTests(unittest.TestCase):
         target.write_text(content, encoding="utf-8")
         self.git(self.repo, "add", "--", path)
 
-    def publish(self, success=True):
+    def publish(self, success=True, stale_tag_snapshot=False):
         workflow = (ROOT / ".github/workflows/rush-prerelease.yml").read_text(encoding="utf-8")
         start = workflow.index("            if git diff --cached --quiet; then")
         end = workflow.index('            echo "Branch changed while building;')
         # Execute the actual no-op guard, tag selection, commit, atomic push and cleanup.
         script = 'set -euo pipefail\nexport PATH="/usr/bin:/bin:$PATH"\nbranch=main\n'
-        script += workflow[start:end] + "\nexit 1\n"
+        publication = workflow[start:end].replace(
+            "python .github/scripts/release_git.py", shlex.quote(sys.executable.replace("\\", "/")) + " .github/scripts/release_git.py")
+        if stale_tag_snapshot:
+            # Another publisher creates its tag after our remote refs snapshot.
+            publication = publication.replace(
+                shlex.quote(sys.executable.replace("\\", "/")) + ' .github/scripts/release_git.py list-tags', "printf ''")
+        script += publication + "\nexit 1\n"
+
         result = subprocess.run(
-            [self.bash, "-c", script], cwd=self.repo, capture_output=True, text=True,
+            [self.bash, "-c", script], cwd=self.repo, capture_output=True, text=True, encoding="utf-8",
             env={**os.environ, "RUNNER_TEMP": self.root.as_posix(),
                  "GITHUB_STEP_SUMMARY": self.summary.as_posix(),
                  "GITHUB_SERVER_URL": "https://github.com", "GITHUB_REPOSITORY": "fixture/translations"}
@@ -85,10 +96,12 @@ class RushReleaseTagTests(unittest.TestCase):
         for tag in ("EN_Rush-v9", "EN_Rush-v10", "ES_Rush-v3", "FR_Rush-v100",
                     "EN-v999", "EN_Rush-v99-preview", "ES_Rush-vlatest"):
             self.git(self.repo, "tag", tag)
+        self.git(self.repo, "push", "--tags", "origin")
+        previous_tags = self.remote_tags()
         for locale in ("EN", "ES"):
             self.stage(f"{locale}/rush-pre-release.ypk", "changed")
         self.publish()
-        self.assertEqual(self.remote_tags(), ["EN_Rush-v11", "ES_Rush-v4"])
+        self.assertEqual(self.remote_tags(), sorted(previous_tags + ["EN_Rush-v11", "ES_Rush-v4"]))
 
     def test_all_configured_locales_get_their_own_tags(self):
         locales = [folder for folder, _ in LANGS.values()]
@@ -125,12 +138,12 @@ class RushReleaseTagTests(unittest.TestCase):
         self.git(self.remote, "tag", "EN_Rush-v1", self.previous)
         for locale in ("EN", "ES"):
             self.stage(f"{locale}/rush-pre-release.ypk", "new package")
-        self.publish(success=False)
+        self.publish(success=False, stale_tag_snapshot=True)
         self.assertEqual(self.git(self.remote, "rev-parse", "refs/heads/main"), self.previous)
         self.assertEqual(self.remote_tags(), ["EN_Rush-v1"])
         self.assertEqual(self.git(self.repo, "tag", "--list", "*_Rush-v*"), "")
         # Match the workflow's refresh/rebuild after a rejected attempt.
-        self.git(self.repo, "fetch", "--tags", "origin", "main")
+        self.git(self.repo, "fetch", "--no-tags", "--depth=1", "origin", "+refs/heads/main:refs/remotes/origin/main")
         self.git(self.repo, "checkout", "-B", "main", "origin/main")
         for locale in ("EN", "ES"):
             self.stage(f"{locale}/rush-pre-release.ypk", "new package")

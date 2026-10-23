@@ -217,11 +217,21 @@ class PublishTests(unittest.TestCase):
             self.publish()
         self.assertEqual(b"newer complete catalog", self.s3.objects[publisher.CATALOG_KEY])
 
-    def test_drifted_main_cannot_promote(self):
+    def test_superseded_snapshot_skips_before_payload_work(self):
         catalog, files = self.snapshot()
-        with self.assertRaises(publisher.PublishError):
-            publisher.publish_snapshot(self.s3, "fixture-bucket", catalog, files,
-                                       public_verifier=self.s3.verify, main_resolver=lambda _: "b" * 40)
+        self.assertEqual("superseded", publisher.publish_snapshot(
+            self.s3, "fixture-bucket", catalog, files,
+            public_verifier=self.s3.verify, main_resolver=lambda _: "b" * 40))
+        self.assertFalse(self.s3.events)
+        self.assertFalse(self.s3.objects)
+
+    def test_main_advancing_during_payload_verification_cannot_promote(self):
+        catalog, files = self.snapshot()
+        commits = iter((SHA, "b" * 40))
+        self.assertEqual("superseded", publisher.publish_snapshot(
+            self.s3, "fixture-bucket", catalog, files,
+            public_verifier=self.s3.verify, main_resolver=lambda _: next(commits)))
+        self.assertEqual(21, sum(event[0] == "verify" for event in self.s3.events))
         self.assertNotIn(publisher.CATALOG_KEY, self.s3.objects)
 
     def test_changed_rolling_payload_uses_new_object_key(self):
@@ -339,6 +349,72 @@ class PublishTests(unittest.TestCase):
         with patch.object(publisher, "urlopen", return_value=Response(body + b"wrong")):
             with self.assertRaises(publisher.PublishError):
                 publisher.verify_public(PUBLIC + "/payload", len(body), hashlib.sha256(body).hexdigest())
+
+    def test_public_verification_names_payload_and_failed_check_without_secrets(self):
+        class Response(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return PUBLIC
+        url = PUBLIC + "/prerelease/standard/KR/hash/ygopro-super-pre.ypk?token=SECRET"
+        checks = ((b'ab', 3, hashlib.sha256(b'abc').hexdigest(), 'size mismatch'),
+                  (b'abc', 3, hashlib.sha256(b'xyz').hexdigest(), 'SHA-256 mismatch'),
+                  (b'abcd', 3, hashlib.sha256(b'abc').hexdigest(), 'oversized response'))
+        for body, size, digest, reason in checks:
+            with self.subTest(reason=reason), patch.object(publisher, 'urlopen', return_value=Response(body)):
+                with self.assertRaises(publisher.PublishError) as raised:
+                    publisher.verify_public(url, size, digest)
+                message = str(raised.exception)
+                self.assertIn('/standard/KR/', message)
+                self.assertIn(reason, message)
+                self.assertNotIn('SECRET', message)
+        with patch.object(publisher, 'urlopen', side_effect=TimeoutError('SECRET_ACCESS_TOKEN')):
+            with self.assertRaisesRegex(publisher.PublishError, 'TimeoutError') as raised:
+                publisher.verify_public(url, 3, 'a' * 64)
+        self.assertNotIn('SECRET', str(raised.exception))
+        error = publisher.HTTPError(url, 403, 'SECRET_SERVER_MESSAGE', {}, io.BytesIO(b'SECRET_BODY'))
+        with patch.object(publisher, 'urlopen', side_effect=error):
+            with self.assertRaisesRegex(publisher.PublishError, 'HTTP 403') as raised:
+                publisher.verify_public(url, 3, 'a' * 64)
+        self.assertNotIn('SECRET', str(raised.exception))
+
+    def test_public_verification_stops_trickled_response_at_transfer_budget(self):
+        clock = [0.0]
+        class Trickle(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return PUBLIC
+            def read1(self, size):
+                if size <= 0:
+                    raise AssertionError('Read must be sized')
+                clock[0] += publisher.PUBLIC_VERIFY_BUDGET / 2
+                return b'x'
+            def read(self, *args):
+                raise AssertionError('Use one bounded underlying read')
+        with patch.object(publisher.time, 'monotonic', side_effect=lambda: clock[0]), patch.object(
+                publisher, 'urlopen', return_value=Trickle()):
+            with self.assertRaisesRegex(publisher.PublishError, 'transfer budget'):
+                publisher.verify_public(PUBLIC + '/payload', 100, 'a' * 64)
+
+    def test_payload_failure_identifies_locale_and_preserves_catalog(self):
+        catalog, files = self.snapshot()
+        def fail(url, size, digest):
+            if '/standard/KR/' in url:
+                raise publisher.PublishError('SHA-256 mismatch')
+            self.s3.verify(url, size, digest)
+        with self.assertRaisesRegex(publisher.PublishError, 'standard/KR/ygopro-super-pre.ypk.*SHA-256 mismatch'):
+            publisher.publish_snapshot(self.s3, 'fixture-bucket', catalog, files,
+                                       public_verifier=fail, main_resolver=lambda _: SHA)
+        self.assertNotIn(publisher.CATALOG_KEY, self.s3.objects)
+
+    def test_superseded_cli_summary_is_successful_and_does_not_claim_verification(self):
+        arguments = ['--source-dir', str(self.root), '--source-commit', SHA,
+                     '--public-base-url', PUBLIC, '--endpoint-url', 'https://example.com']
+        output = io.StringIO()
+        with patch.object(publisher, 'verify_checkout'), patch.object(publisher, 'create_client'), patch.object(
+                publisher, 'publish_snapshot', return_value='superseded'), contextlib.redirect_stdout(output):
+            self.assertEqual(0, publisher.main(arguments))
+        self.assertIn('Skipped superseded snapshot', output.getvalue())
+        self.assertNotIn('packages verified', output.getvalue())
 
 
 if __name__ == "__main__":
