@@ -1,13 +1,8 @@
 {
   "language": "fr",
-  "candidates": 1,
-  "matched": 1,
+  "candidates": 0,
+  "matched": 0,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {
-    "101307022": {
-      "set_code": "IMPH-JP022",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17883&languages=fr"
-    }
-  }
+  "matches": {}
 }
