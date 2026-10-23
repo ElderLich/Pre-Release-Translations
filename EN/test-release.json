@@ -1,5 +1,11 @@
 [
   {
+    "name": "Nightmare Twinkle",
+    "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 Level 7 or lower Illusion monster from your Deck, except \"Nightmare Twinkle\", but return it to the hand during the End Phase. You can only use this effect of \"Nightmare Twinkle\" once per turn. If this card battles a monster, neither can be destroyed by that battle. Once per turn, at the end of the Damage Step, if a monster battled: You can change the battle positions of all monsters on the field.",
+    "overallString": "[Monster|Effect] Illusion/Light  [★4] 1700/1700",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307022.jpg?version=19.7"
+  },
+  {
     "name": "Invincible Rocket Warrior",
     "desc": "Cannot be destroyed by card effects. You can only use each of the following effects of \"Invincible Rocket Warrior\" once per turn. You can send 1 Spell/Trap that mentions \"Dark Time Wizard\" from your Deck to the GY; Special Summon this card from your hand, then you can make 1 monster your opponent controls lose 1500 ATK, also you cannot Special Summon from the Extra Deck for the rest of this turn, except Fusion Monsters. When this card declares an attack: You can add 1 Level 4 Warrior monster from your Deck to your hand.",
     "overallString": "[Monster|Effect] Warrior/Light  [★4] 1500/1300",
