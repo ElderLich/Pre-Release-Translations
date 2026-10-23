@@ -1,6 +1,15 @@
 {
   "language": "en",
-  "matches": {},
+  "matches": {
+    "120310033": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP033",
+      "source": "https://yugipedia.com/wiki/Marron_Cat_of_Minori"
+    }
+  },
   "requested_ids": [
     120000012,
     120310033,
@@ -11,11 +20,6 @@
       "id": 120000012,
       "reason": "No upstream sets.md range or reviewed mapping",
       "set_code": null
-    },
-    {
-      "id": 120310033,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP033"
     },
     {
       "id": 120310069,

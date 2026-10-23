@@ -221,14 +221,12 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str3",
         "str4"
       ],
       "id": 120310033,
-      "name": "美之里的栗子猫"
+      "name": "Chat Marron de Minori"
     },
     {
       "fields": [
@@ -1576,7 +1574,7 @@
     "120310027": "39ccc4feede93bc5284b72f72fef277bcf768b1ba0e24e83382b2edb7e0c6a78",
     "120310028": "095390ded3c0ac3b94d7123852fbf059642230f83e09ac5a6c7624720ed21613",
     "120310029": "b47df99b02bf7e7c5bdbd92ac191e7ae6136d84d7050893c560561ed73a1e11b",
-    "120310033": "e18138f46b6a7a7624cdb3322449722ce46cdaffb39d10659c5e7ee77fe8772e",
+    "120310033": "9fe82ea452ab13e876dc42539edfeb6c94ffa0ede01ef637f44c309696e496cf",
     "120310036": "024cd40f47542721590ecaa29013586b70646af85dd6ca65f9f4354308cb31f9",
     "120310037": "7b00a02ff913b490090644531f7f1bf282a43c25b26e9ae72431689c07dbe647",
     "120310038": "6b535ec79081f3ec296b9b91945c9ee96dffd9df44b50f9b77a8373e882e122f",
