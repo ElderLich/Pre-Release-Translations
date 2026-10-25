@@ -103,7 +103,7 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "f6ed82dbff7082cbdeecfbf2aa2985756750262e3b6eaa6404240e82a8d93fe5",
+  "local_inputs_sha256": "eaf5282cea17e8b9eb9690d9ef84332ce28f4b282e4af3e8854ca735434c765b",
   "patch_sha256": "248773779dee230eac72828645ab3338147d4a4899341584380e0271b6668e96",
   "pending_locales": {
     "DE": 98,
@@ -112,7 +112,7 @@
     "FR": 33,
     "IT": 31,
     "JP": 30,
-    "KR": 98,
+    "KR": 16,
     "PT": 98,
     "TH": 32,
     "ZH-TW": 2
@@ -219,6 +219,6 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470"
   },
-  "translations_revision": "c2fed706aff7efae56ff28e710d0cbd0868ea518",
+  "translations_revision": "f55cd873dc2df87c34e4a06524680204e24aa04b",
   "version": 2
 }
