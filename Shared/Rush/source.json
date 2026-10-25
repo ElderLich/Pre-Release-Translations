@@ -1,8 +1,13 @@
 {
   "built_locales": [
+    "DE",
     "EN",
+    "ES",
     "FR",
+    "IT",
     "JP",
+    "KR",
+    "PT",
     "TH",
     "ZH-CN",
     "ZH-TW"
@@ -111,16 +116,10 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "a21ea8312b93f29cfa1f1458b4fdf98527c0fc84d72033dfd5e811c5e2b1dddc",
+  "local_inputs_sha256": "7f702c516dd7a1f3ed55f41d1a3f62dd934549b315cbe156005caff0e95aa8eb",
   "patch_sha256": "269f82e992b3bd2161f4eeaef1fd42502373789b14b7d7f346da4efa8d7770e4",
-  "pending_locales": {
-    "DE": 1,
-    "ES": 1,
-    "IT": 1,
-    "KR": 1,
-    "PT": 1
-  },
-  "source_fingerprint": "5f4751edd9caa1a463b7ed2dcbc2a905cb4da83d9dd310efa417ebc99254e7df",
+  "pending_locales": {},
+  "source_fingerprint": "f9838c00e963209f789253bf8ba63f9ab0e4c6eedc84b914f69bf10cfe6cbbd0",
   "source_revision": "d540db66ddcc2bbbde2491e94976ef71fdd18b3f",
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
