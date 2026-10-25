@@ -1,14 +1,6 @@
 {
   "language": "en",
   "matches": {
-    "120310060": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP060",
-      "source": "https://yugipedia.com/wiki/Forest_of_the_Beautiful_Dark_Queen"
-    },
     "120310069": {
       "fields": [],
       "set_code": "RD/KP27-JP069",
@@ -16,7 +8,6 @@
     }
   },
   "requested_ids": [
-    120310060,
     120310069
   ],
   "unresolved": []
