@@ -2,15 +2,9 @@
   "language": "jp",
   "matches": {},
   "requested_ids": [
-    120000012,
     120310069
   ],
   "unresolved": [
-    {
-      "id": 120000012,
-      "reason": "No upstream sets.md range or reviewed mapping",
-      "set_code": null
-    },
     {
       "id": 120310069,
       "reason": "No complete localized card text at the verified set code (or source unavailable)",

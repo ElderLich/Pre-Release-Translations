@@ -1,24 +1,14 @@
 {
   "language": "en",
-  "matches": {},
-  "requested_ids": [
-    120000012,
-    120310069
-  ],
-  "unresolved": [
-    {
-      "id": 120000012,
-      "reason": "No upstream sets.md range or reviewed mapping",
-      "set_code": null
-    },
-    {
-      "id": 120310069,
-      "missing_fields": [
-        "text"
-      ],
-      "reason": "Localized fields are missing",
+  "matches": {
+    "120310069": {
+      "fields": [],
       "set_code": "RD/KP27-JP069",
       "source": "https://yugipedia.com/wiki/Sengenjin_%28Rush_Duel%29"
     }
-  ]
+  },
+  "requested_ids": [
+    120310069
+  ],
+  "unresolved": []
 }

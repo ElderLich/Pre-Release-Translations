@@ -2,27 +2,9 @@
   "language": "fr",
   "matches": {},
   "requested_ids": [
-    120000012,
-    120310057,
     120310069
   ],
   "unresolved": [
-    {
-      "id": 120000012,
-      "reason": "No upstream sets.md range or reviewed mapping",
-      "set_code": null
-    },
-    {
-      "id": 120310057,
-      "missing_fields": [
-        "fr_name",
-        "fr_requirement",
-        "fr_text"
-      ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP057",
-      "source": "https://yugipedia.com/wiki/Revival_of_Sennen_Genjin"
-    },
     {
       "id": 120310069,
       "missing_fields": [
