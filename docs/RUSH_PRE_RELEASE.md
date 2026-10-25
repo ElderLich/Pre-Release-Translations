@@ -307,3 +307,47 @@ repository folder. Rush uses its separate `RushPrereleasePackUrl` and
 locale URLs can be retained through `PrereleasePackOverrides`, keyed by the
 full locale code such as `en-US`. The normal and Rush packages and installed
 version settings are independent.
+
+
+## 25 October 2026 package repair
+
+The previous packages were empty in several locales because their old inventory
+had retired while untranslated new rows prevented the next complete release.
+The shared artwork loader was working; no current rows meant no matching images
+could be included. Completing the translation inputs restores the full packages
+without disabling the existing publication gate or restoring retired cards.
+
+The local build against Rush source `58714a10` contains 100 card rows, 132 script
+files and all 97 available shared illustrations in each of the eleven packages.
+The new source cards `120310024` and `120310100` still have no shared illustration;
+they remain in `missing_artwork`. English and Thai packages are byte-identical.
+These outputs are prepared locally; this repair does not publish them.
+
+- Completed German and Portuguese text for the active inventory, retaining
+  existing localized names where available. New unreleased names are fan
+  translations, not claims of official European localizations. Completed the
+  missing French Ritual Spell/Sengenjin names and text, and normalized existing
+  Traditional Chinese text to traditional characters.
+- Added 22 current prompt templates in eight translation languages and 17 exact
+  card-reference mappings. The Mad Rare Amy/Beeko level prompt follows the current
+  scripts' numeric selector; obsolete individual level choices were removed.
+  Seed backfill now leaves absent source prompt slots empty instead of restoring
+  retired choices from older full-card databases.
+- `120000012` (绳之遗物, **The Legacy of Zeil**) is a name-only helper used by
+  `c120310021.lua`, `c120310022.lua` and `c120310025.lua`. It has no physical card
+  artwork and is classified with the other system identities.
+- `120310069` is **Sengenjin**, verified by the `RD/KP27-JP069` printing on
+  [its source page](https://yugipedia.com/wiki/Sengenjin_%28Rush_Duel%29).
+  The page identifies a non-Effect Ritual Monster with no printed text. The
+  importer now keeps that known name with an empty fetched description; it does
+  not invent an effect or discard the name. Incomplete Effect Monsters and
+  missing French names still remain pending. The existing set-number placeholder
+  is retained in the workspace where there is no printed description.
+- All 132 GUI catalog keys were already present in the ten non-English catalogs;
+  an audit of direct GUI translation lookups found no uncovered keys.
+
+Validation: 55 Rush tests, 28 source-text tests and 12 GUI/workflow tests passed.
+Real archive checks cover SQLite integrity, the exact active ID set, matching
+JSON, script closure, byte-identical shared images and the EN/TH fallback.
+The eleven game/companion `rush_cards.cdb` pairs receive text-only updates for
+these active IDs; their gameplay data and all other text rows are preserved.

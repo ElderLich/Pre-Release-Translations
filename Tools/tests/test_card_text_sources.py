@@ -71,6 +71,14 @@ class SourceTextTests(unittest.TestCase):
         card = source.format_yugipedia_card("Card", params, "fr", rush=True)
         self.assertEqual(card.desc, "Dragon FR\n[CONDITION]\nEnvoyez.\n[EFFET]\nPiochez.")
 
+    def test_named_non_effect_rush_monster_without_printed_text_is_importable(self):
+        params = {"types": "Beast-Warrior / Ritual", "misc": "Non-Effect Monster"}
+        card = source.format_yugipedia_card("Sengenjin (Rush Duel)", params, "en", rush=True)
+        self.assertEqual((card.name, card.desc), ("Sengenjin", ""))
+        self.assertIsNone(source.format_yugipedia_card("Sengenjin (Rush Duel)", params, "fr", rush=True))
+        self.assertIsNone(source.format_yugipedia_card("Broken", {**params, "types": "Warrior / Effect"}, "en", rush=True))
+        self.assertIsNone(source.format_yugipedia_card("Broken", {**params, "requirement": "Discard."}, "en", rush=True))
+
     def test_missing_french_is_not_replaced_by_english(self):
         self.assertIsNone(source.format_yugipedia_card("Card", {"text": "Draw."}, "fr", rush=True))
 

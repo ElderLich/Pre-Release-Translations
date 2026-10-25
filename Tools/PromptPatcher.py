@@ -49964,3 +49964,237 @@ RUSH_PROMPT_TRANSLATIONS.update({
 })
 RUSH_PROMPT_PROVENANCE.update({key: {lang: "reviewed_rush_patch" for lang in values}
     for key, values in RUSH_PROMPT_TRANSLATIONS.items() if key in ('这个回合，战斗破坏的怪兽不去墓地而回到持有者卡组下面', '自己卡组最上面的卡送去墓地。那之后，这张卡是表侧表示的期间，这张卡的攻击力上升300', '选自己或者对方场上的1张魔法·陷阱卡破坏', '双方从那之中选1只怪兽(4星)特殊召唤?', '是否从那之中或者自己墓地选1只怪兽(1星)特殊召唤?', '这个回合战斗不会让自己受到战斗伤害', '是否选自己墓地1只效果怪兽(4星/龙族/攻击力1500)表侧守备表示特殊召唤?', '这个回合，不能用怪兽(暗属性以外)攻击', '是否选自己手卡·墓地1只{CARD}特殊召唤?', '这个回合，不能用怪兽(电子界族以外)攻击', '是否选自己墓地1只怪兽(8星/光属性/电子界族)加入手卡?', '这个回合，不用怪兽(8星以上/电子界族)不能攻击', '是否选自己墓地1只{CARD}表侧守备表示特殊召唤?', '是否选自己墓地1只{CARD}表侧攻击表示特殊召唤?', '是否从那之中选1只怪兽加入手卡?', '这个回合可以向怪兽作4次攻击', '这个回合可以向怪兽作5次攻击', '这个回合可以向怪兽作6次攻击', '是否选自己墓地的同盟怪兽(风属性/海龙族)装备?', '是否选自己墓地1只怪兽(5星以上/风属性/海龙族)加入手卡?', '是否选手卡1只怪兽(风属性/海龙族)特殊召唤?', '这个回合，不用怪兽(风属性/海龙族)不能攻击', '是否从那之中选最多2只怪兽(风属性/海龙族)加入手卡?', '是否选对方场上最多2只表侧表示的效果怪兽变成里侧守备表示?', '是否选自己或者对方的魔法与陷阱区域的表侧表示的1张怪兽卡在自己场上表侧守备表示特殊召唤?', '这个回合不能表侧表示的特殊召唤{CARD}', '是否选对方场上最多3只表侧表示怪兽(攻击力100以上)攻击下降', '是否选手卡1只怪兽特殊召唤?', '是否自己墓地1只{CARD}回到卡组上面?', '是否选对方的魔法与陷阱区域的1张里侧表示的卡破坏?', '是否选对方墓地1只怪兽(4星)在自己场上表侧表示特殊召唤?', '这个回合不会因效果回到手卡', '这个回合不会因效果回到卡组·额外卡组', '是否选对方场上1只怪兽(8星以下)回到持有者手卡?')})
+
+
+# Rush patch prompts reviewed against 58714a10 (2026-10-25).
+RUSH_PROMPT_TRANSLATIONS.update({
+    "是否选自己墓地1只同盟怪兽(地属性/机械族)加入手卡?": {
+        "en": "Add 1 EARTH Machine Union monster from your GY to your hand?",
+        "de": "Füge deiner Hand 1 ERDE Maschine-Union-Monster von deinem Friedhof hinzu?",
+        "es": "¿Añadir a tu mano 1 monstruo de Unión Máquina de TIERRA en tu Cementerio?",
+        "fr": "Ajouter à votre main 1 monstre Union Machine TERRE de votre Cimetière ?",
+        "it": "Aggiungere alla mano 1 mostro Unione Macchina TERRA dal tuo Cimitero?",
+        "pt": "Adicionar à mão 1 monstro Union Máquina de TERRA do teu Cemitério?",
+        "ja": "自分の墓地のユニオンモンスター（地属性／機械族）１体を手札に加えますか？",
+        "kr": "자신의 묘지의 유니온 몬스터(땅 속성 / 기계족) 1장을 패에 넣겠습니까?"
+    },
+    "是否从那之中选最多2只通常怪兽(1星/龙族/守备力1000)加入手卡?": {
+        "en": "Add up to 2 Level 1 Dragon Normal Monsters with 1000 DEF from among them to your hand?",
+        "de": "Füge deiner Hand davon bis zu 2 Normale Drache-Monster der Stufe 1 mit 1000 DEF hinzu?",
+        "es": "¿Añadir a tu mano hasta 2 Monstruos Normales Dragón de Nivel 1 con 1000 DEF de entre ellos?",
+        "fr": "Ajouter à votre main max. 2 Monstres Normaux Dragon de Niveau 1 avec 1000 DEF parmi eux ?",
+        "it": "Aggiungere alla mano fino a 2 Mostri Normali Drago di Livello 1 con 1000 DEF tra di essi?",
+        "pt": "Adicionar à mão até 2 Monstros Normais Dragão de Nível 1 com 1000 DEF dentre eles?",
+        "ja": "その中から通常モンスター（レベル１／ドラゴン族／守備力１０００）を２体まで手札に加えますか？",
+        "kr": "그 중에서 일반 몬스터(레벨 1 / 드래곤족 / 수비력 1000)를 2장까지 패에 넣겠습니까?"
+    },
+    "更改等级": {
+        "en": "Change Level",
+        "de": "Stufe ändern",
+        "es": "Cambiar Nivel",
+        "fr": "Modifier le Niveau",
+        "it": "Cambiare Livello",
+        "pt": "Alterar Nível",
+        "ja": "レベル変更",
+        "kr": "레벨 변경"
+    },
+    "请选择要更改等级的怪兽": {
+        "en": "Select the monster whose Level to change.",
+        "de": "Wähle das Monster, dessen Stufe geändert wird.",
+        "es": "Selecciona el monstruo cuyo Nivel cambiar.",
+        "fr": "Sélectionnez le monstre dont le Niveau sera modifié.",
+        "it": "Seleziona il mostro di cui cambiare il Livello.",
+        "pt": "Seleciona o monstro cujo Nível será alterado.",
+        "ja": "レベルを変更するモンスターを選んでください。",
+        "kr": "레벨을 변경할 몬스터를 선택하세요."
+    },
+    "请选择要变化的等级": {
+        "en": "Select the Level change.",
+        "de": "Wähle die Stufenänderung.",
+        "es": "Selecciona el cambio de Nivel.",
+        "fr": "Sélectionnez la modification de Niveau.",
+        "it": "Seleziona la variazione di Livello.",
+        "pt": "Seleciona a alteração de Nível.",
+        "ja": "レベルの変化量を選んでください。",
+        "kr": "레벨 변경량을 선택하세요."
+    },
+    "这个回合，不用原本守备力1100的怪兽(暗属性)不能攻击": {
+        "en": "This turn, you can only attack with DARK monsters with 1100 original DEF.",
+        "de": "In diesem Spielzug kannst du nur mit FINSTERNIS Monstern mit 1100 Grund-DEF angreifen.",
+        "es": "Este turno, solo puedes atacar con monstruos de OSCURIDAD con 1100 DEF original.",
+        "fr": "Ce tour, vous ne pouvez attaquer qu’avec des monstres TÉNÈBRES avec 1100 DEF d’origine.",
+        "it": "In questo turno, puoi attaccare solo con mostri OSCURITÀ con 1100 DEF originale.",
+        "pt": "Neste turno, só podes atacar com monstros de TREVAS com 1100 DEF original.",
+        "ja": "このターン、元々の守備力が１１００のモンスター（闇属性）でしか攻撃できない。",
+        "kr": "이 턴에는 원래 수비력이 1100인 몬스터(어둠 속성)로만 공격할 수 있습니다."
+    },
+    "是否选对方场上1只表侧表示怪兽(6星)回到持有者手卡?": {
+        "en": "Return 1 face-up Level 6 monster on your opponent’s field to the hand?",
+        "de": "Gib 1 offenes Monster der Stufe 6 auf der gegnerischen Spielfeldseite auf die Hand seines Besitzers zurück?",
+        "es": "¿Devolver a la mano de su dueño 1 monstruo de Nivel 6 boca arriba en el Campo del adversario?",
+        "fr": "Renvoyer à la main de son propriétaire 1 monstre face recto de Niveau 6 sur le Terrain adverse ?",
+        "it": "Far ritornare in mano al proprietario 1 mostro scoperto di Livello 6 sul Terreno avversario?",
+        "pt": "Devolver à mão do dono 1 monstro de Nível 6 com a face para cima no campo do adversário?",
+        "ja": "相手フィールドの表側表示モンスター（レベル６）１体を持ち主の手札に戻しますか？",
+        "kr": "상대 필드의 앞면 표시 몬스터(레벨 6) 1장을 주인의 패로 되돌리겠습니까?"
+    },
+    "是否选自己墓地1张{CARD}或者1只{CARD}加入手卡?": {
+        "en": "Add 1 {CARD} or {CARD} from your GY to your hand?",
+        "de": "Füge deiner Hand 1 {CARD} oder {CARD} von deinem Friedhof hinzu?",
+        "es": "¿Añadir a tu mano 1 {CARD} o {CARD} en tu Cementerio?",
+        "fr": "Ajouter à votre main 1 {CARD} ou {CARD} de votre Cimetière ?",
+        "it": "Aggiungere alla mano 1 {CARD} o {CARD} dal tuo Cimitero?",
+        "pt": "Adicionar à mão 1 {CARD} ou {CARD} do teu Cemitério?",
+        "ja": "自分の墓地の「{CARD}」または「{CARD}」１枚を手札に加えますか？",
+        "kr": "자신의 묘지의 \"{CARD}\" 또는 \"{CARD}\" 1장을 패에 넣겠습니까?"
+    },
+    "这个回合，不能用怪兽(地属性以外)攻击": {
+        "en": "This turn, you can only attack with EARTH monsters.",
+        "de": "In diesem Spielzug kannst du nur mit ERDE Monstern angreifen.",
+        "es": "Este turno, solo puedes atacar con monstruos de TIERRA.",
+        "fr": "Ce tour, vous ne pouvez attaquer qu’avec des monstres TERRE.",
+        "it": "In questo turno, puoi attaccare solo con mostri TERRA.",
+        "pt": "Neste turno, só podes atacar com monstros de TERRA.",
+        "ja": "このターン、モンスター（地属性以外）では攻撃できない。",
+        "kr": "이 턴에는 땅 속성 이외의 몬스터로 공격할 수 없습니다."
+    },
+    "是否选自己墓地最多2张{CARD}盖放?": {
+        "en": "Set up to 2 {CARD} from your GY?",
+        "de": "Setze bis zu 2 {CARD} von deinem Friedhof?",
+        "es": "¿Colocar hasta 2 {CARD} de tu Cementerio?",
+        "fr": "Poser max. 2 {CARD} depuis votre Cimetière ?",
+        "it": "Posizionare fino a 2 {CARD} dal tuo Cimitero?",
+        "pt": "Baixar até 2 {CARD} do teu Cemitério?",
+        "ja": "自分の墓地の「{CARD}」を２枚までセットしますか？",
+        "kr": "자신의 묘지의 \"{CARD}\"를 2장까지 세트하겠습니까?"
+    },
+    "这个回合，不会因{CARD}的效果受到伤害": {
+        "en": "This turn, you take no damage from the effect of {CARD}.",
+        "de": "In diesem Spielzug erhältst du keinen Schaden durch den Effekt von {CARD}.",
+        "es": "Este turno, no recibes daño del efecto de {CARD}.",
+        "fr": "Ce tour, vous ne recevez aucun dommage de l’effet de {CARD}.",
+        "it": "In questo turno, non subisci danni dall’effetto di {CARD}.",
+        "pt": "Neste turno, não recebes dano do efeito de {CARD}.",
+        "ja": "このターン、「{CARD}」の効果ではダメージを受けない。",
+        "kr": "이 턴에는 \"{CARD}\"의 효과로 데미지를 받지 않습니다."
+    },
+    "是否选自己场上1只怪兽攻击力上升900?": {
+        "en": "Have 1 monster on your field gain 900 ATK?",
+        "de": "Lasse 1 Monster auf deiner Spielfeldseite 900 ATK erhalten?",
+        "es": "¿Hacer que 1 monstruo en tu Campo gane 900 ATK?",
+        "fr": "Faire gagner 900 ATK à 1 monstre sur votre Terrain ?",
+        "it": "Far guadagnare 900 ATK a 1 mostro sul tuo Terreno?",
+        "pt": "Fazer 1 monstro no teu campo ganhar 900 ATK?",
+        "ja": "自分フィールドのモンスター１体の攻撃力を９００アップしますか？",
+        "kr": "자신 필드의 몬스터 1장의 공격력을 900 올리겠습니까?"
+    },
+    "是否选自己墓地1只怪兽(暗属性/守备力1100)加入手卡?": {
+        "en": "Add 1 DARK monster with 1100 DEF from your GY to your hand?",
+        "de": "Füge deiner Hand 1 FINSTERNIS Monster mit 1100 DEF von deinem Friedhof hinzu?",
+        "es": "¿Añadir a tu mano 1 monstruo de OSCURIDAD con 1100 DEF en tu Cementerio?",
+        "fr": "Ajouter à votre main 1 monstre TÉNÈBRES avec 1100 DEF de votre Cimetière ?",
+        "it": "Aggiungere alla mano 1 mostro OSCURITÀ con 1100 DEF dal tuo Cimitero?",
+        "pt": "Adicionar à mão 1 monstro de TREVAS com 1100 DEF do teu Cemitério?",
+        "ja": "自分の墓地のモンスター（闇属性／守備力１１００）１体を手札に加えますか？",
+        "kr": "자신의 묘지의 몬스터(어둠 속성 / 수비력 1100) 1장을 패에 넣겠습니까?"
+    },
+    "是否进行仪式术召唤?": {
+        "en": "Perform a Ritual Summon?",
+        "de": "Führe eine Ritualbeschwörung durch?",
+        "es": "¿Realizar una Invocación por Ritual?",
+        "fr": "Effectuer une Invocation Rituelle ?",
+        "it": "Effettuare un’Evocazione Rituale?",
+        "pt": "Realizar uma Invocação-Ritual?",
+        "ja": "儀式召喚を行いますか？",
+        "kr": "의식 소환하겠습니까?"
+    },
+    "直到下次的自身回合结束时，不能把怪兽特殊召唤": {
+        "en": "You cannot Special Summon until the end of your next turn.",
+        "de": "Bis zum Ende deines nächsten Spielzugs kannst du keine Monster als Spezialbeschwörung beschwören.",
+        "es": "No puedes Invocar de Modo Especial hasta el final de tu próximo turno.",
+        "fr": "Vous ne pouvez pas Invoquer Spécialement jusqu’à la fin de votre prochain tour.",
+        "it": "Non puoi Evocare Specialmente fino alla fine del tuo prossimo turno.",
+        "pt": "Não podes Invocar por Invocação-Especial até ao final do teu próximo turno.",
+        "ja": "次の自分のターン終了時まで、モンスターを特殊召喚できない。",
+        "kr": "다음 자신 턴 종료시까지 몬스터를 특수 소환할 수 없습니다."
+    },
+    "直到下次的自身回合结束时，不用原本守备力1100的怪兽(暗属性)不能攻击": {
+        "en": "Until the end of your next turn, you can only attack with DARK monsters with 1100 original DEF.",
+        "de": "Bis zum Ende deines nächsten Spielzugs kannst du nur mit FINSTERNIS Monstern mit 1100 Grund-DEF angreifen.",
+        "es": "Hasta el final de tu próximo turno, solo puedes atacar con monstruos de OSCURIDAD con 1100 DEF original.",
+        "fr": "Jusqu’à la fin de votre prochain tour, vous ne pouvez attaquer qu’avec des monstres TÉNÈBRES avec 1100 DEF d’origine.",
+        "it": "Fino alla fine del tuo prossimo turno, puoi attaccare solo con mostri OSCURITÀ con 1100 DEF originale.",
+        "pt": "Até ao final do teu próximo turno, só podes atacar com monstros de TREVAS com 1100 DEF original.",
+        "ja": "次の自分のターン終了時まで、元々の守備力が１１００のモンスター（闇属性）でしか攻撃できない。",
+        "kr": "다음 자신 턴 종료시까지 원래 수비력이 1100인 몬스터(어둠 속성)로만 공격할 수 있습니다."
+    },
+    "是否选自己场上1只攻击表示怪兽变成表侧守备表示?": {
+        "en": "Change 1 Attack Position monster on your field to face-up Defense Position?",
+        "de": "Ändere 1 Monster in Angriffsposition auf deiner Spielfeldseite in die offene Verteidigungsposition?",
+        "es": "¿Cambiar a Posición de Defensa boca arriba 1 monstruo en Posición de Ataque en tu Campo?",
+        "fr": "Changer en Position de Défense face recto 1 monstre en Position d’Attaque sur votre Terrain ?",
+        "it": "Mettere in Posizione di Difesa scoperta 1 mostro in Posizione di Attacco sul tuo Terreno?",
+        "pt": "Mudar para Posição de Defesa com a face para cima 1 monstro em Posição de Ataque no teu campo?",
+        "ja": "自分フィールドの攻撃表示モンスター１体を表側守備表示にしますか？",
+        "kr": "자신 필드의 공격 표시 몬스터 1장을 앞면 수비 표시로 하겠습니까?"
+    },
+    "返回卡组下面": {
+        "en": "Return to the bottom of the Deck",
+        "de": "Unter das Deck legen",
+        "es": "Devolver al fondo del Deck",
+        "fr": "Renvoyer au-dessous du Deck",
+        "it": "Rimettere in fondo al Deck",
+        "pt": "Devolver ao fundo do Deck",
+        "ja": "デッキの一番下に戻す",
+        "kr": "덱 맨 아래로 되돌리기"
+    },
+    "直到下次的对方回合结束时，不会被战斗破坏": {
+        "en": "Cannot be destroyed by battle until the end of your opponent’s next turn.",
+        "de": "Kann bis zum Ende des nächsten gegnerischen Spielzugs nicht durch Kampf zerstört werden.",
+        "es": "No puede ser destruido en batalla hasta el final del próximo turno del adversario.",
+        "fr": "Ne peut pas être détruit au combat jusqu’à la fin du prochain tour adverse.",
+        "it": "Non può essere distrutto in battaglia fino alla fine del prossimo turno avversario.",
+        "pt": "Não pode ser destruído em batalha até ao final do próximo turno do adversário.",
+        "ja": "次の相手のターン終了時まで、戦闘では破壊されない。",
+        "kr": "다음 상대 턴 종료시까지 전투로 파괴되지 않습니다."
+    },
+    "是否选融合术怪兽以外的自己墓地1只怪兽(8星/光属性/攻击力2500)特殊召唤?": {
+        "en": "Special Summon 1 non-Fusion Level 8 LIGHT monster with 2500 ATK from your GY?",
+        "de": "Beschwöre 1 LICHT Monster der Stufe 8 mit 2500 ATK von deinem Friedhof als Spezialbeschwörung, außer Fusionsmonstern?",
+        "es": "¿Invocar de Modo Especial 1 monstruo de LUZ de Nivel 8 con 2500 ATK en tu Cementerio, excepto Monstruos de Fusión?",
+        "fr": "Invoquer Spécialement 1 monstre LUMIÈRE de Niveau 8 avec 2500 ATK de votre Cimetière, sauf un Monstre Fusion ?",
+        "it": "Evocare Specialmente dal tuo Cimitero 1 mostro LUCE di Livello 8 con 2500 ATK, eccetto Mostri Fusione?",
+        "pt": "Invocar por Invocação-Especial 1 monstro de LUZ de Nível 8 com 2500 ATK do teu Cemitério, exceto Monstros de Fusão?",
+        "ja": "自分の墓地のフュージョンモンスター以外のモンスター（レベル８／光属性／攻撃力２５００）１体を特殊召喚しますか？",
+        "kr": "자신의 묘지의 퓨전 몬스터 이외의 몬스터(레벨 8 / 빛 속성 / 공격력 2500) 1장을 특수 소환하겠습니까?"
+    }
+})
+RUSH_PROMPT_PROVENANCE.update({key: {lang: "reviewed_rush_patch_20261025" for lang in values}
+    for key, values in RUSH_PROMPT_TRANSLATIONS.items() if key in ('是否选自己墓地1只同盟怪兽(地属性/机械族)加入手卡?', '是否从那之中选最多2只通常怪兽(1星/龙族/守备力1000)加入手卡?', '更改等级', '请选择要更改等级的怪兽', '请选择要变化的等级', '这个回合，不用原本守备力1100的怪兽(暗属性)不能攻击', '是否选对方场上1只表侧表示怪兽(6星)回到持有者手卡?', '是否选自己墓地1张{CARD}或者1只{CARD}加入手卡?', '这个回合，不能用怪兽(地属性以外)攻击', '是否选自己墓地最多2张{CARD}盖放?', '这个回合，不会因{CARD}的效果受到伤害', '是否选自己场上1只怪兽攻击力上升900?', '是否选自己墓地1只怪兽(暗属性/守备力1100)加入手卡?', '是否进行仪式术召唤?', '直到下次的自身回合结束时，不能把怪兽特殊召唤', '直到下次的自身回合结束时，不用原本守备力1100的怪兽(暗属性)不能攻击', '是否选自己场上1只攻击表示怪兽变成表侧守备表示?', '返回卡组下面', '直到下次的对方回合结束时，不会被战斗破坏', '是否选融合术怪兽以外的自己墓地1只怪兽(8星/光属性/攻击力2500)特殊召唤?')})
+
+# Additional 24 October source prompts.
+RUSH_PROMPT_TRANSLATIONS.update({
+    "把1只怪兽(暗属性/战士族)解放攻击表示上级召唤": {
+        "en": "Tribute Summon in Attack Position by Tributing 1 DARK Warrior monster",
+        "de": "Tributbeschwörung in Angriffsposition durch Anbieten von 1 FINSTERNIS Krieger-Monster",
+        "es": "Invocar por Sacrificio en Posición de Ataque Sacrificando 1 monstruo Guerrero de OSCURIDAD",
+        "fr": "Invoquer par Sacrifice en Position d’Attaque en Sacrifiant 1 monstre Guerrier TÉNÈBRES",
+        "it": "Evocare tramite Tributo in Posizione di Attacco offrendo 1 mostro Guerriero OSCURITÀ",
+        "pt": "Invocar por Tributo em Posição de Ataque oferecendo 1 monstro Guerreiro de TREVAS como Tributo",
+        "ja": "モンスター（闇属性／戦士族）１体をリリースして攻撃表示でアドバンス召喚",
+        "kr": "몬스터(어둠 속성 / 전사족) 1장을 릴리스하고 공격 표시로 어드밴스 소환"
+    },
+    "是否选对方场上1只怪兽攻击力·守备力下降1500?": {
+        "en": "Have 1 monster on your opponent’s field lose 1500 ATK/DEF?",
+        "de": "Lasse 1 Monster auf der gegnerischen Spielfeldseite 1500 ATK/DEF verlieren?",
+        "es": "¿Hacer que 1 monstruo en el Campo del adversario pierda 1500 ATK/DEF?",
+        "fr": "Faire perdre 1500 ATK/DEF à 1 monstre sur le Terrain adverse ?",
+        "it": "Far perdere 1500 ATK/DEF a 1 mostro sul Terreno avversario?",
+        "pt": "Fazer 1 monstro no campo do adversário perder 1500 ATK/DEF?",
+        "ja": "相手フィールドのモンスター１体の攻撃力・守備力を１５００ダウンしますか？",
+        "kr": "상대 필드의 몬스터 1장의 공격력 / 수비력을 1500 내리겠습니까?"
+    }
+})
+
+RUSH_PROMPT_PROVENANCE.update({key: {lang: "reviewed_rush_patch_20261025" for lang in RUSH_PROMPT_TRANSLATIONS[key]}
+    for key in ("把1只怪兽(暗属性/战士族)解放攻击表示上级召唤", "是否选对方场上1只怪兽攻击力·守备力下降1500?")})

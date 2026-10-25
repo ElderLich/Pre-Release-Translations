@@ -221,6 +221,10 @@ def backfill_seed(row: tuple, source_row: tuple, seed: tuple | None) -> tuple:
         return row
     result = list(row)
     for index in range(1, len(TEXT_FIELDS)):
+        # Source scripts own prompt slots. A removed prompt must not be restored
+        # from an older full-card seed after a translator clears it for review.
+        if index >= 3 and not source_row[index]:
+            continue
         if (not result[index] or result[index] == source_row[index]) and seed[index]:
             result[index] = seed[index]
     return tuple(result)

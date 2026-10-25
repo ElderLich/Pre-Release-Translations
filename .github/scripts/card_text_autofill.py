@@ -273,7 +273,14 @@ def format_yugipedia_card(title: str, params: dict[str, str], lang: str, rush: b
             output.append("【" + label + "】")
         output.append(text)
         desc = normalize_rush_layout("\n".join(output), lang)
-        if not text or any(token in desc + name for token in ("{{", "}}")):
+        # A verified non-Effect Rush Ritual/Fusion can have no printed text.
+        # Keep its known name (e.g. Sengenjin) without inventing flavor/effects.
+        # An incomplete Effect Monster or translated cost still stays pending.
+        non_effect = ("Non-Effect Monster" in params.get("misc", "").splitlines()
+                      and "Effect" not in {part.strip() for part in params.get("types", "").split("/")}
+                      and not any(params.get(field, "").strip()
+                                  for field in ("materials", "condition", "requirement", "effect_types")))
+        if (not text and not non_effect) or any(token in desc + name for token in ("{{", "}}")):
             return None
         return CardText(name=name, desc=desc, source=f"Yugipedia:{title}")
     pendulum = clean_wiki_text(params.get(pendulum_key, ""))

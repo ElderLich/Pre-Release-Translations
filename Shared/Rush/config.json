@@ -4,6 +4,13 @@
     "120307059": 120231024,
     "120307060": 120238001
   },
-  "system_ids": [120000000, 120000001, 120000002, 120000010, 120000011],
-  "notes": "The two retired IDs are duplicate printings explicitly removed by the approved worksheet inventory (Master/Metadata/sheet_inventory.json). They must not be restored by RD Patch.cdb. Do not infer further exclusions from card names, aliases or artwork."
+  "system_ids": [
+    120000000,
+    120000001,
+    120000002,
+    120000010,
+    120000011,
+    120000012
+  ],
+  "notes": "The two retired IDs are duplicate printings explicitly removed by the approved worksheet inventory (Master/Metadata/sheet_inventory.json). They must not be restored by RD Patch.cdb. Do not infer further exclusions from card names, aliases or artwork. 120000012 is the name-only The Legacy of Zeil helper referenced by c120310021/c120310022/c120310025.lua; it has no physical artwork."
 }

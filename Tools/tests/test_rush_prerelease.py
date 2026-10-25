@@ -75,6 +75,14 @@ class RushPrereleaseTests(unittest.TestCase):
                 self.assertNotIn("Picture/Rush_Arts/101.jpg", archive.namelist())
         self.assertTrue((self.root / "Shared/Rush Artworks/101.jpg").exists())
 
+    def test_seed_does_not_resurrect_removed_source_prompt(self):
+        source = (100, "原名", "原文", *([""] * 16))
+        translated = (100, "Name", "Effect", *([""] * 16))
+        seed = (100, "Seed name", "Seed effect", "Obsolete choice", *([""] * 15))
+        self.assertEqual(rush.backfill_seed(translated, source, seed), translated)
+        current = list(source); current[3] = "当前选择"
+        self.assertEqual(rush.backfill_seed(translated, tuple(current), seed)[3], "Obsolete choice")
+
     def test_existing_translation_survives_upstream_gameplay_change(self):
         self.sync()
         self.edit_text(self.workspace(), 100, "Translator correction.")
