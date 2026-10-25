@@ -5,11 +5,47 @@
     "lang": "th",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261023_151359",
-    "rows_in_report": 0,
-    "unique_cn_strings": 0,
-    "total_cn_cells": 0
+    "timestamp": "20261025_123448",
+    "rows_in_report": 1,
+    "unique_cn_strings": 1,
+    "total_cn_cells": 1
   },
-  "unique_strings": [],
-  "cards": []
+  "unique_strings": [
+    {
+      "string": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
+      "count": 1,
+      "is_new": true
+    }
+  ],
+  "cards": [
+    {
+      "id": 101307049,
+      "name": "Codaedalus",
+      "desc": "มอนสเตอร์ WATER 2 ตัว\nคุณสามารถ Special Summon \"Codaedalus(s)\" ได้เพียงเทิร์นละครั้งเท่านั้น ชื่อของการ์ดใบนี้จะกลายเป็น \"Umi\" เมื่ออยู่บนสนาม ถ้าการ์ดใบนี้ถูก Link Summon: คุณสามารถเปิดใช้งานเอฟเฟกต์นี้; ในช่วง End Phase ของเทิร์นนี้ นำการ์ด 1 ใบที่ระบุถึง \"Atlantis, City of the Sea Dragon\" จาก GY ขึ้นมือ ยกเว้น \"Codaedalus\" เทิร์นละครั้ง: คุณสามารถส่ง \"Umi\" ที่หงายหน้าอยู่บนสนามของคุณ 1 ใบไปที่ GY; ส่ง Spell/Trap บนสนามสูงสุด 2 ใบไปที่ GY",
+      "str1": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
+      "str2": "Recovery effect",
+      "str3": "Send to the GY",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str1",
+          "value": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
+          "normalized": "适用作为连接1进行连接召唤({CARD})"
+        }
+      ],
+      "desc_preview": "มอนสเตอร์ WATER 2 ตัว\nคุณสามารถ Special Summon \"Codaedalus(s)\" ได้เพียงเทิร์นละครั้งเท่านั้น ชื่อของการ์ดใบนี้จะกลายเป็น \"Umi\" เมื่ออยู่บนสนาม ถ้าการ์ดใบนี้ถูก Link Summon: คุณสามารถเปิดใช้งานเอฟเฟกต์นี้; ในช่วง End Phase ของเทิร์นนี้ นำการ์ด 1 ใบที่ระบุถึง \"Atlantis, City of the Sea Dragon\" จาก GY ขึ้นมือ ยกเว้น \"Codaedalus\" เทิร์นละครั้ง: คุณสามารถส่ง \"Umi\" ที่หงายหน้าอยู่บนสนามของคุณ 1 ใบไปที่ GY; ส่ง Spell/Trap บนสนามสูงสุด 2 ใบไปที่ GY"
+    }
+  ]
 }
