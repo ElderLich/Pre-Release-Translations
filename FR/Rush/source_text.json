@@ -1,7 +1,17 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310060": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP060",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17887&languages=fr"
+    }
+  },
   "requested_ids": [
+    120310060,
     120310069
   ],
   "unresolved": [

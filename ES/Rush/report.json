@@ -1,12 +1,21 @@
 {
-  "active_cards": 100,
-  "artwork_files": 97,
+  "active_cards": 101,
+  "artwork_files": 98,
   "excluded_ids": [],
   "missing_artwork": [
     120310024,
-    120310100
+    120310060
   ],
-  "pending_translations": [],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310060,
+      "name": "美丽的妖魔之森"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -1341,8 +1350,8 @@
     "120311061": "9d455c46612b31b42d85f7946acec0950dd5300b97c9d3d9ba990ba4c78491e5",
     "120311062": "9c17a7fa29c0b600dfe35acb97e4067870a5974e86b23a4afc09348a5a0fe4fe"
   },
-  "script_files": 132,
-  "source_cards": 100,
+  "script_files": 133,
+  "source_cards": 101,
   "text_sha256": {
     "120000012": "c71a6c5630578295f9d6f1975f89ed450edd9890187f1a57ee736acafbfb70d7",
     "120109069": "e4e2baad8ad86d16a1249b2367ca65849cc7be78cb15ad9ffe2ce754646846b0",
@@ -1396,6 +1405,7 @@
     "120310056": "fd73a53b4608196b06fb9b1c7271aa14779471361efd198683a322b7084b19d3",
     "120310057": "48146f468f201022fed5feb96ccb91880ee98c569ae9f2469e4a7b0431e1f45d",
     "120310058": "8a6a9badc64ab71c8251db2880457be281d047793959b9b03c1f4c744c4772f8",
+    "120310060": "a8422d8b81d97d9cada0fc2b48dc02cc67eb1f6b7495931b51ce81c85485008d",
     "120310061": "ed6f2332ad513b1f31627034b87282a1a012548b19a190ef1800e4a0298f7849",
     "120310062": "c99571f13ad8dd6355a27c769eef4ff11fe10fd43fae517d481ada0e2af620b7",
     "120310063": "2d8ecdb493527b43b73f74a5591e6b16c42f6cabac392e187e6955dde116ec2f",

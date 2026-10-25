@@ -1,13 +1,8 @@
 {
   "built_locales": [
-    "DE",
     "EN",
-    "ES",
     "FR",
-    "IT",
     "JP",
-    "KR",
-    "PT",
     "TH",
     "ZH-CN",
     "ZH-TW"
@@ -65,6 +60,7 @@
     120310056,
     120310057,
     120310058,
+    120310060,
     120310061,
     120310062,
     120310063,
@@ -115,11 +111,17 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "3e12858f5d0a070899d54a91227e82ed47afd616537f645d1594f7c60860bcf9",
-  "patch_sha256": "a6e9e27b9d125c759faf2b9bae631ee8d7776ad2dd74f1c7d95f4ae5ffe92428",
-  "pending_locales": {},
-  "source_fingerprint": "e847aeb382bc7f63fc108e22bd08185a89c6479f9d38141977d9c452881a11db",
-  "source_revision": "58714a10f71b8871553938d930dbcd51a9f93d83",
+  "local_inputs_sha256": "a21ea8312b93f29cfa1f1458b4fdf98527c0fc84d72033dfd5e811c5e2b1dddc",
+  "patch_sha256": "269f82e992b3bd2161f4eeaef1fd42502373789b14b7d7f346da4efa8d7770e4",
+  "pending_locales": {
+    "DE": 1,
+    "ES": 1,
+    "IT": 1,
+    "KR": 1,
+    "PT": 1
+  },
+  "source_fingerprint": "5f4751edd9caa1a463b7ed2dcbc2a905cb4da83d9dd310efa417ebc99254e7df",
+  "source_revision": "d540db66ddcc2bbbde2491e94976ef71fdd18b3f",
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "05676e492358ff945d506550bce34aeae361218de9cdad58453922430073709e",
@@ -173,6 +175,7 @@
     "120310056": "0907948c3b0823dbe285f50e2b0b2fc579baa6e1f9552508813c3e1c186b46bf",
     "120310057": "971e4ccf17b8357c9d872651ae8784b73328b0286f72f76f1828d1094a5e4a24",
     "120310058": "fef0becc6c21ca5a99bc58e52f580cb4ffc0e8a705abc490587985cc0f969331",
+    "120310060": "9b0c64e9d58239bedd3322876b1e0f8a85b11cbbef0182c6034c446104e99473",
     "120310061": "86036f98f7f07f0f8a3a9aa79d99a742a22f0469ad54e0ada31722d1c6ff39ca",
     "120310062": "941a3a3be055de6c39dc01894543a77bb906644aba679c87a23cad4758a7e832",
     "120310063": "ce32ea435196bfa2247ede1617335d9bd78f85a30e46e2935e30605c8cbe188e",
@@ -222,6 +225,6 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470"
   },
-  "translations_revision": "18417affebe18cd36998771797a97fd65ef62e14",
+  "translations_revision": "01059374a6b3ac2fe1ff41c7895fe2d5dbcf39ee",
   "version": 2
 }
