@@ -442,11 +442,33 @@ def command_rush_refresh(args: argparse.Namespace) -> None:
         if report.get("conflicts") and report.get("published_commit"):
             command_rush_pull(args, revision=report["published_commit"])
             return
+    reconciled_upstream = False
     if args.pull_first:
-        pull_clean_translator_repo(repo_root)
+        # The GUI already stores these maintainer paths, with sibling-checkout
+        # defaults. Fetch must reconcile that source before reading a potentially
+        # older published workspace; web text availability never selects IDs.
+        preferences = read_json(local_root / ".transsuperpre_local.json", {})
+        from prerelease_preferences import translations_root
+        source = Path(preferences.get("rush_source_root") or repo_root.parent / "ygopro-rush-duel").expanduser()
+        translations = Path(translations_root(repo_root, preferences.get("rush_translations_root", ""))).expanduser()
+        if (source / "RD Patch.cdb").is_file() and (translations / "en-US/rush_cards.cdb").is_file():
+            # Reuse the published pull's guarded fast-forward: clean main gets
+            # newer tools/art/translations, while dirty/diverged work is kept.
+            # Reconcile afterward so upstream additions cannot be replaced by
+            # the published repository's older card inventory.
+            from published_workspace import published_snapshot
+            with published_snapshot(repo_root, {}, log=log):
+                pass
+            log("Refreshing Rush from the local upstream checkout before opening this locale. "
+                "Cards without localized sources retain their Chinese text for review.")
+            command_rush(argparse.Namespace(repo_root=repo_root, source_root=source,
+                                           translations_root=translations, fetch=True, offline=args.offline))
+            reconciled_upstream = True
+        else:
+            pull_clean_translator_repo(repo_root)
     try:
         refresh_locale(repo_root, local_root, RUSH_LANGS[args.lang].folder,
-                       keep_local=args.keep_local, fetch_text=not args.offline, log=log)
+                       keep_local=args.keep_local, fetch_text=not args.offline and not reconciled_upstream, log=log)
     except (ValueError, OSError) as error:
         fail(str(error))
 

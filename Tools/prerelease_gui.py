@@ -801,6 +801,12 @@ class PrereleaseWindow:
         if lang in ("TH", "ZH-CN") and command in ("upload", "push", "resolve"):
             messagebox.showinfo(self.tr("Managed locale"), self.tr("Thai uses English translations; Simplified Chinese follows upstream. Update the owning source instead."), parent=self.root)
             return
+        if command == "refresh":
+            try:
+                self.save_paths()
+            except (OSError, ValueError) as error:
+                messagebox.showerror(self.tr("Check Rush paths"), str(error), parent=self.root)
+                return
         if command == "resolve":
             try:
                 conflicts = read_json_object(self.local / lang / "Rush/Reports/sync.json").get("conflicts", [])

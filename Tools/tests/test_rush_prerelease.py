@@ -271,6 +271,26 @@ class RushPrereleaseTests(unittest.TestCase):
                 self.assertNotIn("script/c102.lua", archive.namelist())
         self.assertEqual(self.package("TH").read_bytes(), self.package("EN").read_bytes())
 
+    def test_missing_yugipedia_keeps_new_chinese_entry_and_holds_localized_package(self):
+        self.sync()
+        published = self.package().read_bytes()
+        self.set_cards([100, 101, 102])
+        row = list(self.texts[102]); row[3] = '是否发动效果？'; self.texts[102] = tuple(row)
+        self.write_source()
+        rush.write_changed(self.root / 'Shared/Rush/source_mappings.json', rush.json_bytes({
+            'cards': {'102': {'set_code': 'RD/KP27-JP060', 'evidence': 'Fixture printed source'}}}))
+        with patch('rush_source_text.fetch_yugipedia_cards', return_value={}):
+            result = rush.synchronize(self.root, self.source, self.translations, ['en', 'zh-cn'], fetch_source_text=True)
+        self.assertEqual(result['pending_locales'], {'EN': 1, 'TH': 1})
+        datas, texts = rush.read_cdb(self.workspace())
+        self.assertEqual(datas[102], self.datas[102])
+        self.assertEqual(texts[102][1:3], self.texts[102][1:3])
+        self.assertIn(102, rush.read_json(self.root / 'Shared/Rush/source.json')['card_ids'])
+        self.assertEqual(self.package().read_bytes(), published)
+        self.assertEqual(rush.read_cdb(self.root / 'EN/Rush/Base Files/rush-pre-release.cdb')[1][102], self.texts[102])
+        with zipfile.ZipFile(self.package('ZH-CN')) as archive:
+            self.assertEqual(archive.read('script/c102.lua'), (self.source / 'script/c102.lua').read_bytes())
+
     def test_formatting_does_not_approve_changed_source_after_pending_run(self):
         self.sync()
         # Emulate a last-good package produced by the old inline formatter.

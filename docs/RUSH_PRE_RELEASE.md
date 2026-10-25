@@ -7,8 +7,20 @@ Open your usual locale `AutoPR.py` and select the **Rush** tab.
 its workspace into `<LANG>/Rush/raw2/rush-pre-release.cdb` in your local
 translation folder. It reads the fetched commit even if local repository changes
 prevent a fast-forward. **Fetch Rush updates** also fills missing EN/FR/JP fields
-from the web using source snapshots inside Pre-Release Translations and requires
-a clean `main` checkout. Use **Open Database in DataEditorX** to edit the local
+from the web using source snapshots inside Pre-Release Translations. When the
+configured Rush source and locale databases are installed (including the usual
+`ygopro-rush-duel` and `MDPro4_Data` sibling checkouts), Fetch first obtains the
+latest published repository commit and fast-forwards when Git can preserve the
+local work. It then fast-forwards the upstream source and reconciles all locale
+workspaces. New cards therefore
+appear even before Yugipedia has text: their Chinese upstream entry remains
+available for translation, while incomplete localized packages keep their
+last-good release. A dirty or diverged checkout that cannot fast-forward stays
+intact, with the reason reported in the log. The subsequent upstream reconciliation
+preserves reviewed local text and keeps newer source cards. Without those local
+sources, Fetch retains the published-only flow and requires a clean `main`
+checkout. `rush-refresh --no-pull-first` explicitly uses the current published
+workspace without fetching either repository. Use **Open Database in DataEditorX** to edit the local
 file, then use **Upload workspace & push to GitHub** when your locale's translations are ready. The
 existing GitHub workflow obtains Rush sources, translations and shared artwork
 and builds all packages. Translators do not need local upstream repositories or

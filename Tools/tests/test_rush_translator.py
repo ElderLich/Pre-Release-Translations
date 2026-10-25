@@ -1,4 +1,5 @@
 import argparse
+from contextlib import nullcontext
 from pathlib import Path
 import subprocess
 import sys
@@ -11,6 +12,7 @@ import local_workspace as helper
 import rush_prerelease as rush
 import rush_translator as translator
 import AutoPR_local as wrapper
+import published_workspace
 
 
 class RushTranslatorTests(unittest.TestCase):
@@ -42,6 +44,135 @@ class RushTranslatorTests(unittest.TestCase):
             helper.command_rush_refresh(args)
         self.assertEqual(set(rush.read_cdb(self.local)[0]), {100, 101})
         self.assertEqual(self.baseline.read_bytes(), self.published.read_bytes())
+
+    def test_fetch_reconciles_configured_upstream_before_refreshing_local_workspace(self):
+        source, seeds = self.root / 'configured-rush', self.root / 'configured-locales'
+        rush.write_changed(source / 'RD Patch.cdb', b'upstream')
+        rush.write_changed(seeds / 'en-US/rush_cards.cdb', b'translations')
+        rush.write_changed(self.local_root / '.transsuperpre_local.json', rush.json_bytes({
+            'rush_source_root': str(source), 'rush_translations_root': str(seeds)}))
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
+                                                'rush-refresh', '--lang', 'fr'])
+        def reconcile(build):
+            self.assertEqual(build.source_root, source)
+            self.assertEqual(build.translations_root, seeds)
+            self.assertTrue(build.fetch)
+            self.write_published([100, 101, 102], name='原始卡名', effect='原始效果')
+        with patch.object(helper, 'command_rush', side_effect=reconcile) as build, \
+                patch.object(helper, 'pull_clean_translator_repo', side_effect=AssertionError('Must keep reconciled workspace')), \
+                patch.object(published_workspace, 'published_snapshot', return_value=nullcontext((self.repo, 'commit'))) as published, \
+                patch.object(translator, 'fill_source_text', side_effect=AssertionError('Builder already queried source text')):
+            helper.command_rush_refresh(args)
+        build.assert_called_once()
+        published.assert_called_once_with(self.repo, {}, log=helper.log)
+        self.assertEqual(set(rush.read_cdb(self.local)[0]), {100, 101, 102})
+        self.assertEqual(rush.read_cdb(self.local)[1][102][1:3], ('原始卡名 102', '原始效果'))
+
+    def test_fetch_detects_existing_sibling_source_without_a_new_option(self):
+        source = self.repo.parent / 'ygopro-rush-duel'
+        seeds = self.repo.parent / 'MDPro4_Data/Data/locales'
+        rush.write_changed(source / 'RD Patch.cdb', b'upstream')
+        rush.write_changed(seeds / 'en-US/rush_cards.cdb', b'translations')
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
+                                                'rush-refresh', '--lang', 'fr'])
+        with patch.object(helper, 'command_rush') as build, \
+                patch.object(published_workspace, 'published_snapshot', return_value=nullcontext((self.repo, 'commit'))), \
+                patch.object(helper, 'pull_clean_translator_repo', side_effect=AssertionError('Unexpected published-only pull')):
+            helper.command_rush_refresh(args)
+        self.assertEqual(build.call_args.args[0].source_root, source)
+        self.assertEqual(build.call_args.args[0].translations_root, seeds)
+
+    def test_fetch_without_local_source_keeps_published_translator_flow(self):
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
+                                                'rush-refresh', '--lang', 'fr', '--offline'])
+        with patch.object(helper, 'command_rush', side_effect=AssertionError('No local source')), \
+                patch.object(helper, 'pull_clean_translator_repo') as pull:
+            helper.command_rush_refresh(args)
+        pull.assert_called_once_with(self.repo)
+        self.assertEqual(set(rush.read_cdb(self.local)[0]), {100, 101})
+
+    def test_failed_upstream_reconciliation_does_not_refresh_stale_local_rows(self):
+        source = self.repo.parent / 'ygopro-rush-duel'
+        seeds = self.repo.parent / 'MDPro4_Data/Data/locales'
+        rush.write_changed(source / 'RD Patch.cdb', b'upstream')
+        rush.write_changed(seeds / 'en-US/rush_cards.cdb', b'translations')
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
+                                                'rush-refresh', '--lang', 'fr'])
+        with patch.object(helper, 'command_rush', side_effect=SystemExit('upstream unavailable')), \
+                patch.object(published_workspace, 'published_snapshot', return_value=nullcontext((self.repo, 'commit'))), \
+                patch.object(translator, 'refresh_locale') as refresh:
+            with self.assertRaisesRegex(SystemExit, 'upstream unavailable'):
+                helper.command_rush_refresh(args)
+        refresh.assert_not_called()
+
+    def test_configured_source_fetch_gets_remote_changes_before_upstream_reconciliation(self):
+        def git(cwd, *args):
+            return subprocess.run(['git', '-c', 'user.name=Fixture', '-c', 'user.email=fixture@example.invalid', *args],
+                                  cwd=cwd, check=True, capture_output=True, text=True).stdout.strip()
+        origin = self.root / 'published-origin'
+        origin.mkdir()
+        git(origin, 'init', '-b', 'main')
+        rush.write_changed(origin / 'Tools/published-tool.txt', b'old tool')
+        rush.write_changed(origin / 'FR/Rush/Workspace/rush-pre-release.cdb', self.published.read_bytes())
+        git(origin, 'add', '-A'); git(origin, 'commit', '-m', 'Initial published workspace')
+        checkout = self.root / 'published-checkout'
+        git(self.root, 'clone', str(origin), str(checkout))
+        self.repo = checkout
+        self.published, self.local, self.baseline, self.reports = translator.paths(self.repo, self.local_root, 'FR')
+        remote_db = origin / 'FR/Rush/Workspace/rush-pre-release.cdb'
+        datas, texts = rush.read_cdb(remote_db)
+        value = list(texts[100]); value[1] = 'New published translation'; texts[100] = tuple(value)
+        rush.write_changed(remote_db, rush.cdb_bytes(datas, texts))
+        rush.write_changed(origin / 'Tools/published-tool.txt', b'new published tool')
+        rush.write_changed(origin / 'Shared/Rush Artworks/100.jpg', b'new published artwork')
+        git(origin, 'add', '-A'); git(origin, 'commit', '-m', 'Published translation artwork and tool update')
+        source = self.repo.parent / 'ygopro-rush-duel'
+        seeds = self.repo.parent / 'MDPro4_Data/Data/locales'
+        rush.write_changed(source / 'RD Patch.cdb', b'upstream')
+        rush.write_changed(seeds / 'en-US/rush_cards.cdb', b'translations')
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
+                                                'rush-refresh', '--lang', 'fr'])
+        def reconcile(build):
+            self.assertEqual((self.repo / 'Tools/published-tool.txt').read_bytes(), b'new published tool')
+            self.assertEqual((self.repo / 'Shared/Rush Artworks/100.jpg').read_bytes(), b'new published artwork')
+            current_datas, current_texts = rush.read_cdb(self.published)
+            self.assertEqual(current_texts[100][1], 'New published translation')
+            current_datas[102] = (102, 4, 0, 0, 33, 1000, 1000, 4, 1, 1, 0)
+            current_texts[102] = (102, '原始卡名', '原始效果', *([''] * 16))
+            rush.write_changed(self.published, rush.cdb_bytes(current_datas, current_texts))
+        with patch.object(helper, 'command_rush', side_effect=reconcile):
+            helper.command_rush_refresh(args)
+        self.assertEqual(git(self.repo, 'rev-parse', 'HEAD'), git(origin, 'rev-parse', 'HEAD'))
+        self.assertEqual(set(rush.read_cdb(self.local)[0]), {100, 101, 102})
+        self.assertEqual(rush.read_cdb(self.local)[1][100][1], 'New published translation')
+        self.assertEqual(rush.read_cdb(self.local)[1][102][1], '原始卡名')
+        # A later remote change must not overwrite reviewed dirty local content.
+        previous_head = git(self.repo, 'rev-parse', 'HEAD')
+        rush.write_changed(self.repo / 'Tools/published-tool.txt', b'local reviewed tool edit')
+        rush.write_changed(origin / 'Tools/published-tool.txt', b'later published tool')
+        git(origin, 'add', '-A'); git(origin, 'commit', '-m', 'Later published tool update')
+        with patch.object(helper, 'command_rush') as build:
+            helper.command_rush_refresh(args)
+        build.assert_called_once()
+        self.assertEqual(git(self.repo, 'rev-parse', 'HEAD'), previous_head)
+        self.assertEqual(git(self.repo, 'rev-parse', 'FETCH_HEAD'), git(origin, 'rev-parse', 'HEAD'))
+        self.assertEqual((self.repo / 'Tools/published-tool.txt').read_bytes(), b'local reviewed tool edit')
+        self.assertIn(102, rush.read_cdb(self.local)[0])
+
+    def test_gui_refresh_saves_current_source_preferences_before_starting_worker(self):
+        try:
+            import prerelease_gui as gui
+        except ImportError as error:
+            self.skipTest(str(error))
+        from types import SimpleNamespace
+        events = []
+        window = SimpleNamespace(busy=False, repo=self.repo, local=self.local_root,
+                                 rush_language=SimpleNamespace(get=lambda: 'FR'),
+                                 save_paths=lambda: events.append('saved-current-paths'),
+                                 start=lambda command, kind: events.append(command))
+        gui.PrereleaseWindow.start_rush_workspace(window, 'refresh')
+        self.assertEqual(events[0], 'saved-current-paths')
+        self.assertIn('rush-refresh', events[1])
 
     def test_new_removed_cards_and_gameplay_merge_without_losing_local_text(self):
         self.refresh()
