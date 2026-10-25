@@ -5,11 +5,47 @@
     "lang": "fr",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261023_151608",
-    "rows_in_report": 0,
-    "unique_cn_strings": 0,
-    "total_cn_cells": 0
+    "timestamp": "20261025_123407",
+    "rows_in_report": 1,
+    "unique_cn_strings": 1,
+    "total_cn_cells": 1
   },
-  "unique_strings": [],
-  "cards": []
+  "unique_strings": [
+    {
+      "string": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
+      "count": 1,
+      "is_new": true
+    }
+  ],
+  "cards": [
+    {
+      "id": 101307049,
+      "name": "Codédale",
+      "desc": "2 monstres EAU\nVous ne pouvez Invoquer Spécialement un ou plusieurs \"Codédale\" qu'une fois par tour. Le nom de cette carte devient \"Umi\" tant qu'elle est sur le Terrain. Si cette carte est Invoquée par Lien : vous pouvez activer cet effet ; durant la End Phase de ce tour, ajoutez 1 carte qui mentionne \"Atlantis, Cité du Dragon des Mers\" (\"Codédale\" exclu) depuis votre Cimetière à votre main. Une fois par tour : vous pouvez envoyer 1 \"Umi\" face recto que vous contrôlez au Cimetière ; envoyez max. 2 Magies/Pièges sur le Terrain au Cimetière.",
+      "str1": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
+      "str2": "Effet de récupération",
+      "str3": "Envoyer au Cimetière",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str1",
+          "value": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
+          "normalized": "适用作为连接1进行连接召唤({CARD})"
+        }
+      ],
+      "desc_preview": "2 monstres EAU\nVous ne pouvez Invoquer Spécialement un ou plusieurs \"Codédale\" qu'une fois par tour. Le nom de cette carte devient \"Umi\" tant qu'elle est sur le Terrain. Si cette carte est Invoquée par Lien : vous pouvez activer cet effet ; durant la End Phase de ce tour, ajoutez 1 carte qui mentionne \"Atlantis, Cité du Dragon des Mers\" (\"Codédale\" exclu) depuis votre Cimetière à votre main. Une fois par tour : vous pouvez envoyer 1 \"Umi\" face recto que vous contrôlez au Cimetière ; envoyez max. 2 Magies/Pièges sur le Terrain au Cimetière."
+    }
+  ]
 }
