@@ -160,9 +160,36 @@ source commit, so it delivers the exact bytes advertised by a cached catalog.
 
 Treat packages as immutable cacheable files and the catalog as metadata that
 must revalidate. Do not configure a long unconditional cache lifetime for
-`prerelease/catalog-v1.json`. This workflow never deletes historical objects;
-retire unused snapshots separately after checking supported clients and cached
-catalogs.
+`prerelease/catalog-v1.json`.
+
+## Current-package retention
+
+The maintainer requested one current archive per locale/type on October 26 after
+confirming the refreshed catalog updates the existing 1.0.5.1 player. Retention
+keeps all 10 Standard and 11 Rush packages named by the complete verified catalog.
+The workflow also runs daily at 03:37 UTC in the same serialized concurrency group.
+Manual runs accept `preview` (inventory only) or `apply` (remove obsolete uploads).
+
+Cleanup starts only after every public package and the public catalog pass their
+full size/SHA-256 checks. It inventories every page under `prerelease/`, records an
+exact keep/delete receipt, and limits deletion to recognized locale/type/hash/name
+package paths. The catalog, mapping objects, unrelated keys and local source
+archives are preserved. Before each delete, it rechecks the current catalog and
+the candidate object's ETag/size. A failed publication never starts cleanup; a
+partial cleanup failure fails the job with a receipt and is safe to retry. A final
+inventory must still contain the full current set with no obsolete managed keys.
+
+Use this workflow as the sole publisher/cleanup owner for this bucket; all its
+triggers share `cloudflare-prerelease-main`. Do not run an independent uploader or
+retention process concurrently. R2 does not offer an atomic multi-object catalog
+and deletion transaction. An unexpected catalog/object change stops further work.
+Do not use age-based bucket expiration: it could remove a current package that has
+not changed recently.
+
+Receipts are saved as the `prerelease-retention` Actions artifact for 30 days. Old
+public hash URLs may be cached until they expire; this operation removes obsolete
+origin uploads. A client with an older catalog retains its same-commit GitHub
+fallback. The source repository and its historical package bytes are not pruned.
 
 ## Validation and recovery
 

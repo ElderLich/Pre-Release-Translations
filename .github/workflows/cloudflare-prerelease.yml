@@ -2,6 +2,14 @@ name: Mirror pre-release packages to Cloudflare
 
 on:
   workflow_dispatch:
+    inputs:
+      retention:
+        description: Obsolete package retention (preview records the allowlist without deleting)
+        type: choice
+        default: preview
+        options: [preview, apply]
+  schedule:
+    - cron: '37 3 * * *'
   workflow_run:
     workflows:
       - "Release DE"
@@ -46,7 +54,7 @@ jobs:
         github.event.workflow_run.conclusion == 'success' &&
         github.event.workflow_run.head_branch == 'main' &&
         github.event.workflow_run.head_repository.full_name == github.repository) ||
-       ((github.event_name == 'workflow_dispatch' || github.event_name == 'push') &&
+       ((github.event_name == 'workflow_dispatch' || github.event_name == 'push' || github.event_name == 'schedule') &&
         github.ref == 'refs/heads/main'))
     runs-on: ubuntu-24.04
     timeout-minutes: 30
@@ -74,6 +82,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_PRERELEASE_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_PRERELEASE_SECRET_ACCESS_KEY }}
           GH_TOKEN: ${{ github.token }}
+          RETENTION_MODE: ${{ inputs.retention || 'preview' }}
         run: |
           set -euo pipefail
           missing=()
@@ -97,4 +106,15 @@ jobs:
             --public-base-url "$R2_PRERELEASE_PUBLIC_BASE_URL" \
             --bucket "$R2_PRERELEASE_BUCKET" \
             --endpoint-url "https://${R2_ACCOUNT_ID}.r2.cloudflarestorage.com" \
-            --catalog-key "prerelease/catalog-v1.json"
+            --catalog-key "prerelease/catalog-v1.json" \
+            --retention "$RETENTION_MODE" \
+            --retention-report "$GITHUB_WORKSPACE/prerelease-retention.json"
+
+      - name: Save retention inventory and deletion receipt
+        if: always()
+        uses: actions/upload-artifact@v7.0.0
+        with:
+          name: prerelease-retention
+          path: prerelease-retention.json
+          if-no-files-found: ignore
+          retention-days: 30

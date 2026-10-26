@@ -324,7 +324,12 @@ def ensure_payload(client, bucket, key, path, pack, public_verifier):
 
 
 def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_public,
-                     main_resolver=current_main_commit, catalog_key=CATALOG_KEY):
+                     main_resolver=current_main_commit, catalog_key=CATALOG_KEY,
+                     retention="off", retention_report=None):
+    if retention not in ("off", "preview", "apply"):
+        raise PublishError("Unknown prerelease retention mode.")
+    if retention != "off" and (bucket != "mdpro4-prerelease" or retention_report is None):
+        raise PublishError("Retention requires the prerelease bucket and a local receipt path.")
     if catalog_key != CATALOG_KEY:
         raise PublishError("Unexpected catalog key.")
     expected = {(kind, locale) for kind, (locales, _, _, _) in KINDS.items() for locale in locales}
@@ -367,6 +372,8 @@ def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_publ
     body = canonical_json(catalog)
     if previous == body:
         verify_public_catalog(public_verifier, public_catalog_url, body)
+        if retention != "off":
+            prune_verified_snapshot(client, bucket, catalog, keys, body, retention, retention_report, main_resolver)
         return "unchanged"
     conditions = {"IfMatch": etag} if etag else {"IfNoneMatch": "*"}
     try:
@@ -384,7 +391,107 @@ def publish_snapshot(client, bucket, catalog, files, public_verifier=verify_publ
     if confirmed != body:
         raise PublishError("Catalog changed after promotion; rerun from current source main.")
     verify_public_catalog(public_verifier, public_catalog_url, body)
+    if retention != "off":
+        prune_verified_snapshot(client, bucket, catalog, keys, body, retention, retention_report, main_resolver)
     return "published"
+
+
+def managed_payload_key(key):
+    """Only our exact content-addressed package keys are eligible for deletion."""
+    parts = key.split("/")
+    if len(parts) != 5 or parts[0] != "prerelease" or parts[1] not in KINDS:
+        return False
+    locales, filename, _, _ = KINDS[parts[1]]
+    return (parts[2] in locales and re.fullmatch(r"[0-9a-f]{64}", parts[3]) is not None
+            and parts[4] == filename)
+
+
+def inventory_prerelease(client, bucket):
+    objects, tokens = {}, set()
+    token = None
+    while True:
+        arguments = {"Bucket": bucket, "Prefix": "prerelease/", "MaxKeys": 1000}
+        if token:
+            arguments["ContinuationToken"] = token
+        page = client.list_objects_v2(**arguments)
+        for item in page.get("Contents", []):
+            key, size, etag = item.get("Key"), item.get("Size"), item.get("ETag")
+            if (not isinstance(key, str) or not key.startswith("prerelease/") or key in objects
+                    or type(size) is not int or size < 0 or not isinstance(etag, str) or not etag):
+                raise PublishError("Retention inventory contains an invalid or duplicate object.")
+            objects[key] = {"key": key, "sizeBytes": size, "etag": etag}
+        if not page.get("IsTruncated"):
+            return objects
+        token = page.get("NextContinuationToken")
+        if not isinstance(token, str) or not token or token in tokens:
+            raise PublishError("Retention inventory has an invalid pagination token.")
+        tokens.add(token)
+
+
+def prune_verified_snapshot(client, bucket, catalog, keep, body, mode, receipt_path, main_resolver):
+    # Only publish_snapshot calls this, after every payload and the public catalog
+    # pass full verification. Its workflow concurrency group owns all writers.
+    report = {"schemaVersion": 1, "mode": mode, "sourceCommit": catalog["sourceCommit"],
+              "bucket": bucket, "catalogSha256": hashlib.sha256(body).hexdigest(),
+              "status": "planning", "retained": [], "obsolete": [], "removed": [], "unmanaged": []}
+    receipt_path = Path(receipt_path)
+    def save():
+        receipt_path.write_bytes(canonical_json(report))
+    def require_current():
+        current, _ = read_catalog(client, bucket, CATALOG_KEY)
+        if current != body:
+            raise PublishError("Catalog changed during retention; no further objects were deleted.")
+    def require_complete(objects):
+        for pack in catalog["packs"]:
+            key = f"prerelease/{pack['kind']}/{pack['locale']}/{pack['sha256']}/{pack['fileName']}"
+            if key not in objects or objects[key]["sizeBytes"] != pack["sizeBytes"]:
+                raise PublishError("Current payload inventory changed; retention stopped.")
+    try:
+        require_current()
+        if main_resolver(catalog["sourceRepository"]) != catalog["sourceCommit"]:
+            report["status"] = "superseded"
+            return
+        objects = inventory_prerelease(client, bucket)
+        require_complete(objects)
+        report["retained"] = [objects[key] for key in sorted(keep)]
+        report["obsolete"] = [objects[key] for key in sorted(objects) if key not in keep and managed_payload_key(key)]
+        report["unmanaged"] = [key for key in sorted(objects) if key not in keep and not managed_payload_key(key)]
+        report["status"] = "preview" if mode == "preview" else "planned"
+        save()  # Record the exact allowlist and retained identities before any delete.
+        require_current()
+        if mode == "apply":
+            for item in report["obsolete"]:
+                key = item["key"]
+                try:
+                    head = client.head_object(Bucket=bucket, Key=key)
+                except Exception as error:
+                    if error_status(error) == 404:
+                        report["removed"].append(dict(item, alreadyAbsent=True))
+                        continue
+                    raise
+                if head.get("ETag") != item["etag"] or head.get("ContentLength") != item["sizeBytes"]:
+                    raise PublishError("An obsolete payload changed after inventory; retention stopped.")
+                require_current()
+                client.delete_object(Bucket=bucket, Key=key)
+                report["removed"].append(item)
+                save()
+            require_current()
+            remaining = inventory_prerelease(client, bucket)
+            require_complete(remaining)
+            extras = [key for key in remaining if managed_payload_key(key) and key not in keep]
+            if extras:
+                raise PublishError("Obsolete packages remain after retention; rerun from current main.")
+            report["status"] = "complete"
+        report["removedBytes"] = sum(item["sizeBytes"] for item in report["removed"])
+        print(f"Prerelease retention {report['status']}: retained {len(keep)} current packages; "
+              f"obsolete {len(report['obsolete'])}; removed {len(report['removed'])} "
+              f"({report['removedBytes']:,} bytes).")
+    except Exception as error:
+        report["status"] = "failed"
+        report["error"] = str(error) if isinstance(error, PublishError) else type(error).__name__
+        raise PublishError(f"Catalog is committed; retention stopped: {report['error']}") from None
+    finally:
+        save()
 
 
 def verify_public_catalog(public_verifier, url, body):
@@ -427,6 +534,8 @@ def main(argv=None):
     parser.add_argument("--bucket", default="mdpro4-prerelease")
     parser.add_argument("--endpoint-url")
     parser.add_argument("--catalog-key", default=CATALOG_KEY)
+    parser.add_argument("--retention", choices=("off", "preview", "apply"), default="off")
+    parser.add_argument("--retention-report", type=Path, help="Local inventory/deletion receipt; required for retention")
     parser.add_argument("--dry-run", action="store_true", help="Validate local inputs without credentials or network access")
     args = parser.parse_args(argv)
     try:
@@ -440,7 +549,8 @@ def main(argv=None):
         if not args.endpoint_url:
             raise PublishError("The R2 S3 endpoint is not configured.")
         result = publish_snapshot(create_client(args.endpoint_url), args.bucket, catalog, files,
-                                  catalog_key=args.catalog_key)
+                                  catalog_key=args.catalog_key, retention=args.retention,
+                                  retention_report=args.retention_report)
         if result == "superseded":
             print("Skipped superseded snapshot: source main advanced; the current catalog was preserved.")
             return 0

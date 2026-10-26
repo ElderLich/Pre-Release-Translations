@@ -33,7 +33,7 @@ class CloudflareWorkflowTests(unittest.TestCase):
         self.stub(bin_dir / "python", 'printf "%s\\n" "$@" > "$CALLS_PATH"\nexit "${PUBLISH_EXIT:-0}"\n')
         workflow = WORKFLOW.read_text(encoding="utf-8")
         step = workflow.split("      - name: Publish verified packages and catalog\n", 1)[1]
-        self.script = textwrap.dedent(step.split("        run: |\n", 1)[1])
+        self.script = textwrap.dedent(step.split("        run: |\n", 1)[1].split("\n      - name:", 1)[0])
         self.env = {key: value for key, value in os.environ.items() if key not in REQUIRED}
         self.env.update({
             "R2_ACCOUNT_ID": "a" * 32,
@@ -46,6 +46,7 @@ class CloudflareWorkflowTests(unittest.TestCase):
             "GITHUB_WORKSPACE": self.root.as_posix(),
             "GITHUB_STEP_SUMMARY": "step-summary.md",
             "CALLS_PATH": "invocation.args",
+            "RETENTION_MODE": "preview",
         })
 
     @staticmethod
@@ -77,6 +78,8 @@ class CloudflareWorkflowTests(unittest.TestCase):
             "--bucket", "mdpro4-prerelease",
             "--endpoint-url", "https://" + "a" * 32 + ".r2.cloudflarestorage.com",
             "--catalog-key", "prerelease/catalog-v1.json",
+            "--retention", "preview",
+            "--retention-report", self.root.as_posix() + "/prerelease-retention.json",
         ])
         self.assertNotIn("fixture-secret-value", " ".join(args))
         self.assertNotIn("fixture-access-key", " ".join(args))
@@ -107,6 +110,19 @@ class CloudflareWorkflowTests(unittest.TestCase):
         self.assertEqual(result.returncode, 23, result.stdout + result.stderr)
         self.assertTrue((self.root / "invocation.args").exists())
         self.assertNotIn("not configured", result.stdout)
+
+    def test_apply_mode_is_forwarded_and_daily_run_uses_same_serialized_owner(self):
+        result = self.run_step({"RETENTION_MODE": "apply"})
+        self.assertEqual(result.returncode, 0, result.stderr)
+        args = (self.root / "invocation.args").read_text().splitlines()
+        self.assertEqual("apply", args[args.index("--retention") + 1])
+        workflow = WORKFLOW.read_text()
+        self.assertIn("cron: '37 3 * * *'", workflow)
+        self.assertIn("github.event_name == 'schedule'", workflow)
+        self.assertIn("group: cloudflare-prerelease-main", workflow)
+        self.assertIn("cancel-in-progress: false", workflow)
+        self.assertIn("if: always()", workflow)
+        self.assertIn("name: prerelease-retention", workflow)
 
     def test_every_current_package_publisher_is_a_completion_trigger(self):
         workflow = WORKFLOW.read_text(encoding="utf-8")

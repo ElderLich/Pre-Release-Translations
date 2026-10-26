@@ -28,6 +28,9 @@ class FakeS3:
         self.objects = {}
         self.events = []
         self.before_put = None
+        self.before_delete = None
+        self.before_list = None
+        self.page_size = 1000
 
     def get_object(self, *, Bucket, Key):
         if Key not in self.objects:
@@ -38,7 +41,27 @@ class FakeS3:
     def head_object(self, *, Bucket, Key):
         if Key not in self.objects:
             raise S3Error(404)
-        return {"ContentLength": len(self.objects[Key]), "Metadata": {"sha256": "untrusted"}}
+        return {"ContentLength": len(self.objects[Key]), "ETag": self.etag(self.objects[Key]), "Metadata": {"sha256": "untrusted"}}
+
+    def list_objects_v2(self, *, Bucket, Prefix, MaxKeys, ContinuationToken=None):
+        if self.before_list:
+            self.before_list()
+        keys = sorted(key for key in self.objects if key.startswith(Prefix))
+        start = int(ContinuationToken or 0)
+        end = min(start + self.page_size, len(keys))
+        result = {"Contents": [{"Key": key, "Size": len(self.objects[key]), "ETag": self.etag(self.objects[key])}
+                               for key in keys[start:end]], "IsTruncated": end < len(keys)}
+        if end < len(keys):
+            result["NextContinuationToken"] = str(end)
+        self.events.append(("list", Prefix))
+        return result
+
+    def delete_object(self, *, Bucket, Key):
+        if self.before_delete:
+            self.before_delete(Key)
+        self.objects.pop(Key, None)
+        self.events.append(("delete", Key))
+        return {}
 
     @staticmethod
     def etag(body):
@@ -97,7 +120,7 @@ class PublishTests(unittest.TestCase):
     def publish(self, catalog=None, files=None, **kwargs):
         if catalog is None:
             catalog, files = self.snapshot()
-        return publisher.publish_snapshot(self.s3, "fixture-bucket", catalog, files,
+        return publisher.publish_snapshot(self.s3, kwargs.pop("bucket", "fixture-bucket"), catalog, files,
                                           public_verifier=self.s3.verify,
                                           main_resolver=lambda repository: SHA, **kwargs)
 
@@ -418,6 +441,137 @@ class PublishTests(unittest.TestCase):
             self.assertEqual(0, publisher.main(arguments))
         self.assertIn('Skipped superseded snapshot', output.getvalue())
         self.assertNotIn('packages verified', output.getvalue())
+
+    def retention_fixture(self):
+        catalog, files = self.snapshot()
+        old = set()
+        for kind, (locales, filename, _, _) in publisher.KINDS.items():
+            for locale in locales:
+                key = f"prerelease/{kind}/{locale}/{'b' * 64}/{filename}"
+                old.add(key)
+                self.s3.objects[key] = b'old package'
+        unrelated = {'mappings/v1/id-map.json', 'prerelease/unmanaged.ypk',
+                     f"prerelease/standard/ZH-CN/{'b' * 64}/ygopro-super-pre.ypk",
+                     f"prerelease/rush/EN/{'b' * 64}/unrelated.ypk"}
+        for key in unrelated:
+            self.s3.objects[key] = b'preserve me'
+        return catalog, files, old, unrelated
+
+    def test_retention_preview_records_paginated_allowlist_without_deleting(self):
+        catalog, files, old, unrelated = self.retention_fixture()
+        self.s3.page_size = 3
+        path = self.root / 'retention.json'
+        self.assertEqual('published', self.publish(catalog, files, bucket='mdpro4-prerelease',
+            retention='preview', retention_report=path))
+        receipt = json.loads(path.read_bytes())
+        self.assertEqual('preview', receipt['status'])
+        self.assertEqual(old, {row['key'] for row in receipt['obsolete']})
+        self.assertEqual(set(files), {row['key'] for row in receipt['retained']})
+        self.assertFalse(receipt['removed'])
+        self.assertTrue((old | unrelated | set(files)) <= self.s3.objects.keys())
+        self.assertFalse(any(event[0] == 'delete' for event in self.s3.events))
+
+    def test_retention_deletes_only_obsolete_packages_after_all_verification(self):
+        catalog, files, old, unrelated = self.retention_fixture()
+        path = self.root / 'retention.json'
+        self.assertEqual('published', self.publish(catalog, files, bucket='mdpro4-prerelease',
+            retention='apply', retention_report=path))
+        self.assertEqual(set(files) | unrelated | {publisher.CATALOG_KEY}, self.s3.objects.keys())
+        first_delete = next(i for i, event in enumerate(self.s3.events) if event[0] == 'delete')
+        self.assertEqual(22, sum(event[0] == 'verify' for event in self.s3.events[:first_delete]))
+        receipt = json.loads(path.read_bytes())
+        self.assertEqual('complete', receipt['status'])
+        self.assertEqual(old, {row['key'] for row in receipt['removed']})
+        self.assertEqual(len(old) * len(b'old package'), receipt['removedBytes'])
+        self.s3.events.clear()
+        self.assertEqual('unchanged', self.publish(catalog, files, bucket='mdpro4-prerelease',
+            retention='apply', retention_report=path))
+        self.assertFalse(any(event[0] == 'delete' for event in self.s3.events))
+        self.assertEqual([], json.loads(path.read_bytes())['obsolete'])
+
+    def test_failed_public_catalog_verification_never_deletes_old_packages(self):
+        catalog, files, old, _ = self.retention_fixture()
+        def verify(url, size, digest):
+            if url.endswith(publisher.CATALOG_KEY):
+                raise publisher.PublishError('public catalog unavailable')
+            self.s3.verify(url, size, digest)
+        with self.assertRaises(publisher.PublishError):
+            publisher.publish_snapshot(self.s3, 'mdpro4-prerelease', catalog, files,
+                public_verifier=verify, main_resolver=lambda _: SHA,
+                retention='apply', retention_report=self.root / 'retention.json')
+        self.assertTrue(old <= self.s3.objects.keys())
+        self.assertFalse(any(event[0] in ('delete', 'list') for event in self.s3.events))
+
+    def test_retention_refuses_changed_catalog_before_first_delete(self):
+        catalog, files, old, _ = self.retention_fixture()
+        self.s3.before_list = lambda: self.s3.objects.update({publisher.CATALOG_KEY: b'newer catalog'})
+        path = self.root / 'retention.json'
+        with self.assertRaisesRegex(publisher.PublishError, 'Catalog changed'):
+            self.publish(catalog, files, bucket='mdpro4-prerelease', retention='apply', retention_report=path)
+        self.assertTrue(old <= self.s3.objects.keys())
+        self.assertEqual('failed', json.loads(path.read_bytes())['status'])
+
+    def test_catalog_drift_mid_cleanup_stops_further_deletes(self):
+        catalog, files, old, _ = self.retention_fixture()
+        self.s3.before_delete = lambda key: self.s3.objects.update({publisher.CATALOG_KEY: b'newer catalog'})
+        with self.assertRaisesRegex(publisher.PublishError, 'Catalog changed'):
+            self.publish(catalog, files, bucket='mdpro4-prerelease', retention='apply', retention_report=self.root / 'receipt.json')
+        self.assertEqual(1, sum(event[0] == 'delete' for event in self.s3.events))
+        self.assertEqual(20, len(old & self.s3.objects.keys()))
+        self.assertTrue(set(files) <= self.s3.objects.keys())
+
+    def test_missing_current_inventory_package_stops_retention(self):
+        catalog, files, old, _ = self.retention_fixture()
+        def disappear():
+            self.s3.objects.pop(next(iter(files)), None)
+        self.s3.before_list = disappear
+        with self.assertRaisesRegex(publisher.PublishError, 'Current payload inventory changed'):
+            self.publish(catalog, files, bucket='mdpro4-prerelease', retention='apply', retention_report=self.root / 'receipt.json')
+        self.assertTrue(old <= self.s3.objects.keys())
+
+    def test_changed_obsolete_object_is_not_deleted(self):
+        catalog, files, old, _ = self.retention_fixture()
+        original = self.s3.head_object
+        def changed(**kwargs):
+            if kwargs['Key'] in old:
+                self.s3.objects[kwargs['Key']] = b'changed after plan'
+            return original(**kwargs)
+        self.s3.head_object = changed
+        with self.assertRaisesRegex(publisher.PublishError, 'obsolete payload changed'):
+            self.publish(catalog, files, bucket='mdpro4-prerelease', retention='apply', retention_report=self.root / 'receipt.json')
+        self.assertFalse(any(event[0] == 'delete' for event in self.s3.events))
+
+    def test_retention_delete_failure_records_partial_work_and_retries_safely(self):
+        catalog, files, old, _ = self.retention_fixture()
+        count = [0]
+        def fail_second(key):
+            count[0] += 1
+            if count[0] == 2:
+                raise S3Error(503)
+        self.s3.before_delete = fail_second
+        path = self.root / 'receipt.json'
+        with self.assertRaisesRegex(publisher.PublishError, 'retention stopped') as raised:
+            self.publish(catalog, files, bucket='mdpro4-prerelease', retention='apply', retention_report=path)
+        self.assertNotIn('SECRET', str(raised.exception))
+        receipt = json.loads(path.read_bytes())
+        self.assertEqual('failed', receipt['status'])
+        self.assertEqual(1, len(receipt['removed']))
+        self.assertEqual(publisher.canonical_json(catalog), self.s3.objects[publisher.CATALOG_KEY])
+        self.s3.before_delete = None
+        self.assertEqual('unchanged', self.publish(catalog, files, bucket='mdpro4-prerelease', retention='apply', retention_report=path))
+        self.assertFalse(old & self.s3.objects.keys())
+
+    def test_retention_rejects_other_bucket_or_missing_receipt_before_upload(self):
+        for bucket, receipt in [('fixture-bucket', self.root / 'receipt.json'), ('mdpro4-prerelease', None)]:
+            with self.subTest(bucket=bucket), self.assertRaises(publisher.PublishError):
+                self.publish(bucket=bucket, retention='apply', retention_report=receipt)
+        self.assertFalse(self.s3.events)
+
+    def test_inventory_rejects_pagination_loop_before_deletes(self):
+        self.s3.list_objects_v2 = lambda **_: {'Contents': [], 'IsTruncated': True, 'NextContinuationToken': 'same'}
+        with self.assertRaisesRegex(publisher.PublishError, 'pagination token'):
+            self.publish(bucket='mdpro4-prerelease', retention='apply', retention_report=self.root / 'receipt.json')
+        self.assertFalse(any(event[0] == 'delete' for event in self.s3.events))
 
     def test_interrupted_public_read_restarts_size_and_hash_from_zero(self):
         body = b'complete public package'
