@@ -1,10 +1,8 @@
 {
   "active_cards": 102,
-  "artwork_files": 100,
+  "artwork_files": 101,
   "excluded_ids": [],
-  "missing_artwork": [
-    120310068
-  ],
+  "missing_artwork": [],
   "pending_translations": [],
   "published_source_fields": {
     "120000012": {

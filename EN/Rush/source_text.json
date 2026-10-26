@@ -1,14 +1,6 @@
 {
   "language": "en",
   "matches": {
-    "120310068": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP068",
-      "source": "https://yugipedia.com/wiki/The_Two_Apprentice_Witches"
-    },
     "120310069": {
       "fields": [],
       "set_code": "RD/KP27-JP069",
@@ -16,7 +8,6 @@
     }
   },
   "requested_ids": [
-    120310068,
     120310069
   ],
   "unresolved": []
