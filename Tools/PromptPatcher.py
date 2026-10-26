@@ -35039,6 +35039,17 @@ def build_translation_pack(lang: str):
             "ja": "攻撃力を変更しますか？",
             "kr": "공격력을 변경하시겠습니까?",
         },
+        # Codaedalus: Atlantis allows this monster to be Link Summoned as Link-1.
+        "适用作为连接1进行连接召唤({CARD})": {
+            "en": "Link Summon as Link-1 ({CARD})",
+            "fr": "Invoquer par Lien comme Link-1 ({CARD})",
+            "de": "Linkbeschwörung als Link-1 ({CARD})",
+            "es": "Invocar por Enlace como Enlace-1 ({CARD})",
+            "pt": "Invocar por Invocação-Link como Link-1 ({CARD})",
+            "it": "Evocare Link come Link-1 ({CARD})",
+            "ja": "リンク１としてリンク召喚する（{CARD}）",
+            "kr": "링크 1로 취급하여 링크 소환 ({CARD})",
+        },
 
     }
     for cn, out in extras.items():
@@ -45829,13 +45840,13 @@ RUSH_PROMPT_TRANSLATIONS = {
     },
     "这个回合，不能把{CARD}的效果发动": {
         "en": "You cannot activate the effects of {CARD} this turn",
-        "fr": "Action interdite pour vous: activer les effets de {CARD} ce tour",
-        "de": "Dir untersagte Aktion: Aktivieren Sie die Wirkung von {CARD} in diesem Spielzug",
-        "es": "Acción que no puedes realizar: activar los efectos de {CARD} este turno",
-        "pt": "Ação que você não pode realizar: ativar os efeitos do {CARD} neste turno",
-        "it": "Azione che non puoi compiere: attivare gli effetti di {CARD} in questo turno",
-        "ja": "自分が行えない行動: {CARD} このターンの効果を活動化させて下さい",
-        "kr": "자신이 할 수 없는 행동: {CARD} 이 턴의 효과를 활성화",
+        "fr": "Vous ne pouvez pas activer les effets de {CARD} ce tour",
+        "de": "Du kannst in diesem Spielzug die Effekte von {CARD} nicht aktivieren",
+        "es": "No puedes activar los efectos de {CARD} este turno",
+        "pt": "Neste turno, não podes ativar os efeitos de {CARD}",
+        "it": "Non puoi attivare gli effetti di {CARD} in questo turno",
+        "ja": "このターン、自分は{CARD}の効果を発動できない",
+        "kr": "이 턴에 자신은 {CARD}의 효과를 발동할 수 없습니다",
     },
     "这个回合，不能把原本等级是5星的怪兽的效果发动": {
         "en": "You cannot activate the effects of monsters with an original Level of 5 this turn",
@@ -50198,3 +50209,9 @@ RUSH_PROMPT_TRANSLATIONS.update({
 
 RUSH_PROMPT_PROVENANCE.update({key: {lang: "reviewed_rush_patch_20261025" for lang in RUSH_PROMPT_TRANSLATIONS[key]}
     for key in ("把1只怪兽(暗属性/战士族)解放攻击表示上级召唤", "是否选对方场上1只怪兽攻击力·守备力下降1500?")})
+
+# Reviewed against c120310068.lua (The Two Apprentice Witches).
+RUSH_PROMPT_PROVENANCE["这个回合，不能把{CARD}的效果发动"] = {
+    lang: "reviewed_rush_patch_20261026"
+    for lang in RUSH_PROMPT_TRANSLATIONS["这个回合，不能把{CARD}的效果发动"]
+}
