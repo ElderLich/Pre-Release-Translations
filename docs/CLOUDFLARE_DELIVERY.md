@@ -95,7 +95,15 @@ promotion. An already superseded snapshot is skipped before doing network work;
 if main changes during publication, the catalog is not promoted. A newer pending
 run or a manual rerun uses the current snapshot. A late publisher completion
 therefore does not restore an older catalog. Payload verification failures name
-the affected package and failed HTTP, size, hash or timeout check.
+the affected package and failed HTTP, size, hash or timeout check. Public verification
+retries interrupted/truncated transfers, timeouts and HTTP 408/429/500/502/503/504
+up to three total attempts, waiting two then four seconds. Each attempt starts a
+fresh full download with its own 120-second transfer budget and 30-second socket
+timeout. Size and SHA-256 checks run from byte zero on every attempt. Oversized
+responses, wrong hashes, unsafe redirects and permanent HTTP failures stop
+immediately. Exhausted retries preserve the previous catalog; all 21 packages
+must still verify before the conditional promotion. Public catalog read-back
+uses the same retry policy, without rolling back an already committed catalog.
 
 ## Object and catalog contract
 

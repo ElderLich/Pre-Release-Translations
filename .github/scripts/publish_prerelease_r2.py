@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import base64
 import hashlib
+from http.client import IncompleteRead, RemoteDisconnected
 import json
 import os
 from pathlib import Path, PurePosixPath
@@ -19,7 +20,7 @@ import subprocess
 import sys
 import tempfile
 import time
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 from urllib.parse import quote, urlsplit
 from urllib.request import Request, urlopen
 import zipfile
@@ -37,10 +38,16 @@ MAX_PUT_BYTES = 5 * 1024**3 - 1
 MAX_CATALOG_BYTES = 1024 * 1024
 CHUNK_BYTES = 1024 * 1024
 PUBLIC_VERIFY_BUDGET = 120
+PUBLIC_VERIFY_ATTEMPTS = 3
+RETRYABLE_HTTP_STATUS = (408, 429, 500, 502, 503, 504)
 
 
 class PublishError(RuntimeError):
     """A controlled diagnostic which contains no credentials or server body."""
+
+
+class RetryableVerificationError(PublishError):
+    """An incomplete transfer may succeed with a fresh full download."""
 
 
 def canonical_json(value):
@@ -187,6 +194,20 @@ def current_main_commit(repository=SOURCE_REPOSITORY):
 
 
 def verify_public(url, expected_size, expected_sha256):
+    for attempt in range(1, PUBLIC_VERIFY_ATTEMPTS + 1):
+        try:
+            verify_public_once(url, expected_size, expected_sha256)
+            return
+        except RetryableVerificationError as error:
+            if attempt == PUBLIC_VERIFY_ATTEMPTS:
+                raise PublishError(f"{error} Failed after {attempt} attempts.") from None
+            delay = 2 ** attempt
+            print(f"{error} Retrying full verification in {delay}s "
+                  f"(attempt {attempt + 1}/{PUBLIC_VERIFY_ATTEMPTS}).", file=sys.stderr)
+            time.sleep(delay)
+
+
+def verify_public_once(url, expected_size, expected_sha256):
     # Exclude query strings, userinfo and exception bodies from diagnostics.
     parsed = urlsplit(url)
     identity = (parsed.hostname or "unknown host") + parsed.path
@@ -197,14 +218,15 @@ def verify_public(url, expected_size, expected_sha256):
                                         "User-Agent": "MDPro4-prerelease-publisher/1.0"})
         with urlopen(request, timeout=30) as response:
             if response.status != 200:
-                raise PublishError(f"HTTP {response.status}, expected 200")
+                failure = RetryableVerificationError if response.status in RETRYABLE_HTTP_STATUS else PublishError
+                raise failure(f"HTTP {response.status}, expected 200")
             if urlsplit(response.geturl()).scheme != "https":
                 raise PublishError("redirect did not preserve HTTPS")
             count, digest = 0, hashlib.sha256()
             read = getattr(response, "read1", response.read)
             while True:
                 if time.monotonic() - started >= PUBLIC_VERIFY_BUDGET:
-                    raise PublishError(f"exceeded {PUBLIC_VERIFY_BUDGET}s transfer budget")
+                    raise RetryableVerificationError(f"exceeded {PUBLIC_VERIFY_BUDGET}s transfer budget")
                 chunk = read(CHUNK_BYTES)
                 if not chunk:
                     break
@@ -213,18 +235,22 @@ def verify_public(url, expected_size, expected_sha256):
                     raise PublishError(f"oversized response: received at least {count:,}, expected {expected_size:,} bytes")
                 digest.update(chunk)
         if count != expected_size:
-            raise PublishError(f"size mismatch: received {count:,}, expected {expected_size:,} bytes")
+            raise RetryableVerificationError(f"size mismatch: received {count:,}, expected {expected_size:,} bytes")
         if digest.hexdigest() != expected_sha256:
             raise PublishError(f"SHA-256 mismatch: received {digest.hexdigest()}, expected {expected_sha256}")
     except Exception as error:
+        retryable = isinstance(error, RetryableVerificationError)
         if isinstance(error, PublishError):
             reason = str(error)
         elif isinstance(error, HTTPError):
             reason = f"HTTP {error.code}"
+            retryable = error.code in RETRYABLE_HTTP_STATUS
             error.close()
         else:
             reason = type(error).__name__
-        raise PublishError(
+            retryable = isinstance(error, (URLError, TimeoutError, ConnectionError, IncompleteRead, RemoteDisconnected))
+        failure = RetryableVerificationError if retryable else PublishError
+        raise failure(
             f"Public verification failed for {identity}: {reason} "
             f"({count:,} bytes read in {time.monotonic() - started:.1f}s)."
         ) from None

@@ -70,6 +70,9 @@ class FakeS3:
 
 class PublishTests(unittest.TestCase):
     def setUp(self):
+        sleep = patch.object(publisher.time, "sleep")
+        self.sleep = sleep.start()
+        self.addCleanup(sleep.stop)
         temporary = tempfile.TemporaryDirectory()
         self.addCleanup(temporary.cleanup)
         self.root = Path(temporary.name)
@@ -360,7 +363,7 @@ class PublishTests(unittest.TestCase):
                   (b'abc', 3, hashlib.sha256(b'xyz').hexdigest(), 'SHA-256 mismatch'),
                   (b'abcd', 3, hashlib.sha256(b'abc').hexdigest(), 'oversized response'))
         for body, size, digest, reason in checks:
-            with self.subTest(reason=reason), patch.object(publisher, 'urlopen', return_value=Response(body)):
+            with self.subTest(reason=reason), patch.object(publisher, 'urlopen', side_effect=lambda *_args, **_kwargs: Response(body)):
                 with self.assertRaises(publisher.PublishError) as raised:
                     publisher.verify_public(url, size, digest)
                 message = str(raised.exception)
@@ -391,7 +394,7 @@ class PublishTests(unittest.TestCase):
             def read(self, *args):
                 raise AssertionError('Use one bounded underlying read')
         with patch.object(publisher.time, 'monotonic', side_effect=lambda: clock[0]), patch.object(
-                publisher, 'urlopen', return_value=Trickle()):
+                publisher, 'urlopen', side_effect=lambda *_args, **_kwargs: Trickle()):
             with self.assertRaisesRegex(publisher.PublishError, 'transfer budget'):
                 publisher.verify_public(PUBLIC + '/payload', 100, 'a' * 64)
 
@@ -415,6 +418,99 @@ class PublishTests(unittest.TestCase):
             self.assertEqual(0, publisher.main(arguments))
         self.assertIn('Skipped superseded snapshot', output.getvalue())
         self.assertNotIn('packages verified', output.getvalue())
+
+    def test_interrupted_public_read_restarts_size_and_hash_from_zero(self):
+        body = b'complete public package'
+        responses = []
+        class Response(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return PUBLIC
+        class Broken(Response):
+            def read1(self, size):
+                if self.tell():
+                    raise publisher.IncompleteRead(b'partial', len(body))
+                return super().read1(4)
+        for first in (Response(body[:4]), Broken(body), TimeoutError('SECRET')):
+            with self.subTest(first=type(first).__name__):
+                good = Response(body)
+                responses.extend([first, good])
+                with patch.object(publisher, 'urlopen', side_effect=[first, good]) as opener:
+                    publisher.verify_public(PUBLIC + '/payload', len(body), hashlib.sha256(body).hexdigest())
+                self.assertEqual(2, opener.call_count)
+                self.assertTrue(good.closed)
+                if isinstance(first, Response):
+                    self.assertTrue(first.closed)
+                for call in opener.call_args_list:
+                    self.assertIsNone(call.args[0].get_header('Range'))
+
+    def test_retryable_http_errors_recover_but_integrity_and_permanent_errors_stop(self):
+        body = b'good'
+        class Response(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return PUBLIC
+        for status in publisher.RETRYABLE_HTTP_STATUS:
+            error = publisher.HTTPError(PUBLIC, status, 'SECRET', {}, io.BytesIO(b'SECRET'))
+            with self.subTest(status=status), patch.object(publisher, 'urlopen', side_effect=[error, Response(body)]) as opener:
+                publisher.verify_public(PUBLIC, len(body), hashlib.sha256(body).hexdigest())
+                self.assertEqual(2, opener.call_count)
+            self.assertTrue(error.fp.closed)
+        for bad in (Response(b'evil'), Response(b'oversized'),
+                    publisher.HTTPError(PUBLIC, 403, 'SECRET', {}, io.BytesIO(b'SECRET'))):
+            with self.subTest(bad=type(bad).__name__), patch.object(publisher, 'urlopen', side_effect=[bad, Response(body)]) as opener:
+                with self.assertRaises(publisher.PublishError):
+                    publisher.verify_public(PUBLIC, len(body), hashlib.sha256(body).hexdigest())
+                self.assertEqual(1, opener.call_count)
+
+    def test_retries_are_bounded_back_off_and_redact_credentials(self):
+        log = io.StringIO()
+        with patch.object(publisher, 'urlopen', side_effect=TimeoutError('SECRET')) as opener, contextlib.redirect_stderr(log):
+            with self.assertRaisesRegex(publisher.PublishError, 'after 3 attempts') as raised:
+                publisher.verify_public('https://user:SECRET@cards.example.com/pack?token=SECRET', 10, 'a' * 64)
+        self.assertEqual(3, opener.call_count)
+        self.assertEqual([2, 4], [call.args[0] for call in self.sleep.call_args_list])
+        self.assertNotIn('SECRET', str(raised.exception) + log.getvalue())
+
+    def test_thai_rush_truncation_recovers_before_catalog_promotion(self):
+        self.check_thai_rush_transfer(recovers=True)
+
+    def test_persistent_thai_rush_truncation_preserves_previous_catalog(self):
+        self.check_thai_rush_transfer(recovers=False)
+
+    def check_thai_rush_transfer(self, recovers):
+        catalog, files = self.snapshot()
+        previous = b'previous complete catalog'
+        self.s3.objects[publisher.CATALOG_KEY] = previous
+        attempts = {}
+        class Response(io.BytesIO):
+            status = 200
+            def geturl(self):
+                return PUBLIC
+        def download(request, **kwargs):
+            key = request.full_url.removeprefix(PUBLIC + '/')
+            attempts[key] = attempts.get(key, 0) + 1
+            body = self.s3.objects[key]
+            if '/rush/TH/' in key and (attempts[key] == 1 or not recovers):
+                self.assertEqual(previous, self.s3.objects[publisher.CATALOG_KEY])
+                body = body[:8]
+            return Response(body)
+        with patch.object(publisher, 'urlopen', side_effect=download):
+            def run():
+                return publisher.publish_snapshot(self.s3, 'fixture-bucket', catalog, files,
+                    public_verifier=publisher.verify_public, main_resolver=lambda _: SHA)
+            if recovers:
+                self.assertEqual('published', run())
+                self.assertEqual(publisher.canonical_json(catalog), self.s3.objects[publisher.CATALOG_KEY])
+                self.assertEqual(publisher.CATALOG_KEY, self.s3.events[-1][1])
+                self.assertEqual(22, len(attempts))
+            else:
+                with self.assertRaisesRegex(publisher.PublishError, 'rush/TH/.*after 3 attempts'):
+                    run()
+                self.assertEqual(previous, self.s3.objects[publisher.CATALOG_KEY])
+                self.assertTrue(all(event[1] != publisher.CATALOG_KEY for event in self.s3.events))
+        thai = next(key for key in attempts if '/rush/TH/' in key)
+        self.assertEqual(2 if recovers else 3, attempts[thai])
 
 
 if __name__ == "__main__":
