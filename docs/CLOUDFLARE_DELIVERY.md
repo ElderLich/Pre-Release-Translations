@@ -168,7 +168,7 @@ The maintainer requested one current archive per locale/type on October 26 after
 confirming the refreshed catalog updates the existing 1.0.5.1 player. Retention
 keeps all 10 Standard and 11 Rush packages named by the complete verified catalog.
 The workflow also runs daily at 03:37 UTC in the same serialized concurrency group.
-Manual runs accept `preview` (inventory only) or `apply` (remove obsolete uploads).
+Successful publication runs apply retention automatically. Manual runs accept `preview` (inventory only) or `apply` (remove obsolete uploads).
 
 Cleanup starts only after every public package and the public catalog pass their
 full size/SHA-256 checks. It inventories every page under `prerelease/`, records an

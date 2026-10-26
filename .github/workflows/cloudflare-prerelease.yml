@@ -6,7 +6,7 @@ on:
       retention:
         description: Obsolete package retention (preview records the allowlist without deleting)
         type: choice
-        default: preview
+        default: apply
         options: [preview, apply]
   schedule:
     - cron: '37 3 * * *'
@@ -74,6 +74,11 @@ jobs:
       - name: Install publisher dependencies
         run: python -m pip install --disable-pip-version-check -r .github/scripts/requirements-prerelease-r2.txt
 
+      - name: Test publisher and retention guards
+        run: |
+          python -B -m unittest discover -s .github/scripts -p test_publish_prerelease_r2.py
+          python -B -m unittest discover -s .github/scripts -p test_cloudflare_workflow.py
+
       - name: Publish verified packages and catalog
         env:
           R2_ACCOUNT_ID: ${{ vars.R2_ACCOUNT_ID }}
@@ -82,7 +87,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.R2_PRERELEASE_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.R2_PRERELEASE_SECRET_ACCESS_KEY }}
           GH_TOKEN: ${{ github.token }}
-          RETENTION_MODE: ${{ inputs.retention || 'preview' }}
+          RETENTION_MODE: ${{ inputs.retention || 'apply' }}
         run: |
           set -euo pipefail
           missing=()
