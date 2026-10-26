@@ -1,9 +1,21 @@
 {
-  "active_cards": 101,
+  "active_cards": 102,
   "artwork_files": 100,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120310068
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310068,
+      "name": "双子的见习魔女"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -1348,8 +1360,8 @@
     "120311061": "98915875974ae1a0fa42b0dd1c6c26b8de1ebe95d56b93a06c59341765165e2c",
     "120311062": "4bdb5c095c4a3ecf64ca4c824aa11e5c480d27b20fa9c40e7093d9692b3eaffc"
   },
-  "script_files": 133,
-  "source_cards": 101,
+  "script_files": 134,
+  "source_cards": 102,
   "text_sha256": {
     "120000012": "75671f2cd53c491fab23f8da0af82f643035f330ca1c04f855e6ce8345e029ab",
     "120109069": "c620d0449ab34840ab63dfb8be870ee3d65c02b3d1d9b76721eacef77f860331",
@@ -1408,6 +1420,7 @@
     "120310062": "6eb4cdfb8e24c8c624ac53ed366cf8eecb3e1df7a5c003f1af29846304ae15ac",
     "120310063": "594d95406489bffcddc9785cad40d1f59b0ff94c6d1eec87c4760395d2d5ee25",
     "120310066": "873536b53493cd6a9bc1f25320e231cb7a7ed8797f0171be9387340faed292fa",
+    "120310068": "c60e92c5301ffce555d6eb53f71e985b7568ef98dd7913b572b4359a8a949444",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "c7164a27a457f052e6a2ffbe99dffd25500de4d4deda5bbeb4569799c8151e1e",
     "120311001": "aa0fd88cc689096a0c33d0c38d3b7aeea4853856a92a2ddabd6344d4705297f2",

@@ -1,9 +1,19 @@
 {
-  "active_cards": 101,
+  "active_cards": 102,
   "artwork_files": 100,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120310068
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "str3"
+      ],
+      "id": 120310068,
+      "name": "The Two Apprentice Witches"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -1348,8 +1358,8 @@
     "120311061": "b257880ffc1c0a18d1ef2c42f0a2b4b68a8578fb5206a691db25660142e8d693",
     "120311062": "34670b76fcafb4928561426ffeb85ccbbecd955f3c1c4ee15d47d63986e9e1f2"
   },
-  "script_files": 133,
-  "source_cards": 101,
+  "script_files": 134,
+  "source_cards": 102,
   "text_sha256": {
     "120000012": "1e4f568070084104fdac25d706379e5646b952b36b5bfc10751626f38108356f",
     "120109069": "327a521e9b41429a081d98a61eb8504f630cc09328e875728c43ac0c6ecc8def",
@@ -1408,6 +1418,7 @@
     "120310062": "5b04c38b4e7fab23f40864cdafc6de783ece264188ad628a5a69b5269e46df0f",
     "120310063": "591d5eb6d4fe94a5d7555641119cb8ee9dc2684ec01f1d2e88931b3cc9904da5",
     "120310066": "601e34808fa1498d3745eb65cbdca96ccbb679f55c3230c7fbf2593311901de6",
+    "120310068": "1c65efad24be739de6de607511d7bb02877dd807ccb733269974a5333a0c6e3f",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "e71e1fa0cbc218e320a792a6a7cc0904a91e280311314cd31180d7bcdb972de2",
     "120311001": "e528ce9fa273eef4c12fe88904b58aac2c8cf78c9988e7b9c694229ab1b29f43",

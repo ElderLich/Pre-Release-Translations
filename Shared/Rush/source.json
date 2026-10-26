@@ -1,14 +1,5 @@
 {
   "built_locales": [
-    "DE",
-    "EN",
-    "ES",
-    "FR",
-    "IT",
-    "JP",
-    "KR",
-    "PT",
-    "TH",
     "ZH-CN",
     "ZH-TW"
   ],
@@ -70,6 +61,7 @@
     120310062,
     120310063,
     120310066,
+    120310068,
     120310069,
     120310100,
     120311001,
@@ -116,11 +108,21 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "437bf478e267d3b7f048bfbf933f19112c356a41a241b8d62e8df0e12571ca51",
-  "patch_sha256": "269f82e992b3bd2161f4eeaef1fd42502373789b14b7d7f346da4efa8d7770e4",
-  "pending_locales": {},
-  "source_fingerprint": "5f4751edd9caa1a463b7ed2dcbc2a905cb4da83d9dd310efa417ebc99254e7df",
-  "source_revision": "d540db66ddcc2bbbde2491e94976ef71fdd18b3f",
+  "local_inputs_sha256": "3f6c1a82998d350289f591f5c7d7596f1501e451f66b4e0939edf986d5e9a469",
+  "patch_sha256": "28f825979162b4e7affb48fa6d4a8de9b6f7c6b5d3a147ae113768184b9bacc4",
+  "pending_locales": {
+    "DE": 1,
+    "EN": 1,
+    "ES": 1,
+    "FR": 1,
+    "IT": 1,
+    "JP": 1,
+    "KR": 1,
+    "PT": 1,
+    "TH": 1
+  },
+  "source_fingerprint": "30677881a0b3df9b0a0e1a90e6dd7b0a23e242c33e54808068c912b227dc1199",
+  "source_revision": "36215514f78236abb4be30df9e324e16fd2c6467",
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "05676e492358ff945d506550bce34aeae361218de9cdad58453922430073709e",
@@ -179,6 +181,7 @@
     "120310062": "941a3a3be055de6c39dc01894543a77bb906644aba679c87a23cad4758a7e832",
     "120310063": "ce32ea435196bfa2247ede1617335d9bd78f85a30e46e2935e30605c8cbe188e",
     "120310066": "248d331e56a3528d66ec36aaf356269b620d692b7bd566ef5113399163fc4350",
+    "120310068": "b6e27b3b542c6922da2967feed60e9bbb7377e25eba1315db428d25a6fff9b1c",
     "120310069": "b6fc5c99c79a9ece53ad47e8554e88cd8c37d39860f0664a4b60b1ac7ee2f7f9",
     "120310100": "7fbc0611331089ba577b27247983e314372600cc67609f7b386d3f78ee6a5ccf",
     "120311001": "b9ae9ba1042b3ebf3424ece1bd0d033427b6b69742918c8d05b00c75573db3c0",
@@ -224,6 +227,6 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470"
   },
-  "translations_revision": "39b3219a1e66f1411b422733969c9df358a3bf76",
+  "translations_revision": "bdcab0aed1f7d10d4d1fd37efb45203065bc569a",
   "version": 2
 }

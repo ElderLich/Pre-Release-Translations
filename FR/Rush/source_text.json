@@ -1,7 +1,17 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310068": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP068",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17888&languages=fr"
+    }
+  },
   "requested_ids": [
+    120310068,
     120310069
   ],
   "unresolved": [

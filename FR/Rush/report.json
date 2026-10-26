@@ -1,9 +1,19 @@
 {
-  "active_cards": 101,
+  "active_cards": 102,
   "artwork_files": 100,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120310068
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "str3"
+      ],
+      "id": 120310068,
+      "name": "Les Deux Apprenties Sorcières"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -1348,8 +1358,8 @@
     "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
     "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105"
   },
-  "script_files": 133,
-  "source_cards": 101,
+  "script_files": 134,
+  "source_cards": 102,
   "text_sha256": {
     "120000012": "ba529776666022aba6ef01f96430b6355306511ba5ce48e822da5883afc60fd3",
     "120109069": "5bc01d8e339c9ce0e44c4c1bf481563583ff662afd99debea8a4f1631105154e",
@@ -1408,6 +1418,7 @@
     "120310062": "07a4d60251226ebd1792f10249107f5106cb5267ef51e79e2c9813b9f8446336",
     "120310063": "d9972e9324247f56e2d672d160a1baf5f13e29f06b4fe2fb2a2535b0f67ff51c",
     "120310066": "6e5f77686437256419d2e9d978141bbc29f702e4279c084d7d1f6cc0f2afc0be",
+    "120310068": "848ced517c5f20e8797736e9ccc70ebb1eccdcbec7b91bd6d7359eb93d395b99",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "4852aa6e849b1ba8ac8faea6d0d07f984226f711e67ef6cd9aa1ccb685aa4080",
     "120311001": "3a4b515e4f47a44b3db24c9a2969079a515c7824e2635a821d3839c927875d96",

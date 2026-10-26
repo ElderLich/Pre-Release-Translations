@@ -1,9 +1,19 @@
 {
-  "active_cards": 101,
+  "active_cards": 102,
   "artwork_files": 100,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120310068
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "str3"
+      ],
+      "id": 120310068,
+      "name": "ふたりの見習い魔女"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -1348,8 +1358,8 @@
     "120311061": "11fde8902f640f9b25c669c3336151e5d94d498fbf05462a19c632034221fb77",
     "120311062": "84889cd707f9b2cc77f95e8f9cff75804e449b7801d74e1c9579d35d3d56dd0a"
   },
-  "script_files": 133,
-  "source_cards": 101,
+  "script_files": 134,
+  "source_cards": 102,
   "text_sha256": {
     "120000012": "11148bc19967d00a37db3df5b4b5e01eb344d99ff22f59ee561691a8968d7f91",
     "120109069": "3bbe89a3294459b256f45c1e8164ac179781fabee9efc8f335e2d28ed4d4dcaf",
@@ -1408,6 +1418,7 @@
     "120310062": "67626d22c42a77a358979e006759a08adb96df13d1b409f974097bf555092d2a",
     "120310063": "3acd7c4df22d6813f18c842b1ec21a43c4da9894acb08270a430002df8a6b921",
     "120310066": "2312ca8f76291fde864ff2204a1ec4be81473f05dd84c8eb7e9560d35ed814ac",
+    "120310068": "9a2e63edb5e6647687cb8c634cc9bd0988ca715a981ef0da7dc5e6226cd920c9",
     "120310069": "8f789b9959e1dbe881d5ca9e68949557deaade264503b0dea1d4abe400b1ab67",
     "120310100": "b68aa3aa100fed42595c9b194023f343e00d05db0065aacc828cd5b4e8485363",
     "120311001": "d4324f6e1686ca9cd43c41d298ceea0119af7613673deeba36ed9bae75b41666",
