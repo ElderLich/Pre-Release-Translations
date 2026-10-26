@@ -1,7 +1,7 @@
 [
   {
-    "name": "幻惑的绮罗星",
-    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡召唤·特殊召唤的场合才能发动。从卡组把除「幻惑的绮罗星」外的，7星以下的1只幻想魔族怪兽特殊召唤。这个效果特殊召唤的怪兽在结束阶段回到手卡。\r\n②：这张卡和怪兽进行战斗的场合，那2只不会被那次战斗破坏。\r\n③：1回合1次，怪兽进行战斗的伤害步骤结束时才能发动。场上的全部怪兽的表示形式变更。",
+    "name": "Albtraum-Funkelstern",
+    "desc": "Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 Illusion-Monster der Stufe 7 oder niedriger als Spezialbeschwörung von deinem Deck beschwören, außer „Albtraum-Funkelstern“, aber gib es während der End Phase auf die Hand zurück. Du kannst diesen Effekt von „Albtraum-Funkelstern“ nur einmal pro Spielzug verwenden. Falls diese Karte gegen ein Monster kämpft, kann keines der beiden durch den Kampf zerstört werden. Einmal pro Spielzug, am Ende des Damage Steps, falls ein Monster gekämpft hat: Du kannst die Kampfpositionen aller Monster auf dem Spielfeld ändern.",
     "overallString": "[Monster|Effekt] Illusion/Licht  [★4] 1700/1700",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307022.jpg?version=19.7"
   },
