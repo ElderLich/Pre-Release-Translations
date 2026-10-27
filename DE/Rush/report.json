@@ -1,9 +1,96 @@
 {
-  "active_cards": 102,
+  "active_cards": 110,
   "artwork_files": 101,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120310030,
+    120310031,
+    120310032,
+    120310043,
+    120310044,
+    120310059,
+    120310064,
+    120310067
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3"
+      ],
+      "id": 120310030,
+      "name": "次元电波通讯器"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310031,
+      "name": "次元的盟友 可频"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310032,
+      "name": "次元的盟友 露米娜"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310043,
+      "name": "圣洁人 露米娜"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310044,
+      "name": "圣洁人 连接者"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310059,
+      "name": "圣洁人的朝圣"
+    },
+    {
+      "fields": [
+        "source_changed"
+      ],
+      "id": 120310063,
+      "name": "Mad Rare Hack"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310064,
+      "name": "圣洁人的圣战"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120310067,
+      "name": "次元的盟友 莉天使"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -1364,8 +1451,8 @@
     "120311061": "98915875974ae1a0fa42b0dd1c6c26b8de1ebe95d56b93a06c59341765165e2c",
     "120311062": "4bdb5c095c4a3ecf64ca4c824aa11e5c480d27b20fa9c40e7093d9692b3eaffc"
   },
-  "script_files": 134,
-  "source_cards": 102,
+  "script_files": 142,
+  "source_cards": 110,
   "text_sha256": {
     "120000012": "75671f2cd53c491fab23f8da0af82f643035f330ca1c04f855e6ce8345e029ab",
     "120109069": "c620d0449ab34840ab63dfb8be870ee3d65c02b3d1d9b76721eacef77f860331",
@@ -1398,6 +1485,9 @@
     "120310027": "394f0af47fb71ff44b5ce64de31a5e062e0816bfcf22c8e0fc6ca954d95bc545",
     "120310028": "2b21b4a3b812c53e37900f12a3dfb59d46ac013f8be5f0fd3f1f0a52387f1718",
     "120310029": "ab3cbfdf384fb6342be06d7d7e6f93fcc0736052760be1e5957fd0859e950596",
+    "120310030": "6bba7546a8ad44562ca8080b6389be7be97cde198d70ddd75a29b2fb00e6b432",
+    "120310031": "687ce2012e219e29cdff12a40bd8e328b24559625a95a224e82cc86816a10868",
+    "120310032": "cfd75134f9d5fb862dfbf21440740d74f0ef89cc23d3f1bb780fade931da6421",
     "120310033": "2da4d80ea499846e255578cec65bc7c76bf2e0ef3fea4f8ea71827352a5ad87b",
     "120310036": "23bf272bc4bf84426bbc956942a675b5254bdc08ad48f78e4754e40fa79960bb",
     "120310037": "d33cfae9f47a4610be70fdf5e35bd7264c7d371321a3ec2d6abf93bd670679d4",
@@ -1406,6 +1496,8 @@
     "120310040": "327c5c2e23907ec50a781cfb2dc39fc8dba2c0c688689b34e4ce6a51ea37e9c9",
     "120310041": "2b1529449d9b5ff6be013eda0067680e43a05a0f335ce805ee117c2b2f0d77f2",
     "120310042": "214616a14c3e4cb55dc28ea3d8e084dfdda579a5e6f844120e87f43727dc2cba",
+    "120310043": "08b10b2f3c50553b2b617f7a1cf136abd3050ce0622e842428e30a9dcdd6b480",
+    "120310044": "ea2ce1ffe4e27c17e6a7bee783ea943e298d09316149c21ebb0d758a23f995ba",
     "120310045": "c6c737be04add2916a24dfc45c88433b2c6460ac2c31da8a467cd1cafac30ef9",
     "120310046": "ba7a9e0a4cc2264bda0858213683e7e7e07de70d15f74fa57d90956c587e9a36",
     "120310047": "cbc9f5e20d31bdf93a35f4c849d8003a5c4d271292cd7f9822d02f947b192d4e",
@@ -1419,11 +1511,14 @@
     "120310056": "cbd9edd703af92d6e7086aff7a74c623ef757d1859ca8421020953d04e9f61c4",
     "120310057": "54b7c4fc063dee2389ab5520019fc66a437fe417f09ed7ee6e41a35e0f7b97d6",
     "120310058": "94567ad10ce5a1a3e4735877acefa7265fcc5261c70c25d0c001acd33c951f94",
+    "120310059": "97c3b8894f10a0676f6f3f887273c6f95e9606144ff270d5b2d6c36ec015f8a7",
     "120310060": "92b9cfa20a512c9faaf7625781b00c377c70eb7d00054e91a783fac5e23ea7c8",
     "120310061": "eeb09c3fab6eb9388af53a07a86fca9355c4cc57ffc31a867872b5d4a9644621",
     "120310062": "6eb4cdfb8e24c8c624ac53ed366cf8eecb3e1df7a5c003f1af29846304ae15ac",
     "120310063": "594d95406489bffcddc9785cad40d1f59b0ff94c6d1eec87c4760395d2d5ee25",
+    "120310064": "eb5d1c7953f19f5ed0483b644864f3e671a269873df3b9a999573bf146dea5b6",
     "120310066": "873536b53493cd6a9bc1f25320e231cb7a7ed8797f0171be9387340faed292fa",
+    "120310067": "af9de6df6f50a9e8375ac38563e8ed6edc019b1d707272b26f0ffe30cec2bc46",
     "120310068": "c402c9f14d4191c3c00ce688abede2f49cec2d84a99745b963c5398ecc1b5107",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "c7164a27a457f052e6a2ffbe99dffd25500de4d4deda5bbeb4569799c8151e1e",
