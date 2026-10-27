@@ -15,56 +15,32 @@
   "pending_translations": [
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str3"
       ],
       "id": 120310030,
-      "name": "次元电波通讯器"
+      "name": "Wharve Dimensionale"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310031,
-      "name": "次元的盟友 可频"
+      "name": "Copin l'Alleato Giurato Dimensionale"
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310032,
-      "name": "次元的盟友 露米娜"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310043,
-      "name": "圣洁人 露米娜"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310044,
-      "name": "圣洁人 连接者"
+      "name": "Collegatrice Saintick"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310059,
-      "name": "圣洁人的朝圣"
+      "name": "Pellegrino Saintick"
     },
     {
       "fields": [
@@ -75,29 +51,17 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310064,
-      "name": "圣洁人的圣战"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120310067,
-      "name": "次元的盟友 莉天使"
+      "name": "Riel l'Alleato Giurato Dimensionale"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310068,
-      "name": "双子的见习魔女"
+      "name": "Le Due Streghe Apprendiste"
     }
   ],
   "published_source_fields": {
@@ -1478,9 +1442,9 @@
     "120310027": "a41e0e667a2c03b70810a9fffd55847eeb3cab5b40711f2defcc07c8c379f04c",
     "120310028": "7bf5bda3ad58abf9213f2670be2215be25e42654b48bdba4bc7f6a2ef461d632",
     "120310029": "f0cc65c869cf91a953d20b194b8685d29a4a07c22fb20114eb1829cc6b0097bd",
-    "120310030": "97df6ddf4abc82c27c35f432963111632a1c14c07c9edcc96b2a7d5a889e04d4",
-    "120310031": "575e2888a65ea26fe2884d9268184d4ec7c5fb633ad8c401a42a07079fe320fb",
-    "120310032": "926d018eb9d5abf78d808a4d77fa1317ff848d9adcbabb56ab93855b4bb36dd1",
+    "120310030": "e0340a375268621398a507963d8763eed38492aa81c66ea58e342b1743e88035",
+    "120310031": "dceb107ff5b6b0f7b39eaf6ba6c0e73d3652cb3dc75ecfd59172d5089ecbec3f",
+    "120310032": "5809fbcbf62d94c3e147e386938b7cc95f23389743e33c158347388486295014",
     "120310033": "ef06ada0cf52fd28b4442ff487d9ff463a5bb7d799520e72a3d35bc658a60be7",
     "120310036": "69a7f5b6526acc4ab7b3efb5eea6f78b429b63efce4ce8cf81b797bbb3805abd",
     "120310037": "7cdabc217d529c1b25f37dec0bd2938f00eb544fcbf57b190f5844751a9b71a2",
@@ -1489,8 +1453,8 @@
     "120310040": "4bf9d285a8b22a9da150187cf92649168d21c0e89a00c408ebf13fca0b33852a",
     "120310041": "d46a653539c8c655276cc8654084130bcdd9678e40e7126e82c10ae9bb97769c",
     "120310042": "5b53d2ec8a1e4a1c2fe6dd3dfdd7db2155cae9e638fb759b4802bbada8db87cd",
-    "120310043": "08b10b2f3c50553b2b617f7a1cf136abd3050ce0622e842428e30a9dcdd6b480",
-    "120310044": "2ec554ea752e86c3d7fe34413698dc328758547c92aaa8cdb5689f341d99cc2f",
+    "120310043": "b8553fd3b27761bd6152f0ac51471de249cd0ff60b1cfac60cd2af9b7247c877",
+    "120310044": "a671c6560f67671c3454a87f1055d4d8e39464577922a1b6417aec6db4848244",
     "120310045": "bf6cbdfb18f3f0832b347469413945a077ab827f6ed5ea0a573beb231aefe0f0",
     "120310046": "4fa3d65df04d53cd22b685eb0a34d7b67d85b7959753989f15fdbf0db6ec2ac6",
     "120310047": "cce5c87ffe6e165b7c23f635172a6671976c2657ed80177b60c43fde4156d87c",
@@ -1504,15 +1468,15 @@
     "120310056": "0a75f065f9eeaef8693adb876048fe706c34b293a7df231ff9ff3af46d895027",
     "120310057": "99530a54b94d8b2baa8ea9444407bb68d46888a405bfabe9307011ad10fa7ce3",
     "120310058": "ad5bb3cde62f38c1beff6832c89ff4dd8da5bc8a006b2273994c0ad37b21e05a",
-    "120310059": "503f68aac1b6b1e415d7ca6c65d53477c9c5dab99a456f7b66f62d5591f7b230",
+    "120310059": "47c5fdddaa1c770c7236f589287d9a7f4c35881eedfac501b3f30000e6c24ed6",
     "120310060": "11b77e74045b9390b03e5fba22c708367c7cd594ba4831f17d7576f6964f6f53",
     "120310061": "21a6faf3d48673d5838ac4dba4a5baa7d6a974aefcb1e35a371534e03f585f74",
     "120310062": "6c88ac6aa96a75d347e49a8977efa7b90f7e42ca354071e077eaa463e4529c96",
     "120310063": "35b984d2451e2babecf65bc84a50b52f874bf9310abe2a40178d491d15766b48",
-    "120310064": "20a89bfca4b6d5a17663d74914eb84db72f2a59445edd7b392c3cf1f422823b9",
+    "120310064": "5ae66dbcad1a429546db169ef659a22457076468e9e64183da96b014ffa6a897",
     "120310066": "fe7a1f64bcdbc159b2139a1c14bf1943de4b848fcdf4778a78aadbe7270bf863",
-    "120310067": "48f0d1bc931058d122fce4a757543df7e34f7aae4ef65184ff09c595f0dde0c2",
-    "120310068": "473c5445f6b7985731ec823504904cb4bb27d0833f7a0b856cb25f89b3cc9e00",
+    "120310067": "da1f5b67904476af434f3ddddde8785ee33c13b32949d68b24a298884ff57c0e",
+    "120310068": "4bc5babd9b5bb16b77eb2571aa91ae18ada8b14041e7f414e4b5ea2fecaff6b4",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "8ad8bcbe173b7de02aedd1dacd200c797916ba9fef3fe00c30a856ee18530dd8",
     "120311001": "4fb54e872f014a4903378bb5f066e8e93a2faeefad128344a09d9baafbb6f380",

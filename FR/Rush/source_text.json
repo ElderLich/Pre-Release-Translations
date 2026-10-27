@@ -1,6 +1,63 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310030": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP030",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17889&languages=fr"
+    },
+    "120310031": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP031",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17890&languages=fr"
+    },
+    "120310032": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP032",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17891&languages=fr"
+    },
+    "120310043": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP043",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17892&languages=fr"
+    },
+    "120310044": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP044",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17893&languages=fr"
+    },
+    "120310059": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP059",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17894&languages=fr"
+    },
+    "120310064": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP064",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17895&languages=fr"
+    }
+  },
   "requested_ids": [
     120310030,
     120310031,
@@ -13,41 +70,6 @@
     120310069
   ],
   "unresolved": [
-    {
-      "id": 120310030,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP030"
-    },
-    {
-      "id": 120310031,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP031"
-    },
-    {
-      "id": 120310032,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP032"
-    },
-    {
-      "id": 120310043,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP043"
-    },
-    {
-      "id": 120310044,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP044"
-    },
-    {
-      "id": 120310059,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP059"
-    },
-    {
-      "id": 120310064,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP064"
-    },
     {
       "id": 120310067,
       "reason": "No source card page found",
