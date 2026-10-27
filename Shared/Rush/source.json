@@ -1,6 +1,9 @@
 {
   "built_locales": [
-    "ZH-CN"
+    "DE",
+    "PT",
+    "ZH-CN",
+    "ZH-TW"
   ],
   "card_ids": [
     120000012,
@@ -115,21 +118,18 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "e920ba6df211318274f7aa4c3b56425fdd29d07ce7ae49e4908dec2cde6f622a",
+  "local_inputs_sha256": "567bfb8f36ade6630c4bb6636709ae6f6cd3fd1594e7beac3d0e158fb6616640",
   "patch_sha256": "169dcd14b1f7c7b1c56cd93f00eb0e0363f6eca33420f2b32e4bd657e9d60af7",
   "pending_locales": {
-    "DE": 9,
-    "EN": 6,
+    "EN": 2,
     "ES": 9,
-    "FR": 6,
-    "IT": 7,
-    "JP": 6,
+    "FR": 2,
+    "IT": 2,
+    "JP": 1,
     "KR": 9,
-    "PT": 9,
-    "TH": 6,
-    "ZH-TW": 1
+    "TH": 2
   },
-  "source_fingerprint": "8406a21987e2a1047df401c09ccbcd875983fc2a16ba30a7a7768557fb0b402f",
+  "source_fingerprint": "211086fa2b8686bafde32fd0d8e936ca4849e334d85abf95562e4016fbde8edd",
   "source_revision": "8ee871ebacd8462e1c80976f47d562a938a3b993",
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",

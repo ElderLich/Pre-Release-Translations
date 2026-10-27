@@ -1,71 +1,7 @@
 {
   "language": "fr",
-  "matches": {
-    "120310030": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP030",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17889&languages=fr"
-    },
-    "120310031": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP031",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17890&languages=fr"
-    },
-    "120310032": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP032",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17891&languages=fr"
-    },
-    "120310043": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP043",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17892&languages=fr"
-    },
-    "120310044": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP044",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17893&languages=fr"
-    },
-    "120310059": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP059",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17894&languages=fr"
-    },
-    "120310064": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP064",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17895&languages=fr"
-    }
-  },
+  "matches": {},
   "requested_ids": [
-    120310030,
-    120310031,
-    120310032,
-    120310043,
-    120310044,
-    120310059,
-    120310064,
     120310067,
     120310069
   ],

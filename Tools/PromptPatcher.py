@@ -50215,3 +50215,34 @@ RUSH_PROMPT_PROVENANCE["这个回合，不能把{CARD}的效果发动"] = {
     lang: "reviewed_rush_patch_20261026"
     for lang in RUSH_PROMPT_TRANSLATIONS["这个回合，不能把{CARD}的效果发动"]
 }
+
+# Reviewed against c120310030.lua and c120310059.lua (27 October Rush additions).
+RUSH_PROMPT_TRANSLATIONS.update({
+    "是否选自己墓地1只{CARD}或者融合术怪兽(9星/风属性/电子界族)特殊召唤?": {
+        "en": "Special Summon 1 {CARD} or 1 Level 9 WIND Cyberse Fusion Monster from your GY face-up?",
+        "fr": "Invoquer Spécialement face recto 1 {CARD} ou 1 Monstre Fusion Cyberse VENT de Niveau 9 depuis votre Cimetière ?",
+        "de": "1 {CARD} oder 1 WIND Cyberse-Fusionsmonster der Stufe 9 von deinem Friedhof offen als Spezialbeschwörung beschwören?",
+        "es": "¿Invocar de Modo Especial, boca arriba, 1 {CARD} o 1 Monstruo de Fusión Ciberso de VIENTO de Nivel 9 desde tu Cementerio?",
+        "pt": "Invocar por Invocação-Especial, com a face para cima, 1 {CARD} ou 1 Monstro de Fusão do Tipo Ciberso de Atributo VENTO de Nível 9 do teu Cemitério?",
+        "it": "Evocare Specialmente scoperto 1 {CARD} o 1 Mostro Fusione Cyberso VENTO di Livello 9 dal tuo Cimitero?",
+        "ja": "自分の墓地の{CARD}またはフュージョンモンスター（レベル９／風属性／サイバース族）１体を表側表示で特殊召喚しますか？",
+        "kr": "자신의 묘지의 {CARD} 또는 퓨전 몬스터(레벨 9 / 바람 속성 / 사이버스족) 1장을 앞면 표시로 특수 소환하겠습니까?",
+    },
+    "是否选自己墓地3只怪兽回到卡组?": {
+        "en": "Shuffle 3 monsters from your GY into the Deck?",
+        "fr": "Mélanger 3 monstres de votre Cimetière dans le Deck ?",
+        "de": "3 Monster von deinem Friedhof ins Deck mischen?",
+        "es": "¿Barajar al Deck 3 monstruos de tu Cementerio?",
+        "pt": "Baralhar no Deck 3 monstros do teu Cemitério?",
+        "it": "Mischiare nel Deck 3 mostri dal tuo Cimitero?",
+        "ja": "自分の墓地のモンスター３体をデッキに戻しますか？",
+        "kr": "자신의 묘지의 몬스터 3장을 덱으로 되돌리겠습니까?",
+    },
+})
+RUSH_PROMPT_PROVENANCE.update({
+    key: {lang: "reviewed_rush_patch_20261027" for lang in RUSH_PROMPT_TRANSLATIONS[key]}
+    for key in (
+        "是否选自己墓地1只{CARD}或者融合术怪兽(9星/风属性/电子界族)特殊召唤?",
+        "是否选自己墓地3只怪兽回到卡组?",
+    )
+})
