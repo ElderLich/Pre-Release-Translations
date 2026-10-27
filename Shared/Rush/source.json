@@ -4,6 +4,7 @@
     "EN",
     "FR",
     "JP",
+    "KR",
     "PT",
     "TH",
     "ZH-CN",
@@ -114,12 +115,11 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "f0a69cde469a95645fc9712d63c253224ca61520be49a5f274302fa3b8c933fc",
+  "local_inputs_sha256": "57e26a33fd5d8273db7e5735d35b8f85608c85315a393deebecc7e2f2c981a85",
   "patch_sha256": "28f825979162b4e7affb48fa6d4a8de9b6f7c6b5d3a147ae113768184b9bacc4",
   "pending_locales": {
     "ES": 1,
-    "IT": 1,
-    "KR": 1
+    "IT": 1
   },
   "source_fingerprint": "30677881a0b3df9b0a0e1a90e6dd7b0a23e242c33e54808068c912b227dc1199",
   "source_revision": "36215514f78236abb4be30df9e324e16fd2c6467",
@@ -227,6 +227,6 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470"
   },
-  "translations_revision": "bdcab0aed1f7d10d4d1fd37efb45203065bc569a",
+  "translations_revision": "4f6b73215e5941694ad453def5d34f4b30e2f5f8",
   "version": 2
 }
