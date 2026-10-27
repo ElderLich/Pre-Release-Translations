@@ -5,47 +5,11 @@
     "lang": "it",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261026_151116",
-    "rows_in_report": 1,
-    "unique_cn_strings": 1,
-    "total_cn_cells": 1
+    "timestamp": "20261027_142558",
+    "rows_in_report": 0,
+    "unique_cn_strings": 0,
+    "total_cn_cells": 0
   },
-  "unique_strings": [
-    {
-      "string": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
-      "count": 1,
-      "is_new": true
-    }
-  ],
-  "cards": [
-    {
-      "id": 101307049,
-      "name": "Codedalo",
-      "desc": "2 mostri ACQUA\n\n\r\nPuoi Evocare Specialmente \"Codedalo\" una sola volta per turno.\r\nIl nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nSe questa carta viene Evocata Link: puoi attivare questo effetto; durante la End Phase di questo turno, aggiungi 1 carta dal tuo Cimitero alla tua mano che menziona \"Atlantide, Città del Drago del Mare\", eccetto \"Codedalo\".\r\nUna volta per turno: puoi mandare 1 \"Umi\" scoperto che controlli al Cimitero; manda fino a 2 Magie/Trappole sul Terreno al Cimitero.\n",
-      "str1": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
-      "str2": "Effetto di recupero",
-      "str3": "Mandare al Cimitero",
-      "str4": "",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str1",
-          "value": "适用作为连接1进行连接召唤（龙都 亚特兰蒂斯）",
-          "normalized": "适用作为连接1进行连接召唤({CARD})"
-        }
-      ],
-      "desc_preview": "2 mostri ACQUA\n\n\r\nPuoi Evocare Specialmente \"Codedalo\" una sola volta per turno.\r\nIl nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nSe questa carta viene Evocata Link: puoi attivare questo effetto; durante la End Phase di questo turno, aggiungi 1 carta dal tuo Cimitero alla tua mano che menziona \"Atlantide, Città del Drago del Mare\", eccetto \"Codedalo\".\r\nUna volta per turno: puoi mandare 1 \"Umi\" scoperto che controlli al Cimitero; manda fino a 2 Magie/Trappole sul Terreno al Cimitero.\n"
-    }
-  ]
+  "unique_strings": [],
+  "cards": []
 }
