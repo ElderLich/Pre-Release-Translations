@@ -145,6 +145,19 @@ base `rush_cards.cdb` files.
 New untranslated cards stay in every workspace and appear in `report.json`.
 Changed source descriptions/prompts require review when the corresponding
 translated fields have not changed since the last successful publication.
+A leading Rush print-code line (for example `RD/KP27-JP063`) identifies the
+printing rather than its effect. New review baselines exclude only that anchored
+line; rule text, names and prompts still require review normally. Older raw-hash
+baselines stay conservative. `Shared/Rush/config.json` may record an explicitly
+reviewed `source_metadata_reviews` pair containing the card ID and exact old/new
+descriptions. The builder accepts it only when both have a recognized print-code
+header and identical remaining text, and both hashes match that publication.
+Never approve a changed effect by editing a report or using a wildcard exception.
+
+For an otherwise translated prompt with an exact `self` mapping, Rush can replace
+one quoted Chinese source-card name with the existing localized name. Other
+Chinese text, ambiguous references and translator-authored wording stay intact.
+Automatic name repairs do not count as approval of an upstream prompt change.
 Each completed locale publishes independently. A ready Spanish translation,
 for example, updates its package immediately even while German or English still
 needs review. An unrelated prompt change does not approve a changed effect

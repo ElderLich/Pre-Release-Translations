@@ -477,5 +477,179 @@ class RushPrereleaseTests(unittest.TestCase):
         self.assertEqual(rush.read_cdb(self.workspace("KR"))[1][100][2], "번역자가 수정한 효과.")
 
 
+    def set_source_description(self, value):
+        row = list(self.texts[100]); row[2] = value; self.texts[100] = tuple(row)
+        self.write_source()
+
+    def use_legacy_review_baselines(self):
+        for locale in ("EN", "TH"):
+            path = self.root / locale / "Rush/report.json"
+            report = rush.read_json(path)
+            report.pop("published_source_review_fields")
+            rush.write_changed(path, rush.json_bytes(report))
+
+    def approve_metadata_pair(self, before, after, card_id=100):
+        rush.write_changed(self.root / "Shared/Rush/config.json", rush.json_bytes({
+            "source_metadata_reviews": [{"id": card_id, "before": before, "after": after}]}))
+
+    def test_print_code_change_keeps_reviewed_effect_and_creates_semantic_baseline(self):
+        before = "RD/KP27-JP062\r\n这是原始效果文字"
+        self.set_source_description(before); self.sync()
+        package = self.package().read_bytes()
+        self.set_source_description(before.replace("JP062", "JP063"))
+        self.assertEqual(self.sync()["pending_locales"], {})
+        self.assertEqual(package, self.package().read_bytes())
+        report = rush.read_json(self.root / "EN/Rush/report.json")
+        self.assertEqual(report["published_source_review_fields"]["100"]["desc"],
+                         rush.digest("这是原始效果文字".encode("utf-8")))
+        files = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        self.sync()
+        self.assertEqual(files, {p: p.read_bytes() for p in files})
+
+    def test_print_code_plus_rule_change_still_waits_for_review_across_runs(self):
+        before = "RD/KP27-JP062\r\n这是原始效果文字"
+        self.set_source_description(before); self.sync()
+        package = self.package().read_bytes()
+        self.set_source_description(before.replace("JP062", "JP063") + "（修改）")
+        for _ in range(2):
+            self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
+            self.assertEqual(package, self.package().read_bytes())
+        self.edit_text(self.workspace(), 100, "Reviewed changed rule.")
+        self.assertEqual(self.sync()["pending_locales"], {})
+
+    def test_legacy_metadata_migration_uses_exact_review_not_overwritten_base_file(self):
+        before = "RD/KP27-JP062\r\n这是原始效果文字"
+        after = before.replace("JP062", "JP063")
+        self.set_source_description(before); self.sync(); self.use_legacy_review_baselines()
+        baseline = rush.read_json(self.root / "EN/Rush/report.json")["published_source_fields"]
+        self.set_source_description(after)
+        for _ in range(2):
+            self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
+            self.assertEqual(rush.read_cdb(self.root / "EN/Rush/Base Files/rush-pre-release.cdb")[1][100][2], after)
+            self.assertEqual(rush.read_json(self.root / "EN/Rush/report.json")["published_source_fields"], baseline)
+        self.approve_metadata_pair(before, after)
+        self.assertEqual(self.sync()["pending_locales"], {})
+        report = rush.read_json(self.root / "EN/Rush/report.json")
+        self.assertEqual(report["published_source_fields"]["100"]["desc"], rush.digest(after.encode("utf-8")))
+        self.assertIn("100", report["published_source_review_fields"])
+
+    def test_legacy_review_must_match_card_old_hash_and_current_hash(self):
+        before = "RD/KP27-JP062\r\n这是原始效果文字"
+        after = before.replace("JP062", "JP063")
+        self.set_source_description(before); self.sync(); self.use_legacy_review_baselines()
+        self.set_source_description(after)
+        for old, new, identity in ((before, after, 101),
+                                   (before.replace("JP062", "JP061"), after, 100),
+                                   (before, after.replace("JP063", "JP064"), 100)):
+            with self.subTest(identity=identity, old=old, new=new):
+                self.approve_metadata_pair(old, new, identity)
+                self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
+        self.approve_metadata_pair(before, after)
+        self.set_source_description(after + "（修改）")
+        self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
+
+    def test_reviewed_metadata_does_not_approve_other_name_or_prompt_changes(self):
+        before = "RD/KP27-JP062\r\n这是原始效果文字"
+        after = before.replace("JP062", "JP063")
+        row = list(self.texts[100]); row[2] = before; row[3] = "原始选项"; self.texts[100] = tuple(row)
+        self.write_source()
+        seed_path = self.translations / "en-US/rush_cards.cdb"
+        datas, texts = rush.read_cdb(seed_path)
+        row = list(texts[100]); row[3] = "Translated option"; texts[100] = tuple(row)
+        rush.write_changed(seed_path, rush.cdb_bytes(datas, texts))
+        self.sync(); self.use_legacy_review_baselines(); self.approve_metadata_pair(before, after)
+        for field in (1, 3):
+            row = list(self.texts[100]); row[2] = after; row[field] += "修改"; self.texts[100] = tuple(row)
+            self.write_source()
+            self.assertEqual(self.sync()["pending_locales"], {"EN": 1, "TH": 1})
+            row[field] = row[field].removesuffix("修改"); self.texts[100] = tuple(row)
+        self.write_source()
+        self.assertEqual(self.sync()["pending_locales"], {})
+
+    def test_metadata_review_rejects_effect_changes_and_non_header_edits(self):
+        before = "RD/KP27-JP062\r\n这是原始效果文字"
+        for invalid in (before + "修改", before.replace("JP062", "JP063") + "修改",
+                        "Note RD/KP27-JP063\r\n这是原始效果文字",
+                        "RD/KP27-JP063 inline 这是原始效果文字", before):
+            with self.subTest(after=invalid), self.assertRaises(ValueError):
+                rush.source_metadata_reviews({"source_metadata_reviews": [
+                    {"id": 100, "before": before, "after": invalid}]})
+        for description in ("Note RD/KP27-JP062\nRule.", "RD/KP27-JP062 inline rule.",
+                            "Rule.\nRD/KP27-JP062\nRule.", "RD/KP27-JP062\nRule.\nRD/KP27-JP063\n"):
+            row = (100, "Name", description, *([""] * 16))
+            expected = description.removeprefix("RD/KP27-JP062\n")
+            self.assertEqual(rush.source_review_fields(row)["desc"], rush.digest(expected.encode("utf-8")))
+
+    def test_italian_mapped_self_prompt_repairs_only_quoted_name_and_publishes(self):
+        self.seed("it-IT", [100, 101])
+        raw = list(self.texts[100]); raw[1] = "双子的见习魔女"; raw[5] = "这个回合，不能把「双子的见习魔女」的效果发动"
+        self.texts[100] = tuple(raw); self.write_source()
+        seed_path = self.translations / "it-IT/rush_cards.cdb"
+        datas, texts = rush.read_cdb(seed_path)
+        row = list(texts[100]); row[1] = "Le Due Streghe Apprendiste"
+        row[5] = 'Azione che non puoi compiere: attivare gli effetti di "双子的见习魔女" in questo turno'
+        texts[100] = tuple(row); rush.write_changed(seed_path, rush.cdb_bytes(datas, texts))
+        rush.prompt_tools()
+        from shared_mappings import save_locale_mappings_csv
+        save_locale_mappings_csv(self.root / "Shared/Mappings.csv", {100: {"id": "100", "str3": "self"}})
+        self.assertEqual(self.sync(["it"])["pending_locales"], {})
+        current = rush.read_cdb(self.workspace("IT"))[1][100]
+        self.assertEqual(current[5], row[5].replace("双子的见习魔女", "Le Due Streghe Apprendiste"))
+        self.assertEqual(current[1:3], tuple(row[1:3]))
+        before = self.package("IT").read_bytes(); self.sync(["it"])
+        self.assertEqual(self.package("IT").read_bytes(), before)
+
+    def test_self_prompt_repair_preserves_unmapped_ambiguous_and_untranslated_text(self):
+        raw = (100, "原名", "原始", *([""] * 16))
+        row = (100, "Localized name", "Effect", *([""] * 16))
+        _, _, parse_ids, _ = rush.prompt_tools()
+        original = 'Reviewed prompt "原名" stays in this exact wording.'
+        for value, mapping in ((original, {}), (original, {100: {"str3": "101"}}),
+                               (original, {100: {"str2": "self"}}),
+                               (original, {100: {"str3": "self,self"}}),
+                               (original + "额外文字", {100: {"str3": "self"}}),
+                               ('Unquoted 原名', {100: {"str3": "self"}}),
+                               (original + ' "原名"', {100: {"str3": "self"}}),
+                               ('Reviewed "不同名称"', {100: {"str3": "self"}})):
+            with self.subTest(value=value, mapping=mapping):
+                self.assertEqual(rush.repair_self_prompt(value, row, raw, "str3", "it", mapping, parse_ids), value)
+        self.assertEqual(rush.repair_self_prompt(original, row, raw, "str3", "it", {100: {"str3": "self"}}, parse_ids),
+                         original.replace("原名", "Localized name"))
+
+
+    def test_automatic_self_name_repair_never_approves_changed_prompt_rules(self):
+        self.seed("it-IT", [100, 101])
+        raw = list(self.texts[100]); raw[1] = "原名"; raw[5] = "原始限制"; self.texts[100] = tuple(raw)
+        self.write_source()
+        seed_path = self.translations / "it-IT/rush_cards.cdb"
+        datas, texts = rush.read_cdb(seed_path)
+        row = list(texts[100]); row[1] = "Nome locale"; row[5] = 'Restrizione "Nome locale".'
+        texts[100] = tuple(row); rush.write_changed(seed_path, rush.cdb_bytes(datas, texts))
+        self.sync(["it"])
+        # A legacy published receipt can contain an unresolved name. Its exact
+        # raw field remains the review baseline even after an automatic repair.
+        datas, texts = rush.read_cdb(self.workspace("IT"))
+        row = list(texts[100]); row[5] = 'Restrizione "原名".'; texts[100] = tuple(row)
+        rush.write_changed(self.workspace("IT"), rush.cdb_bytes(datas, texts))
+        report_path = self.root / "IT/Rush/report.json"
+        report = rush.read_json(report_path)
+        report["published_text_fields"]["100"]["str3"] = rush.digest(row[5].encode("utf-8"))
+        rush.write_changed(report_path, rush.json_bytes(report))
+        rush.prompt_tools()
+        from shared_mappings import save_locale_mappings_csv
+        save_locale_mappings_csv(self.root / "Shared/Mappings.csv", {100: {"id": "100", "str3": "self"}})
+        raw[5] = "改变后的限制"; self.texts[100] = tuple(raw); self.write_source()
+        package = self.package("IT").read_bytes()
+        for _ in range(2):
+            self.assertEqual(self.sync(["it"])["pending_locales"], {"IT": 1})
+            self.assertEqual(rush.read_cdb(self.workspace("IT"))[1][100][5], row[5])
+            self.assertEqual(self.package("IT").read_bytes(), package)
+        datas, texts = rush.read_cdb(self.workspace("IT"))
+        reviewed = list(texts[100]); reviewed[5] = 'Nuova restrizione "原名".'; texts[100] = tuple(reviewed)
+        rush.write_changed(self.workspace("IT"), rush.cdb_bytes(datas, texts))
+        self.assertEqual(self.sync(["it"])["pending_locales"], {})
+        self.assertEqual(rush.read_cdb(self.workspace("IT"))[1][100][5], 'Nuova restrizione "Nome locale".')
+
+
 if __name__ == "__main__":
     unittest.main()

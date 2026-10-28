@@ -12,5 +12,12 @@
     120000011,
     120000012
   ],
-  "notes": "The two retired IDs are duplicate printings explicitly removed by the approved worksheet inventory (Master/Metadata/sheet_inventory.json). They must not be restored by RD Patch.cdb. Do not infer further exclusions from card names, aliases or artwork. 120000012 is the name-only The Legacy of Zeil helper referenced by c120310021/c120310022/c120310025.lua; it has no physical artwork."
+  "notes": "The two retired IDs are duplicate printings explicitly removed by the approved worksheet inventory (Master/Metadata/sheet_inventory.json). They must not be restored by RD Patch.cdb. Do not infer further exclusions from card names, aliases or artwork. 120000012 is the name-only The Legacy of Zeil helper referenced by c120310021/c120310022/c120310025.lua; it has no physical artwork.",
+  "source_metadata_reviews": [
+    {
+      "id": 120310063,
+      "before": "RD/KP27-JP062\r\n【条件】\r\n对方回合对方把怪兽特殊召唤时或者对方怪兽的攻击宣言时才能发动。\r\n\r\n【效果】\r\n选对方场上1只攻击表示怪兽变成表侧守备表示。在主要阶段把这张卡发动的场合，可以再选自己场上1只攻击表示怪兽变成表侧守备表示。",
+      "after": "RD/KP27-JP063\r\n【条件】\r\n对方回合对方把怪兽特殊召唤时或者对方怪兽的攻击宣言时才能发动。\r\n\r\n【效果】\r\n选对方场上1只攻击表示怪兽变成表侧守备表示。在主要阶段把这张卡发动的场合，可以再选自己场上1只攻击表示怪兽变成表侧守备表示。"
+    }
+  ]
 }

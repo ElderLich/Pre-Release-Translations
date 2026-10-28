@@ -33,6 +33,7 @@ TEXT_FIELDS = ["id", "name", "desc"] + [f"str{i}" for i in range(1, 17)]
 CJK = re.compile(r"[\u3400-\u9fff]")
 SCRIPT_LOAD = re.compile(r'(?:LoadScript|dofile)\s*\(\s*["\']([^"\']+\.lua)["\']')
 CARD_REFERENCE = re.compile(r"\bc(\d+)\s*[.\[]")
+RUSH_PRINT_HEADER = re.compile(r"\ARD/[A-Z0-9]+-[A-Z]{2}[0-9]{3}(?:\r\n|\n|\r)")
 
 
 def digest(data: bytes) -> str:
@@ -215,6 +216,49 @@ def text_field_hashes(row: tuple) -> dict[str, str]:
             for index, field in enumerate(TEXT_FIELDS[1:], 1) if row[index]}
 
 
+def source_review_fields(row: tuple) -> dict[str, str]:
+    """Print codes identify an edition; all effect and prompt text still needs review."""
+    values = list(row)
+    values[2] = RUSH_PRINT_HEADER.sub("", values[2] or "", count=1)
+    return text_field_hashes(tuple(values))
+
+
+def source_metadata_reviews(config: dict) -> set[tuple[str, str, str]]:
+    """Migrate only explicitly reviewed legacy raw hashes, never a pending Base CDB."""
+    reviews = config.get("source_metadata_reviews", [])
+    if not isinstance(reviews, list):
+        raise ValueError("Rush source_metadata_reviews must be a list.")
+    accepted = set()
+    for review in reviews:
+        if (not isinstance(review, dict) or set(review) != {"id", "before", "after"}
+                or type(review["id"]) is not int or review["id"] <= 0):
+            raise ValueError("Invalid Rush source metadata review identity.")
+        before, after = review["before"], review["after"]
+        if (not isinstance(before, str) or not isinstance(after, str) or before == after
+                or not RUSH_PRINT_HEADER.match(before) or not RUSH_PRINT_HEADER.match(after)
+                or RUSH_PRINT_HEADER.sub("", before, count=1) != RUSH_PRINT_HEADER.sub("", after, count=1)):
+            raise ValueError("Rush metadata reviews may change only a leading print-code line.")
+        accepted.add((str(review["id"]), digest(before.encode("utf-8")), digest(after.encode("utf-8"))))
+    return accepted
+
+
+def repair_self_prompt(value: str, row: tuple, source_row: tuple, field: str,
+                       lang: str, mappings: dict, parse_ids) -> str:
+    """Resolve one exact quoted source name in an otherwise translated self prompt."""
+    if (lang in ("zh-cn", "zh-tw", "jp", "kr") or not CJK.search(value)
+            or not source_row[1] or not CJK.search(source_row[1])
+            or not row[1] or CJK.search(row[1])
+            or parse_ids(mappings.get(row[0], {}).get(field)) != ["self"]):
+        return value
+    for left, right in ((chr(34), chr(34)), ("「", "」"), ("“", "”")):
+        quoted = left + source_row[1] + right
+        if value.count(quoted) == 1:
+            repaired = value.replace(quoted, left + row[1] + right, 1)
+            if not CJK.search(repaired):
+                return repaired
+    return value
+
+
 def backfill_seed(row: tuple, source_row: tuple, seed: tuple | None) -> tuple:
     """Fill untouched import fields without replacing a translator's changes."""
     if seed is None:
@@ -242,11 +286,13 @@ def prompt_tools():
 
 
 def apply_prompt_translations(row: tuple, source_row: tuple, lang: str,
-                              pack: dict, mappings: dict, names: dict) -> tuple:
+                              pack: dict, mappings: dict, names: dict,
+                              name_repairs: dict | None = None) -> tuple:
     patcher, _, parse_ids, replace_tokens = prompt_tools()
     result = list(row)
     for index in range(3, len(TEXT_FIELDS)):
-        current = result[index] or ""
+        current = repair_self_prompt(result[index] or "", row, source_row,
+                                     TEXT_FIELDS[index], lang, mappings, parse_ids)
         if lang == "jp" and current and "{CARD}" not in current:
             # Importers may already substitute Japanese names inside Chinese prompts.
             skeleton = lambda text: re.sub(r"「[^」]*」", "「CARD」", text)
@@ -260,6 +306,8 @@ def apply_prompt_translations(row: tuple, source_row: tuple, lang: str,
                              for token in tokens]
                 if all(localized):
                     value = replace_tokens(value, localized)
+        if name_repairs is not None and current != (row[index] or "") and value == current:
+            name_repairs[TEXT_FIELDS[index]] = row[index]
         result[index] = value
     return tuple(result)
 
@@ -326,6 +374,7 @@ def prepare_versions(outputs: dict[Path, bytes]) -> list[str]:
 def synchronize(root: Path, source: Path, translations_root: Path | None,
                 languages: list[str], fetch_source_text: bool = False) -> dict:
     config = read_json(root / "Shared/Rush/config.json", {})
+    metadata_reviews = source_metadata_reviews(config)
     excluded = {int(card_id): int(target) for card_id, target in config.get("retired_redirects", {}).items()}
     # Publish just the identity ranges so translators need no upstream checkout.
     if (source / "sets.md").is_file():
@@ -342,6 +391,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
     previous_source = read_json(root / "Shared/Rush/source.json", {})
     source_hashes = {str(key): digest(json_bytes(list(texts[key]))) for key in sorted(ids)}
     source_fields = {str(key): text_field_hashes(texts[key]) for key in sorted(ids)}
+    review_fields = {str(key): source_review_fields(texts[key]) for key in sorted(ids)}
     outputs = {}
     formatted_workspaces = {}
     pending_workspaces = {}
@@ -361,6 +411,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         seed_datas, seeds = read_cdb(translations_root / locale / "rush_cards.cdb", optional=True) if translations_root else ({}, {})
         merged = {}
         unformatted_rows = {}
+        pending_rows = {}
         unresolved = []
         previous_report = read_json(locale_root / "report.json", {})
         # Diagnostic row hashes change on pending runs. Review must compare against
@@ -368,6 +419,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         old_published_hashes = previous_report.get("published_text_sha256", previous_report.get("text_sha256", {}))
         old_source_hashes = previous_report.get("published_source_sha256", previous_source.get("text_sha256", {}))
         old_source_fields = previous_report.get("published_source_fields", {})
+        old_review_fields = previous_report.get("published_source_review_fields", {})
         old_text_fields = previous_report.get("published_text_fields", {})
         pack = patcher.build_translation_pack(lang) if lang not in ("zh-cn", "zh-tw", "th") else None
         mappings = load_mappings(root / "Shared/Mappings.csv", lang)
@@ -382,6 +434,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
                 write_changed(fetch_path, json_bytes(fetch_report))
         for card_id in sorted(ids):
             raw = texts[card_id]
+            name_repairs = {}
             if lang == "zh-cn":
                 row = raw
             elif lang == "th":
@@ -390,21 +443,35 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
                 row = candidates[card_id]
                 if pack:
                     row = apply_prompt_translations(row, raw, lang, pack, mappings,
-                                                    {**seeds, **candidates, **merged})
+                                                    {**seeds, **candidates, **merged}, name_repairs)
             merged[card_id] = row
             unformatted_rows[card_id] = row
+            # A deterministic self-name repair is not review of changed prompt rules.
+            # Keep its original field in pending workspaces too, so the next run
+            # cannot mistake this automatic substitution for a translator edit.
+            review_row = list(row)
+            for field, original in name_repairs.items():
+                review_row[TEXT_FIELDS.index(field)] = original
+            review_row = tuple(review_row)
+            pending_rows[card_id] = review_row
             fields = translated_row(row, raw, "en" if lang == "th" else lang, card_id in system_ids)
             old_source_hash = old_source_hashes.get(str(card_id))
             if old_source_hash and old_source_hash != source_hashes[str(card_id)] and lang not in ("zh-cn", "th"):
                 if str(card_id) in old_source_fields and str(card_id) in old_text_fields:
-                    current_fields = text_field_hashes(row)
-                    needs_review = any(
-                        old_source_fields[str(card_id)].get(field) != source_fields[str(card_id)].get(field)
-                        and old_text_fields[str(card_id)].get(field) == current_fields.get(field)
-                        for field in TEXT_FIELDS[1:])
+                    current_fields = text_field_hashes(review_row)
+                    semantic_baseline = str(card_id) in old_review_fields
+                    before_fields = (old_review_fields if semantic_baseline else old_source_fields)[str(card_id)]
+                    after_fields = (review_fields if semantic_baseline else source_fields)[str(card_id)]
+                    changed_fields = {field for field in TEXT_FIELDS[1:]
+                                      if before_fields.get(field) != after_fields.get(field)}
+                    if not semantic_baseline and (str(card_id), before_fields.get("desc"),
+                                                  after_fields.get("desc")) in metadata_reviews:
+                        changed_fields.discard("desc")
+                    needs_review = any(old_text_fields[str(card_id)].get(field) == current_fields.get(field)
+                                       for field in changed_fields)
                 else:
                     # Migration from receipts written before per-field review tracking.
-                    needs_review = old_published_hashes.get(str(card_id)) == digest(json_bytes(list(row)))
+                    needs_review = old_published_hashes.get(str(card_id)) == digest(json_bytes(list(review_row)))
                 if needs_review:
                     fields.append("source_changed")
             if fields:
@@ -415,7 +482,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
             formatted[2] = encode_rush_description(row[2] or "", "en" if lang == "th" else lang)
             merged[card_id] = tuple(formatted)
         if lang == "en":
-            english_rows = unformatted_rows
+            english_rows = pending_rows if unresolved else unformatted_rows
             english_pending = unresolved
         elif lang == "th":
             # Thai is the English fallback, including review requirements. Its own
@@ -424,7 +491,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         write_changed(locale_root / "Base Files/rush-pre-release.cdb", cdb_bytes(datas, texts))
         # A pending locale must not rewrite old text merely for presentation:
         # otherwise the next run could mistake formatting for translator review.
-        pending_workspaces[workspace] = cdb_bytes(datas, unformatted_rows)
+        pending_workspaces[workspace] = cdb_bytes(datas, pending_rows)
         formatted_workspaces[workspace] = cdb_bytes(datas, merged)
         report = {"source_cards": len(source_datas), "active_cards": len(ids),
                   "excluded_ids": sorted(set(source_datas) & excluded.keys()),
@@ -434,6 +501,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
                   "published_text_sha256": old_published_hashes,
                   "published_source_sha256": old_source_hashes,
                   "published_source_fields": old_source_fields,
+                  "published_source_review_fields": old_review_fields,
                   "published_text_fields": old_text_fields,
                   "text_sha256": {str(key): digest(json_bytes(list(merged[key]))) for key in sorted(ids)}}
         # Removal history belongs to git; keeping last-run counts would churn on a no-op run.
@@ -468,6 +536,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         report["published_text_sha256"] = report["text_sha256"]
         report["published_source_sha256"] = source_hashes
         report["published_source_fields"] = source_fields
+        report["published_source_review_fields"] = review_fields
         report["published_text_fields"] = publication_fields[folder]
         write_changed(root / folder / "Rush/report.json", json_bytes(report))
     receipt = {"version": 2, "source_revision": revision(source), "built_locales": ready_locales,
