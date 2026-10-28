@@ -10,14 +10,6 @@
       ],
       "id": 120310063,
       "name": "Piratage Rhéa Folle"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310067,
-      "name": "次元的盟友 莉天使"
     }
   ],
   "published_source_fields": {
@@ -1447,7 +1439,7 @@
     "120310063": "d9972e9324247f56e2d672d160a1baf5f13e29f06b4fe2fb2a2535b0f67ff51c",
     "120310064": "2b6a6290266029f16108137d7759dcffe2de632bc833ab2e28c007e375cc38fd",
     "120310066": "6e5f77686437256419d2e9d978141bbc29f702e4279c084d7d1f6cc0f2afc0be",
-    "120310067": "026eb1dce4faf538075de8b5a3b1619f8de1f30451cc739a4609a91cdd5682a1",
+    "120310067": "54a053a0b32f01729a4a8fd85601bd51014805ee89eb79c1b08f3139cd34c9b3",
     "120310068": "4df25d0ef111c70e2a8103a1aa3c927e1577d73e6d95ec430b470b4c8aa9f5c6",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "4852aa6e849b1ba8ac8faea6d0d07f984226f711e67ef6cd9aa1ccb685aa4080",

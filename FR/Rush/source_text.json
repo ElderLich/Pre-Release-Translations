@@ -1,16 +1,20 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310067": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP067",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17896&languages=fr"
+    }
+  },
   "requested_ids": [
     120310067,
     120310069
   ],
   "unresolved": [
-    {
-      "id": 120310067,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP067"
-    },
     {
       "id": 120310069,
       "missing_fields": [

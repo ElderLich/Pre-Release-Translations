@@ -118,16 +118,16 @@
     120311062
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "f5a5217a0e83602e8eb803f22cad27d2120a6c540cf4ea3cc64e4bf575bdae32",
+  "local_inputs_sha256": "fd02e093858fc0a10d55eb648c3cf70ff96d8c4a3db88213eb159bfb22462db7",
   "patch_sha256": "169dcd14b1f7c7b1c56cd93f00eb0e0363f6eca33420f2b32e4bd657e9d60af7",
   "pending_locales": {
-    "EN": 2,
-    "ES": 9,
-    "FR": 2,
+    "EN": 1,
+    "ES": 1,
+    "FR": 1,
     "IT": 2,
     "JP": 1,
     "KR": 9,
-    "TH": 2
+    "TH": 1
   },
   "source_fingerprint": "8406a21987e2a1047df401c09ccbcd875983fc2a16ba30a7a7768557fb0b402f",
   "source_revision": "8ee871ebacd8462e1c80976f47d562a938a3b993",
@@ -243,6 +243,6 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470"
   },
-  "translations_revision": "4f6b73215e5941694ad453def5d34f4b30e2f5f8",
+  "translations_revision": "720aae8b23733f5cb4d22ae3ae5ceee3ad82c69c",
   "version": 2
 }

@@ -10,14 +10,6 @@
       ],
       "id": 120310063,
       "name": "Mad Rare Hack"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120310067,
-      "name": "次元的盟友 莉天使"
     }
   ],
   "published_source_fields": {
@@ -1447,7 +1439,7 @@
     "120310063": "591d5eb6d4fe94a5d7555641119cb8ee9dc2684ec01f1d2e88931b3cc9904da5",
     "120310064": "b058ce6c812febf7c53b2b7912ca4ec35b6e4f2e9020a43f40e44a51e2247752",
     "120310066": "601e34808fa1498d3745eb65cbdca96ccbb679f55c3230c7fbf2593311901de6",
-    "120310067": "ae4b2a21be55426f15964c6e83cb44965119eaa28b00f057a6eea155a5bd97fc",
+    "120310067": "542d531dd3af6e2ff258bb70282cd75e67bc2790c0e955c2a22415f160d30521",
     "120310068": "8c449ecb2a3d437619b72049cf1db81bcee261da84f90746b19496a457bcfd5d",
     "120310069": "c613d558a1db1f6e56d4a4e750907f6c4fc3441c848ab92063efd0d3c68369c4",
     "120310100": "e71e1fa0cbc218e320a792a6a7cc0904a91e280311314cd31180d7bcdb972de2",
