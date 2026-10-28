@@ -70,3 +70,32 @@ jobs:
 
           echo "Unable to push JP workspace sync after rebuilding on the latest branch tip."
           exit 1
+
+  continue-publication:
+    name: Continue successful bot publication
+    needs: sync
+    if: >-
+      needs.sync.result == 'success' &&
+      github.repository == 'ElderLich/Pre-Release-Translations' &&
+      github.actor == 'github-actions[bot]' && github.ref == 'refs/heads/main' &&
+      (github.event_name != 'workflow_run' ||
+       (github.event.workflow_run.conclusion == 'success' &&
+        github.event.workflow_run.head_branch == 'main' &&
+        github.event.workflow_run.head_repository.full_name == github.repository))
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    permissions:
+      contents: read
+      actions: write
+    steps:
+      - name: Check out trusted continuation code
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: main
+          fetch-depth: 1
+          persist-credentials: false
+      - name: Dispatch the next publication stage
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SOURCE_RESULT: ${{ needs.sync.result }}
+        run: python3 .github/scripts/dispatch_publication.py

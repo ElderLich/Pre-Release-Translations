@@ -78,6 +78,7 @@ jobs:
         run: |
           python -B -m unittest discover -s .github/scripts -p test_publish_prerelease_r2.py
           python -B -m unittest discover -s .github/scripts -p test_cloudflare_workflow.py
+          python -B -m unittest discover -s .github/scripts -p test_dispatch_publication.py
 
       - name: Publish verified packages and catalog
         env:

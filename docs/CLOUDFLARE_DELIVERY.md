@@ -86,6 +86,14 @@ A tag-push or `release: published` trigger alone would miss normal automation:
 the current publishers use `GITHUB_TOKEN`, whose pushes do not launch another
 push workflow. [GitHub workflow-trigger rules](https://docs.github.com/en/actions/how-tos/write-workflows/choose-when-workflows-run/trigger-a-workflow).
 
+Daily bot-dispatched runs also explicitly request the mirror after successful
+publication, because their completion events have repeatedly failed to start it.
+The nine standard locale flows explicitly continue workspace sync to release as
+well. Only successful trusted-main bot jobs take this path; human completion
+triggers remain unchanged. The fixed-route continuation helper receives
+`actions: write` only in its separate job, retains all publisher verification and
+uses the same concurrency group. See [publication handoffs](AUTOMATION_SCHEDULE.md#reliable-publication-handoffs).
+
 The mirror accepts successful publishers from this repository's main branch
 only. It never runs pull-request code with R2 credentials. One fixed concurrency
 group serializes every entry point without cancelling an upload. Each job checks

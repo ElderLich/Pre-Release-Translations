@@ -1,6 +1,6 @@
 # Daily automation
 
-`Daily translation updates` is the only cron workflow. It runs once per day at
+`Daily translation updates` schedules source imports once per day at
 08:10 UTC and uses one lightweight job to choose the imports that need running.
 It does not download or rebuild the card packages itself.
 
@@ -54,6 +54,25 @@ with the exact file, line and prompt key to fix.
 Deleting Actions run history also removes the dispatcher's import timestamps.
 The next daily check therefore refreshes locales whose successful imports can
 no longer be confirmed; subsequent checks resume the normal cooldown.
+
+## Reliable publication handoffs
+
+Daily imports are dispatched with `GITHUB_TOKEN`. Their follow-on completion
+events have not reliably started the next workflow, so successful bot-driven
+jobs explicitly dispatch the next stage: workspace sync to the matching locale
+release, then locale release to the Cloudflare mirror. Rush and ZH-TW dispatch
+the mirror after their combined source/publication job succeeds. Successful
+no-op jobs continue too, allowing a failed delivery to recover without changing
+package content. The launcher does not start the mirror before its children end.
+
+Each continuation is a separate short job with only `contents: read` and
+`actions: write`. The helper accepts an exact, acyclic workflow allowlist and
+requires this repository, trusted main, the bot actor and successful source work.
+Human-triggered jobs retain their existing completion triggers. All mirror runs
+still use the same serialized, verified current-main publisher; no second
+uploader or personal token is introduced. Failed handoffs fail visibly and can
+be retried from the failed job. Network retries can produce duplicate dispatches
+after an ambiguous response, which the existing publisher serialization handles.
 
 ## Manual updates
 
