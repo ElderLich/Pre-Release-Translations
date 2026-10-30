@@ -1,9 +1,95 @@
 {
-  "active_cards": 110,
+  "active_cards": 117,
   "artwork_files": 109,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120310053,
+    120311021,
+    120311024,
+    120311025,
+    120311060,
+    120311063,
+    120311064
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "str4",
+        "str5",
+        "str8",
+        "source_changed"
+      ],
+      "id": 120310014,
+      "name": "Amy Rhéa Folle"
+    },
+    {
+      "fields": [
+        "str4",
+        "str5",
+        "str8",
+        "source_changed"
+      ],
+      "id": 120310015,
+      "name": "Beeko Rhéa Folle"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310053,
+      "name": "疯狂犯罪之心"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120311021,
+      "name": "邪心英雄 恶刃魔"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120311024,
+      "name": "邪心英雄 恶刃魔鬼"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120311025,
+      "name": "暗黑神召"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120311060,
+      "name": "卡片炮击士"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2"
+      ],
+      "id": 120311063,
+      "name": "叛骨之苏芙蕾思"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120311064,
+      "name": "叛骨之盖加斯特"
+    }
+  ],
   "published_source_fields": {
     "120000012": {
       "name": "4b5e7780e4281fec15a0135179111d595d71f5449166d0457ed87e454f82d32c"
@@ -2101,8 +2187,8 @@
     "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
     "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105"
   },
-  "script_files": 142,
-  "source_cards": 110,
+  "script_files": 152,
+  "source_cards": 117,
   "text_sha256": {
     "120000012": "ba529776666022aba6ef01f96430b6355306511ba5ce48e822da5883afc60fd3",
     "120109069": "5bc01d8e339c9ce0e44c4c1bf481563583ff662afd99debea8a4f1631105154e",
@@ -2119,8 +2205,8 @@
     "120310011": "2d506baadafba517ca7f336f373276bbe8addfcba2ca406bcd6eacd90b4fb67a",
     "120310012": "8e1e6c48f32f7bb4dee02008561c16506b65ae9c3bbdc9723f3704c09d1c7f8a",
     "120310013": "3d56b7dc4b79cd7685e6bf7797cef77f9e5788311169e0085c0c18d1a66b7f3d",
-    "120310014": "ed20423d911fb9e529f8539860cf819be719e5f1fc6ab6e1ad83e32fd310855b",
-    "120310015": "07e00e3a2d1cb55e244845d50bdbfa6bb2cf65fe0bfa47f462643f3ab35c8010",
+    "120310014": "a70d59ade45f90c8d3b5783c73bed5d7e8aed7109d4931a22d00f2ade9336b2b",
+    "120310015": "6f7876ccb572c4f3d9a522e2e14ca149c9169bd658779c936a8a28a95b5f9192",
     "120310016": "51b3c770cede5d8622420581550f2d63c73276104028bccb66712cf2def834c3",
     "120310017": "e3d6382e5fe15961d6d530c8e5401d31fdc6adf5aadea58b8c0df6c1a3140c4e",
     "120310018": "44cb98d7dc2f63a15e153da57f7f04a627cec5fc42cfb17ccbcbaaa1de5cbed3",
@@ -2156,6 +2242,7 @@
     "120310050": "c268bdd8bc3b46a4feb90bef6ba776f45c2bbf908fad0c53b73aba0af417902e",
     "120310051": "f5baf6044ba5225e1f111242b5c2e8dc942f57f964aa376b7ba0a23e5e18b0f2",
     "120310052": "11b505373bdd02eaa908b089658a87a3222dae3d02ec91764a4689ea04488f7e",
+    "120310053": "faa146c2056a26d3e40fee785b2bf3c7491c89a2119fcceec07dafa89acb7ec9",
     "120310054": "3cd8a599773e611aa658a0f5199ca5f23645400b41d93137efe99cf08355599c",
     "120310055": "234dd51cf17ee2eba57b73062c484a6d9a6a6cc7e26f1349ce486fec02a250c0",
     "120310056": "e9f2540f7b6497ae61875b48b410ca010760bab8155803481e03709b14ba473b",
@@ -2184,8 +2271,11 @@
     "120311013": "2bdbfc6e596d4846e3b920a23c7a1a3c8e2528d8be8f7a57b24a17f9000ddf13",
     "120311018": "38b20a859fb9f61f321bd9e77d6df8438f136c1a314c2d87a70b181793a0c0d5",
     "120311020": "0528cc8fd40555fec5e718c1bfc6a8630563705124a649ce528d6222a338da64",
+    "120311021": "56a91e1ee358bede5d80cc5e54d2bf8d10dca74da642c7bab2039ec1efb66598",
     "120311022": "54addc01b79432626ccdf0ffd72fbdf428901893d6c4e6b20914b062ee5cafbc",
     "120311023": "70aff460a8a78b96c360f700c5d95451d9077668f8b4c5e712d4a7d5198eb6f8",
+    "120311024": "054dfc8b2e596bffa77464b32234eba948425bf6c4b2b6ad9177ddfc5914dea2",
+    "120311025": "dd470c7b65d1104c3cd2b55cf700549600a86b8ce8421982319278319a23c0f8",
     "120311026": "41ce035d82bb3a89be71d32ce47db7c2d2d990a4f3ea6f83e914640fcab622c0",
     "120311027": "4f8e7283bed3a472aac91e0064fef57a9917cb6c53ed713ae38268b1e914cdfd",
     "120311029": "8fe1bd1a4566fc7b850026bc7ba66c775ed5e8695d6b38685d0e206d80ddbd37",
@@ -2212,7 +2302,10 @@
     "120311057": "97763ba9f2c0168824d198c028eeabadf0f10c074899392bd5c2c8c3c8ea9f02",
     "120311058": "1437f88ff0bbae9032ebacdcc7457adf6c662443a5bd0ee751d4b3c6418a9080",
     "120311059": "925f24f796d7c4c49db6ffc5574bf165c34e49f7ccf5dbe27f4d94994580f46c",
+    "120311060": "aa0f83be02cde4d37707828422ad5e778c595263016058dcd7ca8a39a18bf8ea",
     "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
-    "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105"
+    "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105",
+    "120311063": "d5bb5a967a7fa8fec0054f18364a572e1f7229a34978a5396d1b588f1067992e",
+    "120311064": "1bd4231ec437b8a43a4419c2e8698135954b9de9a2c956f0ec947c7859a06bee"
   }
 }
