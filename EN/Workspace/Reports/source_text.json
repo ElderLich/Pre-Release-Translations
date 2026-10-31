@@ -1,8 +1,602 @@
 {
   "language": "en",
-  "candidates": 0,
-  "matched": 0,
+  "mode": "refresh",
+  "candidates": 148,
+  "matched": 148,
   "unmatched_ids": [],
   "unresolved": [],
-  "matches": {}
+  "matches": {
+    "100200298": {
+      "set_code": "VJMP-JP298",
+      "source": "https://yugipedia.com/wiki/Counter_Spell_%22Negate_Attack%22"
+    },
+    "100262301": {
+      "set_code": "26TP-JP301",
+      "source": "https://yugipedia.com/wiki/The_Dark_Dragon_Lord_of_Ultum"
+    },
+    "100268001": {
+      "set_code": "YAC1-JP001",
+      "source": "https://yugipedia.com/wiki/Exodia_the_Obliterator"
+    },
+    "100268002": {
+      "set_code": "YAC1-JP002",
+      "source": "https://yugipedia.com/wiki/Perfect_Eclosion_-_Perfectly_Ultimate_Great_Moth"
+    },
+    "100268003": {
+      "set_code": "YAC1-JP003",
+      "source": "https://yugipedia.com/wiki/Harpie_Lady_-_Elegant_Egotist"
+    },
+    "100268004": {
+      "set_code": "YAC1-JP004",
+      "source": "https://yugipedia.com/wiki/Blue-Eyes_Ultimate_Dragon%2C_the_God-Surpassing_Servant"
+    },
+    "100268005": {
+      "set_code": "YAC1-JP005",
+      "source": "https://yugipedia.com/wiki/Barrel_Dragon_the_Machine_Dragon"
+    },
+    "100268006": {
+      "set_code": "YAC1-JP006",
+      "source": "https://yugipedia.com/wiki/Relinquished_the_Wicked_Eye_of_Illusion"
+    },
+    "100268007": {
+      "set_code": "YAC1-JP007",
+      "source": "https://yugipedia.com/wiki/Dark_Necrofear%2C_the_Ruler_of_Demise"
+    },
+    "100268008": {
+      "set_code": "YAC1-JP008",
+      "source": "https://yugipedia.com/wiki/Gilford_the_Lightning%2C_the_Warrior_of_Thunderbolts"
+    },
+    "100268010": {
+      "set_code": "YAC1-JP010",
+      "source": "https://yugipedia.com/wiki/Silent_Magician%2C_the_Silent_Fighter"
+    },
+    "100268011": {
+      "set_code": "YAC1-JP011",
+      "source": "https://yugipedia.com/wiki/Penalty_Game_%22GREED%2C_the_Illusion_of_Avarice%22"
+    },
+    "100268012": {
+      "set_code": "YAC1-JP012",
+      "source": "https://yugipedia.com/wiki/Zombyra"
+    },
+    "100268013": {
+      "set_code": "YAC1-JP013",
+      "source": "https://yugipedia.com/wiki/Evil_Dragon_Cards_-_Earth_Dragon"
+    },
+    "100268014": {
+      "set_code": "YAC1-JP014",
+      "source": "https://yugipedia.com/wiki/Evil_Dragon_Cards_-_Metal_Dragon"
+    },
+    "100268015": {
+      "set_code": "YAC1-JP015",
+      "source": "https://yugipedia.com/wiki/Super_Critical"
+    },
+    "100268016": {
+      "set_code": "YAC1-JP016",
+      "source": "https://yugipedia.com/wiki/Field_Power_Bonus_%28card%29"
+    },
+    "100268017": {
+      "set_code": "YAC1-JP017",
+      "source": "https://yugipedia.com/wiki/Aroma_Strategy"
+    },
+    "100268018": {
+      "set_code": "YAC1-JP018",
+      "source": "https://yugipedia.com/wiki/King_of_Yamimado"
+    },
+    "100268019": {
+      "set_code": "YAC1-JP019",
+      "source": "https://yugipedia.com/wiki/Attribute_Rejection"
+    },
+    "100268020": {
+      "set_code": "YAC1-JP020",
+      "source": "https://yugipedia.com/wiki/Knight_of_Twin_Swords"
+    },
+    "100268021": {
+      "set_code": "YAC1-JP021",
+      "source": "https://yugipedia.com/wiki/Flashforce_Sword"
+    },
+    "100268022": {
+      "set_code": "YAC1-JP022",
+      "source": "https://yugipedia.com/wiki/Archfiend_of_Gilfer_-_Flame_Attack"
+    },
+    "100268023": {
+      "set_code": "YAC1-JP023",
+      "source": "https://yugipedia.com/wiki/Gearfried_the_Steel_Knight"
+    },
+    "100268024": {
+      "set_code": "YAC1-JP024",
+      "source": "https://yugipedia.com/wiki/Spell_Card_%22Enemy_Controller%22"
+    },
+    "100268025": {
+      "set_code": "YAC1-JP025",
+      "source": "https://yugipedia.com/wiki/Final_Journey_of_the_Soul"
+    },
+    "100268201": {
+      "set_code": "YAC1-JP009",
+      "source": "https://yugipedia.com/wiki/Dark_Paladin_-_Wave-Motion"
+    },
+    "100270002": {
+      "set_code": "TFGX-JP002",
+      "source": "https://yugipedia.com/wiki/Wicked_Canon"
+    },
+    "100270003": {
+      "set_code": "TFGX-JP003",
+      "source": "https://yugipedia.com/wiki/Hope_for_the_Future"
+    },
+    "100271000": {
+      "set_code": "CF02-JP000",
+      "source": "https://yugipedia.com/wiki/Diabellstar%2C_the_Seeker_of_Sinful_Spoils"
+    },
+    "100272001": {
+      "set_code": "RV02-JP001",
+      "source": "https://yugipedia.com/wiki/Pritima_the_Infinity_Cubic_Vessel"
+    },
+    "100272002": {
+      "set_code": "RV02-JP002",
+      "source": "https://yugipedia.com/wiki/Alditia_Hell_Blaze_the_Burning_Cubic_Lord"
+    },
+    "100272003": {
+      "set_code": "RV02-JP003",
+      "source": "https://yugipedia.com/wiki/Abyss_Vagrada_the_Abyssal_Cubic_Lord"
+    },
+    "100272004": {
+      "set_code": "RV02-JP004",
+      "source": "https://yugipedia.com/wiki/Divine_Anima_Infinity_the_Creation_Cubic_Overlord"
+    },
+    "100272006": {
+      "set_code": "RV02-JP006",
+      "source": "https://yugipedia.com/wiki/Cubic_Bodhi"
+    },
+    "100272026": {
+      "set_code": "RV02-JP026",
+      "source": "https://yugipedia.com/wiki/Marincess_Azuri"
+    },
+    "100272027": {
+      "set_code": "RV02-JP027",
+      "source": "https://yugipedia.com/wiki/Marincess_Ulpis"
+    },
+    "100272028": {
+      "set_code": "RV02-JP028",
+      "source": "https://yugipedia.com/wiki/Aqua_Leviathan_%40Marincess"
+    },
+    "100272030": {
+      "set_code": "RV02-JP030",
+      "source": "https://yugipedia.com/wiki/Marincess_Truth_Heart"
+    },
+    "100272031": {
+      "set_code": "RV02-JP031",
+      "source": "https://yugipedia.com/wiki/Marincess_Reef_Lagoon"
+    },
+    "100272050": {
+      "set_code": "RV02-JP050",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Lich"
+    },
+    "100272051": {
+      "set_code": "RV02-JP051",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Yoko"
+    },
+    "100272052": {
+      "set_code": "RV02-JP052",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Master_Alucard"
+    },
+    "100272053": {
+      "set_code": "RV02-JP053",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Garden"
+    },
+    "100272054": {
+      "set_code": "RV02-JP054",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Art"
+    },
+    "100273001": {
+      "set_code": "SJRY-JP001",
+      "source": "https://yugipedia.com/wiki/Buster_Blader%2C_the_One_Who_Surpasses_the_Limits"
+    },
+    "100274001": {
+      "set_code": "CH03-JPP01",
+      "source": "https://yugipedia.com/wiki/Trinitas_Magistus"
+    },
+    "100274002": {
+      "set_code": "CH03-JPP02",
+      "source": "https://yugipedia.com/wiki/Invoked_Magistus_Heruvim"
+    },
+    "100274004": {
+      "set_code": "CH03-JPP04",
+      "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
+    },
+    "100275002": {
+      "set_code": "MVB1-JP002",
+      "source": "https://yugipedia.com/wiki/Gandora-X_the_Blackmetal_Rampaging_Dragon"
+    },
+    "100275005": {
+      "set_code": "MVB1-JP005",
+      "source": "https://yugipedia.com/wiki/Time_Chain"
+    },
+    "100275008": {
+      "set_code": "MVB1-JP008",
+      "source": "https://yugipedia.com/wiki/Warrior%27s_Devotion"
+    },
+    "101306082": {
+      "set_code": "BETB-EN082",
+      "source": "https://yugipedia.com/wiki/Tigress_in_Silent_Repose"
+    },
+    "101306083": {
+      "set_code": "BETB-EN083",
+      "source": "https://yugipedia.com/wiki/Just_Flip_a_Coin"
+    },
+    "101306084": {
+      "set_code": "BETB-EN084",
+      "source": "https://yugipedia.com/wiki/Kumenyo%2C_the_Nine-Hued_Deer"
+    },
+    "101306085": {
+      "set_code": "BETB-EN085",
+      "source": "https://yugipedia.com/wiki/Kerolia_the_Frolicsome"
+    },
+    "101306086": {
+      "set_code": "BETB-EN086",
+      "source": "https://yugipedia.com/wiki/Archidux%2C_the_Squid_Sorcerer"
+    },
+    "101306087": {
+      "set_code": "BETB-EN087",
+      "source": "https://yugipedia.com/wiki/Skyborne_Blue_Cularsaw"
+    },
+    "101306088": {
+      "set_code": "BETB-EN088",
+      "source": "https://yugipedia.com/wiki/Half_Slice_of_Nickeline"
+    },
+    "101306089": {
+      "set_code": "BETB-EN089",
+      "source": "https://yugipedia.com/wiki/Chaospawn_Bishop"
+    },
+    "101306090": {
+      "set_code": "BETB-EN090",
+      "source": "https://yugipedia.com/wiki/Angelechy_Castellan"
+    },
+    "101306091": {
+      "set_code": "BETB-EN091",
+      "source": "https://yugipedia.com/wiki/Angelechy_Seneschal"
+    },
+    "101306092": {
+      "set_code": "BETB-EN092",
+      "source": "https://yugipedia.com/wiki/Angelechy_Strategy_Score"
+    },
+    "101306093": {
+      "set_code": "BETB-EN093",
+      "source": "https://yugipedia.com/wiki/Angelechy_Brilliant_Move"
+    },
+    "101306094": {
+      "set_code": "BETB-EN094",
+      "source": "https://yugipedia.com/wiki/Angelechy_Opposition"
+    },
+    "101306095": {
+      "set_code": "BETB-EN095",
+      "source": "https://yugipedia.com/wiki/Angelechy_Endgame_Problem"
+    },
+    "101306096": {
+      "set_code": "BETB-EN096",
+      "source": "https://yugipedia.com/wiki/Angelechy_Verdict"
+    },
+    "101306281": {
+      "set_code": "BETB-EN081",
+      "source": "https://yugipedia.com/wiki/Audhumla%2C_Progenitor_of_the_Frozen_Expanse"
+    },
+    "101307001": {
+      "set_code": "IMPH-JP001",
+      "source": "https://yugipedia.com/wiki/Helpoemer%2C_Chanter_of_the_Sun_God"
+    },
+    "101307002": {
+      "set_code": "IMPH-JP002",
+      "source": "https://yugipedia.com/wiki/Makyura%2C_Destructor_of_the_Sun_God"
+    },
+    "101307003": {
+      "set_code": "IMPH-JP003",
+      "source": "https://yugipedia.com/wiki/Gil_Garth%2C_Exterminator_of_the_Sun_God"
+    },
+    "101307004": {
+      "set_code": "IMPH-JP004",
+      "source": "https://yugipedia.com/wiki/Viser_Des_Shock%2C_Tormentor_of_the_Sun_God"
+    },
+    "101307005": {
+      "set_code": "IMPH-JP005",
+      "source": "https://yugipedia.com/wiki/Amazoness_Chain_Master_-_Brink_of_Death_Chain_Dance"
+    },
+    "101307006": {
+      "set_code": "IMPH-JP006",
+      "source": "https://yugipedia.com/wiki/Amazoness_Fighter_-_Instant_Kill_Dance"
+    },
+    "101307007": {
+      "set_code": "IMPH-JP007",
+      "source": "https://yugipedia.com/wiki/Amazoness_Spellcaster_-_Forbidden_Spell_Dance"
+    },
+    "101307008": {
+      "set_code": "IMPH-JP008",
+      "source": "https://yugipedia.com/wiki/Harpie_Lady_-_Alluring_Dance"
+    },
+    "101307009": {
+      "set_code": "IMPH-JP009",
+      "source": "https://yugipedia.com/wiki/Purifire_of_the_Winter_Raven%27s_Forest"
+    },
+    "101307010": {
+      "set_code": "IMPH-JP010",
+      "source": "https://yugipedia.com/wiki/Mart%2C_Knight_of_the_Winter_Raven"
+    },
+    "101307011": {
+      "set_code": "IMPH-JP011",
+      "source": "https://yugipedia.com/wiki/Anu%2C_Knight_of_the_Winter_Raven"
+    },
+    "101307012": {
+      "set_code": "IMPH-JP012",
+      "source": "https://yugipedia.com/wiki/Sinful_Spoils_of_the_Winter_Raven%27s_Forest"
+    },
+    "101307013": {
+      "set_code": "IMPH-JP013",
+      "source": "https://yugipedia.com/wiki/Salamangreat_Markhor"
+    },
+    "101307014": {
+      "set_code": "IMPH-JP014",
+      "source": "https://yugipedia.com/wiki/Salamangreat_Bastella"
+    },
+    "101307015": {
+      "set_code": "IMPH-JP015",
+      "source": "https://yugipedia.com/wiki/Primrose_the_Twin_Rikka_Fairy"
+    },
+    "101307016": {
+      "set_code": "IMPH-JP016",
+      "source": "https://yugipedia.com/wiki/Rikka_Black_Princess"
+    },
+    "101307017": {
+      "set_code": "IMPH-JP017",
+      "source": "https://yugipedia.com/wiki/Invincible_Rocket_Warrior"
+    },
+    "101307018": {
+      "set_code": "IMPH-JP018",
+      "source": "https://yugipedia.com/wiki/Ashtrata_Tamayori"
+    },
+    "101307019": {
+      "set_code": "IMPH-JP019",
+      "source": "https://yugipedia.com/wiki/Rampant_Wings_of_Atlantis"
+    },
+    "101307020": {
+      "set_code": "IMPH-JP020",
+      "source": "https://yugipedia.com/wiki/Bunnillin%3A_Mocha_MOD"
+    },
+    "101307021": {
+      "set_code": "IMPH-JP021",
+      "source": "https://yugipedia.com/wiki/Heretic_Eradicator"
+    },
+    "101307022": {
+      "set_code": "IMPH-JP022",
+      "source": "https://yugipedia.com/wiki/Nightmare_Twinkle"
+    },
+    "101307023": {
+      "set_code": "IMPH-JP023",
+      "source": "https://yugipedia.com/wiki/The_Secret_Crane_Princess_Who_Returns_A_Favor"
+    },
+    "101307024": {
+      "set_code": "IMPH-JP024",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Amurusa"
+    },
+    "101307025": {
+      "set_code": "IMPH-JP025",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Luvian"
+    },
+    "101307026": {
+      "set_code": "IMPH-JP026",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Carcasas"
+    },
+    "101307027": {
+      "set_code": "IMPH-JP027",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Gigalovendra"
+    },
+    "101307028": {
+      "set_code": "IMPH-JP028",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Giriakarma"
+    },
+    "101307029": {
+      "set_code": "IMPH-JP029",
+      "source": "https://yugipedia.com/wiki/Javelin_Beetle_of_the_Alliance"
+    },
+    "101307030": {
+      "set_code": "IMPH-JP030",
+      "source": "https://yugipedia.com/wiki/The_Winged_Dragon_of_Ra%2C_Sun_God_of_Darkness"
+    },
+    "101307031": {
+      "set_code": "IMPH-JP031",
+      "source": "https://yugipedia.com/wiki/Lava_Golem%2C_Steelcage_of_the_Sun_God"
+    },
+    "101307032": {
+      "set_code": "IMPH-JP032",
+      "source": "https://yugipedia.com/wiki/Amazoness_Swordmaster"
+    },
+    "101307033": {
+      "set_code": "IMPH-JP033",
+      "source": "https://yugipedia.com/wiki/Triangle_Ecstasy_Harpie_Lady_Sisters"
+    },
+    "101307034": {
+      "set_code": "IMPH-JP034",
+      "source": "https://yugipedia.com/wiki/Diabellze%2C_Heiress_of_the_Winter_Raven%27s_Forest"
+    },
+    "101307035": {
+      "set_code": "IMPH-JP035",
+      "source": "https://yugipedia.com/wiki/Omega_Vidolium_the_Power_Patron_of_Heaven%27s_End"
+    },
+    "101307036": {
+      "set_code": "IMPH-JP036",
+      "source": "https://yugipedia.com/wiki/The_Legendary_Insect_Queen"
+    },
+    "101307037": {
+      "set_code": "IMPH-JP037",
+      "source": "https://yugipedia.com/wiki/Zaltys%2C_Knight_of_the_Winter_Raven"
+    },
+    "101307038": {
+      "set_code": "IMPH-JP038",
+      "source": "https://yugipedia.com/wiki/Aitvaras%2C_Knight_of_the_Winter_Raven"
+    },
+    "101307039": {
+      "set_code": "IMPH-JP039",
+      "source": "https://yugipedia.com/wiki/Ashtrama_Yoami"
+    },
+    "101307040": {
+      "set_code": "IMPH-JP040",
+      "source": "https://yugipedia.com/wiki/Lethargisaurus"
+    },
+    "101307041": {
+      "set_code": "IMPH-JP041",
+      "source": "https://yugipedia.com/wiki/Teardrop_the_Rikka_Sacred_Queen"
+    },
+    "101307042": {
+      "set_code": "IMPH-JP042",
+      "source": "https://yugipedia.com/wiki/Rikka_Empress_Strenna"
+    },
+    "101307043": {
+      "set_code": "IMPH-JP043",
+      "source": "https://yugipedia.com/wiki/Number_96%3A_Dark_Manipulator"
+    },
+    "101307044": {
+      "set_code": "IMPH-JP044",
+      "source": "https://yugipedia.com/wiki/Karin_the_Celestial_Sage_of_the_Highest_Heights"
+    },
+    "101307045": {
+      "set_code": "IMPH-JP045",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_Artmage"
+    },
+    "101307046": {
+      "set_code": "IMPH-JP046",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_DoomZ"
+    },
+    "101307047": {
+      "set_code": "IMPH-JP047",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_Elfnote"
+    },
+    "101307048": {
+      "set_code": "IMPH-JP048",
+      "source": "https://yugipedia.com/wiki/King_of_Beasts%2C_Risen_from_the_Valley_of_Flames"
+    },
+    "101307049": {
+      "set_code": "IMPH-JP049",
+      "source": "https://yugipedia.com/wiki/Codaedalus"
+    },
+    "101307050": {
+      "set_code": "IMPH-JP050",
+      "source": "https://yugipedia.com/wiki/Necromancer_of_Dragon_Magic"
+    },
+    "101307051": {
+      "set_code": "IMPH-JP051",
+      "source": "https://yugipedia.com/wiki/The_Immortal_Sun_God"
+    },
+    "101307052": {
+      "set_code": "IMPH-JP052",
+      "source": "https://yugipedia.com/wiki/The_Sun_God_Leading_Down_into_Darkness"
+    },
+    "101307053": {
+      "set_code": "IMPH-JP053",
+      "source": "https://yugipedia.com/wiki/Elegant_Tri-Mirror"
+    },
+    "101307054": {
+      "set_code": "IMPH-JP054",
+      "source": "https://yugipedia.com/wiki/Harpie_%26_Amazoness_Rakshasa_Formation"
+    },
+    "101307055": {
+      "set_code": "IMPH-JP055",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Conquest"
+    },
+    "101307056": {
+      "set_code": "IMPH-JP056",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Carnation"
+    },
+    "101307057": {
+      "set_code": "IMPH-JP057",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Butterfly"
+    },
+    "101307058": {
+      "set_code": "IMPH-JP058",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Practice"
+    },
+    "101307059": {
+      "set_code": "IMPH-JP059",
+      "source": "https://yugipedia.com/wiki/Deep_Forest_of_the_Winter_Raven"
+    },
+    "101307060": {
+      "set_code": "IMPH-JP060",
+      "source": "https://yugipedia.com/wiki/Power_Patron_Portal_Plugging_-Sword_of_Mutual_Destruction-"
+    },
+    "101307061": {
+      "set_code": "IMPH-JP061",
+      "source": "https://yugipedia.com/wiki/Ars_Magna_Academic_Arcane_Apparition_Acropolis"
+    },
+    "101307062": {
+      "set_code": "IMPH-JP062",
+      "source": "https://yugipedia.com/wiki/Salamangreat_Shrine"
+    },
+    "101307063": {
+      "set_code": "IMPH-JP063",
+      "source": "https://yugipedia.com/wiki/Salamangreat_Gearblade"
+    },
+    "101307064": {
+      "set_code": "IMPH-JP064",
+      "source": "https://yugipedia.com/wiki/Rikka_June_Moon"
+    },
+    "101307065": {
+      "set_code": "IMPH-JP065",
+      "source": "https://yugipedia.com/wiki/Chaos_Barian%27s_Change"
+    },
+    "101307066": {
+      "set_code": "IMPH-JP066",
+      "source": "https://yugipedia.com/wiki/Bunnillin_Extract"
+    },
+    "101307067": {
+      "set_code": "IMPH-JP067",
+      "source": "https://yugipedia.com/wiki/Power_of_the_Duelist_%28card%29"
+    },
+    "101307068": {
+      "set_code": "IMPH-JP068",
+      "source": "https://yugipedia.com/wiki/The_Pyramid_of_Kepher"
+    },
+    "101307069": {
+      "set_code": "IMPH-JP069",
+      "source": "https://yugipedia.com/wiki/Card_Crawl"
+    },
+    "101307070": {
+      "set_code": "IMPH-JP070",
+      "source": "https://yugipedia.com/wiki/Castle_of_Vampire"
+    },
+    "101307071": {
+      "set_code": "IMPH-JP071",
+      "source": "https://yugipedia.com/wiki/Autumn"
+    },
+    "101307072": {
+      "set_code": "IMPH-JP072",
+      "source": "https://yugipedia.com/wiki/Sun_God_Domination"
+    },
+    "101307073": {
+      "set_code": "IMPH-JP073",
+      "source": "https://yugipedia.com/wiki/Egyptian_God_Slime%2C_Protector_of_the_Sun_God"
+    },
+    "101307074": {
+      "set_code": "IMPH-JP074",
+      "source": "https://yugipedia.com/wiki/Amazoness_Dramatic_Rescue"
+    },
+    "101307075": {
+      "set_code": "IMPH-JP075",
+      "source": "https://yugipedia.com/wiki/Eyelluring_Mirror_Wall"
+    },
+    "101307076": {
+      "set_code": "IMPH-JP076",
+      "source": "https://yugipedia.com/wiki/Reindsurm_Encounter"
+    },
+    "101307077": {
+      "set_code": "IMPH-JP077",
+      "source": "https://yugipedia.com/wiki/Splendor_of_the_Winter_Raven_Witch"
+    },
+    "101307078": {
+      "set_code": "IMPH-JP078",
+      "source": "https://yugipedia.com/wiki/Illusion_of_the_Winter_Raven_Witch"
+    },
+    "101307079": {
+      "set_code": "IMPH-JP079",
+      "source": "https://yugipedia.com/wiki/Theorealize_Ephemeral_Lull"
+    },
+    "101307080": {
+      "set_code": "IMPH-JP080",
+      "source": "https://yugipedia.com/wiki/Bunnillin_Soft"
+    }
+  }
 }
