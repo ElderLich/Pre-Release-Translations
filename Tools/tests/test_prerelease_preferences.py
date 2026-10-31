@@ -135,6 +135,20 @@ class LocalizedWindowTests(unittest.TestCase):
         self.assertIn('CodexYGO',window.log.get('1.0','end'))
         self.assertFalse(window.busy)
 
+    def test_standard_refresh_note_follows_card_language_and_interface_override(self):
+        root,window=self.window('EN',config={'interface_language':'FR'})
+        refreshed='English names and effects are refreshed.'
+        preserved='Your existing translations are preserved.'
+        self.assertEqual(window.standard_refresh_note.cget('text'),i18n.translate(refreshed,'FR'))
+        window.language.set('IT')
+        self.assertEqual(window.standard_refresh_note.cget('text'),i18n.translate(preserved,'FR'))
+        window.ui_language='EN'; window.apply_language()
+        self.assertEqual(window.standard_refresh_note.cget('text'),preserved)
+        window.language.set('EN')
+        self.assertEqual(window.standard_refresh_note.cget('text'),refreshed)
+        window.rush_language.set('KR'); window.notebook.select(1); root.update()
+        self.assertEqual(window.standard_refresh_note.cget('text'),refreshed)
+
     def test_french_and_italian_buttons_fit_and_all_tabs_are_translated(self):
         for lang in ('FR','IT'):
             for scale in (1,1.25,1.5):

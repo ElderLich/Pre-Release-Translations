@@ -64,7 +64,7 @@ def child_creationflags() -> int:
 
 
 def log(message: str) -> None:
-    print(f"[local-workspace] {message}")
+    print(f"[local-workspace] {message}", flush=True)
 
 
 def fail(message: str) -> None:
@@ -99,9 +99,25 @@ def run(
 ) -> subprocess.CompletedProcess:
     if len(cmd) > 2 and cmd[0] == "git" and cmd[1] in {"pull", "push", "fetch"} and "origin" in cmd[2:]:
         migrate_official_origin(cwd)
-    log("$ " + " ".join(cmd))
-    result = subprocess.run(cmd, cwd=str(cwd), env=env, creationflags=child_creationflags())
+    command_text = subprocess.list2cmdline(cmd)
+    log("$ " + command_text)
+    child_env = (env if env is not None else os.environ).copy()
+    child_env.setdefault("PYTHONUTF8", "1")
+    child_env.setdefault("PYTHONUNBUFFERED", "1")
+    # Windows children started with CREATE_NO_WINDOW do not reliably inherit
+    # the GUI worker's pipe. Explicitly forward both streams, including errors.
+    try:
+        with subprocess.Popen(cmd, cwd=str(cwd), env=child_env,
+                              stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+                              text=True, encoding="utf-8", errors="replace",
+                              creationflags=child_creationflags()) as process:
+            for line in process.stdout:
+                print(line, end="", flush=True)
+            result = subprocess.CompletedProcess(cmd, process.wait())
+    except OSError as error:
+        fail(f"Could not start command: {command_text}\n{error}")
     if check and result.returncode != 0:
+        log(f"ERROR: Command failed with exit code {result.returncode}: {command_text}")
         raise SystemExit(result.returncode)
     return result
 

@@ -22968,6 +22968,17 @@ def build_translation_pack(lang: str):
             "ja": "{CARD}を素材にしてエクシーズ召喚しますか？",
             "kr": "{CARD} 위에 겹쳐 엑시즈 소환하겠습니까?",
         },
+        # Ghostrick Yoko: its alternative material must be face-down and have a Level.
+        "是否在里侧表示{CARD}怪兽上面重叠超量召唤?": {
+            "en": "Xyz Summon using 1 face-down Defense Position {CARD} monster you control that has a Level as material?",
+            "fr": "Invoquer Xyz en utilisant comme Matériel 1 monstre {CARD} en Position de Défense face verso que vous contrôlez et qui possède un Niveau ?",
+            "de": "Eine Xyz-Beschwörung durchführen, indem du 1 {CARD}-Monster in verdeckter Verteidigungsposition, das du kontrollierst und das eine Stufe hat, als Material verwendest?",
+            "es": "¿Invocar Xyz usando como material 1 monstruo {CARD} en Posición de Defensa boca abajo que controles y que tenga Nivel?",
+            "pt": "Invocar por Invocação-Xyz usando como matéria 1 monstro {CARD} em Posição de Defesa com a face para baixo que controlas e que tenha Nível?",
+            "it": "Evocare Xyz utilizzando come materiale 1 mostro {CARD} coperto in Posizione di Difesa che controlli e che abbia un Livello?",
+            "ja": "自分フィールドのレベルを持つ裏側守備表示の{CARD}モンスター１体を素材にしてエクシーズ召喚しますか？",
+            "kr": "자신 필드의 레벨을 가진 뒷면 수비 표시의 {CARD} 몬스터 1장을 소재로 엑시즈 소환하겠습니까?",
+        },
         "是否把10星怪兽召唤?": {
             "en": "Summon a Level 10 monster?",
             "fr": "Invoquer un monstre de Niveau 10 ?",
@@ -35819,11 +35830,23 @@ def build_translation_pack(lang: str):
     rush_exact_map = {key: values[lang] for key, values in RUSH_PROMPT_TRANSLATIONS.items() if lang in values}
     rush_provenance = {key: values[lang] for key, values in RUSH_PROMPT_PROVENANCE.items() if lang in values}
     exact_map.update(rush_exact_map)
+    # This full source cell names an archetype, not a card ID. Bind it here so
+    # a refresh can resolve it without abusing the numeric card-name mappings.
+    ghostrick_name = {
+        "en": '"Ghostrick"', "fr": '« Fantôruse »', "de": '„Geistertrick“',
+        "es": '"Fantastruco"', "pt": '«Fantardil»', "it": '"Fantasmatrucco"',
+        "ja": '「ゴーストリック」', "kr": '"고스트릭"',
+    }[lang]
+    named_exact_map = {
+        "是否在里侧表示「鬼计」怪兽上面重叠超量召唤?":
+            exact_map["是否在里侧表示{CARD}怪兽上面重叠超量召唤?"].replace("{CARD}", ghostrick_name),
+    }
     return {
         "lang": lang,
         "rush_exact_map": rush_exact_map,
         "rush_provenance": rush_provenance,
-        "localized_values": set(exact_map.values()) | set(rush_exact_map.values()),
+        "localized_values": set(exact_map.values()) | set(rush_exact_map.values()) | set(named_exact_map.values()),
+        "named_exact_map": named_exact_map,
         "exact_map": exact_map,      # normalized CN key -> localized output
         "regex_rules": regex_rules,  # applied with fullmatch (anchored semantics)
         "canon_pairs": canon_pairs,  # lookup-only canonicalization pairs (longest-first)
@@ -35936,6 +35959,10 @@ def _patch_one_text(s: str, pack: dict) -> str:
     """
     if not isinstance(s, str) or not s:
         return s
+
+    named = pack.get("named_exact_map", {}).get(s.strip().replace("？", "?"))
+    if named is not None:
+        return named
 
     # Report-backed Rush strings are exact full cells. Keep every placeholder;
     # do not collapse multiple named choices or run partial replacements.

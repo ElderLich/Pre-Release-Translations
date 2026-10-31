@@ -917,7 +917,8 @@ def autofill_source_text(cdb_path: Path, ypk_path: Path) -> None:
     try:
         from card_text_autofill import autofill_cdb_from_pack_sources
 
-        autofill_cdb_from_pack_sources(cdb_path, ypk_path, CONFIG.patch_lang, log_fn=log)
+        autofill_cdb_from_pack_sources(cdb_path, ypk_path, CONFIG.patch_lang, log_fn=log,
+                                      refresh_existing=CONFIG.patch_lang == "en")
         patch_en_desc(cdb_path)
     except Exception as exc:
         log(f"[SourceText] skipped after error: {exc}")
@@ -1017,8 +1018,9 @@ def workspace_sync() -> None:
         if workspace_update.exists():
             workspace_update.unlink()
             log(f"Removed unused workspace {workspace_update.name}")
-        run_prompt_patcher(WORK_DIR / "test-release.cdb", cards_cdb)
+        # Self-name prompt mappings must see names fetched during this sync.
         autofill_source_text(WORK_DIR / "test-release.cdb", ypk)
+        run_prompt_patcher(WORK_DIR / "test-release.cdb", cards_cdb)
     log(f"{CONFIG.folder} workspace sync completed")
 
 def release_build() -> None:

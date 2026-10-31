@@ -56,7 +56,10 @@ class RepositoryRenameTests(unittest.TestCase):
         self.assertEqual(self.git('config', '--get-all', 'remote.origin.url').splitlines(), custom)
 
     def test_network_commands_migrate_origin_before_running(self):
-        with patch.object(local_workspace, 'migrate_official_origin') as migrate, patch.object(local_workspace.subprocess, 'run', return_value=subprocess.CompletedProcess([], 0)) as run:
+        with patch.object(local_workspace, 'migrate_official_origin') as migrate, patch.object(local_workspace.subprocess, 'Popen') as run:
+            process = run.return_value.__enter__.return_value
+            process.stdout = []
+            process.wait.return_value = 0
             local_workspace.run(['git', 'pull', '--ff-only', 'origin', 'main'], self.root)
             migrate.assert_called_once_with(self.root)
             self.assertEqual(run.call_args.args[0], ['git', 'pull', '--ff-only', 'origin', 'main'])

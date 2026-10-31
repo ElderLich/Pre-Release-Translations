@@ -59,14 +59,32 @@ EXTRA_SET_CODES_BY_ID = {
     100200305: "VJMP-JP305",
     100260001: "YO12-JP001",
     100262001: "26TP-JP101",
+    # Listed only in etc.ydk; verified printed number:
+    # https://yugipedia.com/wiki/26TP-JP301
+    100262301: "26TP-JP301",
     100264002: "VP26-JP002",
     100264003: "VP26-JP003",
     100265002: "YOS3-JP002",
+    # Synthetic ID suffix 201 is printed as 009.
+    # https://yugipedia.com/wiki/YAC1-JP009
+    100268201: "YAC1-JP009",
+    # These promos are listed only in etc.ydk; verified printed numbers:
+    # https://yugipedia.com/wiki/TFGX-JP002
+    100270002: "TFGX-JP002",
+    # https://yugipedia.com/wiki/TFGX-JP003
+    100270003: "TFGX-JP003",
+    # https://yugipedia.com/wiki/CF02-JP000
+    100271000: "CF02-JP000",
+    # https://yugipedia.com/wiki/SJRY-JP001
+    100273001: "SJRY-JP001",
     # CH03's new cards use the JPP01-style printed numbers, not JP001.
     # Verified against https://yugipedia.com/wiki/CH03-JPP01 (and JPP02/JPP04).
     100274001: "CH03-JPP01",
     100274002: "CH03-JPP02",
     100274004: "CH03-JPP04",
+    # Synthetic ID suffix 281 is printed as 081.
+    # https://yugipedia.com/wiki/BETB-EN081
+    101306281: "BETB-EN081",
     # Present in the upstream CDB before its pack list was updated.
     # https://yugipedia.com/wiki/IMPH-JP070
     101307070: "IMPH-JP070",
@@ -590,7 +608,8 @@ def needs_source_text(current: str, original: str, lang: str) -> bool:
 
 
 def update_cdb_texts(cdb_path: Path, cards_by_id: dict[int, CardText], log: LogFn,
-                     original: dict[int, tuple[str, str]] | None = None, lang: str = "en") -> int:
+                     original: dict[int, tuple[str, str]] | None = None, lang: str = "en", *,
+                     refresh_existing: bool = False) -> int:
     if not cards_by_id:
         return 0
     conn = sqlite3.connect(str(cdb_path))
@@ -601,7 +620,7 @@ def update_cdb_texts(cdb_path: Path, cards_by_id: dict[int, CardText], log: LogF
             if not row:
                 continue
             raw = (original or {}).get(card_id, ("", ""))
-            result = tuple(new if new and needs_source_text(old or "", raw[i] or "", lang) else old
+            result = tuple(new if new and (refresh_existing or needs_source_text(old or "", raw[i] or "", lang)) else old
                            for i, (old, new) in enumerate(zip(row, (card.name, card.desc))))
             if tuple(row) != result:
                 conn.execute("UPDATE texts SET name=?, desc=? WHERE id=?", (*result, card_id))
@@ -609,7 +628,8 @@ def update_cdb_texts(cdb_path: Path, cards_by_id: dict[int, CardText], log: LogF
         conn.commit()
     finally:
         conn.close()
-    log(f"[SourceText] Updated CDB rows={changed}; translator edits preserved")
+    policy = "verified source names/effects refreshed" if refresh_existing else "translator edits preserved"
+    log(f"[SourceText] Updated CDB rows={changed}; {policy}")
     return changed
 
 
@@ -650,7 +670,9 @@ def write_source_report(path: Path, report: dict) -> None:
     path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
-def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, log_fn: LogFn | None = None) -> int:
+def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, log_fn: LogFn | None = None, *,
+                                   refresh_existing: bool = False) -> int:
+    """Fill untranslated fields, or explicitly refresh all verified names/effects."""
     log = log_fn or log_default
     if lang in {"kr", "ko"}:
         report = manual_source_report(lang)
@@ -659,6 +681,8 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
         return 0
     if lang not in {"en", "fr", "jp"}:
         return 0
+    if refresh_existing:
+        log("[SourceText] Refreshing all verified card names/effects, including existing translations")
     entries = load_pack_entries_from_ypk(ypk_path)
     if not entries:
         log(f"[SourceText] No pack/*.ydk entries found in {ypk_path}")
@@ -667,7 +691,7 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
     original = original_texts_from_ypk(ypk_path)
     with closing(sqlite3.connect(cdb_path)) as conn:
         ids = {int(card_id) for card_id, name, desc in conn.execute("SELECT id,name,desc FROM texts")
-               if any(needs_source_text(value or "", raw or "", lang)
+               if refresh_existing or any(needs_source_text(value or "", raw or "", lang)
                       for value, raw in zip((name, desc), original.get(int(card_id), ("", ""))))}
     id_to_code = build_id_to_set_code(entries, ids, lang)
     if not id_to_code:
@@ -700,7 +724,8 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
 
     missing = len(id_to_code) - len(cards_by_id)
     log(f"[SourceText] candidates={len(id_to_code)}, matched={len(cards_by_id)}, missing={missing}")
-    report = {"language": lang, "candidates": len(id_to_code), "matched": len(cards_by_id),
+    report = {"language": lang, "mode": "refresh" if refresh_existing else "fill",
+              "candidates": len(id_to_code), "matched": len(cards_by_id),
               "unmatched_ids": sorted(ids - cards_by_id.keys()),
               "unresolved": [{"id": key, "name": names_by_id.get(key, ""), "set_code": id_to_code.get(key),
                               **diagnostics.get(id_to_code.get(key), {"reason": "No verified source match" if key in id_to_code else "No printed set code mapping"})}
@@ -709,4 +734,4 @@ def autofill_cdb_from_pack_sources(cdb_path: Path, ypk_path: Path, lang: str, lo
                           for key, card in sorted(cards_by_id.items())}}
     report_path = cdb_path.parent / "Reports/source_text.json"
     write_source_report(report_path, report)
-    return update_cdb_texts(cdb_path, cards_by_id, log, original, lang)
+    return update_cdb_texts(cdb_path, cards_by_id, log, original, lang, refresh_existing=refresh_existing)

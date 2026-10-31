@@ -327,9 +327,9 @@ It does this:
 
 ## Automatic English and French card text
 
-The existing local **Refresh from MyCard** action (`py AutoPR.py refresh`) now
-fetches missing French names/effects as well as English after importing the
-latest MyCard package. The equivalent repository command is:
+The local **Fetch updates from MyCard** action (`py AutoPR.py refresh`)
+refreshes all English names/effects and fills missing French text after importing
+the latest MyCard package. The equivalent repository command for French is:
 
 ```powershell
 python .github/scripts/tcg_autopr.py --lang fr workspace-sync
@@ -349,26 +349,38 @@ translations are rejected. The source inventory still comes from the upstream
 CDB; the API does not add arbitrary new cards. English is never substituted as
 French, and missing translations remain available for manual completion.
 
-Reviewed printed-code exceptions cover CH03's `JPP01`/`JPP02`/`JPP04` numbers
+Reviewed printed-code exceptions include CH03's `JPP01`/`JPP02`/`JPP04` numbers
 and Castle of Vampire (`IMPH-JP070`), whose upstream CDB entry preceded its pack
-listing. These mappings only apply to cards already present in the workspace.
+listing. They also cover cards still listed under `ETC` and synthetic ID suffixes
+that differ from their printed numbers. These mappings only apply to cards
+already present in the workspace.
 
-Human-edited names and effects are preserved field by field. Only blank,
-source-identical or still-Chinese fields are filled. Prompts remain owned by
+Standard English checks every card on each refresh and replaces existing names
+and effects with the latest verified source text, including manual edits. Save
+and close the database in your editor before refreshing, then reopen it to see
+the updated text. Cards without a complete verified source match keep their
+existing text. French preserves human-edited fields and only fills blank,
+source-identical or still-Chinese fields. Prompts remain owned by
 `Tools/PromptPatcher.py` and `Shared/Mappings.csv` as before. Matches and gaps
 are recorded in `Workspace/Reports/source_text.json` (or `raw2/Reports` for a
 local refresh). Matching never adds cards outside the upstream CDB.
 
-`candidates` counts pending cards with a printed set-code mapping; `matched`
+`candidates` counts cards selected for lookup with a printed set-code mapping
+(all cards for Standard English, pending cards for French); `matched`
 counts complete localized source records accepted for those cards. `unmatched_ids`
-lists cards still needing source text, including any with no mapping. A zero
+lists selected cards without a verified source match, including any with no mapping. A zero
 match count is not a build failure. The `unresolved` entries explain whether
 fields are missing, a printed identity did not match, or a source request failed.
 The nine French entries reported on 2026-10-11 resolved to verified Yugipedia
 pages but had no French fields there. CodexYGO supplied all nine complete French
 records; the local and repository workspaces were updated. Their report now
 records `candidates: 9`, `matched: 9`, and the exact CodexYGO source links.
-Later refreshes may report zero candidates when no untranslated fields remain.
+Later French refreshes may report zero candidates when no untranslated fields remain.
+
+The local activity log streams the sync script's progress and errors, followed
+by the failed command and its exit code when an operation stops. An exit code
+alone does not identify the cause; check the preceding download, database or
+Git error in the expanded log.
 
 Korean names/effects are translator-managed for both Standard and Rush. No
 Korean web autofill is attempted. Standard still refreshes upstream inventory,

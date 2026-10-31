@@ -4,6 +4,7 @@ from contextlib import closing
 import sys
 import tempfile
 import unittest
+import zipfile
 from pathlib import Path
 from unittest.mock import patch
 
@@ -19,11 +20,30 @@ class SourceTextTests(unittest.TestCase):
         entries = {card_id: source.PackEntry(card_id, "CH03", "CH03.ydk")
                    for card_id in (100274001, 100274002, 100274004)}
         entries[101307050] = source.PackEntry(101307050, "IMPH", "IMPH.ydk")
+        exceptions = {
+            100262301: "26TP-JP301", 100268201: "YAC1-JP009",
+            100270002: "TFGX-JP002", 100270003: "TFGX-JP003",
+            100271000: "CF02-JP000", 100273001: "SJRY-JP001",
+            101306281: "BETB-EN081",
+        }
+        upstream_packs = {
+            100262301: "ETC", 100268201: "YAC1", 100270002: "ETC",
+            100270003: "ETC", 100271000: "ETC", 100273001: "ETC",
+            101306281: "BETB-EN",
+        }
+        entries.update({card_id: source.PackEntry(card_id, pack, pack + ".ydk")
+                        for card_id, pack in upstream_packs.items()})
         ids = set(entries) | {101307070}
         self.assertEqual(source.build_id_to_set_code(entries, ids, "fr"), {
             100274001: "CH03-JPP01", 100274002: "CH03-JPP02", 100274004: "CH03-JPP04",
-            101307050: "IMPH-JP050", 101307070: "IMPH-JP070"})
+            101307050: "IMPH-JP050", 101307070: "IMPH-JP070", **exceptions})
         self.assertNotIn(101307070, source.build_id_to_set_code(entries, set(entries), "fr"))
+        for card_id, code in exceptions.items():
+            with self.subTest(card_id=card_id):
+                self.assertEqual(source.build_id_to_set_code({}, {card_id}, "en"), {card_id: code})
+                conflicting = {card_id: source.PackEntry(card_id, "WRONG", "wrong.ydk")}
+                self.assertEqual(source.build_id_to_set_code(conflicting, {card_id}, "en"), {card_id: code})
+                self.assertEqual(source.build_id_to_set_code(conflicting, set(), "en"), {})
 
     def test_upstream_ranges_and_short_promo_suffix_are_exact(self):
         text = "- Set (RD/CA01-JP): `120309XXX`\n- Promo (RD/S241-JP): `1203021XX`"
@@ -165,6 +185,131 @@ class SourceTextTests(unittest.TestCase):
                                    lambda _: None, {1: ("原名", "原文")}, "fr")
             with closing(sqlite3.connect(path)) as db:
                 self.assertEqual(db.execute("SELECT name,desc FROM texts").fetchone(), ("Human name", "Fetched effect"))
+
+    def test_english_workspace_refresh_replaces_existing_text_on_every_sync(self):
+        import tcg_autopr
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = root / "cards.cdb"
+            with closing(sqlite3.connect(path)) as db:
+                db.execute("CREATE TABLE texts(id integer, name text, desc text, str1 text, str16 text)")
+                db.execute("CREATE TABLE datas(id integer, atk integer)")
+                db.execute("INSERT INTO texts VALUES(100274001, 'Manually edited name', 'Old English effect', 'Choose a card', 'Last prompt')")
+                db.execute("INSERT INTO datas VALUES(100274001, 3000)")
+                db.commit()
+            entries = {100274001: source.PackEntry(100274001, "CH03", "CH03.ydk")}
+            original = {100274001: ("原名", "原文")}
+            with patch.object(tcg_autopr, "CONFIG", tcg_autopr.LANG_CONFIGS["en"], create=True), \
+                 patch.object(source, "load_pack_entries_from_ypk", return_value=entries), \
+                 patch.object(source, "original_texts_from_ypk", return_value=original), \
+                 patch.object(tcg_autopr, "log"):
+                for revision in (1, 2):
+                    data = {"query": {
+                        "redirects": [{"from": "CH03-JPP01", "to": "Trinitas Magistus"}],
+                        "pages": [{"title": "Trinitas Magistus", "revisions": [{"content":
+                            "{{CardTable2\n| text = Current effect " + str(revision) + ".\n"
+                            "| jp_sets = CH03-JPP01; Set; Rare\n}}"}]}]}}
+                    with patch.object(source, "request_url", return_value=json.dumps(data)) as request:
+                        tcg_autopr.autofill_source_text(path, root / "upstream.ypk")
+                    request.assert_called_once()
+                    with closing(sqlite3.connect(path)) as db:
+                        self.assertEqual(db.execute("SELECT * FROM texts").fetchall(), [
+                            (100274001, "Trinitas Magistus", f"Current effect {revision}.", "Choose a card", "Last prompt")])
+                        self.assertEqual(db.execute("SELECT * FROM datas").fetchall(), [(100274001, 3000)])
+            report = json.loads((root / "Reports/source_text.json").read_text(encoding="utf-8"))
+            self.assertEqual((report["mode"], report["candidates"], report["matched"]), ("refresh", 1, 1))
+            self.assertEqual(report["matches"]["100274001"]["set_code"], "CH03-JPP01")
+
+    def test_refresh_keeps_existing_text_and_reports_failed_or_unmapped_sources(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = root / "cards.cdb"
+            rows = [(1, "English name", "Existing effect"), (2, "Unmapped name", "Another effect")]
+            with closing(sqlite3.connect(path)) as db:
+                db.execute("CREATE TABLE texts(id integer, name text, desc text)")
+                db.executemany("INSERT INTO texts VALUES(?, ?, ?)", rows)
+                db.commit()
+            entries = {1: source.PackEntry(1, "AA01", "AA01.ydk")}
+            with patch.object(source, "load_pack_entries_from_ypk", return_value=entries), \
+                 patch.object(source, "original_texts_from_ypk", return_value={}), \
+                 patch.object(source, "request_url", side_effect=OSError("offline")):
+                changed = source.autofill_cdb_from_pack_sources(path, root / "upstream.ypk", "en",
+                                                               lambda _: None, refresh_existing=True)
+            self.assertEqual(changed, 0)
+            with closing(sqlite3.connect(path)) as db:
+                self.assertEqual(db.execute("SELECT * FROM texts ORDER BY id").fetchall(), rows)
+            report = json.loads((root / "Reports/source_text.json").read_text(encoding="utf-8"))
+            self.assertEqual(report["unmatched_ids"], [1, 2])
+            self.assertEqual(report["unresolved"][0]["reason"], "Source request failed")
+            self.assertEqual(report["unresolved"][1]["reason"], "No printed set code mapping")
+
+    def test_one_workspace_sync_uses_refreshed_name_in_self_mapped_prompt(self):
+        import tcg_autopr
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            work = root / "Workspace"
+            work.mkdir()
+            upstream = root / "upstream.cdb"
+            workspace = work / "test-release.cdb"
+            str_columns = ", ".join(f"str{i} text" for i in range(1, 17))
+            for path, name, desc, prompt in (
+                (upstream, "原名", "原文", "Use {CARD}?"),
+                (workspace, "Old English name", "Old English effect", 'Use "Old English name"?'),
+            ):
+                with closing(sqlite3.connect(path)) as db:
+                    db.execute(f"CREATE TABLE texts(id integer, name text, desc text, {str_columns})")
+                    db.execute("CREATE TABLE datas(id integer, atk integer)")
+                    db.execute("INSERT INTO texts(id,name,desc,str1) VALUES(101307041,?,?,?)", (name, desc, prompt))
+                    db.execute("INSERT INTO datas VALUES(101307041, 2800)")
+                    db.commit()
+            package = root / "upstream.ypk"
+            with zipfile.ZipFile(package, "w") as archive:
+                archive.write(upstream, "test-release.cdb")
+                archive.writestr("test-strings.conf", "")
+                archive.writestr("pack/IMPH.ydk", "101307041\n")
+            mappings = root / "Mappings.csv"
+            mappings.write_text("id,name,str1\n101307041,Old English name,self\n", encoding="utf-8")
+            new_name = "Teardrop the Rikka Sacred Queen"
+            response = {"query": {
+                "redirects": [{"from": "IMPH-JP041", "to": new_name}],
+                "pages": [{"title": new_name, "revisions": [{"content":
+                    "{{CardTable2\n| text = Current effect.\n| jp_sets = IMPH-JP041; Set; Rare\n}}"}]}]}}
+
+            def download_fixture(url, target):
+                target.write_bytes((package if url == "fixture:package" else upstream).read_bytes())
+
+            with patch.multiple(tcg_autopr, create=True, CONFIG=tcg_autopr.LANG_CONFIGS["en"],
+                                OUTPUT_DIR=root, BASE_DIR=root / "Base Files", WORK_DIR=work,
+                                TOOLS_DIR=ROOT / "Tools", MAPPINGS_PATH=mappings,
+                                YPK_URL="fixture:package", CARDS_CDB_URL="fixture:cards"), \
+                 patch.object(tcg_autopr, "download_file", side_effect=download_fixture), \
+                 patch.object(source, "request_url", return_value=json.dumps(response)), \
+                 patch.object(tcg_autopr, "log"):
+                tcg_autopr.workspace_sync()
+            with closing(sqlite3.connect(workspace)) as db:
+                self.assertEqual(db.execute("SELECT name,desc,str1 FROM texts").fetchone(),
+                                 (new_name, "Current effect.", f'Use "{new_name}"?'))
+            self.assertEqual(tcg_autopr.load_mappings_csv(mappings)[101307041]["name"], new_name)
+
+    def test_french_workspace_sync_keeps_existing_translator_text(self):
+        import tcg_autopr
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            path = root / "cards.cdb"
+            with closing(sqlite3.connect(path)) as db:
+                db.execute("CREATE TABLE texts(id integer, name text, desc text)")
+                db.execute("INSERT INTO texts VALUES(1, 'Nom humain', 'Effet traduit.')")
+                db.commit()
+            with patch.object(tcg_autopr, "CONFIG", tcg_autopr.LANG_CONFIGS["fr"], create=True), \
+                 patch.object(source, "load_pack_entries_from_ypk", return_value={1: source.PackEntry(1, "AA01", "AA01.ydk")}), \
+                 patch.object(source, "original_texts_from_ypk", return_value={1: ("原名", "原文")}), \
+                 patch.object(source, "request_url") as request, patch.object(tcg_autopr, "log"):
+                tcg_autopr.autofill_source_text(path, root / "upstream.ypk")
+            request.assert_not_called()
+            with closing(sqlite3.connect(path)) as db:
+                self.assertEqual(db.execute("SELECT name,desc FROM texts").fetchone(), ("Nom humain", "Effet traduit."))
+            report = json.loads((root / "Reports/source_text.json").read_text(encoding="utf-8"))
+            self.assertEqual((report["mode"], report["candidates"]), ("fill", 0))
 
     def test_japanese_human_edit_is_not_treated_as_chinese(self):
         self.assertFalse(source.needs_source_text("カードを引く。", "抽卡。", "jp"))

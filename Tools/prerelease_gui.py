@@ -290,6 +290,8 @@ class PrereleaseWindow:
         tab = self.notebook.index(self.notebook.select())
         automatic = self.rush_language.get() if tab == 1 else self.language.get() if tab == 0 else self.display_language
         self.display_language = self.ui_language if self.ui_language in LANGUAGE_NAMES else automatic
+        self.set_text(self.standard_refresh_note, "English names and effects are refreshed."
+                      if self.language.get() == "EN" else "Your existing translations are preserved.")
         self.root.title(self.tr("Pre-Release Translations · Translation Workspace"))
         for widget, (key, values) in list(self.localized_widgets.items()):
             if widget.winfo_exists():
@@ -532,7 +534,8 @@ class PrereleaseWindow:
         self.controls.append((selector, "readonly"))
         self.standard_fetch_button = self.button(update, "Fetch updates from MyCard", lambda: self.start_standard("refresh"), style="Primary")
         self.standard_fetch_button.grid(row=2, column=0, sticky="w")
-        self.label(update, "Your existing translations are preserved.", "Caption", panel=True).grid(row=2, column=1, sticky="e", padx=(self.px(18), 0))
+        self.standard_refresh_note = self.label(update, kind="Caption", panel=True)
+        self.standard_refresh_note.grid(row=2, column=1, sticky="e", padx=(self.px(18), 0))
 
         cards = ttk.Frame(parent, style="App.TFrame")
         cards.grid(row=3, column=0, sticky="ew", pady=self.px(14))

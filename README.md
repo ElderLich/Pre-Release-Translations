@@ -85,7 +85,7 @@ The [full translator guide](docs/TRANSLATOR_WORKFLOW.md#local-setup-for-translat
 | Simplified Chinese | Follows upstream `RD Patch.cdb`; the workspace is reference-only. |
 | Other Rush locales | Existing workspace translations and locale seed databases, completed by translators. |
 
-Standard also supports automatic English and French source text. Existing translator edits take precedence; incomplete source text remains pending for review. See [automatic card text](docs/TRANSLATOR_WORKFLOW.md#automatic-english-and-french-card-text) for matching rules and reports.
+Standard refreshes all English names and effects from verified sources, including previously translated text. French autofill preserves existing translator edits; incomplete source text remains pending for review. See [automatic card text](docs/TRANSLATOR_WORKFLOW.md#automatic-english-and-french-card-text) for matching rules and reports.
 
 **Traditional Chinese:** Standard uses its [dedicated workflow](.github/workflows/autopr-zh-tw.yml) and `ZH-TW/Base Files`. Rush uses the editable `ZH-TW/Rush/Workspace` database. See the guides before editing either.
 

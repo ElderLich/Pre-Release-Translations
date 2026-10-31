@@ -139,6 +139,36 @@ class RushButtonContractTests(unittest.TestCase):
         self.assertEqual(events.get(), ("done", 7))
 
     @unittest.skipIf(gui is None, "Tkinter unavailable")
+    def test_worker_streams_nested_command_output_and_failure(self):
+        child = self.root / "child.py"
+        child.write_text("import sys\nprint('child progress')\n"
+                         "print('child error: \\u65e5\\u672c', file=sys.stderr)\nraise SystemExit(7)\n",
+                         encoding="utf-8")
+        tools = Path(local_workspace.__file__).parent
+        for check in (True, False):
+            with self.subTest(check=check):
+                worker = self.root / "worker.py"
+                worker.write_text(
+                    f"import sys\nfrom pathlib import Path\nsys.path.insert(0, {str(tools)!r})\n"
+                    "import local_workspace\n"
+                    f"result = local_workspace.run([sys.executable, {str(child)!r}], Path.cwd(), check={check!r})\n"
+                    "print(f'result: {result.returncode}, {result.stdout!r}, {result.stderr!r}')\n",
+                    encoding="utf-8")
+                events = queue.Queue()
+                gui.stream_job([sys.executable, str(worker)], self.root, events)
+                received = []
+                while not events.empty():
+                    received.append(events.get())
+                self.assertIn(("log", "child progress\n"), received)
+                self.assertIn(("log", "child error: 日本\n"), received)
+                self.assertEqual(received[-1], ("done", 7 if check else 0))
+                if check:
+                    self.assertTrue(any(event == "log" and "Command failed with exit code 7:" in value
+                                        for event, value in received))
+                else:
+                    self.assertIn(("log", "result: 7, None, None\n"), received)
+
+    @unittest.skipIf(gui is None, "Tkinter unavailable")
     def test_rush_buttons_use_worker_and_restore_controls(self):
         try:
             root = gui.tk.Tk()
