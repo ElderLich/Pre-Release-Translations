@@ -1,5 +1,35 @@
 [
   {
+    "name": "鬼计花园",
+    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：只在这张卡表侧表示存在才有1次，自己主要阶段才能发动。从卡组把1只「鬼计」怪兽加入手卡。\r\n②：怪兽被对方的效果送去墓地的场合，可以从以下效果选择1个发动。\r\n●自己场上表侧表示或里侧守备表示的1只「鬼计」怪兽变成表侧守备表示或里侧守备表示。\r\n●自己卡组上面最上面的卡作为自己场上的1只「鬼计」超量怪兽的超量素材。 ",
+    "overallString": "[Magia|Magia de Campo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
+  },
+  {
+    "name": "鬼计艺术",
+    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：把自己手卡·场上的最多2只「鬼计」怪兽解放，根据那个数量从卡组把「鬼计」怪兽各自以表侧守备表示或里侧守备表示特殊召唤（同名卡最多1张）。这张卡发动后，直到回合结束时自己不是暗属性怪兽不能特殊召唤。\r\n②：自己主要阶段把墓地的这张卡除外才能发动。自己场上里侧守备表示的1只「鬼计」怪兽变成表侧守备表示。",
+    "overallString": "[Magia|Magia Rápida]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272054.jpg?version=19.7"
+  },
+  {
+    "name": "鬼计巫妖",
+    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡召唤·反转的场合发动。从卡组把1张「鬼计」速攻魔法·通常陷阱卡在自己场上盖放。这个效果盖放的卡在盖放的回合也能发动。这个回合，自己不是暗属性怪兽不能特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合1次）。 ",
+    "overallString": "[Monstro|Efeito] Zumbi/Trevas  [★3] 1500/600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272050.jpg?version=19.7"
+  },
+  {
+    "name": "鬼计妖狐",
+    "desc": "2星「鬼计」怪兽×2\r\n自己对「鬼计妖狐」1回合只能有1次从额外卡组特殊召唤。这张卡也能在自己场上里侧守备表示的持有等级的「鬼计」怪兽上面重叠来超量召唤。\r\n①：这张卡只要在怪兽区域存在，不会被对方的效果破坏。\r\n②：1回合1次，把这张卡1个超量素材取除才能发动。从卡组把1只「鬼计」怪兽特殊召唤。这个回合，自己不是暗属性怪兽不能特殊召唤。",
+    "overallString": "[Monstro|Efeito|Xyz] Mago/Trevas  [☆2] 900/900",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
+  },
+  {
+    "name": "鬼计之主 阿鲁卡德",
+    "desc": "6星怪兽×3\r\n这张卡也能把手卡1张「鬼计」卡丢弃，在自己场上的「鬼计妖魔·阿鲁卡德」上面重叠来超量召唤。这张卡不能作为超量召唤。\r\n①：表侧表示的这张卡不能变成里侧守备表示。\r\n②：自己·对方回合1次，把这张卡1个超量素材取除才能发动。对方场上的里侧表示卡全部破坏。\r\n③：魔法·陷阱卡发动时，把这张卡2个超量素材取除才能发动。那个发动无效，那张卡直接盖放。",
+    "overallString": "[Monstro|Efeito|Xyz] Zumbi/Trevas  [☆6] 2800/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
+  },
+  {
     "name": "Brilho de Pesadelo",
     "desc": "Se este card é Invocado por Invocação-Normal ou Especial: você pode Invocar por Invocação-Especial 1 monstro Ilusão de Nível 7 ou menor do seu Deck, exceto \"Brilho de Pesadelo\", mas retorne-o à mão durante a Fase Final. Você só pode usar este efeito de \"Brilho de Pesadelo\" uma vez por turno.\r\nSe este card batalha com um monstro, nenhum pode ser destruído por aquela batalha.\r\nUma vez por turno, no final da Etapa de Dano, se um monstro batalhou: você pode alterar a posição de batalha de todos os monstros no campo.",
     "overallString": "[Monstro|Efeito] Ilusão/Luz  [★4] 1700/1700",
