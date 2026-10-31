@@ -1,19 +1,15 @@
 {
   "language": "jp",
-  "candidates": 3,
-  "matched": 3,
-  "unmatched_ids": [
-    100270002
-  ],
-  "unresolved": [
-    {
-      "id": 100270002,
-      "name": "邪心教典",
-      "set_code": null,
-      "reason": "No printed set code mapping"
-    }
-  ],
+  "mode": "fill",
+  "candidates": 4,
+  "matched": 4,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
+    "100270002": {
+      "set_code": "TFGX-JP002",
+      "source": "https://ocg-card.com/list/tfgx/"
+    },
     "101307039": {
       "set_code": "IMPH-JP039",
       "source": "https://ocg-card.com/list/imph/"
