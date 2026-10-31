@@ -238,12 +238,60 @@ with patch.object(downloads.urllib.request, 'urlopen', side_effect=AssertionErro
             def read(self, *args):
                 raise AssertionError('Use one bounded underlying read')
         with patch.object(downloads.time, 'monotonic', side_effect=lambda: clock[0]), patch.object(
-                downloads.urllib.request, 'urlopen', return_value=Trickle(b'', headers={'Content-Type': 'application/zip'})) as request:
+                downloads.urllib.request, 'urlopen', side_effect=lambda *a, **k: Trickle(
+                    b'', headers={'Content-Type': 'application/zip'})) as request:
             with self.assertRaisesRegex(downloads.DownloadError, 'budget'):
                 self.download()
-        self.assertEqual(request.call_count, 1)
+        self.assertEqual(request.call_count, downloads.DOWNLOAD_ATTEMPTS)
+        self.assertEqual(clock[0], downloads.DOWNLOAD_ATTEMPTS * downloads.DOWNLOAD_BUDGET)
         self.assertFalse(self.target.exists())
         self.assertFalse(list(self.directory.iterdir()))
+
+    def test_exhausted_first_attempt_still_tries_and_validates_backup(self):
+        clock = [0.0]
+        payload = package()
+        self.target.write_bytes(b'last good')
+        class Slow(Response):
+            def read1(self, size):
+                clock[0] += downloads.DOWNLOAD_BUDGET / 2
+                return b'x'
+        class Backup(Response):
+            def read1(inner_self, size):
+                # The old target survives until the complete backup validates.
+                self.assertEqual(self.target.read_bytes(), b'last good')
+                clock[0] += 1
+                return super().read1(size)
+        with patch.object(downloads.time, 'monotonic', side_effect=lambda: clock[0]), patch.object(
+                downloads.urllib.request, 'urlopen', side_effect=[
+                    Slow(b'', headers={'Content-Type': 'application/zip'}), Backup(payload)
+                ]) as request:
+            self.download()
+        self.assertEqual(request.call_count, 2)
+        self.assertEqual(request.call_args_list[1].args[0].full_url,
+                         downloads.UPSTREAM_BASES[1] + 'archive/ygopro-super-pre.ypk')
+        self.assertEqual(self.target.read_bytes(), payload)
+        self.assertEqual(list(self.directory.iterdir()), [self.target])
+
+    def test_slow_download_reports_progress_with_and_without_content_length(self):
+        payload = package()
+        for headers in ({'Content-Length': str(len(payload))}, {'Content-Type': 'application/zip'}):
+            with self.subTest(headers=headers):
+                clock = [0.0]
+                messages = []
+                class Slow(Response):
+                    def read1(self, size):
+                        clock[0] += 11
+                        return super().read1(size)
+                with patch.object(downloads.time, 'monotonic', side_effect=lambda: clock[0]), patch.object(
+                        downloads.urllib.request, 'urlopen', return_value=Slow(payload, headers=headers)):
+                    downloads.download_file(downloads.YPK_URL_DEFAULT, self.target,
+                                            user_agent='test', log_fn=messages.append)
+                progress = [message for message in messages if message.startswith('Download progress:')]
+                self.assertEqual(len(progress), 1)
+                self.assertIn(f'{len(payload):,}', progress[0])
+                self.assertIn('11.0s (attempt 1/3)', progress[0])
+                self.assertEqual('100%' in progress[0], 'Content-Length' in headers)
+                self.assertEqual(self.target.read_bytes(), payload)
 
     def test_tls_failure_uses_official_alternative_without_disabling_validation(self):
         url = downloads.UPSTREAM_BASES[1] + 'archive/ygopro-super-pre.ypk'

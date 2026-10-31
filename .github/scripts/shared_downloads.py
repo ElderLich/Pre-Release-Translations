@@ -27,9 +27,9 @@ JSON_URL_DEFAULT = UPSTREAM_BASES[0] + "data/test-release.json"
 DOWNLOAD_ATTEMPTS = 3
 DOWNLOAD_TIMEOUT = 20
 # A read timeout alone does not stop a server that trickles bytes indefinitely.
-# Check a shared budget between bounded reads and attempts as well. This is a
-# cooperative deadline: an in-flight read can finish up to one socket timeout
-# later (20 seconds), rather than a strict 120-second wall-clock cutoff.
+# Bound each attempt separately so a slow first endpoint cannot consume the
+# backup endpoint's time. With three attempts this permits up to six minutes,
+# plus backoff and in-flight reads (up to one socket timeout per attempt).
 DOWNLOAD_BUDGET = 120
 MAX_DOWNLOAD_BYTES = 1024**3
 CDB_VALIDATION_BUDGET = 10
@@ -225,14 +225,15 @@ def download_file(
         return
     candidates = _preferred_urls(url, directory)
     started = time.monotonic()
-    deadline = started + DOWNLOAD_BUDGET
     for attempt in range(1, DOWNLOAD_ATTEMPTS + 1):
-        if time.monotonic() >= deadline:
-            raise DownloadError(f"Download budget of {DOWNLOAD_BUDGET}s exhausted for {url}")
+        attempt_started = time.monotonic()
+        deadline = attempt_started + DOWNLOAD_BUDGET
         candidate = candidates[(attempt - 1) % len(candidates)]
-        log_fn(f"Downloading {candidate} (attempt {attempt}/{DOWNLOAD_ATTEMPTS})")
+        log_fn(f"Downloading {candidate} (attempt {attempt}/{DOWNLOAD_ATTEMPTS}, {DOWNLOAD_BUDGET}s budget)")
         partial: Path | None = None
         final_url = candidate
+        received = 0
+        next_progress = attempt_started + 10
         try:
             request = urllib.request.Request(candidate, headers={"User-Agent": user_agent})
             with urllib.request.urlopen(request, timeout=min(DOWNLOAD_TIMEOUT, max(0.1, deadline - time.monotonic()))) as response:
@@ -248,7 +249,6 @@ def download_file(
                 expected = int(length) if length is not None else None
                 if expected is not None and expected > MAX_DOWNLOAD_BYTES:
                     raise DownloadError("Download exceeds the maximum supported size")
-                received = 0
                 with tempfile.NamedTemporaryFile(
                     dir=target.parent, prefix=f".{target.name}.", suffix=".part", delete=False
                 ) as output:
@@ -258,7 +258,7 @@ def download_file(
                     read = getattr(response, "read1", response.read)
                     while True:
                         if time.monotonic() >= deadline:
-                            raise DownloadError(f"Download budget of {DOWNLOAD_BUDGET}s exhausted")
+                            raise DownloadError(f"Attempt budget of {DOWNLOAD_BUDGET}s exhausted")
                         chunk = read(256 * 1024)
                         if not chunk:
                             break
@@ -266,6 +266,13 @@ def download_file(
                         received += len(chunk)
                         if received > MAX_DOWNLOAD_BYTES or (expected is not None and received > expected):
                             raise DownloadError("Response exceeds its expected or supported size")
+                        now = time.monotonic()
+                        if now >= next_progress:
+                            progress = (f"{received:,} of {expected:,} bytes ({received / expected:.0%})"
+                                        if expected else f"{received:,} bytes")
+                            log_fn(f"Download progress: {progress}, {now - attempt_started:.1f}s "
+                                   f"(attempt {attempt}/{DOWNLOAD_ATTEMPTS})")
+                            next_progress = now + 10
                 # Sized HTTP reads can silently reach EOF before Content-Length.
                 if expected is not None and received != expected:
                     raise DownloadError(
@@ -287,7 +294,8 @@ def download_file(
             ConnectionError,
             DownloadError,
         ) as exc:
-            message = f"Download failed from {final_url} after {time.monotonic() - started:.1f}s: {exc}"
+            message = (f"Download failed from {final_url} after {time.monotonic() - attempt_started:.1f}s "
+                       f"({received:,} bytes received): {exc}")
             log_fn(message)
             if attempt == DOWNLOAD_ATTEMPTS:
                 raise DownloadError(
@@ -296,7 +304,7 @@ def download_file(
         finally:
             if partial is not None:
                 partial.unlink(missing_ok=True)
-        time.sleep(min(attempt, max(0, deadline - time.monotonic())))
+        time.sleep(attempt)
 
 
 def fetch_release_json(url: str, *, user_agent: str, log_fn: Callable[[str], None]) -> list[dict]:
