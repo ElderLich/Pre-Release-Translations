@@ -1,79 +1,21 @@
 {
   "language": "fr",
-  "matches": {
-    "120310053": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/KP27-JP053",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17897&languages=fr"
-    },
-    "120311021": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/LP02-JP021",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17898&languages=fr"
-    },
-    "120311024": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/LP02-JP024",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17899&languages=fr"
-    },
-    "120311025": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/LP02-JP025",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17900&languages=fr"
-    },
-    "120311060": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/LP02-JP060",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=15198&languages=fr"
-    },
-    "120311063": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/LP02-JP063",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=13035&languages=fr"
-    },
-    "120311064": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/LP02-JP064",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=13036&languages=fr"
-    }
-  },
+  "matches": {},
   "requested_ids": [
     120310034,
-    120310053,
-    120310069,
-    120311021,
-    120311024,
-    120311025,
-    120311060,
-    120311063,
-    120311064
+    120310035,
+    120310069
   ],
   "unresolved": [
     {
       "id": 120310034,
       "reason": "No source card page found",
       "set_code": "RD/KP27-JP034"
+    },
+    {
+      "id": 120310035,
+      "reason": "No source card page found",
+      "set_code": "RD/KP27-JP035"
     },
     {
       "id": 120310069,

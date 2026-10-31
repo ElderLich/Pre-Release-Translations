@@ -1,9 +1,10 @@
 {
-  "active_cards": 118,
+  "active_cards": 119,
   "artwork_files": 109,
   "excluded_ids": [],
   "missing_artwork": [
     120310034,
+    120310035,
     120310053,
     120311021,
     120311024,
@@ -41,6 +42,16 @@
       ],
       "id": 120310034,
       "name": "粉彩寻宝·比比"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3"
+      ],
+      "id": 120310035,
+      "name": "开朗的天使 米迦"
     },
     {
       "fields": [
@@ -2147,8 +2158,8 @@
     "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
     "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105"
   },
-  "script_files": 153,
-  "source_cards": 118,
+  "script_files": 154,
+  "source_cards": 119,
   "text_sha256": {
     "120000012": "ba529776666022aba6ef01f96430b6355306511ba5ce48e822da5883afc60fd3",
     "120109069": "5bc01d8e339c9ce0e44c4c1bf481563583ff662afd99debea8a4f1631105154e",
@@ -2186,6 +2197,7 @@
     "120310032": "f647108e5aa2a5f66a36f919d4cffb011d0e3e3647d66329ed3505f996de372d",
     "120310033": "110c6f88520981ec3c98484540e3c07e5bdc4eea3806eef42fc41e0254b6a3a2",
     "120310034": "af4162e96b734dfe290eb946c790d068f002af6218d84b6a499422b75b3ffda4",
+    "120310035": "9825ebef6d130a23e1250caa8ddb6b2437e76104ea511d1cde692c9782bf1832",
     "120310036": "e2597c42bea5bdf2bfddfab5adb8e1aefaf48c454bfacf1e819170f7ccc5684d",
     "120310037": "7b00a02ff913b490090644531f7f1bf282a43c25b26e9ae72431689c07dbe647",
     "120310038": "6b535ec79081f3ec296b9b91945c9ee96dffd9df44b50f9b77a8373e882e122f",
