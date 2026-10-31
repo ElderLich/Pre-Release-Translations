@@ -1,5 +1,35 @@
 [
   {
+    "name": "Geistertrick-Garten",
+    "desc": "Einmal, solange diese Karte offen auf dem Spielfeld liegt, während deiner Main Phase: Du kannst deiner Hand 1 „Geistertrick“-Monster von deinem Deck hinzufügen. Falls ein oder mehr Monster durch einen Karteneffekt deines Gegners auf den Friedhof gelegt werden: Du kannst 1 dieser Effekte aktivieren;\n● Ändere 1 offenes oder verdecktes „Geistertrick“-Monster, das du kontrollierst, in die offene oder verdeckte Verteidigungsposition.\n● Hänge die oberste Karte deines Decks als Material an 1 „Geistertrick“-Xyz-Monster an, das du kontrollierst.\nDu kannst nur 1 „Geistertrick-Garten“ pro Spielzug aktivieren.",
+    "overallString": "[Zauber|Spielfeld]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
+  },
+  {
+    "name": "Geistertrick-Kunst",
+    "desc": "Biete bis zu 2 „Geistertrick“-Monster von deiner Hand und/oder deiner Spielfeldseite als Tribut an und falls du dies tust, beschwöre ebenso viele „Geistertrick“-Monster mit unterschiedlichen Namen voneinander als Spezialbeschwörung von deinem Deck, jedes in die offene oder verdeckte Verteidigungsposition, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer FINSTERNIS Monstern. Während deiner Main Phase: Du kannst diese Karte von deinem Friedhof verbannen; ändere 1 „Geistertrick“-Monster in verdeckter Verteidigungsposition, das du kontrollierst, in die offene Verteidigungsposition. Du kannst jeden Effekt von „Geistertrick-Kunst“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Zauber|Schnell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272054.jpg?version=19.7"
+  },
+  {
+    "name": "Geistertrick-Lich",
+    "desc": "Kann nicht als Normalbeschwörung beschworen werden, es sei denn, du kontrollierst ein „Geistertrick“-Monster. Falls diese Karte als Normalbeschwörung beschworen oder aufgedeckt wird: Setze 1 „Geistertrick“-Schnellzauberkarte oder normale „Geistertrick“-Fallenkarte direkt von deinem Deck (sie kann in diesem Spielzug aktiviert werden), zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer FINSTERNIS Monstern. Du kannst diesen Effekt von „Geistertrick-Lich“ nur einmal pro Spielzug verwenden. Einmal pro Spielzug: Du kannst diese Karte in die verdeckte Verteidigungsposition ändern.",
+    "overallString": "[Monster|Effekt] Zombie/Finsternis  [★3] 1500/600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272050.jpg?version=19.7"
+  },
+  {
+    "name": "Geistertrick-Yoko",
+    "desc": "2 „Geistertrick“-Monster der Stufe 2\nDu kannst „Geistertrick-Yoko“ nur einmal pro Spielzug als Spezialbeschwörung vom Extra Deck beschwören. Du kannst diese Karte auch als Xyz-Beschwörung beschwören, indem du 1 „Geistertrick“-Monster in verdeckter Verteidigungsposition, das du kontrollierst und das eine Stufe hat, als Material verwendest. Solange diese Karte in der Monsterzone liegt, kann sie nicht durch Karteneffekte deines Gegners zerstört werden. Einmal pro Spielzug: Du kannst 1 Material von dieser Karte abhängen; beschwöre 1 „Geistertrick“-Monster als Spezialbeschwörung von deinem Deck, zusätzlich kannst du für den Rest dieses Spielzugs keine Monster als Spezialbeschwörung beschwören, außer FINSTERNIS Monstern.",
+    "overallString": "[Monster|Effekt|Xyz] Hexer/Finsternis  [☆2] 900/900",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
+  },
+  {
+    "name": "Geistertrick-Meister Alucard",
+    "desc": "3 Monster der Stufe 6\nDu kannst diese Karte auch als Xyz-Beschwörung beschwören, indem du 1 „Geistertrick“-Karte abwirfst und 1 „Geistertrick-Alucard“, den du kontrollierst, als Material verwendest. (Transferiere sein Material an diese Karte.) Kann nicht als Material für eine Xyz-Beschwörung verwendet werden. Diese offene Karte kann nicht in die verdeckte Verteidigungsposition geändert werden. Einmal pro Spielzug (Schnelleffekt): Du kannst 1 Material von dieser Karte abhängen; zerstöre alle verdeckten Karten, die dein Gegner kontrolliert. Wenn eine Zauber-/Fallenkarte aktiviert wird (Schnelleffekt): Du kannst 2 Material von dieser Karte abhängen; annulliere die Aktivierung und falls du dies tust, setze jene Karte.",
+    "overallString": "[Monster|Effekt|Xyz] Zombie/Finsternis  [☆6] 2800/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
+  },
+  {
     "name": "Albtraum-Funkelstern",
     "desc": "Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst 1 Illusion-Monster der Stufe 7 oder niedriger als Spezialbeschwörung von deinem Deck beschwören, außer „Albtraum-Funkelstern“, aber gib es während der End Phase auf die Hand zurück. Du kannst diesen Effekt von „Albtraum-Funkelstern“ nur einmal pro Spielzug verwenden. Falls diese Karte gegen ein Monster kämpft, kann keines der beiden durch den Kampf zerstört werden. Einmal pro Spielzug, am Ende des Damage Steps, falls ein Monster gekämpft hat: Du kannst die Kampfpositionen aller Monster auf dem Spielfeld ändern.",
     "overallString": "[Monster|Effekt] Illusion/Licht  [★4] 1700/1700",
