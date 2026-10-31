@@ -1,5 +1,35 @@
 [
   {
+    "name": "Jardin Fantôruse",
+    "desc": "Une fois, tant que cette carte est face recto sur le Terrain, durant votre Main Phase : vous pouvez ajouter 1 monstre \"Fantôruse\" depuis votre Deck à votre main. Si un ou plusieurs monstres sont envoyés au Cimetière par un effet de carte de l'adversaire : vous pouvez activer 1 de ces effets ;\n● Changez 1 monstre \"Fantôruse\" face recto ou face verso que vous contrôlez en Position de Défense face recto ou face verso.\n● Attachez la carte du dessus de votre Deck à 1 Monstre Xyz \"Fantôruse\" que vous contrôlez.\nVous ne pouvez activer qu'1 \"Jardin Fantôruse\" par tour.",
+    "overallString": "[Magie|Terrain]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
+  },
+  {
+    "name": "Art Fantôruse",
+    "desc": "Sacrifiez max. 2 monstres \"Fantôruse\" depuis votre main et/ou Terrain, et si vous le faites, Invoquez Spécialement autant de monstres \"Fantôruse\" depuis votre Deck de noms différents les uns des autres, chacun en Position de Défense face recto ou face verso, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres TÉNÈBRES exclus) le reste de ce tour. Durant votre Main Phase : vous pouvez bannir cette carte depuis votre Cimetière ; changez 1 monstre \"Fantôruse\" en Position de Défense face verso que vous contrôlez en Position de Défense face recto. Vous ne pouvez utiliser chaque effet de \"Art Fantôruse\" qu'une fois par tour.",
+    "overallString": "[Magie|Jeu-Rapide]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272054.jpg?version=19.7"
+  },
+  {
+    "name": "Liche Fantôruse",
+    "desc": "Non Invocable Normalement, sauf si vous contrôlez un monstre \"Fantôruse\". Si cette carte est Invoquée Normalement ou retournée face recto : Posez 1 Magie Jeu-Rapide \"Fantôruse\" ou Piège Normal \"Fantôruse\" depuis votre Deck (il peut être activé ce tour), et aussi, vous ne pouvez pas Invoquer Spécialement (monstres TÉNÈBRES exclus) le reste de ce tour. Vous ne pouvez utiliser cet effet de \"Liche Fantôruse\" qu'une fois par tour. Une fois par tour : vous pouvez changer cette carte en Position de Défense face verso.",
+    "overallString": "[Monstre|Effet] Zombie/Ténébres  [★3] 1500/600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272050.jpg?version=19.7"
+  },
+  {
+    "name": "Yôko Fantôruse",
+    "desc": "2 monstres \"Fantôruse\" de Niveau 2\nVous ne pouvez Invoquer Spécialement un ou plusieurs \"Yôko Fantôruse\" depuis l'Extra Deck qu'une fois par tour. Vous pouvez aussi Invoquer par Xyz cette carte en utilisant 1 monstre \"Fantôruse\" en Position de Défense face verso que vous contrôlez qui a un Niveau. Non destructible par des effets de carte de votre adversaire. Une fois par tour : vous pouvez détacher 1 Matériel de cette carte ; Invoquez Spécialement 1 monstre \"Fantôruse\" depuis votre Deck, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres TÉNÈBRES exclus) le reste de ce tour.",
+    "overallString": "[Monstre|Effet|Xyz] Magicien/Ténébres  [☆2] 900/900",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
+  },
+  {
+    "name": "Maître Alucard Fantôruse",
+    "desc": "3 monstres de Niveau 6\nVous pouvez aussi Invoquer par Xyz cette carte en défaussant 1 carte \"Fantôruse\" et en utilisant 1 \"Alucard Fantôruse\" que vous contrôlez (transférez ses Matériels). Non utilisable comme Matériel pour une Invocation Xyz. Cette carte face recto ne peut pas être changée en Position de Défense face verso. Une fois par tour (Effet Rapide) : vous pouvez détacher 1 Matériel de cette carte ; détruisez toutes les cartes face verso contrôlées par votre adversaire. Lorsqu'une Carte Magie/Piège est activée (Effet Rapide) : vous pouvez détacher 2 Matériels de cette carte ; annulez l'activation, et si vous le faites, Posez la carte.",
+    "overallString": "[Monstre|Effet|Xyz] Zombie/Ténébres  [☆6] 2800/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
+  },
+  {
     "name": "Scintillement du Cauchemar",
     "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez Invoquer Spécialement 1 monstre Illusion de max. Niveau 7 (\"Scintillement du Cauchemar\" exclu) depuis votre Deck, mais renvoyez-le à la main durant la End Phase. Vous ne pouvez utiliser cet effet de \"Scintillement du Cauchemar\" qu'une fois par tour. Si cette carte combat un monstre, aucun de ces 2 ne peut être détruit par ce combat. Une fois par tour, à la fin de la Damage Step, si un monstre a combattu : vous pouvez changer la position de combat de tous les monstres sur le Terrain.",
     "overallString": "[Monstre|Effet] Illusion/Lumiére  [★4] 1700/1700",
