@@ -1,31 +1,31 @@
 [
   {
-    "name": "鬼计花园",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：只在这张卡表侧表示存在才有1次，自己主要阶段才能发动。从卡组把1只「鬼计」怪兽加入手卡。\r\n②：怪兽被对方的效果送去墓地的场合，可以从以下效果选择1个发动。\r\n●自己场上表侧表示或里侧守备表示的1只「鬼计」怪兽变成表侧守备表示或里侧守备表示。\r\n●自己卡组上面最上面的卡作为自己场上的1只「鬼计」超量怪兽的超量素材。 ",
+    "name": "Jardín Fantastruco",
+    "desc": "Sólo puedes activar 1 carta con este nombre por turno.\r\nUna vez, mientras esta carta está boca arriba en el Campo: puedes añadir a tu mano 1 monstruo \"Fantastruco\" desde tu Deck.\r\nSi un monstruo es mandado al Cementerio por el efecto de una carta de tu adversario: puedes activar 1 de estos efectos;\r\n● Cambia 1 monstruo \"Fantastruco\" en Posición de Defensa boca arriba o boca abajo que controles a Posición de Defensa boca arriba o boca abajo.\r\n● Acopla la carta superior de tu Deck a 1 Monstruo Xyz \"Fantastruco\" que controles.",
     "overallString": "[Mágica|Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
   },
   {
-    "name": "鬼计艺术",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：把自己手卡·场上的最多2只「鬼计」怪兽解放，根据那个数量从卡组把「鬼计」怪兽各自以表侧守备表示或里侧守备表示特殊召唤（同名卡最多1张）。这张卡发动后，直到回合结束时自己不是暗属性怪兽不能特殊召唤。\r\n②：自己主要阶段把墓地的这张卡除外才能发动。自己场上里侧守备表示的1只「鬼计」怪兽变成表侧守备表示。",
+    "name": "Arte Fantastruco",
+    "desc": "Sacrifica hasta 2 monstruos \"Fantastruco\" de tu mano y/o Campo y, si lo haces, Invoca de Modo Especial esa misma cantidad de monstruos \"Fantastruco\" con nombres diferentes desde tu Deck en Posición de Defensa (boca arriba o boca abajo), pero por el resto de este turno, después de que esta carta se resuelva, no puedes Invocar de Modo Especial, excepto monstruos de OSCURIDAD.\r\nDurante la Main Phase: puedes desterrar esta carta en el Cementerio; voltea boca arriba 1 monstruo \"Fantastruco\" Colocado que controles.\r\nSólo puedes usar cada uno de los efectos de \"Arte Fantastruco\" una vez por turno.",
     "overallString": "[Mágica|Juego Rápido]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272054.jpg?version=19.7"
   },
   {
-    "name": "鬼计巫妖",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡召唤·反转的场合发动。从卡组把1张「鬼计」速攻魔法·通常陷阱卡在自己场上盖放。这个效果盖放的卡在盖放的回合也能发动。这个回合，自己不是暗属性怪兽不能特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合1次）。 ",
+    "name": "Fantastruco Lich",
+    "desc": "No puede ser Invocado de Modo Normal, a menos que controles solo monstruos \"Fantastruco\" (todavía puedes Colocarlo de Modo Normal).\r\nSi esta carta es Invocada de Modo Normal, o volteada boca arriba: puedes Colocar 1 Mágica de Juego Rápido o Trampa Normal \"Fantastruco\" desde tu Deck (puede ser activada este turno), pero por el resto de este turno, no puedes Invocar de Modo Especial, excepto monstruos de OSCURIDAD.\r\nUna vez por turno, durante la Main Phase: puedes cambiar esta carta a Posición de Defensa boca abajo.\r\nSólo puedes usar el primer efecto de \"Fantastruco Lich\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Zombi/OSCURIDAD  [★3] 1500/600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272050.jpg?version=19.7"
   },
   {
-    "name": "鬼计妖狐",
-    "desc": "2星「鬼计」怪兽×2\r\n自己对「鬼计妖狐」1回合只能有1次从额外卡组特殊召唤。这张卡也能在自己场上里侧守备表示的持有等级的「鬼计」怪兽上面重叠来超量召唤。\r\n①：这张卡只要在怪兽区域存在，不会被对方的效果破坏。\r\n②：1回合1次，把这张卡1个超量素材取除才能发动。从卡组把1只「鬼计」怪兽特殊召唤。这个回合，自己不是暗属性怪兽不能特殊召唤。",
+    "name": "Fantastruco Yoko",
+    "desc": "2 monstruos \"Fantastruco\" de Nivel 2\t\r\nTambién puedes Invocar Xyz a \"Fantastruco Yoko\" una vez por turno usando 1 monstruo \"Fantastruco\" Colocado que controles que tenga un Nivel como material.\r\nNo puede ser destruida por efectos de cartas de tu adversario mientras está en la Zona de Monstruos.\r\nUna vez por turno: puedes desacoplar 1 material de esta carta; Invoca de Modo Especial 1 monstruo \"Fantastruco\" desde tu Deck, pero no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de OSCURIDAD.",
     "overallString": "[Monstruo|Efecto|Xyz] Lanzador de Conjuros/OSCURIDAD  [☆2] 900/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
   },
   {
-    "name": "鬼计之主 阿鲁卡德",
-    "desc": "6星怪兽×3\r\n这张卡也能把手卡1张「鬼计」卡丢弃，在自己场上的「鬼计妖魔·阿鲁卡德」上面重叠来超量召唤。这张卡不能作为超量召唤。\r\n①：表侧表示的这张卡不能变成里侧守备表示。\r\n②：自己·对方回合1次，把这张卡1个超量素材取除才能发动。对方场上的里侧表示卡全部破坏。\r\n③：魔法·陷阱卡发动时，把这张卡2个超量素材取除才能发动。那个发动无效，那张卡直接盖放。",
+    "name": "Fantastruco Maestro Alucard",
+    "desc": "3 monstruos de Nivel 6\t\r\nTambién puedes Invocar Xyz esta carta descartando 1 carta \"Fantastruco\" y usando 1 \"Fantastruco Alucard\" que controles (transfiere sus materiales). Esta carta no puede ser usada como Material Xyz.\r\nEsta carta boca arriba no puede ser cambiada a Posición de Defensa boca abajo.\r\nUna vez por turno (Efecto Rápido): puedes desacoplar 1 material de esta carta; destruye todas las cartas Colocadas que controle tu adversario.\r\nCuando se activa una Carta Mágica/Trampa (Efecto Rápido): puedes desacoplar 2 materiales de esta carta; niega esa activación y, si lo haces, Coloca esa carta.",
     "overallString": "[Monstruo|Efecto|Xyz] Zombi/OSCURIDAD  [☆6] 2800/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
   },
