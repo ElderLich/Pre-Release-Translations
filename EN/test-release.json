@@ -1,5 +1,35 @@
 [
   {
+    "name": "Ghostrick Garden",
+    "desc": "Once while face-up on the field, during your Main Phase: You can add 1 \"Ghostrick\" monster from your Deck to your hand. If a monster(s) is sent to the GY by an opponent's card effect: You can activate 1 of these effects;\n● Change 1 face-up or face-down \"Ghostrick\" monster you control to face-up or face-down Defense Position.\n● Attach the top card of your Deck to 1 \"Ghostrick\" Xyz Monster you control.\nYou can only activate 1 \"Ghostrick Garden\" once per turn.",
+    "overallString": "[Spell|Field]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
+  },
+  {
+    "name": "Ghostrick Art",
+    "desc": "Tribute up to 2 \"Ghostrick\" monsters from your hand and/or field, and if you do, Special Summon that many \"Ghostrick\" monsters from your Deck with different names from each other, each in face-up or face-down Defense Position, also you cannot Special Summon for the rest of this turn, except DARK monsters. During your Main Phase: You can banish this card from your GY; change 1 face-down Defense Position \"Ghostrick\" monster you control to face-up Defense Position. You can only use each effect of \"Ghostrick Art\" once per turn.",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272054.jpg?version=19.7"
+  },
+  {
+    "name": "Ghostrick Lich",
+    "desc": "Cannot be Normal Summoned, unless you control a \"Ghostrick\" monster. If this card is Normal Summoned or flipped face-up: Set 1 \"Ghostrick\" Quick-Play Spell or \"Ghostrick\" Normal Trap from your Deck (it can be activated this turn), also you cannot Special Summon for the rest of this turn, except DARK monsters. You can only use this effect of \"Ghostrick Lich\" once per turn. Once per turn: You can change this card to face-down Defense Position.",
+    "overallString": "[Monster|Effect] Zombie/Dark  [★3] 1500/600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272050.jpg?version=19.7"
+  },
+  {
+    "name": "Ghostrick Yoko",
+    "desc": "2 Level 2 \"Ghostrick\" monsters\nYou can only Special Summon \"Ghostrick Yoko(s)\" from the Extra Deck once per turn. You can also Xyz Summon this card by using 1 face-down Defense Position \"Ghostrick\" monster you control that has a Level. Cannot be destroyed by your opponent's card effects. Once per turn: You can detach 1 material from this card; Special Summon 1 \"Ghostrick\" monster from your Deck, also you cannot Special Summon for the rest of this turn, except DARK monsters.",
+    "overallString": "[Monster|Effect|Xyz] Spellcaster/Dark  [☆2] 900/900",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
+  },
+  {
+    "name": "Ghostrick Master Alucard",
+    "desc": "3 Level 6 monsters\nYou can also Xyz Summon this card by discarding 1 \"Ghostrick\" card and using 1 \"Ghostrick Alucard\" you control (transfer its materials). Cannot be used as material for an Xyz Summon. This face-up card cannot be changed to face-down Defense Position. Once per turn (Quick Effect): You can detach 1 material from this card; destroy all face-down cards your opponent controls. When a Spell/Trap Card is activated (Quick Effect): You can detach 2 materials from this card; negate the activation, and if you do, Set that card.",
+    "overallString": "[Monster|Effect|Xyz] Zombie/Dark  [☆6] 2800/2600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
+  },
+  {
     "name": "Nightmare Twinkle",
     "desc": "If this card is Normal or Special Summoned: You can Special Summon 1 Level 7 or lower Illusion monster from your Deck, except \"Nightmare Twinkle\", but return it to the hand during the End Phase. You can only use this effect of \"Nightmare Twinkle\" once per turn. If this card battles a monster, neither can be destroyed by that battle. Once per turn, at the end of the Damage Step, if a monster battled: You can change the battle positions of all monsters on the field.",
     "overallString": "[Monster|Effect] Illusion/Light  [★4] 1700/1700",
@@ -61,13 +91,13 @@
   },
   {
     "name": "Amazoness Dramatic Rescue",
-    "desc": "You can only use the ① and ② effects of this card's name each once per turn. If you control a \"Harpie Lady\" monster or \"Amazoness\" monster, you can activate this card the turn it was Set.\r\n①：Target 1 monster on the field; Special Summon 1 \"Harpie\" or \"Amazoness\" monster from your hand or Deck, and if you do, return the targeted monster to the hand.\r\n②：You can banish this card from your GY; add 1 \"Harpie\" or \"Amazoness\" monster from your GY or banishment to your hand.",
+    "desc": "If you control an \"Amazoness\" monster or \"Harpie Lady\", you can activate this card the turn it was Set. Target 1 monster on the field; Special Summon 1 \"Harpie\" or \"Amazoness\" monster from your hand or Deck, and if you do, return the targeted monster to the hand. You can banish this card from your GY; add 1 \"Harpie\" or \"Amazoness\" monster from your GY or banishment to your hand. You can only use each effect of \"Amazoness Dramatic Rescue\" once per turn.",
     "overallString": "[Trap]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
   },
   {
     "name": "Eyelluring Mirror Wall",
-    "desc": "①：Gains these effects while you control an \"Amazoness\" monster or \"Harpie Lady\" monster.\r\n● Face-up monsters your opponent controls are changed to Attack Position and must attack if able.\r\n● Once per battle, when an opponent's monster declares an attack: You can halve its ATK.\r\n②：Once per turn, during the Standby Phase: You can Set 1 Spell/Trap from your GY or banishment that mentions \"Harpie Lady\", except \"Eyelluring Mirror Wall\".",
+    "desc": "Gains these effects while you control an \"Amazoness\" monster or \"Harpie Lady\".\n● Face-up monsters your opponent controls are changed to Attack Position and must attack if able.\n● Once per battle, when an opponent's monster declares an attack: You can halve its ATK.\nOnce per turn, during the Standby Phase: You can Set 1 Spell/Trap from your GY or banishment that mentions \"Harpie Lady\", except \"Eyelluring Mirror Wall\".",
     "overallString": "[Trap|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307075.jpg?version=19.7"
   },
@@ -91,37 +121,37 @@
   },
   {
     "name": "Harpie Lady - Alluring Dance",
-    "desc": "You can only use the ② and ③ effects of this card's name each once per turn.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：During the Main Phase, if this card is in your hand (Quick Effect): You can target 1 EARTH or WIND monster you control; return it to the Deck/Extra Deck, and if you do, Special Summon this card.\r\n③：If this card is Normal or Special Summoned: You can add 1 Spell/Trap from your Deck to your hand that mentions \"Harpie Lady\".",
+    "desc": "This card's name becomes \"Harpie Lady\" while on the field or in the GY. You can only use each of the following effects of \"Harpie Lady - Alluring Dance\" once per turn. During the Main Phase, if this card is in your hand (Quick Effect): You can target 1 EARTH or WIND monster you control; return it to the hand/Extra Deck, and if you do, Special Summon this card. If this card is Normal or Special Summoned: You can add 1 Spell/Trap from your Deck to your hand that mentions \"Harpie Lady\".",
     "overallString": "[Monster|Effect] Winged Beast/Wind  [★4] 1300/1400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307008.jpg?version=19.7"
   },
   {
     "name": "Amazoness Swordmaster",
-    "desc": "2 \"Amazoness\" monsters\r\nYou can only use the ① and ③ effects of this card's name each once per turn.\r\n①：If this card is Fusion Summoned: You can Special Summon 1 Level 4 or lower \"Amazoness\" monster from your Deck.\r\n②：When your \"Amazoness\" monster destroys an opponent's monster by battle: You can draw 1 card.\r\n③：(Quick Effect): You can Tribute 1 monster, then target 1 Effect Monster on the field; it loses 500 ATK, also its effects are negated.",
+    "desc": "2 \"Amazoness\" monsters\nWhen your \"Amazoness\" monster destroys an opponent's monster by battle: You can draw 1 card. You can only use each of the following effects of \"Amazoness Swordmaster\" once per turn. If this card is Fusion Summoned: You can Special Summon 1 Level 4 or lower \"Amazoness\" monster from your Deck. (Quick Effect): You can Tribute 1 monster, then target 1 Effect Monster on the field; it loses 500 ATK, also negate its effects.",
     "overallString": "[Monster|Effect|Fusion] Warrior/Earth  [★7] 2600/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
     "name": "Triangle Ecstasy Harpie Lady Sisters",
-    "desc": "3 \"Harpie Lady\" monsters\r\nMust first be Fusion Summoned.\r\n①：This card's name becomes \"Harpie Lady\" while in the field or GY.\r\n②：Gains 500 ATK for each \"Harpie Lady\" in your GY. Your opponent cannot target this card with non-WIND monsters' effects.\r\n③：Once per turn (Quick Effect): You can destroy all Spells and Traps your opponent controls.",
+    "desc": "3 \"Harpie Lady\" monsters\nMust first be Fusion Summoned. This card's name becomes \"Harpie Lady\" while on the field or in the GY. Gains 500 ATK for each \"Harpie Lady\" in your GY, also your opponent cannot target this card with non-WIND monster effects. Once per turn (Quick Effect): You can destroy all Spells/Traps your opponent controls.",
     "overallString": "[Monster|Effect|Fusion] Winged Beast/Wind  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
   {
     "name": "Elegant Tri-Mirror",
-    "desc": "You can only use the ① and ② effects of this card's name each once per turn.\r\n①：Add 1 \"Harpie\" monster from your Deck to your hand, then if only your opponent controls a monster, you can Special Summon 1 \"Harpie Lady\", or 1 monster that mentions it, from your hand or GY.\r\n②：You can banish this card from your GY; Fusion Summon 1 EARTH or WIND Fusion Monster from your Extra Deck, using monsters from your hand or field.",
+    "desc": "Add 1 \"Harpie\" monster from your Deck to your hand, then if only your opponent controls a monster, you can Special Summon 1 \"Harpie Lady\", or 1 monster that mentions it, from your hand or GY. You can banish this card from your GY; Fusion Summon 1 EARTH or WIND Fusion Monster from your Extra Deck, using monsters from your hand or field. You can only use each effect of \"Elegant Tri-Mirror\" once per turn.",
     "overallString": "[Spell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307053.jpg?version=19.7"
   },
   {
     "name": "Harpie & Amazoness Rakshasa Formation",
-    "desc": "You can only activate 1 card with this card's name per turn.\r\n①：Target 1 \"Harpie\" or \"Amazoness\" monster in your GY or banishment; Special Summon it, then you can apply 1 of these effects based on the number of \"Harpie Lady\" monsters and \"Amazoness\" monsters you control.\r\n● 1+: Place 1 \"Eyelluring Mirror Wall\" from your Deck face-up in your Spell & Trap Zone.\r\n● 2+: Take control of 1 monster your opponent controls.\r\n● 3+: Destroy all monsters your opponent controls.",
+    "desc": "Target 1 \"Harpie\" or \"Amazoness\" monster in your GY or banishment; Special Summon it, then you can apply 1 of these effects based on the number of \"Amazoness\" monsters and \"Harpie Lady\" you control.\n● 1+: Place 1 \"Eyelluring Mirror Wall\" from your Deck face-up in your Spell & Trap Zone.\n● 2+: Take control of 1 monster your opponent controls.\n● 3+: Destroy all monsters your opponent controls.\nYou can only activate 1 \"Harpie & Amazoness Rakshasa Formation\" per turn.",
     "overallString": "[Spell|Quick-Play]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
   },
   {
     "name": "Primrose the Twin Rikka Fairy",
-    "desc": "If a monster(s) is Tributed: You can Special Summon this card from your hand and 1 \"Rikka\" monster from your Deck, except \"Primrose the Twin Rikka Fairy\", in Defense Position, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can target 1 Plant monster you control; increase or decrease its Level by 2. During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Xyz Summon 1 Plant Xyz Monster. You can only use each effect of \"Primrose the Twin Rikka Fairy\" once per turn.",
+    "desc": "If a monster(s) is Tributed (except during the Damage Step): You can Special Summon this card from your hand and 1 \"Rikka\" monster from your Deck, except \"Primrose the Twin Rikka Fairy\", in Defense Position, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can target 1 Plant monster you control; increase or decrease its Level by 2. During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Xyz Summon 1 Plant Xyz Monster. You can only use each effect of \"Primrose the Twin Rikka Fairy\" once per turn.",
     "overallString": "[Monster|Effect] Plant/Water  [★8] 2600/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
   },
@@ -132,14 +162,14 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307016.jpg?version=19.7"
   },
   {
-    "name": "Teardrop the Rikka Empress",
-    "desc": "2 Level 10 Plant monsters\nYou can also Xyz Summon this card by using \"Teardrop the Rikka Queen\" you control (transfer its materials). (Quick Effect): You can detach up to 6 materials from this card; send that many Spells/Traps on the field to the GY, then you can Tribute 1 monster on the field. You can only use this effect of \"Teardrop the Rikka Empress\" once per turn. Each time a monster(s) is Tributed: Attach 1 card from your opponent's GY to 1 Plant Xyz Monster you control.",
+    "name": "Teardrop the Rikka Sacred Queen",
+    "desc": "2 Level 10 Plant monsters\nYou can also Xyz Summon this card by using \"Teardrop the Rikka Queen\" you control (transfer its materials). (Quick Effect): You can detach up to 6 materials from this card; send that many Spells/Traps from the field to the GY, then you can Tribute 1 monster on either field. You can only use this effect of \"Teardrop the Rikka Sacred Queen\" once per turn. Each time a monster(s) is Tributed: Attach 1 card from your opponent's GY to 1 Plant Xyz Monster you control.",
     "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆10] 3200/3200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
   },
   {
     "name": "Rikka Empress Strenna",
-    "desc": "2 Level 6 Plant monsters\nYou can detach 2 materials from this card; Special Summon 1 Plant Xyz Monster from your Extra Deck in Defense Position, except \"Rikka Empress Strenna\", then if you Special Summoned a \"Rikka\" monster, you can attach 1 \"Rikka\" monster from your Deck to it. If a monster(s) is Tributed: You can Set 1 \"Rikka\" Trap from your Deck or GY. You can only use each effect of \"Rikka Empress Strenna\" once per turn.",
+    "desc": "2 Level 6 Plant monsters\nYou can detach 2 materials from this card; Special Summon 1 Plant Xyz Monster from your Extra Deck in Defense Position, except \"Rikka Empress Strenna\", then if you Special Summoned a \"Rikka\" monster, you can attach 1 \"Rikka\" monster from your Deck to it. If a monster(s) is Tributed (except during the Damage Step): You can Set 1 \"Rikka\" Trap from your Deck or GY. You can only use each effect of \"Rikka Empress Strenna\" once per turn.",
     "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆6] 2000/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
   },
@@ -181,19 +211,19 @@
   },
   {
     "name": "Trinitas Magistus",
-    "desc": "2+ Spellcaster monsters\r\nYou can only use 1 of this card name's ①, ②, or ③ effect per turn, and only once that turn.\r\n①：If this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to it.\r\n②：You can discard 1 card; shuffle all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY into the Extra Deck.\r\n③：During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand.",
+    "desc": "2+ Spellcaster monsters\nIf this card is Special Summoned from the Extra Deck: You can equip 1 \"Magistus\" or Spellcaster monster from your Extra Deck to this card as an Equip Spell. You can discard 1 card; return all Fusion, Synchro, Xyz, and Link Monsters from your opponent's field and GY to the Extra Deck. During your opponent's Main Phase (Quick Effect): You can add 1 \"Magistus\" card from your GY or banishment to your hand. You can only use 1 \"Trinitas Magistus\" effect per turn, and only once that turn.",
     "overallString": "[Monster|Effect|Link] Spellcaster/Light  [LINK-3] 2500/-  [↑][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274001.jpg?version=19.7"
   },
   {
     "name": "Invoked Magistus Heruvim",
-    "desc": "1 \"Magistus\" monster + 1 Spellcaster monster\r\nYou can only once use this card name's ① and ② effects once per turn each.\r\n①：If this card is Special Summoned from the Extra Deck: You can target 1 card your opponent controls; destroy it.\r\n②：When your opponent activates a monster effect, or their monster declares an attack, except during the turn this card was Special Summoned (Quick Effect): You can banish this card; Special Summon 1 \"Magistus\" or \"Invoked\" monster from your Extra Deck, except \"Invoked Magistus Heruvim\".",
+    "desc": "1 \"Magistus\" monster + 1 Spellcaster monster\nIf this card is Special Summoned from the Extra Deck: You can target 1 card your opponent controls; destroy it. When your opponent activates a monster effect, or their monster declares an attack, except during the turn this card was Special Summoned (Quick Effect): You can banish this card; Special Summon 1 \"Magistus\" or \"Invoked\" monster from your Extra Deck, except \"Invoked Magistus Heruvim\". You can only use each effect of \"Invoked Magistus Heruvim\" once per turn.",
     "overallString": "[Monster|Effect|Fusion] Spellcaster/Light  [★9] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274002.jpg?version=19.7"
   },
   {
     "name": "Magistus Witchcrafter Aruru",
-    "desc": "You can only use this card name's ①, ②, and ③ effects once per turn each.\r\n①：If this card is in your hand and a \"Magistus\" monster is on the field: You can Special Summon this card.\r\n②：You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn.\r\n③：If this card is sent to the GY: You can banish it, then target 1 \"Magistus\" or \"Witchcrafter\" monster in your GY; Special Summon it.",
+    "desc": "If this card is in your hand and a \"Magistus\" monster is on the field: You can Special Summon this card. You can target 1 face-up monster your opponent controls; negate its effects until the end of this turn. If this card is sent to the GY: You can banish it, then target 1 \"Magistus\" or \"Witchcrafter\" monster in your GY; Special Summon it. You can only use each effect of \"Magistus Witchcrafter Aruru\" once per turn.",
     "overallString": "[Monster|Effect] Spellcaster/Light  [★8] 2800/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274004.jpg?version=19.7"
   },
@@ -253,7 +283,7 @@
   },
   {
     "name": "Omega Vidolium the Power Patron of Heaven's End",
-    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck: You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
+    "desc": "Pendulum Scale = 11\n[ Pendulum Effect ]\nIf a monster(s) is Special Summoned from the Extra Deck (except during the Damage Step): You can return this card to the Extra Deck, then you can Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from either field, including a \"Power Patron\" monster you control.\n----------------------------------------\n[ Monster Effect ]\n3 monsters Special Summoned from the Extra Deck with 3000 or more ATK\nMust first be Fusion Summoned. Unaffected by card effects, except \"Power Patron\" cards'. When your opponent activates a monster effect while they control 2 or more monsters with the same Type as that monster (Quick Effect): You can banish (face-down) the top 3 cards of your Deck; negate the activation, and if you do, banish that monster face-down. Once per turn, during your Standby Phase: Place this card in your Pendulum Zone.",
     "overallString": "[Monster|Effect|Fusion|Pendulum] Dragon/Dark  [★12] 4000/4000  11/11",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307035.jpg?version=19.7"
   },
@@ -325,19 +355,19 @@
   },
   {
     "name": "Bunnillin Soft",
-    "desc": "While you control 2 or more non-Token Normal Monsters, Normal Monsters you control gain 1000 ATK. You can only use each of the following effects of \"Bunnillin Soft\" once per turn. You can target 2 Normal Monsters in your GY with different Types, Attributes, and Levels; Special Summon them. If a Level 5 or higher Normal Monster(s) with 2000 or less original ATK/DEF is Special Summoned or declares an attack: You can add 1 card from your GY to your hand.",
+    "desc": "While you control 2 or more non-Token Normal Monsters, Normal Monsters you control gain 1000 ATK. You can only use each of the following effects of \"Bunnillin Soft\" once per turn. You can target 2 Normal Monsters in your GY with different Types, Attributes, and Levels; Special Summon them. If a Level 5 or higher Normal Monster(s) with 2000 or less original ATK/DEF is Special Summoned (except during the Damage Step) or declares an attack: You can add 1 card from your GY to your hand.",
     "overallString": "[Trap|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307080.jpg?version=19.7"
   },
   {
     "name": "Bunnillin Extract",
-    "desc": "While you control 2 or more non-Token Normal Monsters, draw 2 cards instead of 1 for your normal draw during your Draw Phase. You can only use each of the following effects of \"Bunnillin Extract\" once per turn. If a card(s) is sent from your opponent's Deck to the GY: You can Special Summon 1 Normal Monster from your hand or Deck. If a Level 5 or higher Normal Monster(s) with 2000 or less original ATK/DEF is Special Summoned or declares an attack: You can target 1 card your opponent controls; destroy it.",
+    "desc": "While you control 2 or more non-Token Normal Monsters, draw 2 cards instead of 1 for your normal draw during your Draw Phase. You can only use each of the following effects of \"Bunnillin Extract\" once per turn. If a card(s) is sent from your opponent's Deck to the GY (except during the Damage Step): You can Special Summon 1 Normal Monster from your hand or Deck. If a Level 5 or higher Normal Monster(s) with 2000 or less original ATK/DEF is Special Summoned (except during the Damage Step) or declares an attack: You can target 1 card your opponent controls; destroy it.",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307066.jpg?version=19.7"
   },
   {
     "name": "Bunnillin: Mocha MOD",
-    "desc": "You can send 1 Normal Monster with 2000 or less ATK from your Deck to the GY; Special Summon this card from your hand. If this card is Normal or Special Summoned: You can place 1 \"Bunnillin\" Continuous Spell/Trap from your Deck or GY face-up on your field. If your opponent Special Summons an Effect Monster(s), while this card is in the Monster Zone: You can Tribute this card; Special Summon 1 Normal Monster from your GY. You can only use each effect of \"Bunnillin: Mocha MOD\" once per turn.",
+    "desc": "You can send 1 Normal Monster with 2000 or less ATK from your Deck to the GY; Special Summon this card from your hand. If this card is Normal or Special Summoned: You can place 1 \"Bunnillin\" Continuous Spell/Trap from your Deck or GY face-up on your field. If your opponent Special Summons an Effect Monster(s), while this card is in the Monster Zone (except during the Damage Step): You can Tribute this card; Special Summon 1 Normal Monster from your GY. You can only use each effect of \"Bunnillin: Mocha MOD\" once per turn.",
     "overallString": "[Monster|Effect] Cyberse/Light  [★4] 0/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307020.jpg?version=19.7"
   },
@@ -499,7 +529,7 @@
   },
   {
     "name": "Diabellstar, the Seeker of Sinful Spoils",
-    "desc": "You can only Special Summon with the way in this card's ① effect once per turn. You can only use this card name's ② and ③ effects once per turn each.\r\n①：If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand).\r\n②：You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells and Traps your opponent controls.\r\n③：During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
+    "desc": "If \"Sinful Spoils of Subversion - Snake-Eye\" or \"Snake-Eyes Poplar\" is in either GY, you can Special Summon this card (from your hand). You can only Special Summon \"Diabellstar, the Seeker of Sinful Spoils\" once per turn this way. You can only use each of the following effects of \"Diabellstar, the Seeker of Sinful Spoils\" once per turn. You can banish 1 \"Sinful Spoils of Doom - Rciela\" from your GY; destroy all Spells/Traps your opponent controls. During your opponent's turn (Quick Effect): You can banish 1 \"Sinful Spoils of Betrayal - Silvera\" from your GY; destroy all monsters your opponent controls.",
     "overallString": "[Monster|Effect] Spellcaster/Dark  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
@@ -523,7 +553,7 @@
   },
   {
     "name": "Sinful Spoils of the Winter Raven's Forest",
-    "desc": "You can Special Summon this card (from your hand) by placing 1 Level 1 FIRE Monster Card from your face-up field or GY on the bottom of the Deck. You can only Special Summon \"Sinful Spoils of the Winter Raven's Forest\" once per turn this way. When your opponent activates a card or effect (Quick Effect): You can return this card to the hand, then target 1 monster in the face-up field or either GY; place it face-up in its owner's Spell & Trap Zone as a Continuous Spell. You can only use this effect of \"Sinful Spoils of the Winter Raven's Forest\" once per turn.",
+    "desc": "You can Special Summon this card (from your hand) by placing 1 Level 1 FIRE Monster Card from your face-up field or GY on the bottom of the Deck. You can only Special Summon \"Sinful Spoils of the Winter Raven's Forest\" once per turn this way. When your opponent activates a card or effect (Quick Effect): You can return this card from the field to the hand, then target 1 face-up monster on the field or in either GY; place it face-up in its owner's Spell & Trap Zone as a Continuous Spell. You can only use this effect of \"Sinful Spoils of the Winter Raven's Forest\" once per turn.",
     "overallString": "[Monster|Effect|Tuner] Spellcaster/Fire  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307012.jpg?version=19.7"
   },
@@ -595,13 +625,13 @@
   },
   {
     "name": "Wicked Canon",
-    "desc": "Each time an opponent's monster declares an attack, place 1 Sinister Doctrine Counter on this card. You can only use each of the following effects of \"Wicked Canon\" once per turn. During your Main Phase, if this card was activated this turn: You can add 1 DARK Fiend monster from your Deck to your hand, then discard 1 Fiend monster. You can send this card with 4 or more Sinister Doctrine Counters to the GY; Special Summon 1 Fiend monster from your Deck, then you can add 1 \"Super Polymerization\" from your Deck to your hand.\r\n",
+    "desc": "Each time an opponent's monster declares an attack, place 1 Sinister Doctrine Counter on this card. You can only use each of the following effects of \"Wicked Canon\" once per turn. During your Main Phase, if this card was activated this turn: You can add 1 DARK Fiend monster from your Deck to your hand, then discard 1 Fiend monster. You can send this card with 4 or more Sinister Doctrine Counters to the GY; Special Summon 1 Fiend monster from your Deck, then you can add 1 \"Super Polymerization\" from your Deck to your hand.",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
   {
     "name": "Hope for the Future",
-    "desc": "If you control a \"Neos\" Fusion Monster or \"Elemental HERO Neos\": Discard 1 card; Fusion Summon 1 Fusion Monster from your Extra Deck that mentions a \"HERO\" monster as material, using monsters from your hand, Deck, or field. If you control a \"Neos\" Fusion Monster: You can banish this card from your GY, then target 1 face-up card your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Hope for the Future\" once per turn.\r\n",
+    "desc": "If you control a \"Neos\" Fusion Monster or \"Elemental HERO Neos\": Discard 1 card; Fusion Summon 1 Fusion Monster from your Extra Deck that mentions a \"HERO\" monster as material, using monsters from your hand, Deck, or field. If you control a \"Neos\" Fusion Monster: You can banish this card from your GY, then target 1 face-up card your opponent controls; negate its effects until the end of this turn. You can only use each effect of \"Hope for the Future\" once per turn.",
     "overallString": "[Trap]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270003.jpg?version=19.7"
   },
@@ -613,19 +643,19 @@
   },
   {
     "name": "Reindsurm Amurusa",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 non-WIND \"Reindsurm\" monsters from your Deck to your hand. If this card is sent to the GY, except by battle: You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Amurusa\" once per turn.",
+    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 non-WIND \"Reindsurm\" monsters from your Deck to your hand. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Amurusa\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Wind  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Luvian",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 \"Reindsurm\" Spells/Traps from your Deck to your hand. If this card is sent to the GY, except by battle: You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Luvian\" once per turn.",
+    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 \"Reindsurm\" Spells/Traps from your Deck to your hand. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Luvian\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Water  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
     "name": "Reindsurm Carcasas",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can send 2 \"Reindsurm\" cards from your Deck to the GY. If this card is sent to the GY, except by battle: You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Carcasas\" once per turn.",
+    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can send 2 \"Reindsurm\" cards from your Deck to the GY. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Carcasas\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Light  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
@@ -757,7 +787,7 @@
   },
   {
     "name": "The Winged Dragon of Ra, Sun God of Darkness",
-    "desc": "\"The Winged Dragon of Ra\" + 3 \"Sun God\" monsters\nUnaffected by other cards' effects. Once per turn, during the Main Phase (Quick Effect): You can discard any number of \"Sun God\" cards, then choose that many of your opponent's occupied Main Monster Zones; your opponent must send the monsters in those zones to the GY. When an attack is declared involving this card: You can pay LP so that you only have 1 left; this card gains ATK/DEF equal to the amount of LP paid and the total ATK of all \"Sun God\" monsters currently in your GY.",
+    "desc": "\"The Winged Dragon of Ra\" + 3 \"Sun God\" monsters\nUnaffected by other cards' effects. Once per turn, during the Main Phase (Quick Effect): You can discard any number of \"Sun God\" cards, then choose that number of your opponent's used Main Monster Zones; your opponent must send monsters in those zones to the GY. When an attack is declared involving this card: You can pay LP so that you only have 1 left; this card gains ATK/DEF equal to the LP paid and the total ATK of \"Sun God\" monsters in your GY.",
     "overallString": "[Monster|Effect|Fusion] Divine-Beast/Divine  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },
@@ -841,7 +871,7 @@
   },
   {
     "name": "Audhumla, Progenitor of the Frozen Expanse",
-    "desc": "If 4 or more cards are on the field: You can Special Summon this card from your hand. You can send up to 2 Spells/Traps you control to the GY; draw that many cards, then you can Special Summon 1 WATER monster from your hand. When your opponent activates a card or effect (Quick Effect): You can change this card to face-down Defense Position, also for the rest of this turn, all face-down cards you control cannot be destroyed by your opponent's card effects, and your opponent cannot target them with card effects. You can only use each effect of \"Audhumla, Progenitor of the Frozen Expanse\" once per turn.\r\n",
+    "desc": "If 4 or more cards are on the field: You can Special Summon this card from your hand. You can send up to 2 Spells/Traps you control to the GY; draw that many cards, then you can Special Summon 1 WATER monster from your hand. When your opponent activates a card or effect (Quick Effect): You can change this card to face-down Defense Position, also for the rest of this turn, all face-down cards you control cannot be destroyed by your opponent's card effects, and your opponent cannot target them with card effects. You can only use each effect of \"Audhumla, Progenitor of the Frozen Expanse\" once per turn.",
     "overallString": "[Monster|Effect] Aqua/Water  [★9] 2500/3200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306281.jpg?version=19.7"
   },
@@ -853,7 +883,7 @@
   },
   {
     "name": "Dark Paladin - Wave-Motion",
-    "desc": "\"Dark Magician\" + 1 Level 7 or higher monster\r\nMust be Fusion Summoned. Gains 500 ATK for every other monster on the field. Can attack all your opponent's monsters, once each. Once per turn, when your opponent activates a Spell Card or effect (Quick Effect): You can negate that effect, then you can destroy 1 card on the field. After this card destroys a card by battle or card effect and sends it to the GY, neither player can activate its effects while it is in the GY.\r\n",
+    "desc": "\"Dark Magician\" + 1 Level 7 or higher monster\nMust be Fusion Summoned. Gains 500 ATK for every other monster on the field. Can attack all your opponent's monsters, once each. Once per turn, when your opponent activates a Spell Card or effect (Quick Effect): You can negate that effect, then you can destroy 1 card on the field. After this card destroys a card by battle or card effect and sends it to the GY, neither player can activate its effects while it is in the GY.",
     "overallString": "[Monster|Effect|Fusion] Spellcaster/Dark  [★8] 2900/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268201.jpg?version=19.7"
   }
