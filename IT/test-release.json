@@ -1,31 +1,31 @@
 [
   {
-    "name": "鬼计花园",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：只在这张卡表侧表示存在才有1次，自己主要阶段才能发动。从卡组把1只「鬼计」怪兽加入手卡。\r\n②：怪兽被对方的效果送去墓地的场合，可以从以下效果选择1个发动。\r\n●自己场上表侧表示或里侧守备表示的1只「鬼计」怪兽变成表侧守备表示或里侧守备表示。\r\n●自己卡组上面最上面的卡作为自己场上的1只「鬼计」超量怪兽的超量素材。 ",
+    "name": "Giardino Fantasmatrucco",
+    "desc": "Una volta mentre è scoperta sul Terreno, durante la tua Main Phase: Puoi aggiungere 1 mostro \"Fantasmatrucco\" dal tuo Deck alla tua mano.\nSe uno o più mostri vengono mandati al Cimitero dall'effetto di una carta del tuo avversario: Puoi attivare 1 di questi effetti;\n● Metti 1 mostro \"Fantasmatrucco\" scoperto o coperto che controlli in Posizione di Difesa scoperta o coperta.\n● Attacca la carta in cima al tuo Deck a 1 Mostro Xyz \"Fantasmatrucco\" che controlli.\nPuoi attivare solo 1 \"Giardino Fantasmatrucco\" per turno.",
     "overallString": "[Magia|Terreno]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
   },
   {
-    "name": "鬼计艺术",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：把自己手卡·场上的最多2只「鬼计」怪兽解放，根据那个数量从卡组把「鬼计」怪兽各自以表侧守备表示或里侧守备表示特殊召唤（同名卡最多1张）。这张卡发动后，直到回合结束时自己不是暗属性怪兽不能特殊召唤。\r\n②：自己主要阶段把墓地的这张卡除外才能发动。自己场上里侧守备表示的1只「鬼计」怪兽变成表侧守备表示。",
+    "name": "Arte Fantasmatrucco",
+    "desc": "Offri come Tributo fino a 2 mostri \"Fantasmatrucco\" dalla tua mano e/o dal tuo Terreno e, se lo fai, Evoca Specialmente altrettanti mostri \"Fantasmatrucco\" dal tuo Deck con nomi diversi tra loro, ciascuno in Posizione di Difesa scoperta o coperta, inoltre non puoi Evocare Specialmente per il resto di questo turno, eccetto mostri OSCURITÀ.\nDurante la tua Main Phase: Puoi bandire questa carta dal tuo Cimitero; metti 1 mostro \"Fantasmatrucco\" in Posizione di Difesa coperta che controlli in Posizione di Difesa scoperta.\nPuoi utilizzare ogni effetto di \"Arte Fantasmatrucco\" una sola volta per turno.",
     "overallString": "[Magia|Rapida]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272054.jpg?version=19.7"
   },
   {
-    "name": "鬼计巫妖",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡召唤·反转的场合发动。从卡组把1张「鬼计」速攻魔法·通常陷阱卡在自己场上盖放。这个效果盖放的卡在盖放的回合也能发动。这个回合，自己不是暗属性怪兽不能特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合1次）。 ",
+    "name": "Lich Fantasmatrucco",
+    "desc": "Non può essere Evocato Normalmente, a meno che tu non controlli un mostro \"Fantasmatrucco\".\nSe questa carta viene Evocata Normalmente o scoperta: Posiziona 1 Magia Rapida \"Fantasmatrucco\" o 1 Trappola Normale \"Fantasmatrucco\" dal tuo Deck (può essere attivata in questo turno), inoltre non puoi Evocare Specialmente per il resto di questo turno, eccetto mostri OSCURITÀ. Puoi utilizzare questo effetto di \"Lich Fantasmatrucco\" una sola volta per turno.\nUna volta per turno: Puoi mettere questa carta in Posizione di Difesa coperta.",
     "overallString": "[Mostro|Effetto] Zombie/Oscurità  [★3] 1500/600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272050.jpg?version=19.7"
   },
   {
-    "name": "鬼计妖狐",
-    "desc": "2星「鬼计」怪兽×2\r\n自己对「鬼计妖狐」1回合只能有1次从额外卡组特殊召唤。这张卡也能在自己场上里侧守备表示的持有等级的「鬼计」怪兽上面重叠来超量召唤。\r\n①：这张卡只要在怪兽区域存在，不会被对方的效果破坏。\r\n②：1回合1次，把这张卡1个超量素材取除才能发动。从卡组把1只「鬼计」怪兽特殊召唤。这个回合，自己不是暗属性怪兽不能特殊召唤。",
+    "name": "Yoko Fantasmatrucco",
+    "desc": "2 mostri \"Fantasmatrucco\" di Livello 2\r\nPuoi Evocare Specialmente \"Yoko Fantasmatrucco\" dall'Extra Deck una sola volta per turno. Puoi anche Evocare Xyz questa carta utilizzando 1 mostro \"Fantasmatrucco\" coperto in Posizione di Difesa che controlli e che ha un Livello.\r\nNon può essere distrutta dagli effetti delle carte del tuo avversario.\r\nUna volta per turno: Puoi staccare 1 materiale da questa carta; Evoca Specialmente 1 mostro \"Fantasmatrucco\" dal tuo Deck, inoltre non puoi Evocare Specialmente per il resto di questo turno, eccetto mostri OSCURITÀ.",
     "overallString": "[Mostro|Effetto|Xyz] Incantatore/Oscurità  [☆2] 900/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
   },
   {
-    "name": "鬼计之主 阿鲁卡德",
-    "desc": "6星怪兽×3\r\n这张卡也能把手卡1张「鬼计」卡丢弃，在自己场上的「鬼计妖魔·阿鲁卡德」上面重叠来超量召唤。这张卡不能作为超量召唤。\r\n①：表侧表示的这张卡不能变成里侧守备表示。\r\n②：自己·对方回合1次，把这张卡1个超量素材取除才能发动。对方场上的里侧表示卡全部破坏。\r\n③：魔法·陷阱卡发动时，把这张卡2个超量素材取除才能发动。那个发动无效，那张卡直接盖放。",
+    "name": "Maestro Alucard Fantasmatrucco",
+    "desc": "3 mostri di Livello 6\nPuoi anche Evocare Xyz questa carta scartando 1 carta \"Fantasmatrucco\" e utilizzando 1 \"Alucard Fantasmatrucco\" che controlli (trasferisci i suoi materiali).\nNon può essere utilizzato come materiale per un'Evocazione Xyz.\nQuesta carta scoperta non può essere messa in Posizione di Difesa coperta.\nUna volta per turno (Effetto Rapido): Puoi staccare 1 materiale da questa carta; distruggi tutte le carte coperte controllate dal tuo avversario.\nQuando viene attivata una Carta Magia/Trappola (Effetto Rapido): Puoi staccare 2 materiali da questa carta; annulla l'attivazione e, se lo fai, Posiziona quella carta.",
     "overallString": "[Mostro|Effetto|Xyz] Zombie/Oscurità  [☆6] 2800/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
   },
@@ -79,7 +79,7 @@
   },
   {
     "name": "Codedalo",
-    "desc": "2 mostri ACQUA\n\n\r\nPuoi Evocare Specialmente \"Codedalo\" una sola volta per turno.\r\nIl nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nSe questa carta viene Evocata Link: puoi attivare questo effetto; durante la End Phase di questo turno, aggiungi 1 carta dal tuo Cimitero alla tua mano che menziona \"Atlantide, Città del Drago del Mare\", eccetto \"Codedalo\".\r\nUna volta per turno: puoi mandare 1 \"Umi\" scoperto che controlli al Cimitero; manda fino a 2 Magie/Trappole sul Terreno al Cimitero.\n",
+    "desc": "2 mostri ACQUA\r\n\r\nPuoi Evocare Specialmente \"Codedalo\" una sola volta per turno.\r\nIl nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nSe questa carta viene Evocata Link: puoi attivare questo effetto; durante la End Phase di questo turno, aggiungi 1 carta dal tuo Cimitero alla tua mano che menziona \"Atlantide, Città del Drago del Mare\", eccetto \"Codedalo\".\r\nUna volta per turno: puoi mandare 1 \"Umi\" scoperto che controlli al Cimitero; manda fino a 2 Magie/Trappole sul Terreno al Cimitero.\r\n",
     "overallString": "[Mostro|Effetto|Link] Serpente Marino/Acqua  [LINK-2] 1400/-  [→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
   },
