@@ -1,8 +1,9 @@
 {
-  "active_cards": 117,
+  "active_cards": 118,
   "artwork_files": 109,
   "excluded_ids": [],
   "missing_artwork": [
+    120310034,
     120310053,
     120311021,
     120311024,
@@ -25,6 +26,15 @@
       ],
       "id": 120310015,
       "name": "매드레어 비코"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310034,
+      "name": "粉彩寻宝·比比"
     },
     {
       "fields": [
@@ -2181,8 +2191,8 @@
     "120311061": "5388df2905df6c91133547c8620668c6e11215343d53ccbb2f83eb649ca8fff4",
     "120311062": "3ea1a9fdfba8583ecd44c22d0b9f8f24a211a6a7bea7dfd7b26df29711418d93"
   },
-  "script_files": 152,
-  "source_cards": 117,
+  "script_files": 153,
+  "source_cards": 118,
   "text_sha256": {
     "120000012": "d71817a570c0b88900a570b1675881fa854890c9383c041acadcf7f88180f81e",
     "120109069": "7dd57266979421bbf9fc4fbfee2f134a07504a5503f1ce052baef8a19c69a4be",
@@ -2219,6 +2229,7 @@
     "120310031": "1ab60b14134153bbc1b84378be9ff5a87dd74c694501c148bc50e8765c1fef2b",
     "120310032": "9057a4e5c41f1134faf26dd99272578e509fe6d71e6533d7763def97e2e5fbdc",
     "120310033": "419029eb1ca73586ea4cb2def62f23bfef68a2214e7abf07174732cff61f3a6a",
+    "120310034": "360c793e81f3c8486647a731a2df7e91c7e74849bdd5600c9b21e13b62da4f7f",
     "120310036": "bfa94e09d6cd1a9050e01b8013fed52879835ee49caa769c64871d945043b467",
     "120310037": "49c4576b12fa757f5084f14ed3ae4e07411c1fa9ef6f702a448ee24a0b9d88db",
     "120310038": "f8d7128ad00caaceda2f9dee8e1fdbe719ccad953bd566991de06f68236640e9",

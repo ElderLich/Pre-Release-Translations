@@ -1,13 +1,70 @@
 {
   "language": "en",
   "matches": {
+    "120310053": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP053",
+      "source": "https://yugipedia.com/wiki/Mad_Rare_Heart"
+    },
     "120310069": {
       "fields": [],
       "set_code": "RD/KP27-JP069",
       "source": "https://yugipedia.com/wiki/Sengenjin_%28Rush_Duel%29"
+    },
+    "120311021": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP021",
+      "source": "https://yugipedia.com/wiki/Evil_HERO_Malicious_Edge_%28Rush_Duel%29"
+    },
+    "120311024": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP024",
+      "source": "https://yugipedia.com/wiki/Evil_HERO_Malicious_Fiend_%28Rush_Duel%29"
+    },
+    "120311025": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP025",
+      "source": "https://yugipedia.com/wiki/Dark_Calling_%28Rush_Duel%29"
+    },
+    "120311060": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP060",
+      "source": "https://yugipedia.com/wiki/Card_Trooper_%28Rush_Duel%29"
+    },
+    "120311063": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP063",
+      "source": "https://yugipedia.com/wiki/Souffraes_the_Defiant_Soul"
+    },
+    "120311064": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP064",
+      "source": "https://yugipedia.com/wiki/Gaigust_the_Defiant_Soul"
     }
   },
   "requested_ids": [
+    120310034,
     120310053,
     120310069,
     120311021,
@@ -19,39 +76,9 @@
   ],
   "unresolved": [
     {
-      "id": 120310053,
+      "id": 120310034,
       "reason": "No source card page found",
-      "set_code": "RD/KP27-JP053"
-    },
-    {
-      "id": 120311021,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP021"
-    },
-    {
-      "id": 120311024,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP024"
-    },
-    {
-      "id": 120311025,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP025"
-    },
-    {
-      "id": 120311060,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP060"
-    },
-    {
-      "id": 120311063,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP063"
-    },
-    {
-      "id": 120311064,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP064"
+      "set_code": "RD/KP27-JP034"
     }
   ]
 }

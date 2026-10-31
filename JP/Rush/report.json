@@ -1,8 +1,9 @@
 {
-  "active_cards": 117,
+  "active_cards": 118,
   "artwork_files": 109,
   "excluded_ids": [],
   "missing_artwork": [
+    120310034,
     120310053,
     120311021,
     120311024,
@@ -25,6 +26,13 @@
       ],
       "id": 120310015,
       "name": "マッドレア・ビーコ"
+    },
+    {
+      "fields": [
+        "str3"
+      ],
+      "id": 120310034,
+      "name": "パステルファインダー・ビビオーバーラッシュ"
     },
     {
       "fields": [
@@ -2131,8 +2139,8 @@
     "120311061": "11fde8902f640f9b25c669c3336151e5d94d498fbf05462a19c632034221fb77",
     "120311062": "84889cd707f9b2cc77f95e8f9cff75804e449b7801d74e1c9579d35d3d56dd0a"
   },
-  "script_files": 152,
-  "source_cards": 117,
+  "script_files": 153,
+  "source_cards": 118,
   "text_sha256": {
     "120000012": "11148bc19967d00a37db3df5b4b5e01eb344d99ff22f59ee561691a8968d7f91",
     "120109069": "3bbe89a3294459b256f45c1e8164ac179781fabee9efc8f335e2d28ed4d4dcaf",
@@ -2169,6 +2177,7 @@
     "120310031": "fe2b93d0a2da7d55c6dae6e86a5a099b77640784b7af980a6578d61aee26b11d",
     "120310032": "9558b7359cd27fcad00af4f20987c55db7ff89df30a08bcfb1c9c1e1f0cc1010",
     "120310033": "01e44d32938c76e2dc9d8d90cb1cc3b13e361f258362657dbfa87ec428c4d70a",
+    "120310034": "29c540168d0ad4100e3d3481cda9d6af8f7a87ca88fd6f4cf611a71298c15035",
     "120310036": "24210e67f7e3b41a753ea641517e87f426483c6769681297db8e1cf3f8f31fb0",
     "120310037": "026cd66bde6b03d96151a9f4e814cb3682ffac58d7fa8e530d8fcb8834bbd06b",
     "120310038": "507022a461cf44d2e4e15ccf0087069df0865e04064bd44ecb34a9dd4513f074",

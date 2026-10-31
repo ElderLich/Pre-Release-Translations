@@ -1,7 +1,65 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310053": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP053",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17897&languages=fr"
+    },
+    "120311021": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP021",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17898&languages=fr"
+    },
+    "120311024": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP024",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17899&languages=fr"
+    },
+    "120311025": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP025",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17900&languages=fr"
+    },
+    "120311060": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP060",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=15198&languages=fr"
+    },
+    "120311063": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP063",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=13035&languages=fr"
+    },
+    "120311064": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP064",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=13036&languages=fr"
+    }
+  },
   "requested_ids": [
+    120310034,
     120310053,
     120310069,
     120311021,
@@ -13,9 +71,9 @@
   ],
   "unresolved": [
     {
-      "id": 120310053,
+      "id": 120310034,
       "reason": "No source card page found",
-      "set_code": "RD/KP27-JP053"
+      "set_code": "RD/KP27-JP034"
     },
     {
       "id": 120310069,
@@ -26,36 +84,6 @@
       "reason": "Localized fields are missing",
       "set_code": "RD/KP27-JP069",
       "source": "https://yugipedia.com/wiki/Sengenjin_%28Rush_Duel%29"
-    },
-    {
-      "id": 120311021,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP021"
-    },
-    {
-      "id": 120311024,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP024"
-    },
-    {
-      "id": 120311025,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP025"
-    },
-    {
-      "id": 120311060,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP060"
-    },
-    {
-      "id": 120311063,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP063"
-    },
-    {
-      "id": 120311064,
-      "reason": "No source card page found",
-      "set_code": "RD/LP02-JP064"
     }
   ]
 }

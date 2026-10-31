@@ -1,8 +1,9 @@
 {
-  "active_cards": 117,
+  "active_cards": 118,
   "artwork_files": 109,
   "excluded_ids": [],
   "missing_artwork": [
+    120310034,
     120310053,
     120311021,
     120311024,
@@ -31,6 +32,15 @@
       ],
       "id": 120310015,
       "name": "Mad Rare Beeko"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str3"
+      ],
+      "id": 120310034,
+      "name": "粉彩寻宝·比比"
     },
     {
       "fields": [
@@ -2187,8 +2197,8 @@
     "120311061": "98915875974ae1a0fa42b0dd1c6c26b8de1ebe95d56b93a06c59341765165e2c",
     "120311062": "4bdb5c095c4a3ecf64ca4c824aa11e5c480d27b20fa9c40e7093d9692b3eaffc"
   },
-  "script_files": 152,
-  "source_cards": 117,
+  "script_files": 153,
+  "source_cards": 118,
   "text_sha256": {
     "120000012": "75671f2cd53c491fab23f8da0af82f643035f330ca1c04f855e6ce8345e029ab",
     "120109069": "c620d0449ab34840ab63dfb8be870ee3d65c02b3d1d9b76721eacef77f860331",
@@ -2225,6 +2235,7 @@
     "120310031": "bc70fba57e056a915320ab17cbd7ed313a17efd8d3872717f6ec843d89dd9833",
     "120310032": "20471d7901e8970e67fcebf9cb55c9fa219e77d5c9d49af733260ba22941d0c3",
     "120310033": "2da4d80ea499846e255578cec65bc7c76bf2e0ef3fea4f8ea71827352a5ad87b",
+    "120310034": "c0c551c83c7f0203516ff87995852e8bd4f6272d68a0bc566c27f5202874f209",
     "120310036": "23bf272bc4bf84426bbc956942a675b5254bdc08ad48f78e4754e40fa79960bb",
     "120310037": "d33cfae9f47a4610be70fdf5e35bd7264c7d371321a3ec2d6abf93bd670679d4",
     "120310038": "e45989fee8b3c6f35465dfc79470ed43212661f187ec9edbd8fa5037a5945d34",
