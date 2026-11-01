@@ -1,11 +1,12 @@
 {
-  "active_cards": 119,
+  "active_cards": 120,
   "artwork_files": 109,
   "excluded_ids": [],
   "missing_artwork": [
     120310034,
     120310035,
     120310053,
+    120310065,
     120311021,
     120311024,
     120311025,
@@ -36,22 +37,26 @@
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str3"
       ],
       "id": 120310034,
-      "name": "粉彩寻宝·比比"
+      "name": "Vivi, Exploratrice Pastel"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str3"
       ],
       "id": 120310035,
-      "name": "开朗的天使 米迦"
+      "name": "Micha l'Ange Enjoué"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120310065,
+      "name": "跨越境界的疾风之门"
     },
     {
       "fields": [
@@ -2158,8 +2163,8 @@
     "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
     "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105"
   },
-  "script_files": 154,
-  "source_cards": 119,
+  "script_files": 155,
+  "source_cards": 120,
   "text_sha256": {
     "120000012": "ba529776666022aba6ef01f96430b6355306511ba5ce48e822da5883afc60fd3",
     "120109069": "5bc01d8e339c9ce0e44c4c1bf481563583ff662afd99debea8a4f1631105154e",
@@ -2196,8 +2201,8 @@
     "120310031": "2db6dce3da64c221222c04f38fa43d8acf96f87b07adec25e45f5a795b6c6111",
     "120310032": "f647108e5aa2a5f66a36f919d4cffb011d0e3e3647d66329ed3505f996de372d",
     "120310033": "110c6f88520981ec3c98484540e3c07e5bdc4eea3806eef42fc41e0254b6a3a2",
-    "120310034": "af4162e96b734dfe290eb946c790d068f002af6218d84b6a499422b75b3ffda4",
-    "120310035": "9825ebef6d130a23e1250caa8ddb6b2437e76104ea511d1cde692c9782bf1832",
+    "120310034": "457d513e4c1d75f85c8c68925d3ced4476f2d5365e6b5d178ca7c2fb53354746",
+    "120310035": "da7a2b0dfcf54da7a43563656041f615abf62add486ac82ff3db9cb3cc925a63",
     "120310036": "e2597c42bea5bdf2bfddfab5adb8e1aefaf48c454bfacf1e819170f7ccc5684d",
     "120310037": "7b00a02ff913b490090644531f7f1bf282a43c25b26e9ae72431689c07dbe647",
     "120310038": "6b535ec79081f3ec296b9b91945c9ee96dffd9df44b50f9b77a8373e882e122f",
@@ -2227,6 +2232,7 @@
     "120310062": "07a4d60251226ebd1792f10249107f5106cb5267ef51e79e2c9813b9f8446336",
     "120310063": "d9972e9324247f56e2d672d160a1baf5f13e29f06b4fe2fb2a2535b0f67ff51c",
     "120310064": "2b6a6290266029f16108137d7759dcffe2de632bc833ab2e28c007e375cc38fd",
+    "120310065": "e8134e3ba250eca6571433d3573068448ca6328294eaf2917ac2c08c5813997d",
     "120310066": "6e5f77686437256419d2e9d978141bbc29f702e4279c084d7d1f6cc0f2afc0be",
     "120310067": "54a053a0b32f01729a4a8fd85601bd51014805ee89eb79c1b08f3139cd34c9b3",
     "120310068": "4df25d0ef111c70e2a8103a1aa3c927e1577d73e6d95ec430b470b4c8aa9f5c6",

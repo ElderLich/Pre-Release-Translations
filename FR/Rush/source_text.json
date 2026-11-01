@@ -1,21 +1,34 @@
 {
   "language": "fr",
-  "matches": {},
+  "matches": {
+    "120310034": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP034",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17901&languages=fr"
+    },
+    "120310035": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/KP27-JP035",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17907&languages=fr"
+    }
+  },
   "requested_ids": [
     120310034,
     120310035,
+    120310065,
     120310069
   ],
   "unresolved": [
     {
-      "id": 120310034,
+      "id": 120310065,
       "reason": "No source card page found",
-      "set_code": "RD/KP27-JP034"
-    },
-    {
-      "id": 120310035,
-      "reason": "No source card page found",
-      "set_code": "RD/KP27-JP035"
+      "set_code": "RD/KP27-JP065"
     },
     {
       "id": 120310069,
