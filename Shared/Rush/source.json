@@ -125,18 +125,18 @@
     120311064
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "106fb2c4d5dc0cb3e5646c33082794da93eb8aa0e0ff280a30c22cbf411f2b37",
+  "local_inputs_sha256": "3c65df212284ebf58eb550a19ed268d6dcb9ea9b38b92a8e4a9b75acb32c3b36",
   "patch_sha256": "588418f18b83a0dbb52e121565445d29bbf4aa480a4d37a6ceaaae8eebc28b0d",
   "pending_locales": {
     "DE": 12,
-    "EN": 6,
+    "EN": 5,
     "ES": 3,
-    "FR": 6,
+    "FR": 5,
     "IT": 12,
     "JP": 5,
     "KR": 12,
     "PT": 12,
-    "TH": 6,
+    "TH": 5,
     "ZH-TW": 2
   },
   "source_fingerprint": "27f5602af707b1aaab0ea7ee5ec501e91ac3dff4f37f5b36b9b1a57ebe1bf4ef",
@@ -263,6 +263,6 @@
     "120311063": "4b365b3394ceebd859546392dac6790872e5aeb7dcf7ceb4912ae26d98c641c1",
     "120311064": "b4369a02a7a66a81fbcd514c6ee24609871e2aa1ccdf686dcb5135d347a4051a"
   },
-  "translations_revision": "804c0e9d9988f6dde36b7f5385b94e15305009b5",
+  "translations_revision": "10ae516e80a900dcc3957290c849667aa2197b23",
   "version": 2
 }
