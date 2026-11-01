@@ -1,7 +1,7 @@
 [
   {
     "name": "Ghostrick Garden",
-    "desc": "Once while face-up on the field, during your Main Phase: You can add 1 \"Ghostrick\" monster from your Deck to your hand. If a monster(s) is sent to the GY by an opponent's card effect: You can activate 1 of these effects;\n● Change 1 face-up or face-down \"Ghostrick\" monster you control to face-up or face-down Defense Position.\n● Attach the top card of your Deck to 1 \"Ghostrick\" Xyz Monster you control.\nYou can only activate 1 \"Ghostrick Garden\" once per turn.",
+    "desc": "Once while face-up on the field, during your Main Phase: You can add 1 \"Ghostrick\" monster from your Deck to your hand. If a monster(s) is sent to the GY by an opponent's card effect: You can activate 1 of these effects;\n● Change 1 face-up or face-down \"Ghostrick\" monster you control to face-up or face-down Defense Position.\n● Attach the top card of your Deck to 1 \"Ghostrick\" Xyz Monster you control.\nYou can only activate 1 \"Ghostrick Garden\" per turn.",
     "overallString": "[Spell|Field]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272053.jpg?version=19.7"
   },
