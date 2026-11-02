@@ -139,8 +139,8 @@
     "TH": 5,
     "ZH-TW": 2
   },
-  "source_fingerprint": "27f5602af707b1aaab0ea7ee5ec501e91ac3dff4f37f5b36b9b1a57ebe1bf4ef",
-  "source_revision": "68f6159d2570561e2f778af35d8235fcc5f21e6b",
+  "source_fingerprint": "b6bb217ab7a3e6a9474c6c729474e7d53ee994f0011ceb396a87a8edca5efcbf",
+  "source_revision": "abd6116eab200a66d81e9ad53c9096b2ce720ef5",
   "text_sha256": {
     "120000012": "c20ee81fae40a546d6c56bc8428a6c55670017f04f230c718e8bd6c3d9944b2e",
     "120109069": "05676e492358ff945d506550bce34aeae361218de9cdad58453922430073709e",
@@ -263,6 +263,6 @@
     "120311063": "4b365b3394ceebd859546392dac6790872e5aeb7dcf7ceb4912ae26d98c641c1",
     "120311064": "b4369a02a7a66a81fbcd514c6ee24609871e2aa1ccdf686dcb5135d347a4051a"
   },
-  "translations_revision": "10ae516e80a900dcc3957290c849667aa2197b23",
+  "translations_revision": "16b8b902f73abf0477fa52a61c10c5f0fe134bd8",
   "version": 2
 }
