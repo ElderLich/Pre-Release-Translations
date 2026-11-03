@@ -1,6 +1,15 @@
 {
   "version": 1,
-  "cards": {},
+  "cards": {
+    "120311063": {
+      "set_code": "RD/KP18-JP030",
+      "evidence": "Upstream c120311063.lua uses RD.AlternateCard(120264030), identifying Souffraes. Konami confirms RD/KP18-JP030: https://www.db.yugioh-card.com/rushdb/card_search.action?ope=2&cid=20639 . Use the verified original print because the LP02 source page reverses the two card identities."
+    },
+    "120311064": {
+      "set_code": "RD/KP18-JP031",
+      "evidence": "Upstream c120311064.lua uses RD.AlternateCard(120264031), identifying Gaigust. Konami confirms RD/KP18-JP031: https://www.db.yugioh-card.com/rushdb/card_search.action?ope=2&cid=20640 . Use the verified original print because the LP02 source page reverses the two card identities."
+    }
+  },
   "ocg_slugs": {"SJMP": "sj", "WJMP": "wj"},
   "notes": "Card identities come from upstream sets.md. Add only reviewed card ID overrides with set_code and evidence. Missing or conflicting identities stay pending; never guess from card names."
 }

@@ -3,6 +3,15 @@
 The user's default translation scope is Standard Pre-Release German (DE), and
 Rush German (DE), Portuguese (PT), and Traditional Chinese (ZH-TW).
 
+A complete Rush refresh also resolves English and the other supported locales'
+reported translation/review blockers. Thai follows the completed English pack.
+The priority locales above are not a reason to leave shared prompt gaps blocking
+other releases. Add new shared prompt templates for every supported patcher
+language, review changed prompt-slot meanings, and verify all locale build
+reports before calling a full Rush update complete. Inspect the latest imported
+card names/effects as well: non-Chinese text in the wrong language, swapped cards,
+and scraped page annotations may pass the pending-field detector.
+
 Work with both this repository and `D:\Modding\Super-Pre Translations`.
 Read `docs/TRANSLATOR_WORKFLOW.md` and `docs/RUSH_PRE_RELEASE.md` before updates.
 Verify the current upstream inventory before translating; preserve existing

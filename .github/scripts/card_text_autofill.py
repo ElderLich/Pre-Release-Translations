@@ -491,7 +491,7 @@ class OcgCardListParser(HTMLParser):
         elif "list-head" in self.td_class:
             self.expect_maximum = text == "MAXIMUM ATK"
         elif self.is_name_class(self.td_class):
-            self.current_name = re.sub(r"(?:NEW|UP|（(?:イラスト[０-９0-9]+種|新イラスト)）)\s*$", "", text).strip()
+            self.current_name = re.sub(r"(?:NEW|UP|（(?:イラスト[０-９0-9]+種|新イラスト(?:もあり)?)）)\s*$", "", text).strip()
         elif "card-p-scale" in self.td_class:
             self.pending_scale = text
         elif "card-text" in self.td_class and self.current_code and self.current_name:

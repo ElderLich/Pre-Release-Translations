@@ -174,6 +174,40 @@ class SourceTextTests(unittest.TestCase):
         self.assertEqual(card.name, "カード")
         self.assertEqual(card.desc, "【条件】なし\n【効果】引く。")
 
+    def test_ocg_alternate_art_note_and_badges_are_not_card_trooper_name(self):
+        # Name-cell markup from list_r/lp02, including the adjacent rarity cell.
+        parser = source.OcgCardListParser()
+        parser.feed('<td class="card-number-r" rowspan="2">RD/LP02-JP060</td>'
+                    '<td class="e-mon" rowspan="2">カードガンナー（新イラストもあり）'
+                    '<span class="limit-icon">LEGEND</span><span class="new-icon">NEW</span></td>'
+                    '<td class="card-category" colspan="5">効果</td>'
+                    '<td class="card-rare" rowspan="2">パラレル+ウルトラ<br>オーバーラッシュ</td>'
+                    '<td class="card-text" colspan="9">【条件】なし<br>【効果】引く。</td>')
+        card = parser.cards["RD/LP02-JP060"]
+        self.assertEqual(card.name, "カードガンナー")
+        self.assertEqual(card.desc, "【条件】なし\n【効果】引く。")
+
+    def test_ocg_vivi_name_does_not_include_adjacent_over_rush_rarities(self):
+        # Current list_r/kp27 puts both Over Rush labels in a separate td.
+        parser = source.OcgCardListParser()
+        parser.feed('<td class="card-number-r" rowspan="2">RD/KP27-JP034</td>'
+                    '<td class="e-mon" rowspan="2">パステルファインダー・ビビ（イラスト2種）</td>'
+                    '<td class="card-category" colspan="5">効果</td>'
+                    '<td class="card-rare" rowspan="2">ウルトラ<br>シークレット<br>'
+                    'オーバーラッシュ<br>オーバーラッシュ</td>'
+                    '<td class="card-text" colspan="9">【条件】なし<br>【効果】引く。</td>')
+        self.assertEqual(parser.cards["RD/KP27-JP034"].name, "パステルファインダー・ビビ")
+
+    def test_ocg_name_cleanup_preserves_literal_names_and_nonterminal_notes(self):
+        for name in ("オーバーラッシュ", "カード・オーバーラッシュ", "カード（特別版）",
+                     "試作（新イラストもあり）カード"):
+            with self.subTest(name=name):
+                parser = source.OcgCardListParser()
+                parser.feed('<td class="card-number-r">RD/AA01-JP001</td>'
+                            f'<td class="e-mon">{name}</td>'
+                            '<td class="card-text" colspan="9">【条件】なし</td>')
+                self.assertEqual(parser.cards["RD/AA01-JP001"].name, name)
+
     def test_manual_fields_preserved_but_missing_description_filled(self):
         with tempfile.TemporaryDirectory() as temporary:
             path = Path(temporary) / "cards.cdb"

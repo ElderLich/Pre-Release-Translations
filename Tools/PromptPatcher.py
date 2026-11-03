@@ -50144,7 +50144,7 @@ RUSH_PROMPT_TRANSLATIONS.update({
         "it": "Effettuare un’Evocazione Rituale?",
         "pt": "Realizar uma Invocação-Ritual?",
         "ja": "儀式召喚を行いますか？",
-        "kr": "의식 소환하겠습니까?"
+        "kr": "리추얼 소환하겠습니까?"
     },
     "直到下次的自身回合结束时，不能把怪兽特殊召唤": {
         "en": "You cannot Special Summon until the end of your next turn.",
@@ -50278,24 +50278,54 @@ RUSH_PROMPT_PROVENANCE.update({
 # adjustments in str3..str8; Micha can recover a monster OR Micha Symbol.
 RUSH_PROMPT_TRANSLATIONS.update({
     "上升3星": {
+        "en": "Increase by 3 Levels",
+        "fr": "Augmenter de 3 Niveaux",
         "de": "Um 3 Stufen erhöhen",
+        "es": "Aumentar en 3 Niveles",
         "pt": "Aumentar em 3 Níveis",
+        "it": "Aumentare di 3 Livelli",
+        "ja": "レベルを３上げる",
+        "kr": "레벨을 3 올린다",
     },
     "上升2星": {
+        "en": "Increase by 2 Levels",
+        "fr": "Augmenter de 2 Niveaux",
         "de": "Um 2 Stufen erhöhen",
+        "es": "Aumentar en 2 Niveles",
         "pt": "Aumentar em 2 Níveis",
+        "it": "Aumentare di 2 Livelli",
+        "ja": "レベルを２上げる",
+        "kr": "레벨을 2 올린다",
     },
     "上升1星": {
+        "en": "Increase by 1 Level",
+        "fr": "Augmenter de 1 Niveau",
         "de": "Um 1 Stufe erhöhen",
+        "es": "Aumentar en 1 Nivel",
         "pt": "Aumentar em 1 Nível",
+        "it": "Aumentare di 1 Livello",
+        "ja": "レベルを１上げる",
+        "kr": "레벨을 1 올린다",
     },
     "下降3星": {
+        "en": "Decrease by 3 Levels",
+        "fr": "Diminuer de 3 Niveaux",
         "de": "Um 3 Stufen verringern",
+        "es": "Disminuir en 3 Niveles",
         "pt": "Reduzir em 3 Níveis",
+        "it": "Diminuire di 3 Livelli",
+        "ja": "レベルを３下げる",
+        "kr": "레벨을 3 내린다",
     },
     "是否选自己墓地1只怪兽(攻击力900/守备力100)或者1张{CARD}加入手卡?": {
+        "en": "Add 1 monster with 900 ATK/100 DEF or 1 {CARD} from your GY to your hand?",
+        "fr": "Ajouter à votre main 1 monstre avec 900 ATK/100 DEF ou 1 {CARD} depuis votre Cimetière ?",
         "de": "Deiner Hand 1 Monster mit 900 ATK/100 DEF oder 1 {CARD} von deinem Friedhof hinzufügen?",
+        "es": "¿Añadir a tu mano 1 monstruo con 900 ATK/100 DEF o 1 {CARD} de tu Cementerio?",
         "pt": "Adicionar à sua mão 1 monstro com 900 ATK/100 DEF ou 1 {CARD} do seu Cemitério?",
+        "it": "Aggiungere alla tua mano 1 mostro con 900 ATK/100 DEF o 1 {CARD} dal tuo Cimitero?",
+        "ja": "自分の墓地のモンスター（攻撃力９００／守備力１００）１体または{CARD}１枚を手札に加えますか？",
+        "kr": "자신의 묘지의 몬스터(공격력 900 / 수비력 100) 1장 또는 {CARD} 1장을 패에 넣겠습니까?",
     },
 })
 RUSH_PROMPT_PROVENANCE.update({
