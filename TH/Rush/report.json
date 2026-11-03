@@ -28,25 +28,10 @@
     },
     {
       "fields": [
-        "str3"
-      ],
-      "id": 120310034,
-      "name": "Pastel Finder Vivi"
-    },
-    {
-      "fields": [
-        "str2",
-        "str3"
+        "str2"
       ],
       "id": 120310035,
       "name": "Micha the Cheerful Angel"
-    },
-    {
-      "fields": [
-        "str2"
-      ],
-      "id": 120311063,
-      "name": "Souffraes the Defiant Soul"
     }
   ],
   "published_source_fields": {
@@ -2184,8 +2169,8 @@
     "120310031": "5ca49a3d4ab803c8f4c9910b057454854ac7b33ef3338f1e5318fb3a8abbf950",
     "120310032": "855e474ec1b2104f3154ec1e462174cf21ddc7badb609c66e820302b670c2941",
     "120310033": "1cb0894216e4b19fbb1e7421f9919e2b52115a4cfe8f12c0f53fc59f55b1f48e",
-    "120310034": "97da3413ae57f64946d75c3af3b315858f5917f42a4b7396698d3600bbb70d1a",
-    "120310035": "5ac9804495a90f45ad19b832d275b2b42abde28c61cd7b7283758bb2e9e2eb84",
+    "120310034": "be109f40058aa22a0c3322ef72eb02178bb269e4971a2ce3e79d0ad1a84f708e",
+    "120310035": "8b81ae6b4a3a74742a3c54cba1d55531cef151a821b9523add90f06306213964",
     "120310036": "4e9bf14e556b3895162eda86711ed782546b0f3a46cdf2bc5657fe6de8311812",
     "120310037": "2390dfe5d8182fdc6a45d8af09e83124259e893a5961ee4eccf729aa2e3acf98",
     "120310038": "bae14427ade83883bfe08035fd5fba155ed32ee2b546b6ada98e00ad8071e0da",
@@ -2267,7 +2252,7 @@
     "120311060": "f2b942fd1de487666c9f6eb3a79efa2d05a28423b3ba3f9a2b29a94d7237a750",
     "120311061": "b257880ffc1c0a18d1ef2c42f0a2b4b68a8578fb5206a691db25660142e8d693",
     "120311062": "34670b76fcafb4928561426ffeb85ccbbecd955f3c1c4ee15d47d63986e9e1f2",
-    "120311063": "874a46c86bc517b7c9bc388e8430651284aa8d689780929270a40cb5fb808142",
+    "120311063": "67420075d592d96ae9856bbdc64e8a7a3cb2a4e142b1c30a439ce079c0bf1f3d",
     "120311064": "3b1a589de1ce0cd12bbdc598c4887c471a427f8d2a83904fd5f819f53d3b8348"
   }
 }
