@@ -1,18 +1,9 @@
 {
   "active_cards": 120,
-  "artwork_files": 109,
+  "artwork_files": 118,
   "excluded_ids": [],
   "missing_artwork": [
-    120310034,
-    120310035,
-    120310053,
-    120310065,
-    120311021,
-    120311024,
-    120311025,
-    120311060,
-    120311063,
-    120311064
+    120311060
   ],
   "pending_translations": [
     {
@@ -96,28 +87,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311060,
-      "name": "卡片炮击士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120311063,
-      "name": "叛骨之苏芙蕾思"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311064,
-      "name": "叛骨之盖加斯特"
+      "name": "Souffraes l'Anima Ribelle"
     }
   ],
   "published_source_fields": {
@@ -2335,10 +2308,10 @@
     "120311057": "d1ef6bdc8061c604ddcf9eb6271e8e35817960db8f5ad5206603773cefdb366b",
     "120311058": "e03767ab5de85df250edfb18e7dc66d9532e8d76a6d579ae7177dcb425164348",
     "120311059": "d3f8702ff5787590dd974b3faab977d5175b8431656b2d7318c2fdf0b4fba700",
-    "120311060": "588022282c717223aee438cd7ec45b467b2940b6fca1d5762bcd5c6759a88548",
+    "120311060": "562afc4130ea8588d66970407a220e45641d35250593ef76609bbe8d2e4805ec",
     "120311061": "d087c7d90615e51d1eea31ef37e56d9f8d206e4b41a455c47a13beba8e576697",
     "120311062": "f431a702dd69754c68813cc3e4527e30ed4ffcbc8260f334084c1e66c63a762e",
-    "120311063": "7b09f460c1542f0d9e8ff53afb0173d327b295e116cdbcd58de13885a57b790d",
-    "120311064": "06ccb56a2bd37cacb1a84a202d0078516da6f277a0fc2a4254318f7917936611"
+    "120311063": "1e930fd8dffe5051c77fd892105eca95d74feeb76f018b5684cd3b73cf7e8841",
+    "120311064": "45a71d8e48db3e189a8aa9578f70a0ad4cd6116755b8a25eebe09e5bceee210b"
   }
 }

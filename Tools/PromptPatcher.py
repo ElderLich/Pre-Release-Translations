@@ -50273,3 +50273,35 @@ RUSH_PROMPT_PROVENANCE.update({
         "是否选自己墓地3只怪兽回到卡组?",
     )
 })
+
+# Reviewed against the November 2 Rush source: Amy/Beeko now offer six level
+# adjustments in str3..str8; Micha can recover a monster OR Micha Symbol.
+RUSH_PROMPT_TRANSLATIONS.update({
+    "上升3星": {
+        "de": "Um 3 Stufen erhöhen",
+        "pt": "Aumentar em 3 Níveis",
+    },
+    "上升2星": {
+        "de": "Um 2 Stufen erhöhen",
+        "pt": "Aumentar em 2 Níveis",
+    },
+    "上升1星": {
+        "de": "Um 1 Stufe erhöhen",
+        "pt": "Aumentar em 1 Nível",
+    },
+    "下降3星": {
+        "de": "Um 3 Stufen verringern",
+        "pt": "Reduzir em 3 Níveis",
+    },
+    "是否选自己墓地1只怪兽(攻击力900/守备力100)或者1张{CARD}加入手卡?": {
+        "de": "Deiner Hand 1 Monster mit 900 ATK/100 DEF oder 1 {CARD} von deinem Friedhof hinzufügen?",
+        "pt": "Adicionar à sua mão 1 monstro com 900 ATK/100 DEF ou 1 {CARD} do seu Cemitério?",
+    },
+})
+RUSH_PROMPT_PROVENANCE.update({
+    key: {lang: "reviewed_rush_patch_20261103" for lang in RUSH_PROMPT_TRANSLATIONS[key]}
+    for key in (
+        "上升3星", "上升2星", "上升1星", "下降3星",
+        "是否选自己墓地1只怪兽(攻击力900/守备力100)或者1张{CARD}加入手卡?",
+    )
+})

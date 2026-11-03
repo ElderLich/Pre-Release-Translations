@@ -1,18 +1,9 @@
 {
   "active_cards": 120,
-  "artwork_files": 109,
+  "artwork_files": 118,
   "excluded_ids": [],
   "missing_artwork": [
-    120310034,
-    120310035,
-    120310053,
-    120310065,
-    120311021,
-    120311024,
-    120311025,
-    120311060,
-    120311063,
-    120311064
+    120311060
   ],
   "pending_translations": [
     {
@@ -90,28 +81,10 @@
     },
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311060,
-      "name": "卡片炮击士"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2"
       ],
       "id": 120311063,
-      "name": "叛骨之苏芙蕾思"
-    },
-    {
-      "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120311064,
-      "name": "叛骨之盖加斯特"
+      "name": "반골의 스플레이스"
     }
   ],
   "published_source_fields": {
@@ -2329,10 +2302,10 @@
     "120311057": "d80930dee5e71c3f358fb62e4d2bb2f24dea73d937669c7f40c672275a2111de",
     "120311058": "9477cf1694567a5e2e869bbdf0ebe348df478403afa97f8cbe46db70dd91dab3",
     "120311059": "6fc54b2ebc4891ae8ca711d3647a34cdb88079234cc97c50dabe3a61b954ea47",
-    "120311060": "d4aff90860c72769d06f885b30cacccd21d6ca5d8a94e01adc5d3ff895c6bdf3",
+    "120311060": "6e72ea95517628378e92e6599a573260f169e00db95d7759745a04247106b5d7",
     "120311061": "5388df2905df6c91133547c8620668c6e11215343d53ccbb2f83eb649ca8fff4",
     "120311062": "3ea1a9fdfba8583ecd44c22d0b9f8f24a211a6a7bea7dfd7b26df29711418d93",
-    "120311063": "113f369620809254bffddcc3a7d26533c355bedec9c60c589f4102e451f6396e",
-    "120311064": "fe7b5541106bd55cc652728c4c897891ec7465892dc74e84d6a3f5ccecc64cae"
+    "120311063": "4930a771758a41344fc494a2b4a15ddb06e89420dbe8f288fcbe6a14b948fbe1",
+    "120311064": "e27eb5934d1cd7ed2d363911071b6f90e8d2938cd821d42ea4dd7c8a8c023d6d"
   }
 }
