@@ -1,5 +1,23 @@
 [
   {
+    "name": "方界领域",
+    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：作为这张卡发动时的效果处理，可以从卡组把1只4星以下的「方界」怪兽加入手卡。\r\n②：怪兽之间的战斗发生的对双方的战斗伤害变成0。\r\n③：1回合1次，自己主要阶段才能发动。从手卡把1只「方界」怪兽无视召唤条件特殊召唤。\r\n④：怪兽被战斗破坏的场合发动。破坏的怪兽的控制者受到那原本攻击力数值的伤害。",
+    "overallString": "[Magie|Terrain]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
+  },
+  {
+    "name": "方界防阵",
+    "desc": "①：对方怪兽的攻击宣言时才能发动。那次攻击无效。那之后，可以从手卡·卡组把最多2只「方界」怪兽无视召唤条件特殊召唤。\r\n②：把墓地的这张卡除外，以自己场上1张「方界」卡为对象才能发动。这个回合，以那张卡为对象的对方发动的效果无效化。",
+    "overallString": "[Piège|Contre-Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
+  },
+  {
+    "name": "莓柠苹巧奇之黑芭菲",
+    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：自己主要阶段才能发动。从卡组把1只「魔术少女」怪兽加入手卡。\r\n②：对方把怪兽召唤·特殊召唤的场合才能发动。从手卡把相同属性的怪兽不在自己场上存在的1只「魔术少女」怪兽特殊召唤。那之后，自己场上有「黑魔术少女」存在的场合，可以把场上1张表侧表示卡的效果直到回合结束时无效。",
+    "overallString": "[Magie|Continu]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
+  },
+  {
     "name": "Jardin Fantôruse",
     "desc": "Une fois, tant que cette carte est face recto sur le Terrain, durant votre Main Phase : vous pouvez ajouter 1 monstre \"Fantôruse\" depuis votre Deck à votre main. Si un ou plusieurs monstres sont envoyés au Cimetière par un effet de carte de l'adversaire : vous pouvez activer 1 de ces effets ;\n● Changez 1 monstre \"Fantôruse\" face recto ou face verso que vous contrôlez en Position de Défense face recto ou face verso.\n● Attachez la carte du dessus de votre Deck à 1 Monstre Xyz \"Fantôruse\" que vous contrôlez.\nVous ne pouvez activer qu'1 \"Jardin Fantôruse\" par tour.",
     "overallString": "[Magie|Terrain]",
