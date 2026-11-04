@@ -1,11 +1,11 @@
 {
   "meta": {
-    "db": "/home/runner/work/Pre-Release-Translations/Pre-Release-Translations/DE/Workspace/test-release.cdb",
+    "db": "D:\\Modding\\Super-Pre Translations\\DE\\raw2\\test-release.cdb",
     "cn_db": "",
     "lang": "de",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261104_161219",
+    "timestamp": "20261104_195259",
     "rows_in_report": 0,
     "unique_cn_strings": 0,
     "total_cn_cells": 0

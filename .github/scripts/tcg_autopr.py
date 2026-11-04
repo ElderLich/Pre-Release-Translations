@@ -873,6 +873,22 @@ EN_DESC_REPLACEMENTS = [
 ]
 
 
+def format_reviewed_en_tcg_desc(card_id: int, desc: str) -> str:
+    # VJMP-JP299's early English draft uses numbered OCG effects and omits
+    # "use" in its restriction. Only the first (search) effect is once per turn.
+    # Keep the effect bodies: future source corrections must not be overwritten.
+    if card_id != 100200299:
+        return desc
+    match = re.fullmatch(
+        r"You can only (?:use )?the (?:\(1\)|①) effect from this card's name once per turn\.\s*"
+        r"(?:\(1\)|①[：:]?)\s*(During your Main Phase: [^\r\n]+)\s*"
+        r"(?:\(2\)|②[：:]?)\s*(If your opponent [\s\S]+)", desc.strip())
+    if not match:
+        return desc
+    return (match[1].strip() + ' You can only use this effect of "B.L.A.C.K. Parfait" once per turn. '
+            + match[2].strip())
+
+
 def patch_en_desc(cdb_path: Path) -> None:
     if CONFIG.patch_lang != "en":
         return
@@ -881,7 +897,7 @@ def patch_en_desc(cdb_path: Path) -> None:
     try:
         rows = conn.execute("SELECT id, desc FROM texts WHERE desc IS NOT NULL AND desc != ''").fetchall()
         for card_id, desc in rows:
-            new_desc = desc
+            new_desc = format_reviewed_en_tcg_desc(card_id, desc)
             for source, target in EN_DESC_REPLACEMENTS:
                 new_desc = new_desc.replace(source, target)
             if new_desc != desc:

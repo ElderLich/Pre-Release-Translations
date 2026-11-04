@@ -1,5 +1,23 @@
 [
   {
+    "name": "Kubische Dimension",
+    "desc": "Wenn diese Karte aktiviert wird: Du kannst deiner Hand 1 „Kubisch“-Monster der Stufe 4 oder niedriger von deinem Deck hinzufügen. Kein Spieler erhält Kampfschaden aus Kämpfen zwischen 2 Monstern. Einmal pro Spielzug, während deiner Main Phase: Du kannst 1 „Kubisch“-Monster als Spezialbeschwörung von deiner Hand beschwören, ungeachtet seiner Beschwörungsbedingungen. Falls ein Monster durch Kampf zerstört wird: Sein Beherrscher erhält Schaden in Höhe seiner Grund-ATK. Du kannst nur 1 „Kubische Dimension“ pro Spielzug aktivieren.",
+    "overallString": "[Zauber|Spielfeld]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
+  },
+  {
+    "name": "Kubische Verteidigung",
+    "desc": "Wenn ein Monster deines Gegners einen Angriff deklariert: Annulliere den Angriff, dann kannst du bis zu 2 „Kubisch“-Monster als Spezialbeschwörung von deiner Hand und/oder deinem Deck beschwören, ungeachtet ihrer Beschwörungsbedingungen. Du kannst diese Karte von deinem Friedhof verbannen und dann 1 „Kubisch“-Karte, die du kontrollierst, wählen; annulliere in diesem Spielzug jeden von deinem Gegner aktivierten Effekt, der jene Karte als Ziel wählt.",
+    "overallString": "[Falle|Konterfallen]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
+  },
+  {
+    "name": "B.L.A.C.K. Parfait",
+    "desc": "Während deiner Main Phase: Du kannst deiner Hand 1 „Magier-Mädchen“-Monster von deinem Deck hinzufügen. Du kannst diesen Effekt von „B.L.A.C.K. Parfait“ nur einmal pro Spielzug verwenden. Falls dein Gegner ein oder mehr Monster als Normal- oder Spezialbeschwörung beschwört: Du kannst 1 „Magier-Mädchen“-Monster mit einer anderen Eigenschaft als die Monster, die du kontrollierst, als Spezialbeschwörung von deiner Hand beschwören, dann, falls du „Dunkles Magier-Mädchen“ kontrollierst, kannst du bis zum Ende dieses Spielzugs die Effekte von 1 offenen Karte auf dem Spielfeld annullieren.",
+    "overallString": "[Zauber|Permanente]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
+  },
+  {
     "name": "Geistertrick-Garten",
     "desc": "Einmal, solange diese Karte offen auf dem Spielfeld liegt, während deiner Main Phase: Du kannst deiner Hand 1 „Geistertrick“-Monster von deinem Deck hinzufügen. Falls ein oder mehr Monster durch einen Karteneffekt deines Gegners auf den Friedhof gelegt werden: Du kannst 1 dieser Effekte aktivieren;\n● Ändere 1 offenes oder verdecktes „Geistertrick“-Monster, das du kontrollierst, in die offene oder verdeckte Verteidigungsposition.\n● Hänge die oberste Karte deines Decks als Material an 1 „Geistertrick“-Xyz-Monster an, das du kontrollierst.\nDu kannst nur 1 „Geistertrick-Garten“ pro Spielzug aktivieren.",
     "overallString": "[Zauber|Spielfeld]",

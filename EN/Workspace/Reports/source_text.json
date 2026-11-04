@@ -1,10 +1,23 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 148,
-  "matched": 148,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "candidates": 151,
+  "matched": 150,
+  "unmatched_ids": [
+    100200299
+  ],
+  "unresolved": [
+    {
+      "id": 100200299,
+      "name": "B.L.A.C.K. Parfait",
+      "set_code": "VJMP-JP299",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/B.L.A.C.K._Parfait",
+      "missing_fields": [
+        "text"
+      ]
+    }
+  ],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -142,9 +155,17 @@
       "set_code": "RV02-JP004",
       "source": "https://yugipedia.com/wiki/Divine_Anima_Infinity_the_Creation_Cubic_Overlord"
     },
+    "100272005": {
+      "set_code": "RV02-JP005",
+      "source": "https://yugipedia.com/wiki/Cubic_Dimension"
+    },
     "100272006": {
       "set_code": "RV02-JP006",
       "source": "https://yugipedia.com/wiki/Cubic_Bodhi"
+    },
+    "100272007": {
+      "set_code": "RV02-JP007",
+      "source": "https://yugipedia.com/wiki/Cubic_Defense"
     },
     "100272026": {
       "set_code": "RV02-JP026",

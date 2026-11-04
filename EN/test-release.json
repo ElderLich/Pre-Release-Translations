@@ -1,5 +1,23 @@
 [
   {
+    "name": "Cubic Dimension",
+    "desc": "When this card is activated: You can add 1 Level 4 or lower \"Cubic\" monster from your Deck to your hand. Neither player takes any battle damage from battles involving 2 monsters. Once per turn, during your Main Phase: You can Special Summon 1 \"Cubic\" monster from your hand, ignoring its Summoning conditions. If a monster(s) is destroyed by battle: Its controller takes damage equal to its original ATK. You can only activate 1 \"Cubic Dimension\" per turn.",
+    "overallString": "[Spell|Field]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
+  },
+  {
+    "name": "Cubic Defense",
+    "desc": "When an opponent's monster declares an attack: Negate that attack, then you can Special Summon up to 2 \"Cubic\" monsters from your hand and/or Deck, ignoring their Summoning conditions. You can banish this card from your GY, then target 1 \"Cubic\" card you control; this turn, negate any card or effect activated by your opponent that targeted that card.",
+    "overallString": "[Trap|Counter]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
+  },
+  {
+    "name": "B.L.A.C.K. Parfait",
+    "desc": "During your Main Phase: You can add 1 \"Magician Girl\" monster from your Deck to your hand. You can only use this effect of \"B.L.A.C.K. Parfait\" once per turn. If your opponent Normal or Special Summons a monster(s): You can Special Summon 1 \"Magician Girl\" monster from your hand with a different Attribute from the monsters you control, then if you control \"Dark Magician Girl\", you can negate the effects of 1 face-up card on the field until the end of this turn.",
+    "overallString": "[Spell|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
+  },
+  {
     "name": "Ghostrick Garden",
     "desc": "Once while face-up on the field, during your Main Phase: You can add 1 \"Ghostrick\" monster from your Deck to your hand. If a monster(s) is sent to the GY by an opponent's card effect: You can activate 1 of these effects;\n● Change 1 face-up or face-down \"Ghostrick\" monster you control to face-up or face-down Defense Position.\n● Attach the top card of your Deck to 1 \"Ghostrick\" Xyz Monster you control.\nYou can only activate 1 \"Ghostrick Garden\" per turn.",
     "overallString": "[Spell|Field]",
