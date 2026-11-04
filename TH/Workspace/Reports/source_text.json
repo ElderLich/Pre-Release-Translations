@@ -1,10 +1,37 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 148,
+  "candidates": 151,
   "matched": 148,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "unmatched_ids": [
+    100200299,
+    100272005,
+    100272007
+  ],
+  "unresolved": [
+    {
+      "id": 100200299,
+      "name": "莓柠苹巧奇之黑芭菲",
+      "set_code": "VJMP-JP299",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/B.L.A.C.K._Parfait",
+      "missing_fields": [
+        "text"
+      ]
+    },
+    {
+      "id": 100272005,
+      "name": "方界领域",
+      "set_code": "RV02-JP005",
+      "reason": "No source card page found"
+    },
+    {
+      "id": 100272007,
+      "name": "方界防阵",
+      "set_code": "RV02-JP007",
+      "reason": "No source card page found"
+    }
+  ],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
