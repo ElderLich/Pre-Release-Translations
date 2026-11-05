@@ -1,5 +1,23 @@
 [
   {
+    "name": "Dimensión Cúbica",
+    "desc": "Cuando esta carta es activada: puedes añadir a tu mano 1 monstruo \"Cúbico/a\" de Nivel 4 o menor desde tu Deck.\r\nNingún jugador recibe daño de batalla de batallas que involucren a 2 monstruos.\r\nUna vez por turno, durante tu Main Phase: puedes Invocar de Modo Especial 1 monstruo \"Cúbico/a\" desde tu mano, ignorando sus condiciones de Invocación.\r\nSi uno o más monstruos son destruidos en batalla: su controlador recibe daño igual a su ATK original.\r\nSólo puedes activar 1 \"Dimensión Cúbica\" por turno.",
+    "overallString": "[Mágica|Campo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
+  },
+  {
+    "name": "Defensa Cúbica",
+    "desc": "Cuando un monstruo del adversario declara un ataque: niega ese ataque, y después puedes Invocar de Modo Especial hasta 2 monstruos \"Cúbico/a\" desde tu mano y/o Deck, ignorando sus condiciones de Invocación.\r\nPuedes desterrar esta carta en tu Cementerio, y después seleccionar 1 carta \"Cúbico/a\" que controles; este turno, niega cualquier carta o efecto activado por tu adversario que seleccione esa carta.",
+    "overallString": "[Trampa|Contraefecto]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
+  },
+  {
+    "name": "B.L.A.C.K. Parfait",
+    "desc": "Durante tu Main Phase: puedes añadir a tu mano 1 monstruo \"Chica Maga\" desde tu Deck. Si tu adversario Invoca de Modo Normal o Especial uno o más monstruos: puedes Invocar de Modo Especial 1 monstruo \"Chica Maga\" desde tu mano con un Atributo diferente al de los monstruos que controles, y después si controlas \"Chica Maga Oscura\", puedes negar los efectos de 1 carta boca arriba en el Campo hasta el final de este turno.\r\nSólo puedes usar este efecto de \"B.L.A.C.K. Parfait\" una vez por turno.",
+    "overallString": "[Mágica|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
+  },
+  {
     "name": "Jardín Fantastruco",
     "desc": "Sólo puedes activar 1 carta con este nombre por turno.\r\nUna vez, mientras esta carta está boca arriba en el Campo: puedes añadir a tu mano 1 monstruo \"Fantastruco\" desde tu Deck.\r\nSi un monstruo es mandado al Cementerio por el efecto de una carta de tu adversario: puedes activar 1 de estos efectos;\r\n● Cambia 1 monstruo \"Fantastruco\" en Posición de Defensa boca arriba o boca abajo que controles a Posición de Defensa boca arriba o boca abajo.\r\n● Acopla la carta superior de tu Deck a 1 Monstruo Xyz \"Fantastruco\" que controles.",
     "overallString": "[Mágica|Campo]",
