@@ -2,11 +2,9 @@
   "language": "fr",
   "mode": "fill",
   "candidates": 3,
-  "matched": 0,
+  "matched": 2,
   "unmatched_ids": [
-    100200299,
-    100272005,
-    100272007
+    100200299
   ],
   "unresolved": [
     {
@@ -19,19 +17,16 @@
         "fr_name",
         "fr_text"
       ]
-    },
-    {
-      "id": 100272005,
-      "name": "方界领域",
-      "set_code": "RV02-JP005",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100272007,
-      "name": "方界防阵",
-      "set_code": "RV02-JP007",
-      "reason": "No source card page found"
     }
   ],
-  "matches": {}
+  "matches": {
+    "100272005": {
+      "set_code": "RV02-JP005",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17909&languages=fr"
+    },
+    "100272007": {
+      "set_code": "RV02-JP007",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17910&languages=fr"
+    }
+  }
 }
