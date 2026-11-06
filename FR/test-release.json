@@ -1,13 +1,13 @@
 [
   {
-    "name": "方界领域",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：作为这张卡发动时的效果处理，可以从卡组把1只4星以下的「方界」怪兽加入手卡。\r\n②：怪兽之间的战斗发生的对双方的战斗伤害变成0。\r\n③：1回合1次，自己主要阶段才能发动。从手卡把1只「方界」怪兽无视召唤条件特殊召唤。\r\n④：怪兽被战斗破坏的场合发动。破坏的怪兽的控制者受到那原本攻击力数值的伤害。",
+    "name": "Dimension Cubique",
+    "desc": "Lorsque cette carte est activée : vous pouvez ajouter 1 monstre \"Cubique\" de max. Niveau 4 depuis votre Deck à votre main. Aucun joueur ne reçoit de dommages de combat de combats impliquant 2 monstres. Une fois par tour, durant votre Main Phase : vous pouvez Invoquer Spécialement 1 monstre \"Cubique\" depuis votre main, en ignorant ses conditions d'Invocation. Si un ou plusieurs monstres sont détruits au combat : leurs contrôleurs recoivent des dommages égaux à leur ATK d'origine. Vous ne pouvez activer qu'1 \"Dimension Cubique\" par tour.",
     "overallString": "[Magie|Terrain]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
   },
   {
-    "name": "方界防阵",
-    "desc": "①：对方怪兽的攻击宣言时才能发动。那次攻击无效。那之后，可以从手卡·卡组把最多2只「方界」怪兽无视召唤条件特殊召唤。\r\n②：把墓地的这张卡除外，以自己场上1张「方界」卡为对象才能发动。这个回合，以那张卡为对象的对方发动的效果无效化。",
+    "name": "Défense Cubique",
+    "desc": "Lorsqu'un monstre de l'adversaire déclare une attaque : annulez l'attaque, puis vous pouvez Invoquer Spécialement max. 2 monstres \"Cubique\" depuis votre main et/ou Deck, en ignorant leurs conditions d'Invocation. Vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 1 carte \"Cubique\" que vous contrôlez ; ce tour, annulez les cartes ou effets activés par votre adversaire qui ciblaient la carte.",
     "overallString": "[Piège|Contre-Piège]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
   },
