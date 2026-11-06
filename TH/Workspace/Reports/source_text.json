@@ -2,11 +2,9 @@
   "language": "en",
   "mode": "refresh",
   "candidates": 151,
-  "matched": 148,
+  "matched": 150,
   "unmatched_ids": [
-    100200299,
-    100272005,
-    100272007
+    100200299
   ],
   "unresolved": [
     {
@@ -18,18 +16,6 @@
       "missing_fields": [
         "text"
       ]
-    },
-    {
-      "id": 100272005,
-      "name": "方界领域",
-      "set_code": "RV02-JP005",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100272007,
-      "name": "方界防阵",
-      "set_code": "RV02-JP007",
-      "reason": "No source card page found"
     }
   ],
   "matches": {
@@ -169,9 +155,17 @@
       "set_code": "RV02-JP004",
       "source": "https://yugipedia.com/wiki/Divine_Anima_Infinity_the_Creation_Cubic_Overlord"
     },
+    "100272005": {
+      "set_code": "RV02-JP005",
+      "source": "https://yugipedia.com/wiki/Cubic_Dimension"
+    },
     "100272006": {
       "set_code": "RV02-JP006",
       "source": "https://yugipedia.com/wiki/Cubic_Bodhi"
+    },
+    "100272007": {
+      "set_code": "RV02-JP007",
+      "source": "https://yugipedia.com/wiki/Cubic_Defense"
     },
     "100272026": {
       "set_code": "RV02-JP026",
@@ -363,7 +357,7 @@
     },
     "101307015": {
       "set_code": "IMPH-JP015",
-      "source": "https://yugipedia.com/wiki/Primrose_the_Twin_Rikka_Fairy"
+      "source": "https://yugipedia.com/wiki/Primrose_the_Rikka_Fairy_Duo"
     },
     "101307016": {
       "set_code": "IMPH-JP016",
@@ -471,7 +465,7 @@
     },
     "101307042": {
       "set_code": "IMPH-JP042",
-      "source": "https://yugipedia.com/wiki/Rikka_Empress_Strenna"
+      "source": "https://yugipedia.com/wiki/Rikka_Sacred_Queen_Strenna"
     },
     "101307043": {
       "set_code": "IMPH-JP043",
@@ -559,7 +553,7 @@
     },
     "101307064": {
       "set_code": "IMPH-JP064",
-      "source": "https://yugipedia.com/wiki/Rikka_June_Moon"
+      "source": "https://yugipedia.com/wiki/Rikka_Moonlit_Waters"
     },
     "101307065": {
       "set_code": "IMPH-JP065",
