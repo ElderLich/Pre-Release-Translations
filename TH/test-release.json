@@ -1,13 +1,13 @@
 [
   {
-    "name": "方界领域",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：作为这张卡发动时的效果处理，可以从卡组把1只4星以下的「方界」怪兽加入手卡。\r\n②：怪兽之间的战斗发生的对双方的战斗伤害变成0。\r\n③：1回合1次，自己主要阶段才能发动。从手卡把1只「方界」怪兽无视召唤条件特殊召唤。\r\n④：怪兽被战斗破坏的场合发动。破坏的怪兽的控制者受到那原本攻击力数值的伤害。",
+    "name": "Cubic Dimension",
+    "desc": "When this card is activated: You can add 1 Level 4 or lower \"Cubic\" monster from your Deck to your hand. Neither player takes any battle damage from battles involving 2 monsters. Once per turn, during your Main Phase: You can Special Summon 1 \"Cubic\" monster from your hand, ignoring its Summoning conditions. If a monster(s) is destroyed by battle: Its controller takes damage equal to its original ATK. You can only activate 1 \"Cubic Dimension\" per turn.",
     "overallString": "[Spell|Field]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
   },
   {
-    "name": "方界防阵",
-    "desc": "①：对方怪兽的攻击宣言时才能发动。那次攻击无效。那之后，可以从手卡·卡组把最多2只「方界」怪兽无视召唤条件特殊召唤。\r\n②：把墓地的这张卡除外，以自己场上1张「方界」卡为对象才能发动。这个回合，以那张卡为对象的对方发动的效果无效化。",
+    "name": "Cubic Defense",
+    "desc": "When an opponent's monster declares an attack: Negate that attack, then you can Special Summon up to 2 \"Cubic\" monsters from your hand and/or Deck, ignoring their Summoning conditions. You can banish this card from your GY, then target 1 \"Cubic\" card you control; this turn, negate any card or effect activated by your opponent that targeted that card.",
     "overallString": "[Trap|Counter]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
   },
@@ -168,8 +168,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307054.jpg?version=19.7"
   },
   {
-    "name": "Primrose the Twin Rikka Fairy",
-    "desc": "If a monster(s) is Tributed (except during the Damage Step): You can Special Summon this card from your hand and 1 \"Rikka\" monster from your Deck, except \"Primrose the Twin Rikka Fairy\", in Defense Position, also you cannot Special Summon for the rest of this turn, except Plant monsters. You can target 1 Plant monster you control; increase or decrease its Level by 2. During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Xyz Summon 1 Plant Xyz Monster. You can only use each effect of \"Primrose the Twin Rikka Fairy\" once per turn.",
+    "name": "Primrose the Rikka Fairy Duo",
+    "desc": "If a monster(s) is Tributed (except during the Damage Step): You can Special Summon in Defense Position, both this card from your hand and 1 \"Rikka\" monster from your Deck, except \"Primrose the Rikka Fairy Duo\", also you cannot Special Summon for the rest of this turn, except Plant monsters. You can target 1 Plant monster you control; increase or decrease its Level by 2. During your opponent's Main Phase, you can (Quick Effect): Immediately after this effect resolves, Xyz Summon 1 Plant Xyz Monster. You can only use each effect of \"Primrose the Rikka Fairy Duo\" once per turn.",
     "overallString": "[Monster|Effect] Plant/Water  [★8] 2600/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307015.jpg?version=19.7"
   },
@@ -186,14 +186,14 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307041.jpg?version=19.7"
   },
   {
-    "name": "Rikka Empress Strenna",
-    "desc": "2 Level 6 Plant monsters\nYou can detach 2 materials from this card; Special Summon 1 Plant Xyz Monster from your Extra Deck in Defense Position, except \"Rikka Empress Strenna\", then if you Special Summoned a \"Rikka\" monster, you can attach 1 \"Rikka\" monster from your Deck to it. If a monster(s) is Tributed (except during the Damage Step): You can Set 1 \"Rikka\" Trap from your Deck or GY. You can only use each effect of \"Rikka Empress Strenna\" once per turn.",
+    "name": "Rikka Sacred Queen Strenna",
+    "desc": "2 Level 6 Plant monsters\nYou can detach 2 materials from this card; Special Summon 1 Plant Xyz Monster from your Extra Deck in Defense Position, except \"Rikka Sacred Queen Strenna\", then if you Special Summoned a \"Rikka\" Xyz Monster, you can attach 1 \"Rikka\" monster from your Deck to it. If a monster(s) is Tributed (except during the Damage Step): You can Set 1 \"Rikka\" Trap from your Deck or GY. You can only use each effect of \"Rikka Sacred Queen Strenna\" once per turn.",
     "overallString": "[Monster|Effect|Xyz] Plant/Water  [☆6] 2000/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307042.jpg?version=19.7"
   },
   {
-    "name": "Rikka June Moon",
-    "desc": "When you activate this card, you can also Tribute 1 Plant monster; take 2 \"Rikka\" monsters from your Deck with the same Level, but different names, add 1 of them to your hand and send the other to the GY, also if you Tributed a monster at activation, your opponent cannot target \"Rikka\" monsters you control with card effects this turn. For the rest of this turn after this card resolves, you cannot Special Summon from the Extra Deck, except Plant Xyz Monsters. You can only activate 1 \"Rikka June Moon\" per turn.",
+    "name": "Rikka Moonlit Waters",
+    "desc": "When you activate this card, you can also Tribute 1 Plant monster; take 2 \"Rikka\" monsters with the same Level but different names from your Deck, add 1 of them to your hand, and send the other to the GY. If you Tributed a monster at activation, your opponent cannot target \"Rikka\" monsters you control with card effects this turn. For the rest of this turn after this card resolves, you cannot Special Summon from the Extra Deck, except Plant Xyz Monsters. You can only activate 1 \"Rikka Moonlit Waters\" per turn.",
     "overallString": "[Spell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307064.jpg?version=19.7"
   },
