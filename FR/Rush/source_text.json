@@ -1,19 +1,44 @@
 {
   "language": "fr",
-  "matches": {},
-  "requested_ids": [
-    120310069
-  ],
-  "unresolved": [
-    {
-      "id": 120310069,
-      "missing_fields": [
-        "fr_name",
-        "fr_text"
+  "matches": {
+    "120311003": {
+      "fields": [
+        "name",
+        "desc"
       ],
-      "reason": "Localized fields are missing",
-      "set_code": "RD/KP27-JP069",
-      "source": "https://yugipedia.com/wiki/Sengenjin_%28Rush_Duel%29"
+      "set_code": "RD/LP02-JP003",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16515&languages=fr"
+    },
+    "120311005": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP005",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16513&languages=fr"
+    },
+    "120311009": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP009",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16509&languages=fr"
+    },
+    "120311014": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/LP02-JP014",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=16507&languages=fr"
     }
-  ]
+  },
+  "requested_ids": [
+    120311003,
+    120311005,
+    120311009,
+    120311014
+  ],
+  "unresolved": []
 }
