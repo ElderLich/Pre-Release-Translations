@@ -2,26 +2,17 @@
   "language": "en",
   "mode": "refresh",
   "candidates": 151,
-  "matched": 150,
-  "unmatched_ids": [
-    100200299
-  ],
-  "unresolved": [
-    {
-      "id": 100200299,
-      "name": "莓柠苹巧奇之黑芭菲",
-      "set_code": "VJMP-JP299",
-      "reason": "Localized fields are missing",
-      "source": "https://yugipedia.com/wiki/B.L.A.C.K._Parfait",
-      "missing_fields": [
-        "text"
-      ]
-    }
-  ],
+  "matched": 151,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
       "source": "https://yugipedia.com/wiki/Counter_Spell_%22Negate_Attack%22"
+    },
+    "100200299": {
+      "set_code": "VJMP-JP299",
+      "source": "https://yugipedia.com/wiki/B.L.A.C.K._Parfait"
     },
     "100262301": {
       "set_code": "26TP-JP301",
