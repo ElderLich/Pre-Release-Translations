@@ -1,32 +1,14 @@
 {
   "language": "fr",
   "mode": "fill",
-  "candidates": 3,
-  "matched": 2,
-  "unmatched_ids": [
-    100200299
-  ],
-  "unresolved": [
-    {
-      "id": 100200299,
-      "name": "莓柠苹巧奇之黑芭菲",
-      "set_code": "VJMP-JP299",
-      "reason": "Localized fields are missing",
-      "source": "https://yugipedia.com/wiki/B.L.A.C.K._Parfait",
-      "missing_fields": [
-        "fr_name",
-        "fr_text"
-      ]
-    }
-  ],
+  "candidates": 1,
+  "matched": 1,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
-    "100272005": {
-      "set_code": "RV02-JP005",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17909&languages=fr"
-    },
-    "100272007": {
-      "set_code": "RV02-JP007",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17910&languages=fr"
+    "100200299": {
+      "set_code": "VJMP-JP299",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17911&languages=fr"
     }
   }
 }
