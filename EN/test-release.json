@@ -13,7 +13,7 @@
   },
   {
     "name": "B.L.A.C.K. Parfait",
-    "desc": "During your Main Phase: You can add 1 \"Magician Girl\" monster from your Deck to your hand. You can only use this effect of \"B.L.A.C.K. Parfait\" once per turn. If your opponent Normal or Special Summons a monster(s): You can Special Summon 1 \"Magician Girl\" monster from your hand with a different Attribute from the monsters you control, then if you control \"Dark Magician Girl\", you can negate the effects of 1 face-up card on the field until the end of this turn.",
+    "desc": "During your Main Phase: You can add 1 \"Magician Girl\" monster from your Deck to your hand. You can only use this effect of \"B.L.A.C.K. Parfait\" once per turn. If your opponent Normal or Special Summons a monster(s): You can Special Summon 1 \"Magician Girl\" monster from your hand with a different Attribute from the monsters you control, then if you control \"Dark Magician Girl\", you can negate the effects of 1 other face-up card on the field until the end of this turn.",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
   },
@@ -337,7 +337,7 @@
   },
   {
     "name": "Card Crawl",
-    "desc": "You can banish (face-down) the top 5, 10, or 15 cards of your Deck, then target 1 face-up monster on the field; apply the appropriate effect to it.\n● 5: Its ATK/DEF become 0.\n● 10: Negate its effects.\n● 15: Banish it (face-down).\nYou can only use this effect of \"Card Crawl\" once per turn.",
+    "desc": "You can choose either 5, 10, or 15 and banish (face-down) the same number of cards from the top your Deck, then target 1 face-up monster on the field; apply the appropriate effect to it.\n● 5: Its ATK/DEF become 0.\n● 10: Negate its effects.\n● 15: Banish it (face-down).\nYou can only use this effect of \"Card Crawl\" once per turn.",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307069.jpg?version=19.7"
   },
