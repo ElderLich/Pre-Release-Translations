@@ -1,49 +1,49 @@
 [
   {
-    "name": "镰口之审判官",
-    "desc": "记录现世一切，对踏入冥界的灵魂予以裁决。那宣判之声，听起来便是“呱哇哇”一般。",
+    "name": "Minjal Khery Hebet",
+    "desc": "Er zeichnet alles auf, was in dieser Welt geschieht, und richtet über die Seelen, die die Unterwelt betreten. Seine Urteile verkündet er mit einem Laut, der wie „Gwawwaa“ klingt.",
     "overallString": "[Monster|Normal] Zombie/Finsternis  [★6] 1900/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276001.jpg?version=19.7"
   },
   {
-    "name": "暗黑海异",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡在手卡存在，自己场上有通常怪兽或者恐龙族怪兽存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡被战斗·效果破坏送去墓地的场合才能发动。这张卡当作持有以下效果的装备魔法卡使用给场上1只表侧表示怪兽装备。\r\n●装备怪兽的攻击力下降2400。\r\n●只要装备怪兽的原本攻击力在2500以上，装备怪兽的效果不能发动。",
+    "name": "Schwarzer Shasta",
+    "desc": "Falls sich diese Karte in deiner Hand befindet und du ein Normales Monster oder ein Dinosaurier-Monster kontrollierst: Du kannst diese Karte als Spezialbeschwörung beschwören. Falls diese Karte durch Kampf oder einen Karteneffekt zerstört und auf den Friedhof gelegt wird: Du kannst 1 offenes Monster auf dem Spielfeld mit dieser Karte als Ausrüstungszauber mit diesen Effekten ausrüsten.\n● Das ausgerüstete Monster verliert 2400 ATK.\n● Falls das ausgerüstete Monster 2500 oder mehr Grund-ATK hat, kann kein Spieler seine Effekte aktivieren.\nDu kannst jeden Effekt von „Schwarzer Shasta“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt] Dinosaurier/Wasser  [★6] 1200/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276002.jpg?version=19.7"
   },
   {
-    "name": "四次元龙 几里得龙",
-    "desc": "调整+调整以外的怪兽1只以上\r\n①：可以把以下数量的手卡除外，发动那个效果（这个卡名的以下效果1回合各能使用1次）。\r\n●1张：从手卡把1只4星以下的怪兽特殊召唤。\r\n●2张：场上1只4星以下的怪兽除外。\r\n●3张：从卡组把1只暗属性怪兽送去墓地。\r\n●4张：下次的自己抽卡阶段的通常抽卡变成5张。\r\n②：这个回合第4次的攻击宣言时才能发动。这张卡的攻击力变成4000。",
+    "name": "Craydeath, der vierdimensionale Drache",
+    "desc": "1 Empfänger + 1+ Nicht-Empfänger-Monster\nWenn der vierte Angriff eines Spielzugs deklariert wird: Du kannst die ATK dieser Karte zu 4000 ändern. Du kannst die folgende Anzahl Karten von deiner Hand verbannen und dann den entsprechenden Effekt aktivieren (du kannst jeden dieser Effekte von „Craydeath, der vierdimensionale Drache“ nur einmal pro Spielzug verwenden);\n● 1: Beschwöre 1 Monster der Stufe 4 oder niedriger als Spezialbeschwörung von deiner Hand.\n● 2: Verbanne 1 Monster der Stufe 4 oder niedriger auf dem Spielfeld.\n● 3: Lege 1 FINSTERNIS Monster von deinem Deck auf den Friedhof.\n● 4: Ziehe während deiner nächsten Draw Phase für dein normales Ziehen 5 Karten statt 1.",
     "overallString": "[Monster|Effekt|Synchro] Drache/Finsternis  [★8] 2400/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276003.jpg?version=19.7"
   },
   {
-    "name": "圣魔之贤王 恩底弥翁",
-    "desc": "Pendelbereich = 9\n[ Pendeleffekt ]\n这个卡名的②的灵摆效果1回合只能使用1次。\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\n----------------------------------------\n[ Monstereffekt ]\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+    "name": "Endymion, der Herr der Magistus",
+    "desc": "Pendelbereich = 9\n[ Pendeleffekt ]\nJedes Mal, wenn eine Zauberkarte aktiviert wird, lege 1 Zauberzählmarke auf diese Karte, wenn jene aufgelöst wird. Während deiner Main Phase: Du kannst diese Karte zerstören und falls du dies tust, füge deiner Hand 1 „Magistus“- oder „Endymion“-Monster von deinem Deck hinzu, außer einem Monster der Stufe 7. Du kannst diesen Effekt von „Endymion, der Herr der Magistus“ nur einmal pro Spielzug verwenden.\n----------------------------------------\n[ Monstereffekt ]\nKann nicht als Normalbeschwörung beschworen/gesetzt werden. Muss als Spezialbeschwörung (von deiner Hand oder deinem Extra Deck) beschworen werden, indem du 1 offene Zauberkarte verbannst, die du kontrollierst. Du kannst „Endymion, der Herr der Magistus“ auf diese Art nur einmal pro Spielzug als Spezialbeschwörung beschwören. Solange diese Karte mit einer Ausrüstungskarte ausgerüstet ist, kann sie weder durch Kampf noch durch Karteneffekte zerstört werden. Am Ende des Damage Steps, falls diese Karte angegriffen hat: Du kannst 1 offene Zauberkarte, die du kontrollierst, verbannen oder 3 Zauberzählmarken von deiner Spielfeldseite entfernen; diese Karte erhält 500 ATK, zusätzlich kann sie sofort noch einmal angreifen.",
     "overallString": "[Monster|Effekt|Pendel|Spezialbeschwörung] Hexer/Finsternis  [★7] 2700/1700  9/9",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274003.jpg?version=19.7"
   },
   {
-    "name": "绝火的祆威",
-    "desc": "这个卡名的①②的效果1回合只能有1次使用其中任意1个。\r\n①：以自己场上1只「大贤者」怪兽或魔法师族怪兽，和对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽当作攻击力上升500的装备魔法卡使用给作为对象的自己怪兽装备。\r\n②：自己主要阶段这张卡在墓地存在的场合，以自己墓地的1只融合·同调·超量·连接怪兽为对象才能发动。那只怪兽和这张卡回到卡组。",
+    "name": "Magistus-Wisprath",
+    "desc": "Wähle 1 „Magistus“-Monster oder 1 Hexer-Monster, das du kontrollierst, und 1 offenes Monster, das dein Gegner kontrolliert; rüste dein gewähltes Monster mit dem gewählten offenen Monster deines Gegners als Ausrüstungszauber aus, der ihm 500 ATK gibt. Während deiner Main Phase, falls sich diese Karte in deinem Friedhof befindet: Du kannst 1 Fusions-, Synchro-, Xyz- oder Linkmonster in deinem Friedhof wählen; mische sowohl es als auch diese Karte ins Deck. Du kannst nur 1 Effekt von „Magistus-Wisprath“ pro Spielzug verwenden und in jenem Spielzug nur einmal.",
     "overallString": "[Zauber|Schnell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274005.jpg?version=19.7"
   },
   {
-    "name": "神灵的来临",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以自己场上1张融合·同调·超量·连接怪兽卡为对象才能发动。那张卡回到额外卡组。那之后，可以从额外卡组把和回去的卡相同种类（融合·同调·超量·连接）的1只「大贤者」怪兽特殊召唤。\r\n②：自己主要阶段把墓地的这张卡除外，以自己场上1只超量怪兽为对象才能发动。从卡组把1只「大贤者」怪兽作为作为对象的怪兽的超量素材。",
+    "name": "Magistus-Dunamis",
+    "desc": "Wähle 1 Fusions-, Synchro-, Xyz- oder Linkmonsterkarte, die du kontrollierst; lege sie ins Extra Deck zurück, dann kannst du 1 „Magistus“-Monster derselben Art (Fusion, Synchro, Xyz oder Link) als Spezialbeschwörung von deinem Extra Deck beschwören. Während deiner Main Phase: Du kannst diese Karte von deinem Friedhof verbannen und dann 1 Xyz-Monster wählen, das du kontrollierst; hänge 1 „Magistus“-Monster von deinem Deck als Material an das gewählte Monster an. Du kannst jeden Effekt von „Magistus-Dunamis“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Zauber|Schnell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274028.jpg?version=19.7"
   },
   {
-    "name": "三相之魔导兵",
-    "desc": "效果怪兽2只\r\n这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡特殊召唤的场合，丢弃1张手卡才能发动。根据丢弃的卡的种类（怪兽·魔法·陷阱），这张卡得到以下效果。\r\n●怪兽：这张卡的攻击力上升800。\r\n●魔法：自己场上的怪兽被效果破坏的场合，可以作为代替把这张卡破坏。\r\n●陷阱：1回合1次，这张卡所连接区有怪兽特殊召唤的场合才能发动。这张卡所连接区的怪兽全部破坏。",
+    "name": "Triaden-Proteus",
+    "desc": "2 Effektmonster\nFalls diese Karte als Spezialbeschwörung beschworen wird: Du kannst 1 Karte abwerfen; diese Karte erhält basierend auf dem Kartentyp der abgeworfenen Karte (Monster, Zauber, Falle) den folgenden Effekt.\n● Monster: Erhält 800 ATK.\n● Zauber: Falls ein oder mehr Monster, die du kontrollierst, durch einen Karteneffekt zerstört würden, kannst du stattdessen diese Karte zerstören.\n● Falle: Einmal pro Spielzug, falls ein oder mehr Monster als Spezialbeschwörung in eine oder mehr Zonen beschworen werden, auf die diese Karte zeigt: Du kannst alle Monster zerstören, auf die diese Karte zeigt.\nDu kannst diesen Effekt von „Triaden-Proteus“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Link] Fels/Erde  [LINK-2] 1500/-  [↖][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276004.jpg?version=19.7"
   },
   {
-    "name": "千手游戏",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：双方各自从自身卡组选2张卡， 用喜欢的顺序在卡组上面放置。那之后，双方各自宣言0·1·2·3·4之内的任意数字。再让双方从卡组上面把2张卡翻开。宣言和那4张中的怪兽数量相同数字的玩家，从自身翻开的卡中选1张加入手卡。另1张回到卡组最下面。那以外的玩家，让翻开的卡用喜欢的顺序回到卡组下面。",
+    "name": "Fingerspiel",
+    "desc": "Jeder Spieler legt 2 Karten von seinem Deck in beliebiger Reihenfolge auf sein Deck, dann deklariert jeder Spieler eine Zahl von 0 bis 4, dann gräbt jeder Spieler die obersten 2 Karten seines Decks aus. Jeder Spieler, dessen deklarierte Zahl der Anzahl der Monster unter allen 4 ausgegrabenen Karten entspricht, fügt seiner Hand 1 seiner ausgegrabenen Karten hinzu, zusätzlich legt er die andere unter sein Deck. Jeder andere Spieler legt seine ausgegrabenen Karten in beliebiger Reihenfolge unter sein Deck. Du kannst nur 1 „Fingerspiel“ pro Spielzug aktivieren.",
     "overallString": "[Zauber]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276005.jpg?version=19.7"
   },
@@ -924,14 +924,14 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268012.jpg?version=19.7"
   },
   {
-    "name": "Böse Dragon Cards – Erddrache",
-    "desc": "Kann nicht als Normalbeschwörung beschworen/gesetzt werden. Muss erst als Spezialbeschwörung (von deiner Hand) beschworen werden, indem du 3 ERDE Monster in deiner Hand vorzeigst, einschließlich dieser Karte. Du kannst diese Karte in deiner Hand vorzeigen; füge deiner Hand 1 „Dragon Card“-Karte von deinem Deck hinzu, dann wirf 1 Karte ab. Wenn dein Gegner einen Monstereffekt auf dem Spielfeld aktiviert (Schnelleffekt): Du kannst jenen Effekt annullieren, dann, falls ein WASSER Monster auf dem Spielfeld liegt, kann diese Karte in diesem Spielzug weder durch Kampf noch durch Karteneffekte zerstört werden. Du kannst jeden Effekt von „Böse Dragon Cards – Erddrache“ nur einmal pro Spielzug verwenden.",
+    "name": "Böse Drachenkarten – Erddrache",
+    "desc": "Kann nicht als Normalbeschwörung beschworen/gesetzt werden. Muss erst als Spezialbeschwörung (von deiner Hand) beschworen werden, indem du 3 ERDE Monster in deiner Hand vorzeigst, einschließlich dieser Karte. Du kannst diese Karte in deiner Hand vorzeigen; füge deiner Hand 1 „Drachenkarte“-Karte von deinem Deck hinzu, dann wirf 1 Karte ab. Wenn dein Gegner einen Monstereffekt auf dem Spielfeld aktiviert (Schnelleffekt): Du kannst jenen Effekt annullieren, dann, falls ein WASSER Monster auf dem Spielfeld liegt, kann diese Karte in diesem Spielzug weder durch Kampf noch durch Karteneffekte zerstört werden. Du kannst jeden Effekt von „Böse Drachenkarten – Erddrache“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Spezialbeschwörung] Drache/Erde  [★4] 1200/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268013.jpg?version=19.7"
   },
   {
-    "name": "Böse Dragon Cards – Metalldrache",
-    "desc": "Kann nicht als Normalbeschwörung beschworen/gesetzt werden. Muss erst als Spezialbeschwörung (von deiner Hand) beschworen werden, indem du 3 LICHT Monster in deiner Hand vorzeigst, einschließlich dieser Karte. Du kannst diese Karte in deiner Hand vorzeigen; füge deiner Hand 1 „Dragon Card“-Karte von deinem Deck hinzu, dann wirf 1 Karte ab. Während der Main Phase (Schnelleffekt): Du kannst 1 Monster zerstören, das dein Gegner kontrolliert, und falls du dies tust, lege diese Karte auf den Friedhof, dann, falls ein ERDE Monster auf dem Spielfeld liegt, kannst du 1 Karte ziehen. Du kannst jeden Effekt von „Böse Dragon Cards – Metalldrache“ nur einmal pro Spielzug verwenden.",
+    "name": "Böse Drachenkarten – Metalldrache",
+    "desc": "Kann nicht als Normalbeschwörung beschworen/gesetzt werden. Muss erst als Spezialbeschwörung (von deiner Hand) beschworen werden, indem du 3 LICHT Monster in deiner Hand vorzeigst, einschließlich dieser Karte. Du kannst diese Karte in deiner Hand vorzeigen; füge deiner Hand 1 „Drachenkarte“-Karte von deinem Deck hinzu, dann wirf 1 Karte ab. Während der Main Phase (Schnelleffekt): Du kannst 1 Monster zerstören, das dein Gegner kontrolliert, und falls du dies tust, lege diese Karte auf den Friedhof, dann, falls ein ERDE Monster auf dem Spielfeld liegt, kannst du 1 Karte ziehen. Du kannst jeden Effekt von „Böse Drachenkarten – Metalldrache“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Spezialbeschwörung] Drache/Licht  [★5] 2100/1500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268014.jpg?version=19.7"
   },
