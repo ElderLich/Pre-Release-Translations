@@ -60,7 +60,7 @@
     120312002
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "828b44bd94f750348216589ae5997814fd38b275d6fb60fb142e122fb8a689f6",
+  "local_inputs_sha256": "6d5f4a4426ecfcda87d500f1927226638cadc82076139a584cdbab8118b76788",
   "patch_sha256": "54d559b06e0161c2752650276c40cc53e3066161061d76a5be1632439f3aac4e",
   "pending_locales": {
     "DE": 6,
@@ -73,8 +73,8 @@
     "PT": 6,
     "TH": 2
   },
-  "source_fingerprint": "b59bf5e66b4b4684f143cd3699e6dde97a348392468aabe69e5c640dd9bfbb5d",
-  "source_revision": "f59c2069766efa4934ba0c0070e6e4c388b67887",
+  "source_fingerprint": "7ee0aea8906fa24ae2bca96bce83fe00208fc2250fbaffbe1f400a06877e97f5",
+  "source_revision": "f2e89063a9eff61d979b5acd9436596704f3c395",
   "text_sha256": {
     "120311001": "b9ae9ba1042b3ebf3424ece1bd0d033427b6b69742918c8d05b00c75573db3c0",
     "120311002": "ee467492244a0f89f5530ed8f7ad2ec8076cbc7581bf8a003dad13e856391346",
