@@ -903,16 +903,15 @@ def run_prompt_patcher(cdb_path: Path, cards_cdb: Path) -> None:
     from PromptPatcher import export_remaining_cn, patch_cdb
 
     patch_cdb(str(cdb_path), lang=CONFIG.patch_lang, log_fn=patcher_log, report_limit=25)
-    report_dir = WORK_DIR / "Reports"
-    report_dir.mkdir(parents=True, exist_ok=True)
-    export_remaining_cn(str(cdb_path), str(report_dir / "remaining_cn.json"), log_fn=patcher_log)
-
     scan, present = scan_cdb_placeholders(cdb_path)
     mappings = merge_mappings(load_mappings_csv(MAPPINGS_PATH), scan, present)
     save_mappings_csv(MAPPINGS_PATH, mappings)
     apply_mappings_to_cdb(cdb_path, mappings, cards_cdb)
     patch_pendulum_layout_desc(cdb_path)
     normalize_jp_cdb(cdb_path)
+    report_dir = WORK_DIR / "Reports"
+    report_dir.mkdir(parents=True, exist_ok=True)
+    export_remaining_cn(str(cdb_path), str(report_dir / "remaining_cn.json"), log_fn=patcher_log)
 
 
 def autofill_source_text(cdb_path: Path, ypk_path: Path) -> None:
@@ -921,8 +920,6 @@ def autofill_source_text(cdb_path: Path, ypk_path: Path) -> None:
 
         # KR writes a manual-only report and never requests external card text.
         autofill_cdb_from_pack_sources(cdb_path, ypk_path, CONFIG.lang, log_fn=log)
-        if CONFIG.lang == "jp":
-            normalize_jp_cdb(cdb_path)
     except Exception as exc:
         log(f"[SourceText] skipped after error: {exc}")
 
@@ -1021,8 +1018,8 @@ def workspace_sync() -> None:
         if workspace_update.exists():
             workspace_update.unlink()
             log(f"Removed unused workspace {workspace_update.name}")
-        run_prompt_patcher(WORK_DIR / "test-release.cdb", cards_cdb)
         autofill_source_text(WORK_DIR / "test-release.cdb", ypk)
+        run_prompt_patcher(WORK_DIR / "test-release.cdb", cards_cdb)
     log(f"{CONFIG.folder} workspace sync completed")
 
 

@@ -388,6 +388,15 @@ by the failed command and its exit code when an operation stops. An exit code
 alone does not identify the cause; check the preceding download, database or
 Git error in the expanded log.
 
+Japanese Standard fills source-identical names/effects from exact printed-code
+matches on ocg-card.com. Width and line-ending normalization does not count as
+a translation, and unmistakable Chinese effect phrases remain eligible even
+when upstream wording has changed. Japanese translator edits are preserved;
+Han characters alone do not identify Chinese. Names are fetched before prompt
+card-name bindings, and the prompt report is generated after those bindings.
+Older Chinese names that differ from the current upstream name still need a
+manual identity review rather than a blanket replacement of Japanese kanji.
+
 Korean names/effects are translator-managed for both Standard and Rush. No
 Korean web autofill is attempted. Standard still refreshes upstream inventory,
 gameplay data and the existing prompt/mapping workflow; it preserves the

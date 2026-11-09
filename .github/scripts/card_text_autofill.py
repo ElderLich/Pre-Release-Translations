@@ -604,9 +604,18 @@ def fetch_yugipedia_by_existing_titles(names_by_id: dict[int, str], missing_ids:
 def needs_source_text(current: str, original: str, lang: str) -> bool:
     if not current.strip() or current == original:
         return True
-    # Japanese legitimately contains Han characters. Only source-identical JP
-    # fields are unreviewed; a custom Japanese translation must survive imports.
-    return lang != "jp" and bool(re.search(r"[\u3400-\u9fff]", current))
+    if lang == "jp":
+        # Existing JP workspaces have widened digits and punctuation from the
+        # prompt/layout pass. Formatting must not turn upstream Chinese into a
+        # protected translator edit. Line-ending differences are not edits either.
+        canonical = lambda value: normalize_lines(unicodedata.normalize("NFKC", value))
+        if canonical(current) == canonical(original):
+            return True
+        # An older upstream effect may also differ in wording. Recognize only
+        # unmistakable Chinese phrases, never Han characters alone: Japanese
+        # names and manually reviewed Japanese effects must remain protected.
+        return bool(re.search(r"这张卡|這張卡|这个卡名|這個卡名|对方|對方|从卡组|從卡組|怪兽|怪獸", current))
+    return bool(re.search(r"[\u3400-\u9fff]", current))
 
 
 def update_cdb_texts(cdb_path: Path, cards_by_id: dict[int, CardText], log: LogFn,

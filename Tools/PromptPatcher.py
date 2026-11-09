@@ -1,4 +1,4 @@
-import sqlite3, re, json, csv
+import sqlite3, re, json, csv, unicodedata
 from collections import Counter, defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -36052,9 +36052,30 @@ def _patch_one_text(s: str, pack: dict) -> str:
     # No change
     return s.strip()
 
+def _report_text_key(value: str) -> str:
+    return normalize_cn_prompt(unicodedata.normalize("NFKC", value))
+
+
+def _report_localized_keys(lang) -> set[str]:
+    if not lang:
+        return set()
+    pack = build_translation_pack(lang)
+    # Base labels also supply outputs for dynamic regex rules, which are not
+    # all present in the exact-map values. Compare complete known templates;
+    # neither Japanese punctuation nor an embedded name proves translation.
+    values = set(pack.get("localized_values", set()))
+    values.update(_lang_strings().get(pack["lang"], {}).values())
+    return {_report_text_key(value) for value in values if isinstance(value, str)}
+
+
+def _is_localized_report_text(value: str, localized_keys: set[str]) -> bool:
+    # A template still awaiting its card binding must remain visible, including
+    # placeholders widened by older Japanese builds.
+    return "{CARD}" not in unicodedata.normalize("NFKC", value) and _report_text_key(value) in localized_keys
+
+
 def collect_cn_cells(conn: sqlite3.Connection, lang=None):
-    localized = build_translation_pack(lang).get("localized_values", set()) if lang else set()
-    localized = build_translation_pack(lang).get("localized_values", set()) if lang else set()
+    localized = _report_localized_keys(lang)
     cur = conn.cursor()
     cols = [f"str{i}" for i in range(1, 17)]
     cur.execute("SELECT id," + ",".join(cols) + " FROM texts")
@@ -36062,7 +36083,7 @@ def collect_cn_cells(conn: sqlite3.Connection, lang=None):
     for row in cur.fetchall():
         cid = row[0]
         for col, v in zip(cols, row[1:]):
-            if contains_cn_or_cn_punct(v) and v not in localized:
+            if contains_cn_or_cn_punct(v) and not _is_localized_report_text(v, localized):
                 out.append((cid, col, v))
     return out
 
@@ -36100,7 +36121,7 @@ def _max_text_id(conn: sqlite3.Connection) -> int:
 def build_remaining_cn_report(conn: sqlite3.Connection, cdb_file: str, out_path: Path) -> dict:
     report_lang = _infer_report_lang(out_path, cdb_file)
     try:
-        localized_outputs = build_translation_pack(report_lang).get("localized_values", set()) if report_lang else set()
+        localized_outputs = _report_localized_keys(report_lang)
     except ValueError:
         localized_outputs = set()
     str_cols = [f"str{i}" for i in range(1, 17)]
@@ -36121,7 +36142,7 @@ def build_remaining_cn_report(conn: sqlite3.Connection, cdb_file: str, out_path:
         for col, value in zip(str_cols, row[3:]):
             text = _report_cell(value)
             card[col] = text
-            if contains_cn_or_cn_punct(text) and text not in localized_outputs:
+            if contains_cn_or_cn_punct(text) and not _is_localized_report_text(text, localized_outputs):
                 freq[text] += 1
                 flagged_cells.append({
                     "col": col,
