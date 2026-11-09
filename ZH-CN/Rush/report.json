@@ -1,13 +1,8 @@
 {
   "active_cards": 54,
-  "artwork_files": 50,
+  "artwork_files": 54,
   "excluded_ids": [],
-  "missing_artwork": [
-    120311003,
-    120311005,
-    120311009,
-    120311014
-  ],
+  "missing_artwork": [],
   "pending_translations": [],
   "published_source_fields": {
     "120311001": {
