@@ -18,14 +18,14 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276003.jpg?version=19.7"
   },
   {
-    "name": "圣魔之贤王 恩底弥翁",
-    "desc": "Pendulum Scale = 9\n[ Pendulum Effect ]\n这个卡名的②的灵摆效果1回合只能使用1次。\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\n----------------------------------------\n[ Monster Effect ]\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+    "name": "Endymion, the Lord of Magistus",
+    "desc": "Pendulum Scale = 9\n[ Pendulum Effect ]\nEach time a Spell Card is activated, place 1 Spell Counter on this card when it resolves. During your Main Phase: You can destroy this card, and if you do, add 1 \"Magistus\" or \"Endymion\" monster from your Deck to your hand, except a Level 7 monster. You can only use this effect of \"Endymion, the Lord of Magistus\" once per turn.\n----------------------------------------\n[ Monster Effect ]\nCannot be Normal Summoned/Set. Must be Special Summoned (from your hand or Extra Deck) by banishing 1 face-up Spell you control. You can only Special Summon \"Endymion, the Lord of Magistus\" once per turn this way. Cannot be destroyed by battle or card effects while equipped with an Equip Card. At the end of the Damage Step, if this card attacked: You can banish 1 face-up Spell you control, or remove 3 Spell Counters from your field; this card gains 500 ATK, also it can attack again in a row.",
     "overallString": "[Monster|Effect|Pendulum|Special Summon] Spellcaster/Dark  [★7] 2700/1700  9/9",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274003.jpg?version=19.7"
   },
   {
-    "name": "绝火的祆威",
-    "desc": "这个卡名的①②的效果1回合只能有1次使用其中任意1个。\r\n①：以自己场上1只「大贤者」怪兽或魔法师族怪兽，和对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽当作攻击力上升500的装备魔法卡使用给作为对象的自己怪兽装备。\r\n②：自己主要阶段这张卡在墓地存在的场合，以自己墓地的1只融合·同调·超量·连接怪兽为对象才能发动。那只怪兽和这张卡回到卡组。",
+    "name": "Wisprath Magistus",
+    "desc": "Target 1 \"Magistus\" or Spellcaster monster you control and 1 face-up monster your opponent controls; equip that opponent's face-up monster to your monster as an Equip Spell that gives it 500 ATK. During your Main Phase, if this card is in your GY: You can target 1 Fusion, Synchro, Xyz, or Link Monster in your GY; shuffle both it and this card into the Deck. You can only use 1 \"Wisprath Magistus\" effect per turn, and only once that turn.",
     "overallString": "[Spell|Quick-Play]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274005.jpg?version=19.7"
   },
