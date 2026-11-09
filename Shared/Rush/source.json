@@ -1,5 +1,6 @@
 {
   "built_locales": [
+    "ES",
     "ZH-CN",
     "ZH-TW"
   ],
@@ -58,12 +59,11 @@
     120311064
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "0a9850e4b222af844a89c964ef35e0d4de284ab40bda01dce8639bfda734d5e1",
+  "local_inputs_sha256": "e116f936f6fd5fc8f3e5efa36484bf02656dfe5e0db383dbfed5126a9bd3a71a",
   "patch_sha256": "a1650b1ec0340534ae2392de13bed439a804fa779cff1a2fa5180aa6902a458d",
   "pending_locales": {
     "DE": 4,
     "EN": 1,
-    "ES": 4,
     "FR": 1,
     "IT": 4,
     "JP": 1,
