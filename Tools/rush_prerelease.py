@@ -185,6 +185,24 @@ def art_files(root: Path, ids: set[int]) -> tuple[dict[str, bytes], list[int]]:
     return dict(available.values()), sorted(ids - available.keys())
 
 
+def retired_artwork_paths(root: Path, previous_ids: set[int], active_ids: set[int]) -> list[Path]:
+    """Find known retired IDs only, keeping artwork prepared ahead of an import."""
+    directory = root / "Shared/Rush Artworks"
+    resolved_directory = directory.resolve()
+    if not resolved_directory.is_relative_to(root.resolve()):
+        raise ValueError(f"Shared artwork directory escapes repository: {directory}")
+    retired = previous_ids - active_ids
+    paths = []
+    for path in sorted(directory.glob("*")):
+        if (not path.is_file() or path.suffix.lower() not in (".png", ".jpg", ".jpeg")
+                or not path.stem.isdigit() or int(path.stem) not in retired):
+            continue
+        if path.resolve().parent != resolved_directory:
+            raise ValueError(f"Retired artwork escapes shared directory: {path}")
+        paths.append(path)
+    return paths
+
+
 def zip_bytes(files: dict[str, bytes]) -> bytes:
     buffer = io.BytesIO()
     with zipfile.ZipFile(buffer, "w", zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
@@ -388,7 +406,17 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
     from card_text_autofill import encode_rush_description
     scripts = script_closure(source, datas)
     artwork, missing_art = art_files(root, ids - system_ids)
+    # Validate archive revision markers and read receipt inputs before any release
+    # replacement or artwork deletion. A failed receipt must not leave a partial build.
+    source_revision = revision(source)
+    translations_revision = revision(translations_root.parents[1]) if translations_root else None
+    patch_sha256 = digest((source / "RD Patch.cdb").read_bytes())
+    source_fingerprint = file_fingerprint(source, [source / "RD Patch.cdb"]
+        + ([source / "sets.md"] if (source / "sets.md").exists() else [])
+        + list((source / "script").glob("*.lua")))
     previous_source = read_json(root / "Shared/Rush/source.json", {})
+    previous_ids = (set(previous_source.get("card_ids", []))
+                    | set(previous_source.get("excluded_ids", [])) | set(excluded))
     source_hashes = {str(key): digest(json_bytes(list(texts[key]))) for key in sorted(ids)}
     source_fields = {str(key): text_field_hashes(texts[key]) for key in sorted(ids)}
     review_fields = {str(key): source_review_fields(texts[key]) for key in sorted(ids)}
@@ -408,6 +436,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         locale_root = root / folder / "Rush"
         workspace = locale_root / "Workspace/rush-pre-release.cdb"
         old_datas, old_texts = read_cdb(workspace, optional=True)
+        previous_ids.update(old_datas)
         seed_datas, seeds = read_cdb(translations_root / locale / "rush_cards.cdb", optional=True) if translations_root else ({}, {})
         merged = {}
         unformatted_rows = {}
@@ -526,6 +555,7 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
     retired_outputs, retired = prepare_retired_releases(root, pending_languages, ids)
     outputs.update(retired_outputs)
     updated_locales = prepare_versions(outputs)
+    retired_artwork = retired_artwork_paths(root, previous_ids, ids)
     for path, data in pending_workspaces.items():
         write_changed(path, data if path.parents[2].name in pending_locales else formatted_workspaces[path])
     for path, data in outputs.items():
@@ -539,11 +569,15 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
         report["published_source_review_fields"] = review_fields
         report["published_text_fields"] = publication_fields[folder]
         write_changed(root / folder / "Rush/report.json", json_bytes(report))
-    receipt = {"version": 2, "source_revision": revision(source), "built_locales": ready_locales,
+    # Delete only after all selected releases have passed validation and been saved.
+    # The receipt fingerprint must describe the shared artwork after cleanup.
+    for path in retired_artwork:
+        path.unlink()
+    receipt = {"version": 2, "source_revision": source_revision, "built_locales": ready_locales,
                "pending_locales": pending_locales,
-               "translations_revision": revision(translations_root.parents[1]) if translations_root else None,
-               "patch_sha256": digest((source / "RD Patch.cdb").read_bytes()),
-               "source_fingerprint": file_fingerprint(source, [source / "RD Patch.cdb"] + ([source / "sets.md"] if (source / "sets.md").exists() else []) + list((source / "script").glob("*.lua"))),
+               "translations_revision": translations_revision,
+               "patch_sha256": patch_sha256,
+               "source_fingerprint": source_fingerprint,
                "local_inputs_sha256": local_inputs_sha256(root),
                "card_ids": sorted(ids), "excluded_ids": sorted(set(source_datas) & excluded.keys()),
                "text_sha256": source_hashes}
@@ -553,7 +587,8 @@ def synchronize(root: Path, source: Path, translations_root: Path | None,
             "locales": sorted(reports), "artworks": len(artwork), "missing_artwork": missing_art,
             "scripts": len(scripts), "pending_translations": sum(pending_locales.values()),
             "ready_locales": ready_locales, "updated_locales": updated_locales,
-            "pending_locales": pending_locales, "retired_ids": retired}
+            "pending_locales": pending_locales, "retired_ids": retired,
+            "removed_artwork": [path.relative_to(root).as_posix() for path in retired_artwork]}
 
 
 def write_summary(path: Path, result: dict) -> None:
@@ -576,6 +611,8 @@ def write_summary(path: Path, result: dict) -> None:
         if result.get("retired_ids"):
             lines += ["", "Retired cards were removed from the last-good packages in: " +
                       ", ".join(sorted(result["retired_ids"])) + ". Retained cards keep their published text and scripts."]
+    if result.get("removed_artwork"):
+        lines += ["", f"Removed {len(result['removed_artwork'])} shared artwork file(s) for retired card IDs."]
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 

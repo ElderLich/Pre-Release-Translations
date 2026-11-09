@@ -263,9 +263,15 @@ are artwork crops, not full card scans or Neuron CID filenames.
 Every locale package contains the same images at
 `Picture/Rush_Arts/<card ID>.jpg` (or `.png`). MDPro4's existing Rush artwork
 loader checks game IDs before CIDs, so a new patch card works before the next
-CID mapping update. Only images for the active patch are included. Removed
-cards' shared source images remain available for reuse, but disappear from every
-rebuilt YPK. Duplicate JPG/PNG files for one ID cause a clear error.
+CID mapping update. Only images for the active patch are included. After a
+successful sync, artwork for retired card IDs is also deleted from this shared
+folder. Retirement is determined from the previous source receipt, existing
+workspaces and explicit retired-ID exclusions, compared with the validated current
+patch. Artwork prepared for IDs that have never been imported is retained.
+Cleanup runs for pending translation builds too, after package validation; an
+invalid source or failed build does not delete artwork. The command output and
+Actions summary report deletions, and GitHub Actions commits them with the build.
+Duplicate JPG/PNG files for one active ID cause a clear error.
 
 Initial import: 89 prepared 512×512 artworks. `120309029` (Nehime the Dimensional
 Sworn Ally, Neuron CID 23921) still has no prepared artwork; the report keeps that

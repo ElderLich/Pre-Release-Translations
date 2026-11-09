@@ -66,14 +66,95 @@ class RushPrereleaseTests(unittest.TestCase):
 
     def test_source_removal_prunes_every_locale_database_script_and_artwork(self):
         self.sync(["en", "de"])
+        future_art = self.root / "Shared/Rush Artworks/999.png"
+        future_art.write_bytes(b"\x89PNG\r\n\x1a\nfuture")
         self.set_cards([100])
-        self.sync(["en", "de"])
+        result = self.sync(["en", "de"])
         for locale in ("EN", "DE"):
             self.assertEqual(set(rush.read_cdb(self.workspace(locale))[0]), {100})
             with zipfile.ZipFile(self.package(locale)) as archive:
                 self.assertNotIn("script/c101.lua", archive.namelist())
                 self.assertNotIn("Picture/Rush_Arts/101.jpg", archive.namelist())
+        self.assertFalse((self.root / "Shared/Rush Artworks/101.jpg").exists())
+        self.assertTrue(future_art.exists())
+        self.assertEqual(result["removed_artwork"], ["Shared/Rush Artworks/101.jpg"])
+        receipt = rush.read_json(self.root / "Shared/Rush/source.json")
+        self.assertEqual(receipt["local_inputs_sha256"], rush.local_inputs_sha256(self.root))
+        self.assertEqual(self.sync(["en", "de"])["removed_artwork"], [])
+
+    def test_artwork_retirement_uses_receipt_even_when_selected_workspace_is_new(self):
+        self.sync()
+        self.set_cards([100])
+        self.sync(["de"])
+        self.assertFalse((self.root / "Shared/Rush Artworks/101.jpg").exists())
+
+    def test_artwork_retirement_uses_workspace_when_receipt_is_missing(self):
+        self.sync()
+        (self.root / "Shared/Rush/source.json").unlink()
+        self.set_cards([100])
+        self.sync()
+        self.assertFalse((self.root / "Shared/Rush Artworks/101.jpg").exists())
+
+    def test_pending_translation_still_removes_retired_shared_artwork(self):
+        self.sync()
+        self.set_cards([100, 102])
+        result = self.sync()
+        self.assertIn("EN", result["pending_locales"])
+        self.assertFalse((self.root / "Shared/Rush Artworks/101.jpg").exists())
+
+    def test_empty_valid_patch_removes_all_previously_active_artwork(self):
+        self.sync()
+        self.set_cards([])
+        result = self.sync()
+        self.assertEqual(result["removed_artwork"], ["Shared/Rush Artworks/100.jpg", "Shared/Rush Artworks/101.jpg"])
+        self.assertEqual(list((self.root / "Shared/Rush Artworks").iterdir()), [])
+
+    def test_invalid_source_or_missing_script_does_not_delete_retired_artwork(self):
+        self.sync()
+        self.set_cards([100])
+        (self.source / "script/c100.lua").unlink()
+        with self.assertRaisesRegex(ValueError, "Missing effect script"):
+            self.sync()
         self.assertTrue((self.root / "Shared/Rush Artworks/101.jpg").exists())
+        (self.source / "RD Patch.cdb").write_bytes(b"invalid database")
+        with self.assertRaises(rush.sqlite3.DatabaseError):
+            self.sync()
+        self.assertTrue((self.root / "Shared/Rush Artworks/101.jpg").exists())
+
+    def test_invalid_archive_revision_preserves_release_workspace_and_retired_artwork(self):
+        self.sync()
+        before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        self.set_cards([100])
+        for directory in (self.source, self.translations.parents[1]):
+            with self.subTest(directory=directory.name):
+                marker = directory / ".rush-source-revision"
+                marker.write_text("invalid\n", encoding="ascii")
+                try:
+                    with self.assertRaisesRegex(ValueError, "Invalid Rush archive revision"):
+                        self.sync()
+                    self.assertEqual(before, {p: p.read_bytes() for p in before})
+                finally:
+                    marker.unlink()
+
+    def test_source_receipt_read_failure_preserves_release_and_retired_artwork(self):
+        self.sync()
+        before = {p: p.read_bytes() for p in self.root.rglob("*") if p.is_file()}
+        self.set_cards([100])
+        for target in (self.source / "RD Patch.cdb", self.source / "script/unused.lua"):
+            with self.subTest(target=target.name):
+                if not target.exists():
+                    target.write_text("-- not a package dependency", encoding="utf-8")
+                original_read = Path.read_bytes
+
+                def read_bytes(path):
+                    if path == target:
+                        raise OSError("Source receipt input unavailable")
+                    return original_read(path)
+
+                with patch.object(Path, "read_bytes", read_bytes):
+                    with self.assertRaisesRegex(OSError, "Source receipt input unavailable"):
+                        self.sync()
+                self.assertEqual(before, {p: p.read_bytes() for p in before})
 
     def test_seed_does_not_resurrect_removed_source_prompt(self):
         source = (100, "原名", "原文", *([""] * 16))
@@ -98,6 +179,7 @@ class RushPrereleaseTests(unittest.TestCase):
         result = self.sync()
         self.assertEqual(result["packaged_cards"], 1)
         self.assertEqual(set(rush.read_cdb(self.workspace())[0]), {100})
+        self.assertFalse((self.root / "Shared/Rush Artworks/101.jpg").exists())
 
     def test_missing_translation_preserves_only_pending_locale_release_files(self):
         self.sync(["en", "de"])

@@ -74,6 +74,10 @@ jobs:
             for path in Shared/Rush/source.json Shared/Rush/sets.md */Rush */rush-pre-release.ypk */rush-pre-release.json */rush-version.txt; do
               if [ -e "$path" ]; then git add -A -- "$path"; fi
             done
+            # Stage tracked artwork removals even if cleanup removed the last image.
+            if ! git diff --quiet -- ':(glob)Shared/Rush Artworks/*'; then
+              git add -u -- ':(glob)Shared/Rush Artworks/*'
+            fi
             if git diff --cached --quiet; then
               cat "$RUNNER_TEMP/rush-summary.md" >> "$GITHUB_STEP_SUMMARY"
               echo "No generated Rush changes to commit. See the summary for translation readiness."

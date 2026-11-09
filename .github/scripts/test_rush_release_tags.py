@@ -57,9 +57,9 @@ class RushReleaseTagTests(unittest.TestCase):
 
     def publish(self, success=True, stale_tag_snapshot=False):
         workflow = (ROOT / ".github/workflows/rush-prerelease.yml").read_text(encoding="utf-8")
-        start = workflow.index("            if git diff --cached --quiet; then")
+        start = workflow.index("            for path in Shared/Rush/source.json")
         end = workflow.index('            echo "Branch changed while building;')
-        # Execute the actual no-op guard, tag selection, commit, atomic push and cleanup.
+        # Execute staging, the no-op guard, tag selection, commit, atomic push and cleanup.
         script = 'set -euo pipefail\nexport PATH="/usr/bin:/bin:$PATH"\nbranch=main\n'
         publication = workflow[start:end].replace(
             "python .github/scripts/release_git.py", shlex.quote(sys.executable.replace("\\", "/")) + " .github/scripts/release_git.py")
@@ -123,6 +123,18 @@ class RushReleaseTagTests(unittest.TestCase):
         self.publish()
         self.assertEqual(self.remote_tags(), [])
         self.assertNotEqual(self.git(self.remote, "rev-parse", "refs/heads/main"), self.previous)
+
+    def test_last_shared_artwork_deletion_is_staged_and_published_without_tag(self):
+        self.stage("Shared/Rush Artworks/101.jpg", "retired artwork")
+        self.git(self.repo, "commit", "-m", "Previous artwork")
+        self.git(self.repo, "push", "origin", "HEAD:main")
+        artwork = self.repo / "Shared/Rush Artworks/101.jpg"
+        artwork.unlink()
+        artwork.parent.rmdir()
+        # Deliberately leave deletion unstaged, as the builder does.
+        self.publish()
+        self.assertEqual(self.remote_tags(), [])
+        self.assertEqual(self.git(self.remote, "ls-tree", "-r", "--name-only", "refs/heads/main", "Shared/Rush Artworks"), "")
 
     def test_unchanged_run_leaves_branch_and_tags_untouched(self):
         self.publish()
