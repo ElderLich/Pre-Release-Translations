@@ -1,5 +1,53 @@
 [
   {
+    "name": "Minjal Khery Hebet",
+    "desc": "Enregistre tout dans ce monde et juge les âmes qui voyagent vers le monde souterrain. La voix qui rend le verdict semble faire \"Gwawwaa\".",
+    "overallString": "[Monstre|Normal] Zombie/Ténébres  [★6] 1900/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276001.jpg?version=19.7"
+  },
+  {
+    "name": "Shasta Noir",
+    "desc": "Si cette carte est dans votre main et que vous contrôlez un Monstre Normal ou un monstre Dinosaure : vous pouvez Invoquer Spécialement cette carte. Si cette carte est détruite au combat ou par un effet de carte et envoyée au Cimetière : vous pouvez équiper cette carte à 1 monstre face recto sur le Terrain comme Magie d'Équipement avec ces effets.\n● Le monstre équipé perd 2400 ATK.\n● Si le monstre équipé a min. 2500 ATK d'origine, aucun joueur ne peut activer ses effets.\nVous ne pouvez utiliser chaque effet de \"Shasta Noir\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Dinosaure/Eau  [★6] 1200/1200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276002.jpg?version=19.7"
+  },
+  {
+    "name": "Démort le Dragon Quadridimensionnel",
+    "desc": "1 Syntoniseur + 1+ non-Syntoniseur\nLorsque la quatrième attaque de chaque tour est déclarée : vous pouvez faire devenir l'ATK de cette carte 4000. Vous pouvez bannir max. 4 cartes depuis votre main, puis activez cet effet selon le nombre banni (mais vous ne pouvez utiliser chacun de ces effets de \"Démort le Dragon Quadridimensionnel\" qu'une fois par tour) ;\n● 1 : Invoquez Spécialement 1 monstre de max. Niveau 4 depuis votre main.\n● 2 : Bannissez 1 monstre de max. Niveau 4 sur le Terrain.\n● 3 : Envoyez 1 monstre TÉNÈBRES depuis votre Deck au Cimetière.\n● 4 : Piochez 5 cartes au lieu d'1 pour votre pioche normale durant votre prochaine Draw Phase.",
+    "overallString": "[Monstre|Effet|Synchro] Dragon/Ténébres  [★8] 2400/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276003.jpg?version=19.7"
+  },
+  {
+    "name": "圣魔之贤王 恩底弥翁",
+    "desc": "Échelle Pendule = 9\n[ Effet Pendule ]\n这个卡名的②的灵摆效果1回合只能使用1次。\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\n----------------------------------------\n[ Effet de Monstre ]\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+    "overallString": "[Monstre|Effet|Pendule|Invocation Spéciale] Magicien/Ténébres  [★7] 2700/1700  9/9",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274003.jpg?version=19.7"
+  },
+  {
+    "name": "绝火的祆威",
+    "desc": "这个卡名的①②的效果1回合只能有1次使用其中任意1个。\r\n①：以自己场上1只「大贤者」怪兽或魔法师族怪兽，和对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽当作攻击力上升500的装备魔法卡使用给作为对象的自己怪兽装备。\r\n②：自己主要阶段这张卡在墓地存在的场合，以自己墓地的1只融合·同调·超量·连接怪兽为对象才能发动。那只怪兽和这张卡回到卡组。",
+    "overallString": "[Magie|Jeu-Rapide]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274005.jpg?version=19.7"
+  },
+  {
+    "name": "Dunamis Magistus",
+    "desc": "Ciblez 1 Carte Monstre Fusion, Synchro, Xyz ou Lien que vous contrôlez ; renvoyez-la à l'Extra Deck, puis vous pouvez Invoquer Spécialement 1 monstre \"Magistus\" du même type (Fusion, Synchro, Xyz, Lien) depuis votre Extra Deck. Durant votre Main Phase : vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 1 Monstre Xyz que vous contrôlez ; attachez-lui 1 monstre \"Magistus\" depuis votre Deck. Vous ne pouvez utiliser chaque effet de \"Dunamis Magistus\" qu'une fois par tour.",
+    "overallString": "[Magie|Jeu-Rapide]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274028.jpg?version=19.7"
+  },
+  {
+    "name": "Protée de la Triade",
+    "desc": "2 Monstres à Effet\nSi cette carte est Invoquée Spécialement : vous pouvez défausser 1 carte ; cette carte gagne cet effet selon le type de la carte défaussée (Monstre, Magie, Piège).\n● Monstre : Gagne 800 ATK.\n● Magie : Si un ou plusieurs monstres que vous contrôlez vont être détruits par un effet de carte, vous pouvez détruire cette carte à la place.\n● Piège : Une fois par tour, si un ou plusieurs monstres sont Invoqués Spécialement dans une ou plusieurs zones pointées par cette carte : vous pouvez détruire tous les monstres pointés par cette carte.\nVous ne pouvez utiliser cet effet de \"Protée de la Triade\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Lien] Rocher/Terre  [LINK-2] 1500/-  [↖][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276004.jpg?version=19.7"
+  },
+  {
+    "name": "Jeu de Doigts",
+    "desc": "Chaque joueur place 2 cartes depuis son Deck au-dessus de son Deck dans l'ordre de son choix, puis il déclare un nombre de 0 à 4, puis il dévoile les 2 cartes du dessus de son Deck. Les joueurs dont le nombre déclaré est le même que le nombre de monstres parmi les 4 cartes dévoilées ajoutent 1 de leurs cartes dévoilées à leur main, et aussi, ils placent l'autre au-dessous de leur Deck. Les joueurs dont le nombre déclaré n'est pas le même placent leurs cartes dévoilées au-dessous de leur Deck dans l'ordre de leur choix. Vous ne pouvez activer qu'1 \"Jeu de Doigts\" par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276005.jpg?version=19.7"
+  },
+  {
     "name": "Dimension Cubique",
     "desc": "Lorsque cette carte est activée : vous pouvez ajouter 1 monstre \"Cubique\" de max. Niveau 4 depuis votre Deck à votre main. Aucun joueur ne reçoit de dommages de combat de combats impliquant 2 monstres. Une fois par tour, durant votre Main Phase : vous pouvez Invoquer Spécialement 1 monstre \"Cubique\" depuis votre main, en ignorant ses conditions d'Invocation. Si un ou plusieurs monstres sont détruits au combat : leurs contrôleurs recoivent des dommages égaux à leur ATK d'origine. Vous ne pouvez activer qu'1 \"Dimension Cubique\" par tour.",
     "overallString": "[Magie|Terrain]",
