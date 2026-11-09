@@ -1,5 +1,53 @@
 [
   {
+    "name": "Minjal Khery Hebet",
+    "desc": "Records everything in this world and makes judgments on the souls that travel to the underworld. The voice that hands down the verdict has a \"Gwawwaa\" sound to it.",
+    "overallString": "[Monster|Normal] Zombie/Dark  [★6] 1900/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276001.jpg?version=19.7"
+  },
+  {
+    "name": "Black Shasta",
+    "desc": "If this card is in your hand and you control a Normal Monster or a Dinosaur monster: You can Special Summon this card. If this card is destroyed by battle or card effect and sent to the GY: You can equip this card to 1 face-up monster on the field as an Equip Spell with these effects.\n● The equipped monster loses 2400 ATK.\n● If the equipped monster has 2500 or more original ATK, neither player can activate its effects.\nYou can only use each effect of \"Black Shasta\" once per turn.",
+    "overallString": "[Monster|Effect] Dinosaur/Water  [★6] 1200/1200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276002.jpg?version=19.7"
+  },
+  {
+    "name": "Craydeath the Four Dimensional Dragon",
+    "desc": "1 Tuner + 1+ non-Tuners\nWhen the fourth attack of each turn is declared: You can make this card's ATK become 4000. You can banish up to 4 cards from your hand, then activate this effect based on the number banished (but you can only use each of these effects of \"Craydeath the Four Dimensional Dragon\" once per turn);\n● 1: Special Summon 1 Level 4 or lower monster from your hand.\n● 2: Banish 1 Level 4 or lower monster on the field.\n● 3: Send 1 DARK monster from your Deck to the GY.\n● 4: Draw 5 cards instead of 1 for your normal draw during your next Draw Phase.",
+    "overallString": "[Monster|Effect|Synchro] Dragon/Dark  [★8] 2400/2400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276003.jpg?version=19.7"
+  },
+  {
+    "name": "圣魔之贤王 恩底弥翁",
+    "desc": "Pendulum Scale = 9\n[ Pendulum Effect ]\n这个卡名的②的灵摆效果1回合只能使用1次。\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\n----------------------------------------\n[ Monster Effect ]\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+    "overallString": "[Monster|Effect|Pendulum|Special Summon] Spellcaster/Dark  [★7] 2700/1700  9/9",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274003.jpg?version=19.7"
+  },
+  {
+    "name": "绝火的祆威",
+    "desc": "这个卡名的①②的效果1回合只能有1次使用其中任意1个。\r\n①：以自己场上1只「大贤者」怪兽或魔法师族怪兽，和对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽当作攻击力上升500的装备魔法卡使用给作为对象的自己怪兽装备。\r\n②：自己主要阶段这张卡在墓地存在的场合，以自己墓地的1只融合·同调·超量·连接怪兽为对象才能发动。那只怪兽和这张卡回到卡组。",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274005.jpg?version=19.7"
+  },
+  {
+    "name": "Dunamis Magistus",
+    "desc": "Target 1 Fusion, Synchro, Xyz, or Link Monster Card you control; return it to the Extra Deck, then you can Special Summon 1 \"Magistus\" monster of the same type (Fusion, Synchro, Xyz, Link) from your Extra Deck. During your Main Phase: You can banish this card from your GY, then target 1 Xyz Monster you control; attach 1 \"Magistus\" monster from your Deck to it. You can only use each effect of \"Dunamis Magistus\" once per turn.",
+    "overallString": "[Spell|Quick-Play]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274028.jpg?version=19.7"
+  },
+  {
+    "name": "Triad Proteus",
+    "desc": "2 Effect Monsters\nIf this card is Special Summoned: You can discard 1 card; this card gains this effect based on the discarded card's type (Monster, Spell, Trap).\n● Monster: Gains 800 ATK.\n● Spell: If a monster(s) you control would be destroyed by card effect, you can destroy this card instead.\n● Trap: Once per turn, if a monster(s) is Special Summoned to a zone(s) this card points to: You can destroy all monsters this card points to.\nYou can only use this effect of \"Triad Proteus\" once per turn.",
+    "overallString": "[Monster|Effect|Link] Rock/Earth  [LINK-2] 1500/-  [↖][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276004.jpg?version=19.7"
+  },
+  {
+    "name": "Finger Game",
+    "desc": "Each player places 2 cards from their Deck on top of their Deck in any order, then they declare a number from 0 to 4, then they excavate the top 2 cards of their Deck. The player(s) whose declared number is the same as the number of monsters among all 4 excavated cards adds 1 of their excavated cards to their hand, also they place the other on the bottom of their Deck. The player(s) whose declared number is not the same places their excavated cards on the bottom of their Deck in any order. You can only activate 1 \"Finger Game\" per turn.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276005.jpg?version=19.7"
+  },
+  {
     "name": "Cubic Dimension",
     "desc": "When this card is activated: You can add 1 Level 4 or lower \"Cubic\" monster from your Deck to your hand. Neither player takes any battle damage from battles involving 2 monsters. Once per turn, during your Main Phase: You can Special Summon 1 \"Cubic\" monster from your hand, ignoring its Summoning conditions. If a monster(s) is destroyed by battle: Its controller takes damage equal to its original ATK. You can only activate 1 \"Cubic Dimension\" per turn.",
     "overallString": "[Spell|Field]",
