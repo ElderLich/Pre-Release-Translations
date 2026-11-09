@@ -1,12 +1,14 @@
 {
-  "active_cards": 52,
+  "active_cards": 54,
   "artwork_files": 48,
   "excluded_ids": [],
   "missing_artwork": [
     120311003,
     120311005,
     120311009,
-    120311014
+    120311014,
+    120312001,
+    120312002
   ],
   "pending_translations": [
     {
@@ -16,6 +18,15 @@
       ],
       "id": 120311014,
       "name": "Cosmostar the White Hole Polairy"
+    },
+    {
+      "fields": [
+        "str1",
+        "str3",
+        "str4"
+      ],
+      "id": 120312001,
+      "name": "Paletta the Foot Painter"
     }
   ],
   "published_source_fields": {
@@ -2330,8 +2341,8 @@
     "120311063": "67420075d592d96ae9856bbdc64e8a7a3cb2a4e142b1c30a439ce079c0bf1f3d",
     "120311064": "3b1a589de1ce0cd12bbdc598c4887c471a427f8d2a83904fd5f819f53d3b8348"
   },
-  "script_files": 92,
-  "source_cards": 52,
+  "script_files": 94,
+  "source_cards": 54,
   "text_sha256": {
     "120311001": "e528ce9fa273eef4c12fe88904b58aac2c8cf78c9988e7b9c694229ab1b29f43",
     "120311002": "648a2953a7bf5e5573a9d8486b7d710591535d7ff20fed585e579d3767d4e32f",
@@ -2384,6 +2395,8 @@
     "120311061": "b257880ffc1c0a18d1ef2c42f0a2b4b68a8578fb5206a691db25660142e8d693",
     "120311062": "34670b76fcafb4928561426ffeb85ccbbecd955f3c1c4ee15d47d63986e9e1f2",
     "120311063": "67420075d592d96ae9856bbdc64e8a7a3cb2a4e142b1c30a439ce079c0bf1f3d",
-    "120311064": "3b1a589de1ce0cd12bbdc598c4887c471a427f8d2a83904fd5f819f53d3b8348"
+    "120311064": "3b1a589de1ce0cd12bbdc598c4887c471a427f8d2a83904fd5f819f53d3b8348",
+    "120312001": "441b99977e9942b6b0a07a0fcb0491c644d3ae06c38abe19c53b432c802be2ba",
+    "120312002": "cfae5cd3e45912c2239ac24c44e10cd66a7dd71c89d5f8e2fb2bc18850c07f19"
   }
 }

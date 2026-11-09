@@ -1,6 +1,5 @@
 {
   "built_locales": [
-    "ES",
     "ZH-CN",
     "ZH-TW"
   ],
@@ -56,23 +55,26 @@
     120311061,
     120311062,
     120311063,
-    120311064
+    120311064,
+    120312001,
+    120312002
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "e116f936f6fd5fc8f3e5efa36484bf02656dfe5e0db383dbfed5126a9bd3a71a",
-  "patch_sha256": "a1650b1ec0340534ae2392de13bed439a804fa779cff1a2fa5180aa6902a458d",
+  "local_inputs_sha256": "089ea2828b461beec1b5a7fe768fcc84af14ce467d55ace0e5e9e00f4d75eaaf",
+  "patch_sha256": "54d559b06e0161c2752650276c40cc53e3066161061d76a5be1632439f3aac4e",
   "pending_locales": {
-    "DE": 4,
-    "EN": 1,
-    "FR": 1,
-    "IT": 4,
-    "JP": 1,
-    "KR": 4,
-    "PT": 4,
-    "TH": 1
+    "DE": 6,
+    "EN": 2,
+    "ES": 2,
+    "FR": 2,
+    "IT": 6,
+    "JP": 2,
+    "KR": 6,
+    "PT": 6,
+    "TH": 2
   },
-  "source_fingerprint": "c8bf7812a97e21ee2d3db026d1d755c75e6285c603d1c170b9ee65982fa06015",
-  "source_revision": "fb475f73b7093f4e9a689a3e7fc3aaa6a341ec0b",
+  "source_fingerprint": "b59bf5e66b4b4684f143cd3699e6dde97a348392468aabe69e5c640dd9bfbb5d",
+  "source_revision": "f59c2069766efa4934ba0c0070e6e4c388b67887",
   "text_sha256": {
     "120311001": "b9ae9ba1042b3ebf3424ece1bd0d033427b6b69742918c8d05b00c75573db3c0",
     "120311002": "ee467492244a0f89f5530ed8f7ad2ec8076cbc7581bf8a003dad13e856391346",
@@ -125,7 +127,9 @@
     "120311061": "6383b79ddac5450b8261024668a0f40328b84f4d06bfa7c51ed0497bfa079f0d",
     "120311062": "ff9d391d02bda0abc8ba2bd0c236272115519319f82a66b312fb85ea80862470",
     "120311063": "4b365b3394ceebd859546392dac6790872e5aeb7dcf7ceb4912ae26d98c641c1",
-    "120311064": "b4369a02a7a66a81fbcd514c6ee24609871e2aa1ccdf686dcb5135d347a4051a"
+    "120311064": "b4369a02a7a66a81fbcd514c6ee24609871e2aa1ccdf686dcb5135d347a4051a",
+    "120312001": "e00478c5b4f9c137ed8385ca02c9c5d261d7ad402d25c016b6578f762f05c180",
+    "120312002": "9b8cecd4dee663c607b963a6aae846351e5603545d016625e65646c4f85bae83"
   },
   "translations_revision": "84f96ce830031fea12ca95f1b8deafe8c440940b",
   "version": 2

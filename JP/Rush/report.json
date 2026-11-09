@@ -1,12 +1,14 @@
 {
-  "active_cards": 52,
+  "active_cards": 54,
   "artwork_files": 48,
   "excluded_ids": [],
   "missing_artwork": [
     120311003,
     120311005,
     120311009,
-    120311014
+    120311014,
+    120312001,
+    120312002
   ],
   "pending_translations": [
     {
@@ -16,6 +18,14 @@
       ],
       "id": 120311014,
       "name": "夕極精のコスモスター"
+    },
+    {
+      "fields": [
+        "str3",
+        "str4"
+      ],
+      "id": 120312001,
+      "name": "塗り足のパレッタ"
     }
   ],
   "published_source_fields": {
@@ -2330,8 +2340,8 @@
     "120311063": "552482b7c33845241a178822ab29c030b146979f20b69927f9d5982a26dc8f9f",
     "120311064": "bd853406cc13f74de9582cd36dafd1c4d24d92d07143911e5b9129e4e321f4ed"
   },
-  "script_files": 92,
-  "source_cards": 52,
+  "script_files": 94,
+  "source_cards": 54,
   "text_sha256": {
     "120311001": "d4324f6e1686ca9cd43c41d298ceea0119af7613673deeba36ed9bae75b41666",
     "120311002": "17092b16d886157fea0abaafe210acd13730c544796dfedb6fa4735a9aab2d92",
@@ -2384,6 +2394,8 @@
     "120311061": "11fde8902f640f9b25c669c3336151e5d94d498fbf05462a19c632034221fb77",
     "120311062": "84889cd707f9b2cc77f95e8f9cff75804e449b7801d74e1c9579d35d3d56dd0a",
     "120311063": "552482b7c33845241a178822ab29c030b146979f20b69927f9d5982a26dc8f9f",
-    "120311064": "bd853406cc13f74de9582cd36dafd1c4d24d92d07143911e5b9129e4e321f4ed"
+    "120311064": "bd853406cc13f74de9582cd36dafd1c4d24d92d07143911e5b9129e4e321f4ed",
+    "120312001": "3c815acfd47d8a017f3a12ee3f7ef9875d992da47e742afbbc91f91063a1dd1c",
+    "120312002": "34797c9c877334026534a25b3e02400f6cb10c07ee490f4b1d82275bb21f5c08"
   }
 }

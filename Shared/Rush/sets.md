@@ -42,6 +42,7 @@ https://yugipedia.com/wiki/Category:Rush_Duel_cards
 - **October 10, 2026**: CROSS ART COLLECTION (RD/CA01-JP): `120309XXX`
 - **November 7, 2026**: ??? (RD/KP27-JP): `120310XXX`
 - **January 21, 2027**: Limited Pack Another Style Edition (RD/LP02-JP): `120311XXX`
+- **December 19, 2026**: Rush Duel Promotion Pack 2027 (RD/27PR-JP): `120312XXX`
 
 # Archived
 - **April 3, 2020** : Saikyō Jump May 2020 promotional card (RD/SJMP-JP) : `120100XXX`

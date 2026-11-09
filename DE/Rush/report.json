@@ -1,12 +1,14 @@
 {
-  "active_cards": 52,
+  "active_cards": 54,
   "artwork_files": 48,
   "excluded_ids": [],
   "missing_artwork": [
     120311003,
     120311005,
     120311009,
-    120311014
+    120311014,
+    120312001,
+    120312002
   ],
   "pending_translations": [
     {
@@ -42,6 +44,25 @@
       ],
       "id": 120311014,
       "name": "夕极精 秋英宇宙星"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str3",
+        "str4"
+      ],
+      "id": 120312001,
+      "name": "涂足的调色少女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120312002,
+      "name": "枯木的金尼"
     }
   ],
   "published_source_fields": {
@@ -2356,8 +2377,8 @@
     "120311063": "9b84efb5e1b377c1508281813bec423639d2c8f13157233e25d79ead1b787f4e",
     "120311064": "6581f73e9ccbc4df3053b3167f010731d5ba23057b61da2ac22a9151de005074"
   },
-  "script_files": 92,
-  "source_cards": 52,
+  "script_files": 94,
+  "source_cards": 54,
   "text_sha256": {
     "120311001": "aa0fd88cc689096a0c33d0c38d3b7aeea4853856a92a2ddabd6344d4705297f2",
     "120311002": "a80a4e8be3cf33eca78c569921a3a78ebcc00d29f26f527dd464c7b52c6bf6e4",
@@ -2410,6 +2431,8 @@
     "120311061": "98915875974ae1a0fa42b0dd1c6c26b8de1ebe95d56b93a06c59341765165e2c",
     "120311062": "4bdb5c095c4a3ecf64ca4c824aa11e5c480d27b20fa9c40e7093d9692b3eaffc",
     "120311063": "9b84efb5e1b377c1508281813bec423639d2c8f13157233e25d79ead1b787f4e",
-    "120311064": "6581f73e9ccbc4df3053b3167f010731d5ba23057b61da2ac22a9151de005074"
+    "120311064": "6581f73e9ccbc4df3053b3167f010731d5ba23057b61da2ac22a9151de005074",
+    "120312001": "2397f4c8c63c485550e2e1756929e317473256b75ab80feafe7575d4a6dc1f03",
+    "120312002": "090ad285be805779fe475d9c60894bec2febc94f4dd99614d78a94eec5a132f7"
   }
 }

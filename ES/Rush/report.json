@@ -1,14 +1,36 @@
 {
-  "active_cards": 52,
+  "active_cards": 54,
   "artwork_files": 48,
   "excluded_ids": [],
   "missing_artwork": [
     120311003,
     120311005,
     120311009,
-    120311014
+    120311014,
+    120312001,
+    120312002
   ],
-  "pending_translations": [],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str3",
+        "str4"
+      ],
+      "id": 120312001,
+      "name": "涂足的调色少女"
+    },
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120312002,
+      "name": "枯木的金尼"
+    }
+  ],
   "published_source_fields": {
     "120311001": {
       "desc": "18724a781e9dd2cc2d3d6313cfe1c41babd08ccd9825c6b9559ac3757e908730",
@@ -960,8 +982,8 @@
     "120311063": "6ecbbe974567e0bd9b9239822738f579c3e6d8520b52f1c110e177ffcf1c995a",
     "120311064": "0c200bf382e74437848f52860c2fbd9bcbd9bcba434ff90f76743b505537f435"
   },
-  "script_files": 92,
-  "source_cards": 52,
+  "script_files": 94,
+  "source_cards": 54,
   "text_sha256": {
     "120311001": "6e41f7cae2e588ba2f0e5996ada4dcbd3dfab9bccb0fc8c485bbdc8d17b5b2e1",
     "120311002": "96fafa0163b714af08223854988cae9d3eabc3d724715fde9955ef3578b714f4",
@@ -1014,6 +1036,8 @@
     "120311061": "9d455c46612b31b42d85f7946acec0950dd5300b97c9d3d9ba990ba4c78491e5",
     "120311062": "9c17a7fa29c0b600dfe35acb97e4067870a5974e86b23a4afc09348a5a0fe4fe",
     "120311063": "6ecbbe974567e0bd9b9239822738f579c3e6d8520b52f1c110e177ffcf1c995a",
-    "120311064": "0c200bf382e74437848f52860c2fbd9bcbd9bcba434ff90f76743b505537f435"
+    "120311064": "0c200bf382e74437848f52860c2fbd9bcbd9bcba434ff90f76743b505537f435",
+    "120312001": "7f9e05ac252dcaa17f5a29b0495003d5c92abe0df021dbfb14efe5a8a98c71a2",
+    "120312002": "2e23652b80f11b0e263f75cbb4b1a0267a060535d3f6f9793bd2dab22b327c00"
   }
 }

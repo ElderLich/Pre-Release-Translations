@@ -1,12 +1,14 @@
 {
-  "active_cards": 52,
+  "active_cards": 54,
   "artwork_files": 48,
   "excluded_ids": [],
   "missing_artwork": [
     120311003,
     120311005,
     120311009,
-    120311014
+    120311014,
+    120312001,
+    120312002
   ],
   "pending_translations": [
     {
@@ -16,6 +18,15 @@
       ],
       "id": 120311014,
       "name": "Étoilecosmo le Polelfe du Trou Blanc"
+    },
+    {
+      "fields": [
+        "str1",
+        "str3",
+        "str4"
+      ],
+      "id": 120312001,
+      "name": "Paletta le Peintre aux Pieds"
     }
   ],
   "published_source_fields": {
@@ -2330,8 +2341,8 @@
     "120311063": "f56028932d87de97e7a460c5cd8a5d9afc735bd84f590825137859e6e00dfc44",
     "120311064": "0abc34f5233607fba98742b78a87b86242af0bb085450b30cc2d9e55f710caef"
   },
-  "script_files": 92,
-  "source_cards": 52,
+  "script_files": 94,
+  "source_cards": 54,
   "text_sha256": {
     "120311001": "3a4b515e4f47a44b3db24c9a2969079a515c7824e2635a821d3839c927875d96",
     "120311002": "e3b01a1ac5ede221c1daee870ebbe81256490a21fdb795931c759ccc82091d5c",
@@ -2384,6 +2395,8 @@
     "120311061": "84699cac359f406e39818afd2bff4d9a1a22cb8886e3e44759ecdaf0188043af",
     "120311062": "f9b052ec2be0014b5b27b356b68121d2045a8baccac8c74ef4dbe12522bde105",
     "120311063": "f56028932d87de97e7a460c5cd8a5d9afc735bd84f590825137859e6e00dfc44",
-    "120311064": "0abc34f5233607fba98742b78a87b86242af0bb085450b30cc2d9e55f710caef"
+    "120311064": "0abc34f5233607fba98742b78a87b86242af0bb085450b30cc2d9e55f710caef",
+    "120312001": "a26640ce3156020ecab2bd8c35afcbc88ce346918a5dac51d4f6af2bdaeadc16",
+    "120312002": "3898e51cb03cf97819e274d36d9b02a761dc430cdce540cee45acf64501e4125"
   }
 }
