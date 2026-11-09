@@ -857,6 +857,48 @@ def build_translation_pack(lang: str):
 
     # Extra phrases (keep phrase-level; avoid single-word glue)
     extras = {
+        # Standard source 29.29: Endymion (str5), Craydeath (str2/str6),
+        # and Triad Proteus (str4). Keep the next normal draw and Link arrows explicit.
+        "是否除外魔法卡？": {
+            "en": "Banish a Spell Card?",
+            "fr": "Bannir une Carte Magie ?",
+            "de": "Eine Zauberkarte verbannen?",
+            "es": "¿Desterrar una Carta Mágica?",
+            "pt": "Banir um Card de Magia?",
+            "it": "Bandire una Carta Magia?",
+            "ja": "魔法カードを除外しますか？",
+            "kr": "마법 카드를 제외하겠습니까?",
+        },
+        "攻击力变成4000": {
+            "en": "ATK becomes 4000",
+            "fr": "L'ATK devient 4000",
+            "de": "ATK werden zu 4000",
+            "es": "El ATK se convierte en 4000",
+            "pt": "O ATK torna-se 4000",
+            "it": "L'ATK diventa 4000",
+            "ja": "攻撃力が4000になる",
+            "kr": "공격력이 4000이 된다",
+        },
+        "下次通常抽卡变成5张": {
+            "en": "Draw 5 cards instead of 1 for your next normal draw",
+            "fr": "Piocher 5 cartes au lieu d'1 pour votre prochaine pioche normale",
+            "de": "Beim nächsten normalen Ziehen 5 Karten statt 1 ziehen",
+            "es": "Roba 5 cartas en lugar de 1 en tu próximo robo normal",
+            "pt": "Compre 5 cards em vez de 1 na sua próxima compra normal",
+            "it": "Pesca 5 carte invece di 1 per la tua prossima pescata normale",
+            "ja": "次の通常のドローで1枚の代わりに5枚ドローする",
+            "kr": "다음 일반 드로우에 1장 대신 5장 드로우한다",
+        },
+        "所连接区怪兽破坏": {
+            "en": "Destroy all monsters this card points to",
+            "fr": "Détruire tous les monstres pointés par cette carte",
+            "de": "Alle Monster zerstören, auf die diese Karte zeigt",
+            "es": "Destruye todos los monstruos a los que apunte esta carta",
+            "pt": "Destrua todos os monstros para os quais este card apontar",
+            "it": "Distruggi tutti i mostri puntati da questa carta",
+            "ja": "このカードのリンク先のモンスターを全て破壊する",
+            "kr": "이 카드의 링크 앞의 몬스터를 전부 파괴한다",
+        },
         "不用解放来召唤({CARD})": {
             "en": "Normal Summon without Tributing ({CARD})",
             "fr": "Invoquer Normalement sans Sacrifice ({CARD})",
