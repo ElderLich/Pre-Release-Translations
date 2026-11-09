@@ -34,4 +34,9 @@ Chinese terminology rather than blindly converting every string.
 Generate packages and reports through the existing builders. Verify SQLite
 integrity, source inventory/gameplay parity, unresolved placeholders, and pending
 translations for the requested locales. Record source discrepancies without
-silently modifying upstream gameplay. Commit or push when requested.
+silently modifying upstream gameplay.
+
+Commit each logical repository change after validation with a descriptive subject
+and body explaining the change and its checks. Push only when requested.
+When the user requests local-only translations, keep the card databases and
+packages in the local workspace; shared tooling fixes can still be committed.
