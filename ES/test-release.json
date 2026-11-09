@@ -37,13 +37,13 @@
   },
   {
     "name": "Fantastruco Yoko",
-    "desc": "2 monstruos \"Fantastruco\" de Nivel 2\t\r\nTambién puedes Invocar Xyz a \"Fantastruco Yoko\" una vez por turno usando 1 monstruo \"Fantastruco\" Colocado que controles que tenga un Nivel como material.\r\nNo puede ser destruida por efectos de cartas de tu adversario mientras está en la Zona de Monstruos.\r\nUna vez por turno: puedes desacoplar 1 material de esta carta; Invoca de Modo Especial 1 monstruo \"Fantastruco\" desde tu Deck, pero no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de OSCURIDAD.",
+    "desc": "2 monstruos \"Fantastruco\" de Nivel 2\r\n\tTambién puedes Invocar Xyz a \"Fantastruco Yoko\" una vez por turno usando 1 monstruo \"Fantastruco\" Colocado que controles que tenga un Nivel como material.\r\nNo puede ser destruida por efectos de cartas de tu adversario mientras está en la Zona de Monstruos.\r\nUna vez por turno: puedes desacoplar 1 material de esta carta; Invoca de Modo Especial 1 monstruo \"Fantastruco\" desde tu Deck, pero no puedes Invocar de Modo Especial por el resto de este turno, excepto monstruos de OSCURIDAD.",
     "overallString": "[Monstruo|Efecto|Xyz] Lanzador de Conjuros/OSCURIDAD  [☆2] 900/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272051.jpg?version=19.7"
   },
   {
     "name": "Fantastruco Maestro Alucard",
-    "desc": "3 monstruos de Nivel 6\t\r\nTambién puedes Invocar Xyz esta carta descartando 1 carta \"Fantastruco\" y usando 1 \"Fantastruco Alucard\" que controles (transfiere sus materiales). Esta carta no puede ser usada como Material Xyz.\r\nEsta carta boca arriba no puede ser cambiada a Posición de Defensa boca abajo.\r\nUna vez por turno (Efecto Rápido): puedes desacoplar 1 material de esta carta; destruye todas las cartas Colocadas que controle tu adversario.\r\nCuando se activa una Carta Mágica/Trampa (Efecto Rápido): puedes desacoplar 2 materiales de esta carta; niega esa activación y, si lo haces, Coloca esa carta.",
+    "desc": "3 monstruos de Nivel 6\r\n\tTambién puedes Invocar Xyz esta carta descartando 1 carta \"Fantastruco\" y usando 1 \"Fantastruco Alucard\" que controles (transfiere sus materiales). Esta carta no puede ser usada como Material Xyz.\r\nEsta carta boca arriba no puede ser cambiada a Posición de Defensa boca abajo.\r\nUna vez por turno (Efecto Rápido): puedes desacoplar 1 material de esta carta; destruye todas las cartas Colocadas que controle tu adversario.\r\nCuando se activa una Carta Mágica/Trampa (Efecto Rápido): puedes desacoplar 2 materiales de esta carta; niega esa activación y, si lo haces, Coloca esa carta.",
     "overallString": "[Monstruo|Efecto|Xyz] Zombi/OSCURIDAD  [☆6] 2800/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272052.jpg?version=19.7"
   },
@@ -535,7 +535,7 @@
   },
   {
     "name": "Anima Divina Infinita el Señor Supremo Cúbico de la Creación",
-    "desc": "4 monstruos \"Cúbico/a\"\t\r\nDebe ser Invocada por Fusión.\r\nGana 1500 ATK por cada \"Vijam la Semilla Cúbica\" en tu Cementerio.\r\nNo es afectada por efectos activados de cualquier monstruo cuyo ATK sea menor que el de esta carta.\r\n(Efecto Rápido): Una vez por turno: puedes barajar al Deck todas tus cartas \"Cúbico/a\" desterradas y, si lo haces, destruye 1 carta que controle tu adversario.\r\nSi esta carta boca arriba en posesión de su dueño deja el Campo por tu adversario: puedes Invocar de Modo Especial hasta 3 \"Vijam la Semilla Cúbica\" desde tu Cementerio.",
+    "desc": "4 monstruos \"Cúbico/a\"\r\n\tDebe ser Invocada por Fusión.\r\nGana 1500 ATK por cada \"Vijam la Semilla Cúbica\" en tu Cementerio.\r\nNo es afectada por efectos activados de cualquier monstruo cuyo ATK sea menor que el de esta carta.\r\n(Efecto Rápido): Una vez por turno: puedes barajar al Deck todas tus cartas \"Cúbico/a\" desterradas y, si lo haces, destruye 1 carta que controle tu adversario.\r\nSi esta carta boca arriba en posesión de su dueño deja el Campo por tu adversario: puedes Invocar de Modo Especial hasta 3 \"Vijam la Semilla Cúbica\" desde tu Cementerio.",
     "overallString": "[Monstruo|Efecto|Fusión] Demonio/LUZ  [★10] 0/3000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272004.jpg?version=19.7"
   },
