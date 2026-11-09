@@ -78,10 +78,12 @@ EXTRA_SET_CODES_BY_ID = {
     # https://yugipedia.com/wiki/SJRY-JP001
     100273001: "SJRY-JP001",
     # CH03's new cards use the JPP01-style printed numbers, not JP001.
-    # Verified against https://yugipedia.com/wiki/CH03-JPP01 (and JPP02/JPP04).
+    # Verified against https://yugipedia.com/wiki/CH03-JPP01 through CH03-JPP05.
     100274001: "CH03-JPP01",
     100274002: "CH03-JPP02",
+    100274003: "CH03-JPP03",
     100274004: "CH03-JPP04",
+    100274005: "CH03-JPP05",
     # Synthetic ID suffix 281 is printed as 081.
     # https://yugipedia.com/wiki/BETB-EN081
     101306281: "BETB-EN081",

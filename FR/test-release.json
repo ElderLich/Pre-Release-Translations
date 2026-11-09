@@ -18,14 +18,14 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276003.jpg?version=19.7"
   },
   {
-    "name": "圣魔之贤王 恩底弥翁",
-    "desc": "Échelle Pendule = 9\n[ Effet Pendule ]\n这个卡名的②的灵摆效果1回合只能使用1次。\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\n----------------------------------------\n[ Effet de Monstre ]\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+    "name": "Endymion, Seigneur de Magistus",
+    "desc": "Échelle Pendule = 9\n[ Effet Pendule ]\nChaque fois qu'une Carte Magie est activée, placez 1 Compteur Magie sur cette carte lorsqu'elle est résolue. Durant votre Main Phase : vous pouvez détruire cette carte, et si vous le faites, ajoutez 1 monstre \"Magistus\" ou \"Endymion\" (monstres de Niveau 7 exclus) depuis votre Deck à votre main. Vous ne pouvez utiliser cet effet de \"Endymion, Seigneur de Magistus\" qu'une fois par tour.\n----------------------------------------\n[ Effet de Monstre ]\nNi Invocable Normalement ni Posable Normalement. Uniquement Invocable Spécialement (depuis votre main ou Extra Deck) en bannissant 1 Magie face recto que vous contrôlez. Vous ne pouvez Invoquer Spécialement \"Endymion, Seigneur de Magistus\" qu'une fois par tour de cette façon. Non destructible ni au combat ni par des effets de carte tant qu'elle est équipée avec une Carte d'Équipement. À la fin de la Damage Step, si cette carte a attaqué : vous pouvez bannir 1 Magie face recto que vous contrôlez, ou retirer 3 Compteurs Magie de votre Terrain ; cette carte gagne 500 ATK, et aussi, elle peut attaquer une nouvelle fois à la suite.",
     "overallString": "[Monstre|Effet|Pendule|Invocation Spéciale] Magicien/Ténébres  [★7] 2700/1700  9/9",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274003.jpg?version=19.7"
   },
   {
-    "name": "绝火的祆威",
-    "desc": "这个卡名的①②的效果1回合只能有1次使用其中任意1个。\r\n①：以自己场上1只「大贤者」怪兽或魔法师族怪兽，和对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽当作攻击力上升500的装备魔法卡使用给作为对象的自己怪兽装备。\r\n②：自己主要阶段这张卡在墓地存在的场合，以自己墓地的1只融合·同调·超量·连接怪兽为对象才能发动。那只怪兽和这张卡回到卡组。",
+    "name": "Wisprath Magistus",
+    "desc": "Ciblez 1 monstre \"Magistus\" ou Magicien que vous contrôlez et 1 monstre face recto contrôlé par votre adversaire ; équipez le monstre face recto de l'adversaire à votre monstre comme Magie d'Équipement qui lui donne 500 ATK. Durant votre Main Phase, si cette carte est dans votre Cimetière : vous pouvez cibler 1 Monstre Fusion, Synchro, Xyz ou Lien dans votre Cimetière ; mélangez-le ainsi que cette carte dans le Deck. Vous ne pouvez utiliser qu'1 effet de \"Wisprath Magistus\" par tour, et uniquement une fois le tour.",
     "overallString": "[Magie|Jeu-Rapide]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274005.jpg?version=19.7"
   },

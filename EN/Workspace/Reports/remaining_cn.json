@@ -1,129 +1,15 @@
 {
   "meta": {
-    "db": "/home/runner/work/Pre-Release-Translations/Pre-Release-Translations/EN/Workspace/test-release.cdb",
+    "db": "D:\\Modding\\Super-Pre Translations\\EN\\raw2\\test-release.cdb",
     "cn_db": "",
     "lang": "en",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261109_184259",
-    "rows_in_report": 3,
-    "unique_cn_strings": 4,
-    "total_cn_cells": 4
+    "timestamp": "20261109_210459",
+    "rows_in_report": 0,
+    "unique_cn_strings": 0,
+    "total_cn_cells": 0
   },
-  "unique_strings": [
-    {
-      "string": "是否除外魔法卡？",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "攻击力变成4000",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "下次通常抽卡变成5张",
-      "count": 1,
-      "is_new": true
-    },
-    {
-      "string": "所连接区怪兽破坏",
-      "count": 1,
-      "is_new": true
-    }
-  ],
-  "cards": [
-    {
-      "id": 100274003,
-      "name": "圣魔之贤王 恩底弥翁",
-      "desc": "←9 【灵摆】 9→\r\n这个卡名的②的灵摆效果1回合只能使用1次。\r\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\r\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\r\n【怪兽效果】\r\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\r\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\r\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
-      "str1": "",
-      "str2": "Search effect",
-      "str3": "",
-      "str4": "Continue attacking",
-      "str5": "是否除外魔法卡？",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str5",
-          "value": "是否除外魔法卡？",
-          "normalized": "是否除外魔法卡?"
-        }
-      ],
-      "desc_preview": "←9 【灵摆】 9→\r\n这个卡名的②的灵摆效果1回合只能使用1次。\r\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\r\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\r\n【怪兽效果】\r\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\r\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\r\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。"
-    },
-    {
-      "id": 100276003,
-      "name": "Craydeath the Four Dimensional Dragon",
-      "desc": "1 Tuner + 1+ non-Tuners\nWhen the fourth attack of each turn is declared: You can make this card's ATK become 4000. You can banish up to 4 cards from your hand, then activate this effect based on the number banished (but you can only use each of these effects of \"Craydeath the Four Dimensional Dragon\" once per turn);\n● 1: Special Summon 1 Level 4 or lower monster from your hand.\n● 2: Banish 1 Level 4 or lower monster on the field.\n● 3: Send 1 DARK monster from your Deck to the GY.\n● 4: Draw 5 cards instead of 1 for your normal draw during your next Draw Phase.",
-      "str1": "Activate",
-      "str2": "攻击力变成4000",
-      "str3": "Special Summon",
-      "str4": "Banish a monster",
-      "str5": "Send from Deck to the GY",
-      "str6": "下次通常抽卡变成5张",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str2",
-          "value": "攻击力变成4000",
-          "normalized": "攻击力变成4000"
-        },
-        {
-          "col": "str6",
-          "value": "下次通常抽卡变成5张",
-          "normalized": "下次通常抽卡变成5张"
-        }
-      ],
-      "desc_preview": "1 Tuner + 1+ non-Tuners\nWhen the fourth attack of each turn is declared: You can make this card's ATK become 4000. You can banish up to 4 cards from your hand, then activate this effect based on the number banished (but you can only use each of these effects of \"Craydeath the Four Dimensional Dragon\" once per turn);\n● 1: Special Summon 1 Level 4 or lower monster from your hand.\n● 2: Banish 1 Level 4 or lower monster on the field.\n● 3: Send 1 DARK monster from your Deck to the GY.\n● 4: Draw 5 cards instead of 1 for your normal draw during your next Draw Phase."
-    },
-    {
-      "id": 100276004,
-      "name": "Triad Proteus",
-      "desc": "2 Effect Monsters\nIf this card is Special Summoned: You can discard 1 card; this card gains this effect based on the discarded card's type (Monster, Spell, Trap).\n● Monster: Gains 800 ATK.\n● Spell: If a monster(s) you control would be destroyed by card effect, you can destroy this card instead.\n● Trap: Once per turn, if a monster(s) is Special Summoned to a zone(s) this card points to: You can destroy all monsters this card points to.\nYou can only use this effect of \"Triad Proteus\" once per turn.",
-      "str1": "Activate",
-      "str2": "Increase ATK",
-      "str3": "Destruction replacement",
-      "str4": "所连接区怪兽破坏",
-      "str5": "",
-      "str6": "",
-      "str7": "",
-      "str8": "",
-      "str9": "",
-      "str10": "",
-      "str11": "",
-      "str12": "",
-      "str13": "",
-      "str14": "",
-      "str15": "",
-      "str16": "",
-      "flagged_cells": [
-        {
-          "col": "str4",
-          "value": "所连接区怪兽破坏",
-          "normalized": "所连接区怪兽破坏"
-        }
-      ],
-      "desc_preview": "2 Effect Monsters\nIf this card is Special Summoned: You can discard 1 card; this card gains this effect based on the discarded card's type (Monster, Spell, Trap).\n● Monster: Gains 800 ATK.\n● Spell: If a monster(s) you control would be destroyed by card effect, you can destroy this card instead.\n● Trap: Once per turn, if a monster(s) is Special Summoned to a zone(s) this card points to: You can destroy all monsters this card points to.\nYou can only use this effect of \"Triad Proteus\" once per turn."
-    }
-  ]
+  "unique_strings": [],
+  "cards": []
 }

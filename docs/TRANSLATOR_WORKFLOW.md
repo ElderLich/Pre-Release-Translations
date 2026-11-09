@@ -349,11 +349,17 @@ translations are rejected. The source inventory still comes from the upstream
 CDB; the API does not add arbitrary new cards. English is never substituted as
 French, and missing translations remain available for manual completion.
 
-Reviewed printed-code exceptions include CH03's `JPP01`/`JPP02`/`JPP04` numbers
+Reviewed printed-code exceptions include CH03's `JPP01` through `JPP05` numbers
 and Castle of Vampire (`IMPH-JP070`), whose upstream CDB entry preceded its pack
 listing. They also cover cards still listed under `ETC` and synthetic ID suffixes
 that differ from their printed numbers. These mappings only apply to cards
 already present in the workspace.
+
+Endymion, the Lord of Magistus (`100274003`) and Wisprath Magistus (`100274005`)
+use `CH03-JPP03` and `CH03-JPP05`. The inferred `CH03-JP003`/`CH03-JP005` pages
+do not exist, which also prevents the identity-checked French fallback from
+running. Their verified identities now resolve English text from Yugipedia and
+French text from CodexYGO; existing manually translated French fields are kept.
 
 Standard English checks every card on each refresh and replaces existing names
 and effects with the latest verified source text, including manual edits. Save

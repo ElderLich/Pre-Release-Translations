@@ -2,25 +2,9 @@
   "language": "en",
   "mode": "refresh",
   "candidates": 159,
-  "matched": 157,
-  "unmatched_ids": [
-    100274003,
-    100274005
-  ],
-  "unresolved": [
-    {
-      "id": 100274003,
-      "name": "圣魔之贤王 恩底弥翁",
-      "set_code": "CH03-JP003",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100274005,
-      "name": "绝火的祆威",
-      "set_code": "CH03-JP005",
-      "reason": "No source card page found"
-    }
-  ],
+  "matched": 159,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -226,9 +210,17 @@
       "set_code": "CH03-JPP02",
       "source": "https://yugipedia.com/wiki/Invoked_Magistus_Heruvim"
     },
+    "100274003": {
+      "set_code": "CH03-JPP03",
+      "source": "https://yugipedia.com/wiki/Endymion%2C_the_Lord_of_Magistus"
+    },
     "100274004": {
       "set_code": "CH03-JPP04",
       "source": "https://yugipedia.com/wiki/Magistus_Witchcrafter_Aruru"
+    },
+    "100274005": {
+      "set_code": "CH03-JPP05",
+      "source": "https://yugipedia.com/wiki/Wisprath_Magistus"
     },
     "100274028": {
       "set_code": "CH03-JP028",

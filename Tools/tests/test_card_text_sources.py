@@ -18,7 +18,7 @@ import rush_prerelease as rush
 class SourceTextTests(unittest.TestCase):
     def test_standard_printed_code_exceptions_override_pack_guess_and_cover_missing_entry(self):
         entries = {card_id: source.PackEntry(card_id, "CH03", "CH03.ydk")
-                   for card_id in (100274001, 100274002, 100274004)}
+                   for card_id in range(100274001, 100274006)}
         entries[101307050] = source.PackEntry(101307050, "IMPH", "IMPH.ydk")
         exceptions = {
             100262301: "26TP-JP301", 100268201: "YAC1-JP009",
@@ -34,9 +34,12 @@ class SourceTextTests(unittest.TestCase):
         entries.update({card_id: source.PackEntry(card_id, pack, pack + ".ydk")
                         for card_id, pack in upstream_packs.items()})
         ids = set(entries) | {101307070}
-        self.assertEqual(source.build_id_to_set_code(entries, ids, "fr"), {
-            100274001: "CH03-JPP01", 100274002: "CH03-JPP02", 100274004: "CH03-JPP04",
-            101307050: "IMPH-JP050", 101307070: "IMPH-JP070", **exceptions})
+        for lang in ("en", "fr", "jp"):
+            with self.subTest(lang=lang):
+                self.assertEqual(source.build_id_to_set_code(entries, ids, lang), {
+                    100274001: "CH03-JPP01", 100274002: "CH03-JPP02", 100274003: "CH03-JPP03",
+                    100274004: "CH03-JPP04", 100274005: "CH03-JPP05",
+                    101307050: "IMPH-JP050", 101307070: "IMPH-JP070", **exceptions})
         self.assertNotIn(101307070, source.build_id_to_set_code(entries, set(entries), "fr"))
         for card_id, code in exceptions.items():
             with self.subTest(card_id=card_id):
