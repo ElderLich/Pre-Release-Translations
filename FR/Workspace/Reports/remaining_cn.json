@@ -5,11 +5,125 @@
     "lang": "fr",
     "range_start_after_id": 0,
     "range_end_id": 101307080,
-    "timestamp": "20261108_150444",
-    "rows_in_report": 0,
-    "unique_cn_strings": 0,
-    "total_cn_cells": 0
+    "timestamp": "20261109_184435",
+    "rows_in_report": 3,
+    "unique_cn_strings": 4,
+    "total_cn_cells": 4
   },
-  "unique_strings": [],
-  "cards": []
+  "unique_strings": [
+    {
+      "string": "是否除外魔法卡？",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "攻击力变成4000",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "下次通常抽卡变成5张",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "所连接区怪兽破坏",
+      "count": 1,
+      "is_new": true
+    }
+  ],
+  "cards": [
+    {
+      "id": 100274003,
+      "name": "圣魔之贤王 恩底弥翁",
+      "desc": "←9 【灵摆】 9→\r\n这个卡名的②的灵摆效果1回合只能使用1次。\r\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\r\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\r\n【怪兽效果】\r\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\r\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\r\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+      "str1": "",
+      "str2": "Effet d'ajout à la main",
+      "str3": "",
+      "str4": "Continuer d'attaquer",
+      "str5": "是否除外魔法卡？",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str5",
+          "value": "是否除外魔法卡？",
+          "normalized": "是否除外魔法卡?"
+        }
+      ],
+      "desc_preview": "←9 【灵摆】 9→\r\n这个卡名的②的灵摆效果1回合只能使用1次。\r\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\r\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\r\n【怪兽效果】\r\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\r\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\r\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。"
+    },
+    {
+      "id": 100276003,
+      "name": "Démort le Dragon Quadridimensionnel",
+      "desc": "1 Syntoniseur + 1+ non-Syntoniseur\nLorsque la quatrième attaque de chaque tour est déclarée : vous pouvez faire devenir l'ATK de cette carte 4000. Vous pouvez bannir max. 4 cartes depuis votre main, puis activez cet effet selon le nombre banni (mais vous ne pouvez utiliser chacun de ces effets de \"Démort le Dragon Quadridimensionnel\" qu'une fois par tour) ;\n● 1 : Invoquez Spécialement 1 monstre de max. Niveau 4 depuis votre main.\n● 2 : Bannissez 1 monstre de max. Niveau 4 sur le Terrain.\n● 3 : Envoyez 1 monstre TÉNÈBRES depuis votre Deck au Cimetière.\n● 4 : Piochez 5 cartes au lieu d'1 pour votre pioche normale durant votre prochaine Draw Phase.",
+      "str1": "Activer",
+      "str2": "攻击力变成4000",
+      "str3": "Invocation Spéciale",
+      "str4": "Bannir un monstre",
+      "str5": "Envoyer du Deck au Cimetière",
+      "str6": "下次通常抽卡变成5张",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str2",
+          "value": "攻击力变成4000",
+          "normalized": "攻击力变成4000"
+        },
+        {
+          "col": "str6",
+          "value": "下次通常抽卡变成5张",
+          "normalized": "下次通常抽卡变成5张"
+        }
+      ],
+      "desc_preview": "1 Syntoniseur + 1+ non-Syntoniseur\nLorsque la quatrième attaque de chaque tour est déclarée : vous pouvez faire devenir l'ATK de cette carte 4000. Vous pouvez bannir max. 4 cartes depuis votre main, puis activez cet effet selon le nombre banni (mais vous ne pouvez utiliser chacun de ces effets de \"Démort le Dragon Quadridimensionnel\" qu'une fois par tour) ;\n● 1 : Invoquez Spécialement 1 monstre de max. Niveau 4 depuis votre main.\n● 2 : Bannissez 1 monstre de max. Niveau 4 sur le Terrain.\n● 3 : Envoyez 1 monstre TÉNÈBRES depuis votre Deck au Cimetière.\n● 4 : Piochez 5 cartes au lieu d'1 pour votre pioche normale durant votre prochaine Draw Phase."
+    },
+    {
+      "id": 100276004,
+      "name": "Protée de la Triade",
+      "desc": "2 Monstres à Effet\nSi cette carte est Invoquée Spécialement : vous pouvez défausser 1 carte ; cette carte gagne cet effet selon le type de la carte défaussée (Monstre, Magie, Piège).\n● Monstre : Gagne 800 ATK.\n● Magie : Si un ou plusieurs monstres que vous contrôlez vont être détruits par un effet de carte, vous pouvez détruire cette carte à la place.\n● Piège : Une fois par tour, si un ou plusieurs monstres sont Invoqués Spécialement dans une ou plusieurs zones pointées par cette carte : vous pouvez détruire tous les monstres pointés par cette carte.\nVous ne pouvez utiliser cet effet de \"Protée de la Triade\" qu'une fois par tour.",
+      "str1": "Activer",
+      "str2": "Augmenter l'ATK",
+      "str3": "Remplacement de destruction",
+      "str4": "所连接区怪兽破坏",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str4",
+          "value": "所连接区怪兽破坏",
+          "normalized": "所连接区怪兽破坏"
+        }
+      ],
+      "desc_preview": "2 Monstres à Effet\nSi cette carte est Invoquée Spécialement : vous pouvez défausser 1 carte ; cette carte gagne cet effet selon le type de la carte défaussée (Monstre, Magie, Piège).\n● Monstre : Gagne 800 ATK.\n● Magie : Si un ou plusieurs monstres que vous contrôlez vont être détruits par un effet de carte, vous pouvez détruire cette carte à la place.\n● Piège : Une fois par tour, si un ou plusieurs monstres sont Invoqués Spécialement dans une ou plusieurs zones pointées par cette carte : vous pouvez détruire tous les monstres pointés par cette carte.\nVous ne pouvez utiliser cet effet de \"Protée de la Triade\" qu'une fois par tour."
+    }
+  ]
 }
