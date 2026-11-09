@@ -46111,7 +46111,7 @@ RUSH_PROMPT_TRANSLATIONS = {
     "这个回合，不能把怪兽(银河族以外)的效果发动": {
         "en": "You cannot activate the effects of monster(s) (non-Galaxy) this turn",
         "fr": "Action interdite pour vous: activer les effets du ou des monstre(s) (non-Galaxie) ce tour",
-        "de": "Dir untersagte Aktion: Aktivieren Sie die Auswirkungen von Monster(s) (non-Galaxie) in diesem Spielzug",
+        "de": "Du kannst in diesem Spielzug keine Effekte von Monstern aktivieren, die keine Galaxie-Monster sind.",
         "es": "Acción que no puedes realizar: activar los efectos de monstruo(s) (no-Galaxia) este turno",
         "pt": "Ação que você não pode realizar: activar os efeitos do(s) monstro(s) (não- Galáxia) neste turno",
         "it": "Azione che non puoi compiere: attivare gli effetti del mostro (non-Galassia) in questo turno",
@@ -50398,3 +50398,46 @@ RUSH_PROMPT_PROVENANCE.update({
         "是否选自己墓地1只怪兽(攻击力900/守备力100)或者1张{CARD}加入手卡?",
     )
 })
+
+# Reviewed against c120312001.lua: reveal the bottom three cards, then optionally
+# change BOTH the Attribute and Type of one face-up opposing monster.
+RUSH_PROMPT_TRANSLATIONS.update({
+    "取出": {
+        "en": "Reveal cards",
+        "fr": "Révéler des cartes",
+        "de": "Karten vorzeigen",
+        "es": "Mostrar cartas",
+        "pt": "Revelar cards",
+        "it": "Rivelare carte",
+        "ja": "カードを取り出す",
+        "kr": "카드를 공개한다",
+    },
+    "是否选对方场上1只表侧表示怪兽改变属性·种族?": {
+        "en": "Change the Attribute and Type of 1 face-up monster on your opponent's field?",
+        "fr": "Changer l'Attribut et le Type d'1 monstre face recto sur le Terrain de votre adversaire ?",
+        "de": "Eigenschaft und Typ von 1 offenen Monster auf der Spielfeldseite deines Gegners ändern?",
+        "es": "¿Cambiar el Atributo y el Tipo de 1 monstruo boca arriba en el Campo de tu adversario?",
+        "pt": "Alterar o Atributo e o Tipo de 1 monstro com a face para cima no campo do seu oponente?",
+        "it": "Cambiare l'Attributo e il Tipo di 1 mostro scoperto sul Terreno del tuo avversario?",
+        "ja": "相手フィールドの表側表示モンスター１体の属性・種族を変更しますか？",
+        "kr": "상대 필드의 앞면 표시 몬스터 1장의 속성 / 종족을 변경하겠습니까?",
+    },
+    "请选择要改变属性·种族的怪兽": {
+        "en": "Select the monster whose Attribute and Type to change",
+        "fr": "Sélectionnez le monstre dont changer l'Attribut et le Type",
+        "de": "Wähle das Monster, dessen Eigenschaft und Typ geändert werden",
+        "es": "Selecciona el monstruo cuyo Atributo y Tipo cambiar",
+        "pt": "Selecione o monstro cujo Atributo e Tipo serão alterados",
+        "it": "Seleziona il mostro di cui cambiare l'Attributo e il Tipo",
+        "ja": "属性・種族を変更するモンスターを選んでください。",
+        "kr": "속성 / 종족을 변경할 몬스터를 선택해 주세요",
+    },
+})
+RUSH_PROMPT_PROVENANCE.update({
+    key: {lang: "reviewed_rush_patch_20261109" for lang in RUSH_PROMPT_TRANSLATIONS[key]}
+    for key in (
+        "取出", "是否选对方场上1只表侧表示怪兽改变属性·种族?",
+        "请选择要改变属性·种族的怪兽",
+    )
+})
+RUSH_PROMPT_PROVENANCE["这个回合，不能把怪兽(银河族以外)的效果发动"]["de"] = "reviewed_rush_patch_20261109"

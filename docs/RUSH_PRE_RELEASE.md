@@ -383,3 +383,45 @@ Real archive checks cover SQLite integrity, the exact active ID set, matching
 JSON, script closure, byte-identical shared images and the EN/TH fallback.
 The eleven game/companion `rush_cards.cdb` pairs receive text-only updates for
 these active IDs; their gameplay data and all other text rows are preserved.
+
+## 9 November 2026 update repair
+
+The live Rush remote advertised `f2e89063a9eff61d979b5acd9436596704f3c395`.
+This exact source contains 54 cards. The local `f59c2069` checkout has identical
+patch and script bytes but an older `sets.md`; this repair was built from an
+isolated snapshot of the advertised revision, without changing that checkout.
+
+The updater was running, but nine locales were waiting at the translation gate.
+Cosmostar the White Hole Polairy (`120311014`) lacked the `str2` binding to
+`120261058` and the `str3` self binding. Paletta (`120312001`) introduced three
+untranslated prompt templates. Those templates now cover all eight patcher
+languages. German, Portuguese, Italian and Korean also needed six names/effects;
+Spanish needed the two Promotion Pack 2027 cards. These manually supplied names
+are fan translations using the existing locale terminology. Automatic web text
+lookup remains limited to English, French and Japanese; future missing text in
+the other locales still needs translation before publication.
+
+The six new Traditional Chinese rows and their prompts were reviewed manually;
+the report's Chinese exemption had allowed Simplified Chinese to pass. The saved
+Japanese Cosmos Princess name and self prompt also contained a scraped
+`（新イラストもあり）` annotation, which was removed. The current Japanese source
+parser already excludes that annotation from fresh imports.
+
+Source prompt review found that `120311014.str1` says Fusion Summon, although
+`c120293045.lua` uses it for the effect that Special Summons from the Graveyard.
+All editable locales now label that action correctly; Thai follows English and
+the source-managed ZH-CN entry retains upstream text.
+
+One upstream gameplay discrepancy remains: `script/c120312001.lua:11` registers
+`cm.operation`, but the effect body at line 24 is named `cm.activate`, with no
+alias connecting them. This requires an upstream script correction. The packages
+retain the authoritative Lua bytes; the translation repair does not silently
+change gameplay code.
+
+Validation: all eleven packages contain the exact 54-card source inventory,
+94 unchanged upstream script files and all 50 available shared artworks. All
+locale reports have zero pending translation/review fields, and English/Thai
+packages are identical. SQLite integrity, ZIP checksums, gameplay parity,
+JSON/workspace/package agreement and local `Rush/raw2` synchronization pass.
+The four missing artwork IDs are `120311003`, `120311005`, `120311009` and
+`120311014`; they do not block package generation.
