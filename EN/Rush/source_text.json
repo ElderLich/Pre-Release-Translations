@@ -1,26 +1,6 @@
 {
   "language": "en",
-  "matches": {
-    "120312001": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/27PR-JP001",
-      "source": "https://yugipedia.com/wiki/Paletta_the_Foot_Painter"
-    },
-    "120312002": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/27PR-JP002",
-      "source": "https://yugipedia.com/wiki/Genie_of_the_Dead_Tree"
-    }
-  },
-  "requested_ids": [
-    120312001,
-    120312002
-  ],
+  "matches": {},
+  "requested_ids": [],
   "unresolved": []
 }

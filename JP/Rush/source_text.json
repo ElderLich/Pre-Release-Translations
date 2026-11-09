@@ -1,26 +1,6 @@
 {
   "language": "jp",
-  "matches": {
-    "120312001": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/27PR-JP001",
-      "source": "https://ocg-card.com/list_r/27pr/"
-    },
-    "120312002": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/27PR-JP002",
-      "source": "https://ocg-card.com/list_r/27pr/"
-    }
-  },
-  "requested_ids": [
-    120312001,
-    120312002
-  ],
+  "matches": {},
+  "requested_ids": [],
   "unresolved": []
 }

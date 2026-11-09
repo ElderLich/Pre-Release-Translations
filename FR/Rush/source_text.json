@@ -1,26 +1,6 @@
 {
   "language": "fr",
-  "matches": {
-    "120312001": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/27PR-JP001",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17917&languages=fr"
-    },
-    "120312002": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/27PR-JP002",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17918&languages=fr"
-    }
-  },
-  "requested_ids": [
-    120312001,
-    120312002
-  ],
+  "matches": {},
+  "requested_ids": [],
   "unresolved": []
 }
