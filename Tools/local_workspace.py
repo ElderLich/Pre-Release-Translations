@@ -408,7 +408,7 @@ def command_actions(args: argparse.Namespace) -> None:
             print(result.stderr.strip())
 
 
-def command_rush(args: argparse.Namespace) -> None:
+def command_rush(args: argparse.Namespace, *, lang: str = "all") -> None:
     from rush_local import build_lock, fetch_source, python_console
 
     repo_root = Path(args.repo_root).expanduser().resolve()
@@ -422,14 +422,16 @@ def command_rush(args: argparse.Namespace) -> None:
         fail(f"Expected the locale folder containing en-US/rush_cards.cdb: {translations}")
     cmd = [python_console(), str(repo_root / "Tools/rush_prerelease.py"), "sync",
            "--repo-root", str(repo_root), "--source-root", str(source),
-           "--translations-root", str(translations), "--lang", "all"]
+           "--translations-root", str(translations), "--lang", lang]
     if args.offline:
         cmd.append("--offline")
     try:
         with build_lock(repo_root):
             if args.fetch:
                 fetch_source(source, log)
-            log("Building all 11 Rush locales; existing translations and reviewed inventory exclusions are retained.")
+            locales = ("all 11 Rush locales" if lang == "all" else
+                       "EN and its TH fallback" if lang in {"en", "th"} else RUSH_LANGS[lang].folder)
+            log(f"Building {locales}; existing translations and reviewed inventory exclusions are retained.")
             run(cmd, repo_root)
     except (RuntimeError, OSError, subprocess.TimeoutExpired) as error:
         fail(str(error))
@@ -478,7 +480,8 @@ def command_rush_refresh(args: argparse.Namespace) -> None:
             log("Refreshing Rush from the local upstream checkout before opening this locale. "
                 "Cards without localized sources retain their Chinese text for review.")
             command_rush(argparse.Namespace(repo_root=repo_root, source_root=source,
-                                           translations_root=translations, fetch=True, offline=args.offline))
+                                           translations_root=translations, fetch=True, offline=args.offline),
+                         lang=args.lang)
             reconciled_upstream = True
         else:
             pull_clean_translator_repo(repo_root)

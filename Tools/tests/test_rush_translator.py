@@ -53,7 +53,8 @@ class RushTranslatorTests(unittest.TestCase):
             'rush_source_root': str(source), 'rush_translations_root': str(seeds)}))
         args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
                                                 'rush-refresh', '--lang', 'fr'])
-        def reconcile(build):
+        def reconcile(build, *, lang):
+            self.assertEqual(lang, 'fr')
             self.assertEqual(build.source_root, source)
             self.assertEqual(build.translations_root, seeds)
             self.assertTrue(build.fetch)
@@ -81,6 +82,75 @@ class RushTranslatorTests(unittest.TestCase):
             helper.command_rush_refresh(args)
         self.assertEqual(build.call_args.args[0].source_root, source)
         self.assertEqual(build.call_args.args[0].translations_root, seeds)
+        self.assertEqual(build.call_args.kwargs['lang'], 'fr')
+
+    def test_english_fetch_builds_only_english_and_thai_and_marks_receipt_partial(self):
+        source, seeds = self.root / 'configured-rush', self.root / 'data/Data/locales'
+        rush.write_changed(self.repo / 'Tools/rush_prerelease.py', b'builder fixture')
+        rush.write_changed(source / 'script/RDBase.lua', b'RD = {}')
+        datas = {i: (i, 4, 0, 0, 33, 1000, 1000, 4, 1, 1, 0) for i in (100, 101, 102)}
+        raw = {i: (i, f'原始卡名{i}', '原始效果', *([''] * 16)) for i in datas}
+        for card_id in datas:
+            rush.write_changed(source / f'script/c{card_id}.lua', b'local s,id=GetID()')
+            rush.write_changed(self.repo / f'Shared/Rush Artworks/{card_id}.jpg', b'\xff\xd8\xfffixture')
+        for folder, locale in rush.LANGS.values():
+            translated = {i: (i, f'Translated {i}', 'Translated effect', *([''] * 16)) for i in datas}
+            rush.write_changed(seeds / locale / 'rush_cards.cdb', rush.cdb_bytes(datas, translated))
+        def set_source(ids):
+            rush.write_changed(source / 'RD Patch.cdb',
+                               rush.cdb_bytes({i: datas[i] for i in ids}, {i: raw[i] for i in ids}))
+        set_source([100, 101])
+        rush.synchronize(self.repo, source, seeds, list(rush.LANGS), fetch_source_text=False)
+        untouched = {p: p.read_bytes() for folder, _ in rush.LANGS.values() if folder not in {'EN', 'TH'}
+                     for p in (self.repo / folder).rglob('*') if p.is_file()}
+        previous_english = (self.repo / 'EN/rush-pre-release.ypk').read_bytes()
+        rush.write_changed(self.local_root / '.transsuperpre_local.json', rush.json_bytes({
+            'rush_source_root': str(source), 'rush_translations_root': str(seeds)}))
+        set_source([100, 102])
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
+                                                'rush-refresh', '--lang', 'en', '--offline'])
+        def run_builder(command, cwd):
+            lang = command[command.index('--lang') + 1]
+            rush.synchronize(self.repo, source, seeds, list(rush.LANGS) if lang == 'all' else [lang],
+                             fetch_source_text=False)
+        with patch.object(published_workspace, 'published_snapshot', return_value=nullcontext((self.repo, 'commit'))), \
+                patch('rush_local.fetch_source'), patch.object(helper, 'run', side_effect=run_builder) as run:
+            helper.command_rush_refresh(args)
+        command = run.call_args.args[0]
+        self.assertEqual(command[command.index('--lang') + 1], 'en')
+        for path, before in untouched.items():
+            self.assertEqual(path.read_bytes(), before, str(path))
+        self.assertNotEqual((self.repo / 'EN/rush-pre-release.ypk').read_bytes(), previous_english)
+        self.assertEqual((self.repo / 'EN/rush-pre-release.ypk').read_bytes(),
+                         (self.repo / 'TH/rush-pre-release.ypk').read_bytes())
+        self.assertEqual(set(rush.read_cdb(self.local_root / 'EN/Rush/raw2/rush-pre-release.cdb')[0]), {100, 102})
+        receipt = rush.read_json(self.repo / 'Shared/Rush/source.json')
+        self.assertEqual(receipt['built_locales'], ['EN', 'TH'])
+        # A selected-locale receipt must not suppress the next all-locale check.
+        import schedule_guard
+        import os
+        cwd = Path.cwd()
+        try:
+            os.chdir(self.repo)
+            with patch.object(subprocess, 'check_output', side_effect=AssertionError('Should reject partial receipt first')):
+                needed, reason = schedule_guard.rush_needs_update()
+        finally:
+            os.chdir(cwd)
+        self.assertTrue(needed)
+        self.assertIn('does not cover every locale', reason)
+
+    def test_explicit_all_locale_build_still_selects_all(self):
+        source, seeds = self.root / 'source', self.root / 'locales'
+        rush.write_changed(self.repo / 'Tools/rush_prerelease.py', b'builder fixture')
+        rush.write_changed(source / 'RD Patch.cdb', b'upstream')
+        rush.write_changed(seeds / 'en-US/rush_cards.cdb', b'translations')
+        args = helper.build_parser().parse_args(['--repo-root', str(self.repo), 'rush',
+                                                '--source-root', str(source), '--translations-root', str(seeds),
+                                                '--offline'])
+        with patch.object(helper, 'run') as run:
+            args.func(args)
+        command = run.call_args.args[0]
+        self.assertEqual(command[command.index('--lang') + 1], 'all')
 
     def test_fetch_without_local_source_keeps_published_translator_flow(self):
         args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
@@ -132,7 +202,8 @@ class RushTranslatorTests(unittest.TestCase):
         rush.write_changed(seeds / 'en-US/rush_cards.cdb', b'translations')
         args = helper.build_parser().parse_args(['--repo-root', str(self.repo), '--local-root', str(self.local_root),
                                                 'rush-refresh', '--lang', 'fr'])
-        def reconcile(build):
+        def reconcile(build, *, lang):
+            self.assertEqual(lang, 'fr')
             self.assertEqual((self.repo / 'Tools/published-tool.txt').read_bytes(), b'new published tool')
             self.assertEqual((self.repo / 'Shared/Rush Artworks/100.jpg').read_bytes(), b'new published artwork')
             current_datas, current_texts = rush.read_cdb(self.published)

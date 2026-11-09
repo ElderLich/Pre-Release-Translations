@@ -11,9 +11,10 @@ from the web using source snapshots inside Pre-Release Translations. When the
 configured Rush source and locale databases are installed (including the usual
 `ygopro-rush-duel` and `MDPro4_Data` sibling checkouts), Fetch first obtains the
 latest published repository commit and fast-forwards when Git can preserve the
-local work. It then fast-forwards the upstream source and reconciles all locale
-workspaces. New cards therefore
-appear even before Yugipedia has text: their Chinese upstream entry remains
+local work. It then fast-forwards the upstream source and reconciles only the
+selected locale's workspace and package. English and its Thai fallback are built
+together. Use **All locales** for an intentional local rebuild across languages.
+New cards therefore appear even before Yugipedia has text: their Chinese upstream entry remains
 available for translation, while incomplete localized packages keep their
 last-good release. A dirty or diverged checkout that cannot fast-forward stays
 intact, with the reason reported in the log. The subsequent upstream reconciliation
