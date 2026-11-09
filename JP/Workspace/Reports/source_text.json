@@ -1,14 +1,54 @@
 {
   "language": "jp",
   "mode": "fill",
-  "candidates": 4,
-  "matched": 4,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "candidates": 12,
+  "matched": 10,
+  "unmatched_ids": [
+    100274003,
+    100274005
+  ],
+  "unresolved": [
+    {
+      "id": 100274003,
+      "name": "圣魔之贤王 恩底弥翁",
+      "set_code": "CH03-JP003",
+      "reason": "No verified source match"
+    },
+    {
+      "id": 100274005,
+      "name": "绝火的祆威",
+      "set_code": "CH03-JP005",
+      "reason": "No verified source match"
+    }
+  ],
   "matches": {
     "100270002": {
       "set_code": "TFGX-JP002",
       "source": "https://ocg-card.com/list/tfgx/"
+    },
+    "100274028": {
+      "set_code": "CH03-JP028",
+      "source": "https://ocg-card.com/list/ch03/"
+    },
+    "100276001": {
+      "set_code": "27PR-JP001",
+      "source": "https://ocg-card.com/list/27pr/"
+    },
+    "100276002": {
+      "set_code": "27PR-JP002",
+      "source": "https://ocg-card.com/list/27pr/"
+    },
+    "100276003": {
+      "set_code": "27PR-JP003",
+      "source": "https://ocg-card.com/list/27pr/"
+    },
+    "100276004": {
+      "set_code": "27PR-JP004",
+      "source": "https://ocg-card.com/list/27pr/"
+    },
+    "100276005": {
+      "set_code": "27PR-JP005",
+      "source": "https://ocg-card.com/list/27pr/"
     },
     "101307039": {
       "set_code": "IMPH-JP039",
