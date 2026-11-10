@@ -18,8 +18,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275007.jpg?version=19.7"
   },
   {
-    "name": "秘仪之力8-力量",
-    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡在手卡存在，持有进行投掷硬币效果的卡在场上存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡召唤·反转召唤·特殊召唤的场合发动。进行1次投掷硬币，那个里表的以下效果适用。\r\n●表：得到对方场上1只怪兽的控制权。\r\n●里：对方选自己场上1只其他怪兽，那个控制权移给对方。",
+    "name": "Arcana Force VIII - The Strength",
+    "desc": "If this card is in your hand and a card that has a coin tossing effect is on the field: You can Special Summon this card. You can only use this effect of \"Arcana Force VIII - The Strength\" once per turn. If this card is Summoned: Toss a coin.\n● Heads: Take control of 1 monster your opponent controls.\n● Tails: Your opponent takes control of 1 other monster you control.",
     "overallString": "[Monster|Effect] Fairy/Light  [★5] 1800/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270201.jpg?version=19.7"
   },
