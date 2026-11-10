@@ -69,7 +69,7 @@
     120312002
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "63ceb7ee689c6dc90d1755c9ad3e27e87ca508885aa620267070ed750125fa51",
+  "local_inputs_sha256": "7b1c57bb50e5d90e6762f8e27e5b4c9460d2761bd7051b3cf51bca4f6fd8db40",
   "patch_sha256": "54d559b06e0161c2752650276c40cc53e3066161061d76a5be1632439f3aac4e",
   "pending_locales": {},
   "source_fingerprint": "7ee0aea8906fa24ae2bca96bce83fe00208fc2250fbaffbe1f400a06877e97f5",
@@ -130,6 +130,6 @@
     "120312001": "e00478c5b4f9c137ed8385ca02c9c5d261d7ad402d25c016b6578f762f05c180",
     "120312002": "9b8cecd4dee663c607b963a6aae846351e5603545d016625e65646c4f85bae83"
   },
-  "translations_revision": "84f96ce830031fea12ca95f1b8deafe8c440940b",
+  "translations_revision": "73127ec01c0b1eeb501827c9fef03f0058f3c16c",
   "version": 2
 }
