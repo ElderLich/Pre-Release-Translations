@@ -18,8 +18,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275007.jpg?version=19.7"
   },
   {
-    "name": "秘仪之力8-力量",
-    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡在手卡存在，持有进行投掷硬币效果的卡在场上存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡召唤·反转召唤·特殊召唤的场合发动。进行1次投掷硬币，那个里表的以下效果适用。\r\n●表：得到对方场上1只怪兽的控制权。\r\n●里：对方选自己场上1只其他怪兽，那个控制权移给对方。",
+    "name": "Force Arcane VIII - La Force",
+    "desc": "Si cette carte est dans votre main et qu'une carte qui a un effet de lancer de pièce est sur le Terrain : vous pouvez Invoquer Spécialement cette carte. Vous ne pouvez utiliser cet effet de \"Force Arcane VIII - La Force\" qu'une fois par tour. Si cette carte est Invoquée : lancez une pièce.\n● Face : Prenez le contrôle d'1 monstre contrôlé par votre adversaire.\n● Pile : Votre adversaire prend le contrôle d'1 autre monstre que vous contrôlez.",
     "overallString": "[Monstre|Effet] Elfe/Lumiére  [★5] 1800/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270201.jpg?version=19.7"
   },
