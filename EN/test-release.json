@@ -1,5 +1,29 @@
 [
   {
+    "name": "Obelisk the Tormentor, the Pharaoh's Memory",
+    "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect. When you draw this card, or an opponent's monster declares a direct attack: You can reveal this card in your hand; Special Summon from your GY as many monsters destroyed this turn as possible, then Tribute as many monsters you control as possible, and if you do, Special Summon this card, then if you Tributed 3 or more monsters, destroy as many monsters your opponent controls as possible, and if you do, halve your opponent's LP. You can only use this effect of \"Obelisk the Tormentor, the Pharaoh's Memory\" once per Duel.",
+    "overallString": "[Monster|Effect|Special Summon] Divine-Beast/Divine  [★10] 4000/4000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275001.jpg?version=19.7"
+  },
+  {
+    "name": "Enhanced Counter",
+    "desc": "Activate 1 of these effects;\n● When a card or effect is activated that would inflict damage to you: Make that effect damage to you 0. Immediately after that effect resolves, 1 face-up monster you control gains ATK equal to the damage you would have taken.\n● During damage calculation, if your monster battles an opponent's monster: Your battling monster gains ATK equal to that opponent's monster's ATK during damage calculation only.\n● When you take battle or effect damage: Inflict damage to your opponent equal to the damage you took.",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275006.jpg?version=19.7"
+  },
+  {
+    "name": "Dragon's Orb",
+    "desc": "The activation and effects of Dragon monster effects activated on your field cannot be negated this turn. If you control a Dragon monster that is a Normal Monster or whose effects are negated: You can banish this card from your GY; add 2 Dragon monsters from your Deck to your hand with the same ATK/DEF as each other, but different names. You can only use this effect of \"Dragon's Orb\" once per turn.",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275007.jpg?version=19.7"
+  },
+  {
+    "name": "秘仪之力8-力量",
+    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡在手卡存在，持有进行投掷硬币效果的卡在场上存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡召唤·反转召唤·特殊召唤的场合发动。进行1次投掷硬币，那个里表的以下效果适用。\r\n●表：得到对方场上1只怪兽的控制权。\r\n●里：对方选自己场上1只其他怪兽，那个控制权移给对方。",
+    "overallString": "[Monster|Effect] Fairy/Light  [★5] 1800/1800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270201.jpg?version=19.7"
+  },
+  {
     "name": "Minjal Khery Hebet",
     "desc": "Records everything in this world and makes judgments on the souls that travel to the underworld. The voice that hands down the verdict has a \"Gwawwaa\" sound to it.",
     "overallString": "[Monster|Normal] Zombie/Dark  [★6] 1900/0",
