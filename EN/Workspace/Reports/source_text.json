@@ -1,19 +1,10 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 162,
-  "matched": 162,
-  "unmatched_ids": [
-    100270201
-  ],
-  "unresolved": [
-    {
-      "id": 100270201,
-      "name": "秘仪之力8-力量",
-      "set_code": null,
-      "reason": "No printed set code mapping"
-    }
-  ],
+  "candidates": 163,
+  "matched": 163,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -134,6 +125,10 @@
     "100270003": {
       "set_code": "TFGX-JP003",
       "source": "https://yugipedia.com/wiki/Hope_for_the_Future"
+    },
+    "100270201": {
+      "set_code": "TFGX-JPB01",
+      "source": "https://yugipedia.com/wiki/Arcana_Force_VIII_-_The_Strength"
     },
     "100271000": {
       "set_code": "CF02-JP000",
