@@ -857,6 +857,17 @@ def build_translation_pack(lang: str):
 
     # Extra phrases (keep phrase-level; avoid single-word glue)
     extras = {
+        # Dragon's Orb (100275007, str1), Standard source 29.30.
+        "不会无效": {
+            "en": "Cannot be negated",
+            "fr": "Ne peut pas être annulé",
+            "de": "Kann nicht annulliert werden",
+            "es": "No puede ser negado",
+            "pt": "Não pode ser negado",
+            "it": "Non può essere annullato",
+            "ja": "無効化されない",
+            "kr": "무효화되지 않는다",
+        },
         # Standard source 29.29: Endymion (str5), Craydeath (str2/str6),
         # and Triad Proteus (str4). Keep the next normal draw and Link arrows explicit.
         "是否除外魔法卡？": {
