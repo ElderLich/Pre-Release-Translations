@@ -1,31 +1,9 @@
 {
   "language": "fr",
   "mode": "fill",
-  "candidates": 3,
-  "matched": 3,
-  "unmatched_ids": [
-    100270201
-  ],
-  "unresolved": [
-    {
-      "id": 100270201,
-      "name": "秘仪之力8-力量",
-      "set_code": null,
-      "reason": "No printed set code mapping"
-    }
-  ],
-  "matches": {
-    "100275001": {
-      "set_code": "MVB1-JP001",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17923&languages=fr"
-    },
-    "100275006": {
-      "set_code": "MVB1-JP006",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17924&languages=fr"
-    },
-    "100275007": {
-      "set_code": "MVB1-JP007",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17925&languages=fr"
-    }
-  }
+  "candidates": 0,
+  "matched": 0,
+  "unmatched_ids": [],
+  "unresolved": [],
+  "matches": {}
 }
