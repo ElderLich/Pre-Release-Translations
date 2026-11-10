@@ -90,6 +90,7 @@ EXTRA_SET_CODES_BY_ID = {
     # Present in the upstream CDB before its pack list was updated.
     # https://yugipedia.com/wiki/IMPH-JP070
     101307070: "IMPH-JP070",
+    100270201: "TFGX-JPB01",
 }
 
 OFFICIAL_SLUGS_BY_SET_PREFIX = {
