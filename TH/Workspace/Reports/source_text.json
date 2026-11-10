@@ -1,10 +1,19 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 159,
-  "matched": 159,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "candidates": 162,
+  "matched": 162,
+  "unmatched_ids": [
+    100270201
+  ],
+  "unresolved": [
+    {
+      "id": 100270201,
+      "name": "秘仪之力8-力量",
+      "set_code": null,
+      "reason": "No printed set code mapping"
+    }
+  ],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -226,6 +235,10 @@
       "set_code": "CH03-JP028",
       "source": "https://yugipedia.com/wiki/Dunamis_Magistus"
     },
+    "100275001": {
+      "set_code": "MVB1-JP001",
+      "source": "https://yugipedia.com/wiki/Obelisk_the_Tormentor%2C_the_Pharaoh%27s_Memory"
+    },
     "100275002": {
       "set_code": "MVB1-JP002",
       "source": "https://yugipedia.com/wiki/Gandora-X_the_Blackmetal_Rampaging_Dragon"
@@ -233,6 +246,14 @@
     "100275005": {
       "set_code": "MVB1-JP005",
       "source": "https://yugipedia.com/wiki/Time_Chain"
+    },
+    "100275006": {
+      "set_code": "MVB1-JP006",
+      "source": "https://yugipedia.com/wiki/Enhanced_Counter"
+    },
+    "100275007": {
+      "set_code": "MVB1-JP007",
+      "source": "https://yugipedia.com/wiki/Dragon%27s_Orb"
     },
     "100275008": {
       "set_code": "MVB1-JP008",
