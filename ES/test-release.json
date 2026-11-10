@@ -1,25 +1,25 @@
 [
   {
-    "name": "王之记忆-欧贝利斯克之巨神兵",
-    "desc": "这张卡不能通常召唤，用这张卡的效果才能特殊召唤。这个卡名的效果在决斗中只能使用1次。\r\n①：把这张卡抽到时，或者对方怪兽的直接攻击宣言时，把手卡的这张卡给对方出示才能发动。这个回合被破坏的怪兽从自己墓地尽可能特殊召唤。那之后，把自己场上的怪兽尽可能解放，这张卡特殊召唤。这个效果把3只以上解放的场合，再把对方场上的怪兽全部破坏，对方的基本分变成一半。",
+    "name": "Obelisco el Atormentador - Memoria del Faraón",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. Debe ser Invocado de Modo Especial por su propio efecto.\r\nCuando robas esta carta, o cuando un monstruo de tu adversario declara un ataque directo: puedes revelar esta carta en tu mano; Invoca de Modo Especial tantos monstruos desde tu Cementerio como sea posible que fueron destruidos este turno, y después Sacrifica tantos de esos monstruos como sea posible y, si haces eso, Invoca esta carta de Modo Especial, y después si Sacrificaste 3 o más monstruos, destruye tantos monstruos que controle tu adversario como sea posible y, si haces eso, reduce sus LP a la mitad.\r\nSólo puedes usar el primer efecto de cartas con este nombre una vez por Duelo.",
     "overallString": "[Monstruo|Efecto|Invocación Especial] Bestia Divina/DIVINO  [★10] 4000/4000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275001.jpg?version=19.7"
   },
   {
-    "name": "强化反击",
-    "desc": "①：可以从以下效果选择1个发动。\r\n●给予自己伤害的效果发动时才能发动。那个效果让自己受到的伤害变成0。那个效果处理后，以那个数值让自己场上1只表侧表示怪兽的攻击力上升。\r\n●自己和对方的怪兽之间进行战斗的伤害计算时才能发动。以那只对方怪兽的攻击力数值让那只自己怪兽的攻击力只在那次伤害计算时上升。\r\n●自己因战斗·效果受到伤害时才能发动。以那个数值给予对方伤害。 ",
+    "name": "Contraataque Reforzado",
+    "desc": "Activa 1 de estos efectos;\r\n● Cuando se activa una carta o efecto que fuera a infligirte daño: no recibes daño de ese efecto, y después inmediatamente después de que este efecto se resuelva, 1 monstruo que controles gana ATK igual a la cantidad que se te habría infligido.\r\n● Durante el cálculo de daño, cuando 2 monstruos de cada Campo batallan: tu monstruo gana ATK igual al ATK de ese monstruo del adversario en batalla sólo durante el cálculo de daño.\r\n● Cuando recibes daño de batalla o de efecto: inflige esa misma cantidad de daño a tu adversario.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275006.jpg?version=19.7"
   },
   {
-    "name": "龙之宝球",
-    "desc": "这个卡名的②的效果1回合只能使用1次。\r\n①：这个回合中，自己场上的龙族怪兽的效果的发动以及那些发动的效果不会被无效化。\r\n②：龙族通常怪兽或者效果已被无效化的龙族怪兽在自己场上存在的场合，把墓地的这张卡除外才能发动。从卡组选1只龙族怪兽，再从卡组选和那只怪兽卡名不同、攻击力·守备力相同的1只龙族怪兽。那2只怪兽加入手卡。",
+    "name": "Orbe del Dragón",
+    "desc": "Este turno, los efectos de tus monstruos Dragón y sus activaciones no pueden ser negados.\r\nSi controlas un Monstruo Normal Dragón, o un monstruo Dragón con sus efectos negados: puedes desterrar esta carta en el Cementerio; toma 1 monstruo Dragón de tu Deck, y después toma otro monstruo Dragón de tu Deck cuyo ATK/DEF sea igual al del primer monstruo pero con un nombre diferente, añade ambos a tu mano.\r\nSólo puedes usar el segundo efecto de \"Orbe del Dragón\" una vez por turno.",
     "overallString": "[Trampa]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275007.jpg?version=19.7"
   },
   {
-    "name": "秘仪之力8-力量",
-    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡在手卡存在，持有进行投掷硬币效果的卡在场上存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡召唤·反转召唤·特殊召唤的场合发动。进行1次投掷硬币，那个里表的以下效果适用。\r\n●表：得到对方场上1只怪兽的控制权。\r\n●里：对方选自己场上1只其他怪兽，那个控制权移给对方。",
+    "name": "Fuerza Arcana VIII - La Fuerza",
+    "desc": "Si hay una carta en el Campo que tenga un efecto de lanzamiento de moneda: puedes Invocar esta carta de Modo Especial desde tu mano.\r\nSi esta carta es Invocada: lanza una moneda.\r\n● Cara: toma el control de 1 monstruo que controle tu adversario.\r\n● Cruz: tu adversario elige otro monstruo que controles y toma su control.\r\nSólo puedes usar el primer efecto de \"Fuerza Arcana VIII - La Fuerza\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Hada/LUZ  [★5] 1800/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270201.jpg?version=19.7"
   },
