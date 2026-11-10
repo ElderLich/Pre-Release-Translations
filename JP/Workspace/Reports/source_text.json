@@ -1,14 +1,35 @@
 {
   "language": "jp",
   "mode": "fill",
-  "candidates": 4,
-  "matched": 4,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "candidates": 7,
+  "matched": 7,
+  "unmatched_ids": [
+    100270201
+  ],
+  "unresolved": [
+    {
+      "id": 100270201,
+      "name": "秘仪之力8-力量",
+      "set_code": null,
+      "reason": "No printed set code mapping"
+    }
+  ],
   "matches": {
     "100270002": {
       "set_code": "TFGX-JP002",
       "source": "https://ocg-card.com/list/tfgx/"
+    },
+    "100275001": {
+      "set_code": "MVB1-JP001",
+      "source": "https://ocg-card.com/list/mvb1/"
+    },
+    "100275006": {
+      "set_code": "MVB1-JP006",
+      "source": "https://ocg-card.com/list/mvb1/"
+    },
+    "100275007": {
+      "set_code": "MVB1-JP007",
+      "source": "https://ocg-card.com/list/mvb1/"
     },
     "101307039": {
       "set_code": "IMPH-JP039",
