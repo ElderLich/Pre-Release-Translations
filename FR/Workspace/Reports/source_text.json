@@ -1,66 +1,9 @@
 {
   "language": "fr",
   "mode": "fill",
-  "candidates": 12,
-  "matched": 10,
-  "unmatched_ids": [
-    100272029,
-    100272032
-  ],
-  "unresolved": [
-    {
-      "id": 100272029,
-      "name": "海晶少女 蓝水晶心",
-      "set_code": "RV02-JP029",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100272032,
-      "name": "海晶少女神流",
-      "set_code": "RV02-JP032",
-      "reason": "No source card page found"
-    }
-  ],
-  "matches": {
-    "101308001": {
-      "set_code": "PASO-JP001",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17926&languages=fr"
-    },
-    "101308002": {
-      "set_code": "PASO-JP002",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17927&languages=fr"
-    },
-    "101308003": {
-      "set_code": "PASO-JP003",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17928&languages=fr"
-    },
-    "101308004": {
-      "set_code": "PASO-JP004",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17929&languages=fr"
-    },
-    "101308027": {
-      "set_code": "PASO-JP027",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17930&languages=fr"
-    },
-    "101308029": {
-      "set_code": "PASO-JP029",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17931&languages=fr"
-    },
-    "101308049": {
-      "set_code": "PASO-JP049",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17932&languages=fr"
-    },
-    "101308050": {
-      "set_code": "PASO-JP050",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17933&languages=fr"
-    },
-    "101308051": {
-      "set_code": "PASO-JP051",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17934&languages=fr"
-    },
-    "101308071": {
-      "set_code": "PASO-JP071",
-      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17935&languages=fr"
-    }
-  }
+  "candidates": 0,
+  "matched": 0,
+  "unmatched_ids": [],
+  "unresolved": [],
+  "matches": {}
 }
