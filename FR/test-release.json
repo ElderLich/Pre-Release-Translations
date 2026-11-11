@@ -1,5 +1,77 @@
 [
   {
+    "name": "海晶少女 蓝水晶心",
+    "desc": "「海晶少女」怪兽2只\r\n这个卡名在规则上当作「海晶少女 水晶心」使用。这个卡名的①②的效果1回合各能使用1次。\r\n①：以自己墓地1只「海晶少女」连接怪兽为对象才能发动。那只怪兽在成为这张卡所连接区的自己场上特殊召唤。\r\n②：这张卡作为连接3以上的「海晶少女」连接怪兽的连接素材被送去墓地的场合才能发动。从卡组把1张「海晶少女」卡送去墓地。",
+    "overallString": "[Monstre|Effet|Lien] Cyberse/Eau  [LINK-2] 0/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272029.jpg?version=19.7"
+  },
+  {
+    "name": "海晶少女神流",
+    "desc": "自己场上有连接3以上的「海晶少女」连接怪兽存在的场合，这张卡的发动从手卡也能用。\r\n①：以最多有自己场上的「海晶少女」连接怪兽数量的，场上的魔法·陷阱卡为对象才能发动。那些卡破坏。\r\n②：把墓地的这张卡除外才能发动。自己场上的1张连接3以上的「海晶少女」连接怪兽卡送去墓地。那之后，可以从自己的手卡·墓地把1只电子界族·水属性仪式怪兽当作仪式召唤特殊召唤。",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272032.jpg?version=19.7"
+  },
+  {
+    "name": "Ténèbres Infinies",
+    "desc": "Les monstres que vous contrôlez avec min. 4000 ATK d'origine ne peuvent pas être détruits par des effets de carte, et aussi, votre adversaire ne peut pas les cibler avec des effets de carte. Vous ne pouvez utiliser chacun des effets suivants de \"Ténèbres Infinies\" qu'une fois par tour. Durant votre Main Phase : vous pouvez ajouter 1 carte qui mentionne \"Ténèbres Infinies\" (\"Ténèbres Infinies\" exclu) depuis votre Deck à votre main, puis bannissez 1 carte depuis votre main. Si cette carte en possession de son propriétaire est détruite par une carte de l'adversaire : vous pouvez ajouter 1 monstre de Niveau 10 avec 0 ou 4000 ATK depuis votre Deck à votre main.",
+    "overallString": "[Magie|Terrain]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308049.jpg?version=19.7"
+  },
+  {
+    "name": "Néo Forme du Chaos",
+    "desc": "Activez 1 de ces effets (mais vous ne pouvez utiliser chaque effet de \"Néo Forme du Chaos\" qu'une fois par tour) ;\n● Invoquez par Fusion 1 Monstre Fusion \"Yeux Bleus\" depuis votre Extra Deck, en mélangeant ses Matériels depuis votre main, Cimetière et/ou bannissement dans le Deck.\n● Invoquez Rituellement 1 Monstre Rituel \"Chaos\" ou \"Soldat du Lustre Noir\" depuis votre main ou bannissement, en bannissant des monstres qui sont \"Dragon Blanc aux Yeux Bleus\" et/ou mentionnent \"Ténèbres Infinies\" depuis votre main, Terrain et/ou Cimetière dont la somme des Niveaux est supérieure ou égale à son Niveau.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308050.jpg?version=19.7"
+  },
+  {
+    "name": "Ascension Dimensionnelle",
+    "desc": "Invoquez Spécialement 1 monstre qui mentionne \"Ténèbres Infinies\" depuis votre Cimetière ou bannissement, ou si vous avez activé cette carte le tour où votre adversaire a activé une carte ou effet, vous pouvez Invoquer Spécialement depuis votre Deck à la place. Au début de la Battle Phase : vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 de vos \"Dragon Blanc aux Yeux Bleus\" bannis, mais bannissez-le à la fin de la Battle Phase. Vous ne pouvez utiliser chaque effet de \"Ascension Dimensionnelle\" qu'une fois par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308051.jpg?version=19.7"
+  },
+  {
+    "name": "Infection Pandémique",
+    "desc": "Ciblez 1 monstre dans votre Terrain ou Cimetière qui mentionne \"Ténèbres Infinies\" ; vous perdez des LP égaux à son ATK, et si vous le faites, les monstres contrôlés par votre adversaire perdent un montant d'ATK équivalent ce tour. Vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 1 monstre contrôlé par votre adversaire avec 0 ATK ; bannissez-le. Vous ne pouvez utiliser chaque effet de \"Infection Pandémique\" qu'une fois par tour.",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308071.jpg?version=19.7"
+  },
+  {
+    "name": "Dragon Blanc Alternatif aux Yeux Bleus, la Bête Fantôme Guidée",
+    "desc": "Si cette carte est dans votre main : vous pouvez bannir 1 \"Dragon Blanc aux Yeux Bleus\" depuis votre main ou Deck ; Invoquez Spécialement cette carte, puis vous pouvez placer face recto 1 \"Ténèbres Infinies\" depuis votre main, Deck ou Cimetière dans votre Zone Terrain. Si vous avez un monstre \"Yeux Bleus\" banni : vous pouvez cibler 1 carte contrôlée par votre adversaire ; bannissez-la, et aussi, cette carte ne peut pas attaquer ce tour. Vous ne pouvez utiliser chaque effet de \"Dragon Blanc Alternatif aux Yeux Bleus, la Bête Fantôme Guidée\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Dragon/Lumiére  [★8] 3000/2500",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308001.jpg?version=19.7"
+  },
+  {
+    "name": "Dragon Nuage Krystal",
+    "desc": "Si vous ne contrôlez aucun monstre, ou si tous les monstres que vous contrôlez mentionnent \"Ténèbres Infinies\" : vous pouvez Invoquer Spécialement cette carte depuis votre main. Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 monstre qui mentionne \"Ténèbres Infinies\" (monstres de Niveau 6 exclus) depuis votre Deck à votre main, ou si vous avez un monstre \"Yeux Bleus\" banni, vous pouvez ajouter 2 tels monstres d'Attributs différents à la place. Vous ne pouvez utiliser chaque effet de \"Dragon Nuage Krystal\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Dragon/Lumiére  [★6] 2500/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308002.jpg?version=19.7"
+  },
+  {
+    "name": "Vouivre Trancheuse d'Assaut",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez envoyer au Cimetière, ou bannir, 1 monstre \"Yeux Bleus\" depuis votre Deck. Si vous avez un monstre \"Yeux Bleus\" banni : vous pouvez Sacrifier cette carte ; Invoquez Spécialement 1 \"Dragon Blanc aux Yeux Bleus\" ou 1 monstre qui mentionne \"Ténèbres Infinies\" (\"Vouivre Trancheuse d'Assaut\" exclu) depuis votre Deck ou Cimetière. Vous ne pouvez utiliser chaque effet de \"Vouivre Trancheuse d'Assaut\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Dragon/Lumiére  [★4] 1800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308003.jpg?version=19.7"
+  },
+  {
+    "name": "Saggi le Clown du Sacrifice des Ténèbres",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 Magie/Piège qui mentionne \"Ténèbres Infinies\" ou 1 \"Sacrifice des Ténèbres\" depuis votre Deck à votre main. Durant le tour de votre adversaire, si vous avez un monstre \"Yeux Bleus\" banni (Effet Rapide) : vous pouvez Sacrifier cette carte, puis ciblez 1 monstre sur le Terrain ; détruisez-le. Si un ou plusieurs monstres Dragon que vous contrôlez vont être détruits par un effet de carte, vous pouvez bannir cette carte depuis votre main ou Terrain à la place. Vous ne pouvez utiliser chaque effet de \"Saggi le Clown du Sacrifice des Ténèbres\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Magicien/Ténébres  [★3] 600/1500",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308004.jpg?version=19.7"
+  },
+  {
+    "name": "Dragon du Chaos MAXIMUM aux Yeux Bleus",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Forme du Chaos\". Uniquement Invocable Rituellement. Vous pouvez bannir cette carte depuis votre main ; ajoutez 1 \"Néo Forme du Chaos\" depuis votre Deck, Cimetière ou bannissement à votre main. Vous ne pouvez utiliser cet effet de \"Dragon du Chaos MAXIMUM aux Yeux Bleus\" qu'une fois par tour. Si votre monstre qui mentionne \"Ténèbres Infinies\" attaque un monstre en Position de Défense, infligez des dommages de combat perçants à votre adversaire. Les dommages de combat reçus par votre adversaire de combats impliquant cette carte sont doublés.",
+    "overallString": "[Monstre|Effet|Rituel] Dragon/Ténébres  [★8] 4000/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308027.jpg?version=19.7"
+  },
+  {
+    "name": "Néo Dragon Ultime Hyper aux Yeux Bleus",
+    "desc": "\"Dragon Blanc aux Yeux Bleus\" + 2 monstres qui sont \"Dragon Blanc aux Yeux Bleus\" et/ou mentionnent \"Ténèbres Infinies\"\nPeut faire max. 3 attaques sur des monstres durant chaque Battle Phase. Vous ne pouvez utiliser chacun des effets suivants de \"Néo Dragon Ultime Hyper aux Yeux Bleus\" qu'une fois par tour. Durant votre Main Phase : vous pouvez Poser 1 Magie/Piège qui mentionne \"Ténèbres Infinies\" depuis votre Deck ou Cimetière. Lorsque votre adversaire active un effet de monstre sur le Terrain (Effet Rapide) : vous pouvez bannir le monstre.",
+    "overallString": "[Monstre|Effet|Fusion] Dragon/Lumiére  [★12] 4500/3800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308029.jpg?version=19.7"
+  },
+  {
     "name": "Obelisk, le Tourmenteur, les Souvenirs du Pharaon",
     "desc": "Ni Invocable Normalement ni Posable Normalement. Uniquement Invocable Spécialement par son propre effet. Lorsque vous piochez cette carte, ou qu'un monstre de l'adversaire déclare une attaque directe : vous pouvez révéler cette carte dans votre main ; Invoquez Spécialement depuis votre Cimetière autant de monstres détruits ce tour que possible, puis Sacrifiez autant de monstres que vous contrôlez que possible, et si vous le faites, Invoquez Spécialement cette carte, puis si vous avez Sacrifié min. 3 monstres, détruisez autant de monstres contrôlés par votre adversaire que possible, et si vous le faites, divisez par deux les LP de votre adversaire. Vous ne pouvez utiliser cet effet de \"Obelisk, le Tourmenteur, les Souvenirs du Pharaon\" qu'une fois par Duel.",
     "overallString": "[Monstre|Effet|Invocation Spéciale] \tBête Divine/Divin  [★10] 4000/4000",
