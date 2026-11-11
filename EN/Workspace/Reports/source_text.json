@@ -2,25 +2,9 @@
   "language": "en",
   "mode": "refresh",
   "candidates": 175,
-  "matched": 173,
-  "unmatched_ids": [
-    100272029,
-    100272032
-  ],
-  "unresolved": [
-    {
-      "id": 100272029,
-      "name": "海晶少女 蓝水晶心",
-      "set_code": "RV02-JP029",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100272032,
-      "name": "海晶少女神流",
-      "set_code": "RV02-JP032",
-      "reason": "No source card page found"
-    }
-  ],
+  "matched": 175,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -190,6 +174,10 @@
       "set_code": "RV02-JP028",
       "source": "https://yugipedia.com/wiki/Aqua_Leviathan_%40Marincess"
     },
+    "100272029": {
+      "set_code": "RV02-JP029",
+      "source": "https://yugipedia.com/wiki/Marincess_Blue_Crystal_Heart"
+    },
     "100272030": {
       "set_code": "RV02-JP030",
       "source": "https://yugipedia.com/wiki/Marincess_Truth_Heart"
@@ -197,6 +185,10 @@
     "100272031": {
       "set_code": "RV02-JP031",
       "source": "https://yugipedia.com/wiki/Marincess_Reef_Lagoon"
+    },
+    "100272032": {
+      "set_code": "RV02-JP032",
+      "source": "https://yugipedia.com/wiki/Marincess_Overflow"
     },
     "100272050": {
       "set_code": "RV02-JP050",
