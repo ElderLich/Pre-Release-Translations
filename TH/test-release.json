@@ -1,5 +1,77 @@
 [
   {
+    "name": "海晶少女 蓝水晶心",
+    "desc": "「海晶少女」怪兽2只\r\n这个卡名在规则上当作「海晶少女 水晶心」使用。这个卡名的①②的效果1回合各能使用1次。\r\n①：以自己墓地1只「海晶少女」连接怪兽为对象才能发动。那只怪兽在成为这张卡所连接区的自己场上特殊召唤。\r\n②：这张卡作为连接3以上的「海晶少女」连接怪兽的连接素材被送去墓地的场合才能发动。从卡组把1张「海晶少女」卡送去墓地。",
+    "overallString": "[Monster|Effect|Link] Cyberse/Water  [LINK-2] 0/-  [↙][↘]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272029.jpg?version=19.7"
+  },
+  {
+    "name": "海晶少女神流",
+    "desc": "自己场上有连接3以上的「海晶少女」连接怪兽存在的场合，这张卡的发动从手卡也能用。\r\n①：以最多有自己场上的「海晶少女」连接怪兽数量的，场上的魔法·陷阱卡为对象才能发动。那些卡破坏。\r\n②：把墓地的这张卡除外才能发动。自己场上的1张连接3以上的「海晶少女」连接怪兽卡送去墓地。那之后，可以从自己的手卡·墓地把1只电子界族·水属性仪式怪兽当作仪式召唤特殊召唤。",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272032.jpg?version=19.7"
+  },
+  {
+    "name": "Endless Darkness",
+    "desc": "Monsters you control with 4000 or more original ATK cannot be destroyed by card effects, also your opponent cannot target them with card effects. You can only use each of the following effects of \"Endless Darkness\" once per turn. During your Main Phase: You can add 1 card that mentions \"Endless Darkness\" from your Deck to your hand, except \"Endless Darkness\", then banish 1 card from your hand. If this card in its owner's possession is destroyed by an opponent's card: You can add 1 Level 10 monster with 0 or 4000 ATK from your Deck to your hand.",
+    "overallString": "[Spell|Field]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308049.jpg?version=19.7"
+  },
+  {
+    "name": "Neo Chaos Form",
+    "desc": "Activate 1 of these effects (but you can only use each effect of \"Neo Chaos Form\" once per turn);\n● Fusion Summon 1 \"Blue-Eyes\" Fusion Monster from your Extra Deck, by shuffling its materials from your hand, GY, and/or banishment into the Deck.\n● Ritual Summon 1 \"Chaos\" or \"Black Luster Soldier\" Ritual Monster from your hand or banishment, by banishing monsters that are \"Blue-Eyes White Dragon\" and/or mention \"Endless Darkness\" from your hand, field, and/or GY whose total Levels equal or exceed its Level.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308050.jpg?version=19.7"
+  },
+  {
+    "name": "Dimensional Ascension",
+    "desc": "Special Summon 1 monster that mentions \"Endless Darkness\" from your GY or banishment, or if you activated this card the turn your opponent activated a card or effect, you can Special Summon from your Deck instead. At the start of the Battle Phase: You can banish this card from your GY; Special Summon 1 of your banished \"Blue-Eyes White Dragon\", but banish it at the end of the Battle Phase. You can only use each effect of \"Dimensional Ascension\" once per turn.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308051.jpg?version=19.7"
+  },
+  {
+    "name": "Pandemic Infection",
+    "desc": "Target 1 monster in your field or GY that mentions \"Endless Darkness\"; you lose LP equal to its ATK, and if you do, monsters your opponent controls lose an equal amount of ATK this turn. You can banish this card from your GY, then target 1 monster your opponent controls with 0 ATK; banish it. You can only use each effect of \"Dimensional Ascension\" once per turn.",
+    "overallString": "[Trap]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308071.jpg?version=19.7"
+  },
+  {
+    "name": "Blue-Eyes Alternative White Dragon, the Guided Phantom Beast",
+    "desc": "If this card is in your hand: You can banish 1 \"Blue-Eyes White Dragon\" from your hand or Deck; Special Summon this card, then you can place 1 \"Endless Darkness\" from your hand, Deck, or GY, face-up in your Field Zone. If you have a banished \"Blue-Eyes\" monster: You can target 1 card your opponent controls; banish it, also this card cannot attack this turn. You can only use each effect of \"Blue-Eyes Alternative White Dragon, the Guided Phantom Beast\" once per turn.",
+    "overallString": "[Monster|Effect] Dragon/Light  [★8] 3000/2500",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308001.jpg?version=19.7"
+  },
+  {
+    "name": "Krystal Cloud Dragon",
+    "desc": "If you control no monsters, or all monsters you control mention \"Endless Darkness\": You can Special Summon this card from your hand. If this card is Normal or Special Summoned: You can add 1 monster that mentions \"Endless Darkness\" from your Deck to your hand, except a Level 6 monster, or if you have a banished \"Blue-Eyes\" monster, you can add 2 such monsters with different Attributes from each other instead. You can only use each effect of \"Krystal Cloud Dragon\" once per turn.",
+    "overallString": "[Monster|Effect] Dragon/Light  [★6] 2500/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308002.jpg?version=19.7"
+  },
+  {
+    "name": "Assault Slash Wyvern",
+    "desc": "If this card is Normal or Special Summoned: You can send to the GY, or banish, 1 \"Blue-Eyes\" monster from your Deck. If you have a banished \"Blue-Eyes\" monster: You can Tribute this card; Special Summon 1 \"Blue-Eyes White Dragon\" or 1 monster that mentions \"Endless Darkness\", except \"Assault Slash Wyvern\", from your Deck or GY. You can only use each effect of \"Assault Slash Wyvern\" once per turn.",
+    "overallString": "[Monster|Effect] Dragon/Light  [★4] 1800/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308003.jpg?version=19.7"
+  },
+  {
+    "name": "Saggi the Dark Sacrifice Clown",
+    "desc": "If this card is Normal or Special Summoned: You can add 1 Spell/Trap that mentions \"Endless Darkness\" or 1 \"Dark Sacrifice\" from your Deck to your hand. During your opponent's turn, if you have a banished \"Blue-Eyes\" monster (Quick Effect): You can Tribute this card, then target 1 monster on the field; destroy it. If a Dragon monster(s) you control would be destroyed by card effect, you can banish this card from your hand or field instead. You can only use each effect of \"Saggi the Dark Sacrifice Clown\" once per turn.",
+    "overallString": "[Monster|Effect] Spellcaster/Dark  [★3] 600/1500",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308004.jpg?version=19.7"
+  },
+  {
+    "name": "Blue-Eyes Chaos MAXIMUM Dragon",
+    "desc": "You can Ritual Summon this card with \"Chaos Form\". Must be Ritual Summoned. You can banish this card from your hand; add 1 \"Neo Chaos Form\" from your Deck, GY, or banishment to your hand. You can only use this effect of \"Blue-Eyes Chaos MAXIMUM Dragon\" once per turn. If your monster that mentions \"Endless Darkness\" attacks a Defense Position monster, inflict piercing battle damage to your opponent. Any battle damage your opponent takes from battles involving this card is doubled.",
+    "overallString": "[Monster|Effect|Ritual] Dragon/Dark  [★8] 4000/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308027.jpg?version=19.7"
+  },
+  {
+    "name": "Neo Blue-Eyes Hyper Ultimate Dragon",
+    "desc": "\"Blue-Eyes White Dragon\" + 2 monsters that are \"Blue-Eyes White Dragon\" and/or mention \"Endless Darkness\"\nCan make up to 3 attacks on monsters during each Battle Phase. You can only use each of the following effects of \"Neo Blue-Eyes Hyper Ultimate Dragon\" once per turn. During your Main Phase: You can Set 1 Spell/Trap that mentions \"Endless Darkness\" from your Deck or GY. When your opponent activates a monster effect on the field (Quick Effect): You can banish that monster.",
+    "overallString": "[Monster|Effect|Fusion] Dragon/Light  [★12] 4500/3800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308029.jpg?version=19.7"
+  },
+  {
     "name": "Obelisk the Tormentor, the Pharaoh's Memory",
     "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned by its own effect. When you draw this card, or an opponent's monster declares a direct attack: You can reveal this card in your hand; Special Summon from your GY as many monsters destroyed this turn as possible, then Tribute as many monsters you control as possible, and if you do, Special Summon this card, then if you Tributed 3 or more monsters, destroy as many monsters your opponent controls as possible, and if you do, halve your opponent's LP. You can only use this effect of \"Obelisk the Tormentor, the Pharaoh's Memory\" once per Duel.",
     "overallString": "[Monster|Effect|Special Summon] Divine-Beast/Divine  [★10] 4000/4000",
