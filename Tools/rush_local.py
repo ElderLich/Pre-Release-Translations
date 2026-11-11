@@ -11,10 +11,10 @@ import tempfile
 
 
 @contextmanager
-def build_lock(repo: Path):
-    """All locale launchers share a nonblocking OS lock for this repository."""
-    key = hashlib.sha256(os.path.normcase(str(repo.resolve())).encode()).hexdigest()[:20]
-    path = Path(tempfile.gettempdir()) / f"transsuperpre-rush-{key}.lock"
+def workspace_lock(directory: Path, operation: str, busy_message: str):
+    """Serialize one operation per directory without adding files to the workspace."""
+    key = hashlib.sha256(os.path.normcase(str(directory.resolve())).encode()).hexdigest()[:20]
+    path = Path(tempfile.gettempdir()) / f"transsuperpre-{operation}-{key}.lock"
     with path.open("a+b") as handle:
         if handle.tell() == 0:
             handle.write(b"0")
@@ -28,7 +28,7 @@ def build_lock(repo: Path):
                 import fcntl
                 fcntl.flock(handle, fcntl.LOCK_EX | fcntl.LOCK_NB)
         except OSError as error:
-            raise RuntimeError("Another Rush build is already running for this repository. Wait for it to finish.") from error
+            raise RuntimeError(busy_message) from error
         try:
             yield
         finally:
@@ -37,6 +37,10 @@ def build_lock(repo: Path):
                 msvcrt.locking(handle.fileno(), msvcrt.LK_UNLCK, 1)
             else:
                 fcntl.flock(handle, fcntl.LOCK_UN)
+
+
+def build_lock(repo: Path):
+    return workspace_lock(repo, "rush", "Another Rush build is already running for this repository. Wait for it to finish.")
 
 
 def python_console() -> str:

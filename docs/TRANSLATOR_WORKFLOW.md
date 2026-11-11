@@ -129,6 +129,10 @@ outputs. Do not edit them by hand.
 `Reports/remaining_cn.json` is a helper report from `PromptPatcher.py`. It is
 useful for checking untranslated Chinese text or mapping gaps.
 
+To compare Standard and Rush prompts with the English source by card ID and
+slot, choose **5** in the linked workspace's `Test/PatchMenu.py`. See the
+[prompt catalog and CSV instructions](RUSH_PRE_RELEASE.md#files-to-edit).
+
 ## Supported languages
 
 The workspace flow is used by:

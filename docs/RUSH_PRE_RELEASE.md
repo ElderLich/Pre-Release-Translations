@@ -129,19 +129,35 @@ reuses `rush_cards.cdb` from each published locale, including localized names in
 effect prompts. Thai deliberately uses the English workspace and has the exact
 same package bytes. Simplified Chinese uses the source text.
 
-Rush uses the existing `Tools/PromptPatcher.py` catalog, including the Rush
-strings already added there, and the existing `Shared/Mappings.csv` format.
-This update adds 34 missing complete prompt templates covering 42 cells on 31
-cards in the eight supported non-Chinese translation languages. Five shared
-mapping rows bind referenced card names (or `self`) to each locale's translations.
-The existing catalog entries and standard prerelease mappings are preserved.
-Standard EN workspace cleanup now also preserves Rush mapping rows.
-
-For future prompt gaps, add the translation to `PromptPatcher.py` as usual and
-fill the card ID or `self` in the matching `strN` column of `Shared/Mappings.csv`.
+The shared patcher reads its Rush prompts from
+[`Tools/rush_prompt_catalog.json`](../Tools/rush_prompt_catalog.json).
+Look up the normalized Chinese prompt to find its eight translations, review
+status and any equivalent Chinese spellings under `aliases`. Entries for card
+names and embedded effect text carry a `skip` reason. To change a Rush prompt,
+edit its catalog entry. For a `{CARD}` reference, fill the target card ID or
+`self` in the matching `strN` column of `Shared/Mappings.csv`.
 Unresolved `{CARD}` placeholders stop publication and appear in `report.json`.
 Translator corrections take precedence. Rush sync does not rewrite the published
 base `rush_cards.cdb` files.
+
+In the linked local workspace, run `Test/PatchMenu.py` and choose **5** to
+extract the current Standard and Rush Chinese and English text. The menu reads
+the two Standard locale `cards.cdb` files, the Rush checkout's `RD Standard.cdb`,
+`RD Alternate.cdb` and `RD Patch.cdb`, and the English `DBs/en/rush_cards.cdb`.
+On overlapping Chinese Rush IDs, Patch takes precedence over Alternate, then
+Standard, including empty prompt slots.
+
+Open `Test/rush_prompts.csv` and filter by card ID or `slot` to compare the
+original Chinese with the English reference. Search the catalog for the value
+in `catalog_key` to edit the corresponding prompt. `paired` means both sources
+have text at the same ID and slot. `missing_en` and `missing_zh` identify gaps
+in those source files. Use the card text and script to verify the meaning of
+a slot. Extracting again replaces these generated CSVs.
+
+`Test/standard_prompts.csv` provides the same ID/slot comparison for Standard.
+The full text tables are `texts.csv` and `texts_en.csv` for Standard, and
+`rush_texts.csv` and `rush_texts_en.csv` for Rush. They include names,
+descriptions and all sixteen prompt slots.
 
 New untranslated cards stay in every workspace and appear in `report.json`.
 Changed source descriptions/prompts require review when the corresponding
