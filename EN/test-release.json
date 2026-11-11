@@ -1,13 +1,13 @@
 [
   {
-    "name": "海晶少女 蓝水晶心",
-    "desc": "「海晶少女」怪兽2只\r\n这个卡名在规则上当作「海晶少女 水晶心」使用。这个卡名的①②的效果1回合各能使用1次。\r\n①：以自己墓地1只「海晶少女」连接怪兽为对象才能发动。那只怪兽在成为这张卡所连接区的自己场上特殊召唤。\r\n②：这张卡作为连接3以上的「海晶少女」连接怪兽的连接素材被送去墓地的场合才能发动。从卡组把1张「海晶少女」卡送去墓地。",
+    "name": "Marincess Blue Crystal Heart",
+    "desc": "2 \"Marincess\" monsters\n(This card is always treated as \"Marincess Crystal Heart\".)\nYou can target 1 \"Marincess\" Link Monster in your GY; Special Summon it to your zone this card points to. If this card is sent to the GY as material for a Link-3 or higher \"Marincess\" Link Monster: You can send 1 \"Marincess\" card from your Deck to the GY. You can only use each effect of \"Marincess Blue Crystal Heart\" once per turn.",
     "overallString": "[Monster|Effect|Link] Cyberse/Water  [LINK-2] 0/-  [↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272029.jpg?version=19.7"
   },
   {
-    "name": "海晶少女神流",
-    "desc": "自己场上有连接3以上的「海晶少女」连接怪兽存在的场合，这张卡的发动从手卡也能用。\r\n①：以最多有自己场上的「海晶少女」连接怪兽数量的，场上的魔法·陷阱卡为对象才能发动。那些卡破坏。\r\n②：把墓地的这张卡除外才能发动。自己场上的1张连接3以上的「海晶少女」连接怪兽卡送去墓地。那之后，可以从自己的手卡·墓地把1只电子界族·水属性仪式怪兽当作仪式召唤特殊召唤。",
+    "name": "Marincess Overflow",
+    "desc": "Target Spells/Traps on the field up to the number of \"Marincess\" Link Monsters you control; destroy them. You can banish this card from your GY; send 1 Link-3 or higher \"Marincess\" Link Monster Card you control to the GY, then you can Special Summon 1 WATER Cyberse Ritual Monster from your hand or GY (this is treated as a Ritual Summon). If you control a Link-3 or higher \"Marincess\" Link Monster, you can activate this card from your hand.",
     "overallString": "[Trap]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272032.jpg?version=19.7"
   },
