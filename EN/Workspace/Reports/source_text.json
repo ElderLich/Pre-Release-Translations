@@ -1,10 +1,26 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 163,
-  "matched": 163,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "candidates": 175,
+  "matched": 173,
+  "unmatched_ids": [
+    100272029,
+    100272032
+  ],
+  "unresolved": [
+    {
+      "id": 100272029,
+      "name": "海晶少女 蓝水晶心",
+      "set_code": "RV02-JP029",
+      "reason": "No source card page found"
+    },
+    {
+      "id": 100272032,
+      "name": "海晶少女神流",
+      "set_code": "RV02-JP032",
+      "reason": "No source card page found"
+    }
+  ],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -657,6 +673,46 @@
     "101307080": {
       "set_code": "IMPH-JP080",
       "source": "https://yugipedia.com/wiki/Bunnillin_Soft"
+    },
+    "101308001": {
+      "set_code": "PASO-JP001",
+      "source": "https://yugipedia.com/wiki/Blue-Eyes_Alternative_White_Dragon%2C_the_Guided_Phantom_Beast"
+    },
+    "101308002": {
+      "set_code": "PASO-JP002",
+      "source": "https://yugipedia.com/wiki/Krystal_Cloud_Dragon"
+    },
+    "101308003": {
+      "set_code": "PASO-JP003",
+      "source": "https://yugipedia.com/wiki/Assault_Slash_Wyvern"
+    },
+    "101308004": {
+      "set_code": "PASO-JP004",
+      "source": "https://yugipedia.com/wiki/Saggi_the_Dark_Sacrifice_Clown"
+    },
+    "101308027": {
+      "set_code": "PASO-JP027",
+      "source": "https://yugipedia.com/wiki/Blue-Eyes_Chaos_MAXIMUM_Dragon"
+    },
+    "101308029": {
+      "set_code": "PASO-JP029",
+      "source": "https://yugipedia.com/wiki/Neo_Blue-Eyes_Hyper_Ultimate_Dragon"
+    },
+    "101308049": {
+      "set_code": "PASO-JP049",
+      "source": "https://yugipedia.com/wiki/Endless_Darkness"
+    },
+    "101308050": {
+      "set_code": "PASO-JP050",
+      "source": "https://yugipedia.com/wiki/Neo_Chaos_Form"
+    },
+    "101308051": {
+      "set_code": "PASO-JP051",
+      "source": "https://yugipedia.com/wiki/Dimensional_Ascension"
+    },
+    "101308071": {
+      "set_code": "PASO-JP071",
+      "source": "https://yugipedia.com/wiki/Pandemic_Infection"
     }
   }
 }
