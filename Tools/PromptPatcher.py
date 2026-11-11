@@ -857,6 +857,26 @@ def build_translation_pack(lang: str):
 
     # Extra phrases (keep phrase-level; avoid single-word glue)
     extras = {
+        "是否把{CARD}表侧表示放置？": {
+            "en": "Place {CARD} face-up?",
+            "fr": "Placer {CARD} face recto ?",
+            "de": "{CARD} offen platzieren?",
+            "es": "¿Colocar {CARD} boca arriba?",
+            "pt": "Colocar {CARD} com a face para cima?",
+            "it": "Mettere {CARD} scoperta?",
+            "ja": "{CARD}を表側表示で置きますか？",
+            "kr": "{CARD}을(를) 앞면 표시로 놓겠습니까?",
+        },
+        "卡组送墓/除外": {
+            "en": "Send from the Deck to the GY or banish from the Deck",
+            "fr": "Envoyer du Deck au Cimetière ou bannir depuis le Deck",
+            "de": "Vom Deck auf den Friedhof legen oder vom Deck verbannen",
+            "es": "Mandar del Deck al Cementerio o desterrar del Deck",
+            "pt": "Enviar do Deck para o Cemitério ou banir do Deck",
+            "it": "Mandare dal Deck al Cimitero o bandire dal Deck",
+            "ja": "デッキから墓地へ送るか除外する",
+            "kr": "덱에서 묘지로 보내거나 제외한다",
+        },
         # Dragon's Orb (100275007, str1), Standard source 29.30.
         "不会无效": {
             "en": "Cannot be negated",
@@ -35116,6 +35136,8 @@ def build_translation_pack(lang: str):
         },
 
     }
+    # Dimensional Ascension names Blue-Eyes White Dragon without source quotes.
+    extras["特殊召唤青眼白龙"] = extras["特殊召唤{CARD}"]
     for cn, out in extras.items():
         # Keep locale-specific text when available; fall back gracefully if one key is missing.
         picked = out.get(lang) or out.get("en")
