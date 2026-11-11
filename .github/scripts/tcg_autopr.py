@@ -19,7 +19,7 @@ from pathlib import Path
 
 from shared_builds import copy_if_changed, publish_release, validate_release_strings, write_deterministic_package
 from shared_downloads import JSON_URL_DEFAULT, YPK_URL_DEFAULT, DownloadError, fetch_release_json, download_file as download_verified_file
-from shared_mappings import load_locale_mappings_csv, save_locale_mappings_csv
+from shared_mappings import load_locale_mappings_csv, save_locale_mappings_csv, workspace_mapping_names
 
 ROOT = Path(__file__).resolve().parents[2]
 
@@ -728,18 +728,21 @@ def replace_placeholders(template: str, names: list[str]) -> str:
     return PLACEHOLDER_TOKEN_RE.sub(repl, template)
 
 
-def apply_mappings_to_cdb(cdb_path: Path, mappings: dict[int, dict], cards_cdb: Path) -> None:
+def apply_mappings_to_cdb(cdb_path: Path, mappings: dict[int, dict], cards_cdb: Path,
+                          source_cdb: Path | None = None) -> None:
     conn = sqlite3.connect(str(cdb_path))
     cards_conn = sqlite3.connect(str(cards_cdb))
     name_cache: dict[str, str | None] = {}
     updated = 0
     skipped = 0
     try:
+        workspace_names = workspace_mapping_names(conn, source_cdb)
+
         def get_name(card_id: str) -> str | None:
             if card_id in name_cache:
                 return name_cache[card_id]
             row = cards_conn.execute("SELECT name FROM texts WHERE id=?", (int(card_id),)).fetchone()
-            name_cache[card_id] = row[0] if row else None
+            name_cache[card_id] = row[0] if row and row[0] else workspace_names.get(int(card_id))
             return name_cache[card_id]
 
         rows = conn.execute("SELECT id, name, " + ", ".join(f"str{i}" for i in range(1, 17)) + " FROM texts").fetchall()
@@ -751,7 +754,7 @@ def apply_mappings_to_cdb(cdb_path: Path, mappings: dict[int, dict], cards_cdb: 
                 continue
             values = list(row[2:])
             changed = False
-            self_name = row[1] or clean_cell(mapping.get("name"))
+            self_name = workspace_names.get(card_id) if row[1] else clean_cell(mapping.get("name"))
             for index in range(1, 17):
                 current = str(values[index - 1] or "")
                 if CARD_TOKEN not in current:
@@ -922,7 +925,7 @@ def run_prompt_patcher(cdb_path: Path, cards_cdb: Path) -> None:
     scan, present = scan_cdb_placeholders(cdb_path)
     mappings = merge_mappings(load_mappings_csv(MAPPINGS_PATH), scan, present)
     save_mappings_csv(MAPPINGS_PATH, mappings)
-    apply_mappings_to_cdb(cdb_path, mappings, cards_cdb)
+    apply_mappings_to_cdb(cdb_path, mappings, cards_cdb, BASE_DIR / "test-release.cdb")
     patch_pendulum_layout_desc(cdb_path, log_fn=log, report_limit=25)
     patch_en_desc(cdb_path)
 
@@ -940,12 +943,12 @@ def autofill_source_text(cdb_path: Path, ypk_path: Path) -> None:
         log(f"[SourceText] skipped after error: {exc}")
 
 
-def apply_workspace_mappings_for_release(cdb_path: Path, cards_cdb: Path) -> None:
+def apply_workspace_mappings_for_release(cdb_path: Path, cards_cdb: Path, source_cdb: Path | None = None) -> None:
     mappings = load_mappings_csv(MAPPINGS_PATH)
     if not mappings:
         log("No workspace mappings to apply to release CDB")
         return
-    apply_mappings_to_cdb(cdb_path, mappings, cards_cdb)
+    apply_mappings_to_cdb(cdb_path, mappings, cards_cdb, source_cdb)
 
 
 def replace_payloads_in_ypk(base_ypk: Path, output_ypk: Path, payloads: dict[str, Path]) -> None:
@@ -1055,7 +1058,9 @@ def release_build() -> None:
         shutil.copy2(workspace_release, release_cdb)
         download_file(YPK_URL, ypk)
         download_file(CARDS_CDB_URL, cards_cdb)
-        apply_workspace_mappings_for_release(release_cdb, cards_cdb)
+        source_cdb = work / "source-release.cdb"
+        extract_member(ypk, "test-release.cdb", source_cdb)
+        apply_workspace_mappings_for_release(release_cdb, cards_cdb, source_cdb)
         patch_en_desc(release_cdb)
         extract_member(ypk, "test-update.cdb", test_update)
         translate_test_update_cdb(test_update, cards_cdb)

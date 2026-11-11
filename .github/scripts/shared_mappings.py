@@ -5,6 +5,9 @@
 from __future__ import annotations
 
 import csv
+import re
+import sqlite3
+from contextlib import closing
 from pathlib import Path
 
 LANG_FIELD = "lang"
@@ -23,6 +26,26 @@ LANG_ORDER = {
     "pt": 8,
     "th": 9,
 }
+
+
+def workspace_mapping_names(workspace: sqlite3.Connection, source_cdb: Path | None,
+                            *, allow_shared_characters: bool = False) -> dict[int, str]:
+    """Keep source-language names out of prompts until a translator can bind them."""
+    originals = {}
+    if source_cdb is not None:
+        with closing(sqlite3.connect(source_cdb.resolve().as_uri() + "?mode=ro", uri=True)) as source:
+            originals = {cid: (name, desc) for cid, name, desc in source.execute("SELECT id,name,desc FROM texts")}
+    names = {}
+    for cid, name, desc in workspace.execute("SELECT id,name,desc FROM texts"):
+        if not name:
+            continue
+        original = originals.get(cid)
+        if original and name == original[0] and re.search(r"[\u3400-\u9fff]", name):
+            # A Japanese or Korean name can share its written form with the source.
+            if not allow_shared_characters or desc == original[1]:
+                continue
+        names[cid] = name
+    return names
 
 
 def clean_cell(value: object) -> str:

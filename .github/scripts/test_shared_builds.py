@@ -174,7 +174,8 @@ class ReproducibleReleaseTests(unittest.TestCase):
                 cards = root / "cards.cdb"
                 make_database(cards, "Official card")
                 source = root / "source.ypk"
-                make_archive(source, {"test-update.cdb": cards.read_bytes(), "script/c1.lua": b"card script"})
+                source_members = {"test-release.cdb": source_release.read_bytes(), "test-update.cdb": cards.read_bytes(), "script/c1.lua": b"card script"}
+                make_archive(source, source_members)
                 def download(url, destination):
                     shutil.copyfile(source if url == builder.YPK_URL else cards, destination)
                 with ExitStack() as stack:
@@ -197,7 +198,7 @@ class ReproducibleReleaseTests(unittest.TestCase):
                     before = {path: path.read_bytes() for path in paths}
                     with closing(sqlite3.connect(source_release)) as db:
                         db.execute("VACUUM")
-                    make_archive(source, {"script/c1.lua": b"card script", "test-update.cdb": cards.read_bytes()}, date=(2026, 10, 22, 12, 30, 0), reverse=True)
+                    make_archive(source, source_members, date=(2026, 10, 22, 12, 30, 0), reverse=True)
                     build()
                     self.assertEqual({path: path.read_bytes() for path in paths}, before)
                     with closing(sqlite3.connect(cards)) as db:
