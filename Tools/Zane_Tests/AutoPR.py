@@ -17,7 +17,11 @@ try:
 except ModuleNotFoundError as exc:
     if exc.name != "PromptPatcher":
         raise
-    raise SystemExit("Falta PromptPatcher.py. Copia Tools/PromptPatcher.py junto a AutoPR.py y vuelve a ejecutar.") from exc
+    raise SystemExit("Copia PromptPatcher.py y rush_prompt_catalog.json desde Tools a la carpeta de AutoPR.py.") from exc
+except FileNotFoundError as exc:
+    if not exc.filename or Path(exc.filename).name != "rush_prompt_catalog.json":
+        raise
+    raise SystemExit("Falta rush_prompt_catalog.json. Cópialo desde Tools a la carpeta de PromptPatcher.py.") from exc
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 

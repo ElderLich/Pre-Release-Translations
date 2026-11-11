@@ -118,7 +118,8 @@ def local_inputs_sha256(repo_root: Path | str) -> str:
     paths = [root / "Tools/rush_prerelease.py", root / "Shared/Rush/config.json",
              root / "Tools/rush_source_text.py", root / "Shared/Rush/source_mappings.json",
              root / ".github/scripts/card_text_autofill.py", root / ".github/scripts/codexygo_source.py",
-             root / "Tools/PromptPatcher.py", root / "Shared/Mappings.csv",
+             root / "Tools/PromptPatcher.py", root / "Tools/rush_prompt_catalog.json",
+             root / "Shared/Mappings.csv",
              root / ".github/scripts/shared_mappings.py", root / ".github/scripts/tcg_autopr.py"]
     paths += list((root / "Shared/Rush Artworks").glob("*"))
     paths += list(root.glob("*/Rush/Workspace/*.cdb"))

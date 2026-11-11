@@ -8,11 +8,12 @@ Standard y Rush con una conexión lenta.
 
 1. Instala Python y `requests` en Termux: `pkg install python`, seguido de
    `python -m pip install requests`.
-2. Copia este `AutoPR.py` y [`Tools/PromptPatcher.py`](../PromptPatcher.py) a la
-   misma carpeta. Si ya tienes el repositorio, puedes ejecutar directamente
+2. Copia este `AutoPR.py`, [`PromptPatcher.py`](../PromptPatcher.py) y
+   [`rush_prompt_catalog.json`](../rush_prompt_catalog.json) a la misma
+   carpeta. Si ya tienes el repositorio, puedes ejecutar directamente
    `python Tools/Zane_Tests/AutoPR.py`.
 3. Ejecuta `python AutoPR.py` y elige **Standard** o **Rush**. Para actualizar el
-   programa, reemplaza esos dos archivos; conserva tus archivos de traducción.
+   programa, actualiza los tres archivos y conserva tus archivos de traducción.
 
 No hace falta clonar todo el repositorio ni instalar Git. Si usas el almacenamiento
 compartido de Android, concede acceso con `termux-setup-storage`.

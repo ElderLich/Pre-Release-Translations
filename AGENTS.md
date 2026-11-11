@@ -23,8 +23,9 @@ CDBs and their corresponding local `raw2` CDBs. Keep both workspaces synchronize
 using the existing merge workflow, reviewing any conflicting fields. Preserve
 card IDs and gameplay data.
 
-When new Chinese prompts occur, update `Tools/PromptPatcher.py` and the relevant
-card-name bindings in `Shared/Mappings.csv`, then refresh local mapping copies.
+When new Chinese prompts occur, update `Tools/PromptPatcher.py` for Standard
+or `Tools/rush_prompt_catalog.json` for Rush. Update the relevant card-name
+bindings in `Shared/Mappings.csv`, then refresh local mapping copies.
 Review changed upstream fields against their scripts and printed card text;
 already translated text can become stale when prompt positions change.
 For ZH-TW, inspect new source rows manually: the report's CJK exemption can leave
