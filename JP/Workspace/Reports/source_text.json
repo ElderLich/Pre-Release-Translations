@@ -3,8 +3,17 @@
   "mode": "fill",
   "candidates": 5,
   "matched": 5,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "unmatched_ids": [
+    100277001
+  ],
+  "unresolved": [
+    {
+      "id": 100277001,
+      "name": "破械断狱",
+      "set_code": null,
+      "reason": "No printed set code mapping"
+    }
+  ],
   "matches": {
     "100270002": {
       "set_code": "TFGX-JP002",
