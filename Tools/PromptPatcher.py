@@ -755,7 +755,7 @@ def _prompt_localizations(lang: str, L: dict) -> dict:
         "ASK_SEND_THAT_MONSTER_TO_GY": {
             "en": "Send that monster to the GY?",
             "fr": "Envoyer ce monstre au Cimetière ?",
-            "de": "Dieses Monster auf den Friedhof legen?",
+            "de": "Ein Monster auf den Friedhof legen?",
             "es": "¿Enviar ese monstruo al Cementerio?",
             "pt": "Enviar aquele monstro para o Cemitério?",
             "it": "Mandare quel mostro al Cimitero?",
@@ -29532,7 +29532,7 @@ def build_translation_pack(lang: str):
         "是否让卡回到卡组?": {
             "en": "Return the card to the Deck?",
             "fr": "Renvoyer la carte au Deck ?",
-            "de": "Die Karte ins Deck zurücklegen?",
+            "de": "Ins Deck zurücklegen?",
             "es": "¿Devolver la carta al Deck?",
             "pt": "Retornar o card para o Deck?",
             "it": "Rimettere la carta nel Deck?",
