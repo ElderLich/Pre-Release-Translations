@@ -1,5 +1,11 @@
 [
   {
+    "name": "破械断狱",
+    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
+  },
+  {
     "name": "Cœur de Cristal Bleu Marincesse",
     "desc": "2 monstres \"Marincesse\"\r\n(Cette carte est toujours traitée comme \"Cœur de Cristal Marincesse\".)\r\nVous pouvez cibler 1 Monstre Lien \"Marincesse\" dans votre Cimetière ; Invoquez-le Spécialement dans votre zone pointée par cette carte. Si cette carte est envoyée au Cimetière comme Matériel pour un Monstre Lien \"Marincesse\" de min. Link-3 : vous pouvez envoyer 1 carte \"Marincesse\" depuis votre Deck au Cimetière. Vous ne pouvez utiliser chaque effet de \"Cœur de Cristal Bleu Marincesse\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Lien] Cyberse/Eau  [LINK-2] 0/-  [↙][↘]",
