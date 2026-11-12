@@ -1,7 +1,7 @@
 [
   {
-    "name": "破械断狱",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "name": "Urteil der Losgeketteten",
+    "desc": "Wähle bis zu 2 Zauber/Fallen auf dem Spielfeld, darunter mindestens 1 Karte, die du kontrollierst; zerstöre sie, dann, falls du dadurch eine verdeckte Karte zerstört hast, kannst du 1 „Losgekettet“-Monster von deinem Deck auf den Friedhof legen. Falls diese Karte auf dem Spielfeld durch den Effekt einer „Losgekettet“-Karte zerstört wird: Du kannst 1 „Losgekettet“-Monster der Stufe 8 als Spezialbeschwörung von deinem Deck beschwören, dann kannst du 1 Karte von deiner Hand und 1 Karte vom Friedhof deines Gegners ins Deck mischen. Du kannst jeden Effekt von „Urteil der Losgeketteten“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Zauber]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
   },
