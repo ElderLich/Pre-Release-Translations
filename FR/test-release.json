@@ -1,7 +1,7 @@
 [
   {
-    "name": "破械断狱",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "name": "Condamnation des Désenchaînés",
+    "desc": "Ciblez max. 2 Magies/Pièges sur le Terrain (une carte que vous contrôlez incluse) ; détruisez-les, puis, si vous avez détruit une carte face verso, vous pouvez envoyer 1 monstre \"Désenchaîné\" depuis votre Deck au Cimetière. Si cette carte sur le Terrain est détruite par l'effet d'une carte \"Désenchaîné\" : vous pouvez Invoquer Spécialement 1 monstre \"Désenchaîné\" de Niveau 8 depuis votre Deck, puis vous pouvez mélanger 1 carte depuis votre main et 1 depuis le Cimetière de votre adversaire dans le Deck. Vous ne pouvez utiliser chaque effet de \"Condamnation des Désenchaînés\" qu'une fois par tour.",
     "overallString": "[Magie]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
   },
