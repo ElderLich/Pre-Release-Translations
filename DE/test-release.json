@@ -1,5 +1,11 @@
 [
   {
+    "name": "破械断狱",
+    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "overallString": "[Zauber]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
+  },
+  {
     "name": "Marinzessin Blaues Kristallherz",
     "desc": "2 „Marinzessin“-Monster\n(Diese Karte wird immer als „Marinzessin Kristallherz“ behandelt.)\nDu kannst 1 „Marinzessin“-Linkmonster in deinem Friedhof wählen; beschwöre es als Spezialbeschwörung in eine deiner Zonen, auf die diese Karte zeigt. Falls diese Karte als Linkmaterial für ein „Marinzessin“-Linkmonster mit Link-3 oder höher auf den Friedhof gelegt wird: Du kannst 1 „Marinzessin“-Karte von deinem Deck auf den Friedhof legen. Du kannst jeden Effekt von „Marinzessin Blaues Kristallherz“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Link] Cyberse/Wasser  [LINK-2] 0/-  [↙][↘]",
