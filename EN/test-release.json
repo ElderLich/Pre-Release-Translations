@@ -1,5 +1,11 @@
 [
   {
+    "name": "破械断狱",
+    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
+  },
+  {
     "name": "Marincess Blue Crystal Heart",
     "desc": "2 \"Marincess\" monsters\n(This card is always treated as \"Marincess Crystal Heart\".)\nYou can target 1 \"Marincess\" Link Monster in your GY; Special Summon it to your zone this card points to. If this card is sent to the GY as material for a Link-3 or higher \"Marincess\" Link Monster: You can send 1 \"Marincess\" card from your Deck to the GY. You can only use each effect of \"Marincess Blue Crystal Heart\" once per turn.",
     "overallString": "[Monster|Effect|Link] Cyberse/Water  [LINK-2] 0/-  [↙][↘]",
@@ -31,7 +37,7 @@
   },
   {
     "name": "Pandemic Infection",
-    "desc": "Target 1 monster in your field or GY that mentions \"Endless Darkness\"; you lose LP equal to its ATK, and if you do, monsters your opponent controls lose an equal amount of ATK this turn. You can banish this card from your GY, then target 1 monster your opponent controls with 0 ATK; banish it. You can only use each effect of \"Dimensional Ascension\" once per turn.",
+    "desc": "Target 1 monster in your field or GY that mentions \"Endless Darkness\"; you lose LP equal to its ATK, and if you do, monsters your opponent controls lose an equal amount of ATK this turn. You can banish this card from your GY, then target 1 monster your opponent controls with 0 ATK; banish it. You can only use each effect of \"Pandemic Infection\" once per turn.",
     "overallString": "[Trap]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308071.jpg?version=19.7"
   },
