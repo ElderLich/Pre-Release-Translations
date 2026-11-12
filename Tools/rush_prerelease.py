@@ -108,21 +108,20 @@ def file_fingerprint(root: Path, paths: list[Path]) -> str:
     value = hashlib.sha256()
     for path in sorted(paths, key=lambda p: p.relative_to(root).as_posix()):
         value.update(path.relative_to(root).as_posix().encode("utf-8") + b"\0")
-        value.update(hashlib.sha256(path.read_bytes()).digest())
+        data = path.read_bytes()
+        if path.suffix == ".json":
+            data = data.replace(b"\r\n", b"\n")
+        value.update(hashlib.sha256(data).digest())
     return value.hexdigest()
 
 
 def local_inputs_sha256(repo_root: Path | str) -> str:
-    """Small public contract used by the daily dispatcher before starting jobs."""
+    """Fingerprint the local release inputs that can start a daily Rush build."""
     root = Path(repo_root)
-    paths = [root / "Tools/rush_prerelease.py", root / "Shared/Rush/config.json",
-             root / "Tools/rush_source_text.py", root / "Shared/Rush/source_mappings.json",
-             root / ".github/scripts/card_text_autofill.py", root / ".github/scripts/codexygo_source.py",
-             root / "Tools/PromptPatcher.py", root / "Tools/rush_prompt_catalog.json",
-             root / "Shared/Mappings.csv",
-             root / ".github/scripts/shared_mappings.py", root / ".github/scripts/tcg_autopr.py"]
-    paths += list((root / "Shared/Rush Artworks").glob("*"))
-    paths += list(root.glob("*/Rush/Workspace/*.cdb"))
+    paths = [root / "Shared/Rush/config.json"]
+    paths.extend(root.glob("*/Rush/Workspace/rush-pre-release.cdb"))
+    paths.extend(path for path in (root / "Shared/Rush Artworks").glob("*")
+                 if path.suffix.lower() in (".png", ".jpg", ".jpeg"))
     return file_fingerprint(root, [path for path in paths if path.is_file()])
 
 

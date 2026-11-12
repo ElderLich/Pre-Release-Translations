@@ -491,8 +491,14 @@ class RushPrereleaseTests(unittest.TestCase):
         rush.write_changed(self.root / "Shared/Rush/config.json", b"{}")
         self.assertNotEqual(previous, rush.local_inputs_sha256(self.root))
         previous = rush.local_inputs_sha256(self.root)
-        rush.write_changed(self.root / "Tools/rush_prompt_catalog.json", b"{}")
+        rush.write_changed(self.root / "Shared/Rush Artworks/123.JPEG", b"new artwork")
         self.assertNotEqual(previous, rush.local_inputs_sha256(self.root))
+        previous = rush.local_inputs_sha256(self.root)
+        for path in ("Tools/PromptPatcher.py", "Tools/rush_prerelease.py", "Shared/Mappings.csv",
+                     "Tools/rush_prompt_catalog.json", "Shared/Rush/source_mappings.json",
+                     "Shared/Rush Artworks/prepare.py", "EN/Rush/Workspace/import.py"):
+            rush.write_changed(self.root / path, b"maintenance")
+            self.assertEqual(previous, rush.local_inputs_sha256(self.root), path)
 
     def test_japanese_translator_prompt_is_not_overwritten(self):
         raw = (100, "原名", "原始", "这个回合不能攻击", *([""] * 15))

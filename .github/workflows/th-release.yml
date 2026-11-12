@@ -13,9 +13,6 @@ on:
     paths:
       - "TH/Workspace/test-release.cdb"
       - "TH/Workspace/test-strings.conf"
-      - ".github/scripts/release_git.py"
-      - ".github/scripts/shared_builds.py"
-      - ".github/workflows/th-release.yml"
 
 permissions:
   contents: write

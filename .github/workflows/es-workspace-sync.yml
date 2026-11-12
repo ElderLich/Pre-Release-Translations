@@ -2,15 +2,6 @@ name: Sync ES Workspace
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/scripts/es_autopr.py"
-      - ".github/scripts/shared_mappings.py"
-      - ".github/scripts/shared_downloads.py"
-      - ".github/scripts/shared_builds.py"
-      - ".github/workflows/es-workspace-sync.yml"
 
 permissions:
   contents: write

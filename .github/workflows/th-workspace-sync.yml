@@ -2,16 +2,6 @@ name: Sync TH Workspace
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/scripts/card_text_autofill.py"
-      - ".github/scripts/shared_mappings.py"
-      - ".github/scripts/shared_downloads.py"
-      - ".github/scripts/tcg_autopr.py"
-      - ".github/scripts/shared_builds.py"
-      - ".github/workflows/th-workspace-sync.yml"
 
 permissions:
   contents: write

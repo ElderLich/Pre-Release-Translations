@@ -301,9 +301,10 @@ There are three workflow types for each workspace-based language.
 
 ### Workspace sync
 
-This runs daily, manually, and when the workflow or automation scripts change.
-Plain `Shared/Mappings.csv` and `Tools/PromptPatcher.py` edits do not start
-workspace syncs by themselves.
+The daily dispatcher starts workspace syncs when due. You can also start a sync
+manually. Python, mapping, prompt catalog and workflow edits take effect the next
+time a relevant build runs. A push that also includes a translated workspace
+starts its normal release build.
 
 It does this:
 

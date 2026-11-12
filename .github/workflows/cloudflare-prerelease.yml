@@ -32,9 +32,6 @@ on:
       - "*/version.txt"
       - "*/rush-pre-release.ypk"
       - "*/rush-version.txt"
-      - ".github/scripts/publish_prerelease_r2.py"
-      - ".github/scripts/requirements-prerelease-r2.txt"
-      - ".github/workflows/cloudflare-prerelease.yml"
 
 permissions:
   contents: read

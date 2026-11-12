@@ -5,24 +5,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "Tools/rush_prerelease.py"
-      - ".github/scripts/fetch_rush_sources.py"
-      - ".github/scripts/rush_source_archive.py"
-      - "Tools/rush_source_text.py"
-      - ".github/scripts/card_text_autofill.py"
-      - ".github/scripts/codexygo_source.py"
-      - "Shared/Rush/source_mappings.json"
-      - "Tools/PromptPatcher.py"
-      - "Tools/rush_prompt_catalog.json"
-      - "Shared/Mappings.csv"
-      - ".github/scripts/shared_mappings.py"
-      - ".github/scripts/tcg_autopr.py"
-      - "Shared/Rush Artworks/**"
+      - "*/Rush/Workspace/rush-pre-release.cdb"
       - "Shared/Rush/config.json"
-      - "*/Rush/Workspace/**"
-      - ".github/scripts/release_git.py"
-      - ".github/scripts/shared_builds.py"
-      - ".github/workflows/rush-prerelease.yml"
+      - "Shared/Rush Artworks/*.[jJ][pP][gG]"
+      - "Shared/Rush Artworks/*.[jJ][pP][eE][gG]"
+      - "Shared/Rush Artworks/*.[pP][nN][gG]"
 
 permissions:
   contents: write

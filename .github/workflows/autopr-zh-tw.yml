@@ -2,15 +2,6 @@ name: AutoPR ZH-TW
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/scripts/autopr_zh_tw.py"
-      - ".github/scripts/shared_downloads.py"
-      - ".github/scripts/release_git.py"
-      - ".github/scripts/shared_builds.py"
-      - ".github/workflows/autopr-zh-tw.yml"
 
 permissions:
   contents: write

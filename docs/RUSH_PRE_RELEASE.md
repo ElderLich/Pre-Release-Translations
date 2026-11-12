@@ -318,8 +318,11 @@ client and is not overridden. Missing required effect scripts stop the build.
 The dedicated Rush workflow builds all locales and commits outputs locally on
 the Actions runner before its existing authorized workflow push. The daily
 dispatcher checks pending locales, recorded source and translations revisions plus
-the shared artwork, config, prompt patcher, mappings, tool, source importer/mappings, and workspace fingerprint before starting a
-Rush build. An unchanged run has identical CDB, ZIP, JSON, and version bytes.
+the shared artwork, inventory configuration and workspace databases before
+starting a Rush build. Pushing those release inputs also starts a Rush build.
+Python, mapping and prompt catalog updates take effect on the next build. To
+apply them immediately, run the Rush workflow manually. An unchanged run has
+identical CDB, ZIP, JSON, and version bytes.
 
 The game consumes these stable paths on the repository's `main` branch:
 

@@ -13,9 +13,6 @@ on:
     paths:
       - "JP/Workspace/test-release.cdb"
       - "JP/Workspace/test-strings.conf"
-      - ".github/scripts/release_git.py"
-      - ".github/scripts/shared_builds.py"
-      - ".github/workflows/jp-release.yml"
 
 permissions:
   contents: write

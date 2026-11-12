@@ -117,7 +117,7 @@ def rush_needs_update() -> tuple[bool, str]:
         sys.path.insert(0, str(Path("Tools").resolve()))
         from rush_prerelease import local_inputs_sha256
         if local_inputs_sha256(Path.cwd()) != state.get("local_inputs_sha256"):
-            return True, "Rush translations, shared artwork or builder changed."
+            return True, "Rush workspace, shared artwork or inventory configuration changed."
     except (OSError, ValueError, TypeError, subprocess.SubprocessError) as exc:
         return True, f"Cannot confirm Rush source freshness ({type(exc).__name__}); checking it."
     return False, "Rush source revisions and local inputs are unchanged."
