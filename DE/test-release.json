@@ -1,5 +1,11 @@
 [
   {
+    "name": "Das Magiebuch-Genie der Prophezeiung",
+    "desc": "Falls diese Karte deiner Hand hinzugefügt wird, außer durch Ziehen: Du kannst sie als Spezialbeschwörung beschwören. Falls du „Regulus, der Prinz von Endymion“ kontrollierst oder er sich in deinem Friedhof befindet: Du kannst 1 Zauber von deinem Friedhof verbannen; beschwöre 1 Monster als Spezialbeschwörung von deiner Hand. Während der Battle Phase (Schnelleffekt): Du kannst 1 Zauber von deinem Friedhof verbannen und dann 1 offenes Monster auf dem Spielfeld wählen; ändere es in die verdeckte Verteidigungsposition. Du kannst jeden Effekt von „Das Magiebuch-Genie der Prophezeiung“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Hexer/Wasser  [★2] 500/400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
+  },
+  {
     "name": "Urteil der Losgeketteten",
     "desc": "Wähle bis zu 2 Zauber/Fallen auf dem Spielfeld, darunter mindestens 1 Karte, die du kontrollierst; zerstöre sie, dann, falls du dadurch eine verdeckte Karte zerstört hast, kannst du 1 „Losgekettet“-Monster von deinem Deck auf den Friedhof legen. Falls diese Karte auf dem Spielfeld durch den Effekt einer „Losgekettet“-Karte zerstört wird: Du kannst 1 „Losgekettet“-Monster der Stufe 8 als Spezialbeschwörung von deinem Deck beschwören, dann kannst du 1 Karte von deiner Hand und 1 Karte vom Friedhof deines Gegners ins Deck mischen. Du kannst jeden Effekt von „Urteil der Losgeketteten“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Zauber]",
