@@ -1,7 +1,13 @@
 [
   {
-    "name": "破械断狱",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "name": "Spellbook Genius of Prophecy",
+    "desc": "If this card is added to your hand, except by drawing it: You can Special Summon it. If you have \"Regulus, the Prince of Endymion\" in your field or GY: You can banish 1 Spell from your GY; Special Summon 1 monster from your hand. During the Battle Phase (Quick Effect): You can banish 1 Spell from your GY, then target 1 face-up monster on the field; change it to face-down Defense Position. You can only use each effect of \"Spellbook Genius of Prophecy\" once per turn.",
+    "overallString": "[Monster|Effect] Spellcaster/Water  [★2] 500/400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
+  },
+  {
+    "name": "Conviction of the Unchained",
+    "desc": "Target up to 2 Spells/Traps on the field, including a card you control; destroy them, then if you destroyed a face-down card, you can send 1 \"Unchained\" monster from your Deck to the GY. If this card on the field is destroyed by an \"Unchained\" card's effect: You can Special Summon 1 Level 8 \"Unchained\" monster from your Deck, then you can shuffle 1 card each from both your hand and your opponent's GY into the Deck. You can only use each effect of \"Conviction of the Unchained\" once per turn.",
     "overallString": "[Spell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
   },
