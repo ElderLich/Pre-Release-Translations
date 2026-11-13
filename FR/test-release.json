@@ -1,5 +1,11 @@
 [
   {
+    "name": "Génie du Livre de Magie de la Prophétie",
+    "desc": "Si cette carte est ajoutée à votre main, sauf en la piochant : vous pouvez l'Invoquer Spécialement. Si vous avez \"Regulus, le Prince d'Endymion\" dans votre Terrain ou Cimetière : vous pouvez bannir 1 Magie depuis votre Cimetière ; Invoquez Spécialement 1 monstre depuis votre main. Durant la Battle Phase (Effet Rapide) : vous pouvez bannir 1 Magie depuis votre Cimetière, puis ciblez 1 monstre face recto sur le Terrain ; changez-le en Position de Défense face verso. Vous ne pouvez utiliser chaque effet de \"Génie du Livre de Magie de la Prophétie\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Magicien/Eau  [★2] 500/400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
+  },
+  {
     "name": "Condamnation des Désenchaînés",
     "desc": "Ciblez max. 2 Magies/Pièges sur le Terrain (une carte que vous contrôlez incluse) ; détruisez-les, puis, si vous avez détruit une carte face verso, vous pouvez envoyer 1 monstre \"Désenchaîné\" depuis votre Deck au Cimetière. Si cette carte sur le Terrain est détruite par l'effet d'une carte \"Désenchaîné\" : vous pouvez Invoquer Spécialement 1 monstre \"Désenchaîné\" de Niveau 8 depuis votre Deck, puis vous pouvez mélanger 1 carte depuis votre main et 1 depuis le Cimetière de votre adversaire dans le Deck. Vous ne pouvez utiliser chaque effet de \"Condamnation des Désenchaînés\" qu'une fois par tour.",
     "overallString": "[Magie]",
