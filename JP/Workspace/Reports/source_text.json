@@ -1,17 +1,24 @@
 {
   "language": "jp",
   "mode": "fill",
-  "candidates": 5,
+  "candidates": 7,
   "matched": 5,
   "unmatched_ids": [
+    100265003,
     100277001
   ],
   "unresolved": [
     {
+      "id": 100265003,
+      "name": "魔导书的贤才 巴特尔",
+      "set_code": "YOS3-JP003",
+      "reason": "No verified source match"
+    },
+    {
       "id": 100277001,
       "name": "破械断狱",
-      "set_code": null,
-      "reason": "No printed set code mapping"
+      "set_code": "YO13-JP001",
+      "reason": "No verified source match"
     }
   ],
   "matches": {
