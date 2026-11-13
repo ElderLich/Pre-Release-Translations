@@ -1,5 +1,11 @@
 [
   {
+    "name": "Spellbook Genius of Prophecy",
+    "desc": "If this card is added to your hand, except by drawing it: You can Special Summon it. If you have \"Regulus, the Prince of Endymion\" in your field or GY: You can banish 1 Spell from your GY; Special Summon 1 monster from your hand. During the Battle Phase (Quick Effect): You can banish 1 Spell from your GY, then target 1 face-up monster on the field; change it to face-down Defense Position. You can only use each effect of \"Spellbook Genius of Prophecy\" once per turn.",
+    "overallString": "[Monster|Effect] Spellcaster/Water  [★2] 500/400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
+  },
+  {
     "name": "Conviction of the Unchained",
     "desc": "Target up to 2 Spells/Traps on the field, including a card you control; destroy them, then if you destroyed a face-down card, you can send 1 \"Unchained\" monster from your Deck to the GY. If this card on the field is destroyed by an \"Unchained\" card's effect: You can Special Summon 1 Level 8 \"Unchained\" monster from your Deck, then you can shuffle 1 card each from both your hand and your opponent's GY into the Deck. You can only use each effect of \"Conviction of the Unchained\" once per turn.",
     "overallString": "[Spell]",
