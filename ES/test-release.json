@@ -1,13 +1,13 @@
 [
   {
-    "name": "破械断狱",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "name": "Prisión Desencadenada",
+    "desc": "Selecciona hasta 2 Mágicas/Trampas en el Campo, incluyendo una Mágica/Trampa que controles; destrúyelas, y después si destruiste una carta Colocada, puedes mandar al Cementerio 1 monstruo \"Desencadenado\" desde tu Deck.\r\nSi esta carta en el Campo es destruida por el efecto de una carta \"Desencadenado\": puedes Invocar de Modo Especial 1 monstruo \"Desencadenado\" de Nivel 8 desde tu Deck, y después puedes barajar al Deck tanto 1 carta de tu mano como 1 carta del Cementerio de tu adversario.\r\nSólo puedes usar estos efectos de \"Prisión Desencadenada\" una vez por turno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
   },
   {
     "name": "Marincesa Corazón de Cristal Azul",
-    "desc": "(Esta carta siempre se trata como \"Marincesa Corazón de Cristal\").\r\nPuedes seleccionar 1 Monstruo de Enlace \"Marincesa\" en tu Cementerio; Invócalo de Modo Especial a tu zona a la que apunte esta carta.\r\nSi esta carta es mandada al Cementerio como material para un monstruo \"Marincesa\" de Enlace-3 o mayor: puedes mandar al Cementerio 1 carta \"Marincesa\" desde tu Deck.\r\nSólo puedes usar estos efectos de \"Marincesa Corazón de Cristal Azul\" una vez por turno.",
+    "desc": "(Esta carta siempre se trata como \"Marincesa Corazón de Cristal\").\t\r\nPuedes seleccionar 1 Monstruo de Enlace \"Marincesa\" en tu Cementerio; Invócalo de Modo Especial a tu zona a la que apunte esta carta.\r\nSi esta carta es mandada al Cementerio como material para un monstruo \"Marincesa\" de Enlace-3 o mayor: puedes mandar al Cementerio 1 carta \"Marincesa\" desde tu Deck.\r\nSólo puedes usar estos efectos de \"Marincesa Corazón de Cristal Azul\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Enlace] Ciberso/AGUA  [LINK-2] 0/-  [↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272029.jpg?version=19.7"
   },
@@ -67,13 +67,13 @@
   },
   {
     "name": "Dragón MAXIMUM del Caos de Ojos Azules",
-    "desc": "Puedes Invocar esta carta por Ritual con \"Forma del Caos Neo\". Debe ser Invocada por Ritual.\r\nPuedes desterrar esta carta en tu mano; añade a tu mano 1 \"Forma del Caos Neo\" desde tu Deck, Cementerio o destierro. Sólo puedes usar este efecto de \"Dragón MAXIMUM del Caos de Ojos Azules\" una vez por turno.\r\nSi tu monstruo que menciona \"Oscuridad Infinita\" ataca a un monstruo en Posición de Defensa, inflige daño de batalla de penetración a tu adversario.\r\nCualquier daño de batalla que tu adversario reciba de batallas que involucren a esta carta se duplica.",
+    "desc": "Puedes Invocar esta carta por Ritual con \"Forma del Caos Neo\". Debe ser Invocada por Ritual.\t\r\nPuedes desterrar esta carta en tu mano; añade a tu mano 1 \"Forma del Caos Neo\" desde tu Deck, Cementerio o destierro. Sólo puedes usar este efecto de \"Dragón MAXIMUM del Caos de Ojos Azules\" una vez por turno.\r\nSi tu monstruo que menciona \"Oscuridad Infinita\" ataca a un monstruo en Posición de Defensa, inflige daño de batalla de penetración a tu adversario.\r\nCualquier daño de batalla que tu adversario reciba de batallas que involucren a esta carta se duplica.",
     "overallString": "[Monstruo|Efecto|Ritual] Dragón/OSCURIDAD  [★8] 4000/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308027.jpg?version=19.7"
   },
   {
     "name": "Dragón Definitivo Verdadero de Ojos Azules",
-    "desc": "\"Dragón Blanco de Ojos Azules\" + 2 monstruos que sean \"Dragón Blanco de Ojos Azules\" y/o mencionen \"Oscuridad Infinita\"\r\nPuede hacer hasta 3 ataques a monstruos durante cada Battle Phase.\r\nSólo puedes usar los siguientes efectos de \"Dragón Definitivo Verdadero de Ojos Azules\" una vez por turno.\r\nDurante tu Main Phase: puedes Colocar 1 Mágica/Trampa que mencione \"Oscuridad Infinita\" desde tu Deck o Cementerio.\r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo en el Campo: puedes desterrar ese monstruo.",
+    "desc": "\"Dragón Blanco de Ojos Azules\" + 2 monstruos que sean \"Dragón Blanco de Ojos Azules\" y/o mencionen \"Oscuridad Infinita\"\t\r\nPuede hacer hasta 3 ataques a monstruos durante cada Battle Phase.\r\nSólo puedes usar los siguientes efectos de \"Dragón Definitivo Verdadero de Ojos Azules\" una vez por turno.\r\nDurante tu Main Phase: puedes Colocar 1 Mágica/Trampa que mencione \"Oscuridad Infinita\" desde tu Deck o Cementerio.\r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo en el Campo: puedes desterrar ese monstruo.",
     "overallString": "[Monstruo|Efecto|Fusión] Dragón/LUZ  [★12] 4500/3800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308029.jpg?version=19.7"
   },
