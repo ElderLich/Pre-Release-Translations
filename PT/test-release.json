@@ -1,7 +1,7 @@
 [
   {
-    "name": "魔导书的贤才 巴特尔",
-    "desc": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡用抽卡以外的方法加入手卡的场合才能发动。这张卡特殊召唤。\r\n②：自己场上或墓地有「圣月之皇太子 雷古勒斯」存在的场合，从自己墓地把1张魔法卡除外才能发动。从手卡把1只怪兽特殊召唤。\r\n③：自己·对方的战斗阶段，从自己墓地把1张魔法卡除外，以场上1只表侧表示怪兽为对象才能发动。那只怪兽变成里侧守备表示。",
+    "name": "Livro de Magia, Gênio da Profecia",
+    "desc": "Se este card é adiciona à sua mão, exceto ao compra-lo: você pode Invoca-lo por Invocação-Especial.\r\nSe você tem \"Regulus, o Príncipe de Endymion\" no seu campo ou Cemitério: você pode banir 1 Magia do seu Cemitério; Invoque por Invocação-Especial 1 monstro da sua mão.\r\nDurante a Fase de Batalha (Efeito Rápido): você pode banir 1 Magia do seu Cemitério, então escolha 1 monstro com a face para cima no campo; mude-o para Posição de Defesa com a face para baixo.\r\nVocê só pode usar cada um dos efeitos de \"Livro de Magia, Gênio da Profecia\" uma vez por turno.",
     "overallString": "[Monstro|Efeito] Mago/Água  [★2] 500/400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
   },
