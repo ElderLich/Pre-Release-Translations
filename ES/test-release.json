@@ -1,7 +1,7 @@
 [
   {
-    "name": "Prisión Desencadenada",
-    "desc": "Selecciona hasta 2 Mágicas/Trampas en el Campo, incluyendo una Mágica/Trampa que controles; destrúyelas, y después si destruiste una carta Colocada, puedes mandar al Cementerio 1 monstruo \"Desencadenado\" desde tu Deck.\r\nSi esta carta en el Campo es destruida por el efecto de una carta \"Desencadenado\": puedes Invocar de Modo Especial 1 monstruo \"Desencadenado\" de Nivel 8 desde tu Deck, y después puedes barajar al Deck tanto 1 carta de tu mano como 1 carta del Cementerio de tu adversario.\r\nSólo puedes usar estos efectos de \"Prisión Desencadenada\" una vez por turno.",
+    "name": "Condena de los Desencadenados",
+    "desc": "Selecciona hasta 2 Mágicas/Trampas en el Campo, incluyendo una Mágica/Trampa que controles; destrúyelas, y después si destruiste una carta Colocada, puedes mandar al Cementerio 1 monstruo \"Desencadenado\" desde tu Deck.\r\nSi esta carta en el Campo es destruida por el efecto de una carta \"Desencadenado\": puedes Invocar de Modo Especial 1 monstruo \"Desencadenado\" de Nivel 8 desde tu Deck, y después puedes barajar al Deck tanto 1 carta de tu mano como 1 carta del Cementerio de tu adversario.\r\nSólo puedes usar estos efectos de \"Condena de los Desencadenados\" una vez por turno.",
     "overallString": "[Mágica]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
   },
