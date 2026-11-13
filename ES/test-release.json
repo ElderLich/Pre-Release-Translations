@@ -1,7 +1,7 @@
 [
   {
-    "name": "魔导书的贤才 巴特尔",
-    "desc": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡用抽卡以外的方法加入手卡的场合才能发动。这张卡特殊召唤。\r\n②：自己场上或墓地有「圣月之皇太子 雷古勒斯」存在的场合，从自己墓地把1张魔法卡除外才能发动。从手卡把1只怪兽特殊召唤。\r\n③：自己·对方的战斗阶段，从自己墓地把1张魔法卡除外，以场上1只表侧表示怪兽为对象才能发动。那只怪兽变成里侧守备表示。",
+    "name": "Genio del Libro de Magia de la Profecía",
+    "desc": "Si esta carta es añadida a tu mano, excepto robándola: puedes Invocarla de Modo Especial.\r\nSi tienes \"Régulo, el Príncipe de Endimión\" en tu Campo o Cementerio: puedes desterrar 1 Mágica de tu Cementerio; Invoca de Modo Especial 1 monstruo desde tu mano.\r\n(Efecto Rápido): Durante la Battle Phase: puedes desterrar 1 Mágica de tu Cementerio, y después seleccionar 1 monstruo boca arriba en el Campo; cámbialo a Posición de Defensa boca abajo.\r\nSólo puedes usar estos efectos de \"Genio del Libro de Magia de la Profecía\" una vez por turno.",
     "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/AGUA  [★2] 500/400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
   },
