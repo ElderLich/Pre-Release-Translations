@@ -3,16 +3,7 @@
   "mode": "fill",
   "candidates": 0,
   "matched": 0,
-  "unmatched_ids": [
-    100277001
-  ],
-  "unresolved": [
-    {
-      "id": 100277001,
-      "name": "破械断狱",
-      "set_code": null,
-      "reason": "No printed set code mapping"
-    }
-  ],
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {}
 }
