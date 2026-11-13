@@ -1,19 +1,10 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 175,
-  "matched": 175,
-  "unmatched_ids": [
-    100277001
-  ],
-  "unresolved": [
-    {
-      "id": 100277001,
-      "name": "破械断狱",
-      "set_code": null,
-      "reason": "No printed set code mapping"
-    }
-  ],
+  "candidates": 177,
+  "matched": 177,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -26,6 +17,10 @@
     "100262301": {
       "set_code": "26TP-JP301",
       "source": "https://yugipedia.com/wiki/The_Dark_Dragon_Lord_of_Ultum"
+    },
+    "100265003": {
+      "set_code": "YOS3-JP003",
+      "source": "https://yugipedia.com/wiki/Spellbook_Genius_of_Prophecy"
     },
     "100268001": {
       "set_code": "YAC1-JP001",
@@ -290,6 +285,10 @@
     "100276005": {
       "set_code": "27PR-JP005",
       "source": "https://yugipedia.com/wiki/Finger_Game"
+    },
+    "100277001": {
+      "set_code": "YO13-JP001",
+      "source": "https://yugipedia.com/wiki/Conviction_of_the_Unchained"
     },
     "101306082": {
       "set_code": "BETB-EN082",
