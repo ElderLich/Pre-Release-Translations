@@ -1,175 +1,175 @@
 [
   {
-    "name": "魔导书的贤才 巴特尔",
-    "desc": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡用抽卡以外的方法加入手卡的场合才能发动。这张卡特殊召唤。\r\n②：自己场上或墓地有「圣月之皇太子 雷古勒斯」存在的场合，从自己墓地把1张魔法卡除外才能发动。从手卡把1只怪兽特殊召唤。\r\n③：自己·对方的战斗阶段，从自己墓地把1张魔法卡除外，以场上1只表侧表示怪兽为对象才能发动。那只怪兽变成里侧守备表示。",
+    "name": "Genio della Profezia del Libro di Magia",
+    "desc": "Se questa carta viene aggiunta alla tua mano, eccetto quando viene pescata: Puoi Evocare Specialmente questa carta.\r\nSe hai \"Regulus, il Principe di Endymion\" sul tuo Terreno o nel tuo Cimitero: Puoi bandire 1 Magia dal tuo Cimitero; Evoca Specialmente 1 mostro dalla tua mano.\r\nDurante la Battle Phase (Effetto Rapido): Puoi bandire 1 Magia dal tuo Cimitero, poi scegli come bersaglio 1 mostro scoperto sul Terreno; mettilo coperto in Posizione di Difesa.\r\nPuoi utilizzare ogni effetto di \"Genio della Profezia del Libro di Magia\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto] Incantatore/Acqua  [★2] 500/400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100265003.jpg?version=19.7"
   },
   {
-    "name": "破械断狱",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以包含自己场上的魔法·陷阱卡的场上最多2张魔法·陷阱卡为对象才能发动。那些卡破坏。把里侧表示卡破坏的场合，可以再从卡组把1只「破械」怪兽送去墓地。\r\n②：场上的这张卡被「破械」卡的效果破坏的场合才能发动。从卡组把1只8星「破械」怪兽特殊召唤。那之后，可以让自己手卡和对方墓地的卡各1张回到卡组。",
+    "name": "Convinzione degli Svincolati",
+    "desc": "Scegli come bersaglio fino a 2 Magie/Trappole sul Terreno, inclusa una carta che controlli; distruggile, poi, se hai distrutto una carta coperta, puoi mandare 1 mostro \"Svincolato\" dal tuo Deck al Cimitero.\r\nSe questa carta sul Terreno viene distrutta dall'effetto di una carta \"Svincolato\": Puoi Evocare Specialmente 1 mostro \"Svincolato\" di Livello 8 dal tuo Deck, poi puoi mischiare 1 carta dalla tua mano e 1 dal Cimitero del tuo avversario nel Deck.\r\nPuoi utilizzare ogni effetto di \"Convinzione degli Svincolati\" una sola volta per turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100277001.jpg?version=19.7"
   },
   {
-    "name": "海晶少女 蓝水晶心",
-    "desc": "「海晶少女」怪兽2只\r\n这个卡名在规则上当作「海晶少女 水晶心」使用。这个卡名的①②的效果1回合各能使用1次。\r\n①：以自己墓地1只「海晶少女」连接怪兽为对象才能发动。那只怪兽在成为这张卡所连接区的自己场上特殊召唤。\r\n②：这张卡作为连接3以上的「海晶少女」连接怪兽的连接素材被送去墓地的场合才能发动。从卡组把1张「海晶少女」卡送去墓地。",
+    "name": "Marincipessa Cuore di Cristallo Blu",
+    "desc": "2 mostri \"Marincipessa\"\r\n(Questa carta viene sempre considerata come \"Marincipessa Cuore di Cristallo\".)\r\nPuoi scegliere come bersaglio 1 Mostro Link \"Marincipessa\" nel tuo Cimitero; Evocalo Specialmente in una tua Zona puntata da questa carta.\r\nSe questa carta viene mandata al Cimitero come materiale per un Mostro Link \"Marincipessa\" Link-3 o superiore: Puoi mandare 1 carta \"Marincipessa\" dal tuo Deck al Cimitero.\r\nPuoi utilizzare ogni effetto di \"Marincipessa Cuore di Cristallo Blu\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Link] Cyberso/Acqua  [LINK-2] 0/-  [↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272029.jpg?version=19.7"
   },
   {
-    "name": "海晶少女神流",
-    "desc": "自己场上有连接3以上的「海晶少女」连接怪兽存在的场合，这张卡的发动从手卡也能用。\r\n①：以最多有自己场上的「海晶少女」连接怪兽数量的，场上的魔法·陷阱卡为对象才能发动。那些卡破坏。\r\n②：把墓地的这张卡除外才能发动。自己场上的1张连接3以上的「海晶少女」连接怪兽卡送去墓地。那之后，可以从自己的手卡·墓地把1只电子界族·水属性仪式怪兽当作仪式召唤特殊召唤。",
+    "name": "Traboccamento Marincipessa",
+    "desc": "Scegli come bersaglio Magie/Trappole sul Terreno, fino al numero di Mostri Link \"Marincipessa\" che controlli; distruggile. Puoi bandire questa carta dal tuo Cimitero; manda 1 Carta Mostro Link \"Marincipessa\" Link-3 o superiore che controlli al Cimitero, poi puoi Evocare Specialmente 1 Mostro Rituale Cyberso ACQUA dalla tua mano o dal tuo Cimitero (questa Evocazione viene considerata un’Evocazione Rituale). Se controlli un Mostro Link \"Marincipessa\" Link-3 o superiore, puoi attivare questa carta dalla tua mano.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272032.jpg?version=19.7"
   },
   {
-    "name": "无垠黑暗",
-    "desc": "这个卡名的②③的效果1回合各能使用1次。\r\n①：原本攻击力4000以上的自己场上的怪兽不会被效果破坏，对方不能把那些作为效果的对象。\r\n②：自己主要阶段才能发动。从卡组把除「无垠黑暗」外的，有「无垠黑暗」的卡名记述的1张卡加入手卡。那之后，选自己1张手卡除外。\r\n③：这张卡被对方破坏的场合才能发动。从卡组把攻击力是4000或0的1只10星怪兽加入手卡。",
+    "name": "Oscurità Senza Fine",
+    "desc": "I mostri che controlli con 4000 o più ATK originale non possono essere distrutti dagli effetti delle carte, inoltre il tuo avversario non può sceglierli come bersaglio con gli effetti delle carte.\r\nPuoi utilizzare ognuno dei seguenti effetti di \"Oscurità Senza Fine\" una sola volta per turno.\r\nDurante la tua Main Phase: Puoi aggiungere 1 carta che menziona \"Oscurità Senza Fine\" dal tuo Deck alla tua mano, eccetto \"Oscurità Senza Fine\", poi bandisci 1 carta dalla tua mano.\r\nSe questa carta, mentre è in possesso del suo proprietario, viene distrutta da una carta dell'avversario: Puoi aggiungere 1 mostro di Livello 10 con 0 o 4000 ATK dal tuo Deck alla tua mano.",
     "overallString": "[Magia|Terreno]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308049.jpg?version=19.7"
   },
   {
-    "name": "真混沌形态",
-    "desc": "①：可以从以下效果选择1个发动（这个卡名的以下效果1回合各能选择1次）。\r\n●自己手卡·墓地·除外状态的怪兽作为融合素材回到卡组，把1只「青眼」融合怪兽融合召唤。\r\n●等级合计直到变成仪式召唤的怪兽的等级以上为止，从自己的手卡·场上·墓地把有「无垠黑暗」的卡名记述的怪兽或者「青眼白龙」除外，把自己手卡·除外状态的1只「混沌」仪式怪兽仪式召唤。",
+    "name": "Neo Forma del Chaos",
+    "desc": "Attiva 1 di questi effetti (ma puoi utilizzare ogni effetto di \"Neo Forma del Chaos\" una sola volta per turno);\n● Evoca tramite Fusione 1 Mostro Fusione \"Occhi Blu\" dal tuo Extra Deck, mischiando i suoi materiali dalla tua mano, Cimitero e/o carte bandite nel Deck.\n● Evoca tramite Rituale 1 Mostro Rituale \"Chaos\" o \"Glorioso Soldato Nero\" dalla tua mano o dalle tue carte bandite, bandendo dalla tua mano, Terreno e/o Cimitero mostri che sono \"Drago Bianco Occhi Blu\" e/o menzionano \"Oscurità Senza Fine\", i cui Livelli totali sono pari o superiori al suo Livello.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308050.jpg?version=19.7"
   },
   {
-    "name": "次元超越",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：把有「无垠黑暗」的卡名记述的自己墓地·除外状态的1只怪兽特殊召唤。在对方发动过效果的回合把这张卡发动的场合，特殊召唤的怪兽也能从卡组选。\r\n②：自己·对方的战斗阶段开始时，把墓地的这张卡除外才能发动。自己除外状态的1只「青眼白龙」特殊召唤。这个效果特殊召唤的怪兽在战斗阶段结束时除外。",
+    "name": "Ascensione Dimensionale",
+    "desc": "Evoca Specialmente 1 mostro che menziona \"Oscurità Senza Fine\" dal tuo Cimitero o dalle tue carte bandite, oppure, se hai attivato questa carta nel turno in cui il tuo avversario ha attivato una carta o un effetto, puoi invece Evocare Specialmente dal tuo Deck.\r\nAll'inizio della Battle Phase: Puoi bandire questa carta dal tuo Cimitero; Evoca Specialmente 1 \"Drago Bianco Occhi Blu\" tra le tue carte bandite, ma bandiscilo alla fine della Battle Phase.\r\nPuoi utilizzare ogni effetto di \"Ascensione Dimensionale\" una sola volta per turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308051.jpg?version=19.7"
   },
   {
-    "name": "瘟疫感染",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以有「无垠黑暗」的卡名记述的自己场上·墓地1只怪兽为对象才能发动。自己失去那只怪兽攻击力数值的基本分。这个回合中，以那个数值让对方场上的怪兽的攻击力下降。\r\n②：把墓地的这张卡除外，以对方场上1只攻击力0的怪兽为对象才能发动。那只怪兽除外。",
+    "name": "Infezione Pandemica",
+    "desc": "Scegli come bersaglio 1 mostro sul tuo Terreno o nel tuo Cimitero che menziona \"Oscurità Senza Fine\"; perdi LP pari al suo ATK e, se lo fai, i mostri controllati dal tuo avversario perdono un ammontare di ATK pari a quel valore in questo turno.\r\nPuoi bandire questa carta dal tuo Cimitero, poi scegli come bersaglio 1 mostro con 0 ATK controllato dal tuo avversario; bandiscilo.\r\nPuoi utilizzare ogni effetto di \"Infezione Pandemica\" una sola volta per turno.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308071.jpg?version=19.7"
   },
   {
-    "name": "被引导的幻兽-青眼亚白龙",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡在手卡存在的场合，从手卡·卡组把1只「青眼白龙」除外才能发动。这张卡特殊召唤。那之后，可以从自己的手卡·卡组·墓地把1张「无垠黑暗」在自己的场地区域以表侧表示放置。\r\n②：自己的「青眼」怪兽除外中的场合，以对方场上1张卡为对象才能发动。那张卡除外。这个回合，这张卡不能攻击。",
+    "name": "Drago Bianco Alternativo Occhi Blu, la Bestia Fantasma Guidata",
+    "desc": "Se questa carta è nella tua mano: Puoi bandire 1 \"Drago Bianco Occhi Blu\" dalla tua mano o dal tuo Deck; Evoca Specialmente questa carta, poi puoi Posizionare 1 \"Oscurità Senza Fine\" dalla tua mano, Deck o Cimitero scoperta nella tua Zona Terreno.\r\nSe hai un mostro \"Occhi Blu\" bandito: Puoi scegliere come bersaglio 1 carta controllata dal tuo avversario; bandiscila, inoltre questa carta non può attaccare in questo turno.\r\nPuoi utilizzare ogni effetto di \"Drago Bianco Alternativo Occhi Blu, la Bestia Fantasma Guidata\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto] Drago/Luce  [★8] 3000/2500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308001.jpg?version=19.7"
   },
   {
-    "name": "水晶云龙",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：自己场上的怪兽，不存在的场合或者只有有「无垠黑暗」的卡名记述的怪兽的场合才能发动。这张卡从手卡特殊召唤。\r\n②：这张卡召唤·特殊召唤的场合才能发动。从卡组把除6星怪兽外的，有「无垠黑暗」的卡名记述的1只怪兽加入手卡。自己的「青眼」怪兽除外中的场合，这个效果加入手卡的数量可以变成2只（相同属性最多1只）。",
+    "name": "Drago Nuvola Krystal",
+    "desc": "Se non controlli mostri, o tutti i mostri che controlli menzionano \"Oscurità Senza Fine\": Puoi Evocare Specialmente questa carta dalla tua mano.\r\nSe questa carta viene Evocata Normalmente o Specialmente: Puoi aggiungere 1 mostro che menziona \"Oscurità Senza Fine\" dal tuo Deck alla tua mano, eccetto un mostro di Livello 6, oppure, se hai un mostro \"Occhi Blu\" bandito, puoi invece aggiungere 2 di quei mostri con Attributi diversi tra loro.\r\nPuoi utilizzare ogni effetto di \"Drago Nuvola Krystal\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto] Drago/Luce  [★6] 2500/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308002.jpg?version=19.7"
   },
   {
-    "name": "强袭斩翼龙",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡召唤·特殊召唤的场合才能发动。从卡组选1只「青眼」怪兽，送去墓地或除外。\r\n②：自己的「青眼」怪兽除外中的场合，把这张卡解放才能发动。从自己的卡组·墓地把除「强袭斩翼龙」外的，1只有「无垠黑暗」的卡名记述的怪兽或者「青眼白龙」特殊召唤。",
+    "name": "Viverna Fendente d'Assalto",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: Puoi mandare al Cimitero o bandire 1 mostro \"Occhi Blu\" dal tuo Deck.\r\nSe hai un mostro \"Occhi Blu\" bandito: Puoi offrire come Tributo questa carta; Evoca Specialmente 1 \"Drago Bianco Occhi Blu\" o 1 mostro che menziona \"Oscurità Senza Fine\", eccetto \"Viverna Fendente d'Assalto\", dal tuo Deck o Cimitero.\r\nPuoi utilizzare ogni effetto di \"Viverna Fendente d'Assalto\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto] Drago/Luce  [★4] 1800/1000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308003.jpg?version=19.7"
   },
   {
-    "name": "替罪的黑暗道化师 扎奇",
-    "desc": "这个卡名的①②③的效果1回合各能使用1次。\r\n①：这张卡召唤·特殊召唤的场合才能发动。从卡组把1张有「无垠黑暗」的卡名记述的魔法·陷阱卡或者「替罪的黑暗」加入手卡。\r\n②：自己的「青眼」怪兽除外中的场合，对方回合，把这张卡解放，以场上1只怪兽为对象才能发动。那只怪兽破坏。\r\n③：自己场上的龙族怪兽被效果破坏的场合，可以作为代替把手卡·场上的这张卡除外。",
+    "name": "Saggi, il Clown del Sacrificio Oscuro",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: Puoi aggiungere 1 Magia/Trappola che menziona \"Oscurità Senza Fine\" o 1 \"Sacrificio Oscuro\" dal tuo Deck alla tua mano.\r\nDurante il turno del tuo avversario, se hai un mostro \"Occhi Blu\" bandito (Effetto Rapido): Puoi offrire come Tributo questa carta, poi scegli come bersaglio 1 mostro sul Terreno; distruggilo.\r\nSe un mostro Drago che controlli sta per essere distrutto dall'effetto di una carta, puoi bandire invece questa carta dalla tua mano o dal tuo Terreno.\r\nPuoi utilizzare ogni effetto di \"Saggi, il Clown del Sacrificio Oscuro\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto] Incantatore/Oscurità  [★3] 600/1500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308004.jpg?version=19.7"
   },
   {
-    "name": "青眼混沌极限龙",
-    "desc": "「混沌形态」降临。\r\n这张卡不用仪式召唤不能特殊召唤。这个卡名的①的效果1回合只能使用1次。\r\n①：把这张卡从手卡除外才能发动。自己的卡组·墓地·除外状态的1张「真混沌形态」加入手卡。\r\n②：有「无垠黑暗」的卡名记述的自己怪兽向守备表示怪兽攻击的场合，给予对方攻击力超过那个守备力数值的战斗伤害。\r\n③：这张卡的战斗发生的对对方的战斗伤害变成2倍。",
+    "name": "Drago Chaos MASSIMO Occhi Blu",
+    "desc": "Puoi Evocare tramite Rituale questa carta con \"Forma del Chaos\". Deve essere Evocata tramite Rituale.\r\nPuoi bandire questa carta dalla tua mano; aggiungi 1 \"Neo Forma del Chaos\" dal tuo Deck, Cimitero o dalle tue carte bandite alla tua mano. Puoi utilizzare questo effetto di \"Drago Chaos MASSIMO Occhi Blu\" una sola volta per turno.\r\nSe un tuo mostro che menziona \"Oscurità Senza Fine\" attacca un mostro in Posizione di Difesa, infliggi danno da combattimento perforante al tuo avversario.\r\nQualsiasi danno da combattimento subito dal tuo avversario dalle battaglie che coinvolgono questa carta viene raddoppiato.",
     "overallString": "[Mostro|Effetto|Rituale] Drago/Oscurità  [★8] 4000/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308027.jpg?version=19.7"
   },
   {
-    "name": "真青眼超究极龙",
-    "desc": "「青眼白龙」+有「无垠黑暗」的卡名记述的怪兽（或者「青眼白龙」）×2\r\n这个卡名的②③的效果1回合各能使用1次。\r\n①：这张卡在同1次的战斗阶段中最多3次可以向怪兽攻击。\r\n②：自己主要阶段才能发动。从自己的卡组·墓地把有「无垠黑暗」的卡名记述的1张魔法·陷阱卡在自己场上盖放。\r\n③：对方把场上的怪兽的效果发动时才能发动。那只怪兽除外。",
+    "name": "Neo Drago Finale Iper Occhi Blu",
+    "desc": "\"Drago Bianco Occhi Blu\" + 2 mostri che sono \"Drago Bianco Occhi Blu\" e/o menzionano \"Oscurità Senza Fine\"\r\nPuò effettuare fino a 3 attacchi contro mostri durante ogni Battle Phase.\r\nPuoi utilizzare ognuno dei seguenti effetti di \"Neo Drago Finale Iper Occhi Blu\" una sola volta per turno.\r\nDurante la tua Main Phase: Puoi Posizionare 1 Magia/Trappola che menziona \"Oscurità Senza Fine\" dal tuo Deck o Cimitero.\r\nQuando il tuo avversario attiva un effetto di un mostro sul Terreno (Effetto Rapido): Puoi bandire quel mostro.",
     "overallString": "[Mostro|Effetto|Fusione] Drago/Luce  [★12] 4500/3800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308029.jpg?version=19.7"
   },
   {
-    "name": "王之记忆-欧贝利斯克之巨神兵",
-    "desc": "这张卡不能通常召唤，用这张卡的效果才能特殊召唤。这个卡名的效果在决斗中只能使用1次。\r\n①：把这张卡抽到时，或者对方怪兽的直接攻击宣言时，把手卡的这张卡给对方出示才能发动。这个回合被破坏的怪兽从自己墓地尽可能特殊召唤。那之后，把自己场上的怪兽尽可能解放，这张卡特殊召唤。这个效果把3只以上解放的场合，再把对方场上的怪兽全部破坏，对方的基本分变成一半。",
+    "name": "Obelisk il Tormentatore, Memoria del Faraone",
+    "desc": "Non può essere Evocato Normalmente/Posizionato. Deve essere Evocato Specialmente con il suo stesso effetto.\r\nQuando peschi questa carta, o un mostro del tuo avversario dichiara un attacco diretto: Puoi rivelare questa carta nella tua mano; Evoca Specialmente dal tuo Cimitero quanti più mostri possibile che sono stati distrutti in questo turno, poi offri come Tributo quanti più mostri possibile che controlli e, se lo fai, Evoca Specialmente questa carta, poi, se hai offerto come Tributo 3 o più mostri, distruggi quanti più mostri possibile controllati dal tuo avversario e, se lo fai, dimezza i LP del tuo avversario.\r\nPuoi utilizzare questo effetto di \"Obelisk il Tormentatore, Memoria del Faraone\" una sola volta per Duello.",
     "overallString": "[Mostro|Effetto|Evocazione Speciale] Bestia Divina/Divino  [★10] 4000/4000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275001.jpg?version=19.7"
   },
   {
-    "name": "强化反击",
-    "desc": "①：可以从以下效果选择1个发动。\r\n●给予自己伤害的效果发动时才能发动。那个效果让自己受到的伤害变成0。那个效果处理后，以那个数值让自己场上1只表侧表示怪兽的攻击力上升。\r\n●自己和对方的怪兽之间进行战斗的伤害计算时才能发动。以那只对方怪兽的攻击力数值让那只自己怪兽的攻击力只在那次伤害计算时上升。\r\n●自己因战斗·效果受到伤害时才能发动。以那个数值给予对方伤害。 ",
+    "name": "Contrattacco Potenziato",
+    "desc": "Attiva 1 di questi effetti;\n● Quando viene attivata una carta o un effetto che ti infliggerebbe danno: Fai in modo che quell’effetto ti infligga 0 danni. Immediatamente dopo che quell’effetto si è risolto, 1 mostro scoperto che controlli guadagna ATK pari ai danni che avresti subito.\n● Durante il calcolo dei danni, se il tuo mostro combatte con un mostro dell’avversario: Il tuo mostro che sta combattendo guadagna ATK pari all’ATK di quel mostro dell’avversario, solo durante il calcolo dei danni.\n● Quando subisci danni da combattimento o da effetto: Infliggi al tuo avversario danni pari ai danni che hai subito.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275006.jpg?version=19.7"
   },
   {
-    "name": "龙之宝球",
-    "desc": "这个卡名的②的效果1回合只能使用1次。\r\n①：这个回合中，自己场上的龙族怪兽的效果的发动以及那些发动的效果不会被无效化。\r\n②：龙族通常怪兽或者效果已被无效化的龙族怪兽在自己场上存在的场合，把墓地的这张卡除外才能发动。从卡组选1只龙族怪兽，再从卡组选和那只怪兽卡名不同、攻击力·守备力相同的1只龙族怪兽。那2只怪兽加入手卡。",
+    "name": "Sfera del Drago",
+    "desc": "Le attivazioni degli effetti dei mostri Drago attivati sul tuo Terreno e i loro effetti non possono essere annullati in questo turno.\r\nSe controlli un mostro Drago che è un Mostro Normale o i cui effetti sono annullati: Puoi bandire questa carta dal tuo Cimitero; aggiungi 2 mostri Drago dal tuo Deck alla tua mano con lo stesso ATK/DEF tra loro, ma con nomi diversi. Puoi utilizzare questo effetto di \"Sfera del Drago\" una sola volta per turno.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275007.jpg?version=19.7"
   },
   {
-    "name": "秘仪之力8-力量",
-    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡在手卡存在，持有进行投掷硬币效果的卡在场上存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡召唤·反转召唤·特殊召唤的场合发动。进行1次投掷硬币，那个里表的以下效果适用。\r\n●表：得到对方场上1只怪兽的控制权。\r\n●里：对方选自己场上1只其他怪兽，那个控制权移给对方。",
+    "name": "Energia Arcana VIII - La Forza",
+    "desc": "Se questa carta è nella tua mano e sul Terreno c’è una carta che ha un effetto di lancio della moneta: Puoi Evocare Specialmente questa carta. Puoi utilizzare questo effetto di \"Energia Arcana VIII - La Forza\" una sola volta per turno. Se questa carta viene Evocata: Lancia una moneta.\n● Testa: Prendi il controllo di 1 mostro controllato dal tuo avversario.\n● Croce: Il tuo avversario prende il controllo di 1 altro mostro che controlli.",
     "overallString": "[Mostro|Effetto] Fata/Luce  [★5] 1800/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270201.jpg?version=19.7"
   },
   {
-    "name": "镰口之审判官",
-    "desc": "记录现世一切，对踏入冥界的灵魂予以裁决。那宣判之声，听起来便是“呱哇哇”一般。",
+    "name": "Minjal Khery Hebet",
+    "desc": "Registra tutto ciò che accade in questo mondo e pronuncia giudizi sulle anime che viaggiano verso gli inferi. La voce che pronuncia il verdetto ha un suono simile a \"Gwawwaa\".",
     "overallString": "[Mostro|Normale] Zombie/Oscurità  [★6] 1900/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276001.jpg?version=19.7"
   },
   {
-    "name": "暗黑海异",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：这张卡在手卡存在，自己场上有通常怪兽或者恐龙族怪兽存在的场合才能发动。这张卡特殊召唤。\r\n②：这张卡被战斗·效果破坏送去墓地的场合才能发动。这张卡当作持有以下效果的装备魔法卡使用给场上1只表侧表示怪兽装备。\r\n●装备怪兽的攻击力下降2400。\r\n●只要装备怪兽的原本攻击力在2500以上，装备怪兽的效果不能发动。",
+    "name": "Shasta Nera",
+    "desc": "Se questa carta è nella tua mano e controlli un Mostro Normale o un mostro Dinosauro: Puoi Evocare Specialmente questa carta.\r\nSe questa carta viene distrutta in battaglia o dall'effetto di una carta e mandata al Cimitero: Puoi equipaggiare questa carta a 1 mostro scoperto sul Terreno come Magia Equipaggiamento con questi effetti.\r\n● Il mostro equipaggiato perde 2400 ATK.\r\n● Se il mostro equipaggiato ha 2500 o più ATK originale, nessun giocatore può attivare i suoi effetti.\r\nPuoi utilizzare ogni effetto di \"Shasta Nera\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto] Dinosauro/Acqua  [★6] 1200/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276002.jpg?version=19.7"
   },
   {
-    "name": "四次元龙 几里得龙",
-    "desc": "调整+调整以外的怪兽1只以上\r\n①：可以把以下数量的手卡除外，发动那个效果（这个卡名的以下效果1回合各能使用1次）。\r\n●1张：从手卡把1只4星以下的怪兽特殊召唤。\r\n●2张：场上1只4星以下的怪兽除外。\r\n●3张：从卡组把1只暗属性怪兽送去墓地。\r\n●4张：下次的自己抽卡阶段的通常抽卡变成5张。\r\n②：这个回合第4次的攻击宣言时才能发动。这张卡的攻击力变成4000。",
+    "name": "Craydeath, il Drago Quadrimensionale",
+    "desc": "1 Tuner + 1+ mostri non-Tuner\r\nQuando viene dichiarato il quarto attacco di ogni turno: Puoi far diventare l'ATK di questa carta 4000. Puoi bandire fino a 4 carte dalla tua mano, poi attiva questo effetto in base al numero di carte bandite (ma puoi utilizzare ognuno di questi effetti di \"Craydeath, il Drago Quadrimensionale\" una sola volta per turno);\r\n● 1: Evoca Specialmente 1 mostro di Livello 4 o inferiore dalla tua mano.\r\n● 2: Bandisci 1 mostro di Livello 4 o inferiore sul Terreno.\r\n● 3: Manda 1 mostro OSCURITÀ dal tuo Deck al Cimitero.\r\n● 4: Pesca 5 carte invece di 1 per la tua normale pescata durante la tua prossima Draw Phase.",
     "overallString": "[Mostro|Effetto|Synchro] Drago/Oscurità  [★8] 2400/2400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276003.jpg?version=19.7"
   },
   {
-    "name": "圣魔之贤王 恩底弥翁",
-    "desc": "Valore Pendulum = 9\n[ Effetto Pendulum ]\n这个卡名的②的灵摆效果1回合只能使用1次。\n①：每次自己或对方把魔法卡发动，给这张卡放置1个魔力指示物。\n②：自己主要阶段才能发动。这张卡破坏，从卡组把7星以外的，1只「大贤者」怪兽或「恩底弥翁」怪兽加入手卡。\n----------------------------------------\n[ Effetto di un Mostro ]\n这张卡不能通常召唤。「圣魔之贤王 恩底弥翁」1回合1次，把自己场上1张表侧表示的魔法卡除外的场合才能从手卡·额外卡组特殊召唤。\n①：有装备卡装备中的这张卡不会被战斗·效果破坏。\n②：这张卡攻击的伤害步骤结束时，把自己场上1张表侧表示的魔法卡除外，或把自己场上3个魔力指示物取除才能发动。这张卡的攻击力上升500，可以继续攻击。",
+    "name": "Endymion, il Signore dei Magistus",
+    "desc": "Scala Pendulum = 9\n[ Effetto Pendulum ]\nOgni volta che viene attivata una Carta Magia, metti 1 Segnalino Magia su questa carta alla risoluzione di quell’attivazione. Durante la tua Main Phase: Puoi distruggere questa carta e, se lo fai, aggiungi 1 mostro \"Magistus\" o \"Endymion\" dal tuo Deck alla tua mano, eccetto un mostro di Livello 7. Puoi utilizzare questo effetto di \"Endymion, il Signore dei Magistus\" una sola volta per turno.\n----------------------------------------\n[ Effetto di un Mostro ]\nNon può essere Evocata Normalmente/Posizionata. Deve essere Evocata Specialmente (dalla tua mano o dall’Extra Deck) bandendo 1 Magia scoperta che controlli. Puoi Evocare Specialmente \"Endymion, il Signore dei Magistus\" in questo modo una sola volta per turno. Non può essere distrutta in battaglia o dagli effetti delle carte mentre è equipaggiata con una Carta Equipaggiamento. Alla fine del Damage Step, se questa carta ha attaccato: Puoi bandire 1 Magia scoperta che controlli, oppure rimuovere 3 Segnalini Magia dal tuo Terreno; questa carta guadagna 500 ATK, inoltre può attaccare nuovamente di seguito.",
     "overallString": "[Mostro|Effetto|Pendulum|Evocazione Speciale] Incantatore/Oscurità  [★7] 2700/1700  9/9",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274003.jpg?version=19.7"
   },
   {
-    "name": "绝火的祆威",
-    "desc": "这个卡名的①②的效果1回合只能有1次使用其中任意1个。\r\n①：以自己场上1只「大贤者」怪兽或魔法师族怪兽，和对方场上1只表侧表示怪兽为对象才能发动。那只对方的表侧表示怪兽当作攻击力上升500的装备魔法卡使用给作为对象的自己怪兽装备。\r\n②：自己主要阶段这张卡在墓地存在的场合，以自己墓地的1只融合·同调·超量·连接怪兽为对象才能发动。那只怪兽和这张卡回到卡组。",
+    "name": "Wisprath Magistus",
+    "desc": "Scegli come bersaglio 1 mostro \"Magistus\" o Incantatore che controlli e 1 mostro scoperto controllato dal tuo avversario; equipaggia il mostro scoperto del tuo avversario al tuo mostro come Magia Equipaggiamento che fa guadagnare 500 ATK al tuo mostro. Durante la tua Main Phase, se questa carta è nel tuo Cimitero: Puoi scegliere come bersaglio 1 Mostro Fusione, Synchro, Xyz o Link nel tuo Cimitero; rimischia entrambi nel Deck. Puoi utilizzare solo 1 effetto di \"Wisprath Magistus\" per turno, e solo una volta in quel turno.",
     "overallString": "[Magia|Rapida]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274005.jpg?version=19.7"
   },
   {
-    "name": "神灵的来临",
-    "desc": "这个卡名的①②的效果1回合各能使用1次。\r\n①：以自己场上1张融合·同调·超量·连接怪兽卡为对象才能发动。那张卡回到额外卡组。那之后，可以从额外卡组把和回去的卡相同种类（融合·同调·超量·连接）的1只「大贤者」怪兽特殊召唤。\r\n②：自己主要阶段把墓地的这张卡除外，以自己场上1只超量怪兽为对象才能发动。从卡组把1只「大贤者」怪兽作为作为对象的怪兽的超量素材。",
+    "name": "Dunamis Magistus",
+    "desc": "Scegli come bersaglio 1 Carta Mostro Fusione, Synchro, Xyz o Link che controlli; falla ritornare nell’Extra Deck, poi puoi Evocare Specialmente 1 mostro \"Magistus\" dello stesso tipo (Fusione, Synchro, Xyz, Link) dal tuo Extra Deck. Durante la tua Main Phase: Puoi bandire questa carta dal tuo Cimitero, poi scegli come bersaglio 1 Mostro Xyz che controlli; attaccagli 1 mostro \"Magistus\" dal tuo Deck come materiale. Puoi utilizzare ogni effetto di \"Dunamis Magistus\" una sola volta per turno.",
     "overallString": "[Magia|Rapida]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100274028.jpg?version=19.7"
   },
   {
-    "name": "三相之魔导兵",
-    "desc": "效果怪兽2只\r\n这个卡名的①的效果1回合只能使用1次。\r\n①：这张卡特殊召唤的场合，丢弃1张手卡才能发动。根据丢弃的卡的种类（怪兽·魔法·陷阱），这张卡得到以下效果。\r\n●怪兽：这张卡的攻击力上升800。\r\n●魔法：自己场上的怪兽被效果破坏的场合，可以作为代替把这张卡破坏。\r\n●陷阱：1回合1次，这张卡所连接区有怪兽特殊召唤的场合才能发动。这张卡所连接区的怪兽全部破坏。",
+    "name": "Proteo della Triade",
+    "desc": "2 Mostri con Effetto\r\nSe questa carta viene Evocata Specialmente: Puoi scartare 1 carta; questa carta guadagna l'effetto in base al tipo della carta scartata (Mostro, Magia, Trappola).\r\n● Mostro: Guadagna 800 ATK.\r\n● Magia: Se un mostro che controlli sta per essere distrutto dall’effetto di una carta, puoi distruggere invece questa carta.\r\n● Trappola: Una volta per turno, se un mostro viene Evocato Specialmente in una Zona puntata da questa carta: Puoi distruggere tutti i mostri puntati da questa carta.\r\nPuoi utilizzare questo effetto di \"Proteo della Triade\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Link] Roccia/Terra  [LINK-2] 1500/-  [↖][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276004.jpg?version=19.7"
   },
   {
-    "name": "千手游戏",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：双方各自从自身卡组选2张卡， 用喜欢的顺序在卡组上面放置。那之后，双方各自宣言0·1·2·3·4之内的任意数字。再让双方从卡组上面把2张卡翻开。宣言和那4张中的怪兽数量相同数字的玩家，从自身翻开的卡中选1张加入手卡。另1张回到卡组最下面。那以外的玩家，让翻开的卡用喜欢的顺序回到卡组下面。",
+    "name": "Gioco delle Dita",
+    "desc": "Ogni giocatore mette 2 carte dal proprio Deck in cima al proprio Deck in qualsiasi ordine, poi ciascuno dichiara un numero da 0 a 4, poi ciascuno dissotterra le prime 2 carte del proprio Deck. Chi ha dichiarato un numero che corrisponde al numero di mostri tra tutte e 4 le carte dissotterrate aggiunge 1 delle proprie carte dissotterrate alla propria mano, inoltre mette l'altra in fondo al proprio Deck. Chi ha dichiarato un numero che non corrisponde al numero di mostri tra tutte e 4 le carte dissotterrate mette le proprie carte dissotterrate in fondo al proprio Deck in qualsiasi ordine.\r\nPuoi attivare solo 1 \"Gioco delle Dita\" per turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100276005.jpg?version=19.7"
   },
   {
-    "name": "方界领域",
-    "desc": "这个卡名的卡在1回合只能发动1张。\r\n①：作为这张卡发动时的效果处理，可以从卡组把1只4星以下的「方界」怪兽加入手卡。\r\n②：怪兽之间的战斗发生的对双方的战斗伤害变成0。\r\n③：1回合1次，自己主要阶段才能发动。从手卡把1只「方界」怪兽无视召唤条件特殊召唤。\r\n④：怪兽被战斗破坏的场合发动。破坏的怪兽的控制者受到那原本攻击力数值的伤害。",
+    "name": "Dimensione Cubica",
+    "desc": "Quando questa carta viene attivata: Puoi aggiungere 1 mostro \"Cubico\" di Livello 4 o inferiore dal tuo Deck alla tua mano.\r\nNessun giocatore subisce danni da combattimento dalle battaglie che coinvolgono 2 mostri.\r\nUna volta per turno, durante la tua Main Phase: Puoi Evocare Specialmente 1 mostro \"Cubico\" dalla tua mano, ignorando le sue condizioni di Evocazione.\r\nSe un mostro viene distrutto in battaglia: Il suo controllore subisce danni pari al suo ATK originale.\r\nPuoi attivare solo 1 \"Dimensione Cubica\" per turno.",
     "overallString": "[Magia|Terreno]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272005.jpg?version=19.7"
   },
   {
-    "name": "方界防阵",
-    "desc": "①：对方怪兽的攻击宣言时才能发动。那次攻击无效。那之后，可以从手卡·卡组把最多2只「方界」怪兽无视召唤条件特殊召唤。\r\n②：把墓地的这张卡除外，以自己场上1张「方界」卡为对象才能发动。这个回合，以那张卡为对象的对方发动的效果无效化。",
+    "name": "Difesa Cubica",
+    "desc": "Quando un mostro del tuo avversario dichiara un attacco: Annulla quell'attacco, poi puoi Evocare Specialmente fino a 2 mostri \"Cubico\" dalla tua mano e/o Deck, ignorando le loro condizioni di Evocazione.\r\nPuoi bandire questa carta dal tuo Cimitero, poi scegli come bersaglio 1 carta \"Cubico\" che controlli; in questo turno, annulla ogni carta o effetto attivato dal tuo avversario che ha scelto quella carta come bersaglio.",
     "overallString": "[Trappola|Contro]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272007.jpg?version=19.7"
   },
   {
-    "name": "莓柠苹巧奇之黑芭菲",
-    "desc": "这个卡名的①的效果1回合只能使用1次。\r\n①：自己主要阶段才能发动。从卡组把1只「魔术少女」怪兽加入手卡。\r\n②：对方把怪兽召唤·特殊召唤的场合才能发动。从手卡把相同属性的怪兽不在自己场上存在的1只「魔术少女」怪兽特殊召唤。那之后，自己场上有「黑魔术少女」存在的场合，可以把场上1张表侧表示卡的效果直到回合结束时无效。",
+    "name": "B.L.A.C.K. Parfait",
+    "desc": "Durante la tua Main Phase: Puoi aggiungere 1 mostro \"Ragazza Maga\" dal tuo Deck alla tua mano. Puoi utilizzare questo effetto di \"B.L.A.C.K. Parfait\" una sola volta per turno.\r\nSe il tuo avversario Evoca Normalmente o Specialmente un mostro: Puoi Evocare Specialmente 1 mostro \"Ragazza Maga\" dalla tua mano con un Attributo diverso da quello dei mostri che controlli, poi, se controlli \"Ragazza Maga Nera\", puoi annullare gli effetti di 1 altra carta scoperta sul Terreno fino alla fine di questo turno.",
     "overallString": "[Magia|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
   },
@@ -235,7 +235,7 @@
   },
   {
     "name": "Ashtrata Tamayori",
-    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi Evocare Specialmente 1 mostro non-Tuner \"Ashtra\" dal tuo Deck in Posizione di Difesa, poi puoi mettere 1 mostro scoperto che controlli in Posizione di Difesa coperta, inoltre non puoi Evocare Specialmente dall'Extra Deck per il resto di questo turno, eccetto tramite Evocazione Synchro utilizzando un Tuner di Livello 1.\r\nSe uno o più mostri \"Ashtra\" e/o carte coperte che controlli stanno per essere distrutti dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero.\r\nPuoi utilizzare ciascun effetto di \"Ashtrata Tamayori\" una sola volta per turno.",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi Evocare Specialmente 1 mostro non-Tuner \"Asutra\" dal tuo Deck in Posizione di Difesa, poi puoi mettere 1 mostro scoperto che controlli in Posizione di Difesa coperta, inoltre non puoi Evocare Specialmente dall'Extra Deck per il resto di questo turno, eccetto tramite Evocazione Synchro utilizzando un Tuner di Livello 1.\nSe uno o più mostri \"Asutra\" e/o carte coperte che controlli stanno per essere distrutti dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero.\nPuoi utilizzare ciascun effetto di \"Ashtrata Tamayori\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Tuner] Fata/Fuoco  [★1] 0/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307018.jpg?version=19.7"
   },
@@ -265,7 +265,7 @@
   },
   {
     "name": "Salvataggio Drammatico Amazoness",
-    "desc": "Se controlli un mostro \"Amazoness\" o \"Lady Arpia\", puoi attivare questa carta nel turno in cui è stata Posizionata. Scegli come bersaglio 1 mostro sul Terreno; Evoca Specialmente 1 mostro \"Arpia\" o \"Amazoness\" dalla tua mano o Deck e, se lo fai, fai ritornare il mostro scelto come bersaglio nella mano. Puoi bandire questa carta dal tuo Cimitero; aggiungi 1 mostro \"Arpia\" o \"Amazoness\" dal tuo Cimitero o dalle tue carte bandite alla tua mano. Puoi utilizzare ciascun effetto di \"Salvataggio Drammatico Amazoness\" una sola volta per turno.",
+    "desc": "Se controlli un mostro \"Amazoness\" o \"Lady Arpia\", puoi attivare questa carta nel turno in cui è stata Posizionata.\r\nScegli come bersaglio 1 mostro sul Terreno; Evoca Specialmente 1 mostro \"Arpia\" o \"Amazoness\" dalla tua mano o Deck e, se lo fai, fai ritornare il mostro scelto come bersaglio nella mano.\r\nPuoi bandire questa carta dal tuo Cimitero; aggiungi 1 mostro \"Arpia\" o \"Amazoness\" dal tuo Cimitero o dalle tue carte bandite alla tua mano.\r\nPuoi utilizzare ciascun effetto di \"Salvataggio Drammatico Amazoness\" una sola volta per turno.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307074.jpg?version=19.7"
   },
@@ -379,7 +379,7 @@
   },
   {
     "name": "Devozione del Guerriero",
-    "desc": "Manda 1 mostro Guerriero dalla tua mano o Deck al Cimitero, poi scegli come bersaglio 1 mostro scoperto controllato dal tuo avversario; esso perde ATK pari all'ATK del mostro mandato. Se uno o più mostri Guerriero che controlli stanno per essere distrutti in battaglia o dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero. Puoi utilizzare ciascun effetto di \"Devozione del Guerriero\" una sola volta per turno.",
+    "desc": "Manda 1 mostro Guerriero dalla tua mano o Deck al Cimitero, poi scegli come bersaglio 1 mostro scoperto controllato dal tuo avversario; esso perde ATK pari all'ATK del mostro mandato.\r\nSe uno o più mostri Guerriero che controlli stanno per essere distrutti in battaglia o dall'effetto di una carta, puoi invece bandire questa carta dal tuo Cimitero.\r\nPuoi utilizzare ciascun effetto di \"Devozione del Guerriero\" una sola volta per turno.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275008.jpg?version=19.7"
   },
@@ -493,7 +493,7 @@
   },
   {
     "name": "Scorrimento di Carte",
-    "desc": "Puoi bandire a faccia in giù le 5, 10 o 15 carte in cima al tuo Deck, poi scegliere come bersaglio 1 mostro scoperto sul Terreno; applica ad esso l'effetto appropriato.\r\n● 5: il suo ATK/DEF diventano 0.\r\n● 10: annulla i suoi effetti.\r\n● 15: bandiscilo a faccia in giù.\r\nPuoi utilizzare questo effetto di \"Scorrimento di Carte\" una sola volta per turno.",
+    "desc": "Puoi bandire a faccia in giù le 5, 10 o 15 carte in cima al tuo Deck, poi scegliere come bersaglio 1 mostro scoperto sul Terreno; applica ad esso l'effetto appropriato.\n● 5: i suoi ATK/DEF diventano 0.\n● 10: annulla i suoi effetti.\n● 15: bandiscilo a faccia in giù.\nPuoi utilizzare questo effetto di \"Scorrimento di Carte\" una sola volta per turno.",
     "overallString": "[Magia|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307069.jpg?version=19.7"
   },
@@ -733,7 +733,7 @@
   },
   {
     "name": "Diabellze, Padrona della Foresta del Corvo Bianco",
-    "desc": "1 Mostro Fusione o Synchro + 1 mostro Incantatore o Illusione\r\nSe questa carta viene Evocata Specialmente: puoi mettere scoperti un qualsiasi numero di mostri che controlli nelle Zone Magie & Trappole dei rispettivi proprietari come Magie Continue, poi puoi far ritornare nella mano carte sul Terreno fino al numero di Magie/Trappole che controlli. Puoi utilizzare questo effetto di \"Diabellze, Padrona della Foresta del Corvo Bianco\" una sola volta per turno.\r\nGuadagna 700 ATK/DEF per ogni Magia/Trappola sul Terreno.\r\nQuesta carta scoperta Evocata tramite Fusione non può essere utilizzata come Materiale da Fusione.",
+    "desc": "1 Mostro Fusione o Synchro + 1 mostro Incantatore o Illusione\nSe questa carta viene Evocata Specialmente: puoi mettere scoperti un qualsiasi numero di mostri che controlli nelle Zone Magie & Trappole dei rispettivi proprietari come Magie Continue, poi puoi far ritornare nella mano carte sul Terreno fino al numero di Magie/Trappole che controlli. Puoi utilizzare questo effetto di \"Diabellze, Padrona della Foresta del Corvo Bianco\" una sola volta per turno.\nGuadagna 700 ATK/DEF per ogni Magia/Trappola sul Terreno.\nQuesta carta scoperta Evocata tramite Fusione non può essere utilizzata come Materiale da Fusione.",
     "overallString": "[Mostro|Effetto|Fusione] Illusione/Luce  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
