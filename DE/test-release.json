@@ -1,13 +1,13 @@
 [
   {
-    "name": "鬼计鬼火",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。\r\n①：对方把场上的怪兽的效果发动时才能发动。这张卡从手卡以里侧守备表示特殊召唤，从手卡·卡组把1张「鬼计」场地魔法·永续陷阱卡在自己场上以表侧表示放置。那之后，对方墓地的卡是5张以上的场合，可以从手卡把1只怪兽以里侧守备表示特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合只有1次）。",
+    "name": "Geistertrick-Irrlicht",
+    "desc": "Kann nicht als Normalbeschwörung beschworen werden, es sei denn, du kontrollierst ein „Geistertrick“-Monster. Wenn dein Gegner einen Monstereffekt auf dem Spielfeld aktiviert (Schnelleffekt): Du kannst diese Karte als Spezialbeschwörung von deiner Hand in die verdeckte Verteidigungsposition beschwören und falls du dies tust, platziere 1 „Geistertrick“-Spielfeldzauber oder 1 Permanente „Geistertrick“-Falle von deiner Hand oder deinem Deck offen auf deiner Spielfeldseite, dann, falls sich 5 oder mehr Karten im Friedhof deines Gegners befinden, kannst du 1 Monster als Spezialbeschwörung von deiner Hand in die verdeckte Verteidigungsposition beschwören. Einmal pro Spielzug: Du kannst diese Karte in die verdeckte Verteidigungsposition ändern.",
     "overallString": "[Monster|Effekt] Unterweltler/Finsternis  [★1] 300/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272049.jpg?version=19.7"
   },
   {
-    "name": "鬼计冻结",
-    "desc": "①：自己场上没有「鬼计」卡以外的表侧表示卡存在的状态，对方场上有魔法·陷阱卡盖放时适用。那张卡直到下个回合的结束时不能发动。\r\n②：自己·对方回合1次，可以发动。自己墓地·除外状态的最多5张「鬼计」卡回到卡组。\r\n③：这张卡被对方送去墓地的场合才能发动。对方场上的怪兽全部变成里侧守备表示。这个效果变成里侧守备表示的怪兽不能把表示形式变更。",
+    "name": "Geistertrick-Froststarre",
+    "desc": "Wenn ein oder mehr Zauber/Fallen auf der Spielfeldseite deines Gegners gesetzt werden, während du außer „Geistertrick“-Karten keine offenen Karten kontrollierst, können jene gesetzten Karten bis zum Ende des nächsten Spielzugs nicht aktiviert werden. Einmal pro Spielzug: Du kannst bis zu 5 „Geistertrick“-Karten von deinem Friedhof und/oder deinen verbannten Karten ins Deck mischen. Falls diese Karte in deinem Besitz von deinem Gegner auf deinen Friedhof gelegt wird: Du kannst alle Monster, die dein Gegner kontrolliert, in die verdeckte Verteidigungsposition ändern. Monster, die durch diesen Effekt in die verdeckte Verteidigungsposition geändert wurden, können ihre Kampfposition nicht ändern.",
     "overallString": "[Falle|Permanente]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272055.jpg?version=19.7"
   },
