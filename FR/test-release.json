@@ -1,13 +1,13 @@
 [
   {
-    "name": "鬼计鬼火",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。\r\n①：对方把场上的怪兽的效果发动时才能发动。这张卡从手卡以里侧守备表示特殊召唤，从手卡·卡组把1张「鬼计」场地魔法·永续陷阱卡在自己场上以表侧表示放置。那之后，对方墓地的卡是5张以上的场合，可以从手卡把1只怪兽以里侧守备表示特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合只有1次）。",
+    "name": "Spunkie Fantôruse",
+    "desc": "Non Invocable Normalement, sauf si vous contrôlez un monstre \"Fantôruse\". Lorsque votre adversaire active un effet de monstre sur le Terrain (Effet Rapide) : vous pouvez Invoquer Spécialement cette carte depuis votre main en Position de Défense face verso, et si vous le faites, placez face recto 1 Magie de Terrain \"Fantôruse\" ou Piège Continu \"Fantôruse\" depuis votre main ou Deck sur votre Terrain, puis si votre adversaire a min. 5 cartes dans son Cimetière, vous pouvez Invoquer Spécialement 1 monstre depuis votre main en Position de Défense face verso. Une fois par tour : vous pouvez changer cette carte en Position de Défense face verso.",
     "overallString": "[Monstre|Effet] Démon/Ténébres  [★1] 300/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272049.jpg?version=19.7"
   },
   {
-    "name": "鬼计冻结",
-    "desc": "①：自己场上没有「鬼计」卡以外的表侧表示卡存在的状态，对方场上有魔法·陷阱卡盖放时适用。那张卡直到下个回合的结束时不能发动。\r\n②：自己·对方回合1次，可以发动。自己墓地·除外状态的最多5张「鬼计」卡回到卡组。\r\n③：这张卡被对方送去墓地的场合才能发动。对方场上的怪兽全部变成里侧守备表示。这个效果变成里侧守备表示的怪兽不能把表示形式变更。",
+    "name": "Gel Fantôruse",
+    "desc": "Après qu'un ou plusieurs Magies/Pièges deviennent Posés sur le Terrain de votre adversaire tant que vous ne contrôlez aucune carte face recto autre que des cartes \"Fantôruse\", il ne peut pas être activé jusqu'à la fin du prochain tour. Une fois par tour : vous pouvez mélanger max. 5 cartes \"Fantôruse\" depuis votre Cimetière et/ou bannissement dans le Deck. Si cette carte en possession de son propriétaire est envoyée à votre Cimetière par une carte de l'adversaire : vous pouvez changer tous les monstres contrôlés par votre adversaire en Position de Défense face verso. Les monstres qui l'ont été ne peuvent pas changer leur position de combat.",
     "overallString": "[Piège|Continu]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272055.jpg?version=19.7"
   },
