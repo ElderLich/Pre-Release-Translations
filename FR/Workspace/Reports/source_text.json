@@ -1,9 +1,25 @@
 {
   "language": "fr",
   "mode": "fill",
-  "candidates": 0,
+  "candidates": 2,
   "matched": 0,
-  "unmatched_ids": [],
-  "unresolved": [],
+  "unmatched_ids": [
+    100272049,
+    100272055
+  ],
+  "unresolved": [
+    {
+      "id": 100272049,
+      "name": "鬼计鬼火",
+      "set_code": "RV02-JP049",
+      "reason": "No source card page found"
+    },
+    {
+      "id": 100272055,
+      "name": "鬼计冻结",
+      "set_code": "RV02-JP055",
+      "reason": "No source card page found"
+    }
+  ],
   "matches": {}
 }
