@@ -43,13 +43,9 @@ CONFIG_PATH = LOCAL_ROOT / ".transsuperpre_local.json"
 REPO_ENV_NAMES = ("TRANSSUPERPRE_REPO", "TRANSSUPERPRE_ROOT")
 LANG_ENV_NAME = "TRANSSUPERPRE_LANG"
 COMMON_REPO_PATHS = (
-    # Recognize new clones while retaining existing checkout paths and preferences.
     Path(r"D:\Programs\GitHub\Pre-Release-Translations"),
     Path.home() / "Documents" / "GitHub" / "Pre-Release-Translations",
     Path.home() / "GitHub" / "Pre-Release-Translations",
-    Path(r"D:\Programs\GitHub\TransSuperpre"),
-    Path.home() / "Documents" / "GitHub" / "TransSuperpre",
-    Path.home() / "GitHub" / "TransSuperpre",
 )
 
 
