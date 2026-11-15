@@ -1,5 +1,17 @@
 [
   {
+    "name": "鬼计鬼火",
+    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。\r\n①：对方把场上的怪兽的效果发动时才能发动。这张卡从手卡以里侧守备表示特殊召唤，从手卡·卡组把1张「鬼计」场地魔法·永续陷阱卡在自己场上以表侧表示放置。那之后，对方墓地的卡是5张以上的场合，可以从手卡把1只怪兽以里侧守备表示特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合只有1次）。",
+    "overallString": "[Monster|Effect] Fiend/Dark  [★1] 300/200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272049.jpg?version=19.7"
+  },
+  {
+    "name": "鬼计冻结",
+    "desc": "①：自己场上没有「鬼计」卡以外的表侧表示卡存在的状态，对方场上有魔法·陷阱卡盖放时适用。那张卡直到下个回合的结束时不能发动。\r\n②：自己·对方回合1次，可以发动。自己墓地·除外状态的最多5张「鬼计」卡回到卡组。\r\n③：这张卡被对方送去墓地的场合才能发动。对方场上的怪兽全部变成里侧守备表示。这个效果变成里侧守备表示的怪兽不能把表示形式变更。",
+    "overallString": "[Trap|Continuous]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272055.jpg?version=19.7"
+  },
+  {
     "name": "Spellbook Genius of Prophecy",
     "desc": "If this card is added to your hand, except by drawing it: You can Special Summon it. If you have \"Regulus, the Prince of Endymion\" in your field or GY: You can banish 1 Spell from your GY; Special Summon 1 monster from your hand. During the Battle Phase (Quick Effect): You can banish 1 Spell from your GY, then target 1 face-up monster on the field; change it to face-down Defense Position. You can only use each effect of \"Spellbook Genius of Prophecy\" once per turn.",
     "overallString": "[Monster|Effect] Spellcaster/Water  [★2] 500/400",
