@@ -1,13 +1,13 @@
 [
   {
-    "name": "鬼计鬼火",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。\r\n①：对方把场上的怪兽的效果发动时才能发动。这张卡从手卡以里侧守备表示特殊召唤，从手卡·卡组把1张「鬼计」场地魔法·永续陷阱卡在自己场上以表侧表示放置。那之后，对方墓地的卡是5张以上的场合，可以从手卡把1只怪兽以里侧守备表示特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合只有1次）。",
+    "name": "Fantastruco Spunkie",
+    "desc": "No puede ser Invocado de Modo Normal, a menos que controles un monstruo \"Fantastruco\".\r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo en el Campo: puedes Invocar esta carta de Modo Especial desde tu mano en Posición de Defensa boca abajo y, si lo haces, coloca 1 Mágica de Campo o Trampa Continua \"Fantastruco\" desde tu mano o Deck en tu Campo boca arriba, y después si tu adversario tiene 5 o más cartas en su Cementerio, puedes Invocar de Modo Especial 1 monstruo desde tu mano en Posición de Defensa boca abajo.\r\nUna vez por turno: puedes cambiar esta carta a Posición de Defensa boca abajo.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★1] 300/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272049.jpg?version=19.7"
   },
   {
-    "name": "鬼计冻结",
-    "desc": "①：自己场上没有「鬼计」卡以外的表侧表示卡存在的状态，对方场上有魔法·陷阱卡盖放时适用。那张卡直到下个回合的结束时不能发动。\r\n②：自己·对方回合1次，可以发动。自己墓地·除外状态的最多5张「鬼计」卡回到卡组。\r\n③：这张卡被对方送去墓地的场合才能发动。对方场上的怪兽全部变成里侧守备表示。这个效果变成里侧守备表示的怪兽不能把表示形式变更。",
+    "name": "Congelación Fantastruco",
+    "desc": "Después de que una o más Mágicas/Trampas sean Colocadas en el Campo de tu adversario mientras no controles cartas boca arriba que no sean \"Fantastruco\", estas no pueden ser activadas hasta el final del próximo turno.\r\nUna vez por turno: puedes barajar al Deck hasta 5 cartas \"Fantastruco\" desde tu Cementerio y/o destierro.\r\nSi esta carta en posesión de su dueño es mandada a tu Cementerio por tu adversario: puedes cambiar todos los monstruos que controle tu adversario a Posición de Defensa boca abajo. Los monstruos que fueron cambiados de esta forma no pueden cambiar sus posiciones de batalla.",
     "overallString": "[Trampa|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272055.jpg?version=19.7"
   },
