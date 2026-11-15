@@ -1,13 +1,13 @@
 [
   {
-    "name": "鬼计鬼火",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。\r\n①：对方把场上的怪兽的效果发动时才能发动。这张卡从手卡以里侧守备表示特殊召唤，从手卡·卡组把1张「鬼计」场地魔法·永续陷阱卡在自己场上以表侧表示放置。那之后，对方墓地的卡是5张以上的场合，可以从手卡把1只怪兽以里侧守备表示特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合只有1次）。",
+    "name": "Fuoco Fatuo Fantasmatrucco",
+    "desc": "Questa carta può essere Evocata Normalmente solo se controlli un mostro \"Fantasmatrucco\".\r\nQuando il tuo avversario attiva l'effetto di un mostro sul Terreno: puoi Evocare Specialmente questa carta dalla tua mano coperta in Posizione di Difesa e mettere 1 Magia Terreno o Trappola Continua \"Fantasmatrucco\" dalla tua mano o Deck scoperta sul tuo Terreno. Dopodiché, se il tuo avversario ha 5 o più carte nel Cimitero, puoi Evocare Specialmente 1 mostro dalla tua mano coperto in Posizione di Difesa.\r\nDurante la tua Main Phase, una volta per turno: puoi mettere questa carta coperta in Posizione di Difesa.",
     "overallString": "[Mostro|Effetto] Demone/Oscurità  [★1] 300/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272049.jpg?version=19.7"
   },
   {
-    "name": "鬼计冻结",
-    "desc": "①：自己场上没有「鬼计」卡以外的表侧表示卡存在的状态，对方场上有魔法·陷阱卡盖放时适用。那张卡直到下个回合的结束时不能发动。\r\n②：自己·对方回合1次，可以发动。自己墓地·除外状态的最多5张「鬼计」卡回到卡组。\r\n③：这张卡被对方送去墓地的场合才能发动。对方场上的怪兽全部变成里侧守备表示。这个效果变成里侧守备表示的怪兽不能把表示形式变更。",
+    "name": "Congelamento Fantasmatrucco",
+    "desc": "Mentre non controlli carte scoperte eccetto carte \"Fantasmatrucco\", quando una carta Magia/Trappola viene Posizionata sul Terreno del tuo avversario, applica questo effetto: quella carta non può essere attivata fino alla fine del prossimo turno.\nUna volta per turno (Effetto Rapido): puoi mischiare nel Deck fino a 5 carte \"Fantasmatrucco\" dal tuo Cimitero e/o tra le tue carte bandite.\nSe questa carta viene mandata al Cimitero dal tuo avversario: puoi mettere tutti i mostri controllati dal tuo avversario coperti in Posizione di Difesa. I mostri messi coperti in Posizione di Difesa da questo effetto non possono cambiare la loro posizione.",
     "overallString": "[Trappola|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272055.jpg?version=19.7"
   },
