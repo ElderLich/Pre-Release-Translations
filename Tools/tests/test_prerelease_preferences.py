@@ -91,6 +91,18 @@ class LocalizedWindowTests(unittest.TestCase):
         self.addCleanup(window.close)
         return root,window
 
+    def test_chinese_launcher_folders_open_their_rush_workspace(self):
+        for folder in ("ZH-TW", "ZH-CN"):
+            with self.subTest(folder=folder), patch.object(wrapper, "SCRIPT_DIR", Path(folder)), \
+                 patch.dict(wrapper.os.environ, {wrapper.LANG_ENV_NAME: ""}), \
+                 patch("tkinter.simpledialog.askstring", side_effect=AssertionError("unexpected language prompt")):
+                lang = wrapper.detect_lang(gui=True)
+                self.assertEqual(lang, folder.lower())
+                _, window = self.window(lang)
+                self.assertEqual(window.notebook.index(window.notebook.select()), 1)
+                self.assertEqual(window.rush_language.get(), folder)
+                self.assertEqual(window.display_language, folder)
+
     def test_renamed_translation_checkout_reaches_gui_and_saved_preferences(self):
         with tempfile.TemporaryDirectory() as directory:
             parent=Path(directory).resolve()

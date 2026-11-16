@@ -25,6 +25,7 @@ import subprocess
 import sys
 from pathlib import Path
 
+RUSH_ONLY_LANGS = {"zh-cn": "ZH-CN", "zh-tw": "ZH-TW"}
 SUPPORTED_LANGS = {
     "de": "DE",
     "en": "EN",
@@ -35,6 +36,7 @@ SUPPORTED_LANGS = {
     "kr": "KR",
     "pt": "PT",
     "th": "TH",
+    **RUSH_ONLY_LANGS,
 }
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -103,7 +105,7 @@ def detect_lang(*, gui: bool = False) -> str:
     print("Could not detect the language from the folder name.")
     print("Put this file inside a folder named one of:")
     print("  " + ", ".join(sorted(SUPPORTED_LANGS.values())))
-    print(f"Or set {LANG_ENV_NAME}=es, jp, kr, de, en, fr, it, pt, or th.")
+    print(f"Or set {LANG_ENV_NAME} to one of: {', '.join(SUPPORTED_LANGS)}.")
     while True:
         raw = input("Language: ").strip()
         lang = normalize_lang(raw)
@@ -197,10 +199,11 @@ def menu(lang: str) -> str:
     repo_root = resolve_repo_root()
     print(f"Repo root : {repo_root}")
     print()
-    print("1 = Refresh local raw2 and Mappings.csv from latest .ypk")
-    print("2 = Upload raw2 workspace and push to GitHub")
-    print("3 = Copy raw2 workspace into repo only")
-    print(f"4 = Pull latest {lang.upper()} workspace from GitHub")
+    if lang not in RUSH_ONLY_LANGS:
+        print("1 = Refresh local raw2 and Mappings.csv from latest .ypk")
+        print("2 = Upload raw2 workspace and push to GitHub")
+        print("3 = Copy raw2 workspace into repo only")
+        print(f"4 = Pull latest {lang.upper()} workspace from GitHub")
     print("5 = Show repo and Actions status")
     print("6 = Change Pre-Release Translations repo path")
     print("7 = Exit")

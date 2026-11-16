@@ -256,6 +256,8 @@ class PrereleaseWindow:
         self.standard_page = self._scrollable_page("Standard")
         self.rush_page = self._scrollable_page("Rush")
         self.overview_page = self._scrollable_page("All locales")
+        if lang.upper() in RUSH_LANGS and lang.upper() not in STANDARD_LANGS:
+            self.notebook.select(1)
         self.notebook.bind("<<NotebookTabChanged>>", self._sync_navigation)
         self.notebook.enable_traversal()
         self._sync_navigation()
