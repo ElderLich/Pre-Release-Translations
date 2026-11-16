@@ -1,6 +1,17 @@
 {
   "language": "jp",
-  "matches": {},
-  "requested_ids": [],
+  "matches": {
+    "120109070": {
+      "fields": [
+        "name",
+        "desc"
+      ],
+      "set_code": "RD/SJMP-JP070",
+      "source": "https://ocg-card.com/list_r/sj/"
+    }
+  },
+  "requested_ids": [
+    120109070
+  ],
   "unresolved": []
 }

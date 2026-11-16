@@ -19141,24 +19141,15 @@
   "这个回合不能攻击": {
     "translations": {
       "en": "Cannot attack this turn",
-      "fr": "Impossible: attaque ce tour",
-      "de": "Nicht möglich: Angriff in diesem Spielzug",
-      "es": "No es posible: ataque este turno",
-      "pt": "Não é possível: ataque neste turno",
-      "it": "Non è possibile: attacco in questo turno",
-      "ja": "行えない行動・処理: 攻撃 このターン",
-      "kr": "할 수 없는 행동 / 처리: 공격 이 턴"
+      "fr": "Ne peut pas attaquer ce tour",
+      "de": "Kann in diesem Spielzug nicht angreifen",
+      "es": "No puede atacar este turno",
+      "pt": "Não pode atacar neste turno",
+      "it": "Non può attaccare in questo turno",
+      "ja": "このターン攻撃できない",
+      "kr": "이 턴에 공격할 수 없다"
     },
-    "provenance": {
-      "en": "reviewed_english",
-      "fr": "offline_machine_draft_explicit_restriction",
-      "de": "offline_machine_draft_explicit_restriction",
-      "es": "offline_machine_draft_explicit_restriction",
-      "pt": "offline_machine_draft_explicit_restriction",
-      "it": "offline_machine_draft_explicit_restriction",
-      "ja": "offline_machine_draft_explicit_restriction",
-      "kr": "offline_machine_draft_explicit_restriction"
-    }
+    "provenance": "reviewed_rush_patch_20261116"
   },
   "这个回合不能直接攻击": {
     "translations": {
@@ -24227,6 +24218,19 @@
       "kr": "offline_machine_draft_segmented"
     }
   },
+  "选对方场上1只表侧表示怪兽把表示形式变更": {
+    "translations": {
+      "en": "Change the battle position of 1 face-up monster on your opponent's field.",
+      "fr": "Changer la position de combat d'1 monstre face recto sur le Terrain de votre adversaire.",
+      "de": "Ändere die Kampfposition von 1 offenen Monster auf der Spielfeldseite deines Gegners.",
+      "es": "Cambia la posición de batalla de 1 monstruo boca arriba en el Campo de tu adversario.",
+      "pt": "Mude a posição de batalha de 1 monstro com a face para cima no campo do seu oponente.",
+      "it": "Cambia la posizione di 1 mostro scoperto sul Terreno del tuo avversario.",
+      "ja": "相手フィールドの表側表示モンスター１体を選んで表示形式を変更する。",
+      "kr": "상대 필드의 앞면 표시 몬스터 1장을 고르고 표시 형식을 변경한다."
+    },
+    "provenance": "reviewed_rush_patch_20261116"
+  },
   "选对方场上1只表侧表示怪兽，那个攻击力·守备力直到回合结束时下降1500": {
     "translations": {
       "en": "Select 1 face-up monster on your opponent’s field; it loses 1500 ATK/DEF until the end of this turn",
@@ -24591,6 +24595,19 @@
       "ja": "offline_machine_draft_protected",
       "kr": "offline_machine_draft_protected"
     }
+  },
+  "选自己场上1只怪兽送去墓地。那之后，选不在极大模式的对方场上1只表侧表示怪兽，那个控制权直到结束阶段得到。这个回合，那只怪兽不能攻击。": {
+    "translations": {
+      "en": "Send 1 monster from your field to the Graveyard. Then, take control of 1 face-up monster on your opponent's field that is not in Maximum Mode until the End Phase. That monster cannot attack this turn.",
+      "fr": "Envoyer 1 monstre depuis votre Terrain au Cimetière. Puis, prendre le contrôle d'1 monstre face recto sur le Terrain de votre adversaire qui n'est pas en Mode Maximum, jusqu'à la End Phase. Ce monstre ne peut pas attaquer ce tour.",
+      "de": "Lege 1 Monster von deiner Spielfeldseite auf den Friedhof. Übernimm dann bis zur End Phase die Kontrolle über 1 offenes Monster auf der Spielfeldseite deines Gegners, das sich nicht im Maximum-Modus befindet. Das Monster kann in diesem Spielzug nicht angreifen.",
+      "es": "Manda al Cementerio 1 monstruo en tu Campo. Después, toma el control hasta la Fase Final de 1 monstruo boca arriba en el Campo de tu adversario que no esté en Modo Máximo. Ese monstruo no puede atacar este turno.",
+      "pt": "Envie 1 monstro do seu campo para o Cemitério. Depois, até a Fase Final, tome o controle de 1 monstro com a face para cima no campo do seu oponente que não esteja no Modo Máximo. Esse monstro não pode atacar neste turno.",
+      "it": "Manda 1 mostro dal tuo Terreno al Cimitero. Poi, fino alla End Phase, prendi il controllo di 1 mostro scoperto sul Terreno del tuo avversario che non sia in Modalità Maximum. Quel mostro non può attaccare in questo turno.",
+      "ja": "自分フィールドのモンスター１体を選んで墓地へ送る。その後、マキシマムモードではない相手フィールドの表側表示モンスター１体を選び、そのコントロールをエンドフェイズまで得る。このターン、そのモンスターは攻撃できない。",
+      "kr": "자신 필드의 몬스터 1장을 고르고 묘지로 보낸다. 그 후, 맥시멈 모드가 아닌 상대 필드의 앞면 표시 몬스터 1장을 고르고, 그 컨트롤을 엔드 페이즈까지 얻는다. 이 턴에, 그 몬스터는 공격할 수 없다."
+    },
+    "provenance": "reviewed_rush_patch_20261116"
   },
   "选自己场上1只表侧表示怪兽(电子人族)，那个攻击力直到回合结束时上升［对方场上的表侧表示怪兽(战士族)的攻击力合计］": {
     "translations": {

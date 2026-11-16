@@ -444,3 +444,11 @@ packages are identical. SQLite integrity, ZIP checksums, gameplay parity,
 JSON/workspace/package agreement and local `Rush/raw2` synchronization pass.
 The four missing artwork IDs are `120311003`, `120311005`, `120311009` and
 `120311014`; they do not block package generation.
+
+## 16 November 2026 Enemy Controller print code
+
+Rush source `630429b5` lists `RD/LP02-JP026` in the Chinese description of
+Enemy Controller (`120109070`). Its Saikyō Jump printing is `RD/SJMP-JP070`,
+as recorded in the English, French and Japanese source-text reports.
+The source-managed ZH-CN package carries the upstream header. The translated
+descriptions begin with the activation requirement. [Japanese printing list](https://ocg-card.com/list_r/sj/)
