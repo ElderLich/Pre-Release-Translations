@@ -1,17 +1,6 @@
 {
   "language": "en",
-  "matches": {
-    "120109070": {
-      "fields": [
-        "name",
-        "desc"
-      ],
-      "set_code": "RD/SJMP-JP070",
-      "source": "https://yugipedia.com/wiki/Enemy_Controller_%28Rush_Duel%29"
-    }
-  },
-  "requested_ids": [
-    120109070
-  ],
+  "matches": {},
+  "requested_ids": [],
   "unresolved": []
 }
