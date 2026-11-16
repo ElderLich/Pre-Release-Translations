@@ -318,8 +318,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
-    "name": "Sœurs de Harpie d'Extase Triangulaire",
-    "desc": "3 monstres \"Dame Harpie\"\nDoit d'abord être Invoquée par Fusion. Le nom de cette carte devient \"Dame Harpie\" tant qu'elle est dans le Terrain ou Cimetière. Gagne 500 ATK pour chaque \"Dame Harpie\" dans votre Cimetière, et aussi, votre adversaire ne peut pas cibler cette carte avec des effets de monstre non-VENT. Une fois par tour (Effet Rapide) : vous pouvez détruire tous les Magies/Pièges contrôlés par votre adversaire.",
+    "name": "Sœurs de Harpie - Triangle de l'Extase",
+    "desc": "3 monstres \"Dame Harpie\"\n(Cette carte est toujours traitée comme carte \"Dame Harpie\".)\nDoit d'abord être Invoquée par Fusion. Le nom de cette carte devient \"Dame Harpie\" tant qu'elle est sur le Terrain ou dans le Cimetière. Gagne 500 ATK pour chaque \"Dame Harpie\" dans votre Cimetière, et aussi, votre adversaire ne peut pas cibler cette carte avec des effets de monstre non-VENT. Une fois par tour (Effet Rapide) : vous pouvez détruire tous les Magies/Pièges contrôlés par votre adversaire.",
     "overallString": "[Monstre|Effet|Fusion] Bête Ailée/Vent  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
@@ -720,62 +720,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
   {
-    "name": "Démon de Feu de la Forêt du Corbeau Blanc",
-    "desc": "Si vous contrôlez une carte \"Corbeau Blanc\", vous pouvez Invoquer Spécialement cette carte (depuis votre main).\r\nVous ne pouvez Invoquer Spécialement \"Démon de Feu de la Forêt du Corbeau Blanc\" qu'une fois par tour de cette façon.\r\nVous ne pouvez utiliser chacun des effets suivants de \"Démon de Feu de la Forêt du Corbeau Blanc\" qu'une fois par tour.\r\nSi cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 Magie/Piège \"Corbeau Blanc\" ou 1 carte \"Butin du Péché\" depuis votre Deck à votre main.\r\nVous pouvez cibler 1 Carte Monstre \"Corbeau Blanc\" ou 1 Carte Monstre de Niveau 7 ou 8 dans la Zone Magie & Piège ; Invoquez-la Spécialement sur votre Terrain.",
+    "name": "Démon de Feu de la Forêt du Corbeau d'Hiver",
+    "desc": "Si vous contrôlez une carte \"Corbeau d'Hiver\", vous pouvez Invoquer Spécialement cette carte (depuis votre main).\r\nVous ne pouvez Invoquer Spécialement \"Démon de Feu de la Forêt du Corbeau d'Hiver\" qu'une fois par tour de cette façon.\r\nVous ne pouvez utiliser chacun des effets suivants de \"Démon de Feu de la Forêt du Corbeau d'Hiver\" qu'une fois par tour.\r\nSi cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 Magie/Piège \"Corbeau d'Hiver\" ou 1 carte \"Butin du Péché\" depuis votre Deck à votre main.\r\nVous pouvez cibler 1 Carte Monstre \"Corbeau d'Hiver\" ou 1 Carte Monstre de Niveau 7 ou 8 dans la Zone Magie & Piège ; Invoquez-la Spécialement sur votre Terrain.",
     "overallString": "[Monstre|Effet] Pyro/Feu  [★1] 700/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307009.jpg?version=19.7"
   },
   {
-    "name": "Maluth le Chevalier du Corbeau Blanc",
-    "desc": "Vous pouvez envoyer 1 autre carte depuis votre main ou Terrain au Cimetière ; placez cette carte face recto dans la Zone Magie & Piège de son propriétaire comme Magie Continue, et si vous le faites, Invoquez Spécialement max. 2 monstres \"Corbeau Blanc\" (\"Maluth le Chevalier du Corbeau Blanc\" exclu) de noms différents l'un de l'autre depuis votre Deck.\r\nLorsqu'un monstre déclare une attaque et que cette carte est une Magie Continue : vous pouvez cibler 1 Carte Monstre \"Corbeau Blanc\" dans votre Zone Magie & Piège ; Invoquez-la Spécialement.\r\nVous ne pouvez utiliser chaque effet de \"Maluth le Chevalier du Corbeau Blanc\" qu'une fois par tour.",
+    "name": "Maluth le Chevalier du Corbeau d'Hiver",
+    "desc": "Vous pouvez envoyer 1 autre carte depuis votre main ou Terrain au Cimetière ; placez cette carte face recto dans la Zone Magie & Piège de son propriétaire comme Magie Continue, et si vous le faites, Invoquez Spécialement max. 2 monstres \"Corbeau d'Hiver\" (\"Maluth le Chevalier du Corbeau d'Hiver\" exclu) de noms différents l'un de l'autre depuis votre Deck.\r\nLorsqu'un monstre déclare une attaque et que cette carte est une Magie Continue : vous pouvez cibler 1 Carte Monstre \"Corbeau d'Hiver\" dans votre Zone Magie & Piège ; Invoquez-la Spécialement.\r\nVous ne pouvez utiliser chaque effet de \"Maluth le Chevalier du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Syntoniseur] Illusion/Lumiére  [★4] 1700/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307010.jpg?version=19.7"
   },
   {
-    "name": "Ann le Chevalier du Corbeau Blanc",
-    "desc": "Vous pouvez révéler cette carte dans votre main ; Invoquez Spécialement 1 monstre \"Corbeau Blanc\" (\"Ann le Chevalier du Corbeau Blanc\" exclu) depuis votre main.\r\nDurant la Main Phase (Effet Rapide) : vous pouvez cibler 1 monstre \"Corbeau Blanc\" que vous contrôlez ; placez-le face recto dans la Zone Magie & Piège de son propriétaire comme Magie Continue, et si vous le faites, Invoquez Spécialement 1 monstre \"Corbeau Blanc\" (\"Ann le Chevalier du Corbeau Blanc\" exclu) depuis votre main ou Cimetière.\r\nVous ne pouvez utiliser chaque effet de \"Ann le Chevalier du Corbeau Blanc\" qu'une fois par tour.",
+    "name": "Ann le Chevalier du Corbeau d'Hiver",
+    "desc": "Vous pouvez révéler cette carte dans votre main ; Invoquez Spécialement 1 monstre \"Corbeau d'Hiver\" (\"Ann le Chevalier du Corbeau d'Hiver\" exclu) depuis votre main.\r\nDurant la Main Phase (Effet Rapide) : vous pouvez cibler 1 monstre \"Corbeau d'Hiver\" que vous contrôlez ; placez-le face recto dans la Zone Magie & Piège de son propriétaire comme Magie Continue, et si vous le faites, Invoquez Spécialement 1 monstre \"Corbeau d'Hiver\" (\"Ann le Chevalier du Corbeau d'Hiver\" exclu) depuis votre main ou Cimetière.\r\nVous ne pouvez utiliser chaque effet de \"Ann le Chevalier du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Syntoniseur] Illusion/Lumiére  [★4] 1400/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307011.jpg?version=19.7"
   },
   {
-    "name": "Butin du Péché de la Forêt du Corbeau Blanc",
-    "desc": "Vous pouvez Invoquer Spécialement cette carte (depuis votre main) en plaçant 1 Carte Monstre FEU de Niveau 1 depuis votre Terrain face recto ou Cimetière au-dessous du Deck.\r\nVous ne pouvez Invoquer Spécialement \"Butin du Péché de la Forêt du Corbeau Blanc\" qu'une fois par tour de cette façon.\r\nLorsque votre adversaire active une carte ou un effet (Effet Rapide) : vous pouvez renvoyer cette carte à la main, puis ciblez 1 monstre dans le Terrain face recto ou l'un des Cimetières ; placez-le face recto dans la Zone Magie & Piège de son propriétaire comme Magie Continue.\r\nVous ne pouvez utiliser cet effet de \"Butin du Péché de la Forêt du Corbeau Blanc\" qu'une fois par tour.",
+    "name": "Butin du Péché de la Forêt du Corbeau d'Hiver",
+    "desc": "Vous pouvez Invoquer Spécialement cette carte (depuis votre main) en plaçant 1 Carte Monstre FEU de Niveau 1 depuis votre Terrain face recto ou Cimetière au-dessous du Deck.\r\nVous ne pouvez Invoquer Spécialement \"Butin du Péché de la Forêt du Corbeau d'Hiver\" qu'une fois par tour de cette façon.\r\nLorsque votre adversaire active une carte ou un effet (Effet Rapide) : vous pouvez renvoyer cette carte à la main, puis ciblez 1 monstre dans le Terrain face recto ou l'un des Cimetières ; placez-le face recto dans la Zone Magie & Piège de son propriétaire comme Magie Continue.\r\nVous ne pouvez utiliser cet effet de \"Butin du Péché de la Forêt du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Syntoniseur] Magicien/Feu  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307012.jpg?version=19.7"
   },
   {
-    "name": "Diabellze la Maîtresse de la Forêt du Corbeau Blanc",
-    "desc": "1 Monstre Fusion ou Synchro + 1 monstre Magicien ou Illusion\r\nSi cette carte est Invoquée Spécialement : vous pouvez placer un nombre de votre choix de monstres que vous contrôlez face recto dans les Zones Magie & Piège de leur propriétaire comme Magies Continues, puis vous pouvez renvoyer un nombre de cartes sur le Terrain à la main inférieur ou égal au nombre de Magies/Pièges que vous contrôlez.\r\nVous ne pouvez utiliser cet effet de \"Diabellze la Maîtresse de la Forêt du Corbeau Blanc\" qu'une fois par tour.\r\nGagne 700 ATK/DEF pour chaque Magie/Piège sur le Terrain.\r\nCette carte Invoquée par Fusion face recto ne peut pas être utilisée comme Matériel Fusion.",
+    "name": "Diabellze, Héritière de la Forêt du Corbeau d'Hiver",
+    "desc": "1 Monstre Fusion ou Synchro + 1 monstre Magicien ou Illusion\r\nCette carte face recto Invoquée par Fusion ne peut pas être utilisée comme Matériel Fusion. Gagne 700 ATK/DEF pour chaque Magie/Piège sur le Terrain. Si cette carte est Invoquée Spécialement : vous pouvez placer un nombre de votre choix de monstres que vous contrôlez face recto dans les Zones Magie & Piège de leur propriétaire comme Magies Continues, puis vous pouvez renvoyer un nombre de cartes depuis le Terrain à la main, inférieur ou égal au nombre de Magies/Pièges que vous contrôlez. Vous ne pouvez utiliser cet effet de \"Diabellze, Héritière de la Forêt du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Fusion] Illusion/Lumiére  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
   {
-    "name": "Zaltys le Chevalier du Corbeau Blanc",
-    "desc": "1 Syntoniseur Illusion + 1+ non-Syntoniseur\r\nSi cette carte est Invoquée Spécialement : vous pouvez cibler max. 2 Magies/Pièges sur le Terrain ; renvoyez-les à la main.\r\nSi cette carte est envoyée au Cimetière : vous pouvez activer cet effet selon d'où elle a été envoyée ;\r\n● Terrain : Posez 1 Piège \"Corbeau Blanc\" depuis votre Deck.\r\n● Extra Deck : Ajoutez 1 carte \"Corbeau Blanc\" depuis votre Cimetière à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Zaltys le Chevalier du Corbeau Blanc\" qu'une fois par tour.",
+    "name": "Zaltys le Chevalier du Corbeau d'Hiver",
+    "desc": "1 Syntoniseur Illusion + 1+ non-Syntoniseur\r\nSi cette carte est Invoquée Spécialement : vous pouvez cibler max. 2 Magies/Pièges sur le Terrain ; renvoyez-les à la main.\r\nSi cette carte est envoyée au Cimetière : vous pouvez activer cet effet selon d'où elle a été envoyée ;\r\n● Terrain : Posez 1 Piège \"Corbeau d'Hiver\" depuis votre Deck.\r\n● Extra Deck : Ajoutez 1 carte \"Corbeau d'Hiver\" depuis votre Cimetière à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Zaltys le Chevalier du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Synchro] Illusion/Feu  [★5] 2600/1700",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307037.jpg?version=19.7"
   },
   {
-    "name": "Aitvaras le Chevalier du Corbeau Blanc",
-    "desc": "1 Syntoniseur Illusion + 1+ non-Syntoniseur\r\nSi cette carte est Invoquée Spécialement : vous pouvez cibler 1 carte que vous contrôlez et 1 carte contrôlée par votre adversaire ; renvoyez-les à la main.\r\nSi cette carte est envoyée au Cimetière : vous pouvez activer cet effet selon d'où elle a été envoyée ;\r\n● Terrain : Ciblez 1 carte sur le Terrain ; mélangez-la dans le Deck.\r\n● Extra Deck : Invoquez Spécialement 1 monstre \"Corbeau Blanc\" depuis votre Cimetière.\r\nVous ne pouvez utiliser chaque effet \"Aitvaras le Chevalier du Corbeau Blanc\" qu'une fois par tour.",
+    "name": "Aitvaras le Chevalier du Corbeau d'Hiver",
+    "desc": "1 Syntoniseur Illusion + 1+ non-Syntoniseur\r\nSi cette carte est Invoquée Spécialement : vous pouvez cibler 1 carte que vous contrôlez et 1 carte contrôlée par votre adversaire ; renvoyez-les à la main.\r\nSi cette carte est envoyée au Cimetière : vous pouvez activer cet effet selon d'où elle a été envoyée ;\r\n● Terrain : Ciblez 1 carte sur le Terrain ; mélangez-la dans le Deck.\r\n● Extra Deck : Invoquez Spécialement 1 monstre \"Corbeau d'Hiver\" depuis votre Cimetière.\r\nVous ne pouvez utiliser chaque effet \"Aitvaras le Chevalier du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Synchro] Illusion/Feu  [★5] 900/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307038.jpg?version=19.7"
   },
   {
-    "name": "La Forêt Profonde du Corbeau Blanc",
-    "desc": "Lorsque cette carte est activée : vous pouvez ajouter 1 monstre \"Corbeau Blanc\" depuis votre Deck à votre main.\r\nLes Cartes Monstre \"Corbeau Blanc\" que vous contrôlez ne peuvent pas être détruites par des effets de carte.\r\nDurant votre End Phase : vous pouvez Poser 1 Piège \"Corbeau Blanc\" depuis votre Deck ou Cimetière.\r\nVous ne pouvez utiliser cet effet de \"La Forêt Profonde du Corbeau Blanc\" qu'une fois par tour.\r\nVous ne pouvez activer qu'1 \"La Forêt Profonde du Corbeau Blanc\" par tour.",
+    "name": "La Forêt Profonde du Corbeau d'Hiver",
+    "desc": "Lorsque cette carte est activée : vous pouvez ajouter 1 monstre \"Corbeau d'Hiver\" depuis votre Deck à votre main.\r\nLes Cartes Monstre \"Corbeau d'Hiver\" que vous contrôlez ne peuvent pas être détruites par des effets de carte.\r\nDurant votre End Phase : vous pouvez Poser 1 Piège \"Corbeau d'Hiver\" depuis votre Deck ou Cimetière.\r\nVous ne pouvez utiliser cet effet de \"La Forêt Profonde du Corbeau d'Hiver\" qu'une fois par tour.\r\nVous ne pouvez activer qu'1 \"La Forêt Profonde du Corbeau d'Hiver\" par tour.",
     "overallString": "[Magie|Terrain]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307059.jpg?version=19.7"
   },
   {
-    "name": "Splendeur de la Sorcière du Corbeau Blanc",
-    "desc": "Vous pouvez activer 1 de ces effets ;\r\n● Invoquez Spécialement 1 monstre \"Corbeau Blanc\" depuis votre main ou Cimetière.\r\n● Invoquez par Fusion 1 monstre \"Diabell\" depuis votre Extra Deck, en utilisant max. 1 monstre \"Corbeau Blanc\" depuis votre main, max. 1 depuis votre Extra Deck et/ou max. 1 depuis votre Terrain.\r\n● Si vous contrôlez un monstre \"Diabell\" : ciblez 1 carte face recto sur le Terrain ; annulez ses effets jusqu'à la fin de ce tour.\r\nVous ne pouvez utiliser cet effet de \"Splendeur de la Sorcière du Corbeau Blanc\" qu'une fois par tour.",
+    "name": "Splendeur de la Sorcière du Corbeau d'Hiver",
+    "desc": "Vous pouvez activer 1 de ces effets ;\r\n● Invoquez Spécialement 1 monstre \"Corbeau d'Hiver\" depuis votre main ou Cimetière.\r\n● Invoquez par Fusion 1 monstre \"Diabell\" depuis votre Extra Deck, en utilisant max. 1 monstre \"Corbeau d'Hiver\" depuis votre main, max. 1 depuis votre Extra Deck et/ou max. 1 depuis votre Terrain.\r\n● Si vous contrôlez un monstre \"Diabell\" : ciblez 1 carte face recto sur le Terrain ; annulez ses effets jusqu'à la fin de ce tour.\r\nVous ne pouvez utiliser cet effet de \"Splendeur de la Sorcière du Corbeau d'Hiver\" qu'une fois par tour.",
     "overallString": "[Piège|Continu]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307077.jpg?version=19.7"
   },
   {
-    "name": "Illusion de la Sorcière du Corbeau Blanc",
-    "desc": "Invoquez par Fusion 1 Monstre Fusion Illusion depuis votre Extra Deck, en utilisant des monstres depuis votre Extra Deck et/ou Terrain, et aussi, vous ne pouvez pas activer d'effets de monstre (monstres Illusion exclus) dans la main ou Cimetière le reste de ce tour après la résolution de cette carte.\r\nSi l'activation de cette carte en possession de son propriétaire a été annulée par un effet de carte de votre adversaire et envoyée à votre Cimetière : vous pouvez Poser cette carte, et si vous le faites, renvoyez toutes les cartes contrôlées par votre adversaire à la main.\r\nVous ne pouvez activer qu'1 \"Illusion de la Sorcière du Corbeau Blanc\" par tour.",
+    "name": "Illusion de la Sorcière du Corbeau d'Hiver",
+    "desc": "Invoquez par Fusion 1 Monstre Fusion Illusion depuis votre Extra Deck, en utilisant des monstres depuis votre Extra Deck et/ou Terrain, et aussi, vous ne pouvez pas activer d'effets de monstre (monstres Illusion exclus) dans la main ou Cimetière le reste de ce tour après la résolution de cette carte.\r\nSi l'activation de cette carte en possession de son propriétaire a été annulée par un effet de carte de votre adversaire et envoyée à votre Cimetière : vous pouvez Poser cette carte, et si vous le faites, renvoyez toutes les cartes contrôlées par votre adversaire à la main.\r\nVous ne pouvez activer qu'1 \"Illusion de la Sorcière du Corbeau d'Hiver\" par tour.",
     "overallString": "[Piège]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307078.jpg?version=19.7"
   },
@@ -811,7 +811,7 @@
   },
   {
     "name": "Canon Malfaisant",
-    "desc": "Chaque fois qu'un monstre de l'adversaire déclare une attaque, placez 1 Compteur Doctrine Sinistre sur cette carte.\r\nVous ne pouvez utiliser chacun des effets suivants de \"Canon Malfaisant\" qu'une fois par tour.\r\nDurant votre Main Phase, si cette carte a été activée ce tour : vous pouvez ajouter 1 monstre TÉNÈBRES Démon depuis votre Deck à votre main, puis défaussez 1 monstre Démon.\r\nVous pouvez envoyer cette carte avec min. 4 Compteurs Doctrine Sinistre au Cimetière ; Invoquez Spécialement 1 monstre Démon depuis votre Deck, puis vous pouvez ajouter 1 \"Super Polymérisation\" depuis votre Deck à votre main.",
+    "desc": "Chaque fois qu'un monstre de l'adversaire déclare une attaque, placez 1 Compteur Doctrine Sinistre sur cette carte. Vous ne pouvez utiliser chacun des effets suivants de \"Canon Malfaisant\" qu'une fois par tour. Durant votre Main Phase, si cette carte a été activée ce tour : vous pouvez ajouter 1 monstre TÉNÈBRES Démon depuis votre Deck à votre main, puis défaussez 1 monstre Démon. Vous pouvez envoyer cette carte avec min. 4 Compteurs Doctrine Sinistre au Cimetière ; Invoquez Spécialement 1 monstre Démon depuis votre Deck, puis vous pouvez ajouter 1 \"Super Polymérisation\" depuis votre Deck à votre main.",
     "overallString": "[Magie|Continu]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
@@ -828,62 +828,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
   {
-    "name": "Amurusa Réindsurm",
-    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réindsurm\".\r\nSi cette carte est Invoquée Rituellement : vous pouvez ajouter 2 monstres \"Réindsurm\" non-VENT depuis votre Deck à votre main.\r\nSi cette carte est envoyée au Cimetière, sauf au combat : vous pouvez Invoquer Rituellement 1 Monstre Rituel Insecte depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain, et/ou en mélangeant des monstres Insecte et/ou Dragon depuis votre Cimetière dans le Deck, dont la somme des Niveaux est supérieure ou égale à son Niveau.\r\nVous ne pouvez utiliser chaque effet de \"Amurusa Réindsurm\" qu'une fois par tour.",
+    "name": "Amurusa Réinswurm",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réinswurm\".\r\nSi cette carte est Invoquée Rituellement : vous pouvez ajouter 2 monstres \"Réinswurm\" non-VENT depuis votre Deck à votre main.\r\nSi cette carte est envoyée au Cimetière, sauf au combat : vous pouvez Invoquer Rituellement 1 Monstre Rituel Insecte depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain, et/ou en mélangeant des monstres Insecte et/ou Dragon depuis votre Cimetière dans le Deck, dont la somme des Niveaux est supérieure ou égale à son Niveau.\r\nVous ne pouvez utiliser chaque effet de \"Amurusa Réinswurm\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Rituel] Insecte/Vent  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
-    "name": "Luvian Réindsurm",
-    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réindsurm\".\r\nSi cette carte est Invoquée Rituellement : vous pouvez ajouter 2 Magies/Pièges \"Réindsurm\" depuis votre Deck à votre main.\r\nSi cette carte est envoyée au Cimetière, sauf au combat : vous pouvez Invoquer Rituellement 1 Monstre Rituel Insecte depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain, et/ou en mélangeant des monstres Insecte et/ou Dragon depuis votre Cimetière dans le Deck, dont la somme des Niveaux est supérieure ou égale à son Niveau.\r\nVous ne pouvez utiliser chaque effet de \"Luvian Réindsurm\" qu'une fois par tour.",
+    "name": "Luvian Réinswurm",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réinswurm\".\r\nSi cette carte est Invoquée Rituellement : vous pouvez ajouter 2 Magies/Pièges \"Réinswurm\" depuis votre Deck à votre main.\r\nSi cette carte est envoyée au Cimetière, sauf au combat : vous pouvez Invoquer Rituellement 1 Monstre Rituel Insecte depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain, et/ou en mélangeant des monstres Insecte et/ou Dragon depuis votre Cimetière dans le Deck, dont la somme des Niveaux est supérieure ou égale à son Niveau.\r\nVous ne pouvez utiliser chaque effet de \"Luvian Réinswurm\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Rituel] Insecte/Eau  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
-    "name": "Carcasas Réindsurm",
-    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réindsurm\".\r\nSi cette carte est Invoquée Rituellement : vous pouvez envoyer 2 cartes \"Réindsurm\" depuis votre Deck au Cimetière.\r\nSi cette carte est envoyée au Cimetière, sauf au combat : vous pouvez Invoquer Rituellement 1 Monstre Rituel Insecte depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain, et/ou en mélangeant des monstres Insecte et/ou Dragon depuis votre Cimetière dans le Deck, dont la somme des Niveaux est supérieure ou égale à son Niveau.\r\nVous ne pouvez utiliser chaque effet de \"Carcasas Réindsurm\" qu'une fois par tour.",
+    "name": "Carcasas Réinswurm",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réinswurm\".\r\nSi cette carte est Invoquée Rituellement : vous pouvez envoyer 2 cartes \"Réinswurm\" depuis votre Deck au Cimetière.\r\nSi cette carte est envoyée au Cimetière, sauf au combat : vous pouvez Invoquer Rituellement 1 Monstre Rituel Insecte depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain, et/ou en mélangeant des monstres Insecte et/ou Dragon depuis votre Cimetière dans le Deck, dont la somme des Niveaux est supérieure ou égale à son Niveau.\r\nVous ne pouvez utiliser chaque effet de \"Carcasas Réinswurm\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Rituel] Insecte/Lumiére  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
   {
-    "name": "Gigalovendra Réindsurm",
-    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réindsurm\".\r\n(Effet Rapide) : vous pouvez envoyer 2 cartes (cette carte incluse) depuis votre main au Cimetière ; ajoutez 1 monstre \"Réindsurm\" non-FEU depuis votre Deck à votre main.\r\nSi cette carte est Invoquée Rituellement, ou votre adversaire Invoque Spécialement un ou plusieurs monstres : vous pouvez mélanger max. 2 monstres sur le Terrain dans le Deck.\r\nSi cette carte et un monstre \"Réindsurm\" EAU sont dans votre Cimetière : vous pouvez ajouter cette carte à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Gigalovendra Réindsurm\" qu'une fois par tour.",
+    "name": "Gigalovendra Réinswurm",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réinswurm\".\r\n(Effet Rapide) : vous pouvez envoyer 2 cartes (cette carte incluse) depuis votre main au Cimetière ; ajoutez 1 monstre \"Réinswurm\" non-FEU depuis votre Deck à votre main.\r\nSi cette carte est Invoquée Rituellement, ou votre adversaire Invoque Spécialement un ou plusieurs monstres : vous pouvez mélanger max. 2 monstres sur le Terrain dans le Deck.\r\nSi cette carte et un monstre \"Réinswurm\" EAU sont dans votre Cimetière : vous pouvez ajouter cette carte à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Gigalovendra Réinswurm\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Rituel] Insecte/Feu  [★8] 3000/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307027.jpg?version=19.7"
   },
   {
-    "name": "Giriakarma Réindsurm",
-    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réindsurm\".\r\nLorsque votre adversaire active un effet de monstre dans le Terrain ou Cimetière et que vous contrôlez cette carte Invoquée Rituellement (Effet Rapide) : vous pouvez annuler l'activation, puis vous pouvez mélanger 1 monstre depuis le Terrain de votre adversaire ainsi qu'1 monstre depuis le Cimetière de votre adversaire dans le Deck, et aussi, si l'un d'eux était un monstre Dragon, doublez l'ATK de cette carte.\r\nSi cette carte et un monstre \"Réindsurm\" LUMIÈRE sont dans votre Cimetière : vous pouvez ajouter cette carte à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Giriakarma Réindsurm\" qu'une fois par tour.",
+    "name": "Giriakarma Réinswurm",
+    "desc": "Vous pouvez Invoquer Rituellement cette carte avec \"Conquête Réinswurm\". Lorsque votre adversaire active un effet de monstre sur le Terrain ou Cimetière, tant que vous contrôlez cette carte Invoquée Rituellement (Effet Rapide) : vous pouvez annuler l'activation, puis vous pouvez mélanger 1 monstre chacun depuis le Terrain et Cimetière de votre adversaire dans le Deck, et aussi, si vous avez choisi un ou plusieurs monstres Dragon pour cet effet, l'ATK de cette carte sera doublée. Si vous avez cette carte et un monstre \"Réinswurm\" LUMIÈRE dans votre Cimetière : vous pouvez ajouter cette carte à votre main. Vous ne pouvez utiliser chaque effet de \"Giriakarma Réinswurm\" qu'une fois par tour.",
     "overallString": "[Monstre|Effet|Rituel] Insecte/Ténébres  [★8] 3300/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307028.jpg?version=19.7"
   },
   {
-    "name": "Conquête Réindsurm",
-    "desc": "Cette carte peut être utilisée pour Invoquer Rituellement un nombre de votre choix de Monstres Rituel Insecte.\r\nVous devez aussi mélanger des monstres Insecte et/ou Dragon depuis les Cimetières dans le Deck dont la somme des Niveaux est supérieure ou égale à la somme des Niveaux des Monstres Rituel.\r\nSi cette carte est dans votre Cimetière : vous pouvez envoyer 1 monstre Insecte depuis votre main ou Terrain face recto au Cimetière ; ajoutez cette carte à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Conquête Réindsurm\" qu'une fois par tour.",
+    "name": "Conquête Réinswurm",
+    "desc": "Cette carte peut être utilisée pour Invoquer Rituellement un nombre de votre choix de Monstres Rituel Insecte.\r\nVous devez aussi mélanger des monstres Insecte et/ou Dragon depuis les Cimetières dans le Deck dont la somme des Niveaux est supérieure ou égale à la somme des Niveaux des Monstres Rituel.\r\nSi cette carte est dans votre Cimetière : vous pouvez envoyer 1 monstre Insecte depuis votre main ou Terrain face recto au Cimetière ; ajoutez cette carte à votre main.\r\nVous ne pouvez utiliser chaque effet de \"Conquête Réinswurm\" qu'une fois par tour.",
     "overallString": "[Magie|Rituel]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307055.jpg?version=19.7"
   },
   {
-    "name": "Carnation Réindsurm",
-    "desc": "Tant que vous contrôlez un monstre \"Réindsurm\" dont le Niveau d'origine est min. 8 ou que votre adversaire a un monstre Dragon dans son Terrain ou Cimetière, les effets activés de vos monstres \"Réindsurm\" ne peuvent pas être annulés.\r\nUne fois par tour : vous pouvez envoyer 1 monstre \"Réindsurm\" ou monstre Dragon depuis votre main ou Terrain face recto au Cimetière ; ajoutez 1 monstre Insecte depuis votre Deck à votre main du même Niveau d'origine, mais de nom d'origine différent.",
+    "name": "Carnation Réinswurm",
+    "desc": "Tant que vous contrôlez un monstre \"Réinswurm\" dont le Niveau d'origine est min. 8 ou que votre adversaire a un monstre Dragon dans son Terrain ou Cimetière, les effets activés de vos monstres \"Réinswurm\" ne peuvent pas être annulés.\r\nUne fois par tour : vous pouvez envoyer 1 monstre \"Réinswurm\" ou monstre Dragon depuis votre main ou Terrain face recto au Cimetière ; ajoutez 1 monstre Insecte depuis votre Deck à votre main du même Niveau d'origine, mais de nom d'origine différent.",
     "overallString": "[Magie|Terrain]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307056.jpg?version=19.7"
   },
   {
-    "name": "Papillon Réindsurm",
-    "desc": "Envoyez 2 monstres (un monstre Insecte inclus) depuis votre Deck au Cimetière, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres Insecte exclus) jusqu'à la fin du prochain tour après la résolution de cette carte.\r\nSi vous Invoquez Rituellement un ou plusieurs monstres Insecte tant que cette carte est dans votre Cimetière : vous pouvez bannir cette carte ; tous les monstres \"Réindsurm\" que vous contrôlez actuellement gagnent 800 ATK/DEF.\r\nVous ne pouvez utiliser qu'1 effet de \"Papillon Réindsurm\" par tour, et uniquement une fois le tour.",
+    "name": "Papillon Réinswurm",
+    "desc": "Envoyez 2 monstres (un monstre Insecte inclus) depuis votre Deck au Cimetière, et aussi, vous ne pouvez pas Invoquer Spécialement (monstres Insecte exclus) jusqu'à la fin du prochain tour après la résolution de cette carte.\r\nSi vous Invoquez Rituellement un ou plusieurs monstres Insecte tant que cette carte est dans votre Cimetière : vous pouvez bannir cette carte ; tous les monstres \"Réinswurm\" que vous contrôlez actuellement gagnent 800 ATK/DEF.\r\nVous ne pouvez utiliser qu'1 effet de \"Papillon Réinswurm\" par tour, et uniquement une fois le tour.",
     "overallString": "[Magie]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307057.jpg?version=19.7"
   },
   {
-    "name": "Entraînement Réindsurm",
-    "desc": "Ajoutez 2 monstres \"Réindsurm\" depuis votre Deck à votre main, puis envoyez 1 carte depuis votre main au Cimetière, puis si votre adversaire a un monstre Dragon dans son Terrain ou Cimetière, vous pouvez ajouter 1 monstre Insecte depuis votre Cimetière à votre main.\r\nSi vous Invoquez Rituellement un ou plusieurs monstres Insecte tant que cette carte est dans votre Cimetière : vous pouvez bannir cette carte ; placez 1 Magie de Terrain \"Réindsurm\" depuis votre Deck face recto sur votre Terrain.\r\nVous ne pouvez utiliser chaque effet de \"Entraînement Réindsurm\" qu'une fois par tour.",
+    "name": "Entraînement Réinswurm",
+    "desc": "Ajoutez 2 monstres \"Réinswurm\" depuis votre Deck à votre main, puis envoyez 1 carte depuis votre main au Cimetière, puis si votre adversaire a un monstre Dragon dans son Terrain ou Cimetière, vous pouvez ajouter 1 monstre Insecte depuis votre Cimetière à votre main.\r\nSi vous Invoquez Rituellement un ou plusieurs monstres Insecte tant que cette carte est dans votre Cimetière : vous pouvez bannir cette carte ; placez 1 Magie de Terrain \"Réinswurm\" depuis votre Deck face recto sur votre Terrain.\r\nVous ne pouvez utiliser chaque effet de \"Entraînement Réinswurm\" qu'une fois par tour.",
     "overallString": "[Magie]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307058.jpg?version=19.7"
   },
   {
-    "name": "Confrontation Réindsurm",
-    "desc": "Lorsqu'une Carte Magie/Piège ou un effet de monstre est activé tant que vous contrôlez un monstre \"Réindsurm\" : annulez l'activation, puis vous pouvez ajouter 1 monstre \"Réindsurm\" depuis votre Deck ou Cimetière à votre main, et si vous le faites, envoyez 1 monstre Insecte que vous contrôlez au Cimetière.\r\nSi un ou plusieurs monstres \"Réindsurm\" que vous contrôlez vont être détruits au combat ou par un effet de carte, vous pouvez placer cette carte depuis votre Cimetière au-dessous du Deck à la place.\r\nVous ne pouvez utiliser chaque effet de \"Confrontation Réindsurm\" qu'une fois par tour.",
+    "name": "Confrontation Réinswurm",
+    "desc": "Lorsqu'une Carte Magie/Piège ou un effet de monstre est activé tant que vous contrôlez un monstre \"Réinswurm\" : annulez l'activation, puis vous pouvez ajouter 1 monstre \"Réinswurm\" depuis votre Deck ou Cimetière à votre main, et si vous le faites, envoyez 1 monstre Insecte que vous contrôlez au Cimetière.\r\nSi un ou plusieurs monstres \"Réinswurm\" que vous contrôlez vont être détruits au combat ou par un effet de carte, vous pouvez placer cette carte depuis votre Cimetière au-dessous du Deck à la place.\r\nVous ne pouvez utiliser chaque effet de \"Confrontation Réinswurm\" qu'une fois par tour.",
     "overallString": "[Piège|Contre-Piège]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307076.jpg?version=19.7"
   },
@@ -972,8 +972,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307004.jpg?version=19.7"
   },
   {
-    "name": "Dieu du Soleil des Ténèbres - Le Dragon Ailé de Râ",
-    "desc": "\"Le Dragon Ailé de Râ\" + 3 monstres \"Dieu du Soleil\"\r\nNon affectée par les effets d'autres cartes.\r\nUne fois par tour, durant la Main Phase (Effet Rapide) : vous pouvez défausser un nombre de votre choix de cartes \"Dieu du Soleil\", puis choisissez autant de Zones Monstre Main occupées de votre adversaire ; votre adversaire doit envoyer les monstres dans les zones au Cimetière.\r\nLorsqu'une attaque impliquant cette carte est déclarée : vous pouvez payer des LP jusqu'à n'en avoir plus que 1 ; cette carte gagne une ATK/DEF égales au montant des LP payés et à la somme des ATK de tous les monstres \"Dieu du Soleil\" actuellement dans votre Cimetière.",
+    "name": "Le Dragon Ailé de Râ, Dieu du Soleil des Ténèbres",
+    "desc": "\"Le Dragon Ailé de Râ\" + 3 monstres \"Dieu du Soleil\"\r\nNon affectée par les effets d'autres cartes. Une fois par tour, durant la Main Phase (Effet Rapide) : vous pouvez défausser un nombre de votre choix de cartes \"Dieu du Soleil\", puis choisissez ce nombre de Zones Monstre Main utilisées de votre adversaire ; votre adversaire doit envoyer des monstres dans ces zones au Cimetière. Lorsqu'une attaque impliquant cette carte est déclarée : vous pouvez payer des LP jusqu'à n'en avoir plus qu'1 ; cette carte gagne une ATK/DEF égales aux LP payés et la somme des ATK des monstres \"Dieu du Soleil\" dans votre Cimetière.",
     "overallString": "[Monstre|Effet|Fusion] \tBête Divine/Divin  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },

@@ -318,8 +318,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
-    "name": "Harpyien-Schwestern – Dreiecks-Ekstase",
-    "desc": "3 „Harpyie“-Monster\r\nMuss erst als Fusionsbeschwörung beschworen werden.\r\n①: Der Name dieser Karte wird zu „Harpyie“, solange sie auf dem Spielfeld oder im Friedhof liegt.\r\n②: Erhält für jede „Harpyie“ in deinem Friedhof 500 ATK. Dein Gegner kann diese Karte nicht als Ziel für die Effekte von Nicht-WIND Monstern wählen.\r\n③: Einmal pro Spielzug (Schnelleffekt): Du kannst alle Zauber und Fallen zerstören, die dein Gegner kontrolliert.",
+    "name": "Harpyien-Damen-Schwestern - Dreiecksextase",
+    "desc": "3 „Harpyien-Dame“-Monster\r\nMuss erst als Fusionsbeschwörung beschworen werden. Der Name dieser Karte wird zu „Harpyie“, solange sie auf dem Spielfeld oder im Friedhof liegt, aber sie wird weiterhin als „Harpyien-Dame“-Karte behandelt. Erhält für jede „Harpyie“ in deinem Friedhof 500 ATK, zusätzlich kann dein Gegner diese Karte nicht als Ziel für Nicht-WIND Monstereffekte wählen. Einmal pro Spielzug (Schnelleffekt): Du kannst alle Zauber/Fallen zerstören, die dein Gegner kontrolliert.",
     "overallString": "[Monster|Effekt|Fusion] Geflügeltes Ungeheuer/Wind  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
@@ -720,62 +720,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
   {
-    "name": "Feuerteufel des Weißkrähenwaldes",
-    "desc": "Falls du eine „Weißkrähe“-Karte kontrollierst, kannst du diese Karte als Spezialbeschwörung (von deiner Hand) beschwören. Du kannst „Feuerteufel des Weißkrähenwaldes“ auf diese Art nur einmal pro Spielzug als Spezialbeschwörung beschwören. Du kannst jeden der folgenden Effekte von „Feuerteufel des Weißkrähenwaldes“ nur einmal pro Spielzug verwenden. Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst deiner Hand 1 „Weißkrähe“-Zauber/Falle oder 1 „Sündhafte Beute“-Karte von deinem Deck hinzufügen. Du kannst 1 „Weißkrähe“-Monsterkarte oder 1 Monsterkarte der Stufe 7 oder 8 in einer beliebigen Zauber- & Fallenzone wählen; beschwöre sie als Spezialbeschwörung auf deine Spielfeldseite.",
+    "name": "Feuerteufel des Winterraben-Waldes",
+    "desc": "Falls du eine „Winterrabe“-Karte kontrollierst, kannst du diese Karte als Spezialbeschwörung (von deiner Hand) beschwören. Du kannst „Feuerteufel des Winterraben-Waldes“ auf diese Art nur einmal pro Spielzug als Spezialbeschwörung beschwören. Du kannst jeden der folgenden Effekte von „Feuerteufel des Winterraben-Waldes“ nur einmal pro Spielzug verwenden. Falls diese Karte als Normal- oder Spezialbeschwörung beschworen wird: Du kannst deiner Hand 1 „Winterrabe“-Zauber/Falle oder 1 „Sündhafte Beute“-Karte von deinem Deck hinzufügen. Du kannst 1 „Winterrabe“-Monsterkarte oder 1 Monsterkarte der Stufe 7 oder 8 in einer beliebigen Zauber- & Fallenzone wählen; beschwöre sie als Spezialbeschwörung auf deine Spielfeldseite.",
     "overallString": "[Monster|Effekt] Pyro/Feuer  [★1] 700/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307009.jpg?version=19.7"
   },
   {
-    "name": "Maluth, Weißkrähenritter",
-    "desc": "Du kannst 1 andere Karte von deiner Hand oder deiner Spielfeldseite auf den Friedhof legen; lege diese Karte offen als Permanenten Zauber in die Zauber- & Fallenzone ihres Besitzers und falls du dies tust, beschwöre bis zu 2 „Weißkrähe“-Monster mit unterschiedlichen Namen als Spezialbeschwörung von deinem Deck, außer „Maluth, Weißkrähenritter“. Wenn ein Monster einen Angriff deklariert und diese Karte ein Permanenter Zauber ist: Du kannst 1 „Weißkrähe“-Monsterkarte in deiner Zauber- & Fallenzone wählen; beschwöre sie als Spezialbeschwörung. Du kannst jeden Effekt von „Maluth, Weißkrähenritter“ nur einmal pro Spielzug verwenden.",
+    "name": "Maluth, Winterraben-Ritter",
+    "desc": "Du kannst 1 andere Karte von deiner Hand oder deiner Spielfeldseite auf den Friedhof legen; lege diese Karte offen als Permanenten Zauber in die Zauber- & Fallenzone ihres Besitzers und falls du dies tust, beschwöre bis zu 2 „Winterrabe“-Monster mit unterschiedlichen Namen als Spezialbeschwörung von deinem Deck, außer „Maluth, Winterraben-Ritter“. Wenn ein Monster einen Angriff deklariert und diese Karte ein Permanenter Zauber ist: Du kannst 1 „Winterrabe“-Monsterkarte in deiner Zauber- & Fallenzone wählen; beschwöre sie als Spezialbeschwörung. Du kannst jeden Effekt von „Maluth, Winterraben-Ritter“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Empfänger] Illusion/Licht  [★4] 1700/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307010.jpg?version=19.7"
   },
   {
-    "name": "Ann, Weißkrähenritter",
-    "desc": "Du kannst diese Karte in deiner Hand vorzeigen; beschwöre 1 „Weißkrähe“-Monster als Spezialbeschwörung von deiner Hand, außer „Ann, Weißkrähenritter“. Während der Main Phase (Schnelleffekt): Du kannst 1 „Weißkrähe“-Monster wählen, das du kontrollierst; lege es offen als Permanenten Zauber in die Zauber- & Fallenzone seines Besitzers und falls du dies tust, beschwöre 1 „Weißkrähe“-Monster als Spezialbeschwörung von deiner Hand oder deinem Friedhof, außer „Ann, Weißkrähenritter“. Du kannst jeden Effekt von „Ann, Weißkrähenritter“ nur einmal pro Spielzug verwenden.",
+    "name": "Ann, Winterraben-Ritter",
+    "desc": "Du kannst diese Karte in deiner Hand vorzeigen; beschwöre 1 „Winterrabe“-Monster als Spezialbeschwörung von deiner Hand, außer „Ann, Winterraben-Ritter“. Während der Main Phase (Schnelleffekt): Du kannst 1 „Winterrabe“-Monster wählen, das du kontrollierst; lege es offen als Permanenten Zauber in die Zauber- & Fallenzone seines Besitzers und falls du dies tust, beschwöre 1 „Winterrabe“-Monster als Spezialbeschwörung von deiner Hand oder deinem Friedhof, außer „Ann, Winterraben-Ritter“. Du kannst jeden Effekt von „Ann, Winterraben-Ritter“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Empfänger] Illusion/Licht  [★4] 1400/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307011.jpg?version=19.7"
   },
   {
-    "name": "Sündhafte Beute des Weißkrähenwaldes",
-    "desc": "Du kannst diese Karte als Spezialbeschwörung (von deiner Hand) beschwören, indem du 1 FEUER Monsterkarte der Stufe 1 von deiner offenen Spielfeldseite oder deinem Friedhof unter das Deck legst. Du kannst „Sündhafte Beute des Weißkrähenwaldes“ auf diese Art nur einmal pro Spielzug als Spezialbeschwörung beschwören. Wenn dein Gegner eine Karte oder einen Effekt aktiviert (Schnelleffekt): Du kannst diese Karte auf die Hand zurückgeben und dann 1 Monster auf dem offenen Spielfeld oder in einem beliebigen Friedhof wählen; lege es offen als Permanenten Zauber in die Zauber- & Fallenzone seines Besitzers. Du kannst diesen Effekt von „Sündhafte Beute des Weißkrähenwaldes“ nur einmal pro Spielzug verwenden.",
+    "name": "Sündhafte Beute des Winterraben-Waldes",
+    "desc": "Du kannst diese Karte als Spezialbeschwörung (von deiner Hand) beschwören, indem du 1 FEUER Monsterkarte der Stufe 1 von deiner offenen Spielfeldseite oder deinem Friedhof unter das Deck legst. Du kannst „Sündhafte Beute des Winterraben-Waldes“ auf diese Art nur einmal pro Spielzug als Spezialbeschwörung beschwören. Wenn dein Gegner eine Karte oder einen Effekt aktiviert (Schnelleffekt): Du kannst diese Karte auf die Hand zurückgeben und dann 1 Monster auf dem offenen Spielfeld oder in einem beliebigen Friedhof wählen; lege es offen als Permanenten Zauber in die Zauber- & Fallenzone seines Besitzers. Du kannst diesen Effekt von „Sündhafte Beute des Winterraben-Waldes“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Empfänger] Hexer/Feuer  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307012.jpg?version=19.7"
   },
   {
-    "name": "Diabellze, Herrin des Weißkrähenwaldes",
-    "desc": "1 Fusions- oder Synchromonster + 1 Hexer- oder Illusion-Monster\r\nFalls diese Karte als Spezialbeschwörung beschworen wird: Du kannst eine beliebige Anzahl Monster, die du kontrollierst, offen als Permanente Zauber in die Zauber- & Fallenzonen ihrer Besitzer legen, dann kannst du bis zu so viele Karten auf dem Spielfeld auf die Hand zurückgeben wie die Anzahl der Zauber/Fallen, die du kontrollierst. Du kannst diesen Effekt von „Diabellze, Herrin des Weißkrähenwaldes“ nur einmal pro Spielzug verwenden. Erhält für jeden Zauber / jede Falle auf dem Spielfeld 700 ATK/DEF. Diese offene als Fusionsbeschwörung beschworene Karte kann nicht als Fusionsmaterial verwendet werden.",
+    "name": "Diabellze, Erbin des Winterraben-Waldes",
+    "desc": "1 Fusions- oder Synchromonster + 1 Hexer- oder Illusion-Monster\r\nDiese offene als Fusionsbeschwörung beschworene Karte kann nicht als Fusionsmaterial verwendet werden. Erhält für jede/n Zauber/Falle auf dem Spielfeld 700 ATK/DEF. Falls diese Karte als Spezialbeschwörung beschworen wird: Du kannst eine beliebige Anzahl Monster, die du kontrollierst, offen als Permanente Zauber in die Zauber- & Fallenzonen ihrer Besitzer legen, dann kannst du Karten vom Spielfeld bis zur Anzahl der Zauber/Fallen, die du kontrollierst, auf die Hand zurückgeben. Du kannst diesen Effekt von „Diabellze, Erbin des Winterraben-Waldes“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Fusion] Illusion/Licht  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
   {
-    "name": "Zaltys, Weißkrähenritter",
-    "desc": "1 Illusion-Empfänger + 1+ Nicht-Empfänger-Monster\r\nFalls diese Karte als Spezialbeschwörung beschworen wird: Du kannst bis zu 2 Zauber/Fallen auf dem Spielfeld wählen; gib sie auf die Hand zurück. Falls diese Karte auf den Friedhof gelegt wird: Du kannst abhängig davon, von wo sie auf den Friedhof gelegt wurde, den folgenden Effekt aktivieren;\r\n● Spielfeld: Setze 1 „Weißkrähe“-Falle von deinem Deck.\r\n● Extra Deck: Füge deiner Hand 1 „Weißkrähe“-Karte von deinem Friedhof hinzu.\r\nDu kannst jeden Effekt von „Zaltys, Weißkrähenritter“ nur einmal pro Spielzug verwenden.",
+    "name": "Zaltys, Winterraben-Ritter",
+    "desc": "1 Illusion-Empfänger + 1+ Nicht-Empfänger-Monster\r\nFalls diese Karte als Spezialbeschwörung beschworen wird: Du kannst bis zu 2 Zauber/Fallen auf dem Spielfeld wählen; gib sie auf die Hand zurück. Falls diese Karte auf den Friedhof gelegt wird: Du kannst abhängig davon, von wo sie auf den Friedhof gelegt wurde, den folgenden Effekt aktivieren;\r\n● Spielfeld: Setze 1 „Winterrabe“-Falle von deinem Deck.\r\n● Extra Deck: Füge deiner Hand 1 „Winterrabe“-Karte von deinem Friedhof hinzu.\r\nDu kannst jeden Effekt von „Zaltys, Winterraben-Ritter“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Synchro] Illusion/Feuer  [★5] 2600/1700",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307037.jpg?version=19.7"
   },
   {
-    "name": "Aitvaras, Weißkrähenritter",
-    "desc": "1 Illusion-Empfänger + 1+ Nicht-Empfänger-Monster\r\nFalls diese Karte als Spezialbeschwörung beschworen wird: Du kannst 1 Karte, die du kontrollierst, und 1 Karte, die dein Gegner kontrolliert, wählen; gib sie auf die Hand zurück. Falls diese Karte auf den Friedhof gelegt wird: Du kannst abhängig davon, von wo sie auf den Friedhof gelegt wurde, den folgenden Effekt aktivieren;\r\n● Spielfeld: Wähle 1 Karte auf dem Spielfeld; mische sie ins Deck.\r\n● Extra Deck: Beschwöre 1 „Weißkrähe“-Monster als Spezialbeschwörung von deinem Friedhof.\r\nDu kannst jeden Effekt von „Aitvaras, Weißkrähenritter“ nur einmal pro Spielzug verwenden.",
+    "name": "Aitvaras, Winterraben-Ritter",
+    "desc": "1 Illusion-Empfänger + 1+ Nicht-Empfänger-Monster\r\nFalls diese Karte als Spezialbeschwörung beschworen wird: Du kannst 1 Karte, die du kontrollierst, und 1 Karte, die dein Gegner kontrolliert, wählen; gib sie auf die Hand zurück. Falls diese Karte auf den Friedhof gelegt wird: Du kannst abhängig davon, von wo sie auf den Friedhof gelegt wurde, den folgenden Effekt aktivieren;\r\n● Spielfeld: Wähle 1 Karte auf dem Spielfeld; mische sie ins Deck.\r\n● Extra Deck: Beschwöre 1 „Winterrabe“-Monster als Spezialbeschwörung von deinem Friedhof.\r\nDu kannst jeden Effekt von „Aitvaras, Winterraben-Ritter“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Synchro] Illusion/Feuer  [★5] 900/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307038.jpg?version=19.7"
   },
   {
-    "name": "Der tiefe Wald der Weißkrähe",
-    "desc": "Wenn diese Karte aktiviert wird: Du kannst deiner Hand 1 „Weißkrähe“-Monster von deinem Deck hinzufügen. Solange sich diese Karte in der Spielfeldzone befindet, können „Weißkrähe“-Monsterkarten, die du kontrollierst, nicht durch Karteneffekte zerstört werden. Während deiner End Phase: Du kannst 1 „Weißkrähe“-Falle von deinem Deck oder Friedhof setzen. Du kannst diesen Effekt von „Der tiefe Wald der Weißkrähe“ nur einmal pro Spielzug verwenden. Du kannst nur 1 „Der tiefe Wald der Weißkrähe“ pro Spielzug aktivieren.",
+    "name": "Der tiefe Wald des Winterraben",
+    "desc": "Wenn diese Karte aktiviert wird: Du kannst deiner Hand 1 „Winterrabe“-Monster von deinem Deck hinzufügen. Solange sich diese Karte in der Spielfeldzone befindet, können „Winterrabe“-Monsterkarten, die du kontrollierst, nicht durch Karteneffekte zerstört werden. Während deiner End Phase: Du kannst 1 „Winterrabe“-Falle von deinem Deck oder Friedhof setzen. Du kannst diesen Effekt von „Der tiefe Wald des Winterraben“ nur einmal pro Spielzug verwenden. Du kannst nur 1 „Der tiefe Wald des Winterraben“ pro Spielzug aktivieren.",
     "overallString": "[Zauber|Spielfeld]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307059.jpg?version=19.7"
   },
   {
-    "name": "Glanz der Weißkrähenhexe",
-    "desc": "Du kannst 1 dieser Effekte aktivieren;\r\n● Beschwöre 1 „Weißkrähe“-Monster als Spezialbeschwörung von deiner Hand oder deinem Friedhof.\r\n● Beschwöre 1 „Diabell“-Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck, indem du jeweils bis zu 1 „Weißkrähe“-Monster von deiner Hand, deinem Extra Deck und/oder deiner Spielfeldseite als Material verwendest.\r\n● Falls du ein „Diabell“-Monster kontrollierst: Wähle 1 offene Karte auf dem Spielfeld; annulliere bis zum Ende dieses Spielzugs ihre Effekte.\r\nDu kannst diesen Effekt von „Glanz der Weißkrähenhexe“ nur einmal pro Spielzug verwenden.",
+    "name": "Glanz der Winterraben-Hexe",
+    "desc": "Du kannst 1 dieser Effekte aktivieren;\r\n● Beschwöre 1 „Winterrabe“-Monster als Spezialbeschwörung von deiner Hand oder deinem Friedhof.\r\n● Beschwöre 1 „Diabell“-Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck, indem du jeweils bis zu 1 „Winterrabe“-Monster von deiner Hand, deinem Extra Deck und/oder deiner Spielfeldseite als Material verwendest.\r\n● Falls du ein „Diabell“-Monster kontrollierst: Wähle 1 offene Karte auf dem Spielfeld; annulliere bis zum Ende dieses Spielzugs ihre Effekte.\r\nDu kannst diesen Effekt von „Glanz der Winterraben-Hexe“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Falle|Permanente]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307077.jpg?version=19.7"
   },
   {
-    "name": "Trugbild der Weißkrähenhexe",
-    "desc": "Beschwöre 1 Illusion-Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck, indem du Monster von deinem Extra Deck und/oder deiner Spielfeldseite als Material verwendest, zusätzlich kannst du für den Rest dieses Spielzugs, nachdem diese Karte aufgelöst wurde, keine Monstereffekte in der Hand oder im Friedhof aktivieren, außer den Effekten von Illusion-Monstern. Falls die Aktivierung dieser Karte, die sich im Besitz ihres Besitzers befindet, durch einen Karteneffekt eines Gegners annulliert wird und diese Karte auf den Friedhof gelegt wird: Du kannst diese Karte setzen und falls du dies tust, gib alle Karten, die dein Gegner kontrolliert, auf die Hand zurück. Du kannst nur 1 „Trugbild der Weißkrähenhexe“ pro Spielzug aktivieren.",
+    "name": "Trugbild der Winterraben-Hexe",
+    "desc": "Beschwöre 1 Illusion-Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck, indem du Monster von deinem Extra Deck und/oder deiner Spielfeldseite als Material verwendest, zusätzlich kannst du für den Rest dieses Spielzugs, nachdem diese Karte aufgelöst wurde, keine Monstereffekte in der Hand oder im Friedhof aktivieren, außer den Effekten von Illusion-Monstern. Falls die Aktivierung dieser Karte, die sich im Besitz ihres Besitzers befindet, durch einen Karteneffekt eines Gegners annulliert wird und diese Karte auf den Friedhof gelegt wird: Du kannst diese Karte setzen und falls du dies tust, gib alle Karten, die dein Gegner kontrolliert, auf die Hand zurück. Du kannst nur 1 „Trugbild der Winterraben-Hexe“ pro Spielzug aktivieren.",
     "overallString": "[Falle]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307078.jpg?version=19.7"
   },
@@ -810,8 +810,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307063.jpg?version=19.7"
   },
   {
-    "name": "Finsteres Glaubensbuch",
-    "desc": "Jedes Mal, wenn ein Monster deines Gegners einen Angriff deklariert, lege 1 Finstere-Lehre-Zählmarke auf diese Karte. Du kannst jeden der folgenden Effekte von „Finsteres Glaubensbuch“ nur einmal pro Spielzug verwenden. Während deiner Main Phase, falls diese Karte in diesem Spielzug aktiviert wurde: Du kannst deiner Hand 1 FINSTERNIS Unterweltler-Monster von deinem Deck hinzufügen, dann wirf 1 Unterweltler-Monster ab. Du kannst diese Karte mit 4 oder mehr Finstere-Lehre-Zählmarken auf den Friedhof legen; beschwöre 1 Unterweltler-Monster als Spezialbeschwörung von deinem Deck, dann kannst du deiner Hand 1 „Superpolymerisation“ von deinem Deck hinzufügen.",
+    "name": "Böser Kanon",
+    "desc": "Jedes Mal, wenn ein Monster eines Gegners einen Angriff deklariert, lege 1 Unheimliche-Lehre-Zählmarke auf diese Karte. Du kannst jeden der folgenden Effekte von „Böser Kanon“ nur einmal pro Spielzug verwenden. Während deiner Main Phase, falls diese Karte in diesem Spielzug aktiviert wurde: Du kannst deiner Hand 1 FINSTERNIS Unterweltler-Monster von deinem Deck hinzufügen, dann wirf 1 Unterweltler-Monster ab. Du kannst diese Karte mit 4 oder mehr Unheimliche-Lehre-Zählmarken auf den Friedhof legen; beschwöre 1 Unterweltler-Monster als Spezialbeschwörung von deinem Deck, dann kannst du deiner Hand 1 „Superpolymerisation“ von deinem Deck hinzufügen.",
     "overallString": "[Zauber|Permanente]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
@@ -828,62 +828,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Amurusa",
-    "desc": "Du kannst diese Karte mit „Reindsurm-Eroberung“ als Ritualbeschwörung beschwören. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst deiner Hand 2 „Reindsurm“-Monster von deinem Deck hinzufügen, die keine WIND Monster sind. Falls diese Karte auf den Friedhof gelegt wird, außer durch Kampf: Du kannst 1 Insekt-Ritualmonster als Ritualbeschwörung von deiner Hand beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest und/oder Insekt- und/oder Drache-Monster von deinem Friedhof ins Deck mischst, deren gemeinsame Stufe größer oder gleich seiner Stufe ist. Du kannst jeden Effekt von „Reindsurm Amurusa“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm Amurusa",
+    "desc": "Du kannst diese Karte mit „Wiedgewürm-Eroberung“ als Ritualbeschwörung beschwören. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst deiner Hand 2 „Wiedgewürm“-Monster von deinem Deck hinzufügen, die keine WIND Monster sind. Falls diese Karte auf den Friedhof gelegt wird, außer durch Kampf: Du kannst 1 Insekt-Ritualmonster als Ritualbeschwörung von deiner Hand beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest und/oder Insekt- und/oder Drache-Monster von deinem Friedhof ins Deck mischst, deren gemeinsame Stufe größer oder gleich seiner Stufe ist. Du kannst jeden Effekt von „Wiedgewürm Amurusa“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Ritual] Insekt/Wind  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Luvian",
-    "desc": "Du kannst diese Karte mit „Reindsurm-Eroberung“ als Ritualbeschwörung beschwören. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst deiner Hand 2 „Reindsurm“-Zauber/Fallen von deinem Deck hinzufügen. Falls diese Karte auf den Friedhof gelegt wird, außer durch Kampf: Du kannst 1 Insekt-Ritualmonster als Ritualbeschwörung von deiner Hand beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest und/oder Insekt- und/oder Drache-Monster von deinem Friedhof ins Deck mischst, deren gemeinsame Stufe größer oder gleich seiner Stufe ist. Du kannst jeden Effekt von „Reindsurm Luvian“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm Luvian",
+    "desc": "Du kannst diese Karte mit „Wiedgewürm-Eroberung“ als Ritualbeschwörung beschwören. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst deiner Hand 2 „Wiedgewürm“-Zauber/Fallen von deinem Deck hinzufügen. Falls diese Karte auf den Friedhof gelegt wird, außer durch Kampf: Du kannst 1 Insekt-Ritualmonster als Ritualbeschwörung von deiner Hand beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest und/oder Insekt- und/oder Drache-Monster von deinem Friedhof ins Deck mischst, deren gemeinsame Stufe größer oder gleich seiner Stufe ist. Du kannst jeden Effekt von „Wiedgewürm Luvian“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Ritual] Insekt/Wasser  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Carcasas",
-    "desc": "Du kannst diese Karte mit „Reindsurm-Eroberung“ als Ritualbeschwörung beschwören. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst 2 „Reindsurm“-Karten von deinem Deck auf den Friedhof legen. Falls diese Karte auf den Friedhof gelegt wird, außer durch Kampf: Du kannst 1 Insekt-Ritualmonster als Ritualbeschwörung von deiner Hand beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest und/oder Insekt- und/oder Drache-Monster von deinem Friedhof ins Deck mischst, deren gemeinsame Stufe größer oder gleich seiner Stufe ist. Du kannst jeden Effekt von „Reindsurm Carcasas“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm Carcasas",
+    "desc": "Du kannst diese Karte mit „Wiedgewürm-Eroberung“ als Ritualbeschwörung beschwören. Falls diese Karte als Ritualbeschwörung beschworen wird: Du kannst 2 „Wiedgewürm“-Karten von deinem Deck auf den Friedhof legen. Falls diese Karte auf den Friedhof gelegt wird, außer durch Kampf: Du kannst 1 Insekt-Ritualmonster als Ritualbeschwörung von deiner Hand beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest und/oder Insekt- und/oder Drache-Monster von deinem Friedhof ins Deck mischst, deren gemeinsame Stufe größer oder gleich seiner Stufe ist. Du kannst jeden Effekt von „Wiedgewürm Carcasas“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Ritual] Insekt/Licht  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Gigalovendra",
-    "desc": "Du kannst diese Karte mit „Reindsurm-Eroberung“ als Ritualbeschwörung beschwören. (Schnelleffekt): Du kannst 2 Karten von deiner Hand auf den Friedhof legen, darunter diese Karte; füge deiner Hand 1 „Reindsurm“-Monster von deinem Deck hinzu, das kein FEUER Monster ist. Falls diese Karte als Ritualbeschwörung beschworen wird oder dein Gegner ein oder mehr Monster als Spezialbeschwörung beschwört: Du kannst bis zu 2 Monster auf dem Spielfeld ins Deck mischen. Falls sich diese Karte und ein WASSER „Reindsurm“-Monster in deinem Friedhof befinden: Du kannst diese Karte deiner Hand hinzufügen. Du kannst jeden Effekt von „Reindsurm Gigalovendra“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm Gigalovendra",
+    "desc": "Du kannst diese Karte mit „Wiedgewürm-Eroberung“ als Ritualbeschwörung beschwören. (Schnelleffekt): Du kannst 2 Karten von deiner Hand auf den Friedhof legen, darunter diese Karte; füge deiner Hand 1 „Wiedgewürm“-Monster von deinem Deck hinzu, das kein FEUER Monster ist. Falls diese Karte als Ritualbeschwörung beschworen wird oder dein Gegner ein oder mehr Monster als Spezialbeschwörung beschwört: Du kannst bis zu 2 Monster auf dem Spielfeld ins Deck mischen. Falls sich diese Karte und ein WASSER „Wiedgewürm“-Monster in deinem Friedhof befinden: Du kannst diese Karte deiner Hand hinzufügen. Du kannst jeden Effekt von „Wiedgewürm Gigalovendra“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Ritual] Insekt/Feuer  [★8] 3000/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307027.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Giriakarma",
-    "desc": "Du kannst diese Karte mit „Reindsurm-Eroberung“ als Ritualbeschwörung beschwören. Wenn dein Gegner einen Monstereffekt auf dem Spielfeld oder im Friedhof aktiviert, solange du diese als Ritualbeschwörung beschworene Karte kontrollierst (Schnelleffekt): Du kannst die Aktivierung annullieren, dann kannst du je 1 Monster von der Spielfeldseite und vom Friedhof deines Gegners ins Deck mischen, zusätzlich, falls mindestens eines jener Monster ein Drache-Monster war, verdopple die ATK dieser Karte. Falls sich diese Karte und ein LICHT „Reindsurm“-Monster in deinem Friedhof befinden: Du kannst diese Karte deiner Hand hinzufügen. Du kannst jeden Effekt von „Reindsurm Giriakarma“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm Giriakarma",
+    "desc": "Du kannst diese Karte mit „Wiedgewürm-Eroberung“ als Ritualbeschwörung beschwören. Wenn dein Gegner einen Monstereffekt auf dem Spielfeld oder im Friedhof aktiviert, solange du diese als Ritualbeschwörung beschworene Karte kontrollierst (Schnelleffekt): Du kannst die Aktivierung annullieren, dann kannst du je 1 Monster von der Spielfeldseite und dem Friedhof deines Gegners ins Deck mischen, zusätzlich, falls du für diesen Effekt ein oder mehr Drache-Monster bestimmt hast, werden die ATK dieser Karte verdoppelt. Falls du diese Karte und ein LICHT „Wiedgewürm“-Monster in deinem Friedhof hast: Du kannst diese Karte deiner Hand hinzufügen. Du kannst jeden Effekt von „Wiedgewürm Giriakarma“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Monster|Effekt|Ritual] Insekt/Finsternis  [★8] 3300/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307028.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm-Eroberung",
-    "desc": "Diese Karte kann verwendet werden, um eine beliebige Anzahl Insekt-Ritualmonster als Ritualbeschwörung zu beschwören. Du musst außerdem Insekt- und/oder Drache-Monster von den Friedhöfen ins Deck mischen, deren gemeinsame Stufe größer oder gleich der gemeinsamen Stufe der Ritualmonster ist, die du als Ritualbeschwörung von deiner Hand beschwörst. Falls sich diese Karte in deinem Friedhof befindet: Du kannst 1 Insekt-Monster von deiner Hand oder deiner offenen Spielfeldseite auf den Friedhof legen; füge diese Karte deiner Hand hinzu. Du kannst jeden Effekt von „Reindsurm-Eroberung“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm-Eroberung",
+    "desc": "Diese Karte kann verwendet werden, um eine beliebige Anzahl Insekt-Ritualmonster als Ritualbeschwörung zu beschwören. Du musst außerdem Insekt- und/oder Drache-Monster von den Friedhöfen ins Deck mischen, deren gemeinsame Stufe größer oder gleich der gemeinsamen Stufe der Ritualmonster ist, die du als Ritualbeschwörung von deiner Hand beschwörst. Falls sich diese Karte in deinem Friedhof befindet: Du kannst 1 Insekt-Monster von deiner Hand oder deiner offenen Spielfeldseite auf den Friedhof legen; füge diese Karte deiner Hand hinzu. Du kannst jeden Effekt von „Wiedgewürm-Eroberung“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Zauber|Ritual]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307055.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm-Wiedergeburt",
-    "desc": "Solange du ein „Reindsurm“-Monster kontrollierst, dessen Grund-Stufe 8 oder höher ist, oder sich auf der Spielfeldseite oder im Friedhof deines Gegners ein Drache-Monster befindet, können die aktivierten Effekte deiner „Reindsurm“-Monster nicht annulliert werden. Einmal pro Spielzug: Du kannst 1 „Reindsurm“-Monster oder 1 Drache-Monster von deiner Hand oder deiner offenen Spielfeldseite auf den Friedhof legen; füge deiner Hand 1 Insekt-Monster von deinem Deck hinzu, das dieselbe Grund-Stufe, aber einen anderen Grund-Namen als jenes Monster hat.",
+    "name": "Wiedgewürm-Wiedergeburt",
+    "desc": "Solange du ein „Wiedgewürm“-Monster kontrollierst, dessen Grund-Stufe 8 oder höher ist, oder sich auf der Spielfeldseite oder im Friedhof deines Gegners ein Drache-Monster befindet, können die aktivierten Effekte deiner „Wiedgewürm“-Monster nicht annulliert werden. Einmal pro Spielzug: Du kannst 1 „Wiedgewürm“-Monster oder 1 Drache-Monster von deiner Hand oder deiner offenen Spielfeldseite auf den Friedhof legen; füge deiner Hand 1 Insekt-Monster von deinem Deck hinzu, das dieselbe Grund-Stufe, aber einen anderen Grund-Namen als jenes Monster hat.",
     "overallString": "[Zauber|Spielfeld]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307056.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm-Flügelschlag",
-    "desc": "Lege 2 Monster von deinem Deck auf den Friedhof, darunter ein Insekt-Monster, zusätzlich kannst du bis zum Ende des nächsten Spielzugs, nachdem diese Karte aufgelöst wurde, keine Monster als Spezialbeschwörung beschwören, außer Insekt-Monstern. Falls du ein oder mehr Insekt-Monster als Ritualbeschwörung beschwörst, solange sich diese Karte in deinem Friedhof befindet: Du kannst diese Karte verbannen; alle „Reindsurm“-Monster, die du derzeit kontrollierst, erhalten 800 ATK/DEF. Du kannst nur 1 Effekt von „Reindsurm-Flügelschlag“ pro Spielzug verwenden und in jenem Spielzug nur einmal.",
+    "name": "Wiedgewürm-Flügelschlag",
+    "desc": "Lege 2 Monster von deinem Deck auf den Friedhof, darunter ein Insekt-Monster, zusätzlich kannst du bis zum Ende des nächsten Spielzugs, nachdem diese Karte aufgelöst wurde, keine Monster als Spezialbeschwörung beschwören, außer Insekt-Monstern. Falls du ein oder mehr Insekt-Monster als Ritualbeschwörung beschwörst, solange sich diese Karte in deinem Friedhof befindet: Du kannst diese Karte verbannen; alle „Wiedgewürm“-Monster, die du derzeit kontrollierst, erhalten 800 ATK/DEF. Du kannst nur 1 Effekt von „Wiedgewürm-Flügelschlag“ pro Spielzug verwenden und in jenem Spielzug nur einmal.",
     "overallString": "[Zauber]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307057.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm-Schulung",
-    "desc": "Füge deiner Hand 2 „Reindsurm“-Monster von deinem Deck hinzu, dann lege 1 Karte von deiner Hand auf den Friedhof, dann, falls sich auf der Spielfeldseite oder im Friedhof deines Gegners ein Drache-Monster befindet, kannst du deiner Hand 1 Insekt-Monster von deinem Friedhof hinzufügen. Falls du ein oder mehr Insekt-Monster als Ritualbeschwörung beschwörst, solange sich diese Karte in deinem Friedhof befindet: Du kannst diese Karte verbannen; lege 1 „Reindsurm“-Spielfeldzauber von deinem Deck offen auf deine Spielfeldseite. Du kannst jeden Effekt von „Reindsurm-Schulung“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm-Schulung",
+    "desc": "Füge deiner Hand 2 „Wiedgewürm“-Monster von deinem Deck hinzu, dann lege 1 Karte von deiner Hand auf den Friedhof, dann, falls sich auf der Spielfeldseite oder im Friedhof deines Gegners ein Drache-Monster befindet, kannst du deiner Hand 1 Insekt-Monster von deinem Friedhof hinzufügen. Falls du ein oder mehr Insekt-Monster als Ritualbeschwörung beschwörst, solange sich diese Karte in deinem Friedhof befindet: Du kannst diese Karte verbannen; lege 1 „Wiedgewürm“-Spielfeldzauber von deinem Deck offen auf deine Spielfeldseite. Du kannst jeden Effekt von „Wiedgewürm-Schulung“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Zauber]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307058.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm-Begegnung",
-    "desc": "Wenn eine Zauber-/Fallenkarte oder ein Monstereffekt aktiviert wird, solange du ein „Reindsurm“-Monster kontrollierst: Annulliere die Aktivierung, dann kannst du deiner Hand 1 „Reindsurm“-Monster von deinem Deck oder Friedhof hinzufügen und falls du dies tust, lege 1 Insekt-Monster, das du kontrollierst, auf den Friedhof. Falls ein oder mehr „Reindsurm“-Monster, die du kontrollierst, durch Kampf oder einen Karteneffekt zerstört würden, kannst du stattdessen diese Karte von deinem Friedhof unter das Deck legen. Du kannst jeden Effekt von „Reindsurm-Begegnung“ nur einmal pro Spielzug verwenden.",
+    "name": "Wiedgewürm-Begegnung",
+    "desc": "Wenn eine Zauber-/Fallenkarte oder ein Monstereffekt aktiviert wird, solange du ein „Wiedgewürm“-Monster kontrollierst: Annulliere die Aktivierung, dann kannst du deiner Hand 1 „Wiedgewürm“-Monster von deinem Deck oder Friedhof hinzufügen und falls du dies tust, lege 1 Insekt-Monster, das du kontrollierst, auf den Friedhof. Falls ein oder mehr „Wiedgewürm“-Monster, die du kontrollierst, durch Kampf oder einen Karteneffekt zerstört würden, kannst du stattdessen diese Karte von deinem Friedhof unter das Deck legen. Du kannst jeden Effekt von „Wiedgewürm-Begegnung“ nur einmal pro Spielzug verwenden.",
     "overallString": "[Falle|Konterfallen]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307076.jpg?version=19.7"
   },
@@ -972,8 +972,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307004.jpg?version=19.7"
   },
   {
-    "name": "Der Sonnengott der Finsternis – Der geflügelte Drache von Ra",
-    "desc": "„Der geflügelte Drache von Ra“ + 3 „Sonnengott“-Monster\n\r\nBleibt von den Effekten anderer Karten unberührt. Einmal pro Spielzug, während der Main Phase (Schnelleffekt): Du kannst eine beliebige Anzahl an „Sonnengott“-Karten abwerfen, dann wähle so viele belegte Main-Monsterzonen deines Gegners; dein Gegner muss die Monster in jenen Zonen auf den Friedhof legen. Wenn ein Angriff deklariert wird, an dem diese Karte beteiligt ist: Du kannst LP zahlen, sodass dir nur noch 1 übrig bleibt; diese Karte erhält ATK/DEF in Höhe der gezahlten LP und der Gesamt-ATK aller „Sonnengott“-Monster, die sich derzeit in deinem Friedhof befinden.",
+    "name": "Der geflügelte Drache von Ra, Sonnengott der Finsternis",
+    "desc": "„Der geflügelte Drache von Ra“ + 3 „Sonnengott“-Monster\r\nBleibt von den Effekten anderer Karten unberührt. Einmal pro Spielzug, während der Main Phase (Schnelleffekt): Du kannst eine beliebige Anzahl „Sonnengott“-Karten abwerfen und dann ebenso viele der verwendeten Main-Monsterzonen deines Gegners bestimmen; dein Gegner muss die Monster aus jenen Zonen auf den Friedhof legen. Wenn ein Angriff deklariert wird, an dem diese Karte beteiligt ist: Du kannst LP zahlen, sodass du nur noch 1 hast; diese Karte erhält ATK/DEF in Höhe der gezahlten LP und der Summe der ATK der „Sonnengott“-Monster in deinem Friedhof.",
     "overallString": "[Monster|Effekt|Fusion] Göttliches Ungeheuer/Göttlich  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },

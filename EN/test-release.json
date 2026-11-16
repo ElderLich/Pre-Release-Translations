@@ -318,7 +318,7 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
-    "name": "Triangle Ecstasy Harpie Lady Sisters",
+    "name": "Harpie Lady Sisters - Triangle Ecstasy",
     "desc": "3 \"Harpie Lady\" monsters\nMust first be Fusion Summoned. This card's name becomes \"Harpie Lady\" while on the field or in the GY. Gains 500 ATK for each \"Harpie Lady\" in your GY, also your opponent cannot target this card with non-WIND monster effects. Once per turn (Quick Effect): You can destroy all Spells/Traps your opponent controls.",
     "overallString": "[Monster|Effect|Fusion] Winged Beast/Wind  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
@@ -745,7 +745,7 @@
   },
   {
     "name": "Diabellze, Heiress of the Winter Raven's Forest",
-    "desc": "1 Fusion or Synchro Monster + 1 Spellcaster or Illusion monster\nIf this card is Special Summoned: You can place any number of monsters you control face-up in their owners' Spell & Trap Zones as Continuous Spells, then you can return cards on the field to the hand up to the number of Spells/Traps you control. You can only use this effect of \"Diabellze, Heiress of the Winter Raven's Forest\" once per turn. Gains 700 ATK/DEF for each Spell/Trap on the field. This face-up Fusion Summoned card cannot be used as Fusion Material.",
+    "desc": "1 Fusion or Synchro Monster + 1 Spellcaster or Illusion monster\nThis face-up Fusion Summoned card cannot be used as Fusion Material. Gains 700 ATK/DEF for each Spell/Trap on the field. If this card is Special Summoned: You can place any number of monsters you control face-up in their owners' Spell & Trap Zones as Continuous Spells, then you can return cards from the field to the hand, up to the number of Spells/Traps you control. You can only use this effect of \"Diabellze, Heiress of the Winter Raven's Forest\" once per turn.",
     "overallString": "[Monster|Effect|Fusion] Illusion/Light  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
@@ -828,62 +828,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Amurusa",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 non-WIND \"Reindsurm\" monsters from your Deck to your hand. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Amurusa\" once per turn.",
+    "name": "Reinzwurm Amurusa",
+    "desc": "You can Ritual Summon this card with \"Reinzwurm Conquest\". If this card is Ritual Summoned: You can add 2 non-WIND \"Reinzwurm\" monsters from your Deck to your hand. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reinzwurm Amurusa\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Wind  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Luvian",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can add 2 \"Reindsurm\" Spells/Traps from your Deck to your hand. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Luvian\" once per turn.",
+    "name": "Reinzwurm Luvian",
+    "desc": "You can Ritual Summon this card with \"Reinzwurm Conquest\". If this card is Ritual Summoned: You can add 2 \"Reinzwurm\" Spells/Traps from your Deck to your hand. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reinzwurm Luvian\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Water  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Carcasas",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". If this card is Ritual Summoned: You can send 2 \"Reindsurm\" cards from your Deck to the GY. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reindsurm Carcasas\" once per turn.",
+    "name": "Reinzwurm Carcasas",
+    "desc": "You can Ritual Summon this card with \"Reinzwurm Conquest\". If this card is Ritual Summoned: You can send 2 \"Reinzwurm\" cards from your Deck to the GY. If this card is sent to the GY, except by battle (except during the Damage Step): You can Ritual Summon 1 Insect Ritual Monster from your hand, by Tributing monsters from your hand or field, and/or shuffling Insect and/or Dragon monsters from your GY into the Deck, whose total Levels equal or exceed its Level. You can only use each effect of \"Reinzwurm Carcasas\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Light  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Gigalovendra",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". (Quick Effect): You can send 2 cards from your hand to the GY, including this card; add 1 non-FIRE \"Reindsurm\" monster from your Deck to your hand. If this card is Ritual Summoned, or your opponent Special Summons a monster(s): You can shuffle up to 2 monsters on the field into the Deck. If this card and a WATER \"Reindsurm\" monster are in your GY: You can add this card to your hand. You can only use each effect of \"Reindsurm Gigalovendra\" once per turn.",
+    "name": "Reinzwurm Gigalovendra",
+    "desc": "You can Ritual Summon this card with \"Reinzwurm Conquest\". (Quick Effect): You can send 2 cards from your hand to the GY, including this card; add 1 non-FIRE \"Reinzwurm\" monster from your Deck to your hand. If this card is Ritual Summoned, or your opponent Special Summons a monster(s): You can shuffle up to 2 monsters on the field into the Deck. If this card and a WATER \"Reinzwurm\" monster are in your GY: You can add this card to your hand. You can only use each effect of \"Reinzwurm Gigalovendra\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Fire  [★8] 3000/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307027.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Giriakarma",
-    "desc": "You can Ritual Summon this card with \"Reindsurm Conquest\". When your opponent activates a monster effect in the field or GY and you control this Ritual Summoned card (Quick Effect): You can negate the activation, then you can shuffle 1 monster each from both your opponent's field and GY into the Deck, also if either of them was a Dragon monster, double this card's ATK. If this card and a LIGHT \"Reindsurm\" monster are in your GY: You can add this card to your hand. You can only use each effect of \"Reindsurm Giriakarma\" once per turn.",
+    "name": "Reinzwurm Giriakarma",
+    "desc": "You can Ritual Summon this card with \"Reinzwurm Conquest\". When your opponent activates a monster effect on the field or GY, while you control this Ritual Summoned card (Quick Effect): You can negate the activation, then you can shuffle 1 monster each from your opponent's field and GY into the Deck, also if you chose a Dragon monster(s) for this effect, this card's ATK becomes doubled. If you have this card and a LIGHT \"Reinzwurm\" monster in your GY: You can add this card to your hand. You can only use each effect of \"Reinzwurm Giriakarma\" once per turn.",
     "overallString": "[Monster|Effect|Ritual] Insect/Dark  [★8] 3300/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307028.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Conquest",
-    "desc": "This card can be used to Ritual Summon any number of Insect Ritual Monsters. You must also shuffle Insect and/or Dragon monsters from the GY(s) into the Deck whose total Levels equal or exceed the total Levels of the Ritual Monsters. If this card is in your GY: You can send 1 Insect monster from your hand or face-up field to the GY; add this card to your hand. You can only use each effect of \"Reindsurm Conquest\" once per turn.",
+    "name": "Reinzwurm Conquest",
+    "desc": "This card can be used to Ritual Summon any number of Insect Ritual Monsters. You must also shuffle Insect and/or Dragon monsters from the GY(s) into the Deck whose total Levels equal or exceed the total Levels of the Ritual Monsters. If this card is in your GY: You can send 1 Insect monster from your hand or face-up field to the GY; add this card to your hand. You can only use each effect of \"Reinzwurm Conquest\" once per turn.",
     "overallString": "[Spell|Ritual]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307055.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Carnation",
-    "desc": "While you control a \"Reindsurm\" monster whose original Level is 8 or higher or your opponent has a Dragon monster in their field or GY, the activated effects of your \"Reindsurm\" monsters cannot be negated. Once per turn: You can send 1 \"Reindsurm\" monster or Dragon monster from your hand or face-up field to the GY; add 1 Insect monster from your Deck to your hand with the same original Level, but a different original name.",
+    "name": "Reinzwurm Carnation",
+    "desc": "While you control a \"Reinzwurm\" monster whose original Level is 8 or higher or your opponent has a Dragon monster in their field or GY, the activated effects of your \"Reinzwurm\" monsters cannot be negated. Once per turn: You can send 1 \"Reinzwurm\" monster or Dragon monster from your hand or face-up field to the GY; add 1 Insect monster from your Deck to your hand with the same original Level, but a different original name.",
     "overallString": "[Spell|Field]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307056.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Butterfly",
-    "desc": "Send 2 monsters from your Deck to the GY, including an Insect monster, also you cannot Special Summon until the end of the next turn after this card resolves, except Insect monsters. If you Ritual Summon an Insect monster(s) while this card is in your GY: You can banish this card; all \"Reindsurm\" monsters you currently control gain 800 ATK/DEF. You can only use 1 \"Reindsurm Butterfly\" effect per turn, and only once that turn.",
+    "name": "Reinzwurm Butterfly",
+    "desc": "Send 2 monsters from your Deck to the GY, including an Insect monster, also you cannot Special Summon until the end of the next turn after this card resolves, except Insect monsters. If you Ritual Summon an Insect monster(s) while this card is in your GY: You can banish this card; all \"Reinzwurm\" monsters you currently control gain 800 ATK/DEF. You can only use 1 \"Reinzwurm Butterfly\" effect per turn, and only once that turn.",
     "overallString": "[Spell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307057.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Practice",
-    "desc": "Add 2 \"Reindsurm\" monsters from your Deck to your hand, then send 1 card from your hand to the GY, then if your opponent has a Dragon monster in their field or GY, you can add 1 Insect monster from your GY to your hand. If you Ritual Summon an Insect monster(s) while this card is in your GY: You can banish this card; place 1 \"Reindsurm\" Field Spell from your Deck face-up on your field. You can only use each effect of \"Reindsurm Practice\" once per turn.",
+    "name": "Reinzwurm Practice",
+    "desc": "Add 2 \"Reinzwurm\" monsters from your Deck to your hand, then send 1 card from your hand to the GY, then if your opponent has a Dragon monster in their field or GY, you can add 1 Insect monster from your GY to your hand. If you Ritual Summon an Insect monster(s) while this card is in your GY: You can banish this card; place 1 \"Reinzwurm\" Field Spell from your Deck face-up on your field. You can only use each effect of \"Reinzwurm Practice\" once per turn.",
     "overallString": "[Spell]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307058.jpg?version=19.7"
   },
   {
-    "name": "Reindsurm Encounter",
-    "desc": "When a Spell/Trap Card, or monster effect, is activated while you control a \"Reindsurm\" monster: Negate the activation, then you can add 1 \"Reindsurm\" monster from your Deck or GY to your hand, and if you do, send 1 Insect monster you control to the GY. If a \"Reindsurm\" monster(s) you control would be destroyed by battle or card effect, you can place this card from your GY on the bottom of the Deck instead. You can only use each effect of \"Reindsurm Encounter\" once per turn.",
+    "name": "Reinzwurm Encounter",
+    "desc": "When a Spell/Trap Card, or monster effect, is activated while you control a \"Reinzwurm\" monster: Negate the activation, then you can add 1 \"Reinzwurm\" monster from your Deck or GY to your hand, and if you do, send 1 Insect monster you control to the GY. If a \"Reinzwurm\" monster(s) you control would be destroyed by battle or card effect, you can place this card from your GY on the bottom of the Deck instead. You can only use each effect of \"Reinzwurm Encounter\" once per turn.",
     "overallString": "[Trap|Counter]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307076.jpg?version=19.7"
   },
