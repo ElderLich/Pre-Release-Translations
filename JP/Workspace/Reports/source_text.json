@@ -1,8 +1,8 @@
 {
   "language": "jp",
   "mode": "fill",
-  "candidates": 9,
-  "matched": 7,
+  "candidates": 7,
+  "matched": 5,
   "unmatched_ids": [
     100265003,
     100277001
@@ -25,14 +25,6 @@
     "100270002": {
       "set_code": "TFGX-JP002",
       "source": "https://ocg-card.com/list/tfgx/"
-    },
-    "100272049": {
-      "set_code": "RV02-JP049",
-      "source": "https://ocg-card.com/list/rv02/"
-    },
-    "100272055": {
-      "set_code": "RV02-JP055",
-      "source": "https://ocg-card.com/list/rv02/"
     },
     "101307039": {
       "set_code": "IMPH-JP039",
