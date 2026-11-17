@@ -2,25 +2,9 @@
   "language": "en",
   "mode": "refresh",
   "candidates": 179,
-  "matched": 177,
-  "unmatched_ids": [
-    100272049,
-    100272055
-  ],
-  "unresolved": [
-    {
-      "id": 100272049,
-      "name": "鬼计鬼火",
-      "set_code": "RV02-JP049",
-      "reason": "No source card page found"
-    },
-    {
-      "id": 100272055,
-      "name": "鬼计冻结",
-      "set_code": "RV02-JP055",
-      "reason": "No source card page found"
-    }
-  ],
+  "matched": 179,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -210,6 +194,10 @@
       "set_code": "RV02-JP032",
       "source": "https://yugipedia.com/wiki/Marincess_Overflow"
     },
+    "100272049": {
+      "set_code": "RV02-JP049",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Spunkie"
+    },
     "100272050": {
       "set_code": "RV02-JP050",
       "source": "https://yugipedia.com/wiki/Ghostrick_Lich"
@@ -229,6 +217,10 @@
     "100272054": {
       "set_code": "RV02-JP054",
       "source": "https://yugipedia.com/wiki/Ghostrick_Art"
+    },
+    "100272055": {
+      "set_code": "RV02-JP055",
+      "source": "https://yugipedia.com/wiki/Ghostrick_Freeze"
     },
     "100273001": {
       "set_code": "SJRY-JP001",
