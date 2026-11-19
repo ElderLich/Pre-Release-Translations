@@ -181,7 +181,7 @@
   },
   {
     "name": "B.L.A.C.K. Parfait",
-    "desc": "During your Main Phase: You can add 1 \"Magician Girl\" monster from your Deck to your hand. You can only use this effect of \"B.L.A.C.K. Parfait\" once per turn. If your opponent Normal or Special Summons a monster(s): You can Special Summon 1 \"Magician Girl\" monster from your hand with a different Attribute from the monsters you control, then if you control \"Dark Magician Girl\", you can negate the effects of 1 other face-up card on the field until the end of this turn.",
+    "desc": "During your Main Phase: You can add 1 \"Magician Girl\" monster from your Deck to your hand. You can only use this effect of \"B.L.A.C.K. Parfait\" once per turn. If your opponent Normal or Special Summons a monster(s) (except during the Damage Step): You can Special Summon 1 \"Magician Girl\" monster from your hand with a different Attribute from the monsters you control, then if you control \"Dark Magician Girl\", you can negate the effects of 1 other face-up card on the field until the end of this turn.",
     "overallString": "[Spell|Continuous]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
   },
