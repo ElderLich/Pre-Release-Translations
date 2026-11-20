@@ -5,11 +5,183 @@
     "lang": "fr",
     "range_start_after_id": 0,
     "range_end_id": 101308071,
-    "timestamp": "20261119_172055",
-    "rows_in_report": 0,
-    "unique_cn_strings": 0,
-    "total_cn_cells": 0
+    "timestamp": "20261120_170333",
+    "rows_in_report": 5,
+    "unique_cn_strings": 5,
+    "total_cn_cells": 5
   },
-  "unique_strings": [],
-  "cards": []
+  "unique_strings": [
+    {
+      "string": "是否再适用效果？",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "效果限制",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "伤害变成2倍",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "是否当作调整使用？",
+      "count": 1,
+      "is_new": true
+    },
+    {
+      "string": "控制权转移并破坏",
+      "count": 1,
+      "is_new": true
+    }
+  ],
+  "cards": [
+    {
+      "id": 100278003,
+      "name": "Domaine du Gouverneur des Ténèbres",
+      "desc": "Si vous ne contrôlez aucun monstre, vous pouvez activer cette carte le tour où elle a été Posée. Lorsque votre adversaire active une Carte Magie/Piège et que vous avez un monstre TÉNÈBRES de min. Niveau 7 avec 2500 DEF dans votre Terrain ou Cimetière : annulez l'activation, et si vous le faites, détruisez la carte, puis si cette carte a été activée durant votre tour, vous pouvez appliquer cet effet.\n● Aucun joueur ne peut activer de Cartes Magie/Piège le reste de ce tour.\nVous ne pouvez activer qu'1 \"Domaine du Gouverneur des Ténèbres\" par tour.",
+      "str1": "Annuler l'activation et détruire",
+      "str2": "Activer en appliquant l'effet de {CARD}.",
+      "str3": "是否再适用效果？",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str3",
+          "value": "是否再适用效果？",
+          "normalized": "是否再适用效果?"
+        }
+      ],
+      "desc_preview": "Si vous ne contrôlez aucun monstre, vous pouvez activer cette carte le tour où elle a été Posée. Lorsque votre adversaire active une Carte Magie/Piège et que vous avez un monstre TÉNÈBRES de min. Niveau 7 avec 2500 DEF dans votre Terrain ou Cimetière : annulez l'activation, et si vous le faites, détruisez la carte, puis si cette carte a été activée durant votre tour, vous pouvez appliquer cet effet.\n● Aucun joueur ne peut activer de Cartes Magie/Piège le reste de ce tour.\nVous ne pouvez activer qu'1 \"Domaine du Gouverneur des Ténèbres\" par tour."
+    },
+    {
+      "id": 100278005,
+      "name": "Cyber Thuban",
+      "desc": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) en bannissant 1 Magie/Piège \"Cyber\" depuis votre Cimetière. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 monstre \"Cyber\" Machine (\"Cyber Thuban\" exclu) depuis votre Deck à votre main. Si cette carte est envoyée au Cimetière : vous pouvez activer cet effet ; votre adversaire ne peut activer ni de cartes ni d'effets lorsque vous Invoquez Spécialement un ou plusieurs monstres LUMIÈRE Machine de Niveau 10 ce tour. Vous ne pouvez utiliser chaque effet de \"Cyber Thuban\" qu'une fois par tour.",
+      "str1": "Ajouter à la main",
+      "str2": "效果限制",
+      "str3": "",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str2",
+          "value": "效果限制",
+          "normalized": "效果限制"
+        }
+      ],
+      "desc_preview": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) en bannissant 1 Magie/Piège \"Cyber\" depuis votre Cimetière. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 monstre \"Cyber\" Machine (\"Cyber Thuban\" exclu) depuis votre Deck à votre main. Si cette carte est envoyée au Cimetière : vous pouvez activer cet effet ; votre adversaire ne peut activer ni de cartes ni d'effets lorsque vous Invoquez Spécialement un ou plusieurs monstres LUMIÈRE Machine de Niveau 10 ce tour. Vous ne pouvez utiliser chaque effet de \"Cyber Thuban\" qu'une fois par tour."
+    },
+    {
+      "id": 100278007,
+      "name": "Cyber Alsafi",
+      "desc": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) tant que vous contrôlez un monstre \"Cyber\" Machine. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 \"Né de Draconis\" depuis votre Deck à votre main. Si cette carte est bannie : vous pouvez activer cet effet ; jusqu'à la fin de votre tour, les prochains dommages de combat que votre monstre LUMIÈRE Machine de Niveau 10 inflige à votre adversaire sont doublés. Vous ne pouvez utiliser chaque effet de \"Cyber Alsafi\" qu'une fois par tour.",
+      "str1": "Ajouter à la main",
+      "str2": "伤害变成2倍",
+      "str3": "",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str2",
+          "value": "伤害变成2倍",
+          "normalized": "伤害变成2倍"
+        }
+      ],
+      "desc_preview": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) tant que vous contrôlez un monstre \"Cyber\" Machine. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 \"Né de Draconis\" depuis votre Deck à votre main. Si cette carte est bannie : vous pouvez activer cet effet ; jusqu'à la fin de votre tour, les prochains dommages de combat que votre monstre LUMIÈRE Machine de Niveau 10 inflige à votre adversaire sont doublés. Vous ne pouvez utiliser chaque effet de \"Cyber Alsafi\" qu'une fois par tour."
+    },
+    {
+      "id": 100278015,
+      "name": "Prospérité Blanche",
+      "desc": "Invoquez Spécialement max. 2 monstres EAU de max. Niveau 4 depuis votre main, puis si vous contrôlez min. 2 monstres du même nom, vous pouvez en traiter 1 comme Syntoniseur. Si un ou plusieurs monstres EAU sont Invoqués Spécialement depuis votre Cimetière tant que cette carte est dans votre Cimetière, et que vous avez un autre monstre dans votre Terrain ou Cimetière du même nom qu'1 d'eux : vous pouvez bannir cette carte depuis votre Cimetière ; piochez 2 cartes. Vous ne pouvez utiliser chaque effet de \"Prospérité Blanche\" qu'une fois par tour.",
+      "str1": "Invocation Spéciale",
+      "str2": "Piocher",
+      "str3": "是否当作调整使用？",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str3",
+          "value": "是否当作调整使用？",
+          "normalized": "是否当作调整使用?"
+        }
+      ],
+      "desc_preview": "Invoquez Spécialement max. 2 monstres EAU de max. Niveau 4 depuis votre main, puis si vous contrôlez min. 2 monstres du même nom, vous pouvez en traiter 1 comme Syntoniseur. Si un ou plusieurs monstres EAU sont Invoqués Spécialement depuis votre Cimetière tant que cette carte est dans votre Cimetière, et que vous avez un autre monstre dans votre Terrain ou Cimetière du même nom qu'1 d'eux : vous pouvez bannir cette carte depuis votre Cimetière ; piochez 2 cartes. Vous ne pouvez utiliser chaque effet de \"Prospérité Blanche\" qu'une fois par tour."
+    },
+    {
+      "id": 100278019,
+      "name": "Brigand, la Dague d'Endymion",
+      "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 carte qui mentionne \"Compteur Magie\" dans son texte d'effet ou 1 carte \"Endymion\" (\"Brigand, la Dague d'Endymion\" exclu) depuis votre Deck à votre main. Durant la Main Phase, si vous avez \"Regulus, le Prince d'Endymion\" dans votre Terrain ou Cimetière (Effet Rapide) : vous pouvez cibler 1 carte contrôlée par votre adversaire ; donnez le contrôle de cette carte à votre adversaire, et si vous le faites, détruisez la carte. Vous ne pouvez utiliser chaque effet de \"Brigand, la Dague d'Endymion\" qu'une fois par tour.",
+      "str1": "Ajouter à la main",
+      "str2": "控制权转移并破坏",
+      "str3": "",
+      "str4": "",
+      "str5": "",
+      "str6": "",
+      "str7": "",
+      "str8": "",
+      "str9": "",
+      "str10": "",
+      "str11": "",
+      "str12": "",
+      "str13": "",
+      "str14": "",
+      "str15": "",
+      "str16": "",
+      "flagged_cells": [
+        {
+          "col": "str2",
+          "value": "控制权转移并破坏",
+          "normalized": "控制权转移并破坏"
+        }
+      ],
+      "desc_preview": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 carte qui mentionne \"Compteur Magie\" dans son texte d'effet ou 1 carte \"Endymion\" (\"Brigand, la Dague d'Endymion\" exclu) depuis votre Deck à votre main. Durant la Main Phase, si vous avez \"Regulus, le Prince d'Endymion\" dans votre Terrain ou Cimetière (Effet Rapide) : vous pouvez cibler 1 carte contrôlée par votre adversaire ; donnez le contrôle de cette carte à votre adversaire, et si vous le faites, détruisez la carte. Vous ne pouvez utiliser chaque effet de \"Brigand, la Dague d'Endymion\" qu'une fois par tour."
+    }
+  ]
 }

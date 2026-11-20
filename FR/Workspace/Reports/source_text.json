@@ -1,9 +1,112 @@
 {
   "language": "fr",
   "mode": "fill",
-  "candidates": 0,
-  "matched": 0,
-  "unmatched_ids": [],
-  "unresolved": [],
-  "matches": {}
+  "candidates": 22,
+  "matched": 20,
+  "unmatched_ids": [
+    100275003,
+    100275009
+  ],
+  "unresolved": [
+    {
+      "id": 100275003,
+      "name": "幻想之守护神官 马哈德",
+      "set_code": "MVB1-JP003",
+      "reason": "Localized fields are missing",
+      "source": "https://yugipedia.com/wiki/Illusion_Palladium_Oracle_Mahad",
+      "missing_fields": [
+        "fr_name",
+        "fr_text"
+      ]
+    },
+    {
+      "id": 100275009,
+      "name": "高速咏唱",
+      "set_code": "MVB1-JP009",
+      "reason": "Printed set code does not match source page",
+      "source": "https://yugipedia.com/wiki/High_Speed_Aria"
+    }
+  ],
+  "matches": {
+    "100278001": {
+      "set_code": "27PP-JP001",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17944&languages=fr"
+    },
+    "100278002": {
+      "set_code": "27PP-JP002",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17945&languages=fr"
+    },
+    "100278003": {
+      "set_code": "27PP-JP003",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17946&languages=fr"
+    },
+    "100278004": {
+      "set_code": "27PP-JP004",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17947&languages=fr"
+    },
+    "100278005": {
+      "set_code": "27PP-JP005",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17948&languages=fr"
+    },
+    "100278006": {
+      "set_code": "27PP-JP006",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17949&languages=fr"
+    },
+    "100278007": {
+      "set_code": "27PP-JP007",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17950&languages=fr"
+    },
+    "100278008": {
+      "set_code": "27PP-JP008",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17951&languages=fr"
+    },
+    "100278009": {
+      "set_code": "27PP-JP009",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17952&languages=fr"
+    },
+    "100278010": {
+      "set_code": "27PP-JP010",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17953&languages=fr"
+    },
+    "100278011": {
+      "set_code": "27PP-JP011",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17954&languages=fr"
+    },
+    "100278012": {
+      "set_code": "27PP-JP012",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17955&languages=fr"
+    },
+    "100278013": {
+      "set_code": "27PP-JP013",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17956&languages=fr"
+    },
+    "100278014": {
+      "set_code": "27PP-JP014",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17957&languages=fr"
+    },
+    "100278015": {
+      "set_code": "27PP-JP015",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17958&languages=fr"
+    },
+    "100278016": {
+      "set_code": "27PP-JP016",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17959&languages=fr"
+    },
+    "100278017": {
+      "set_code": "27PP-JP017",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17960&languages=fr"
+    },
+    "100278018": {
+      "set_code": "27PP-JP018",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17961&languages=fr"
+    },
+    "100278019": {
+      "set_code": "27PP-JP019",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17962&languages=fr"
+    },
+    "100278020": {
+      "set_code": "27PP-JP020",
+      "source": "https://codexygo.fr/api/card/v1/search/?codexygo_ids=17963&languages=fr"
+    }
+  }
 }
