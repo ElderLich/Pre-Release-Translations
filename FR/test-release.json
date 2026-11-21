@@ -1,5 +1,137 @@
 [
   {
+    "name": "高速咏唱",
+    "desc": "①：可以从以下效果选择1个，把1张手卡送去墓地来发动。\r\n●以自己或对方墓地的1只怪兽为对象才能发动。那只怪兽在自己场上特殊召唤。\r\n●自己手卡·场上的怪兽作为融合素材，把1只融合怪兽融合召唤。\r\n●等级合计直到变成仪式召唤的怪兽的等级以上为止，把自己手卡·场上的怪兽解放，从手卡把1只仪式怪兽仪式召唤。 ",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275009.jpg?version=19.7"
+  },
+  {
+    "name": "Mahad Oracle Palladium Illusion",
+    "desc": "Si vous avez un monstre LUMIÈRE ou TÉNÈBRES banni, vous pouvez Invoquer Spécialement cette carte (depuis votre main). Vous ne pouvez Invoquer Spécialement \"Mahad Oracle Palladium Illusion\" qu'une fois par tour de cette façon. L'ATK d'origine de cette carte est doublée tant qu'un monstre TÉNÈBRES est sur le Terrain. Si cette carte détruit un monstre au combat et que vous avez \"Magicien Sombre\" dans votre Terrain ou Cimetière : infligez à votre adversaire des dommages égaux à l'ATK d'origine du monstre détruit.",
+    "overallString": "[Monstre|Effet] Magicien/Lumiére  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275003.jpg?version=19.7"
+  },
+  {
+    "name": "Araignée Arc-en-Ciel",
+    "desc": "Si cette carte est Invoquée Normalement : vous pouvez Invoquer Spécialement 1 monstre Insecte de Niveau 4 depuis votre main ou Cimetière. Vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 1 Monstre Xyz Insecte que vous contrôlez ; détachez 1 Matériel du monstre que vous contrôlez, et si vous le faites, Invoquez Spécialement depuis votre Extra Deck, 1 monstre \"Numéro\" qui a 1 Rang de plus que le monstre, en l'utilisant comme Matériel (ceci est traité comme Invocation Xyz, transférez ses Matériels), et aussi, vous ne pouvez pas Invoquer Spécialement le reste de ce tour. Vous ne pouvez utiliser chaque effet de \"Araignée Arc-en-Ciel\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Insecte/Lumiére  [★4] 1700/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278012.jpg?version=19.7"
+  },
+  {
+    "name": "Gardna Scarabée",
+    "desc": "Si cette carte est Invoquée Normalement ou retournée face recto : vous pouvez cibler 1 monstre dans le Cimetière de votre adversaire ; Invoquez-le Spécialement sur votre Terrain en Position de Défense, mais ses effets sont annulés, et aussi, il devient un monstre Insecte. Si cette carte est envoyée au Cimetière et que vous contrôlez un monstre non-Insecte face recto : vous pouvez bannir 1 monstre face recto sur le Terrain jusqu'à la End Phase. Vous ne pouvez utiliser chaque effet de \"Gardna Scarabée\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Insecte/Terre  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278013.jpg?version=19.7"
+  },
+  {
+    "name": "Arachno-Cannibalisme",
+    "desc": "Sacrifiez 1 monstre Insecte depuis votre main ou Terrain ; augmentez le Niveau de tous les monstres Insecte que vous contrôlez actuellement du Niveau que le monstre Sacrifié avait, puis vous pouvez ajouter 1 monstre Insecte depuis votre Deck à votre main du même Niveau qu'un monstre Insecte que vous contrôlez. Vous pouvez bannir cette carte depuis votre Cimetière et Sacrifier 1 monstre Insecte ; piochez 1 carte. Vous ne pouvez utiliser chaque effet de \"Arachno-Cannibalisme\" qu'une fois par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278014.jpg?version=19.7"
+  },
+  {
+    "name": "Portail Zéro du Vide",
+    "desc": "Sautez votre prochaine Draw Phase. Lorsqu'un monstre de l'adversaire avec une ATK supérieure ou égale à vos LP déclare une attaque directe et que vous n'avez aucune carte dans votre main : vous pouvez bannir cette carte depuis votre Cimetière ; annulez l'attaque, et si vous le faites, Invoquez Spécialement 1 monstre \"Dragon Ogre du Néant\" depuis votre Extra Deck (ceci est traité comme Invocation Synchro). Tant qu'il est face recto dans la Zone Monstre, vous ne recevez aucun dommage. Lorsqu'il quitte le Terrain, recevez 4000 points de dommages.",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278011.jpg?version=19.7"
+  },
+  {
+    "name": "Prospérité Blanche",
+    "desc": "Invoquez Spécialement max. 2 monstres EAU de max. Niveau 4 depuis votre main, puis si vous contrôlez min. 2 monstres du même nom, vous pouvez en traiter 1 comme Syntoniseur. Si un ou plusieurs monstres EAU sont Invoqués Spécialement depuis votre Cimetière tant que cette carte est dans votre Cimetière, et que vous avez un autre monstre dans votre Terrain ou Cimetière du même nom qu'1 d'eux : vous pouvez bannir cette carte depuis votre Cimetière ; piochez 2 cartes. Vous ne pouvez utiliser chaque effet de \"Prospérité Blanche\" qu'une fois par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278015.jpg?version=19.7"
+  },
+  {
+    "name": "Cauchemar Blanc",
+    "desc": "Vos monstres EAU avec min. 3000 ATK peuvent faire max. 2 attaques sur des monstres durant chaque Battle Phase. Vous ne pouvez utiliser chacun des effets suivants de \"Cauchemar Blanc\" qu'une fois par tour. Vous pouvez envoyer un nombre de votre choix de monstres EAU depuis votre main au Cimetière ; les monstres EAU que vous contrôlez gagnent 500 ATK pour chaque monstre envoyé au Cimetière de cette façon le reste de ce tour. Si cette carte est envoyée au Cimetière : vous pouvez Invoquer Spécialement 1 monstre EAU depuis votre Cimetière en Position de Défense, et si vous le faites, il est traité comme Syntoniseur.",
+    "overallString": "[Magie|Continu]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278016.jpg?version=19.7"
+  },
+  {
+    "name": "Porteur de la Lance Enfernité",
+    "desc": "Gagne 800 ATK tant que vous n'avez aucune carte dans votre main. Vous ne pouvez utiliser chacun des effets suivants de \"Porteur de la Lance Enfernité\" qu'une fois par tour. Si cette carte est Invoquée Normalement : vous pouvez Invoquer Spécialement 1 monstre \"Enfernité\" avec 0 ATK depuis votre Deck, et aussi, vous ne pouvez pas Invoquer Spécialement (Monstres Synchro exclus) depuis l'Extra Deck le reste de ce tour. Vous pouvez bannir cette carte et 1 autre carte \"Enfernité\" depuis votre Cimetière ; envoyez 1 Magie/Piège \"du Vide\" depuis votre Deck au Cimetière.",
+    "overallString": "[Monstre|Effet] Démon/Ténébres  [★3] 1100/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278008.jpg?version=19.7"
+  },
+  {
+    "name": "Porteur du Bouclier Enfernité",
+    "desc": "Gagne 800 DEF tant que vous n'avez aucune carte dans votre main. Vous ne pouvez utiliser chacun des effets suivants de \"Porteur du Bouclier Enfernité\" qu'une fois par tour. Si cette carte est Invoquée Normalement : vous pouvez Invoquer Spécialement 1 monstre \"Enfernité\" avec 0 DEF depuis votre main ou Cimetière, et aussi, vous ne pouvez pas Invoquer Spécialement (Monstres Synchro exclus) depuis l'Extra Deck le reste de ce tour. Vous pouvez bannir cette carte depuis votre Cimetière ; ajoutez 1 monstre \"Enfernité\" de min. Niveau 5 depuis votre Deck ou Cimetière à votre main.",
+    "overallString": "[Monstre|Effet] Démon/Ténébres  [★3] 0/1100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278009.jpg?version=19.7"
+  },
+  {
+    "name": "Dragon Ogre du Néant Zéro",
+    "desc": "1 Syntoniseur TÉNÈBRES + 2+ non-Syntoniseurs\nNon destructible par des effets de carte tant que vous avez un monstre TÉNÈBRES avec 0 ATK ou DEF dans votre Cimetière. Vous ne pouvez utiliser chacun des effets suivants de \"Dragon Ogre du Néant Zéro\" qu'une fois par tour. Si cette carte est Invoquée par Synchronisation : vous pouvez envoyer 1 monstre \"Enfernité\" depuis votre Deck au Cimetière. Lorsque votre adversaire active une carte ou un effet et que vous n'avez aucune carte dans votre main (Effet Rapide) : vous pouvez annuler l'activation, et si vous le faites, détruisez la carte, et si vous faites ça, cette carte gagne 500 ATK.",
+    "overallString": "[Monstre|Effet|Synchro] Dragon/Ténébres  [★8] 3000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278010.jpg?version=19.7"
+  },
+  {
+    "name": "Ligne Blanche",
+    "desc": "Si vous contrôlez un monstre EAU : ciblez 1 monstre en Position d'Attaque contrôlé par votre adversaire ; vous ne recevez aucun dommage d'effet le reste de ce tour, et aussi, changez le monstre en Position de Défense, et si vous le faites, annulez ses effets. Si vous contrôlez min. 2 monstres du même nom et que cette carte est dans votre Cimetière : vous pouvez Poser cette carte, mais bannissez-la lorsqu'elle quitte le Terrain. Vous ne pouvez utiliser chaque effet de \"Ligne Blanche\" qu'une fois par tour.",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278017.jpg?version=19.7"
+  },
+  {
+    "name": "Prêtresse de l'Ancien Dragon",
+    "desc": "1 Monstre Fusion, Synchro, Xyz ou Lien + 1 monstre Magicien\n(Cette carte est toujours traitée comme carte \"Invokhé\" et \"Magistus\".)\nSi cette carte est Invoquée par Fusion : vous pouvez activer cet effet ; jusqu'à la fin de ce tour, tous les monstres face recto actuellement contrôlés par votre adversaire perdent 1800 ATK, et aussi, annulez leurs effets. Vous pouvez bannir cette carte depuis votre Cimetière, puis ciblez 1 monstre \"Magistus\" ou \"Aleister\" dans votre Cimetière ; Invoquez-le Spécialement. Vous ne pouvez utiliser chaque effet de \"Prêtresse de l'Ancien Dragon\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Fusion|Syntoniseur] Magicien/Lumiére  [★8] 2800/2800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278018.jpg?version=19.7"
+  },
+  {
+    "name": "Bau la Bête Chien Noir",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 monstre TÉNÈBRES de min. Niveau 7 avec 2500 DEF, 1 \"L'Escalier qui Conduit au Royaume des Morts\" ou 1 \"Domaine du Gouverneur des Ténèbres\" depuis votre Deck à votre main. Si cette carte est Sacrifiée ou bannie : vous pouvez cibler 1 Contre-Piège dans votre Cimetière ; ajoutez-le à votre main. Vous ne pouvez utiliser chaque effet de \"Bau la Bête Chien Noir\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Bête/Ténébres  [★4] 1800/1200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278001.jpg?version=19.7"
+  },
+  {
+    "name": "L'Escalier qui Conduit au Royaume des Morts",
+    "desc": "Lorsque votre adversaire active un effet de monstre, ou son monstre déclare une attaque : ajoutez max. 2 monstres TÉNÈBRES de min. Niveau 7 avec 2500 DEF depuis votre Deck à votre main. Si un ou plusieurs monstres TÉNÈBRES face recto que vous contrôlez sont détruits au combat ou par un effet de carte tant que cette carte est dans votre Cimetière : vous pouvez bannir cette carte, puis ciblez 1 monstre face recto contrôlé par votre adversaire ; annulez ses effets. Vous ne pouvez utiliser chaque effet de \"L'Escalier qui Conduit au Royaume des Morts\" qu'une fois par tour.",
+    "overallString": "[Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278002.jpg?version=19.7"
+  },
+  {
+    "name": "Domaine du Gouverneur des Ténèbres",
+    "desc": "Si vous ne contrôlez aucun monstre, vous pouvez activer cette carte le tour où elle a été Posée. Lorsque votre adversaire active une Carte Magie/Piège et que vous avez un monstre TÉNÈBRES de min. Niveau 7 avec 2500 DEF dans votre Terrain ou Cimetière : annulez l'activation, et si vous le faites, détruisez la carte, puis si cette carte a été activée durant votre tour, vous pouvez appliquer cet effet.\n● Aucun joueur ne peut activer de Cartes Magie/Piège le reste de ce tour.\nVous ne pouvez activer qu'1 \"Domaine du Gouverneur des Ténèbres\" par tour.",
+    "overallString": "[Piège|Contre-Piège]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278003.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Struve",
+    "desc": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) en bannissant 1 Magie/Piège \"Cyber\" depuis votre Cimetière. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 de ces cartes depuis votre Deck à votre main.\n● Monstre \"Cyber\" Machine (monstres de Niveau 6 exclus).\n● Magie/Piège qui mentionne \"Cyber Dragon\".\nVous ne pouvez pas activer d'effets de monstre (ceux de monstres Machine \"Cyber\" exclus) le tour où vous activez cet effet. Vous ne pouvez utiliser cet effet de \"Cyber Struve\" qu'une fois par tour",
+    "overallString": "[Monstre|Effet|Invocation Spéciale] Machine/Lumiére  [★6] 2400/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278004.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Thuban",
+    "desc": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) en bannissant 1 Magie/Piège \"Cyber\" depuis votre Cimetière. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 monstre \"Cyber\" Machine (\"Cyber Thuban\" exclu) depuis votre Deck à votre main. Si cette carte est envoyée au Cimetière : vous pouvez activer cet effet ; votre adversaire ne peut activer ni de cartes ni d'effets lorsque vous Invoquez Spécialement un ou plusieurs monstres LUMIÈRE Machine de Niveau 10 ce tour. Vous ne pouvez utiliser chaque effet de \"Cyber Thuban\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Invocation Spéciale] Machine/Lumiére  [★5] 2100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278005.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Alnair",
+    "desc": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) tant que vous contrôlez un monstre \"Cyber\" Machine. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 \"Cyber Urgence\" depuis votre Deck à votre main. Si cette carte est bannie : vous pouvez activer cet effet ; durant la End Phase de ce tour, mélangez max. 7 de vos monstres \"Cyber\" Machine bannis dans le Deck. Vous ne pouvez utiliser chaque effet de \"Cyber Alnair\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Invocation Spéciale] Machine/Lumiére  [★4] 1000/1600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278006.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Alsafi",
+    "desc": "Ni Invocable Normalement ni Posable Normalement. Doit d'abord être Invoquée Spécialement (depuis votre main) tant que vous contrôlez un monstre \"Cyber\" Machine. Si cette carte est Invoquée Spécialement : vous pouvez ajouter 1 \"Né de Draconis\" depuis votre Deck à votre main. Si cette carte est bannie : vous pouvez activer cet effet ; jusqu'à la fin de votre tour, les prochains dommages de combat que votre monstre LUMIÈRE Machine de Niveau 10 inflige à votre adversaire sont doublés. Vous ne pouvez utiliser chaque effet de \"Cyber Alsafi\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Invocation Spéciale] Machine/Lumiére  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278007.jpg?version=19.7"
+  },
+  {
+    "name": "Brigand, la Dague d'Endymion",
+    "desc": "Si cette carte est Invoquée Normalement ou Spécialement : vous pouvez ajouter 1 carte qui mentionne \"Compteur Magie\" dans son texte d'effet ou 1 carte \"Endymion\" (\"Brigand, la Dague d'Endymion\" exclu) depuis votre Deck à votre main. Durant la Main Phase, si vous avez \"Regulus, le Prince d'Endymion\" dans votre Terrain ou Cimetière (Effet Rapide) : vous pouvez cibler 1 carte contrôlée par votre adversaire ; donnez le contrôle de cette carte à votre adversaire, et si vous le faites, détruisez la carte. Vous ne pouvez utiliser chaque effet de \"Brigand, la Dague d'Endymion\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Magicien/Feu  [★3] 1500/200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278019.jpg?version=19.7"
+  },
+  {
+    "name": "Protectrice de la Grande Tour",
+    "desc": "Si cette carte est dans votre main et que vous avez min. 3 Magies de noms différents dans votre Cimetière : vous pouvez Invoquer Spécialement cette carte. Vous pouvez cibler 1 carte \"Livre de Magie\" et 1 Magie dans votre Cimetière ; bannissez-en 1, et si vous le faites, ajoutez l'autre à votre main, puis si c'est une carte \"Livre de Magie\", vous pouvez détruire 1 carte sur le Terrain. Vous ne pouvez utiliser chaque effet de \"Protectrice de la Grande Tour\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Magicien/Lumiére  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278020.jpg?version=19.7"
+  },
+  {
     "name": "Spunkie Fantôruse",
     "desc": "Non Invocable Normalement, sauf si vous contrôlez un monstre \"Fantôruse\". Lorsque votre adversaire active un effet de monstre sur le Terrain (Effet Rapide) : vous pouvez Invoquer Spécialement cette carte depuis votre main en Position de Défense face verso, et si vous le faites, placez face recto 1 Magie de Terrain \"Fantôruse\" ou Piège Continu \"Fantôruse\" depuis votre main ou Deck sur votre Terrain, puis si votre adversaire a min. 5 cartes dans son Cimetière, vous pouvez Invoquer Spécialement 1 monstre depuis votre main en Position de Défense face verso. Une fois par tour : vous pouvez changer cette carte en Position de Défense face verso.",
     "overallString": "[Monstre|Effet] Démon/Ténébres  [★1] 300/200",
