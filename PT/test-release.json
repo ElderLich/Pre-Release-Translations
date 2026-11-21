@@ -1,13 +1,145 @@
 [
   {
-    "name": "鬼计鬼火",
-    "desc": "自己场上有「鬼计」怪兽存在的场合，这张卡才能召唤。\r\n①：对方把场上的怪兽的效果发动时才能发动。这张卡从手卡以里侧守备表示特殊召唤，从手卡·卡组把1张「鬼计」场地魔法·永续陷阱卡在自己场上以表侧表示放置。那之后，对方墓地的卡是5张以上的场合，可以从手卡把1只怪兽以里侧守备表示特殊召唤。\r\n②：自己主要阶段才能发动。这张卡变成里侧守备表示（1回合只有1次）。",
+    "name": "Aria de Alta Velocidade",
+    "desc": "Ative 1 desses efeitos, então envie 1 card da sua mão ao Cemitério;\r\n● Escolha 1 monstro em qualquer Cemitério; Invoque-o por Invocação-Especial ao seu campo.\r\n● Invoque por Invocação-Fusão 1 Monstro Fusão do seu Deck Adicional, usando monstros da sua mão ou campo.\r\n● Invoque por Invocação-Ritual 1 Monstro Ritual da sua mão, ao oferecer como Tributo monstros da sua mão ou campo cujo Níveis totais sejam igual ou excedem seu Nível.",
+    "overallString": "[Armadilha]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275009.jpg?version=19.7"
+  },
+  {
+    "name": "Paládio da Ilusão, Oráculo Mahad",
+    "desc": "Se você tem um monstro LUZ ou TREVAS banido, você pode Invocar por Invocação-Especial este card (da sua mão). Você só pode Invocar por Invocação-Especial \"Paládio da Ilusão, Oráculo Mahad\" uma vez por turno dessa forma.\r\nO ATK original deste card é dobrado quando um monstro TREVAS está no campo.\r\nSe este card destrói um monstro por batalha e você tem \"Mago Negro\" no seu campo ou Cemitério: cause dano ao seu oponente igual ao ATK original do monstro destruído.",
+    "overallString": "[Monstro|Efeito] Mago/Luz  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275003.jpg?version=19.7"
+  },
+  {
+    "name": "Aranha Arco-íris",
+    "desc": "Se este card é Invocado por Invocação-Normal: você pode Invocar por Invocação-Especial 1 monstro Inseto de Nível 4 da sua mão ou Cemitério.\r\nVocê pode banir este card do seu Cemitério, então escolha 1 Monstro Xyz Inseto que você controla; desassocie 1 matéria daquele monstro que você controla, e se fizer, Invoque por Invocação-Especial do seu Deck Adicional, 1 monstro \"Número\" que seja 1 Classe maior que aquele monstro, usando-o como matéria (isso é considerado uma Invocação-Xyz, transfira suas matérias), você também não pode Invocar por Invocação-Especial pelo resto desse turno.\r\nVocê só pode usar cada um dos efeitos de \"Aranha Arco-íris\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Inseto/Luz  [★4] 1700/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278012.jpg?version=19.7"
+  },
+  {
+    "name": "Besouro Gardna",
+    "desc": "Se este card é Invocado por Invocação-Normal ou virado com a face para cima: você pode escolher 1 monstro no Cemitério do seu oponente; Invoque-o por Invocação-Especial para o seu lado do campo em Posição de Defesa, seus efeitos são negados, ele também se torna um monstro Inseto.\r\nSe este card é enviado ao Cemitério e você controla um monstro não-Inseto com a face para cima: você pode banir 1 monstro com a face para cima no campo até a Fase Final.\r\nVocê só pode usar cada um dos efeitos de \"Besouro Gardna\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Inseto/Terra  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278013.jpg?version=19.7"
+  },
+  {
+    "name": "Aracno-Canibalismo",
+    "desc": "Ofereça como Tributo 1 monstro Inseto da sua mão ou campo; aumente os Níveis de todos os monstros Inseto que você controla atualmente pelo Nível que o monstro oferecido como Tributo tinha, então você pode adicionar 1 monstro Inseto do seu Deck à sua mão com o mesmo Nível que um monstro Inseto que você controla.\r\nVocê pode banir este card do seu Cemitério e oferecer como Tributo 1 monstro Inseto; compre 1 card.\r\nVocê só pode usar cada um dos efeitos de \"Aracno-Canibalismo\" uma vez por turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278014.jpg?version=19.7"
+  },
+  {
+    "name": "Portão Zero do Vácuo",
+    "desc": "Pule sua próxima Fase de Compra.\r\nQuando um monstro do oponente com ATK maior ou igual ao seu PV declarar um ataque direto e você não tem cards na sua mão: você pode banir este card do seu Cemitério; negue o ataque, e se fizer, Invoque por Invocação-Especial 1 monstro \"Dragão Ogro do Vácuo\" do seu Deck Adicional (isso é considerado como uma Invocação-Sinchro).\r\nEnquanto ele estiver com a face para cima na Zona de Monstro, você não recebe dano. Quando ele deixar o campo, receba 4000 de dano.",
+    "overallString": "[Armadilha]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278011.jpg?version=19.7"
+  },
+  {
+    "name": "Prosperidade Branca",
+    "desc": "Invoque por Invocação-Especial até 2 monstro ÁGUA de Nível 4 ou menor da sua mão, então se você controla 2 ou mais monstros com o mesmo nome, você pode considerar 1 deles como um Regulador.\r\nSe um ou mais monstros ÁGUA é Invocado por Invocação-Especial do seu Cemitério enquanto este card está no seu Cemitério, e você tem outro monstro no campo ou Cemitério com o mesmo nome que 1 deles: você pode banir este card do seu Cemitério; compre 2 cards.\r\nVocê só pode usar cada um dos efeitos de \"Prosperidade Branca\" uma vez por turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278015.jpg?version=19.7"
+  },
+  {
+    "name": "Pesadelo Branco",
+    "desc": "Seus monstros ÁGUA com 3000 ou mais de ATK podem realizar até 2 ataques em monstros durante cada Fase de Batalha.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Pesadelo Branco\" uma vez por turno.\r\nVocê pode enviar qualquer número de monstros ÁGUA da sua mão ao Cemitério; monstros ÁGUA que você controla ganham 500 de ATK para cada monstro enviado ao Cemitério desta forma pelo resto deste turno.\r\nSe este card é enviado ao Cemitério: você pode Invocar por Invocação-Especial 1 monstro ÁGUA do seu Cemitério em Posição de Defesa, e se fizer, ele é considerado como um Regulador.",
+    "overallString": "[Magia|Magia Contínuo]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278016.jpg?version=19.7"
+  },
+  {
+    "name": "Portador da Lança Inférnico",
+    "desc": "Ganha 800 de ATK enquanto você não tem cards na sua mão.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Portador da Lança Inférnico\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Normal: você pode Invocar por Invocação-Especial 1 monstro \"Inférnico(a)\" com ATK 0 do seu Deck, você também não pode Invocar por Invocação-Especial do seu Deck Adicional pelo resto deste turno, exceto Monstros Sinchro.\r\nVocê pode banir este card e 1 outro card \"Inférnico(a)\" do seu Cemitério; envie 1 Magia/Armadilha \"Vácuo\" do seu Deck ao Cemitério.",
+    "overallString": "[Monstro|Efeito] Demônio/Trevas  [★3] 1100/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278008.jpg?version=19.7"
+  },
+  {
+    "name": "Portador do Escudo Inférnico",
+    "desc": "Ganha 800 de ATK enquanto você não tem cards na sua mão.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Portador do Escudo Inférnico\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Normal: você pode Invocar por Invocação-Especial 1 monstro \"Inférnico(a)\" com DEF 0 do seu Deck, você também não pode Invocar por Invocação-Especial do seu Deck Adicional pelo resto deste turno, exceto Monstros Sinchro.\r\nVocê pode banir este card do seu Cemitério; adicione 1 monstro \"Inférnico(a)\" de Nível 5 ou maior do seu Deck ou Cemitério à sua mão.",
+    "overallString": "[Monstro|Efeito] Demônio/Trevas  [★3] 0/1100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278009.jpg?version=19.7"
+  },
+  {
+    "name": "Dragão Ogro do Vácuo Zero",
+    "desc": "1 Regulador TREVAS + 2+ não-Reguladores\r\nNão pode ser destruído por efeitos de cards enquanto você tem um monstro TREVAS com 0 de ATK ou DEF no seu Cemitério.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Dragão Ogro do Vácuo Zero\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Sinchro: você pode enviar 1 monstro \"Inférnico(a)\" do seu Deck ao Cemitério.\r\nQuando um oponente ativa um card ou efeito e você não tem cards na sua mão (Efeito Rápido): você pode negar a ativação, e se fizer, destrói aquele card, e se fizer isso, este card ganha 500 de ATK.",
+    "overallString": "[Monstro|Efeito|Sincro] Dragão/Trevas  [★8] 3000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278010.jpg?version=19.7"
+  },
+  {
+    "name": "Linha Branca",
+    "desc": "Se você controla um monstro ÁGUA: escolha 1 monstro em Posição de Ataque que seu oponente controla; você não recebe dano por efeito pelo resto deste turno, também altere aquele monstro para Posição de Defesa, e se fizer, negue seus efeitos.\r\nSe você controla 2 ou mais monstros com o mesmo nome e este card está no seu Cemitério: você pode Baixar este card, mas bana-o quando ele deixar o campo.\r\nVocê só pode usar cada um dos efeitos de \"Linha Branca\" uma vez por turno.",
+    "overallString": "[Armadilha]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278017.jpg?version=19.7"
+  },
+  {
+    "name": "Sacerdotisa Dragão Ancestral",
+    "desc": "1 Monstro Fusão, Sinchro, Xyz ou Link + 1 monstro Mago\r\n(Este card é sempre considerado como \"Invokado(a)\" e \"Magistus\".)\r\nSe este card é Invocado por Invocação-Fusão: você pode ativar este efeito; até o final deste turno, todos os monstros com a face para cima que seu oponente atualmente controla perdem 1800 de ATK, também negue seus efeitos.\r\nVocê pode banir este card do seu Cemitério, então escolha 1 monstro \"Magistus\" ou \"Aleister\" no seu Cemitério; Invoque-o por Invocação-Especial.\r\nVocê só pode usar cada um dos efeitos de \"Sacerdotisa Dragão Ancestral\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Fusão|Regulador] Mago/Luz  [★8] 2800/2800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278018.jpg?version=19.7"
+  },
+  {
+    "name": "Bau, o Cão Besta Negra",
+    "desc": "Se este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 monstro TREVAS de Nível 7 ou maior com 2500 de DEF, 1 \"Escadaria para o Submundo\", ou 1 \"Domain of the Dark Ruler\" do seu Deck à sua mão.\r\nSe este card é oferecido como Tributo ou banido: você pode escolher 1 Armadilha de Resposta no seu Cemitério; adicione-o à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Bau, o Cão Besta Negra\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Besta/Trevas  [★4] 1800/1200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278001.jpg?version=19.7"
+  },
+  {
+    "name": "Escadaria para o Submundo",
+    "desc": "Quando seu oponente ativa um efeito de monstro, ou o monstro dele declara um ataque: adicione até 2 monstros TREVAS de Nível 7 ou maior com 2500 de DEF do seu Deck à sua mão.\r\nSe um ou mais monstros TREVAS com a face para cima que você controla é destruído por batalha ou efeito enquanto este card está no seu Cemitério: você pode banir este card, então escolha 1 monstro com a face para cima que seu oponente controla; negue seus efeitos.\r\nVocê só pode usar cada um dos efeitos de \"Escadaria para o Submundo\" uma vez por turno.",
+    "overallString": "[Armadilha]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278002.jpg?version=19.7"
+  },
+  {
+    "name": "Domínio do Governante Sombrio",
+    "desc": "Se você não controla monstros, você pode ativar este card no turno que foi Baixado.\r\nQuando seu oponente ativa uma Magia/Armadilha e você tem um monstro TREVAS de Nível 7 ou maior com 2500 de DEF no seu campo ou Cemitério: negue a ativação, e se fizer, destrói aquele card, então se este card foi ativado durante o seu turno, você pode aplicar este efeito.\r\n● Nenhum jogador por ativar Magias/Armadilhas pelo resto deste turno.\r\nVocê só pode ativar 1 \"Domínio do Governante Sombrio\" por turno.",
+    "overallString": "[Armadilha|Armadilha de Resposta]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278003.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Struve",
+    "desc": "Não pode ser Invocado por Invocação-Normal/Baixado. Primeiro deve ser Invocado por Invocação-Especial (da sua mão) ao banir 1 Magia/Armadilha \"Ciber\" do seu Cemitério.\r\nSe este card é Invocado por Invocação-Especial: você pode adicionar 1 destes cards do seu Deck à sua mão.\r\n● Monstro Máquina \"Ciber\", exceto um monstro de Nível 6.\r\n● Magia/Armadilha que mencione \"Ciber Dragão\".\r\nVocê não pode ativar efeitos de monstros no turno que ativar este efeito, exceto de monstros Máquina \"Ciber\". Você só pode usar este efeito de \"Ciber Struve\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Invocação-Especial] Máquina/Luz  [★6] 2400/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278004.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Thuban",
+    "desc": "Não pode ser Invocado por Invocação-Normal/Baixado. Primeiro deve ser Invocado por Invocação-Especial (da sua mão) ao banir 1 Magia/Armadilha \"Ciber\" do seu Cemitério. \r\nSe este card é Invocado por Invocação-Especial: você pode adicionar 1 monstro Máquina \"Ciber\" do seu Deck à sua mão, exceto \"Ciber Thuban\".\r\nSe este card é enviado ao Cemitério: você pode ativar este efeito; seu oponente não pode ativar cards ou efeitos quando você Invoca por Invocação-Especial um ou mais monstros Máquina LUZ de Nível 10 neste turno.\r\nVocê só pode usar cada um dos efeitos de \"Ciber Thuban\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Invocação-Especial] Máquina/Luz  [★5] 2100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278005.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Alnair",
+    "desc": "Não pode ser Invocado por Invocação-Normal/Baixado. Primeiro deve ser Invocado por Invocação-Especial (da sua mão) se você controla um monstro Máquina \"Ciber\".\r\nSe este card é Invocado por Invocação-Especial: você pode adicionar 1 \"Emergência Cibernética\" do seu Deck à sua mão.\r\nSe este card é banido: você pode ativar este efeito; durante a Fase Final deste turno, embaralhe até 7 dos seus monstros Máquina \"Ciber\" banidos no Deck.\r\nVocê só pode usar cada um dos efeitos de \"Ciber Alnair\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Invocação-Especial] Máquina/Luz  [★4] 1000/1600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278006.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Alsafi",
+    "desc": "Não pode ser Invocado por Invocação-Normal/Baixado. Primeiro deve ser Invocado por Invocação-Especial (da sua mão) se você controla um monstro Máquina \"Ciber\".\r\nSe este card é Invocado por Invocação-Especial: você pode adicionar 1 \"Nascido de Draconis\" do seu Deck à sua mão.\r\nSe este card é banido: você pode ativar este efeito; até o final do seu turno, o próximo dano de batalha que seu monstro Máquina LUZ de Nível 10 causa ao seu oponente é dobrado.\r\nVocê só pode usar cada um dos efeitos de \"Ciber Alsafi\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Invocação-Especial] Máquina/Luz  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278007.jpg?version=19.7"
+  },
+  {
+    "name": "Rogue, a Adaga de Endymion",
+    "desc": "Se este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 card que menciona \"Marcador de Magia\" em seu texto de efeito ou 1 card \"Endymion\" do seu Deck à sua mão, exceto \"Rogue, a Adaga de Endymion\".\r\nDurante a Fase Principal, se você tem \"Regulus, o Príncipe de Endymion\" no seu campo ou Cemitério (Efeito Rápido): você pode escolher 1 card que seu oponente controla; dê controle deste card ao seu oponente, e se fizer isso, destrói aquele card.\r\nVocê só pode usar cada um dos efeitos de \"Rogue, a Adaga de Endymion\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Mago/Fogo  [★3] 1500/200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278019.jpg?version=19.7"
+  },
+  {
+    "name": "Protetora da Grande Torre",
+    "desc": "Se este card está na sua mão e você tem 3 ou mais Magias com nomes diferentes no seu Cemitério: você pode Invocar por Invocação-Especial este card.\r\nVocê pode escolher 1 card \"Livro de Magia\" e 1 Magia no seu Cemitério; bana 1 deles, e se você fizer, adicione o outro à sua mão, então se é um card \"Livro de Magia\", você pode destruir 1 card no campo.\r\nVocê só pode usar cada um dos efeitos de \"Protetora da Grande Torre\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Mago/Luz  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278020.jpg?version=19.7"
+  },
+  {
+    "name": "Spunkie Fantardil",
+    "desc": "Não pode ser Invocado por Invocação-Normal, a menos que você controle um monstro \"Fantardil\".\r\nQuando seu oponente ativar um efeito de monstro no campo (Efeito Rápido): você pode Invocar por Invocação-Especial este card da sua mão em Posição de Defesa com a face para baixo, e se fizer, coloque 1 Magia de Campo ou Armadilha Contínua \"Fantardil\" da sua mão ou Deck no seu campo com a face para cima, então se seu oponente tem 5 ou mais cards em seu Cemitério, você pode Invocar por Invocação-Especial 1 monstro da sua mão em Posição de Defesa com a face para baixo.\r\nUma vez por turno: você pode alterar este card para Posição de Defesa com a face para baixo.",
     "overallString": "[Monstro|Efeito] Demônio/Trevas  [★1] 300/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272049.jpg?version=19.7"
   },
   {
-    "name": "鬼计冻结",
-    "desc": "①：自己场上没有「鬼计」卡以外的表侧表示卡存在的状态，对方场上有魔法·陷阱卡盖放时适用。那张卡直到下个回合的结束时不能发动。\r\n②：自己·对方回合1次，可以发动。自己墓地·除外状态的最多5张「鬼计」卡回到卡组。\r\n③：这张卡被对方送去墓地的场合才能发动。对方场上的怪兽全部变成里侧守备表示。这个效果变成里侧守备表示的怪兽不能把表示形式变更。",
+    "name": "Frio Fantardil",
+    "desc": "Após uma ou mais Magias/Armadilhas forem Baixadas no campo do seu oponente enquanto você não controla nenhum card com a face para cima que seja \"Fantardil\", ela não pode ser ativada até o final do próximo turno.\r\nUma vez por turno: você pode embaralhar até 5 cards \"Fantardil\" do seu Cemitério e/ou banimento no Deck.\r\nSe este card na sua posse é enviado ao seu Cemitério por um efeito do oponente: você pode alterar todos os monstros que seu oponente controla para Posição de Defesa com face para baixo. Os monstros que foram, não podem alterar suas posições de batalha.",
     "overallString": "[Armadilha|Magia Contínuo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100272055.jpg?version=19.7"
   },
@@ -318,8 +450,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
-    "name": "Irmãs de Lady Harpia - Êxtase Triângulo",
-    "desc": "3 monstros \"Lady Harpia\"\r\nPrimeiro deve ser Invocado por Invocação-Fusão. O nome deste card se torna \"Lady Harpia\" enquanto estiver no campo ou no Cemitério. Ganha 500 de ATK para cada \"Lady Harpia\" no seu Cemitério e, além disso, seu oponente não pode escolher este card como alvo de efeitos de monstros que não sejam de VENTO. Uma vez por turno (Efeito Rápido): você pode destruir todas as Magias/Armadilhas que seu oponente controla.",
+    "name": "Irmãs Lady Harpias – Êxtase Triplo",
+    "desc": "3 monstros \"Lady Harpia\"\r\nPrimeiro deve ser Invocado por Invocação-Fusão.\r\nO nome deste card se torna \"Lady Harpia\" enquanto está no campo ou Cemitério.\r\nGanha 500 de ATK para cada \"Lady Harpia\" no seu Cemitério. Seu oponente não pode escolher este card com efeitos de monstros não-VENTO.\r\nUma vez por turno (Efeito Rápido): você pode destruir todas as Magias e Armadilhas que seu oponente controla.",
     "overallString": "[Monstro|Efeito|Fusão] Besta Alada/Vento  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
@@ -720,62 +852,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
   {
-    "name": "Demônio do Fogo da Floresta da Corva do Inverno",
-    "desc": "Se você controla um card \"Corva do Inverno\", você pode Invocar por Invocação-Especial este card (da sua mão). Você só pode Invocar por Invocação-Especial \"Demônio do Fogo da Floresta da Corva do Inverno\" uma vez por turno desta forma.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Demônio do Fogo da Floresta da Corva do Inverno\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 Magia/Armadilha \"Corva do Inverno\" ou 1 card \"Despojos do Pecado\" do seu Deck à sua mão.\r\nVocê pode escolher 1 Monstro \"Corva do Inverno\" ou 1 Monstro de Nível 7 ou 8 na sua Zona de Magia & Armadilha; Invoque-o por Invocação-Especial para o seu campo.",
+    "name": "Demônio do Fogo da Floresta do Corvo Branco",
+    "desc": "Se você controla um card \"Corvo Branco\", você pode Invocar por Invocação-Especial este card (da sua mão). Você só pode Invocar por Invocação-Especial \"Demônio do Fogo da Floresta do Corvo Branco\" uma vez por turno desta forma.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Demônio do Fogo da Floresta do Corvo Branco\" uma vez por turno.\r\nSe este card é Invocado por Invocação-Normal ou Especial: você pode adicionar 1 Magia/Armadilha \"Corvo Branco\" ou 1 card \"Despojos do Pecado\" do seu Deck à sua mão.\r\nVocê pode escolher 1 Monstro \"Corvo Branco\" ou 1 Monstro de Nível 7 ou 8 na sua Zona de Magia & Armadilha; Invoque-o por Invocação-Especial para o seu campo.",
     "overallString": "[Monstro|Efeito] Piro/Fogo  [★1] 700/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307009.jpg?version=19.7"
   },
   {
-    "name": "Maluth da Cavalaria da Corva do Inverno",
-    "desc": "Você pode enviar 1 outro card da sua mão ou campo para o Cemitério; coloque este card com a face para cima na Zona de Magia & Armadilha do seu dono como uma Magia Contínua, e se fizer, Invoque por Invocação-Especial até 2 monstros \"Corva do Inverno\" com nomes diferentes de cada um do seu Deck, exceto \"Maluth da Cavalaria da Corva do Inverno\".\r\nQuando um monstro declara um ataque e este card é uma Magia Contínua: você pode escolher 1 Monstro \"Corva do Inverno\" na sua Zona de Magia & Armadilha; Invoque-o por Invocação-Especial.\r\nVocê só pode usar cada um dos efeitos de \"Maluth da Cavalaria da Corva do Inverno\" uma vez por turno.",
+    "name": "Maluth da Cavalaria do Corvo Branco",
+    "desc": "Você pode enviar 1 outro card da sua mão ou campo para o Cemitério; coloque este card com a face para cima na Zona de Magia & Armadilha do seu dono como uma Magia Contínua, e se fizer, Invoque por Invocação-Especial até 2 monstros \"Corvo Branco\" com nomes diferentes de cada um do seu Deck, exceto \"Maluth da Cavalaria do Corvo Branco\".\r\nQuando um monstro declara um ataque e este card é uma Magia Contínua: você pode escolher 1 Monstro \"Corvo Branco\" na sua Zona de Magia & Armadilha; Invoque-o por Invocação-Especial.\r\nVocê só pode usar cada um dos efeitos de \"Maluth da Cavalaria do Corvo Branco\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Regulador] Ilusão/Luz  [★4] 1700/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307010.jpg?version=19.7"
   },
   {
-    "name": "Ann da Cavalaria da Corva do Inverno",
-    "desc": "Você pode revelar este card da sua mão; Invoque por Invocação-Especial 1 monstro \"Corva do Inverno\" da sua mão, exceto \"Ann da Cavalaria da Corva do Inverno\".\r\nDurante a Fase Principal (Efeito Rápido): você pode escolher 1 monstro \"Corva do Inverno\" que você controla; coloque-o com a face para cima na Zona de Magia & Armadilha do seu dono como uma Magia Contínua, e se fizer, Invoque por Invocação-Especial 1 monstro \"Corva do Inverno\" da sua mão ou Cemitério, exceto \"Ann da Cavalaria da Corva do Inverno\".\r\nVocê só pode usar cada um dos efeitos de \"Ann da Cavalaria da Corva do Inverno\" uma vez por turno.",
+    "name": "Ann da Cavalaria do Corvo Branco",
+    "desc": "Você pode revelar este card da sua mão; Invoque por Invocação-Especial 1 monstro \"Corvo Branco\" da sua mão, exceto \"Ann da Cavalaria do Corvo Branco\".\r\nDurante a Fase Principal (Efeito Rápido): você pode escolher 1 monstro \"Corvo Branco\" que você controla; coloque-o com a face para cima na Zona de Magia & Armadilha do seu dono como uma Magia Contínua, e se fizer, Invoque por Invocação-Especial 1 monstro \"Corvo Branco\" da sua mão ou Cemitério, exceto \"Ann da Cavalaria do Corvo Branco\".\r\nVocê só pode usar cada um dos efeitos de \"Ann da Cavalaria do Corvo Branco\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Regulador] Ilusão/Luz  [★4] 1400/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307011.jpg?version=19.7"
   },
   {
-    "name": "Despojos do Pecado da Floresta da Corva do Inverno",
-    "desc": "Você pode Invocar por Invocação-Especial este card (da sua mão) ao colocar 1 Monstro de FOGO de Nível 1 com a face para cima no seu campo ou Cemitério no fundo do Deck. Você só pode Invocar por Invocação-Especial \"Despojos do Pecado da Floresta da Corva do Inverno\" uma vez por turno dessa forma.\r\nQuando seu oponente ativa um card ou efeito (Efeito Rápido): você pode retornar este card à mão, então escolha 1 monstro com a face para cima no campo ou em qualquer Cemitério; coloque-o com a face para cima na Zona de Magia & Armadilha do seu dono como uma Magia Contínua. Você só pode usar este efeito de \"Despojos do Pecado da Floresta da Corva do Inverno\" uma vez por turno.",
+    "name": "Despojos do Pecado da Floresta do Corvo Branco",
+    "desc": "Você pode Invocar por Invocação-Especial este card (da sua mão) ao colocar 1 Monstro de FOGO de Nível 1 com a face para cima no seu campo ou Cemitério no fundo do Deck. Você só pode Invocar por Invocação-Especial \"Despojos do Pecado da Floresta do Corvo Branco\" uma vez por turno dessa forma.\r\nQuando seu oponente ativa um card ou efeito (Efeito Rápido): você pode retornar este card à mão, então escolha 1 monstro com a face para cima no campo ou em qualquer Cemitério; coloque-o com a face para cima na Zona de Magia & Armadilha do seu dono como uma Magia Contínua. Você só pode usar este efeito de \"Despojos do Pecado da Floresta do Corvo Branco\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Regulador] Mago/Fogo  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307012.jpg?version=19.7"
   },
   {
-    "name": "Diabellze, a Herdeira da Floresta da Corva do Inverno",
-    "desc": "1 Monstro de Fusão ou Sincro + 1 monstro Mago ou Ilusão\r\nEste card com a face para cima Invocado por Invocação-Fusão não pode ser usado como Matéria de Fusão. Ganha 700 de ATK/DEF para cada Magia/Armadilha no campo. Se este card for Invocado por Invocação-Especial: você pode colocar qualquer número de monstros que você controla com a face para cima nas Zonas de Magias & Armadilhas dos seus donos como Magias Contínuas e, depois, você pode devolver cards do campo para a mão, até o número de Magias/Armadilhas que você controla. Você só pode usar este efeito de \"Diabellze, a Herdeira da Floresta da Corva do Inverno\" uma vez por turno.",
+    "name": "Diabellze a Senhora da Floresta do Corvo Branco",
+    "desc": "1 Monstro Fusão ou Sinchro + 1 monstro Mago ou Ilusão\r\nSe este card é Invocado por Invocação-Especial: você pode colocar qualquer número de monstros que você controla com a face para cima na Zona de Magia & Armadilha de seus donos como Magia Contínua, então você pode retornar cards no campo para a mão igual o número de Magias/Armadilhas você controla. Você só pode usar este efeito de \"Diabellze a Senhora da Floresta do Corvo Branco\" uma vez por turno.\r\nGanha 700 de ATK/DEF para cada Magia/Armadilha no campo.\r\nEste card Invocado por Invocação-Fusão não pode ser usado como Matéria de Fusão.",
     "overallString": "[Monstro|Efeito|Fusão] Ilusão/Luz  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
   {
-    "name": "Zaltys da Cavalaria da Corva do Inverno",
-    "desc": "1 Regulador Ilusão + 1+ não-Reguladores\r\nSe este card é Invocado por Invocação-Especial: você pode escolher até 2 Magias/Armadilhas no campo; retorne-as à mão.\r\nSe este card é enviado para o Cemitério: você pode ativar este efeito baseado de onde ele foi enviado;\r\n● Campo: Baixe 1 Armadilha \"Corva do Inverno\" do seu Deck.\r\n● Deck Adicional: adicione 1 card \"Corva do Inverno\" do seu Cemitério à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Zaltys da Cavalaria da Corva do Inverno\" uma vez por turno.",
+    "name": "Zaltys da Cavalaria do Corvo Branco",
+    "desc": "1 Regulador Ilusão + 1+ não-Reguladores\r\nSe este card é Invocado por Invocação-Especial: você pode escolher até 2 Magias/Armadilhas no campo; retorne-as à mão.\r\nSe este card é enviado para o Cemitério: você pode ativar este efeito baseado de onde ele foi enviado;\r\n● Campo: Baixe 1 Armadilha \"Corvo Branco\" do seu Deck.\r\n● Deck Adicional: adicione 1 card \"Corvo Branco\" do seu Cemitério à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Zaltys da Cavalaria do Corvo Branco\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Sincro] Ilusão/Fogo  [★5] 2600/1700",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307037.jpg?version=19.7"
   },
   {
-    "name": "Aitvaras da Cavalaria da Corva do Inverno",
-    "desc": "1 Regulador Ilusão + 1+ não-Reguladores \r\nSe este card é Invocado por Invocação-Especial: você pode escolher 1 card que você controla e 1 card que seu oponente controla; retorne-os à mão.\r\nSe este card é enviado ao Cemitério: você pode ativar este efeito baseado de onde ele foi enviado;\r\n● Campo: escolha 1 card no campo; embaralhe-o no Deck.\r\n● Deck Adicional: Invoque por Invocação-Especial 1 monstro \"Corva do Inverno\" do seu Cemitério.\r\nVocê só pode usar cada um dos efeitos de \"Aitvaras da Cavalaria da Corva do Inverno\" uma vez por turno.",
+    "name": "Aitvaras da Cavalaria do Corvo Branco",
+    "desc": "1 Regulador Ilusão + 1+ não-Reguladores \r\nSe este card é Invocado por Invocação-Especial: você pode escolher 1 card que você controla e 1 card que seu oponente controla; retorne-os à mão.\r\nSe este card é enviado ao Cemitério: você pode ativar este efeito baseado de onde ele foi enviado;\r\n● Campo: escolha 1 card no campo; embaralhe-o no Deck.\r\n● Deck Adicional: Invoque por Invocação-Especial 1 monstro \"Corvo Branco\" do seu Cemitério.\r\nVocê só pode usar cada um dos efeitos de \"Aitvaras da Cavalaria do Corvo Branco\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Sincro] Ilusão/Fogo  [★5] 900/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307038.jpg?version=19.7"
   },
   {
-    "name": "A Profunda Floresta da Corva do Inverno",
-    "desc": "Quando este card é ativado: você pode adicionar 1 monstro \"Corva do Inverno\" do seu Deck à sua mão.\r\nMonstros \"Corva do Inverno\" que você controla não podem ser destruídos por efeitos.\r\nDurante sua Fase Final: você pode Baixar 1 Armadilha \"Corva do Inverno\" do seu Deck ou Cemitério. Você só pode usar este efeito de \"A Profunda Floresta da Corva do Inverno\" uma vez por turno.\r\nVocê só pode ativar 1 \"A Profunda Floresta da Corva do Inverno\" por turno.",
+    "name": "A Profunda Floresta do Corvo Branco",
+    "desc": "Quando este card é ativado: você pode adicionar 1 monstro \"Corvo Branco\" do seu Deck à sua mão.\r\nMonstros \"Corvo Branco\" que você controla não podem ser destruídos por efeitos.\r\nDurante sua Fase Final: você pode Baixar 1 Armadilha \"Corvo Branco\" do seu Deck ou Cemitério. Você só pode usar este efeito de \"A Profunda Floresta do Corvo Branco\" uma vez por turno.\r\nVocê só pode ativar 1 \"A Profunda Floresta do Corvo Branco\" por turno.",
     "overallString": "[Magia|Magia de Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307059.jpg?version=19.7"
   },
   {
-    "name": "O Esplendor da Bruxa da Corva do Inverno",
-    "desc": "Você pode ativar 1 desses efeitos;\r\n● Invoque por Invocação-Especial 1 monstro \"Corva do Inverno\" da sua mão ou Cemitério.\r\n● Invoque por Invocação-Fusão 1 Monstro Fusão \"Diabell\" do seu Deck Adicional, usando até 1 monstro \"Corva do Inverno\" de cada um da sua mão, Deck Adicional, e/ou campo.\r\n● Se você controla um monstro \"Diabell\": escolha 1 card com a face para cima no campo; negue seus efeitos até o final deste turno.\r\nVocê só pode usar este efeito de \"O Esplendor da Bruxa da Corva do Inverno\" uma vez por turno.",
+    "name": "O Esplendor da Bruxa do Corvo Branco",
+    "desc": "Você pode ativar 1 desses efeitos;\r\n● Invoque por Invocação-Especial 1 monstro \"Corvo Branco\" da sua mão ou Cemitério.\r\n● Invoque por Invocação-Fusão 1 Monstro Fusão \"Diabell\" do seu Deck Adicional, usando até 1 monstro \"Corvo Branco\" de cada um da sua mão, Deck Adicional, e/ou campo.\r\n● Se você controla um monstro \"Diabell\": escolha 1 card com a face para cima no campo; negue seus efeitos até o final deste turno.\r\nVocê só pode usar este efeito de \"O Esplendor da Bruxa do Corvo Branco\" uma vez por turno.",
     "overallString": "[Armadilha|Magia Contínuo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307077.jpg?version=19.7"
   },
   {
-    "name": "A Ilusão da Bruxa da Corva do Inverno",
-    "desc": "Invoque por Invocação-Fusão 1 Monstro Fusão Ilusão do seu Deck Adicional, usando monstros do seu Deck Adicional e/ou campo, você também não pode ativar efeitos de monstros na mão ou Cemitério pelo resto deste turno após ativar este card, exceto de monstros Ilusão.\r\nSe a ativação deste card na posse de seu dono é negado por um efeito do oponente e enviado para o seu Cemitério: você pode Baixar este card, e se fizer, retorne todos os cards que seu oponente controla à mão.\r\nVocê só pode ativar 1 \"A Ilusão da Bruxa da Corva do Inverno\" por turno.",
+    "name": "A Ilusão da Bruxa do Corvo Branco",
+    "desc": "Invoque por Invocação-Fusão 1 Monstro Fusão Ilusão do seu Deck Adicional, usando monstros do seu Deck Adicional e/ou campo, você também não pode ativar efeitos de monstros na mão ou Cemitério pelo resto deste turno após ativar este card, exceto de monstros Ilusão.\r\nSe a ativação deste card na posse de seu dono é negado por um efeito do oponente e enviado para o seu Cemitério: você pode Baixar este card, e se fizer, retorne todos os cards que seu oponente controla à mão.\r\nVocê só pode ativar 1 \"A Ilusão da Bruxa do Corvo Branco\" por turno.",
     "overallString": "[Armadilha]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307078.jpg?version=19.7"
   },
@@ -811,7 +943,7 @@
   },
   {
     "name": "Cânone Perverso",
-    "desc": "Sempre que um monstro do oponente declarar um ataque, coloque 1 Marcador de Doutrina Sinistra neste card. Você só pode usar cada um dos seguintes efeitos de \"Cânone Perverso\" uma vez por turno. Durante sua Fase Principal, se este card foi ativado neste turno: você pode adicionar 1 monstro Demônio de TREVAS do seu Deck à sua mão e, depois, descarte 1 monstro Demônio. Você pode enviar este card com 4 ou mais Marcadores de Doutrina Sinistra para o Cemitério; Invoque por Invocação-Especial 1 monstro Demônio do seu Deck e, depois, você pode adicionar 1 \"Super Polimerização\" do seu Deck à sua mão.",
+    "desc": "Toda vez que um monstro do oponente declara um ataque, coloque 1 Marcador de Doutrina Sinistra neste card.\r\nVocê só pode usar cada um dos seguintes efeitos de \"Cânone Perverso\" uma vez por turno.\r\nDurante sua Fase Principal, se este card foi ativado neste turno: você pode adicionar 1 monstro Demônio de TREVAS do seu Deck à sua mão, então descarte 1 monstro Demônio.\r\nVocê pode enviar este card com 4 ou mais Marcadores de Doutrina Sinistra para o Cemitério; Invoque por Invocação-Especial 1 monstro Demônio do seu Deck, então você pode adicionar 1 \"Super Polimerização\" do seu Deck à sua mão.",
     "overallString": "[Magia|Magia Contínuo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
@@ -828,62 +960,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Amurusa",
-    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reinzwurm\".\r\nSe este card é Invocado por Invocação-Ritual: você pode adicionar 2 monstros \"Reinzwurm\" de não-VENTO do seu Deck à sua mão.\r\nSe este card é enviado ao Cemitério, exceto por batalha: você pode Invocar por Invocação-Ritual 1 Monstro Ritual Inseto da sua mão, oferecendo como Tributo monstros da sua mão ou campo, e/ou embaralhando monstros Inseto e/ou Dragão do seu Cemitério no Deck, cujo Nível total seja igual ou excedente ao seu Nível.\r\nVocê só pode usar cada efeito de \"Reinzwurm Amurusa\" uma vez por turno.",
+    "name": "Reindsurm Amurusa",
+    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reindsurm\".\r\nSe este card é Invocado por Invocação-Ritual: você pode adicionar 2 monstros \"Reindsurm\" de não-VENTO do seu Deck à sua mão.\r\nSe este card é enviado ao Cemitério, exceto por batalha: você pode Invocar por Invocação-Ritual 1 Monstro Ritual Inseto da sua mão, oferecendo como Tributo monstros da sua mão ou campo, e/ou embaralhando monstros Inseto e/ou Dragão do seu Cemitério no Deck, cujo Nível total seja igual ou excedente ao seu Nível.\r\nVocê só pode usar cada efeito de \"Reindsurm Amurusa\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Ritual] Inseto/Vento  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Luvian",
-    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reinzwurm\".\r\nSe este card é Invocado por Invocação-Ritual: você pode adicionar 2 Magias/Armadilhas \"Reinzwurm\" do seu Deck à sua mão.\r\nSe este card é enviado ao Cemitério, exceto por batalha: você pode Invocar por Invocação-Ritual 1 Monstro Ritual Inseto da sua mão, oferecendo como Tributo monstros da sua mão ou campo, e/ou embaralhando monstros Inseto e/ou Dragão do seu Cemitério no Deck, cujo Nível total seja igual ou excedente ao seu Nível.\r\nVocê só pode usar cada um dos efeitos de \"Reinzwurm Luvian\" uma vez por turno.",
+    "name": "Reindsurm Luvian",
+    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reindsurm\".\r\nSe este card é Invocado por Invocação-Ritual: você pode adicionar 2 Magias/Armadilhas \"Reindsurm\" do seu Deck à sua mão.\r\nSe este card é enviado ao Cemitério, exceto por batalha: você pode Invocar por Invocação-Ritual 1 Monstro Ritual Inseto da sua mão, oferecendo como Tributo monstros da sua mão ou campo, e/ou embaralhando monstros Inseto e/ou Dragão do seu Cemitério no Deck, cujo Nível total seja igual ou excedente ao seu Nível.\r\nVocê só pode usar cada um dos efeitos de \"Reindsurm Luvian\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Ritual] Inseto/Água  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Carcasas",
-    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reinzwurm\".\r\nSe este card é Invocado por Invocação-Ritual: você pode enviar 2 cards \"Reinzwurm\" do seu Deck ao Cemitério.\r\nSe este card é enviado ao Cemitério, exceto por batalha: você pode Invocar por Invocação-Ritual 1 Monstro Ritual Inseto da sua mão, oferecendo como Tributo monstros da sua mão ou campo, e/ou embaralhando monstros Inseto e/ou Dragão do seu Cemitério no Deck, cujo Nível total seja igual ou excedente ao seu Nível.\r\nVocê só pode usar cada um dos efeitos de \"Reinzwurm Carcasas\" uma vez por turno.",
+    "name": "Reindsurm Carcasas",
+    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reindsurm\".\r\nSe este card é Invocado por Invocação-Ritual: você pode enviar 2 cards \"Reindsurm\" do seu Deck ao Cemitério.\r\nSe este card é enviado ao Cemitério, exceto por batalha: você pode Invocar por Invocação-Ritual 1 Monstro Ritual Inseto da sua mão, oferecendo como Tributo monstros da sua mão ou campo, e/ou embaralhando monstros Inseto e/ou Dragão do seu Cemitério no Deck, cujo Nível total seja igual ou excedente ao seu Nível.\r\nVocê só pode usar cada um dos efeitos de \"Reindsurm Carcasas\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Ritual] Inseto/Luz  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Gigalovendra",
-    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reinzwurm\".\r\n(Efeito Rápido): você pode enviar 2 cards da sua mão ao Cemitério, incluindo este card; adicione 1 monstro \"Reinzwurm\" de não-FOGO do seu Deck à sua mão.\r\nSe este card é Invocado por Invocação-Ritual ou seu oponente Invocou por Invocação-Especial um ou mais monstros: você pode embaralhar até 2 do campo no Deck.\r\nSe este card e um monstro \"Reinzwurm\" de ÁGUA estão no seu Cemitério: você pode adicionar este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Reinzwurm Gigalovendra\" uma vez por turno.",
+    "name": "Reindsurm Gigalovendra",
+    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reindsurm\".\r\n(Efeito Rápido): você pode enviar 2 cards da sua mão ao Cemitério, incluindo este card; adicione 1 monstro \"Reindsurm\" de não-FOGO do seu Deck à sua mão.\r\nSe este card é Invocado por Invocação-Ritual ou seu oponente Invocou por Invocação-Especial um ou mais monstros: você pode embaralhar até 2 do campo no Deck.\r\nSe este card e um monstro \"Reindsurm\" de ÁGUA estão no seu Cemitério: você pode adicionar este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Reindsurm Gigalovendra\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Ritual] Inseto/Fogo  [★8] 3000/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307027.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Giriakarma",
-    "desc": "Você pode Invocar este card por Invocação-Ritual com \"Conquista Reinzwurm\". Quando seu oponente ativar um efeito de monstro no campo ou Cemitério, enquanto você controlar este card Invocado por Invocação-Ritual (Efeito Rápido): você pode negar a ativação e, depois, você pode embaralhar no Deck 1 monstro cada do campo e Cemitério do seu oponente e, além disso, se você selecionou um ou mais monstros Dragão por este efeito, o ATK deste card se torna o dobro. Se você tiver este card e um monstro \"Reinzwurm\" de LUZ no seu Cemitério: você pode adicionar este card à sua mão. Você só pode usar cada efeito de \"Reinzwurm Giriakarma\" uma vez por turno.",
+    "name": "Reindsurm Giriakarma",
+    "desc": "Você pode Invocar por Invocação-Ritual este card com \"Conquista Reindsurm\".\r\nQuando seu oponente ativar um efeito de monstro no campo ou Cemitério e você controla este card Invocado por Invocação-Ritual (Efeito Rápido): você pode negar a ativação, então você pode embaralhar 1 monstro de cada de ambos o campo e Cemitério do seu oponente no Deck, também se algum deles era um monstro Dragão, dobre o ATK deste card.\r\nSe este card e um monstro \"Reindsurm\" de LUZ estão no seu Cemitério: você pode adicionar este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Reindsurm Giriakarma\" uma vez por turno.",
     "overallString": "[Monstro|Efeito|Ritual] Inseto/Trevas  [★8] 3300/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307028.jpg?version=19.7"
   },
   {
-    "name": "Conquista Reinzwurm",
-    "desc": "Este card pode ser usado para Invocação-Ritual de qualquer número de Monstros Ritual Inseto.\r\nVocê também deve embaralhar monstros Inseto e/ou Dragão de Cemitérios no Deck cujo Níveis totais sejam iguais ou excedentes aos Níveis totais dos Monstros Rituais.\r\nSe este card está no seu Cemitério: você pode enviar 1 monstro Inseto da sua mão ou com a face para cima no campo ao Cemitério; adicione este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Conquista Reinzwurm\" por turno.",
+    "name": "Conquista Reindsurm",
+    "desc": "Este card pode ser usado para Invocação-Ritual de qualquer número de Monstros Ritual Inseto.\r\nVocê também deve embaralhar monstros Inseto e/ou Dragão de Cemitérios no Deck cujo Níveis totais sejam iguais ou excedentes aos Níveis totais dos Monstros Rituais.\r\nSe este card está no seu Cemitério: você pode enviar 1 monstro Inseto da sua mão ou com a face para cima no campo ao Cemitério; adicione este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Conquista Reindsurm\" por turno.",
     "overallString": "[Magia|Ritual]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307055.jpg?version=19.7"
   },
   {
-    "name": "Carnação Reinzwurm",
-    "desc": "Enquanto você controla um monstro \"Reinzwurm\" cujo Nível original é 8 ou maior ou seu oponente tem um monstro Dragão no campo ou Cemitério, os efeitos ativados dos seus monstros \"Reinzwurm\" não podem ser negados.\r\nUma vez por turno: você pode enviar 1 monstro \"Reinzwurm\" ou um monstro Dragão da sua mão ou com a face para cima no campo ao Cemitério; adicione 1 monstro Inseto do seu Deck à sua mão com o mesmo Nível original, mas com nome original diferente.",
+    "name": "Carnação Reindsurm",
+    "desc": "Enquanto você controla um monstro \"Reindsurm\" cujo Nível original é 8 ou maior ou seu oponente tem um monstro Dragão no campo ou Cemitério, os efeitos ativados dos seus monstros \"Reindsurm\" não podem ser negados.\r\nUma vez por turno: você pode enviar 1 monstro \"Reindsurm\" ou um monstro Dragão da sua mão ou com a face para cima no campo ao Cemitério; adicione 1 monstro Inseto do seu Deck à sua mão com o mesmo Nível original, mas com nome original diferente.",
     "overallString": "[Magia|Magia de Campo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307056.jpg?version=19.7"
   },
   {
-    "name": "Borboleta Reinzwurm",
-    "desc": "Envie 2 monstros do seu Deck ao Cemitério, incluind um monstro Inseto, você também não pode Invocar por Invocação-Especial até o final do seu próximo turno após ativar este card, exceto monstros Insetos.\r\nSe você Invocar por Invocação-Ritual um ou mais monstros Inseto enquanto este card está no seu Cemitério: você pode banir este card; todos os monstros \"Reinzwurm\" que você atualmente controla ganham 800 de ATK/DEF.\r\nVocê só pode usar 1 dos efeitos de \"Borboleta Reinzwurm\" por turno e somente uma vez naquele turno.",
+    "name": "Borboleta Reindsurm",
+    "desc": "Envie 2 monstros do seu Deck ao Cemitério, incluind um monstro Inseto, você também não pode Invocar por Invocação-Especial até o final do seu próximo turno após ativar este card, exceto monstros Insetos.\r\nSe você Invocar por Invocação-Ritual um ou mais monstros Inseto enquanto este card está no seu Cemitério: você pode banir este card; todos os monstros \"Reindsurm\" que você atualmente controla ganham 800 de ATK/DEF.\r\nVocê só pode usar 1 dos efeitos de \"Borboleta Reindsurm\" por turno e somente uma vez naquele turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307057.jpg?version=19.7"
   },
   {
-    "name": "Prtática Reinzwurm",
-    "desc": "Adicione 2 monstros \"Reinzwurm\" do seu Deck à sua mão, então envie 1 card da sua mão ao Cemitério, então se seu oponente tem um monstro Dragão no campo ou Cemitério, você pode adicionar 1 monstro Inseto do seu Cemitério à sua mão.\r\nSe você Invocar por Invocação-Ritual um ou mais monstros Inseto enquanto este card está no seu Cemitério: você pode banir este card; coloque 1 Magia de Campo \"Reinzwurm\" do seu Deck com a face para cima no seu Campo.\r\nVocê só pode usar cada um dos efeitos de \"Prtática Reinzwurm\" uma vez por turno.",
+    "name": "Prtática Reindsurm",
+    "desc": "Adicione 2 monstros \"Reindsurm\" do seu Deck à sua mão, então envie 1 card da sua mão ao Cemitério, então se seu oponente tem um monstro Dragão no campo ou Cemitério, você pode adicionar 1 monstro Inseto do seu Cemitério à sua mão.\r\nSe você Invocar por Invocação-Ritual um ou mais monstros Inseto enquanto este card está no seu Cemitério: você pode banir este card; coloque 1 Magia de Campo \"Reindsurm\" do seu Deck com a face para cima no seu Campo.\r\nVocê só pode usar cada um dos efeitos de \"Prtática Reindsurm\" uma vez por turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307058.jpg?version=19.7"
   },
   {
-    "name": "Encontro Reinzwurm",
-    "desc": "Quando uma Magia/Armadilha, ou um efeito de um monstro, é ativado enquanto você controla um monstro \"Reinzwurm\": negue a ativação, então você pode adicionar 1 monstro \"Reinzwurm\" do seu Deck ou Cemitério à sua mão, e se fizer, envie 1 monstro Inseto que você controla ao Cemitério.\r\nSe um ou mais monstros \"Reinzwurm\" que você controla seriam destruídos por batalha ou efeito, em vez disso você pode colocar este card do seu Cemitério no fundo do seu Deck.\r\nVocê só pode usar cada um dos efeitos de \"Encontro Reinzwurm\" uma vez por turno.",
+    "name": "Encontro Reindsurm",
+    "desc": "Quando uma Magia/Armadilha, ou um efeito de um monstro, é ativado enquanto você controla um monstro \"Reindsurm\": negue a ativação, então você pode adicionar 1 monstro \"Reindsurm\" do seu Deck ou Cemitério à sua mão, e se fizer, envie 1 monstro Inseto que você controla ao Cemitério.\r\nSe um ou mais monstros \"Reindsurm\" que você controla seriam destruídos por batalha ou efeito, em vez disso você pode colocar este card do seu Cemitério no fundo do seu Deck.\r\nVocê só pode usar cada um dos efeitos de \"Encontro Reindsurm\" uma vez por turno.",
     "overallString": "[Armadilha|Armadilha de Resposta]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307076.jpg?version=19.7"
   },
@@ -948,62 +1080,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268025.jpg?version=19.7"
   },
   {
-    "name": "O Poeta do Deus Sol - Helpoemer",
-    "desc": "Você pode descartar 1 outro card; Invoque por Invocação-Especial este card da sua mão.\r\nSe este card é Invocado por Invocação-Especial: você pode adicionar 1 card \"Deus Sol\" do seu Deck à sua mão, exceto \"O Poeta do Deus Sol - Helpoemer\", então se os PV do seu oponente são pelo menos 2000 maior que o seu, você pode descartar 1 card aleatório da mão dele.\r\nDurante a Fase Final, se um \"Deus Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"O Poeta do Deus Sol - Helpoemer\" uma vez por turno.",
+    "name": "O Poeta do Deus do Sol - Helpoemer",
+    "desc": "Você pode descartar 1 outro card; Invoque por Invocação-Especial este card da sua mão.\r\nSe este card é Invocado por Invocação-Especial: você pode adicionar 1 card \"Deus do Sol\" do seu Deck à sua mão, exceto \"O Poeta do Deus do Sol - Helpoemer\", então se os PV do seu oponente são pelo menos 2000 maior que o seu, você pode descartar 1 card aleatório da mão dele.\r\nDurante a Fase Final, se um \"Deus do Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"O Poeta do Deus do Sol - Helpoemer\" uma vez por turno.",
     "overallString": "[Monstro|Efeito] Demônio/Trevas  [★5] 2000/1400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307001.jpg?version=19.7"
   },
   {
-    "name": "O Destruidor do Deus Sol - Makyura",
-    "desc": "Se este card é Invocado por Invocação-Normal ou Especial, ou enviado da sua mão ou campo para o Cemitério: você pode Baixar 1 Magia/Armadilha \"Deus Sol\" da sua mão ou Deck, e se você baixar uma Armadilha ou Magia Rápido, ele pode ser ativado neste turno.\r\nDurante a Fase Final, se \"Deus Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.\r\nVocê só pode usar cada efeito de \"O Destruidor do Deus Sol - Makyura\" uma vez por turno.",
+    "name": "O Destruidor do Deus do Sol - Makyura",
+    "desc": "Se este card é Invocado por Invocação-Normal ou Especial, ou enviado da sua mão ou campo para o Cemitério: você pode Baixar 1 Magia/Armadilha \"Deus do Sol\" da sua mão ou Deck, e se você baixar uma Armadilha ou Magia Rápido, ele pode ser ativado neste turno.\r\nDurante a Fase Final, se \"Deus do Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.\r\nVocê só pode usar cada efeito de \"O Destruidor do Deus do Sol - Makyura\" uma vez por turno.",
     "overallString": "[Monstro|Efeito] Guerreiro/Trevas  [★4] 1600/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307002.jpg?version=19.7"
   },
   {
-    "name": "A Máquina do Terror do Deus Sol - Gil Garth",
-    "desc": "Se este card está na sua mão e você controla um card \"Deus Sol\": você pode Invocar este card por Invocação-Especial.\r\nVocê pode oferecer este card como Tributo, então escolha 1 outro card em qualquer Cemitério; envie 1 card \"Deus Sol\" do seu Deck ao Cemitério, e se fizer, coloque o card escolhido no fundo do Deck.\r\nDurante a Fase Final, se \"Deus Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"A Máquina do Terror do Deus Sol - Gil Garth\" uma vez por turno.",
+    "name": "A Máquina do Terror do Deus do Sol - Gil Garth",
+    "desc": "Se este card está na sua mão e você controla um card \"Deus do Sol\": você pode Invocar este card por Invocação-Especial.\r\nVocê pode oferecer este card como Tributo, então escolha 1 outro card em qualquer Cemitério; envie 1 card \"Deus do Sol\" do seu Deck ao Cemitério, e se fizer, coloque o card escolhido no fundo do Deck.\r\nDurante a Fase Final, se \"Deus do Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"A Máquina do Terror do Deus do Sol - Gil Garth\" uma vez por turno.",
     "overallString": "[Monstro|Efeito] Demônio/Trevas  [★4] 1800/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307003.jpg?version=19.7"
   },
   {
-    "name": "O Dispositivo de Tortura do Deus Sol - Viser Des Shock",
-    "desc": "Não pode ser destruído por batalha.\r\nVocê só pode usar cada um dos seguintes efeitos de \"O Dispositivo de Tortura do Deus Sol - Viser Des Shock\" uma vez por turno.\r\nSe um ou mais monstros é enviado para o Cemitério do seu oponente e você controla um card \"Deus Sol\", mesmo durante a Etapa de dano: você pode Invocar por Invocação-Especial este card da sua mão, e se fizer, retorne 1 outro card do campo para a mão/Deck Adicional, e se o fizer, cause 800 de dano ao seu oponente.\r\nDurante a Fase Final, se \"Deus Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.",
+    "name": "O Dispositivo de Tortura do Deus do Sol - Viser Des Shock",
+    "desc": "Não pode ser destruído por batalha.\r\nVocê só pode usar cada um dos seguintes efeitos de \"O Dispositivo de Tortura do Deus do Sol - Viser Des Shock\" uma vez por turno.\r\nSe um ou mais monstros é enviado para o Cemitério do seu oponente e você controla um card \"Deus do Sol\", mesmo durante a Etapa de dano: você pode Invocar por Invocação-Especial este card da sua mão, e se fizer, retorne 1 outro card do campo para a mão/Deck Adicional, e se o fizer, cause 800 de dano ao seu oponente.\r\nDurante a Fase Final, se \"Deus do Sol Imortal\" foi enviado para o seu Cemitério neste turno: você pode adicionar este card do seu Cemitério à sua mão.",
     "overallString": "[Monstro|Efeito] Demônio/Trevas  [★4] 800/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307004.jpg?version=19.7"
   },
   {
-    "name": "O Dragão Alado de Rá, o Deus Sol da Escuridão",
-    "desc": "\"O Dragão Alado de Rá\" + 3 monstros \"Deus Sol\"\r\nNão é afetado por outros efeitos de cards. Uma vez por turno, durante a Fase Principal (Efeito Rápido): você pode descartar qualquer número de cards \"Deus Sol\" e, depois, selecione esse número de Zonas de Monstros Principais usadas do seu oponente; seu oponente deve enviar monstros nessas zonas para o Cemitério. Quando um ataque for declarado envolvendo este card: você pode pagar PV até ter apenas 1; este card ganha ATK/DEF igual aos PV pagos e à soma do ATK dos monstros \"Deus Sol\" no seu Cemitério.",
+    "name": "O Deus do Sol Sombrio - O Dragão Alado de Rá",
+    "desc": "\"O Dragão Alado de Rá\" + 3 monstros \"Deus do Sol\" \r\nNão é afetado por outros efeitos.\r\nUma vez por turno, durante a Fase Principal (Efeito Rápido): você pode descartar qualquer número de cards \"Deus do Sol\", então escolha aquela quantia de Zonas de Monstro Principal ocupadas do seu oponente; seu oponente deve enviar os monstros naquelas zonas para o Cemitério.\r\nQuando um ataque é declarado envolvendo este card: você pode pagar PV para que você fique apenas com 1; este card ganha ATK/DEF igual a quantia de PV paga e o ATK total de todos os monstros \"Deus do Sol\" atualmente no seu Cemitério.",
     "overallString": "[Monstro|Efeito|Fusão] Besta Divina/Divino  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },
   {
-    "name": "Gaiola de Ferro do Deus Sol - Golem de Lava",
-    "desc": "1 monstro \"Deus Sol\" que você controla + 2 monstros com a face para cima no campo\r\nNão pode ser usado como Matéria de Fusão.\r\nDeve ser Invocado por Invocação-Fusão, ou Especial (do seu Deck Adicional) para a Zona de Monstros Principal do seu oponente ao enviar os cards acima de qualquer campo para o Cemitério, mas se você Invocar por Invocação-Especial este card com o segundo método, você só pode Invocar por Invocação-Especial uma vez pelo resto deste turno. Você só pode Invocar por Invocação-Especial \"Gaiola de Ferro do Deus Sol - Golem de Lava\" uma vez por turno desta forma, não importa qual método usar.\r\nUma vez por turno, durante a sua Fase de Apoio: receba 1000 de dano.",
+    "name": "Gaiola de Ferro do Deus do Sol - Golem de Lava",
+    "desc": "1 monstro \"Deus do Sol\" que você controla + 2 monstros com a face para cima no campo\r\nNão pode ser usado como Matéria de Fusão.\r\nDeve ser Invocado por Invocação-Fusão, ou Especial (do seu Deck Adicional) para a Zona de Monstros Principal do seu oponente ao enviar os cards acima de qualquer campo para o Cemitério, mas se você Invocar por Invocação-Especial este card com o segundo método, você só pode Invocar por Invocação-Especial uma vez pelo resto deste turno. Você só pode Invocar por Invocação-Especial \"Gaiola de Ferro do Deus do Sol - Golem de Lava\" uma vez por turno desta forma, não importa qual método usar.\r\nUma vez por turno, durante a sua Fase de Apoio: receba 1000 de dano.",
     "overallString": "[Monstro|Efeito|Fusão] Demônio/Fogo  [★8] 3000/2500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307031.jpg?version=19.7"
   },
   {
-    "name": "Deus Sol Imortal",
-    "desc": "Invoque por Invocação-Especial 1 monstro \"O Dragão Alado de Rá\" do seu Cemitério ou banimento, ignorando suas condições de Invocação, então se você Invocou por Invocação-Especial \"O Dragão Alado de Rá\" por este efeito, envie-o para o Cemitério, e se fizer, você pode Invocar por Invocação-Especial 1 monstro \"O Dragão Alado de Rá\" do seu Deck Adicional. Durante a Fase Final, envie os monstros Invocados por Invocação-Especial por este efeito para o Cemitério.\r\nDurante sua Fase Principal, se este card está no seu Cemitério: você pode descartar 1 card \"Deus Sol\"; adicione este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Deus Sol Imortal\" uma vez por turno.",
+    "name": "Deus do Sol Imortal",
+    "desc": "Invoque por Invocação-Especial 1 monstro \"O Dragão Alado de Rá\" do seu Cemitério ou banimento, ignorando suas condições de Invocação, então se você Invocou por Invocação-Especial \"O Dragão Alado de Rá\" por este efeito, envie-o para o Cemitério, e se fizer, você pode Invocar por Invocação-Especial 1 monstro \"O Dragão Alado de Rá\" do seu Deck Adicional. Durante a Fase Final, envie os monstros Invocados por Invocação-Especial por este efeito para o Cemitério.\r\nDurante sua Fase Principal, se este card está no seu Cemitério: você pode descartar 1 card \"Deus do Sol\"; adicione este card à sua mão.\r\nVocê só pode usar cada um dos efeitos de \"Deus do Sol Imortal\" uma vez por turno.",
     "overallString": "[Magia|Magia Rápida]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307051.jpg?version=19.7"
   },
   {
-    "name": "O Deus Sol Liderando Diretamente à Escuridão",
-    "desc": "Ative este card ao enviar 1 monstro \"O Dragão Alado de Rá\" da sua mão, Deck, ou com a face para cima no campo para o Cemitério.\r\nDurante sua Fase Principal, se este card foi ativado neste turno: você pode adicionar 1 monstro \"Deus Sol\" do seu Deck à sua mão.\r\nSe um ou mais monstros é destruído por batalha: seu controlados recebe dano igual ao ATK original deles, então se você tem \"O Dragão Alado de Rá\" no seu Cemitério, você ganha 1000 PV.\r\nVocê só pode usar cada um dos efeitos de \"O Deus Sol Liderando Diretamente à Escuridão\" uma vez por turno.",
+    "name": "O Deus do Sol Liderando Diretamente à Escuridão",
+    "desc": "Ative este card ao enviar 1 monstro \"O Dragão Alado de Rá\" da sua mão, Deck, ou com a face para cima no campo para o Cemitério.\r\nDurante sua Fase Principal, se este card foi ativado neste turno: você pode adicionar 1 monstro \"Deus do Sol\" do seu Deck à sua mão.\r\nSe um ou mais monstros é destruído por batalha: seu controlados recebe dano igual ao ATK original deles, então se você tem \"O Dragão Alado de Rá\" no seu Cemitério, você ganha 1000 PV.\r\nVocê só pode usar cada um dos efeitos de \"O Deus do Sol Liderando Diretamente à Escuridão\" uma vez por turno.",
     "overallString": "[Magia|Magia Contínuo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307052.jpg?version=19.7"
   },
   {
-    "name": "Dominação do Deus Sol",
-    "desc": "Se um monstro \"O Dragão Alado de Rá\" está no campo: aplique esses efeitos em sequência.\r\n● Invoque por Invocação-Especial 1 monstro de cada Cemitério para o seu campo.\r\n● Se \"O Dragão Alado de Rá\" está no campo, tome controle de todos os monstros que seu oponente controla.\r\nVocê pode banir este card do seu Cemitério e oferecer como Tributo 1 monstro \"O Dragão Alado de Rá\"; ganhe PV igual ao ATK que ele tinha em campo.\r\nVocê só pode usar cada um dos efeitos de \"Dominação do Deus Sol\" uma vez por turno.",
+    "name": "Dominação do Deus do Sol",
+    "desc": "Se um monstro \"O Dragão Alado de Rá\" está no campo: aplique esses efeitos em sequência.\r\n● Invoque por Invocação-Especial 1 monstro de cada Cemitério para o seu campo.\r\n● Se \"O Dragão Alado de Rá\" está no campo, tome controle de todos os monstros que seu oponente controla.\r\nVocê pode banir este card do seu Cemitério e oferecer como Tributo 1 monstro \"O Dragão Alado de Rá\"; ganhe PV igual ao ATK que ele tinha em campo.\r\nVocê só pode usar cada um dos efeitos de \"Dominação do Deus do Sol\" uma vez por turno.",
     "overallString": "[Armadilha]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307072.jpg?version=19.7"
   },
   {
-    "name": "O Protetor do Deus Sol - Deus Egípcio Limo",
-    "desc": "Invoque por Invocação-Especial este card em Posição de Defesa como um Monstro de Efeito (Aqua/ÁGUA/Nível 10/ATK 3000/DEF 3000) com os seguintes efeitos (este card ainda também é uma Armadilha).\r\n● Se este card é Invocado por Invocação-Especial: você pode adicionar 1 card \"Deus Sol\" do seu Deck à sua mão, então se você adicionou um monstro por este efeito durante o turno do seu oponente, você pode Invoca-lo por Invocação-Especial.\r\n● Não pode ser destruído por efeitos.\r\nVocê só pode ativar 1 \"O Protetor do Deus Sol - Deus Egípcio Limo\" por turno.",
+    "name": "O Protetor do Deus do Sol - Deus Egípcio Limo",
+    "desc": "Invoque por Invocação-Especial este card em Posição de Defesa como um Monstro de Efeito (Aqua/ÁGUA/Nível 10/ATK 3000/DEF 3000) com os seguintes efeitos (este card ainda também é uma Armadilha).\r\n● Se este card é Invocado por Invocação-Especial: você pode adicionar 1 card \"Deus do Sol\" do seu Deck à sua mão, então se você adicionou um monstro por este efeito durante o turno do seu oponente, você pode Invoca-lo por Invocação-Especial.\r\n● Não pode ser destruído por efeitos.\r\nVocê só pode ativar 1 \"O Protetor do Deus do Sol - Deus Egípcio Limo\" por turno.",
     "overallString": "[Armadilha|Magia Contínuo]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307073.jpg?version=19.7"
   },
