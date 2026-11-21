@@ -1,5 +1,137 @@
 [
   {
+    "name": "Aria de Alta Velocidad",
+    "desc": "Manda al Cementerio 1 carta de tu mano, y después activa 1 de estos efectos.\r\n● Selecciona 1 monstruo en el Cementerio de cualquier jugador; Invócalo de Modo Especial.\r\n● Invoca por Fusión 1 Monstruo de Fusión desde tu Deck Extra, usando monstruos de tu mano o Campo.\r\n● Invoca por Ritual 1 Monstruo de Ritual desde tu mano, Sacrificando monstruos de tu mano o Campo cuyos Niveles totales sean iguales o superen su Nivel.",
+    "overallString": "[Trampa]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275009.jpg?version=19.7"
+  },
+  {
+    "name": "Mahad, el Oráculo de Paladio Ilusión",
+    "desc": "Sólo puedes Invocar de Modo Especial una carta con este nombre una vez por turno mediante este efecto.\r\nSi tienes un monstruo de LUZ u OSCURIDAD en tu destierro: puedes Invocar esta carta de Modo Especial (desde tu mano).\r\nMientras haya un monstruo de OSCURIDAD en el Campo, el ATK de esta carta se duplica.\r\nSi esta carta destruye un monstruo en batalla mientras \"Mago Oscuro\" está en tu Campo o Cementerio: inflige daño a tu adversario igual al ATK original de ese monstruo destruido.",
+    "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/LUZ  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275003.jpg?version=19.7"
+  },
+  {
+    "name": "Araña Arcoíris",
+    "desc": "Si esta carta es Invocada de Modo Normal: puedes Invocar de Modo Especial 1 monstruo Insecto de Nivel 4 desde tu mano o Cementerio.\r\nPuedes desterrar esta carta en tu Cementerio, y después seleccionar 1 Monstruo Xyz Insecto que controles; desacopla 1 material de ese monstruo y, si lo haces, Invoca de Modo Especial desde tu Deck Extra, sobre ese monstruo, 1 monstruo \"Número\" que sea 1 Rango mayor que el de ese monstruo, tratándolo como una Invocación Xyz, y además no puedes Invocar de Modo Especial por el resto de este turno.\r\nSólo puedes usar estos efectos de \"Araña Arcoíris\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Insecto/LUZ  [★4] 1700/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278012.jpg?version=19.7"
+  },
+  {
+    "name": "Escarabajo Guardián",
+    "desc": "Si esta carta es Invocada de Modo Normal o volteada boca arriba: puedes seleccionar 1 monstruo en el Cementerio de tu adversario; Invócalo de Modo Especial a tu Campo en Posición de Defensa, pero sus efectos son negados, y además se convierte en un monstruo Insecto.\r\nSi esta carta es mandada al Cementerio y controlas un monstruo boca arriba que no sea Insecto: puedes desterrar 1 monstruo boca arriba en el Campo hasta la End Phase.\r\nSólo puedes usar estos efectos de \"Escarabajo Guardián\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Insecto/TIERRA  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278013.jpg?version=19.7"
+  },
+  {
+    "name": "Canibalismo Arácnido",
+    "desc": "Sacrifica 1 monstruo Insecto de tu mano o Campo; aumenta los Niveles de todos los monstruos Insecto que controles en este momento por el Nivel que tenía el monstruo Sacrificado, y después puedes añadir a tu mano 1 monstruo Insecto desde tu Deck con el mismo Nivel que un monstruo Insecto que controles.\r\nPuedes desterrar esta carta en tu Cementerio y Sacrificar 1 monstruo Insecto; roba 1 carta.\r\nSólo puedes usar estos efectos de \"Canibalismo Arácnido\" una vez por turno.",
+    "overallString": "[Mágica]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278014.jpg?version=19.7"
+  },
+  {
+    "name": "Puerta Cero del Vacío",
+    "desc": "Salta tu próxima Draw Phase.\r\nCuando un monstruo de tu adversario con ATK mayor o igual a tus LP declara un ataque directo y no tienes cartas en tu mano: puedes desterrar esta carta en tu Cementerio; niega el ataque y, si lo haces, Invoca de Modo Especial 1 monstruo \"Dragón Ogro del Vacío\" desde tu Deck Extra (esto se trata como una Invocación por Sincronía). Mientras esté boca arriba en la Zona de Monstruos, no recibes daño. Cuando deje el Campo, recibe 4000 de daño.",
+    "overallString": "[Trampa]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278011.jpg?version=19.7"
+  },
+  {
+    "name": "Prosperidad Blanca",
+    "desc": "Invoca de Modo Especial hasta 2 monstruos de AGUA de Nivel 4 o menor desde tu mano. Después de eso, si controlas 2 o más monstruos con el mismo nombre, puedes tratar 1 de ellos como un Cantante.\r\nSi uno o más monstruos de AGUA son Invocados de Modo Especial desde tu Cementerio mientras esta carta está en tu Cementerio, y tienes otro monstruo en tu Campo o Cementerio con el mismo nombre que 1 de ellos: puedes desterrar esta carta; roba 2 cartas.\r\nSólo puedes usar estos efectos de \"Prosperidad Blanca\" una vez por turno.",
+    "overallString": "[Mágica]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278015.jpg?version=19.7"
+  },
+  {
+    "name": "Pesadilla Blanca",
+    "desc": "Tus monstruos de AGUA con 3000 o más ATK pueden hacer hasta 2 ataques a monstruos durante cada Battle Phase.\r\nSólo puedes usar los siguientes efectos de \"Pesadilla Blanca\" una vez por turno.\r\nPuedes mandar cualquier número de monstruos de AGUA desde tu mano al Cementerio; este turno, los monstruos de AGUA que controles ganan 500 ATK por cada monstruo mandado al Cementerio.\r\nSi esta carta es mandada al Cementerio: puedes Invocar de Modo Especial 1 monstruo de AGUA desde tu Cementerio en Posición de Defensa, y si lo haces, se trata como un Cantante.",
+    "overallString": "[Mágica|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278016.jpg?version=19.7"
+  },
+  {
+    "name": "Lancero Inférnico",
+    "desc": "Gana 800 ATK mientras no tengas cartas en tu mano.\r\nSólo puedes usar los siguientes efectos de \"Lancero Inférnico\" una vez por turno.\r\nSi esta carta es Invocada de Modo Normal: puedes Invocar de Modo Especial 1 monstruo \"Inférnico\" con 0 ATK desde tu Deck, y además no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto Monstruos de Sincronía.\r\nPuedes desterrar esta carta y 1 otra carta \"Inférnico\" en tu Cementerio; manda al Cementerio 1 Mágica/Trampa \"Vacío\" desde tu Deck.",
+    "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★3] 1100/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278008.jpg?version=19.7"
+  },
+  {
+    "name": "Escudero Inférnico",
+    "desc": "Gana 800 DEF mientras no tengas cartas en tu mano.\r\nSólo puedes usar los siguientes efectos de \"Escudero Inférnico\" una vez por turno.\r\nSi esta carta es Invocada de Modo Normal: puedes Invocar de Modo Especial 1 monstruo \"Inférnico\" con 0 DEF desde tu mano o Cementerio, y además no puedes Invocar de Modo Especial desde el Deck Extra por el resto de este turno, excepto Monstruos de Sincronía.\r\nPuedes desterrar esta carta en tu Cementerio; añade a tu mano 1 monstruo \"Inférnico\" de Nivel 5 o mayor desde tu Deck o Cementerio.",
+    "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★3] 0/1100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278009.jpg?version=19.7"
+  },
+  {
+    "name": "Dragón Ogro del Vacío Cero",
+    "desc": "1 Cantante de OSCURIDAD + 2+ monstruos que no sean Cantantes\t\r\nNo puede ser destruida por efectos de cartas mientras tengas un monstruo de OSCURIDAD con 0 ATK o DEF en tu Cementerio.\r\nSólo puedes usar los siguientes efectos de \"Dragón Ogro del Vacío Cero\" una vez por turno.\r\nSi esta carta es Invocada por Sincronía: puedes mandar al Cementerio 1 monstruo \"Inférnico\" desde tu Deck.\r\n(Efecto Rápido): Cuando tu adversario activa una carta o efecto y no tienes cartas en tu mano: puedes negar la activación y, si lo haces, destruye esa carta y, si haces eso, esta carta gana 500 ATK.",
+    "overallString": "[Monstruo|Efecto|Sincronía] Dragón/OSCURIDAD  [★8] 3000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278010.jpg?version=19.7"
+  },
+  {
+    "name": "Línea Blanca",
+    "desc": "Si controlas un monstruo de AGUA: selecciona 1 monstruo en Posición de Ataque que controle tu adversario; cámbialo a Posición de Defensa y, si lo haces, niega sus efectos, y además este turno no recibes daño de efecto.\r\nSi controlas 2 o más monstruos con el mismo nombre y esta carta está en tu Cementerio: puedes Colocar esta carta, pero destiérrala cuando deje el Campo.\r\nSólo puedes usar estos efectos de \"Línea Blanca\" una vez por turno.",
+    "overallString": "[Trampa]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278017.jpg?version=19.7"
+  },
+  {
+    "name": "Doncella del Dragón Antiguo",
+    "desc": "1 Monstruo de Fusión, Sincronía, Xyz o Enlace + 1 monstruo Lanzador de Conjuros\t\r\n(Esta carta siempre se trata como una carta \"Invocado\" y \"Magistus\").\r\nSólo puedes usar estos efectos de \"Doncella del Dragón Antiguo\" una vez por turno.\r\nSi esta carta es Invocada por Fusión: puedes activar este efecto; hasta el final de este turno, todos los monstruos boca arriba que controle tu adversario pierden 1800 ATK, y además sus efectos son negados.\r\nPuedes desterrar esta carta en tu Cementerio, y después seleccionar 1 monstruo \"Magistus\" o \"Aleister\" en tu Cementerio; Invócalo de Modo Especial.",
+    "overallString": "[Monstruo|Efecto|Fusión|Cantante] Lanzador de Conjuros/LUZ  [★8] 2800/2800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278018.jpg?version=19.7"
+  },
+  {
+    "name": "Bau, el Perro Negro Bestia",
+    "desc": "Si esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 monstruo de OSCURIDAD de Nivel 7 o mayor con 2500 DEF, 1 \"Escalera al Inframundo\", o 1 \"Dominio del Gobernante Oscuro\" desde tu Deck.\r\nSi esta carta es Sacrificada o desterrada: puedes seleccionar 1 Trampa de Contraefecto en tu Cementerio; añádela a tu mano.\r\nSólo puedes usar estos efectos de \"Bau, el Perro Negro Bestia\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Bestia/OSCURIDAD  [★4] 1800/1200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278001.jpg?version=19.7"
+  },
+  {
+    "name": "Escalera al Inframundo",
+    "desc": "Cuando tu adversario activa un efecto de monstruo, o cuando su monstruo declara un ataque: puedes añadir a tu mano hasta 2 monstruos de OSCURIDAD de Nivel 7 o mayor con 2500 DEF desde tu Deck.\r\nSi un monstruo de OSCURIDAD boca arriba que controlas es destruido en batalla o por efecto de carta mientras esta carta está en tu Cementerio: puedes desterrar esta carta, y después seleccionar 1 monstruo boca arriba que controle tu adversario; niega sus efectos.\r\nSólo puedes usar estos efectos de \"Escalera al Inframundo\" una vez por turno.",
+    "overallString": "[Trampa]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278002.jpg?version=19.7"
+  },
+  {
+    "name": "Dominio del Gobernante Oscuro",
+    "desc": "Si no controlas monstruos, puedes activar esta carta el turno en que fue Colocada.\r\nCuando tu adversario activa una Carta Mágica/Trampa y tienes un monstruo de OSCURIDAD de Nivel 7 o mayor con 2500 DEF en tu Campo o Cementerio: niega la activación y, si lo haces, destruye esa carta, y después si activaste esta carta durante tu turno, puedes aplicar este efecto.\r\n● Este turno, ningún jugador puede activar Cartas Mágicas/Trampas.\r\nSólo puedes activar 1 \"Dominio del Gobernante Oscuro\" por turno.",
+    "overallString": "[Trampa|Contraefecto]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278003.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Thuban",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. Debe ser primero Invocado de Modo Especial (desde tu mano) desterrando 1 Mágica/Trampa \"Ciber\" desde tu Cementerio.\r\nSi esta carta es Invocada de Modo Especial: puedes añadir a tu mano 1 monstruo Máquina \"Ciber\" desde tu Deck, excepto \"Ciber Thuban\".\r\nSi esta carta es mandada al Cementerio: puedes activar este efecto; tu adversario no puede activar cartas o efectos cuando Invocas de Modo Especial uno o más monstruos Máquina de LUZ de Nivel 10 este turno.\r\nSólo puedes usar los siguientes efectos de \"Ciber Thuban\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Invocación Especial] Máquina/LUZ  [★6] 2400/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278004.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Struve",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. Debe ser primero Invocado de Modo Especial (desde tu mano) desterrando 1 Mágica/Trampa \"Ciber\" desde tu Cementerio.\r\nSi esta carta es Invocada de Modo Especial: puedes añadir a tu mano 1 de estas cartas desde tu Deck.\r\n● Un monstruo Máquina \"Ciber\", excepto un monstruo de Nivel 6.\r\n● Una Mágica/Trampa que mencione \"Dragón Cibernético\".\r\nSólo puedes usar este efecto de \"Ciber Struve\" una vez por turno, y además durante el turno en que activas este efecto no puedes activar los efectos de monstruos que no sean Máquina \"Ciber\".",
+    "overallString": "[Monstruo|Efecto|Invocación Especial] Máquina/LUZ  [★5] 2100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278005.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Alnair",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. Debe ser primero Invocado de Modo Especial (desde tu mano) si controlas un monstruo Máquina \"Ciber\".\r\nSi esta carta es Invocada de Modo Especial: puedes añadir a tu mano 1 \"Llamada de Emergencia Ciber\" desde tu Deck.\r\nSi esta carta es desterrada: puedes activar este efecto; durante la End Phase de este turno, baraja al Deck hasta 7 de tus monstruos Máquina \"Ciber\" desterrados.\r\nSólo puedes usar los siguientes efectos de \"Ciber Alnair\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Invocación Especial] Máquina/LUZ  [★4] 1000/1600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278006.jpg?version=19.7"
+  },
+  {
+    "name": "Ciber Alsafi",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. Debe ser primero Invocado de Modo Especial (desde tu mano) si controlas un monstruo Máquina \"Ciber\".\r\nSi esta carta es Invocada de Modo Especial: puedes añadir a tu mano 1 \"Nacido de Draconis\" desde tu Deck.\r\nSi esta carta es desterrada: puedes activar este efecto; hasta el final de tu turno, el próximo daño de batalla que tu monstruo Máquina de LUZ de Nivel 10 inflija a tu adversario se duplica.\r\nSólo puedes usar los siguientes efectos de \"Ciber Alsafi\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Invocación Especial] Máquina/LUZ  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278007.jpg?version=19.7"
+  },
+  {
+    "name": "Rogue, la Daga de Endimión",
+    "desc": "Sólo puedes usar estos efectos de \"Rogue, la Daga de Endimión\" una vez por turno.\r\nSi esta carta es Invocada de Modo Normal o Especial: puedes añadir a tu mano 1 carta que mencione \"Contador Mágico\" en su texto de efecto o 1 carta \"Endimión\" desde tu Deck, excepto \"Rogue, la Daga de Endimión\".\r\n(Efecto Rápido): Durante la Main Phase, si tienes \"Régulo, el Príncipe de Endimión\" en tu Campo o Cementerio: puedes seleccionar 1 carta que controle tu adversario; da el control de esta carta a tu adversario, y si lo haces, destruye esa carta.",
+    "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/FUEGO  [★3] 1500/200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278019.jpg?version=19.7"
+  },
+  {
+    "name": "Protector de la Gran Torre",
+    "desc": "Sólo puedes usar estos efectos de \"Protector de la Gran Torre\" una vez por turno.\r\nSi esta carta está en tu mano y tienes 3 o más Mágicas con nombres diferentes en tu Cementerio: puedes Invocar esta carta de Modo Especial.\r\nPuedes seleccionar 2 Mágicas en tu Cementerio, incluyendo una carta \"Libro de Magia\"; destierra 1 de ellas y, si lo haces, añade la otra a tu mano, y después si es una carta \"Libro de Magia\", puedes destruir 1 carta en el Campo.",
+    "overallString": "[Monstruo|Efecto] Lanzador de Conjuros/LUZ  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278020.jpg?version=19.7"
+  },
+  {
     "name": "Fantastruco Spunkie",
     "desc": "No puede ser Invocado de Modo Normal, a menos que controles un monstruo \"Fantastruco\".\r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo en el Campo: puedes Invocar esta carta de Modo Especial desde tu mano en Posición de Defensa boca abajo y, si lo haces, coloca 1 Mágica de Campo o Trampa Continua \"Fantastruco\" desde tu mano o Deck en tu Campo boca arriba, y después si tu adversario tiene 5 o más cartas en su Cementerio, puedes Invocar de Modo Especial 1 monstruo desde tu mano en Posición de Defensa boca abajo.\r\nUna vez por turno: puedes cambiar esta carta a Posición de Defensa boca abajo.",
     "overallString": "[Monstruo|Efecto] Demonio/OSCURIDAD  [★1] 300/200",
@@ -319,7 +451,7 @@
   },
   {
     "name": "Hermanas de la Dama Arpía - Triángulo de Éxtasis",
-    "desc": "3 monstruos \"Dama Arpía\"\r\nDebe ser primero Invocada por Fusión. El nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o en el Cementerio. Gana 500 ATK por cada \"Dama Arpía\" en tu Cementerio, y además tu adversario no puede seleccionar esta carta con efectos de monstruos que no sean de VIENTO. Una vez por turno (Efecto Rápido): puedes destruir todas las Mágicas/Trampas que controle tu adversario.",
+    "desc": "3 monstruos \"Dama Arpía\"\t\r\nDebe ser primero Invocada por Fusión. El nombre de esta carta se convierte en \"Dama Arpía\" mientras está en el Campo o en el Cementerio. Gana 500 ATK por cada \"Dama Arpía\" en tu Cementerio, y además tu adversario no puede seleccionar esta carta con efectos de monstruos que no sean de VIENTO. Una vez por turno (Efecto Rápido): puedes destruir todas las Mágicas/Trampas que controle tu adversario.",
     "overallString": "[Monstruo|Efecto|Fusión] Bestia Alada/VIENTO  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
@@ -745,7 +877,7 @@
   },
   {
     "name": "Diabellze, Heredera del Bosque del Cuervo Invernal",
-    "desc": "1 Monstruo de Fusión o Sincronía + 1 monstruo Lanzador de Conjuros o Ilusión\r\nEsta carta Invocada por Fusión boca arriba no puede ser usada como Material de Fusión. Gana 700 ATK/DEF por cada Mágica/Trampa en el Campo. Si esta carta es Invocada de Modo Especial: puedes poner cualquier número de monstruos que controles boca arriba en las Zonas de Magia y Trampas de su dueño como Mágicas Continuas, y después puedes devolver a la mano cartas en el Campo, hasta el número de Mágicas/Trampas que controles. Sólo puedes usar este efecto de \"Diabellze, Heredera del Bosque del Cuervo Invernal\" una vez por turno.",
+    "desc": "1 Monstruo de Fusión o Sincronía + 1 monstruo Lanzador de Conjuros o Ilusión\t\r\nEsta carta Invocada por Fusión boca arriba no puede ser usada como Material de Fusión. Gana 700 ATK/DEF por cada Mágica/Trampa en el Campo. Si esta carta es Invocada de Modo Especial: puedes poner cualquier número de monstruos que controles boca arriba en las Zonas de Magia y Trampas de su dueño como Mágicas Continuas, y después puedes devolver a la mano cartas en el Campo, hasta el número de Mágicas/Trampas que controles. Sólo puedes usar este efecto de \"Diabellze, Heredera del Bosque del Cuervo Invernal\" una vez por turno.",
     "overallString": "[Monstruo|Efecto|Fusión] Ilusión/LUZ  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
@@ -973,7 +1105,7 @@
   },
   {
     "name": "El Dragón Alado de Ra, Dios Solar de Oscuridad",
-    "desc": "\"El Dragón Alado de Ra\" + 3 monstruos \"Dios Solar\"\r\nNo es afectado por efectos de otras cartas. Una vez por turno, durante la Main Phase (Efecto Rápido): puedes descartar cualquier número de cartas \"Dios Solar\", y después elige ese número de Zonas de Monstruos Principales usadas de tu adversario; tu adversario debe mandar al Cementerio los monstruos en esas zonas. Cuando es declarado un ataque que involucre esta carta: puedes pagar LP hasta que sólo te quede 1; esta carta gana ATK/DEF iguales a los LP pagados y el ATK total de los monstruos \"Dios Solar\" en tu Cementerio.",
+    "desc": "\"El Dragón Alado de Ra\" + 3 monstruos \"Dios Solar\"\t\r\nNo es afectado por efectos de otras cartas. Una vez por turno, durante la Main Phase (Efecto Rápido): puedes descartar cualquier número de cartas \"Dios Solar\", y después elige ese número de Zonas de Monstruos Principales usadas de tu adversario; tu adversario debe mandar al Cementerio los monstruos en esas zonas. Cuando es declarado un ataque que involucre esta carta: puedes pagar LP hasta que sólo te quede 1; esta carta gana ATK/DEF iguales a los LP pagados y el ATK total de los monstruos \"Dios Solar\" en tu Cementerio.",
     "overallString": "[Monstruo|Efecto|Fusión] Bestia Divina/DIVINO  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },
