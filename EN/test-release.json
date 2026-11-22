@@ -109,13 +109,13 @@
   },
   {
     "name": "Cyber Alnair",
-    "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) if you control a Machine \"Cyber\" monster. If this card is Special Summoned: You can add 1 \"Cyber Emergency\" from your Deck to your hand. If this card is banished: You can activate this effect; during the End Phase of this turn, shuffle up to 7 of your banished Machine \"Cyber\" monsters into the Deck. You can only use each effect of \"Cyber Alnair\" once per turn.",
+    "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) while you control a Machine \"Cyber\" monster. If this card is Special Summoned: You can add 1 \"Cyber Emergency\" from your Deck to your hand. If this card is banished: You can activate this effect; during the End Phase of this turn, shuffle up to 7 of your banished Machine \"Cyber\" monsters into the Deck. You can only use each effect of \"Cyber Alnair\" once per turn.",
     "overallString": "[Monster|Effect|Special Summon] Machine/Light  [★4] 1000/1600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278006.jpg?version=19.7"
   },
   {
     "name": "Cyber Alsafi",
-    "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) if you control a Machine \"Cyber\" monster. If this card is Special Summoned: You can add 1 \"Born from Draconis\" from your Deck to your hand. If this card is banished: You can activate this effect; until the end of your turn, the next battle damage your Level 10 LIGHT Machine monster inflicts to your opponent is doubled. You can only use each effect of \"Cyber Alsafi\" once per turn.",
+    "desc": "Cannot be Normal Summoned/Set. Must first be Special Summoned (from your hand) while you control a Machine \"Cyber\" monster. If this card is Special Summoned: You can add 1 \"Born from Draconis\" from your Deck to your hand. If this card is banished: You can activate this effect; until the end of your turn, the next battle damage your Level 10 LIGHT Machine monster inflicts to your opponent is doubled. You can only use each effect of \"Cyber Alsafi\" once per turn.",
     "overallString": "[Monster|Effect|Special Summon] Machine/Light  [★4] 0/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278007.jpg?version=19.7"
   },
@@ -403,7 +403,7 @@
   },
   {
     "name": "Power of the Duelist",
-    "desc": "Declare 2, 3, or 4 Attributes; apply this effect based on the number declared, also during the End Phase of this turn, you must send all cards you control to the GY, unless you have activated effects of monsters of all declared Attributes in your field and/or GY this turn.\n● 2: Target 1 monster on the field; banish it.\n● 3: Draw 2 cards, then discard 1 card.\n● 4: Negate the effects of 2 face-up cards on the field.\nYou can only activate 1 \"Power of the Duelist\" per turn.",
+    "desc": "Declare 2, 3, or 4 Attributes; apply the appropriate effects.\n● 2: Target 1 monster on the field; banish it.\n● 3: Draw 2 cards, then discard 1 card.\n● 4: Negate the effects of 2 face-up cards on the field.\nYou can only activate 1 \"Power of the Duelist\" per turn. During the End Phase of this turn, check all monster effects you activated on the field or in the GY this turn. Unless they included monsters from every Attribute you declared when activating this card, you must send all cards you control to the GY.",
     "overallString": "[Spell|Quick-Play]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307067.jpg?version=19.7"
   },
@@ -877,7 +877,7 @@
   },
   {
     "name": "Diabellze, Heiress of the Winter Raven's Forest",
-    "desc": "1 Fusion or Synchro Monster + 1 Spellcaster or Illusion monster\nIf this card is Special Summoned: You can place any number of monsters you control face-up in their owners' Spell & Trap Zones as Continuous Spells, then you can return cards on the field to the hand up to the number of Spells/Traps you control. You can only use this effect of \"Diabellze, Heiress of the Winter Raven's Forest\" once per turn. Gains 700 ATK/DEF for each Spell/Trap on the field. This face-up Fusion Summoned card cannot be used as Fusion Material.",
+    "desc": "1 Fusion or Synchro Monster + 1 Spellcaster or Illusion monster\nThis face-up Fusion Summoned card cannot be used as Fusion Material. Gains 700 ATK/DEF for each Spell/Trap on the field. If this card is Special Summoned: You can place any number of monsters you control face-up in their owners' Spell & Trap Zones as Continuous Spells, then you can return cards from the field to the hand, up to the number of Spells/Traps you control. You can only use this effect of \"Diabellze, Heiress of the Winter Raven's Forest\" once per turn.",
     "overallString": "[Monster|Effect|Fusion] Illusion/Light  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
@@ -925,7 +925,7 @@
   },
   {
     "name": "King of Beasts, Risen from the Valley of Flames",
-    "desc": "3 FIRE Effect Monsters\n(This card is always treated as \"Salamangreat Heatleo\".)\nFace-up monsters on the field become FIRE. During the Main Phase, if this card was Link Summoned using \"Salamangreat Heatleo\" (Quick Effect): You can target 1 card your opponent controls; shuffle it into the Deck, then you can make the ATK of 1 FIRE monster your opponent controls become the ATK of 1 monster in your GY. You can only use this effect of \"King of Beasts, Risen from the Valley of Flames\" once per turn.",
+    "desc": "3 FIRE Effect Monsters\n(This card is always treated as \"Salamangreat Heatleo\".)\nAll face-up monsters on the field become FIRE. During the Main Phase, if you control this card that was Link Summoned using \"Salamangreat Heatleo\" as material (Quick Effect): You can target 1 card your opponent controls; shuffle it into the Deck, then you can make the ATK of 1 FIRE monster your opponent controls become equal to 1 monster in your GY. You can only use this effect of \"King of Beasts, Risen from the Valley of Flames\" once per turn.",
     "overallString": "[Monster|Effect|Link] Cyberse/Fire  [LINK-3] 2300/-  [↑][↙][↘]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307048.jpg?version=19.7"
   },
@@ -1081,13 +1081,13 @@
   },
   {
     "name": "Helpoemer, Chanter of the Sun God",
-    "desc": "You can discard 1 other card; Special Summon this card from your hand. If this card is Special Summoned: You can add 1 \"Sun God\" card from your Deck to your hand, except \"Helpoemer, Chanter of the Sun God\", then if your opponent's LP are at least 2000 higher than yours, you can discard 1 random card from their hand. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from your GY to your hand. You can only use each effect of \"Helpoemer, Chanter of the Sun God\" once per turn.",
+    "desc": "If this card is in your hand: You can discard 1 other card; Special Summon this card. If this card is Special Summoned: You can add 1 \"Sun God\" card from your Deck to your hand, except \"Helpoemer, Chanter of the Sun God\", then if your opponent's LP are at least 2000 higher than yours, you can discard 1 random card from their hand. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from the GY to your hand. You can only use each effect of \"Helpoemer, Chanter of the Sun God\" once per turn.",
     "overallString": "[Monster|Effect] Fiend/Dark  [★5] 2000/1400",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307001.jpg?version=19.7"
   },
   {
     "name": "Makyura, Destructor of the Sun God",
-    "desc": "If this card is Normal or Special Summoned, or sent from the hand or field to the GY: You can Set 1 \"Sun God\" Spell/Trap from your hand or Deck, and if you Set a Trap or Quick-Play Spell, it can be activated this turn. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from your GY to your hand. You can only use each effect of \"Makyura, Destructor of the Sun God\" once per turn.",
+    "desc": "If this card is Normal or Special Summoned, or sent from the hand or field to the GY: You can Set 1 \"Sun God\" Spell/Trap from your hand or Deck, and if you Set a Trap or Quick-Play Spell, it can be activated this turn. During the End Phase, if \"The Immortal Sun God\" was sent to your GY this turn: You can add this card from the GY to your hand. You can only use each effect of \"Makyura, Destructor of the Sun God\" once per turn.",
     "overallString": "[Monster|Effect] Warrior/Dark  [★4] 1600/1200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307002.jpg?version=19.7"
   },
@@ -1111,7 +1111,7 @@
   },
   {
     "name": "Lava Golem, Steelcage of the Sun God",
-    "desc": "1 \"Sun God\" monster you control + 2 face-up monsters on the field\nCannot be used as Fusion Material. Must be either Fusion Summoned, or Special Summoned (from your Extra Deck) to your opponent's Main Monster Zone by sending the above cards from either field to the GY, but if you Special Summon this card with the second method, you can only Special Summon once for the rest of this turn. You can only Special Summon \"Lava Golem, Steelcage of the Sun God\" once per turn this way, no matter which method you use. Once per turn, during your Standby Phase: Take 1000 damage.",
+    "desc": "1 \"Sun God\" monster you control + 2 face-up monsters on the field\nCannot be used as Fusion Material. Must be either Special Summoned (from your Extra Deck, to your opponent's Main Monster Zone, by sending the above cards from either field to the GY, after which you can only Special Summon once more the rest of this turn), or Fusion Summoned. You can only Special Summon \"Lava Golem, Steelcage of the Sun God\" once per turn this way, no matter which method you use. Once per turn, during your Standby Phase: Take 1000 damage.",
     "overallString": "[Monster|Effect|Fusion] Fiend/Fire  [★8] 3000/2500",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307031.jpg?version=19.7"
   },
