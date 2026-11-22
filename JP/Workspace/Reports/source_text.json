@@ -1,8 +1,8 @@
 {
   "language": "jp",
   "mode": "fill",
-  "candidates": 29,
-  "matched": 27,
+  "candidates": 7,
+  "matched": 5,
   "unmatched_ids": [
     100265003,
     100277001
@@ -25,94 +25,6 @@
     "100270002": {
       "set_code": "TFGX-JP002",
       "source": "https://ocg-card.com/list/tfgx/"
-    },
-    "100275003": {
-      "set_code": "MVB1-JP003",
-      "source": "https://ocg-card.com/list/mvb1/"
-    },
-    "100275009": {
-      "set_code": "MVB1-JP009",
-      "source": "https://ocg-card.com/list/mvb1/"
-    },
-    "100278001": {
-      "set_code": "27PP-JP001",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278002": {
-      "set_code": "27PP-JP002",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278003": {
-      "set_code": "27PP-JP003",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278004": {
-      "set_code": "27PP-JP004",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278005": {
-      "set_code": "27PP-JP005",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278006": {
-      "set_code": "27PP-JP006",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278007": {
-      "set_code": "27PP-JP007",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278008": {
-      "set_code": "27PP-JP008",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278009": {
-      "set_code": "27PP-JP009",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278010": {
-      "set_code": "27PP-JP010",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278011": {
-      "set_code": "27PP-JP011",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278012": {
-      "set_code": "27PP-JP012",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278013": {
-      "set_code": "27PP-JP013",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278014": {
-      "set_code": "27PP-JP014",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278015": {
-      "set_code": "27PP-JP015",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278016": {
-      "set_code": "27PP-JP016",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278017": {
-      "set_code": "27PP-JP017",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278018": {
-      "set_code": "27PP-JP018",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278019": {
-      "set_code": "27PP-JP019",
-      "source": "https://ocg-card.com/list/27pp/"
-    },
-    "100278020": {
-      "set_code": "27PP-JP020",
-      "source": "https://ocg-card.com/list/27pp/"
     },
     "101307039": {
       "set_code": "IMPH-JP039",
