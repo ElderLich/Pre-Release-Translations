@@ -2,30 +2,9 @@
   "language": "en",
   "mode": "refresh",
   "candidates": 201,
-  "matched": 199,
-  "unmatched_ids": [
-    100275003,
-    100275009
-  ],
-  "unresolved": [
-    {
-      "id": 100275003,
-      "name": "幻想之守护神官 马哈德",
-      "set_code": "MVB1-JP003",
-      "reason": "Localized fields are missing",
-      "source": "https://yugipedia.com/wiki/Illusion_Palladium_Oracle_Mahad",
-      "missing_fields": [
-        "text"
-      ]
-    },
-    {
-      "id": 100275009,
-      "name": "高速咏唱",
-      "set_code": "MVB1-JP009",
-      "reason": "Printed set code does not match source page",
-      "source": "https://yugipedia.com/wiki/High_Speed_Aria"
-    }
-  ],
+  "matched": 201,
+  "unmatched_ids": [],
+  "unresolved": [],
   "matches": {
     "100200298": {
       "set_code": "VJMP-JP298",
@@ -279,6 +258,10 @@
       "set_code": "MVB1-JP002",
       "source": "https://yugipedia.com/wiki/Gandora-X_the_Blackmetal_Rampaging_Dragon"
     },
+    "100275003": {
+      "set_code": "MVB1-JP003",
+      "source": "https://yugipedia.com/wiki/Illusion_Palladium_Oracle_Mahad"
+    },
     "100275005": {
       "set_code": "MVB1-JP005",
       "source": "https://yugipedia.com/wiki/Time_Chain"
@@ -294,6 +277,10 @@
     "100275008": {
       "set_code": "MVB1-JP008",
       "source": "https://yugipedia.com/wiki/Warrior%27s_Devotion"
+    },
+    "100275009": {
+      "set_code": "MVB1-JP009",
+      "source": "https://yugipedia.com/wiki/High_Speed_Aria"
     },
     "100276001": {
       "set_code": "27PR-JP001",
