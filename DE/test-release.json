@@ -1,5 +1,23 @@
 [
   {
+    "name": "Nahar-Dex, Lenker der sieben Schwerter",
+    "desc": "Falls du ein Monster kontrollierst und die gemeinsame Stufe der Effektmonster, die du kontrollierst, 7 oder niedriger ist: Du kannst diese Karte als Spezialbeschwörung von deiner Hand oder deinem Friedhof beschwören, aber verbanne sie, wenn sie das Spielfeld verlässt. Falls diese Karte als Normal- oder Spezialbeschwörung von der Hand beschworen wird: Du kannst so viele andere Monster auf dem Spielfeld, die eine Stufe haben, wie möglich zerstören und falls du dies tust, erhält diese Karte bis zum Ende dieses Spielzugs für jede zerstörte Karte 700 ATK. Du kannst jeden Effekt von „Nahar-Dex, Lenker der sieben Schwerter“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt] Drache/Finsternis  [★7] 2000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307081.jpg?version=19.7"
+  },
+  {
+    "name": "Weißhorn-Zerstörerdrache",
+    "desc": "Kann nicht als Normalbeschwörung beschworen/gesetzt werden. Muss als Spezialbeschwörung (von deiner Hand) beschworen werden, solange die gemeinsamen ATK deiner verbannten Monster 4000 oder höher sind oder du 5 oder mehr verdeckte verbannte Karten hast. Du kannst „Weißhorn-Zerstörerdrache“ auf diese Art nur einmal pro Spielzug als Spezialbeschwörung beschwören. Wenn dein Gegner einen Monstereffekt oder eine Zauberkarte oder einen Zaubereffekt auf dem Spielfeld aktiviert (Schnelleffekt): Du kannst 1 Karte desselben Typs (Monster oder Zauber) von deinem Friedhof verbannen; annulliere die Aktivierung, dann erhält diese Karte 600 ATK. Du kannst diesen Effekt von „Weißhorn-Zerstörerdrache“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Monster|Effekt|Spezialbeschwörung] Drache/Finsternis  [★10] 4000/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308022.jpg?version=19.7"
+  },
+  {
+    "name": "Kubischer Vajra",
+    "desc": "Füge deiner Hand 1 Karte von deinem Deck hinzu, die einen Effekt hat, der Kubisch-Zählmarken legt, dann, falls du ein Monster hinzugefügt hast, füge deinem Gegner 800 Schaden zu. Du kannst diese Karte von deinem Friedhof verbannen; beschwöre 1 „Vijam der kubische Samen“ als Spezialbeschwörung von deinem Friedhof, dann kannst du 1 „Kubisch“-Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck beschwören, indem du Monster von deiner Hand oder deiner Spielfeldseite als Material verwendest. Du kannst jeden Effekt von „Kubischer Vajra“ nur einmal pro Spielzug verwenden.",
+    "overallString": "[Zauber]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275004.jpg?version=19.7"
+  },
+  {
     "name": "Hochgeschwindigkeits-Arie",
     "desc": "Aktiviere 1 dieser Effekte, indem du 1 Karte von deiner Hand auf den Friedhof legst;\n● Wähle 1 Monster in einem beliebigen Friedhof; beschwöre es als Spezialbeschwörung auf deine Spielfeldseite.\n● Beschwöre 1 Fusionsmonster als Fusionsbeschwörung von deinem Extra Deck, indem du Monster von deiner Hand oder deiner Spielfeldseite als Material verwendest.\n● Beschwöre 1 Ritualmonster als Ritualbeschwörung von deiner Hand, indem du Monster von deiner Hand oder deiner Spielfeldseite als Tribut anbietest, deren gemeinsame Stufe größer oder gleich seiner Stufe ist.",
     "overallString": "[Falle]",
@@ -313,7 +331,7 @@
   },
   {
     "name": "B.L.A.C.K. Parfait",
-    "desc": "Während deiner Main Phase: Du kannst deiner Hand 1 „Magier-Mädchen“-Monster von deinem Deck hinzufügen. Du kannst diesen Effekt von „B.L.A.C.K. Parfait“ nur einmal pro Spielzug verwenden. Falls dein Gegner ein oder mehr Monster als Normal- oder Spezialbeschwörung beschwört: Du kannst 1 „Magier-Mädchen“-Monster mit einer anderen Eigenschaft als die Monster, die du kontrollierst, als Spezialbeschwörung von deiner Hand beschwören, dann, falls du „Dunkles Magier-Mädchen“ kontrollierst, kannst du bis zum Ende dieses Spielzugs die Effekte von 1 offenen Karte auf dem Spielfeld annullieren.",
+    "desc": "Während deiner Main Phase: Du kannst deiner Hand 1 „Magier-Mädchen“-Monster von deinem Deck hinzufügen. Du kannst diesen Effekt von „B.L.A.C.K. Parfait“ nur einmal pro Spielzug verwenden. Falls dein Gegner ein oder mehr Monster als Normal- oder Spezialbeschwörung beschwört: Du kannst 1 „Magier-Mädchen“-Monster mit einer anderen Eigenschaft als die Monster, die du kontrollierst, als Spezialbeschwörung von deiner Hand beschwören, dann, falls du „Dunkles Magier-Mädchen“ kontrollierst, kannst du bis zum Ende dieses Spielzugs die Effekte von 1 anderen offenen Karte auf dem Spielfeld annullieren.",
     "overallString": "[Zauber|Permanente]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100200299.jpg?version=19.7"
   },
