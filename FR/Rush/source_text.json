@@ -1,6 +1,32 @@
 {
   "language": "fr",
   "matches": {},
-  "requested_ids": [],
-  "unresolved": []
+  "requested_ids": [
+    120313001,
+    120313019,
+    120313021,
+    120313067
+  ],
+  "unresolved": [
+    {
+      "id": 120313001,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
+    },
+    {
+      "id": 120313019,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
+    },
+    {
+      "id": 120313021,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
+    },
+    {
+      "id": 120313067,
+      "reason": "No upstream sets.md range or reviewed mapping",
+      "set_code": null
+    }
+  ]
 }

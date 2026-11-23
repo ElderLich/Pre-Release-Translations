@@ -1,9 +1,58 @@
 {
-  "active_cards": 55,
+  "active_cards": 59,
   "artwork_files": 55,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120313001,
+    120313019,
+    120313021,
+    120313067
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120313001,
+      "name": "元素英雄 棱镜侠"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str6",
+        "str7"
+      ],
+      "id": 120313019,
+      "name": "吸血鬼领主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str3"
+      ],
+      "id": 120313021,
+      "name": "吸血鬼创世主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120313067,
+      "name": "吸血鬼女郎"
+    }
+  ],
   "published_source_fields": {
     "120109070": {
       "desc": "b156a38d8a9d836653d6a6abf5763a9c69eddbba761f2ae4b775d6641501e744",
@@ -1021,8 +1070,8 @@
     "120312001": "04bc0785f8e17b8e8d9b6a07830b99a25c78cb2d6e82d0c0a2c9bc4f3bad2e12",
     "120312002": "c0dda8cc44f0b730fbf1e0bf45c1c00dee6d42528a7b7c13edcf33a34e5fe7e4"
   },
-  "script_files": 95,
-  "source_cards": 55,
+  "script_files": 100,
+  "source_cards": 59,
   "text_sha256": {
     "120109070": "2b1a79188063659fc2dfdf5c8a30fe5fae06862ba70d60bcdb9bc65bd6dd5840",
     "120311001": "aa0fd88cc689096a0c33d0c38d3b7aeea4853856a92a2ddabd6344d4705297f2",
@@ -1078,6 +1127,10 @@
     "120311063": "9b84efb5e1b377c1508281813bec423639d2c8f13157233e25d79ead1b787f4e",
     "120311064": "6581f73e9ccbc4df3053b3167f010731d5ba23057b61da2ac22a9151de005074",
     "120312001": "04bc0785f8e17b8e8d9b6a07830b99a25c78cb2d6e82d0c0a2c9bc4f3bad2e12",
-    "120312002": "c0dda8cc44f0b730fbf1e0bf45c1c00dee6d42528a7b7c13edcf33a34e5fe7e4"
+    "120312002": "c0dda8cc44f0b730fbf1e0bf45c1c00dee6d42528a7b7c13edcf33a34e5fe7e4",
+    "120313001": "792e097d216465fff3ba11673d457b0580d8c90efe0187982048895ac3afcd7b",
+    "120313019": "12a1aaff977a43a1e4ac1a25798a69f88cfe76cd7524723848c2f0c28211571e",
+    "120313021": "b88d75e9e04c39a6c3af0e9dc47eca354b7350ce00b91deb52774bf809762717",
+    "120313067": "396a80345b1e1e147936f8e6804fdfeaf3eb3b7de8b2841eb7e970caa1244115"
   }
 }

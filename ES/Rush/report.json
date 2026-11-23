@@ -1,9 +1,58 @@
 {
-  "active_cards": 55,
+  "active_cards": 59,
   "artwork_files": 55,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120313001,
+    120313019,
+    120313021,
+    120313067
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120313001,
+      "name": "元素英雄 棱镜侠"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str6",
+        "str7"
+      ],
+      "id": 120313019,
+      "name": "吸血鬼领主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str3"
+      ],
+      "id": 120313021,
+      "name": "吸血鬼创世主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120313067,
+      "name": "吸血鬼女郎"
+    }
+  ],
   "published_source_fields": {
     "120109070": {
       "desc": "b156a38d8a9d836653d6a6abf5763a9c69eddbba761f2ae4b775d6641501e744",
@@ -1022,8 +1071,8 @@
     "120312001": "77cd68f2aa5114b6ff0e430e5bbc2003c868bda4777a87009a20b6dc0ab50bd3",
     "120312002": "bbf98d4fed7abc93f8cea8b006462d89583f6ac7d5d7af5d02740e9174deb069"
   },
-  "script_files": 95,
-  "source_cards": 55,
+  "script_files": 100,
+  "source_cards": 59,
   "text_sha256": {
     "120109070": "f45d7f5822904bd1aaaea20ef5ad5180b92faf6de20f12e76506d71d71cd6c8c",
     "120311001": "6e41f7cae2e588ba2f0e5996ada4dcbd3dfab9bccb0fc8c485bbdc8d17b5b2e1",
@@ -1079,6 +1128,10 @@
     "120311063": "6ecbbe974567e0bd9b9239822738f579c3e6d8520b52f1c110e177ffcf1c995a",
     "120311064": "0c200bf382e74437848f52860c2fbd9bcbd9bcba434ff90f76743b505537f435",
     "120312001": "77cd68f2aa5114b6ff0e430e5bbc2003c868bda4777a87009a20b6dc0ab50bd3",
-    "120312002": "bbf98d4fed7abc93f8cea8b006462d89583f6ac7d5d7af5d02740e9174deb069"
+    "120312002": "bbf98d4fed7abc93f8cea8b006462d89583f6ac7d5d7af5d02740e9174deb069",
+    "120313001": "e639454b68afcbbdc76a49badf8be1b2916b69ce027eda650b211994f35b358b",
+    "120313019": "34f66d2f8349552afc7a8ef860b858c644dc7723ab5abd10c293440d15984430",
+    "120313021": "ab3c739c6132f227b89389c7768d31bdd6c5067fb1b20ccf0fb9c101cda88fd7",
+    "120313067": "98e38c3a3f954c23d36b6169f53770102db495c880635ba3a62a9757be41a014"
   }
 }

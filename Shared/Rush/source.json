@@ -1,14 +1,5 @@
 {
   "built_locales": [
-    "DE",
-    "EN",
-    "ES",
-    "FR",
-    "IT",
-    "JP",
-    "KR",
-    "PT",
-    "TH",
     "ZH-CN",
     "ZH-TW"
   ],
@@ -67,14 +58,28 @@
     120311063,
     120311064,
     120312001,
-    120312002
+    120312002,
+    120313001,
+    120313019,
+    120313021,
+    120313067
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "d432ef2c9672080674943d3ce15d9c307adf2e0cb07b0a4407615bde5b1b4ecd",
-  "patch_sha256": "60a1cae5fd5765b2ae183cf85f40750295c778fce86cc6f3760fec6ea57025e9",
-  "pending_locales": {},
-  "source_fingerprint": "fb121b16f58d28399cc6ecb8501a4e86b4cbe6e1fb8a0414e0c118f8c46706e5",
-  "source_revision": "630429b5c959182bbdfe0b37d97efd0923ac3d58",
+  "local_inputs_sha256": "9325fafe7d28b6730259d8b98879e8422077025e4fc3d90b1de082b99b74fd29",
+  "patch_sha256": "c1ccff305b5cf25d7c12cb3cfe84423422b4e2c8f25469a87aa1750a11e83b68",
+  "pending_locales": {
+    "DE": 4,
+    "EN": 4,
+    "ES": 4,
+    "FR": 4,
+    "IT": 4,
+    "JP": 4,
+    "KR": 4,
+    "PT": 4,
+    "TH": 4
+  },
+  "source_fingerprint": "b796bc78eabe361e4269a5f823861530f0e384e16166e0e9db2f48b899a41828",
+  "source_revision": "0cdb203c5a7af0cf964d57ad15ed9ce6e15a2d9e",
   "text_sha256": {
     "120109070": "28ac4ea8040b378cd6a48e362752032b1646d5381ccc5e90e9be14487b3a6d43",
     "120311001": "b9ae9ba1042b3ebf3424ece1bd0d033427b6b69742918c8d05b00c75573db3c0",
@@ -130,7 +135,11 @@
     "120311063": "4b365b3394ceebd859546392dac6790872e5aeb7dcf7ceb4912ae26d98c641c1",
     "120311064": "b4369a02a7a66a81fbcd514c6ee24609871e2aa1ccdf686dcb5135d347a4051a",
     "120312001": "e00478c5b4f9c137ed8385ca02c9c5d261d7ad402d25c016b6578f762f05c180",
-    "120312002": "9b8cecd4dee663c607b963a6aae846351e5603545d016625e65646c4f85bae83"
+    "120312002": "9b8cecd4dee663c607b963a6aae846351e5603545d016625e65646c4f85bae83",
+    "120313001": "047190206da59e2875e5e9934c7d048cd2d331828ae13c32709b4e8a3fb2b9fb",
+    "120313019": "c833f89b8f95b535a95422034ed16080296d003d128d076adcbe0a4582b4c563",
+    "120313021": "ddfd67bb51751cbf33d65086c069f9fbf42cb4a67af2d05f09dedc911713eb5c",
+    "120313067": "eebc23e053b31c8d22a39fdab81632d367f2f2cdf914abb3601b73d066442351"
   },
   "translations_revision": "02019d6b686b348dff1a25d9cec375af8c08ed58",
   "version": 2

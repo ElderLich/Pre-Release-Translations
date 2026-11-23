@@ -1,9 +1,54 @@
 {
-  "active_cards": 55,
+  "active_cards": 59,
   "artwork_files": 55,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120313001,
+    120313019,
+    120313021,
+    120313067
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc"
+      ],
+      "id": 120313001,
+      "name": "元素英雄 棱镜侠"
+    },
+    {
+      "fields": [
+        "desc",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str6",
+        "str7"
+      ],
+      "id": 120313019,
+      "name": "吸血鬼领主"
+    },
+    {
+      "fields": [
+        "desc",
+        "str1",
+        "str3"
+      ],
+      "id": 120313021,
+      "name": "吸血鬼创世主"
+    },
+    {
+      "fields": [
+        "desc",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120313067,
+      "name": "吸血鬼女郎"
+    }
+  ],
   "published_source_fields": {
     "120109070": {
       "desc": "b156a38d8a9d836653d6a6abf5763a9c69eddbba761f2ae4b775d6641501e744",
@@ -1021,8 +1066,8 @@
     "120312001": "50199c92a3bb45982e6560a45357f1143fa5b280c574941dde3aed71a1bf2c4d",
     "120312002": "34797c9c877334026534a25b3e02400f6cb10c07ee490f4b1d82275bb21f5c08"
   },
-  "script_files": 95,
-  "source_cards": 55,
+  "script_files": 100,
+  "source_cards": 59,
   "text_sha256": {
     "120109070": "8bf61838d3d2ce4748ac646493e508600895a37243e5dfb6081af937617f4eff",
     "120311001": "75646bccb33fb0f21e603dd8285e9ed1209193fa210b08b673aa53cf68c96ff2",
@@ -1078,6 +1123,10 @@
     "120311063": "552482b7c33845241a178822ab29c030b146979f20b69927f9d5982a26dc8f9f",
     "120311064": "bd853406cc13f74de9582cd36dafd1c4d24d92d07143911e5b9129e4e321f4ed",
     "120312001": "50199c92a3bb45982e6560a45357f1143fa5b280c574941dde3aed71a1bf2c4d",
-    "120312002": "34797c9c877334026534a25b3e02400f6cb10c07ee490f4b1d82275bb21f5c08"
+    "120312002": "34797c9c877334026534a25b3e02400f6cb10c07ee490f4b1d82275bb21f5c08",
+    "120313001": "8a6d387a787dbe8ad25501bcdc07dbd389f39ceb577fc12aff71f2014c0cf5b5",
+    "120313019": "93d03673fd48af5daadc09e9cdca26249d9ce95ac3e4d09ff3f4ec98ba300f1b",
+    "120313021": "66c9c822199ce37c3dfe1e65716e1a99abbb761d1a8e176c70367b041494365e",
+    "120313067": "c7d2f93385f03d191074932b1b658fe060608e63ce9092781e09aced175f18f1"
   }
 }

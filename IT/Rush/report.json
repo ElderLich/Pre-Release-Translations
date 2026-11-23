@@ -1,9 +1,58 @@
 {
-  "active_cards": 55,
+  "active_cards": 59,
   "artwork_files": 55,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120313001,
+    120313019,
+    120313021,
+    120313067
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120313001,
+      "name": "元素英雄 棱镜侠"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str6",
+        "str7"
+      ],
+      "id": 120313019,
+      "name": "吸血鬼领主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str3"
+      ],
+      "id": 120313021,
+      "name": "吸血鬼创世主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120313067,
+      "name": "吸血鬼女郎"
+    }
+  ],
   "published_source_fields": {
     "120109070": {
       "desc": "b156a38d8a9d836653d6a6abf5763a9c69eddbba761f2ae4b775d6641501e744",
@@ -1021,8 +1070,8 @@
     "120312001": "ec87d310bf28ccc4c5f9599a635a8ccea0bcd63cbf797f3536ff5d533223fa0a",
     "120312002": "21cac2d124dd007885656c4279dd4eb8c8d446f53401fb5be8aec9e3fbc092e2"
   },
-  "script_files": 95,
-  "source_cards": 55,
+  "script_files": 100,
+  "source_cards": 59,
   "text_sha256": {
     "120109070": "389250eddb51ac550aaecc714b5f192c2de0b79a2fd3ec9f7f58e4d7ca2cdb61",
     "120311001": "4fb54e872f014a4903378bb5f066e8e93a2faeefad128344a09d9baafbb6f380",
@@ -1078,6 +1127,10 @@
     "120311063": "a91c9c1042683f4c55cd91c18eb6544ac9d5ed4cb564d4b4aa3182883c556d8c",
     "120311064": "45a71d8e48db3e189a8aa9578f70a0ad4cd6116755b8a25eebe09e5bceee210b",
     "120312001": "ec87d310bf28ccc4c5f9599a635a8ccea0bcd63cbf797f3536ff5d533223fa0a",
-    "120312002": "21cac2d124dd007885656c4279dd4eb8c8d446f53401fb5be8aec9e3fbc092e2"
+    "120312002": "21cac2d124dd007885656c4279dd4eb8c8d446f53401fb5be8aec9e3fbc092e2",
+    "120313001": "01f03db386c64ad4e01a9dc03449f0ea886cc27dbff4a8132a31c1b23198f710",
+    "120313019": "0a6af1018156bea339ba29bce2636f3c87e07fab73ef1561c96f592235da385e",
+    "120313021": "cc189e0b43830e62c3c7a46db58c63ee607e16dc05d5174270b4db5cf241f230",
+    "120313067": "c4466892cb6290d9fe139d22bb20a0de9691faabf19ad25ca4f96f47200fc0c6"
   }
 }

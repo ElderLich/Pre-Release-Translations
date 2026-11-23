@@ -1,9 +1,58 @@
 {
-  "active_cards": 55,
+  "active_cards": 59,
   "artwork_files": 55,
   "excluded_ids": [],
-  "missing_artwork": [],
-  "pending_translations": [],
+  "missing_artwork": [
+    120313001,
+    120313019,
+    120313021,
+    120313067
+  ],
+  "pending_translations": [
+    {
+      "fields": [
+        "desc",
+        "name"
+      ],
+      "id": 120313001,
+      "name": "元素英雄 棱镜侠"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4",
+        "str5",
+        "str6",
+        "str7"
+      ],
+      "id": 120313019,
+      "name": "吸血鬼领主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str1",
+        "str3"
+      ],
+      "id": 120313021,
+      "name": "吸血鬼创世主"
+    },
+    {
+      "fields": [
+        "desc",
+        "name",
+        "str2",
+        "str3",
+        "str4"
+      ],
+      "id": 120313067,
+      "name": "吸血鬼女郎"
+    }
+  ],
   "published_source_fields": {
     "120109070": {
       "desc": "b156a38d8a9d836653d6a6abf5763a9c69eddbba761f2ae4b775d6641501e744",
@@ -1021,8 +1070,8 @@
     "120312001": "8f415794d48cccedc19405f0db937fd0680ced2816d7032e459f47fcd3984f3c",
     "120312002": "c91c714ea829c9d68400d3a3cd9398587726b622531de4fe60b939cba7e6ab17"
   },
-  "script_files": 95,
-  "source_cards": 55,
+  "script_files": 100,
+  "source_cards": 59,
   "text_sha256": {
     "120109070": "84fb82b72358f0441bf71d09143650f4b562cfe9a0c34bdf6bcaa73e82dcc987",
     "120311001": "362ee5f6883f4fdbcae338f69f69c69d2f5bfc5c41eb13bec6169a0b654a8026",
@@ -1078,6 +1127,10 @@
     "120311063": "e67f4af3ecf80b9daa5640377aadc90528de57626e647957261224233007f25b",
     "120311064": "e27eb5934d1cd7ed2d363911071b6f90e8d2938cd821d42ea4dd7c8a8c023d6d",
     "120312001": "8f415794d48cccedc19405f0db937fd0680ced2816d7032e459f47fcd3984f3c",
-    "120312002": "c91c714ea829c9d68400d3a3cd9398587726b622531de4fe60b939cba7e6ab17"
+    "120312002": "c91c714ea829c9d68400d3a3cd9398587726b622531de4fe60b939cba7e6ab17",
+    "120313001": "411df236e6fb3b959966f3b72d384db2ee689395ccf86848528692d5bdd46d0c",
+    "120313019": "d6ce3b1ffffa60c2af261086fef205d7eec120df0bc8580cf3e40bc51ab9b01a",
+    "120313021": "484408e1b4eeedf3666275e09b273deaa815d4df28514f3dcf4eb399ffcfe251",
+    "120313067": "24714526788b392970ed3f19e28812139221e5d80b12429d05ddf5a58fdda0e5"
   }
 }
