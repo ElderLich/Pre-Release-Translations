@@ -1,5 +1,23 @@
 [
   {
+    "name": "Nahar-Dex, Conductor de las Siete Espadas",
+    "desc": "Si controlas un monstruo y los Niveles totales de los Monstruos de Efecto que controlas son 7 o menores: puedes Invocar esta carta de Modo Especial desde tu mano o Cementerio, pero destiérrala cuando deje el Campo.\r\nSi esta carta es Invocada de Modo Normal o Especial desde la mano: puedes destruir tantos otros monstruos en el Campo con Nivel como sea posible y, si lo haces, esta carta gana 700 ATK por cada carta destruida, hasta el final de este turno.\r\nSólo puedes usar estos efectos de \"Nahar-Dex, Conductor de las Siete Espadas\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto] Dragón/OSCURIDAD  [★7] 2000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307081.jpg?version=19.7"
+  },
+  {
+    "name": "Dragón Buster de Cuerno Blanco",
+    "desc": "No puede ser Invocado de Modo Normal/Colocado. Debe ser primero Invocado de Modo Especial (desde tu mano) mientras el ATK total de tus monstruos desterrados sea 4000 o mayor, o mientras tengas 5 o más cartas desterradas boca abajo. Sólo puedes Invocar de Modo Especial \"Dragón Buster de Cuerno Blanco\" una vez por turno de esta forma.\r\n(Efecto Rápido): Cuando tu adversario activa un efecto de monstruo, o una Carta Mágica o efecto, en el Campo: puedes desterrar 1 carta del mismo tipo (Monstruo o Mágica) en tu Cementerio; niega la activación y después esta carta gana 600 ATK.\r\nSólo puedes usar este efecto de \"Dragón Buster de Cuerno Blanco\" una vez por turno.",
+    "overallString": "[Monstruo|Efecto|Invocación Especial] Dragón/OSCURIDAD  [★10] 4000/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308022.jpg?version=19.7"
+  },
+  {
+    "name": "Vajra Cúbico",
+    "desc": "Añade a tu mano 1 carta desde tu Deck que tenga un efecto que coloque Contadores Cúbicos y después, si añadiste un monstruo, inflige 800 de daño a tu adversario.\r\nPuedes desterrar esta carta en tu Cementerio; Invoca de Modo Especial 1 \"Vijam la Semilla Cúbica\" desde tu Cementerio y después puedes Invocar por Fusión 1 Monstruo de Fusión \"Cúbico\" desde tu Deck Extra, usando monstruos de tu mano o Campo.\r\nSólo puedes usar estos efectos de \"Vajra Cúbico\" una vez por turno.",
+    "overallString": "[Mágica]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275004.jpg?version=19.7"
+  },
+  {
     "name": "Aria de Alta Velocidad",
     "desc": "Manda al Cementerio 1 carta de tu mano, y después activa 1 de estos efectos.\r\n● Selecciona 1 monstruo en el Cementerio de cualquier jugador; Invócalo de Modo Especial.\r\n● Invoca por Fusión 1 Monstruo de Fusión desde tu Deck Extra, usando monstruos de tu mano o Campo.\r\n● Invoca por Ritual 1 Monstruo de Ritual desde tu mano, Sacrificando monstruos de tu mano o Campo cuyos Niveles totales sean iguales o superen su Nivel.",
     "overallString": "[Trampa]",
