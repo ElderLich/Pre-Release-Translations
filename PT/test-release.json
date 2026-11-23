@@ -1,5 +1,23 @@
 [
   {
+    "name": "Nahar-Dex, Condutor das Sete Espadas",
+    "desc": "Se você controla um monstro e os Níveis totais dos Monstros de Efeito que você controla é 7 ou menor: você pode Invocar por Invocação-Especial este card da sua mão ou Cemitério, mas bana-o quando deixar o campo.\r\nSe este card é Invocado por Invocação-Normal ou Especial da sua mão: você pode destruir quantos outros monstros no campo com o mesmo Nível for possível, e se fizer, este card ganha 700 de ATK para cada card destruído, até o final deste turno.\r\nVocê só pode usar cada um dos efeitos de \"Nahar-Dex, Condutor das Sete Espadas\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito] Dragão/Trevas  [★7] 2000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307081.jpg?version=19.7"
+  },
+  {
+    "name": "Dragão Notável de Chifre Branco",
+    "desc": "Não pode ser Invocado por Invocação-Normal/Baixado. Deve ser Invocado por Invocação-Especial (da mão) se o ATK total dos seus monstros banidos é 4000 ou maior, ou se você tem 5 ou mais cards banidos com a face para baixo. Você só pode Invocar por Invocação-Especial \"Dragão Notável de Chifre Branco\" uma vez desta forma.\r\nQuando seu oponente ativa um efeito de monstro, ou uma Magia ou efeito, no campo (Efeito Rápido): você pode banir 1 card do mesmo tipo (Monstro ou Magia) do seu Cemitério; negue a ativação, então este card ganha 600 de ATK. Você só pode usar este efeito de \"Dragão Notável de Chifre Branco\" uma vez por turno.",
+    "overallString": "[Monstro|Efeito|Invocação-Especial] Dragão/Trevas  [★10] 4000/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308022.jpg?version=19.7"
+  },
+  {
+    "name": "Vajra Cúbico",
+    "desc": "Adicione 1 card do seu Deck à sua mão que tenha um efeito de colocar um ou mais Marcadores Cúbicos, então se for um monstro, cause 800 de dano ao seu oponente.\r\nVocê pode banir este card do seu Cemitério; Invoque por Invocação-Especial 1 \"Vijam, a Semente Cúbica\" do seu Cemitério, então você pode Invocar por Invocação-Fusão 1 Monstro Fusão \"Cúbico(a)\" do seu Deck Adicional, usando monstros da sua mão ou campo.\r\nVocê só pode usar cada um dos efeitos de \"Vajra Cúbico\" uma vez por turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275004.jpg?version=19.7"
+  },
+  {
     "name": "Aria de Alta Velocidade",
     "desc": "Ative 1 desses efeitos, então envie 1 card da sua mão ao Cemitério;\r\n● Escolha 1 monstro em qualquer Cemitério; Invoque-o por Invocação-Especial ao seu campo.\r\n● Invoque por Invocação-Fusão 1 Monstro Fusão do seu Deck Adicional, usando monstros da sua mão ou campo.\r\n● Invoque por Invocação-Ritual 1 Monstro Ritual da sua mão, ao oferecer como Tributo monstros da sua mão ou campo cujo Níveis totais sejam igual ou excedem seu Nível.",
     "overallString": "[Armadilha]",
