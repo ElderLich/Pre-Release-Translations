@@ -1,5 +1,23 @@
 [
   {
+    "name": "Nahar-Dex, Driver of the Seven Swords",
+    "desc": "If you control a monster and the total Levels of Effect Monsters you control are 7 or lower: You can Special Summon this card from your hand or GY, but banish it when it leaves the field. If this card is Normal or Special Summoned from the hand: You can destroy as many other monsters on the field with a Level as possible, and if you do, this card gains 700 ATK for each card destroyed, until the end of this turn. You can only use each effect of \"Nahar-Dex, Driver of the Seven Swords\" once per turn.",
+    "overallString": "[Monster|Effect] Dragon/Dark  [★7] 2000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307081.jpg?version=19.7"
+  },
+  {
+    "name": "White-Horned Buster Dragon",
+    "desc": "Cannot be Normal Summoned/Set. Must be Special Summoned (from your hand) while the total ATK of your banished monsters is 4000 or higher, or while you have 5 or more face-down banished cards. You can only Special Summon \"White-Horned Buster Dragon\" once per turn this way. When your opponent activates a monster effect, or Spell Card or effect, on the field (Quick Effect): You can banish 1 card of the same type (Monster or Spell) from your GY; negate the activation, then this card gains 600 ATK. You can only use this effect of \"White-Horned Buster Dragon\" once per turn.",
+    "overallString": "[Monster|Effect|Special Summon] Dragon/Dark  [★10] 4000/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308022.jpg?version=19.7"
+  },
+  {
+    "name": "Cubic Vajra",
+    "desc": "Add 1 card from your Deck to your hand that has an effect that places Cubic Counter(s), then if you added a monster, inflict 800 damage to your opponent. You can banish this card from your GY; Special Summon 1 \"Vijam the Cubic Seed\" from your GY, then you can Fusion Summon 1 \"Cubic\" Fusion Monster from your Extra Deck, using monsters from your hand or field. You can only use each effect of \"Cubic Vajra\" once per turn.",
+    "overallString": "[Spell]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275004.jpg?version=19.7"
+  },
+  {
     "name": "High Speed Aria",
     "desc": "Activate 1 of these effects, then send 1 card from your hand to the GY;\n● Target 1 monster in either GY; Special Summon it to your field.\n● Fusion Summon 1 Fusion Monster from your Extra Deck, using monsters from your hand or field.\n● Ritual Summon 1 Ritual Monster from your hand, by Tributing monsters from your hand or field whose total Levels equal or exceed its Level.",
     "overallString": "[Trap]",
