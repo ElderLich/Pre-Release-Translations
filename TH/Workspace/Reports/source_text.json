@@ -1,8 +1,8 @@
 {
   "language": "en",
   "mode": "refresh",
-  "candidates": 201,
-  "matched": 201,
+  "candidates": 204,
+  "matched": 204,
   "unmatched_ids": [],
   "unresolved": [],
   "matches": {
@@ -261,6 +261,10 @@
     "100275003": {
       "set_code": "MVB1-JP003",
       "source": "https://yugipedia.com/wiki/Illusion_Palladium_Oracle_Mahad"
+    },
+    "100275004": {
+      "set_code": "MVB1-JP004",
+      "source": "https://yugipedia.com/wiki/Cubic_Vajra"
     },
     "100275005": {
       "set_code": "MVB1-JP005",
@@ -770,6 +774,10 @@
       "set_code": "IMPH-JP080",
       "source": "https://yugipedia.com/wiki/Bunnillin_Soft"
     },
+    "101307081": {
+      "set_code": "IMPH-EN081",
+      "source": "https://yugipedia.com/wiki/Nahar-Dex%2C_Driver_of_the_Seven_Swords"
+    },
     "101308001": {
       "set_code": "PASO-JP001",
       "source": "https://yugipedia.com/wiki/Blue-Eyes_Alternative_White_Dragon%2C_the_Guided_Phantom_Beast"
@@ -785,6 +793,10 @@
     "101308004": {
       "set_code": "PASO-JP004",
       "source": "https://yugipedia.com/wiki/Saggi_the_Dark_Sacrifice_Clown"
+    },
+    "101308022": {
+      "set_code": "PASO-JP022",
+      "source": "https://yugipedia.com/wiki/White-Horned_Buster_Dragon"
     },
     "101308027": {
       "set_code": "PASO-JP027",
