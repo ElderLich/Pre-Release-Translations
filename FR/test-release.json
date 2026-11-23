@@ -1,5 +1,23 @@
 [
   {
+    "name": "Nahar-Dex, Conducteur des Sept Épées",
+    "desc": "Si vous contrôlez un monstre et que la somme des Niveaux des Monstres à Effet que vous contrôlez est max. 7 : vous pouvez Invoquer Spécialement cette carte depuis votre main ou Cimetière, mais bannissez-la lorsqu'elle quitte le Terrain. Si cette carte est Invoquée Normalement ou Spécialement depuis la main : vous pouvez détruire autant d'autres monstres avec un Niveau sur le Terrain que possible, et si vous le faites, cette carte gagne 700 ATK pour chaque carte détruite, jusqu'à la fin de ce tour. Vous ne pouvez utiliser chaque effet de \"Nahar-Dex, Conducteur des Sept Épées\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet] Dragon/Ténébres  [★7] 2000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307081.jpg?version=19.7"
+  },
+  {
+    "name": "Dragon Briseur aux Cornes Blanches",
+    "desc": "Ni Invocable Normalement ni Posable Normalement. Uniquement Invocable Spécialement (depuis votre main) tant que la somme des ATK de vos monstres bannis est min. 4000, ou tant que vous avez min. 5 cartes bannies face verso. Vous ne pouvez Invoquer Spécialement \"Dragon Briseur aux Cornes Blanches\" de cette façon qu'une fois par tour. Lorsque votre adversaire active un effet de monstre, ou une Carte Magie ou effet de Magie, sur le Terrain (Effet Rapide) : vous pouvez bannir 1 carte du même type (Monstre ou Magie) depuis votre Cimetière ; annulez l'activation, puis cette carte gagne 600 ATK. Vous ne pouvez utiliser cet effet de \"Dragon Briseur aux Cornes Blanches\" qu'une fois par tour.",
+    "overallString": "[Monstre|Effet|Invocation Spéciale] Dragon/Ténébres  [★10] 4000/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308022.jpg?version=19.7"
+  },
+  {
+    "name": "Vajra Cubique",
+    "desc": "Ajoutez 1 carte depuis votre Deck à votre main qui a un effet qui place un ou plusieurs Compteurs Cubiques, puis si vous avez ajouté un monstre, infligez 800 points de dommages à votre adversaire. Vous pouvez bannir cette carte depuis votre Cimetière ; Invoquez Spécialement 1 \"Vijam la Graine Cubique\" depuis votre Cimetière, puis vous pouvez Invoquer par Fusion 1 Monstre Fusion \"Cubique\" depuis votre Extra Deck, en utilisant des monstres depuis votre main ou Terrain. Vous ne pouvez utiliser chaque effet de \"Vajra Cubique\" qu'une fois par tour.",
+    "overallString": "[Magie]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275004.jpg?version=19.7"
+  },
+  {
     "name": "Aria à Grande Vitesse",
     "desc": "Activez 1 de ces effets, puis envoyez 1 carte depuis votre main au Cimetière ;\r\n● Ciblez 1 monstre dans l'un des Cimetières ; Invoquez-le Spécialement sur votre Terrain.\r\n● Invoquez par Fusion 1 Monstre Fusion depuis votre Extra Deck, en utilisant des monstres depuis votre main ou Terrain.\r\n● Invoquez Rituellement 1 Monstre Rituel depuis votre main, en Sacrifiant des monstres depuis votre main ou Terrain dont la somme des Niveaux est supérieure ou égale à son Niveau.",
     "overallString": "[Piège]",
