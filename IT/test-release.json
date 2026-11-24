@@ -1,5 +1,155 @@
 [
   {
+    "name": "Nahar-Dex, Pilota delle Sette Spade",
+    "desc": "Se controlli un mostro e la somma dei Livelli dei Mostri con Effetto che controlli è pari o inferiore a 7: puoi Evocare Specialmente questa carta dalla tua mano o dal tuo Cimitero, ma bandiscila quando lascia il Terreno.\nSe questa carta viene Evocata Normalmente o Specialmente dalla mano: puoi distruggere il maggior numero possibile di altri mostri sul Terreno che hanno un Livello e, se lo fai, questa carta guadagna 700 ATK per ogni carta distrutta, fino alla fine di questo turno.\nPuoi utilizzare ogni effetto di \"Nahar-Dex, Pilota delle Sette Spade\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Drago/Oscurità  [★7] 2000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307081.jpg?version=19.7"
+  },
+  {
+    "name": "Combattente Drago dalle Corna Bianche",
+    "desc": "Non può essere Evocato Normalmente/Posizionato. Deve essere Evocato Specialmente (dalla tua mano) mentre l'ATK totale dei tuoi mostri banditi è pari o superiore a 4000, oppure mentre hai 5 o più carte bandite coperte. Puoi Evocare Specialmente \"Combattente Drago dalle Corna Bianche\" una sola volta per turno in questo modo.\nQuando il tuo avversario attiva l'effetto di un mostro, una Carta Magia o un effetto di Magia sul Terreno (Effetto Rapido): puoi bandire 1 carta dello stesso tipo (Mostro o Magia) dal tuo Cimitero; annulla l'attivazione, poi questa carta guadagna 600 ATK. Puoi utilizzare questo effetto di \"Combattente Drago dalle Corna Bianche\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Evocazione Speciale] Drago/Oscurità  [★10] 4000/1400",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101308022.jpg?version=19.7"
+  },
+  {
+    "name": "Vajra Cubico",
+    "desc": "Aggiungi dal tuo Deck alla tua mano 1 carta che ha un effetto che mette Segnalini Cubici, poi, se hai aggiunto un mostro, infliggi 800 danni al tuo avversario.\nPuoi bandire questa carta dal tuo Cimitero; Evoca Specialmente 1 \"Vijam il Seme Cubico\" dal tuo Cimitero, poi puoi Evocare tramite Fusione 1 Mostro Fusione \"Cubico\" dal tuo Extra Deck, utilizzando mostri dalla tua mano o dal tuo Terreno.\nPuoi utilizzare ogni effetto di \"Vajra Cubico\" una sola volta per turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275004.jpg?version=19.7"
+  },
+  {
+    "name": "Aria ad Alta Velocità",
+    "desc": "Attiva 1 di questi effetti, poi manda 1 carta dalla tua mano al Cimitero;\r\n● Scegli come bersaglio 1 mostro in uno dei due Cimiteri; Evocalo Specialmente sul tuo Terreno.\r\n● Evoca tramite Fusione 1 Mostro Fusione dal tuo Extra Deck, utilizzando mostri dalla tua mano o dal tuo Terreno.\r\n● Evoca tramite Rituale 1 Mostro Rituale dalla tua mano, offrendo come Tributo mostri dalla tua mano o dal tuo Terreno i cui Livelli totali siano pari o superiori al suo Livello.",
+    "overallString": "[Trappola]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275009.jpg?version=19.7"
+  },
+  {
+    "name": "Mahad, Oracolo Palladio dell'Illusione",
+    "desc": "Se hai un mostro LUCE o OSCURITÀ bandito, puoi Evocare Specialmente questa carta (dalla tua mano). Puoi Evocare Specialmente \"Mahad, Oracolo Palladio dell'Illusione\" una sola volta per turno in questo modo.\nL'ATK originale di questa carta è raddoppiato mentre un mostro OSCURITÀ è sul Terreno.\nSe questa carta distrugge un mostro in battaglia e hai \"Mago Nero\" sul tuo Terreno o nel tuo Cimitero: infliggi al tuo avversario danno pari all'ATK originale del mostro distrutto.",
+    "overallString": "[Mostro|Effetto] Incantatore/Luce  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100275003.jpg?version=19.7"
+  },
+  {
+    "name": "Ragno Arcobaleno",
+    "desc": "Se questa carta viene Evocata Normalmente: puoi Evocare Specialmente 1 mostro Insetto di Livello 4 dalla tua mano o dal tuo Cimitero.\nPuoi bandire questa carta dal tuo Cimitero, poi scegliere come bersaglio 1 Mostro Xyz Insetto che controlli; stacca 1 materiale da quel mostro che controlli e, se lo fai, Evoca Specialmente dal tuo Extra Deck 1 mostro \"Numero\" di 1 Rango superiore a quello di quel mostro, utilizzandolo come materiale (questa viene considerata un'Evocazione Xyz; trasferisci i suoi materiali), inoltre non puoi Evocare Specialmente per il resto di questo turno.\nPuoi utilizzare ogni effetto di \"Ragno Arcobaleno\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Insetto/Luce  [★4] 1700/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278012.jpg?version=19.7"
+  },
+  {
+    "name": "Guardiano Scarabeo",
+    "desc": "Se questa carta viene Evocata Normalmente o viene scoperta: puoi scegliere come bersaglio 1 mostro nel Cimitero del tuo avversario; Evocalo Specialmente sul tuo Terreno in Posizione di Difesa, ma i suoi effetti vengono annullati, inoltre diventa un mostro Insetto.\nSe questa carta viene mandata al Cimitero mentre controlli un mostro scoperto non-Insetto: puoi bandire 1 mostro scoperto sul Terreno fino alla End Phase.\nPuoi utilizzare ogni effetto di \"Guardiano Scarabeo\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Insetto/Terra  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278013.jpg?version=19.7"
+  },
+  {
+    "name": "Aracno-Cannibalismo",
+    "desc": "Offri come Tributo 1 mostro Insetto dalla tua mano o dal tuo Terreno; aumenta i Livelli di tutti i mostri Insetto che controlli attualmente del Livello che aveva il mostro offerto come Tributo, poi puoi aggiungere dal tuo Deck alla tua mano 1 mostro Insetto con lo stesso Livello di un mostro Insetto che controlli.\nPuoi bandire questa carta dal tuo Cimitero e offrire come Tributo 1 mostro Insetto; pesca 1 carta.\nPuoi utilizzare ogni effetto di \"Aracno-Cannibalismo\" una sola volta per turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278014.jpg?version=19.7"
+  },
+  {
+    "name": "Porta Zero del Vuoto",
+    "desc": "Salta la tua prossima Draw Phase. \nQuando un mostro del tuo avversario con ATK pari o superiore ai tuoi LP dichiara un attacco diretto mentre non hai carte nella tua mano: puoi bandire questa carta dal tuo Cimitero; annulla l'attacco e, se lo fai, Evoca Specialmente 1 mostro \"Drago Orco del Vuoto\" dal tuo Extra Deck (questa viene considerata un'Evocazione Synchro). Mentre quel mostro è scoperto nella Zona Mostri, non subisci danni. Quando lascia il Terreno, subisci 4000 danni.",
+    "overallString": "[Trappola]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278011.jpg?version=19.7"
+  },
+  {
+    "name": "Prosperità Bianca",
+    "desc": "Evoca Specialmente dalla tua mano fino a 2 mostri ACQUA di Livello 4 o inferiore, poi, se controlli 2 o più mostri con lo stesso nome, puoi considerare 1 di essi come un Tuner.\nSe un mostro ACQUA viene Evocato Specialmente dal tuo Cimitero mentre questa carta è nel tuo Cimitero, e hai un altro mostro sul tuo Terreno o nel tuo Cimitero con lo stesso nome di uno di essi: puoi bandire questa carta dal tuo Cimitero; pesca 2 carte.\nPuoi utilizzare ogni effetto di \"Prosperità Bianca\" una sola volta per turno.",
+    "overallString": "[Magia]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278015.jpg?version=19.7"
+  },
+  {
+    "name": "Incubo Bianco",
+    "desc": "I tuoi mostri ACQUA con 3000 o più ATK possono effettuare fino a 2 attacchi sui mostri durante ogni Battle Phase.\nPuoi utilizzare ciascuno dei seguenti effetti di \"Incubo Bianco\" una sola volta per turno.\nPuoi mandare qualsiasi numero di mostri ACQUA dalla tua mano al Cimitero; i mostri ACQUA che controlli guadagnano 500 ATK per ogni mostro mandato al Cimitero in questo modo, fino alla fine di questo turno.\nSe questa carta viene mandata al Cimitero: puoi Evocare Specialmente 1 mostro ACQUA dal tuo Cimitero in Posizione di Difesa e, se lo fai, viene considerato un Tuner.",
+    "overallString": "[Magia|Continua]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278016.jpg?version=19.7"
+  },
+  {
+    "name": "Portatore di Lancia Demoneterno",
+    "desc": "Questa carta guadagna 800 ATK mentre non hai carte nella tua mano.\nPuoi utilizzare ciascuno dei seguenti effetti di \"Portatore di Lancia Demoneterno\" una sola volta per turno.\nSe questa carta viene Evocata Normalmente: puoi Evocare Specialmente 1 mostro \"Demoneterno\" con 0 ATK dal tuo Deck, inoltre non puoi Evocare Specialmente dall'Extra Deck per il resto di questo turno, eccetto Mostri Synchro.\nPuoi bandire questa carta e 1 altra carta \"Demoneterno\" dal tuo Cimitero; manda 1 Magia/Trappola \"Vuoto\" dal tuo Deck al Cimitero.",
+    "overallString": "[Mostro|Effetto] Demone/Oscurità  [★3] 1100/0",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278008.jpg?version=19.7"
+  },
+  {
+    "name": "Portatore di Scudo Demoneterno",
+    "desc": "Questa carta guadagna 800 DEF mentre non hai carte nella tua mano.\nPuoi utilizzare ciascuno dei seguenti effetti di \"Portatore di Scudo Demoneterno\" una sola volta per turno.\nSe questa carta viene Evocata Normalmente: puoi Evocare Specialmente 1 mostro \"Demoneterno\" con 0 DEF dalla tua mano o dal tuo Cimitero, inoltre non puoi Evocare Specialmente dall'Extra Deck per il resto di questo turno, eccetto Mostri Synchro.\nPuoi bandire questa carta dal tuo Cimitero; aggiungi dal tuo Deck o Cimitero alla tua mano 1 mostro \"Demoneterno\" di Livello 5 o superiore.",
+    "overallString": "[Mostro|Effetto] Demone/Oscurità  [★3] 0/1100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278009.jpg?version=19.7"
+  },
+  {
+    "name": "Drago Orco del Vuoto Zero",
+    "desc": "1 Tuner OSCURITÀ + 2+ mostri non-Tuner\nNon può essere distrutto dagli effetti delle carte mentre hai un mostro OSCURITÀ con 0 ATK o DEF nel tuo Cimitero.\nPuoi utilizzare ciascuno dei seguenti effetti di \"Drago Orco del Vuoto Zero\" una sola volta per turno.\nSe questa carta viene Evocata Synchro: puoi mandare 1 mostro \"Demoneterno\" dal tuo Deck al Cimitero.\nQuando il tuo avversario attiva una carta o un effetto mentre non hai carte nella tua mano (Effetto Rapido): puoi annullare l'attivazione e, se lo fai, distruggi quella carta e, se lo fai, questa carta guadagna 500 ATK.",
+    "overallString": "[Mostro|Effetto|Synchro] Drago/Oscurità  [★8] 3000/3000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278010.jpg?version=19.7"
+  },
+  {
+    "name": "Linea Bianca",
+    "desc": "Se controlli un mostro ACQUA: scegli come bersaglio 1 mostro in Posizione di Attacco controllato dal tuo avversario; non subisci danni da effetti per il resto di questo turno, inoltre metti quel mostro in Posizione di Difesa e, se lo fai, annulla i suoi effetti.\nSe controlli 2 o più mostri con lo stesso nome e questa carta è nel tuo Cimitero: puoi Posizionare questa carta, ma bandiscila quando lascia il Terreno.\nPuoi utilizzare ogni effetto di \"Linea Bianca\" una sola volta per turno.",
+    "overallString": "[Trappola]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278017.jpg?version=19.7"
+  },
+  {
+    "name": "Antica Sacerdotessa Draconica",
+    "desc": "1 Mostro Fusione, Synchro, Xyz o Link + 1 mostro Incantatore\n(Questa carta viene sempre considerata una carta \"Invokato\" e \"Magistus\".)\nSe questa carta viene Evocata tramite Fusione: puoi attivare questo effetto; fino alla fine di questo turno, tutti i mostri scoperti attualmente controllati dal tuo avversario perdono 1800 ATK, inoltre i loro effetti vengono annullati.\nPuoi bandire questa carta dal tuo Cimitero, poi scegliere come bersaglio 1 mostro \"Magistus\" o \"Aleister\" nel tuo Cimitero; Evocalo Specialmente.\nPuoi utilizzare ogni effetto di \"Antica Sacerdotessa Draconica\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Fusione|Tuner] Incantatore/Luce  [★8] 2800/2800",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278018.jpg?version=19.7"
+  },
+  {
+    "name": "Bau, la Bestia Cane Nero",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere dal tuo Deck alla tua mano 1 mostro OSCURITÀ di Livello 7 o superiore con 2500 DEF, 1 carta \"Scalinata per gli Inferi\" oppure 1 carta \"Dominio del Sovrano Oscuro\".\nSe questa carta viene offerta come Tributo o bandita: puoi scegliere come bersaglio 1 Trappola Contro nel tuo Cimitero; aggiungila alla tua mano. Puoi utilizzare ogni effetto di \"Bau, la Bestia Cane Nero\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Bestia/Oscurità  [★4] 1800/1200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278001.jpg?version=19.7"
+  },
+  {
+    "name": "Scalinata per gli Inferi",
+    "desc": "Quando il tuo avversario attiva l'effetto di un mostro, oppure un suo mostro dichiara un attacco: aggiungi dal tuo Deck alla tua mano fino a 2 mostri OSCURITÀ di Livello 7 o superiore con 2500 DEF.\nSe un mostro OSCURITÀ scoperto che controlli viene distrutto in battaglia o dall'effetto di una carta mentre questa carta è nel tuo Cimitero: puoi bandire questa carta, poi scegliere come bersaglio 1 mostro scoperto controllato dal tuo avversario; annulla i suoi effetti.\nPuoi utilizzare ogni effetto di \"Scalinata per gli Inferi\" una sola volta per turno.",
+    "overallString": "[Trappola]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278002.jpg?version=19.7"
+  },
+  {
+    "name": "Dominio del Sovrano Oscuro",
+    "desc": "Se non controlli mostri, puoi attivare questa carta nel turno in cui è stata Posizionata.\nQuando il tuo avversario attiva una Carta Magia/Trappola e hai un mostro OSCURITÀ di Livello 7 o superiore con 2500 DEF sul tuo Terreno o nel tuo Cimitero: annulla l'attivazione e, se lo fai, distruggi quella carta, poi, se questa carta è stata attivata durante il tuo turno, puoi applicare questo effetto.\n● Nessun giocatore può attivare Carte Magia/Trappola per il resto di questo turno.\nPuoi attivare solo 1 \"Dominio del Sovrano Oscuro\" per turno.",
+    "overallString": "[Trappola|Contro]",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278003.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Struve",
+    "desc": "Non può essere Evocato Normalmente/Posizionato. Deve prima essere Evocato Specialmente (dalla tua mano) bandendo 1 Magia/Trappola \"Cyber\" dal tuo Cimitero.\nSe questa carta viene Evocata Specialmente: puoi aggiungere dal tuo Deck alla tua mano 1 delle seguenti carte.\n● Mostro Macchina \"Cyber\", eccetto un mostro di Livello 6\n● Magia/Trappola che menziona \"Cyber Drago\"\nNon puoi attivare effetti di mostri nel turno in cui attivi questo effetto, eccetto quelli dei mostri Macchina \"Cyber\". Puoi utilizzare questo effetto di \"Cyber Struve\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Evocazione Speciale] Macchina/Luce  [★6] 2400/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278004.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Thuban",
+    "desc": "Non può essere Evocato Normalmente/Posizionato. Deve prima essere Evocato Specialmente (dalla tua mano) bandendo 1 Magia/Trappola \"Cyber\" dal tuo Cimitero.\nSe questa carta viene Evocata Specialmente: puoi aggiungere dal tuo Deck alla tua mano 1 mostro Macchina \"Cyber\", eccetto \"Cyber Thuban\".\nSe questa carta viene mandata al Cimitero: puoi attivare questo effetto; il tuo avversario non può attivare carte o effetti quando Evochi Specialmente un mostro Macchina LUCE di Livello 10 in questo turno.\nPuoi utilizzare ogni effetto di \"Cyber Thuban\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Evocazione Speciale] Macchina/Luce  [★5] 2100/1000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278005.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Alnair",
+    "desc": "Non può essere Evocato Normalmente/Posizionato. Deve prima essere Evocato Specialmente (dalla tua mano) mentre controlli un mostro Macchina \"Cyber\".\nSe questa carta viene Evocata Specialmente: puoi aggiungere dal tuo Deck alla tua mano 1 \"Cyber Emergenza\".\nSe questa carta viene bandita: puoi attivare questo effetto; durante la End Phase di questo turno, rimischia nel Deck fino a 7 dei tuoi mostri Macchina \"Cyber\" banditi.\nPuoi utilizzare ogni effetto di \"Cyber Alnair\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Evocazione Speciale] Macchina/Luce  [★4] 1000/1600",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278006.jpg?version=19.7"
+  },
+  {
+    "name": "Cyber Alsafi",
+    "desc": "Non può essere Evocato Normalmente/Posizionato. Deve prima essere Evocato Specialmente (dalla tua mano) mentre controlli un mostro Macchina \"Cyber\".\nSe questa carta viene Evocata Specialmente: puoi aggiungere dal tuo Deck alla tua mano 1 \"Nato sotto Draconis\".\nSe questa carta viene bandita: puoi attivare questo effetto; fino alla fine di questo turno, il prossimo danno da combattimento che un tuo mostro Macchina LUCE di Livello 10 infligge al tuo avversario viene raddoppiato.\nPuoi utilizzare ogni effetto di \"Cyber Alsafi\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto|Evocazione Speciale] Macchina/Luce  [★4] 0/2000",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278007.jpg?version=19.7"
+  },
+  {
+    "name": "Rogue, il Pugnale di Endymion",
+    "desc": "Se questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere dal tuo Deck alla tua mano 1 carta che menziona \"Segnalino Magia\" nel suo testo dell'effetto oppure 1 carta \"Endymion\", eccetto \"Rogue, il Pugnale di Endymion\".\nDurante la Main Phase, se hai \"Regulus, il Principe di Endymion\" sul tuo Terreno o nel tuo Cimitero (Effetto Rapido): puoi scegliere come bersaglio 1 carta controllata dal tuo avversario; fai guadagnare al tuo avversario il controllo di questa carta e, se lo fai, distruggi quella carta.\nPuoi utilizzare ogni effetto di \"Rogue, il Pugnale di Endymion\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Incantatore/Fuoco  [★3] 1500/200",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278019.jpg?version=19.7"
+  },
+  {
+    "name": "Protettore della Grande Torre",
+    "desc": "Se questa carta è nella tua mano e hai 3 o più Magie con nomi diversi nel tuo Cimitero: puoi Evocare Specialmente questa carta.\nPuoi scegliere come bersaglio 1 carta \"Libro di Magia\" e 1 Magia nel tuo Cimitero; bandisci 1 di esse e, se lo fai, aggiungi l'altra alla tua mano, poi, se è una carta \"Libro di Magia\", puoi distruggere 1 carta sul Terreno.\nPuoi utilizzare ogni effetto di \"Protettore della Grande Torre\" una sola volta per turno.",
+    "overallString": "[Mostro|Effetto] Incantatore/Luce  [★7] 2500/2100",
+    "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100278020.jpg?version=19.7"
+  },
+  {
     "name": "Fuoco Fatuo Fantasmatrucco",
     "desc": "Questa carta può essere Evocata Normalmente solo se controlli un mostro \"Fantasmatrucco\".\r\nQuando il tuo avversario attiva l'effetto di un mostro sul Terreno: puoi Evocare Specialmente questa carta dalla tua mano coperta in Posizione di Difesa e mettere 1 Magia Terreno o Trappola Continua \"Fantasmatrucco\" dalla tua mano o Deck scoperta sul tuo Terreno. Dopodiché, se il tuo avversario ha 5 o più carte nel Cimitero, puoi Evocare Specialmente 1 mostro dalla tua mano coperto in Posizione di Difesa.\r\nDurante la tua Main Phase, una volta per turno: puoi mettere questa carta coperta in Posizione di Difesa.",
     "overallString": "[Mostro|Effetto] Demone/Oscurità  [★1] 300/200",
@@ -115,7 +265,7 @@
   },
   {
     "name": "Energia Arcana VIII - La Forza",
-    "desc": "Se questa carta è nella tua mano e sul Terreno c’è una carta che ha un effetto di lancio della moneta: Puoi Evocare Specialmente questa carta. Puoi utilizzare questo effetto di \"Energia Arcana VIII - La Forza\" una sola volta per turno. Se questa carta viene Evocata: Lancia una moneta.\n● Testa: Prendi il controllo di 1 mostro controllato dal tuo avversario.\n● Croce: Il tuo avversario prende il controllo di 1 altro mostro che controlli.",
+    "desc": "Se questa carta è nella tua mano e sul Terreno c'è una carta che ha un effetto di lancio della moneta: Puoi Evocare Specialmente questa carta. Puoi utilizzare questo effetto di \"Energia Arcana VIII - La Forza\" una sola volta per turno. Se questa carta viene Evocata: Lancia una moneta.\r\n● Testa: Prendi il controllo di 1 mostro controllato dal tuo avversario.\r\n● Croce: Il tuo avversario prende il controllo di 1 altro mostro che controlli.",
     "overallString": "[Mostro|Effetto] Fata/Luce  [★5] 1800/1800",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270201.jpg?version=19.7"
   },
@@ -265,7 +415,7 @@
   },
   {
     "name": "Codedalo",
-    "desc": "2 mostri ACQUA\r\n\r\nPuoi Evocare Specialmente \"Codedalo\" una sola volta per turno.\r\nIl nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nSe questa carta viene Evocata Link: puoi attivare questo effetto; durante la End Phase di questo turno, aggiungi 1 carta dal tuo Cimitero alla tua mano che menziona \"Atlantide, Città del Drago del Mare\", eccetto \"Codedalo\".\r\nUna volta per turno: puoi mandare 1 \"Umi\" scoperto che controlli al Cimitero; manda fino a 2 Magie/Trappole sul Terreno al Cimitero.\r\n",
+    "desc": "2 mostri ACQUA\r\nPuoi Evocare Specialmente \"Codedalo\" una sola volta per turno.\r\nIl nome di questa carta diventa \"Umi\" mentre è sul Terreno.\r\nSe questa carta viene Evocata Link: puoi attivare questo effetto; durante la End Phase di questo turno, aggiungi 1 carta dal tuo Cimitero alla tua mano che menziona \"Atlantide, Città del Drago del Mare\", eccetto \"Codedalo\".\r\nUna volta per turno: puoi mandare 1 \"Umi\" scoperto che controlli al Cimitero; manda fino a 2 Magie/Trappole sul Terreno al Cimitero.\r\n",
     "overallString": "[Mostro|Effetto|Link] Serpente Marino/Acqua  [LINK-2] 1400/-  [→][↓]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307049.jpg?version=19.7"
   },
@@ -318,8 +468,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307032.jpg?version=19.7"
   },
   {
-    "name": "Sorelle Arpie - Estasi Triangolo",
-    "desc": "3 mostri \"Lady Arpia\"\r\n(Questa carta viene sempre considerata come una carta \"Lady Arpia\".)\r\nDeve prima essere Evocato tramite Fusione. Il nome di questa carta diventa \"Lady Arpia\" mentre è sul Terreno o nel Cimitero. Guadagna 500 ATK per ogni \"Lady Arpia\" nel tuo Cimitero, inoltre il tuo avversario non può scegliere come bersaglio questa carta con gli effetti dei mostri non-VENTO. Una volta per turno (Effetto Rapido): puoi distruggere tutte le Magie/Trappole controllate dal tuo avversario.",
+    "name": "Sorelle Lady Arpia dell'Estasi Triangolare",
+    "desc": "3 mostri \"Lady Arpia\"\r\nDeve prima essere Evocata tramite Fusione.\r\nIl nome di questa carta diventa \"Lady Arpia\" mentre è sul Terreno o nel Cimitero.\r\nGuadagna 500 ATK per ogni \"Lady Arpia\" nel tuo Cimitero, inoltre il tuo avversario non può scegliere questa carta come bersaglio con gli effetti dei mostri non-VENTO.\r\nUna volta per turno (Effetto Rapido): puoi distruggere tutte le Magie/Trappole controllate dal tuo avversario.",
     "overallString": "[Mostro|Effetto|Fusione] Bestia Alata/Vento  [★8] 3000/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307033.jpg?version=19.7"
   },
@@ -720,62 +870,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100271000.jpg?version=19.7"
   },
   {
-    "name": "Demone di Fuoco della Foresta del Corvo dell'Inverno",
-    "desc": "Se controlli una carta \"Corvo dell'Inverno\", puoi Evocare Specialmente questa carta (dalla tua mano). Puoi Evocare Specialmente \"Demone di Fuoco della Foresta del Corvo dell'Inverno\" una sola volta per turno in questo modo.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Demone di Fuoco della Foresta del Corvo dell'Inverno\" una sola volta per turno.\r\nSe questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 Magia/Trappola \"Corvo dell'Inverno\" o 1 carta \"Spoglie del Peccato\" dal tuo Deck alla tua mano.\r\nPuoi scegliere come bersaglio 1 Carta Mostro \"Corvo dell'Inverno\" o 1 Carta Mostro di Livello 7 o 8 nella Zona Magie & Trappole; Evocala Specialmente sul tuo Terreno.",
+    "name": "Demone di Fuoco della Foresta del Corvo Bianco",
+    "desc": "Se controlli una carta \"Corvo Bianco\", puoi Evocare Specialmente questa carta (dalla tua mano). Puoi Evocare Specialmente \"Demone di Fuoco della Foresta del Corvo Bianco\" una sola volta per turno in questo modo.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Demone di Fuoco della Foresta del Corvo Bianco\" una sola volta per turno.\r\nSe questa carta viene Evocata Normalmente o Specialmente: puoi aggiungere 1 Magia/Trappola \"Corvo Bianco\" o 1 carta \"Spoglie del Peccato\" dal tuo Deck alla tua mano.\r\nPuoi scegliere come bersaglio 1 Carta Mostro \"Corvo Bianco\" o 1 Carta Mostro di Livello 7 o 8 nella Zona Magie & Trappole; Evocala Specialmente sul tuo Terreno.",
     "overallString": "[Mostro|Effetto] Pyro/Fuoco  [★1] 700/200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307009.jpg?version=19.7"
   },
   {
-    "name": "Maluth, il Cavaliere del Corvo dell'Inverno",
-    "desc": "Puoi mandare 1 altra carta dalla tua mano o Terreno al Cimitero; metti questa carta scoperta nella Zona Magie & Trappole del suo proprietario come Magia Continua e, se lo fai, Evoca Specialmente dal tuo Deck fino a 2 mostri \"Corvo dell'Inverno\" con nomi diversi tra loro, eccetto \"Maluth, il Cavaliere del Corvo dell'Inverno\".\r\nQuando un mostro dichiara un attacco, mentre questa carta è una Magia Continua: puoi scegliere come bersaglio 1 Carta Mostro \"Corvo dell'Inverno\" nella tua Zona Magie & Trappole; Evocala Specialmente.\r\nPuoi utilizzare ogni effetto di \"Maluth, il Cavaliere del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Maluth, il Cavaliere del Corvo Bianco",
+    "desc": "Puoi mandare 1 altra carta dalla tua mano o Terreno al Cimitero; metti questa carta scoperta nella Zona Magie & Trappole del suo proprietario come Magia Continua e, se lo fai, Evoca Specialmente dal tuo Deck fino a 2 mostri \"Corvo Bianco\" con nomi diversi tra loro, eccetto \"Maluth, il Cavaliere del Corvo Bianco\".\r\nQuando un mostro dichiara un attacco, mentre questa carta è una Magia Continua: puoi scegliere come bersaglio 1 Carta Mostro \"Corvo Bianco\" nella tua Zona Magie & Trappole; Evocala Specialmente.\r\nPuoi utilizzare ogni effetto di \"Maluth, il Cavaliere del Corvo Bianco\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Tuner] Illusione/Luce  [★4] 1700/0",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307010.jpg?version=19.7"
   },
   {
-    "name": "Ann, la Cavaliere del Corvo dell'Inverno",
-    "desc": "Puoi rivelare questa carta nella tua mano; Evoca Specialmente 1 mostro \"Corvo dell'Inverno\" dalla tua mano, eccetto \"Ann, la Cavaliere del Corvo dell'Inverno\".\r\nDurante la Main Phase (Effetto Rapido): puoi scegliere come bersaglio 1 mostro \"Corvo dell'Inverno\" che controlli; mettilo scoperto nella Zona Magie & Trappole del suo proprietario come Magia Continua e, se lo fai, Evoca Specialmente 1 mostro \"Corvo dell'Inverno\" dalla tua mano o Cimitero, eccetto \"Ann, la Cavaliere del Corvo dell'Inverno\".\r\nPuoi utilizzare ogni effetto di \"Ann, la Cavaliere del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Ann, la Cavaliere del Corvo Bianco",
+    "desc": "Puoi rivelare questa carta nella tua mano; Evoca Specialmente 1 mostro \"Corvo Bianco\" dalla tua mano, eccetto \"Ann, la Cavaliere del Corvo Bianco\".\r\nDurante la Main Phase (Effetto Rapido): puoi scegliere come bersaglio 1 mostro \"Corvo Bianco\" che controlli; mettilo scoperto nella Zona Magie & Trappole del suo proprietario come Magia Continua e, se lo fai, Evoca Specialmente 1 mostro \"Corvo Bianco\" dalla tua mano o Cimitero, eccetto \"Ann, la Cavaliere del Corvo Bianco\".\r\nPuoi utilizzare ogni effetto di \"Ann, la Cavaliere del Corvo Bianco\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Tuner] Illusione/Luce  [★4] 1400/900",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307011.jpg?version=19.7"
   },
   {
-    "name": "Spoglie del Peccato della Foresta del Corvo dell'Inverno",
-    "desc": "Puoi Evocare Specialmente questa carta (dalla tua mano) mettendo 1 Carta Mostro FUOCO di Livello 1 dal tuo Terreno scoperto o Cimitero in fondo al Deck. Puoi Evocare Specialmente \"Spoglie del Peccato della Foresta del Corvo dell'Inverno\" una sola volta per turno in questo modo.\r\nQuando il tuo avversario attiva una carta o un effetto (Effetto Rapido): puoi far ritornare questa carta nella mano, poi scegli come bersaglio 1 mostro sul Terreno scoperto o in uno dei due Cimiteri; mettilo scoperto nella Zona Magie & Trappole del suo proprietario come Magia Continua. Puoi utilizzare questo effetto di \"Spoglie del Peccato della Foresta del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Spoglie del Peccato della Foresta del Corvo Bianco",
+    "desc": "Puoi Evocare Specialmente questa carta (dalla tua mano) mettendo 1 Carta Mostro FUOCO di Livello 1 dal tuo Terreno scoperto o Cimitero in fondo al Deck. Puoi Evocare Specialmente \"Spoglie del Peccato della Foresta del Corvo Bianco\" una sola volta per turno in questo modo.\r\nQuando il tuo avversario attiva una carta o un effetto (Effetto Rapido): puoi far ritornare questa carta nella mano, poi scegli come bersaglio 1 mostro sul Terreno scoperto o in uno dei due Cimiteri; mettilo scoperto nella Zona Magie & Trappole del suo proprietario come Magia Continua. Puoi utilizzare questo effetto di \"Spoglie del Peccato della Foresta del Corvo Bianco\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Tuner] Incantatore/Fuoco  [★7] 2500/2000",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307012.jpg?version=19.7"
   },
   {
-    "name": "Diabellze, Ereditiera della Foresta del Corvo dell'Inverno",
-    "desc": "1 Mostro Fusione o Synchro + 1 mostro Incantatore o Illusione\nQuesta carta scoperta Evocata tramite Fusione non può essere utilizzata come Materiale da Fusione. Guadagna 700 ATK/DEF per ogni Magia/Trappola sul Terreno. Se questa carta viene Evocata Specialmente: puoi mettere un qualsiasi numero di mostri che controlli scoperti nelle Zone Magie & Trappole dei loro proprietari come Magie Continue, poi puoi far ritornare carte dal Terreno nella mano, fino al numero di Magie/Trappole che controlli. Puoi utilizzare questo effetto di \"Diabellze, Ereditiera della Foresta del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Diabellze, Padrona della Foresta del Corvo Bianco",
+    "desc": "1 Mostro Fusione o Synchro + 1 mostro Incantatore o Illusione\nSe questa carta viene Evocata Specialmente: puoi mettere scoperti un qualsiasi numero di mostri che controlli nelle Zone Magie & Trappole dei rispettivi proprietari come Magie Continue, poi puoi far ritornare nella mano carte sul Terreno fino al numero di Magie/Trappole che controlli. Puoi utilizzare questo effetto di \"Diabellze, Padrona della Foresta del Corvo Bianco\" una sola volta per turno.\nGuadagna 700 ATK/DEF per ogni Magia/Trappola sul Terreno.\nQuesta carta scoperta Evocata tramite Fusione non può essere utilizzata come Materiale da Fusione.",
     "overallString": "[Mostro|Effetto|Fusione] Illusione/Luce  [★8] 2500/2100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307034.jpg?version=19.7"
   },
   {
-    "name": "Zaltys, il Cavaliere del Corvo dell'Inverno",
-    "desc": "1 Tuner Illusione + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente: puoi scegliere come bersaglio fino a 2 Magie/Trappole sul Terreno; falle ritornare nella mano.\r\nSe questa carta viene mandata al Cimitero: puoi attivare questo effetto in base alla zona da cui è stata mandata;\r\n● Terreno: Posiziona 1 Trappola \"Corvo dell'Inverno\" dal tuo Deck.\r\n● Extra Deck: Aggiungi 1 carta \"Corvo dell'Inverno\" dal tuo Cimitero alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Zaltys, il Cavaliere del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Zaltys, il Cavaliere del Corvo Bianco",
+    "desc": "1 Tuner Illusione + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente: puoi scegliere come bersaglio fino a 2 Magie/Trappole sul Terreno; falle ritornare nella mano.\r\nSe questa carta viene mandata al Cimitero: puoi attivare questo effetto in base alla zona da cui è stata mandata;\r\n● Terreno: Posiziona 1 Trappola \"Corvo Bianco\" dal tuo Deck.\r\n● Extra Deck: Aggiungi 1 carta \"Corvo Bianco\" dal tuo Cimitero alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Zaltys, il Cavaliere del Corvo Bianco\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Synchro] Illusione/Fuoco  [★5] 2600/1700",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307037.jpg?version=19.7"
   },
   {
-    "name": "Aitvaras, il Cavaliere del Corvo dell'Inverno",
-    "desc": "1 Tuner Illusione + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente: puoi scegliere come bersaglio 1 carta che controlli e 1 carta controllata dal tuo avversario; falle ritornare nella mano.\r\nSe questa carta viene mandata al Cimitero: puoi attivare questo effetto in base alla zona da cui è stata mandata;\r\n● Terreno: Scegli come bersaglio 1 carta sul Terreno; mischiala nel Deck.\r\n● Extra Deck: Evoca Specialmente 1 mostro \"Corvo dell'Inverno\" dal tuo Cimitero.\r\nPuoi utilizzare ogni effetto di \"Aitvaras, il Cavaliere del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Aitvaras, il Cavaliere del Corvo Bianco",
+    "desc": "1 Tuner Illusione + 1+ mostri non-Tuner\r\nSe questa carta viene Evocata Specialmente: puoi scegliere come bersaglio 1 carta che controlli e 1 carta controllata dal tuo avversario; falle ritornare nella mano.\r\nSe questa carta viene mandata al Cimitero: puoi attivare questo effetto in base alla zona da cui è stata mandata;\r\n● Terreno: Scegli come bersaglio 1 carta sul Terreno; mischiala nel Deck.\r\n● Extra Deck: Evoca Specialmente 1 mostro \"Corvo Bianco\" dal tuo Cimitero.\r\nPuoi utilizzare ogni effetto di \"Aitvaras, il Cavaliere del Corvo Bianco\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Synchro] Illusione/Fuoco  [★5] 900/2600",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307038.jpg?version=19.7"
   },
   {
-    "name": "La Foresta Profonda del Corvo dell'Inverno",
-    "desc": "Quando questa carta viene attivata: puoi aggiungere 1 mostro \"Corvo dell'Inverno\" dal tuo Deck alla tua mano.\r\nLe Carte Mostro \"Corvo dell'Inverno\" che controlli non possono essere distrutte dagli effetti delle carte.\r\nDurante la tua End Phase: puoi Posizionare 1 Trappola \"Corvo dell'Inverno\" dal tuo Deck o Cimitero. Puoi utilizzare questo effetto di \"La Foresta Profonda del Corvo dell'Inverno\" una sola volta per turno.\r\nPuoi attivare solo 1 \"La Foresta Profonda del Corvo dell'Inverno\" per turno.",
+    "name": "La Foresta Profonda del Corvo Bianco",
+    "desc": "Quando questa carta viene attivata: puoi aggiungere 1 mostro \"Corvo Bianco\" dal tuo Deck alla tua mano.\r\nLe Carte Mostro \"Corvo Bianco\" che controlli non possono essere distrutte dagli effetti delle carte.\r\nDurante la tua End Phase: puoi Posizionare 1 Trappola \"Corvo Bianco\" dal tuo Deck o Cimitero. Puoi utilizzare questo effetto di \"La Foresta Profonda del Corvo Bianco\" una sola volta per turno.\r\nPuoi attivare solo 1 \"La Foresta Profonda del Corvo Bianco\" per turno.",
     "overallString": "[Magia|Terreno]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307059.jpg?version=19.7"
   },
   {
-    "name": "Splendore della Strega del Corvo dell'Inverno",
-    "desc": "Puoi attivare 1 di questi effetti;\r\n● Evoca Specialmente 1 mostro \"Corvo dell'Inverno\" dalla tua mano o Cimitero.\r\n● Evoca tramite Fusione 1 Mostro Fusione \"Diabell\" dal tuo Extra Deck, utilizzando fino a 1 mostro \"Corvo dell'Inverno\" ciascuno dalla tua mano, Extra Deck e/o Terreno.\r\n● Se controlli un mostro \"Diabell\": scegli come bersaglio 1 carta scoperta sul Terreno; annulla i suoi effetti fino alla fine di questo turno.\r\nPuoi utilizzare questo effetto di \"Splendore della Strega del Corvo dell'Inverno\" una sola volta per turno.",
+    "name": "Splendore della Strega del Corvo Bianco",
+    "desc": "Puoi attivare 1 di questi effetti;\r\n● Evoca Specialmente 1 mostro \"Corvo Bianco\" dalla tua mano o Cimitero.\r\n● Evoca tramite Fusione 1 Mostro Fusione \"Diabell\" dal tuo Extra Deck, utilizzando fino a 1 mostro \"Corvo Bianco\" ciascuno dalla tua mano, Extra Deck e/o Terreno.\r\n● Se controlli un mostro \"Diabell\": scegli come bersaglio 1 carta scoperta sul Terreno; annulla i suoi effetti fino alla fine di questo turno.\r\nPuoi utilizzare questo effetto di \"Splendore della Strega del Corvo Bianco\" una sola volta per turno.",
     "overallString": "[Trappola|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307077.jpg?version=19.7"
   },
   {
-    "name": "Illusione della Strega del Corvo dell'Inverno",
-    "desc": "Evoca tramite Fusione 1 Mostro Fusione Illusione dal tuo Extra Deck, utilizzando mostri dal tuo Extra Deck e/o Terreno, inoltre, dopo che questa carta si è risolta, non puoi attivare effetti di mostri nella mano o nel Cimitero per il resto di questo turno, eccetto effetti di mostri Illusione.\r\nSe l'attivazione di questa carta sotto il controllo del suo proprietario viene annullata dall'effetto di una carta dell'avversario e questa carta viene mandata al tuo Cimitero: puoi Posizionare questa carta e, se lo fai, fai ritornare tutte le carte controllate dal tuo avversario nella mano.\r\nPuoi attivare solo 1 \"Illusione della Strega del Corvo dell'Inverno\" per turno.",
+    "name": "Illusione della Strega del Corvo Bianco",
+    "desc": "Evoca tramite Fusione 1 Mostro Fusione Illusione dal tuo Extra Deck, utilizzando mostri dal tuo Extra Deck e/o Terreno, inoltre, dopo che questa carta si è risolta, non puoi attivare effetti di mostri nella mano o nel Cimitero per il resto di questo turno, eccetto effetti di mostri Illusione.\r\nSe l'attivazione di questa carta sotto il controllo del suo proprietario viene annullata dall'effetto di una carta dell'avversario e questa carta viene mandata al tuo Cimitero: puoi Posizionare questa carta e, se lo fai, fai ritornare tutte le carte controllate dal tuo avversario nella mano.\r\nPuoi attivare solo 1 \"Illusione della Strega del Corvo Bianco\" per turno.",
     "overallString": "[Trappola]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307078.jpg?version=19.7"
   },
@@ -811,7 +961,7 @@
   },
   {
     "name": "Canone Malvagio",
-    "desc": "Ogni volta che un mostro dell'avversario dichiara un attacco, metti 1 Segnalino Dottrina Sinistra su questa carta. Puoi utilizzare ognuno dei seguenti effetti di \"Canone Malvagio\" una sola volta per turno. Durante la tua Main Phase, se questa carta è stata attivata in questo turno: puoi aggiungere 1 mostro OSCURITÀ Demone dal tuo Deck alla tua mano, poi scartare 1 mostro Demone. Puoi mandare questa carta con 4 o più Segnalini Dottrina Sinistra al Cimitero; Evoca Specialmente 1 mostro Demone dal tuo Deck, poi puoi aggiungere 1 \"Super Polimerizzazione\" dal tuo Deck alla tua mano.",
+    "desc": "Ogni volta che un mostro del tuo avversario dichiara un attacco, metti 1 Segnalino Dottrina Sinistra su questa carta.\r\nPuoi utilizzare ciascuno dei seguenti effetti di \"Canone Malvagio\" una sola volta per turno.\r\nDurante la tua Main Phase, se questa carta è stata attivata in questo turno: puoi aggiungere 1 mostro Demone OSCURITÀ dal tuo Deck alla tua mano, poi scarta 1 mostro Demone.\r\nPuoi mandare questa carta con 4 o più Segnalini Dottrina Sinistra al Cimitero; Evoca Specialmente 1 mostro Demone dal tuo Deck, poi puoi aggiungere 1 \"Super Polimerizzazione\" dal tuo Deck alla tua mano.",
     "overallString": "[Magia|Continua]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100270002.jpg?version=19.7"
   },
@@ -828,62 +978,62 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/100268002.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Amurusa",
-    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reinzwurm\".\r\nSe questa carta viene Evocata tramite Rituale: puoi aggiungere 2 mostri \"Reinzwurm\" non-VENTO dal tuo Deck alla tua mano.\r\nSe questa carta viene mandata al Cimitero, eccetto che in battaglia: puoi Evocare tramite Rituale 1 Mostro Rituale Insetto dalla tua mano, offrendo come Tributo mostri dalla tua mano o Terreno e/o mescolando mostri Insetto e/o Drago dal tuo Cimitero nel Deck, i cui Livelli totali sono pari o superiori al suo Livello.\r\nPuoi utilizzare ogni effetto di \"Reinzwurm Amurusa\" una sola volta per turno.",
+    "name": "Reindsurm Amurusa",
+    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reindsurm\".\r\nSe questa carta viene Evocata tramite Rituale: puoi aggiungere 2 mostri \"Reindsurm\" non-VENTO dal tuo Deck alla tua mano.\r\nSe questa carta viene mandata al Cimitero, eccetto che in battaglia: puoi Evocare tramite Rituale 1 Mostro Rituale Insetto dalla tua mano, offrendo come Tributo mostri dalla tua mano o Terreno e/o mescolando mostri Insetto e/o Drago dal tuo Cimitero nel Deck, i cui Livelli totali sono pari o superiori al suo Livello.\r\nPuoi utilizzare ogni effetto di \"Reindsurm Amurusa\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Rituale] Insetto/Vento  [★4] 1000/2200",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307024.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Luvian",
-    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reinzwurm\".\r\nSe questa carta viene Evocata tramite Rituale: puoi aggiungere 2 Magie/Trappole \"Reinzwurm\" dal tuo Deck alla tua mano.\r\nSe questa carta viene mandata al Cimitero, eccetto che in battaglia: puoi Evocare tramite Rituale 1 Mostro Rituale Insetto dalla tua mano, offrendo come Tributo mostri dalla tua mano o Terreno e/o mescolando mostri Insetto e/o Drago dal tuo Cimitero nel Deck, i cui Livelli totali sono pari o superiori al suo Livello.\r\nPuoi utilizzare ogni effetto di \"Reinzwurm Luvian\" una sola volta per turno.",
+    "name": "Reindsurm Luvian",
+    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reindsurm\".\r\nSe questa carta viene Evocata tramite Rituale: puoi aggiungere 2 Magie/Trappole \"Reindsurm\" dal tuo Deck alla tua mano.\r\nSe questa carta viene mandata al Cimitero, eccetto che in battaglia: puoi Evocare tramite Rituale 1 Mostro Rituale Insetto dalla tua mano, offrendo come Tributo mostri dalla tua mano o Terreno e/o mescolando mostri Insetto e/o Drago dal tuo Cimitero nel Deck, i cui Livelli totali sono pari o superiori al suo Livello.\r\nPuoi utilizzare ogni effetto di \"Reindsurm Luvian\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Rituale] Insetto/Acqua  [★4] 1900/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307025.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Carcasas",
-    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reinzwurm\".\r\nSe questa carta viene Evocata tramite Rituale: puoi mandare 2 carte \"Reinzwurm\" dal tuo Deck al Cimitero.\r\nSe questa carta viene mandata al Cimitero, eccetto che in battaglia: puoi Evocare tramite Rituale 1 Mostro Rituale Insetto dalla tua mano, offrendo come Tributo mostri dalla tua mano o Terreno e/o mescolando mostri Insetto e/o Drago dal tuo Cimitero nel Deck, i cui Livelli totali sono pari o superiori al suo Livello.\r\nPuoi utilizzare ogni effetto di \"Reinzwurm Carcasas\" una sola volta per turno.",
+    "name": "Reindsurm Carcasas",
+    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reindsurm\".\r\nSe questa carta viene Evocata tramite Rituale: puoi mandare 2 carte \"Reindsurm\" dal tuo Deck al Cimitero.\r\nSe questa carta viene mandata al Cimitero, eccetto che in battaglia: puoi Evocare tramite Rituale 1 Mostro Rituale Insetto dalla tua mano, offrendo come Tributo mostri dalla tua mano o Terreno e/o mescolando mostri Insetto e/o Drago dal tuo Cimitero nel Deck, i cui Livelli totali sono pari o superiori al suo Livello.\r\nPuoi utilizzare ogni effetto di \"Reindsurm Carcasas\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Rituale] Insetto/Luce  [★4] 2000/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307026.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Gigalovendra",
-    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reinzwurm\".\r\n(Effetto Rapido): puoi mandare 2 carte dalla tua mano al Cimitero, compresa questa carta; aggiungi 1 mostro \"Reinzwurm\" non-FUOCO dal tuo Deck alla tua mano.\r\nSe questa carta viene Evocata tramite Rituale, o il tuo avversario Evoca Specialmente uno o più mostri: puoi mescolare nel Deck fino a 2 mostri sul Terreno.\r\nSe questa carta e un mostro \"Reinzwurm\" ACQUA sono nel tuo Cimitero: puoi aggiungere questa carta alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Reinzwurm Gigalovendra\" una sola volta per turno.",
+    "name": "Reindsurm Gigalovendra",
+    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reindsurm\".\r\n(Effetto Rapido): puoi mandare 2 carte dalla tua mano al Cimitero, compresa questa carta; aggiungi 1 mostro \"Reindsurm\" non-FUOCO dal tuo Deck alla tua mano.\r\nSe questa carta viene Evocata tramite Rituale, o il tuo avversario Evoca Specialmente uno o più mostri: puoi mescolare nel Deck fino a 2 mostri sul Terreno.\r\nSe questa carta e un mostro \"Reindsurm\" ACQUA sono nel tuo Cimitero: puoi aggiungere questa carta alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Reindsurm Gigalovendra\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Rituale] Insetto/Fuoco  [★8] 3000/1100",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307027.jpg?version=19.7"
   },
   {
-    "name": "Reinzwurm Giriakarma",
-    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reinzwurm\". Quando il tuo avversario attiva l'effetto di un mostro sul Terreno o Cimitero, mentre tu controlli questa carta Evocata tramite Rituale (Effetto Rapido): puoi annullare l'attivazione, poi puoi mischiare 1 mostro ciascuno dal Terreno e Cimitero del tuo avversario nel Deck, inoltre se hai selezionato uno o più mostri Drago per questo effetto, l'ATK di questa carta viene raddoppiato. Se hai questa carta e un mostro LUCE \"Reinzwurm\" nel tuo Cimitero: puoi aggiungere questa carta alla tua mano. Puoi utilizzare ogni effetto di \"Reinzwurm Giriakarma\" una sola volta per turno.",
+    "name": "Reindsurm Giriakarma",
+    "desc": "Puoi Evocare tramite Rituale questa carta con \"Conquista Reindsurm\".\r\nQuando il tuo avversario attiva l'effetto di un mostro sul Terreno o nel Cimitero mentre controlli questa carta Evocata tramite Rituale (Effetto Rapido): puoi annullare l'attivazione, poi puoi mescolare 1 mostro ciascuno dal Terreno e Cimitero del tuo avversario nel Deck, inoltre, se uno dei due era un mostro Drago, raddoppia l'ATK di questa carta.\r\nSe questa carta e un mostro \"Reindsurm\" LUCE sono nel tuo Cimitero: puoi aggiungere questa carta alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Reindsurm Giriakarma\" una sola volta per turno.",
     "overallString": "[Mostro|Effetto|Rituale] Insetto/Oscurità  [★8] 3300/1300",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307028.jpg?version=19.7"
   },
   {
-    "name": "Conquista Reinzwurm",
-    "desc": "Questa carta può essere utilizzata per Evocare tramite Rituale un qualsiasi numero di Mostri Rituale Insetto. Devi anche mescolare mostri Insetto e/o Drago dal Cimitero/i nel Deck i cui Livelli totali sono pari o superiori ai Livelli totali dei Mostri Rituale.\r\nSe questa carta è nel tuo Cimitero: puoi mandare 1 mostro Insetto dalla tua mano o Terreno scoperto al Cimitero; aggiungi questa carta alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Conquista Reinzwurm\" una sola volta per turno.",
+    "name": "Conquista Reindsurm",
+    "desc": "Questa carta può essere utilizzata per Evocare tramite Rituale un qualsiasi numero di Mostri Rituale Insetto. Devi anche mescolare mostri Insetto e/o Drago dal Cimitero/i nel Deck i cui Livelli totali sono pari o superiori ai Livelli totali dei Mostri Rituale.\r\nSe questa carta è nel tuo Cimitero: puoi mandare 1 mostro Insetto dalla tua mano o Terreno scoperto al Cimitero; aggiungi questa carta alla tua mano.\r\nPuoi utilizzare ogni effetto di \"Conquista Reindsurm\" una sola volta per turno.",
     "overallString": "[Magia|Rituale]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307055.jpg?version=19.7"
   },
   {
-    "name": "Garofano Reinzwurm",
-    "desc": "Mentre controlli un mostro \"Reinzwurm\" il cui Livello originale è 8 o superiore o il tuo avversario ha un mostro Drago sul suo Terreno o Cimitero, gli effetti attivati dei tuoi mostri \"Reinzwurm\" non possono essere annullati.\r\nUna volta per turno: puoi mandare 1 mostro \"Reinzwurm\" o mostro Drago dalla tua mano o Terreno scoperto al Cimitero; aggiungi 1 mostro Insetto dal tuo Deck alla tua mano con lo stesso Livello originale, ma con un nome originale diverso.",
+    "name": "Garofano Reindsurm",
+    "desc": "Mentre controlli un mostro \"Reindsurm\" il cui Livello originale è 8 o superiore o il tuo avversario ha un mostro Drago sul suo Terreno o Cimitero, gli effetti attivati dei tuoi mostri \"Reindsurm\" non possono essere annullati.\r\nUna volta per turno: puoi mandare 1 mostro \"Reindsurm\" o mostro Drago dalla tua mano o Terreno scoperto al Cimitero; aggiungi 1 mostro Insetto dal tuo Deck alla tua mano con lo stesso Livello originale, ma con un nome originale diverso.",
     "overallString": "[Magia|Terreno]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307056.jpg?version=19.7"
   },
   {
-    "name": "Farfalla Reinzwurm",
-    "desc": "Manda 2 mostri dal tuo Deck al Cimitero, compreso un mostro Insetto, inoltre non puoi Evocare Specialmente fino alla fine del prossimo turno dopo che questa carta si è risolta, eccetto mostri Insetto.\r\nSe Evochi tramite Rituale uno o più mostri Insetto mentre questa carta è nel tuo Cimitero: puoi bandire questa carta; tutti i mostri \"Reinzwurm\" che controlli attualmente guadagnano 800 ATK/DEF.\r\nPuoi utilizzare solo 1 effetto di \"Farfalla Reinzwurm\" per turno, e solo una volta in quel turno.",
+    "name": "Farfalla Reindsurm",
+    "desc": "Manda 2 mostri dal tuo Deck al Cimitero, compreso un mostro Insetto, inoltre non puoi Evocare Specialmente fino alla fine del prossimo turno dopo che questa carta si è risolta, eccetto mostri Insetto.\r\nSe Evochi tramite Rituale uno o più mostri Insetto mentre questa carta è nel tuo Cimitero: puoi bandire questa carta; tutti i mostri \"Reindsurm\" che controlli attualmente guadagnano 800 ATK/DEF.\r\nPuoi utilizzare solo 1 effetto di \"Farfalla Reindsurm\" per turno, e solo una volta in quel turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307057.jpg?version=19.7"
   },
   {
-    "name": "Pratica Reinzwurm",
-    "desc": "Aggiungi 2 mostri \"Reinzwurm\" dal tuo Deck alla tua mano, poi manda 1 carta dalla tua mano al Cimitero, poi, se il tuo avversario ha un mostro Drago sul suo Terreno o Cimitero, puoi aggiungere 1 mostro Insetto dal tuo Cimitero alla tua mano.\r\nSe Evochi tramite Rituale uno o più mostri Insetto mentre questa carta è nel tuo Cimitero: puoi bandire questa carta; Posiziona 1 Magia Terreno \"Reinzwurm\" dal tuo Deck scoperta sul tuo Terreno.\r\nPuoi utilizzare ogni effetto di \"Pratica Reinzwurm\" una sola volta per turno.",
+    "name": "Pratica Reindsurm",
+    "desc": "Aggiungi 2 mostri \"Reindsurm\" dal tuo Deck alla tua mano, poi manda 1 carta dalla tua mano al Cimitero, poi, se il tuo avversario ha un mostro Drago sul suo Terreno o Cimitero, puoi aggiungere 1 mostro Insetto dal tuo Cimitero alla tua mano.\r\nSe Evochi tramite Rituale uno o più mostri Insetto mentre questa carta è nel tuo Cimitero: puoi bandire questa carta; Posiziona 1 Magia Terreno \"Reindsurm\" dal tuo Deck scoperta sul tuo Terreno.\r\nPuoi utilizzare ogni effetto di \"Pratica Reindsurm\" una sola volta per turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307058.jpg?version=19.7"
   },
   {
-    "name": "Incontro Reinzwurm",
-    "desc": "Quando viene attivata una Carta Magia/Trappola, o l'effetto di un mostro, mentre controlli un mostro \"Reinzwurm\": annulla l'attivazione, poi puoi aggiungere 1 mostro \"Reinzwurm\" dal tuo Deck o Cimitero alla tua mano e, se lo fai, manda 1 mostro Insetto che controlli al Cimitero.\r\nSe uno o più mostri \"Reinzwurm\" che controlli stanno per essere distrutti in battaglia o dall'effetto di una carta, puoi invece mettere questa carta dal tuo Cimitero in fondo al Deck.\r\nPuoi utilizzare ogni effetto di \"Incontro Reinzwurm\" una sola volta per turno.",
+    "name": "Incontro Reindsurm",
+    "desc": "Quando viene attivata una Carta Magia/Trappola, o l'effetto di un mostro, mentre controlli un mostro \"Reindsurm\": annulla l'attivazione, poi puoi aggiungere 1 mostro \"Reindsurm\" dal tuo Deck o Cimitero alla tua mano e, se lo fai, manda 1 mostro Insetto che controlli al Cimitero.\r\nSe uno o più mostri \"Reindsurm\" che controlli stanno per essere distrutti in battaglia o dall'effetto di una carta, puoi invece mettere questa carta dal tuo Cimitero in fondo al Deck.\r\nPuoi utilizzare ogni effetto di \"Incontro Reindsurm\" una sola volta per turno.",
     "overallString": "[Trappola|Contro]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307076.jpg?version=19.7"
   },
@@ -972,8 +1122,8 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307004.jpg?version=19.7"
   },
   {
-    "name": "Drago Alato di Ra, Divinità del Sole dell'Oscurità",
-    "desc": "\"Drago Alato di Ra\" + 3 mostri \"Divinità del Sole\"\r\nImmune agli effetti delle altre carte. Una volta per turno, durante la Main Phase (Effetto Rapido): puoi scartare un qualsiasi numero di carte \"Divinità del Sole\", poi selezionare quel numero di Zone Mostri Main utilizzate del tuo avversario; il tuo avversario deve mandare al Cimitero i mostri in quelle zone. Quando viene dichiarato un attacco che coinvolge questa carta: puoi pagare LP fino a che te ne rimane solo 1; questa carta guadagna ATK/DEF pari ai LP pagati e alla somma degli ATK dei mostri \"Divinità del Sole\" nel tuo Cimitero.",
+    "name": "La Divinità del Sole e dell'Oscurità - Drago Alato di Ra",
+    "desc": "\"Drago Alato di Ra\" + 3 mostri \"Divinità del Sole\"\r\nImmune agli effetti delle altre carte.\r\nUna volta per turno, durante la Main Phase (Effetto Rapido): puoi scartare un qualsiasi numero di carte \"Divinità del Sole\", poi scegli quel numero di Zone Mostro Main occupate del tuo avversario; il tuo avversario deve mandare i mostri in quelle zone al Cimitero.\r\nQuando viene dichiarato un attacco che coinvolge questa carta: puoi pagare LP in modo da rimanere con 1 LP; questa carta guadagna ATK/DEF pari all'ammontare di LP pagati e all'ATK totale di tutti i mostri \"Divinità del Sole\" attualmente nel tuo Cimitero.",
     "overallString": "[Mostro|Effetto|Fusione] Bestia Divina/Divino  [★10] ?/?",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101307030.jpg?version=19.7"
   },
