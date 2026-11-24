@@ -738,14 +738,14 @@
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306091.jpg?version=19.7"
   },
   {
-    "name": "Mossa Brillante Angelechy",
-    "desc": "Fai ritornare 1 Carta Mostro \"Angelechy\" di tua proprietà dalla tua Zona Magie & Trappole nell'Extra Deck, poi puoi Evocarla Specialmente.\r\nPuoi bandire questa carta dal tuo Cimitero, poi manda 1 carta \"Angelechy\" dalla tua mano o dal tuo Terreno scoperta al Cimitero; Evoca Specialmente 1 mostro \"Angelechy\" dal tuo Extra Deck.\r\nPuoi utilizzare ciascun effetto di \"Mossa Brillante Angelechy\" una sola volta per turno.",
+    "name": "Strategia di Punteggio Angelechy",
+    "desc": "Aggiungi 1 Magia/Trappola \"Angelechy\" dal tuo Deck alla tua mano, eccetto \"Strategia di Punteggio Angelechy\", inoltre per il resto di questo turno dopo che questa carta si è risolta, non puoi Evocare Specialmente dall'Extra Deck, eccetto Mostri Synchro LUCE o OSCURITÀ.\r\nSe questa carta è nel tuo Cimitero, eccetto nel turno in cui è stata mandata lì: puoi bandirla; fai ritornare 1 Carta Mostro \"Angelechy\" che possiedi dalla tua Zona Magie & Trappole nell'Extra Deck, poi puoi Evocarla Specialmente.\r\nPuoi utilizzare ogni effetto di \"Strategia di Punteggio Angelechy\" una sola volta per turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306092.jpg?version=19.7"
   },
   {
-    "name": "Mossa Strategica Angelechy",
-    "desc": "Aggiungi 1 Magia/Trappola \"Angelechy\" dal tuo Deck alla tua mano, eccetto \"Mossa Strategica Angelechy\", inoltre, per il resto di questo turno dopo che questa carta si è risolta, non puoi Evocare Specialmente dall'Extra Deck, eccetto Mostri Synchro LUCE o OSCURITÀ.\r\nSe questa carta è nel tuo Cimitero, eccetto nel turno in cui è stata mandata lì: puoi bandirla; fai ritornare 1 Carta Mostro \"Angelechy\" di tua proprietà dalla tua Zona Magie & Trappole nell'Extra Deck, poi puoi Evocarla Specialmente.\r\nPuoi utilizzare ciascun effetto di \"Mossa Strategica Angelechy\" una sola volta per turno.",
+    "name": "Mossa Brillante Angelechy",
+    "desc": "Fai ritornare 1 Carta Mostro \"Angelechy\" che possiedi dalla tua Zona Magie & Trappole nell'Extra Deck, poi puoi Evocarla Specialmente.\r\nPuoi bandire questa carta dal tuo Cimitero, poi mandare 1 carta \"Angelechy\" dalla tua mano o Terreno scoperto al Cimitero; Evoca Specialmente 1 mostro \"Angelechy\" dal tuo Extra Deck.\r\nPuoi utilizzare ogni effetto di \"Mossa Brillante Angelechy\" una sola volta per turno.",
     "overallString": "[Magia]",
     "picUrl": "https://cdntx.moecube.com/ygopro-super-pre/data/pics/101306093.jpg?version=19.7"
   },
