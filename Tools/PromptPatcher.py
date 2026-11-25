@@ -35130,6 +35130,27 @@ def build_translation_pack(lang: str):
         "ja": '「ゴーストリック」', "kr": '"고스트릭"',
     }[lang]
     named_exact_map = {
+        # These parenthesized conditions must survive card-name normalization.
+        "特殊召唤衍生物(自己场上有连接怪兽)": {
+            "en": "Special Summon a Token (you control a Link Monster)",
+            "fr": "Invoquez Spécialement un Jeton (vous contrôlez un Monstre Lien)",
+            "de": "Beschwöre eine Spielmarke als Spezialbeschwörung (du kontrollierst ein Linkmonster)",
+            "es": "Invoca de Modo Especial una Ficha (controlas un Monstruo de Enlace)",
+            "pt": "Invoque uma Ficha por Invocação-Especial (você controla um Monstro Link)",
+            "it": "Evoca Specialmente una Pedina (controlli un Mostro Link)",
+            "ja": "トークンを特殊召喚する（自分フィールドにリンクモンスターが存在する場合）",
+            "kr": "토큰을 특수 소환한다 (자신 필드에 링크 몬스터가 존재할 경우)",
+        }[lang],
+        "特殊召唤衍生物(对方魔陷区域有卡)": {
+            "en": "Special Summon a Token (your opponent has a card in their Spell & Trap Zone)",
+            "fr": "Invoquez Spécialement un Jeton (votre adversaire a une carte dans sa Zone Magie & Piège)",
+            "de": "Beschwöre eine Spielmarke als Spezialbeschwörung (dein Gegner hat eine Karte in seiner Zauber- & Fallenzone)",
+            "es": "Invoca de Modo Especial una Ficha (tu adversario tiene una carta en su Zona de Magia y Trampas)",
+            "pt": "Invoque uma Ficha por Invocação-Especial (seu oponente tem um card na Zona de Magias & Armadilhas dele)",
+            "it": "Evoca Specialmente una Pedina (il tuo avversario ha una carta nella sua Zona Magie & Trappole)",
+            "ja": "トークンを特殊召喚する（相手の魔法＆罠ゾーンにカードが存在する場合）",
+            "kr": "토큰을 특수 소환한다 (상대의 마법 & 함정 존에 카드가 존재할 경우)",
+        }[lang],
         "是否在里侧表示「鬼计」怪兽上面重叠超量召唤?":
             exact_map["是否在里侧表示{CARD}怪兽上面重叠超量召唤?"].replace("{CARD}", ghostrick_name),
     }
@@ -35252,7 +35273,8 @@ def _patch_one_text(s: str, pack: dict) -> str:
     if not isinstance(s, str) or not s:
         return s
 
-    named = pack.get("named_exact_map", {}).get(s.strip().replace("？", "?"))
+    key = s.strip().replace("？", "?").replace("（", "(").replace("）", ")")
+    named = pack.get("named_exact_map", {}).get(key)
     if named is not None:
         return named
 
