@@ -11,16 +11,6 @@
   "pending_translations": [
     {
       "fields": [
-        "desc",
-        "name"
-      ],
-      "id": 120313001,
-      "name": "元素英雄 棱镜侠"
-    },
-    {
-      "fields": [
-        "desc",
-        "name",
         "str2",
         "str3",
         "str4",
@@ -29,28 +19,24 @@
         "str7"
       ],
       "id": 120313019,
-      "name": "吸血鬼领主"
+      "name": "Signore dei Vampiri"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str1",
         "str3"
       ],
       "id": 120313021,
-      "name": "吸血鬼创世主"
+      "name": "Genesi Vampira"
     },
     {
       "fields": [
-        "desc",
-        "name",
         "str2",
         "str3",
         "str4"
       ],
       "id": 120313067,
-      "name": "吸血鬼女郎"
+      "name": "Lady Vampira"
     }
   ],
   "published_source_fields": {
@@ -1128,9 +1114,9 @@
     "120311064": "45a71d8e48db3e189a8aa9578f70a0ad4cd6116755b8a25eebe09e5bceee210b",
     "120312001": "ec87d310bf28ccc4c5f9599a635a8ccea0bcd63cbf797f3536ff5d533223fa0a",
     "120312002": "21cac2d124dd007885656c4279dd4eb8c8d446f53401fb5be8aec9e3fbc092e2",
-    "120313001": "01f03db386c64ad4e01a9dc03449f0ea886cc27dbff4a8132a31c1b23198f710",
-    "120313019": "0a6af1018156bea339ba29bce2636f3c87e07fab73ef1561c96f592235da385e",
-    "120313021": "cc189e0b43830e62c3c7a46db58c63ee607e16dc05d5174270b4db5cf241f230",
-    "120313067": "c4466892cb6290d9fe139d22bb20a0de9691faabf19ad25ca4f96f47200fc0c6"
+    "120313001": "6218f3eebf39bca229cc49766f2a5629984b07dd7c9713923a7eb261d7259703",
+    "120313019": "7a497600a279f11dbe3bfb6d124afa86d5c9f150a10e71f16bcffe11a7f95ba3",
+    "120313021": "acb3465a1160e1be837cef0e0a1a4fc638cc3e7d9cee4bea0334c4ec1cd9eba7",
+    "120313067": "546ec2fcb1278c864778173613a29d292742851747f477567aaa71a75031a659"
   }
 }
