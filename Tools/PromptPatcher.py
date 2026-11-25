@@ -12837,6 +12837,16 @@ def build_translation_pack(lang: str):
             "ja": "相手の魔法・罠をデッキに戻す",
             "kr": "상대의 마법 / 함정을 덱으로 되돌린다",
         },
+        "使用过效果": {
+            "en": "Effect already used",
+            "fr": "Effet déjà utilisé",
+            "de": "Effekt bereits verwendet",
+            "es": "Efecto ya utilizado",
+            "pt": "Efeito já utilizado",
+            "it": "Effetto già utilizzato",
+            "ja": "効果は既に使用済み",
+            "kr": "이미 사용한 효과",
+        },
         "已经使用过防止破坏效果": {
             "en": "Destruction-prevention effect already used",
             "fr": "Effet de protection contre la destruction déjà utilisé",
