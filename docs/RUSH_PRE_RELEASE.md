@@ -140,24 +140,24 @@ Unresolved `{CARD}` placeholders stop publication and appear in `report.json`.
 Translator corrections take precedence. Rush sync does not rewrite the published
 base `rush_cards.cdb` files.
 
-In the linked local workspace, run `Test/PatchMenu.py` and choose **5** to
+In the linked local workspace, run `5. Strings Patcher/PatchMenu.py` and choose **5** to
 extract the current Standard and Rush Chinese and English text. The menu reads
 the two Standard locale `cards.cdb` files, the Rush checkout's `RD Standard.cdb`,
 `RD Alternate.cdb` and `RD Patch.cdb`, and the English `DBs/en/rush_cards.cdb`.
 On overlapping Chinese Rush IDs, Patch takes precedence over Alternate, then
 Standard, including empty prompt slots.
 
-Open `Test/rush_prompts.csv` and filter by card ID or `slot` to compare the
+Open `5. Strings Patcher/Exports/Rush/prompts.csv` and filter by card ID or `slot` to compare the
 original Chinese with the English reference. Search the catalog for the value
 in `catalog_key` to edit the corresponding prompt. `paired` means both sources
 have text at the same ID and slot. `missing_en` and `missing_zh` identify gaps
 in those source files. Use the card text and script to verify the meaning of
 a slot. Extracting again replaces these generated CSVs.
 
-`Test/standard_prompts.csv` provides the same ID/slot comparison for Standard.
-The full text tables are `texts.csv` and `texts_en.csv` for Standard, and
-`rush_texts.csv` and `rush_texts_en.csv` for Rush. They include names,
-descriptions and all sixteen prompt slots.
+`5. Strings Patcher/Exports/OCG/prompts.csv` provides the same comparison for Standard.
+Both export folders include `texts.csv` (Chinese) and `texts_en.csv` (English)
+with names, descriptions and all sixteen prompt slots. The local patcher records
+new and changed source slots in `Reports/<format>/source_changes.csv`.
 
 New untranslated cards stay in every workspace and appear in `report.json`.
 Changed source descriptions/prompts require review when the corresponding

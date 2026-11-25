@@ -130,7 +130,7 @@ outputs. Do not edit them by hand.
 useful for checking untranslated Chinese text or mapping gaps.
 
 To compare Standard and Rush prompts with the English source by card ID and
-slot, choose **5** in the linked workspace's `Test/PatchMenu.py`. See the
+slot, choose **5** in the linked workspace's `5. Strings Patcher/PatchMenu.py`. See the
 [prompt catalog and CSV instructions](RUSH_PRE_RELEASE.md#files-to-edit).
 
 ## Supported languages
