@@ -1,5 +1,6 @@
 {
   "built_locales": [
+    "ES",
     "ZH-CN",
     "ZH-TW"
   ],
@@ -65,12 +66,11 @@
     120313067
   ],
   "excluded_ids": [],
-  "local_inputs_sha256": "dff7e3dcdcc3d50186f11ceccc869365963d7d63221aeaa444a49f39afea5054",
+  "local_inputs_sha256": "c6961bfe374bef31fba4ce781c621f712c698d0243142eb6258838712a8d77d1",
   "patch_sha256": "c1ccff305b5cf25d7c12cb3cfe84423422b4e2c8f25469a87aa1750a11e83b68",
   "pending_locales": {
     "DE": 4,
     "EN": 4,
-    "ES": 4,
     "FR": 4,
     "IT": 3,
     "JP": 4,
@@ -141,6 +141,6 @@
     "120313021": "ddfd67bb51751cbf33d65086c069f9fbf42cb4a67af2d05f09dedc911713eb5c",
     "120313067": "eebc23e053b31c8d22a39fdab81632d367f2f2cdf914abb3601b73d066442351"
   },
-  "translations_revision": "d5a8db059ca034b8a630545e169eadb4a8c4e0b9",
+  "translations_revision": "328d6323cecee738aef443801f5b29ea79a454a4",
   "version": 2
 }
